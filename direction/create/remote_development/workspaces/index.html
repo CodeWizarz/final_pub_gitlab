@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Workspaces
+|
+GitLab
+</title>
+<meta content='Category direction page for Workspaces in GitLab. This page belongs to the Remote Development group of the Create stage and is maintained by Principal Product Manager' name=description />
+<meta content='Category direction page for Workspaces in GitLab. This page belongs to the Remote Development group of the Create stage and is maintained by Principal Product Manager' name='twitter:description'/>
+<meta content='Category direction page for Workspaces in GitLab. This page belongs to the Remote Development group of the Create stage and is maintained by Principal Product Manager' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Workspaces' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/create/remote_development/workspaces/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/create/remote_development/workspaces/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Workspaces' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/create/remote_development/workspaces/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Workspaces
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/michelle-chen'>
+<img
+src='/images/team/michellechen.jpeg'
+class=codeowner-avatar-img
+alt='Michelle Chen'
+title='Michelle Chen'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/derekferguson'>
+<img
+src='/images/team/derekferguson.jpg'
+class=codeowner-avatar-img
+alt='Derek Ferguson'
+title='Derek Ferguson'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/create/remote_development/workspaces/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/create/">Product Stage Vision - Create</a></li><li><a href="/direction/create/remote_development/">Group Direction - Remote Development</a></li><li>Category Direction - Workspaces</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#workspaces" id=markdown-toc-workspaces>Workspaces</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a></li>
+<li><a href="#vision" id=markdown-toc-vision>Vision</a></li>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and Themes</a></li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a> <ul>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is Not Planned Right Now</a></li>
+</ul>
+</li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a></li>
+<li><a href="#pricing-and-packaging" id=markdown-toc-pricing-and-packaging>Pricing and Packaging</a></li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst Landscape</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=workspaces>Workspaces</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/create/">Create</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-07-26</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+
+
+<p>Thanks for visiting the category direction page for Workspaces in GitLab. This page belongs to the <a href="https://handbook.gitlab.com/handbook/product/categories/#editor-group">Remote Development group</a> of the <a href="https://handbook.gitlab.com/handbook/engineering/development/dev/create/">Create stage</a> and is maintained by Principal Product Manager, Michelle Chen (<a href="https://gitlab.com/michelle-chen">@mmichelle-chen</a>).</p>
+<p>This direction page is a work in progress, and everyone can contribute:</p>
+<ul>
+<li>Please comment and contribute to issues linked througout this page or contained in our <a href="https://gitlab.com/groups/gitlab-org/-/epics/7419">category strategy epic</a>. Sharing your feedback directly on GitLab.com is the best way to contribute to our strategy and vision.</li>
+<li>If you would like to share your feedback directly or schedule a video call, please reach out directly to Michelle Chen via <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#099;&#104;&#101;&#110;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">email</a>.</li>
+</ul>
+<h3 id=overview>Overview</h3>
+
+<p>A common obstacle faced by developers when first contributing to a project is the setup of their local development environment. The time-consuming process of managing interrelated dependencies and fixing version compatibility issues can be demotivating, especially for those who only contribute occasionally or switch between multiple projects frequently. In complicated environments, development teams may also impose restrictions, authentication credentials, build procedures, and standards that add to the fragile nature of the development environment.</p>
+<p>At the end of the day, developers want to spend less time managing their development environment and more time contributing high-quality code. And at GitLab, our mission is to ensure <em>everyone can contribute</em>. With Workspaces, our goal is to eliminate the responsibility of configuring and maintaining a local development environment.</p>
+<h3 id=vision>Vision</h3>
+
+<p>Ephemeral, cloud-based workspaces will be configured in a single file stored in a repository, allowing you to provision a new environment with a single click and connect securely from the GitLab Web IDE or your desktop editor of choice. Monitoring tools and dashboards will be available in GitLab to manage running and suspended environments, ensuring efficient usage of resources. This will free up valuable development time, streamline onboarding of new developers, and increase security across an increasingly remote workforce.</p>
+<p>A cloud-based development environment also enables organizations working in regulated industries to enforce a zero-trust policy that prevents source code from ever being stored locally while maintaining a high quality developer experience. GitLab workspaces contribute to our <a href="/direction/supply-chain/">vision for managing Software Supply Chain Security</a> by providing a single place where dependencies and tools can be audited and verified, and access to those environments can be controlled through strong authentication.</p>
+<p>Our initial iterations for Workspaces will be focused on a "bring your own cloud" solution, letting developers on both GitLab.com and Self-managed GitLab instances provision workspaces on their existing cloud platforms like Amazon Web Services, Google Cloud Platform, or Azure Cloud Services. We will eventually offer a fully-managed option within GitLab, provided as a service billed based on consumption, much like our <a href="https://about.gitlab.com/direction/verify/hosted_runners/">Runner SaaS</a> offering.</p>
+<h3 id=strategy-and-themes>Strategy and Themes</h3>
+
+<p>Our strategy for Workspaces is centered around three main themes:</p>
+<ol>
+<li>Simplifying Development Environment Setup
+<ul>
+<li>Provide a seamless, one-click solution for provisioning development environments</li>
+<li>Eliminate the need for manual configuration and dependency management</li>
+<li>Enable quick onboarding for new team members and contributors</li>
+</ul>
+</li>
+<li>Enhancing Collaboration and Productivity
+<ul>
+<li>Offer consistent development environments across teams</li>
+<li>Facilitate easy sharing and replication of workspace configurations</li>
+<li>Supporting development workflows end-to-end</li>
+</ul>
+</li>
+<li>Improving Security and Compliance
+<ul>
+<li>Implement zero-trust security policies for regulated industries</li>
+<li>Centralize control over development environments and access</li>
+<li>Enable auditing and verification of dependencies and tools</li>
+</ul>
+</li>
+</ol>
+<p>To address these themes, we will focus on the following strategic areas, which will resemble phases of the product and work prioritization:</p>
+<p><img src="/images/../../../images/remote_development/workspaces-strategic-areas.png" alt="Workspaces Strategic Areas"/></p>
+<h3 id=1-year-plan>1 year plan</h3>
+
+<p>In the next year, we are focused on reducing "time to first workspace" through making it easier to manage the configuration and resource management associated with running workspaces, and removing any barriers of entry into adoption of workspaces.</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10710">Automatically suspend a workspace after a period of inactivity</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/471058">Allow making a port public in a Workspace</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/471676">Startup script for workspaces</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10635">Support additional editors for workspaces</a></li>
+</ul>
+<h4 id=what-is-next-for-us>What is next for us</h4>
+
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/441214">First class support for use of images from private container registry images</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/14644">Provide default devfile for projects if not present</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/458852">Investigation: Supporting the new authorization strategy at the instance level</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13983">Sudo access in a workspace</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11319">Support building and running containers in a workspace</a></li>
+</ul>
+<h4 id=what-we-are-currently-working-on>What we are currently working on</h4>
+
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/14186">Workspace settings configuration in GitLab</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12443">Enable extensions marketplace for workspace</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11631">Set workspace timeout in agent configuration</a></li>
+</ul>
+<h4 id=what-we-recently-completed>What we recently completed</h4>
+
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12780">Integrate Duo Chat and Code Suggestions into workspace</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/14025">New agent authorization</a></li>
+</ul>
+<h4 id=what-is-not-planned-right-now>What is Not Planned Right Now</h4>
+
+<p>Workspaces are personal and ephemeral. We anticipate developers will want to collaboarte within workspaces but we are not currently focused on providing a real-time collaborative editing environment suitable for pair programming.</p>
+<h3 id=target-audience>Target Audience</h3>
+
+<p>The term "Workspaces" speaks to the challenges faced by software developers and those who lead or support their teams. By providing a mature workspaces solution, the technical barriers to collaboration are lowered, allowing non-developers to make effective contributions as well. This enables us to cater to all <a href="https://handbook.gitlab.com/handbook/product/personas/#user-personas">user personas</a> described in our handbook, with a focus on:</p>
+<ul>
+<li>
+<p><strong><a href="https://handbook.gitlab.com/handbook/product/personas/#sasha-software-developer">Sasha (Software Developer):</a></strong> targets full time contributors to all types of projects (commercial, OSS, data science, etc.). These users expect and need a high level of reliability and speed in their interactions with both project files and Git.</p>
+</li>
+<li>
+<p><strong><a href="https://handbook.gitlab.com/handbook/product/personas/#delaney-development-team-lead">Delaney (Development Team Lead):</a></strong> targets users who often times have elevated roles which allow for the management of project settings, such as access control, security, commit strategies, and mirroring.</p>
+</li>
+<li>
+<p><strong><a href="https://handbook.gitlab.com/handbook/product/personas/#priyanka-platform-engineer">Priyanka (Platform Engineer)</a></strong> targets users who define pipelines, templates, and processes to improve developer efficiency across an organization.</p>
+</li>
+</ul>
+<h3 id=pricing-and-packaging>Pricing and Packaging</h3>
+<p>Remote Developement is currently a Premium+ offering. However, the goal is to provide a multi-level offering, providing value across all tiers and distributions.</p>
+<p><strong>Free tiers</strong> is not currently available, but we aim to provide one in the future to make our features more accessible and valuable to a broader audience.</p>
+<p>With <strong>GitLab Premium</strong>, organizations will have the ability to specify development environments in a <code>devfile</code> and create remote environments on existing cloud infrastructure. This will allow team leads or DevOps engineers to monitor multiple environments from a centralized GitLab dashboard and standardize the environment across the organization, improving team efficiency.</p>
+<p>Eventually, <strong>Ultimate tiers</strong> will have access to advanced monitoring and auditing tools, providing insight into usage across the organization and enforcing security best practices through development tooling.</p>
+<h3 id=analyst-landscape>Analyst Landscape</h3>
+<p>Several analysts have recently published reports highlighting the rapid adoption of cloud-based development workflows.</p>
+<p><strong>Gartner®</strong></p>
+<p>Gartner report titled, <strong>Hype® Cycle for Agile and DevOps, 2021</strong> discusses "Browser-based integrated development environments (IDEs) are consumed “as a service.” They enable browser-based remote access to a complete development environment, which obviates the need for local installation/configuration."*</p>
+<p>Further, it states "Browser-based IDEs provide consistent, secure access to preconfigured development workflows to developers. This frees them from setting up their own environments, eliminating the need to install and maintain prerequisites, software development kits (SDKs), security updates and workstation plug-ins."*</p>
+<p>"Gartner predicts that, by 2026, 60% of cloud workloads will be built and deployed using browser-based IDEs". The report adds, “Five factors are driving their increased adoption":</p>
+<ol>
+<li>"Remote work and remote onboarding of software developers create a need for a frictionless onboarding experience."</li>
+<li>"Environment setup issues can impede productivity and hurt the onboarding experience."</li>
+<li>"Cloud-native (e.g., Kubernetes) deployments require new tooling that either isn't available or is inconvenient to set up on-premises."</li>
+<li>"Browser-based IDEs make it easier to support and secure bring your own PC (BYOPC) use cases."</li>
+<li>"Automating DevOps workflows introduces more plug-ins, extensions and API integrations, which make it cumbersome to manage on local machines."*</li>
+</ol>
+<p>*<em>Gartner, Hype Cycle for Agile and DevOps, 2021, George Spafford, Joachim Herschmann, 12 July, 2021. GARTNER and HYPE CYCLE are a registered trademark and service mark of Gartner, Inc. and/or its affiliates in the U.S. and internationally and are used herein with permission.</em></p>
+<p>GitLab's Web IDE already addresses some of Gartner's recommendations, by providing a platform from which anyone can contribute. By <a href="https://gitlab.com/groups/gitlab-org/-/epics/7143">migrating the Web IDE to VSCode</a>, we can rapidly increase the complexity of work and meet the needs of more serious development tasks. Pairing that with a <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/329602">Server Runtime</a>, GitLab is positioned well to meet our customers' expectations when it comes to security, agility, and flexibility.</p>
+<p><em>451 Research</em></p>
+<p>451 Research published an analysis of <a href="https://coder.com/">Coder</a> and their approach to moving development workspaces to the cloud. 451 Research recognizes that "by moving developers, IT operators and others to the cloud, organizations can drive faster releases, productivity and efficiency by automating and abstracting IT environments and their management. The idea is that developers have more time to focus on new features, applications and innovation when they are unencumbered with setting up and running their own environments."</p>
+<p>In the analysis, 451 Research cites results from their 2021 report, <strong>Voice of the Enterprise: DevOps, Workloads &amp; Key Projects</strong>, that reveal a significant shift in the primary DevOps implementation environment, moving away from On-premise and Hosted Private Cloud workspaces to SaaS and Public Cloud over the next two years.</p>
+<p>451 Research's recommendation to stay competitive in this space is to "focus on enabling simplicity, speed and productivity for developers," something GitLab's single platform for DevOps is positioned well to deliver.</p>
+<p><em>Source: 451 Research, a part of S&amp;P Global Market Intelligence, Coverage Initiation: Coder moves development to the cloud with workspaces-as-code, September 2021, All Rights Reserved</em></p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/create/remote_development/workspaces/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/create/remote_development/workspaces/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

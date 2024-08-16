@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Fleet Visibility
+|
+GitLab
+</title>
+<meta content='This is the Product Direction Page for the Runner:Fleet Visibility product category.' name=description />
+<meta content='This is the Product Direction Page for the Runner:Fleet Visibility product category.' name='twitter:description'/>
+<meta content='This is the Product Direction Page for the Runner:Fleet Visibility product category.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Fleet Visibility' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/verify/fleet_visibility/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/verify/fleet_visibility/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Fleet Visibility' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/verify/fleet_visibility/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Fleet Visibility
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/jreporter'>
+<div class=codeowners-single>
+<img
+src='/images/team/jackiemeshell.png'
+class=codeowner-avatar-img
+alt='Jackie Porter'
+title='Jackie Porter'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Jackie Porter
+</div>
+<div class=codeowners-handle>
+@jreporter
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/verify/fleet_visibility/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/verify/">Verify Stage Direction</a></li><li>Category Direction - Fleet Visibility</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 id=navigation--settings>Navigation &amp; Settings</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/verify/">Verify</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td>Complete</td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-07-18</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+
+<p>Thanks for visiting this direction page on the Fleet Visibility category at GitLab. This page belongs to the <a href="/handbook/product/categories/#runner-group">Runner Group</a> within the Verify Stage and is maintained by <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#100;&#101;&#097;&#115;&#116;&#109;&#097;&#110;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">Darren Eastman</a>.</p>
+<h3 id=strategy-and-themes>Strategy and Themes</h3>
+<p>Our vision is that as customers more deeply integrate AI into their development processes, in one unified dashboard, they can manage a GitLab Runner Fleet at scale and have deep visibility into CI/CD pipeline execution metrics that easily correlate to the specific CI/CD build environment.</p>
+<p>Adequate Fleet Visibility starts with providing at-a-glance insights into all the statuses (online, offline, stale) of all runner-build servers in your organization. Fleet Visibility will allow you to determine the group or project a runner is associated with while also surfacing critical metrics such as runner build queue performance, failure rates, and the most heavily used runners.</p>
+<p>This category provides platform administrators and developers with the metrics they need to identify CI pipeline performance or reliability issues and determine which component to focus on when using trial-and-error approaches to optimization. This category aims to integrate the proper CI build fleet and pipeline metrics within the GitLab UI to eliminate developer pain points with automated CI/CD builds that negatively impact productivity. Those pain points include developers trying to determine if and how to optimize CI job duration or troubleshoot CI/CD job failures due to the build environment.</p>
+<p>By correlating the insights provided to platform administrators at the admin or group levels exposed in the Fleet Dashboard with the CI/CD job and pipeline execution metrics (runner queue depth, job duration trends, job failure rates, pipeline reliability) at the project level exposed in CI Insights, organizations will spend less time building custom observability reporting dashboards for GitLab CI/CD pipelines. Developers and platform administrators will have a shared understanding of CI/CD performance trends across the platform.</p>
+<p>For executives, as the AI-powered GitLab DevSecOps platform enables your development teams to deliver secure software faster, Fleet Visibility provides your operations team the visibility they need to operate a CI/CD build infrastructure at scale cost-effectively and efficiently on any public or private cloud infrastructure.</p>
+<p>In short, we aim to ensure you can operate a build fleet supporting an AI DevSecOps platform at scale efficiently and cost-effectively.</p>
+<h3 id=1-year-plan>1 year plan</h3>
+
+<p><strong>Runner Fleet Dashboard</strong></p>
+<p>The <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/424495">Runner Fleet Dashboard - Admin View: Starter Metrics</a> was released in 16.5. The included metrics widgets for the initial release are as follows:</p>
+<ul>
+<li>Fleet Health (Postgres DB)</li>
+<li>Top Active Runners (Postgres DB)</li>
+<li>Wait Time to Pick up a Job (Clickhouse DB)</li>
+</ul>
+<p>We followed this up by releasing the <a href="https://docs.gitlab.com/ee/ci/runners/runner_fleet_dashboard_groups.html">Runner Fleet Dashboard for Groups</a> in the GitLab 17.1 release. With this release, customers on GitLab.com and Self Managed can manage runner fleets at the group level. We have heard from many customers that they need this capability and APIs to augment the current observability tooling and custom dashboards they rely on to monitor and operate GitLab CI/CD and Runners.</p>
+<p>The next major goal for FY25 is ensure that we have a supported solution for self-managed customers who need to use the Runner Fleet Dashboard and specifically more advanced metrics such as the <code>wait time to pick up a job</code> that relies on Clickhouse, an open-source columnar database that provides fast query performance for large datasets.</p>
+<p>With the release of the Fleet Dashboard for Groups in 17.1, we plan to use the following few milestones to gather and analyze customer feedback. That feedback will guide the next evolution of the Fleet Dashboard strategy for Q4 FY25 and into FY26. While we have already identified additional metrics, such as runner failure trends, that could be valuable to include in the dashboard, it is also likely, based on recent customer feedback, that simply extending the metrics data model and enabling customers to create their reports and visualizations is the most valuable future iteration.</p>
+<p>Regarding prediction, one prevalent theme in customer conversations is determining when there may be a slowdown in runner queue performance. Another critical problem and pain point often cited by customers is configuring the Runner Fleet to find the optimal balance between compute costs and developer efficiency as measured by reduced CI/CD job durations. These are classic prediction problems, so we aim to explore if we can reduce the cost of prediction and fleet operational costs for our customers by incorporating ML/AI into the Fleet Dashboard. With Clickhouse as the database layer and a new analytics database table structure for Runner Fleet, we believe the foundational elements are in place to make this next evolution a reality in FY26.</p>
+<p>Also, based on the many customer conversations, operating a CI/CD build fleet on Kubernetes can be complex. Platform engineering teams sometimes must spend months configuring and optimizing the Kubernetes environment to run their organization's CI/CD jobs reliably. In Runner Core, we have seen the immense value to platform teams of simply enabling the printing of Kubernetes events directly in the CI/CD job log. How can we expose the right metrics for the Kubernetes CI/CD build infrastructure in the Fleet Dashboard? Will doing so simplify the operational burden for those customers who use Kubernetes as the CI/CD build infrastructure? We aim to explore these questions and strategies in depth as we plan the Fleet Dashboard's future roadmap.</p>
+<p><strong>CI/CD Insights</strong></p>
+<p>The first phase in the unified Fleet Visibility strategy is solving the critical visibility problems developers and platform administrators have with using GitLab CI/CD. Those visibility problems include the fact that there is no built-in report in <a href="https://docs.gitlab.com/ee/user/analytics/ci_cd_analytics.html">GitLab CI/CD analytics</a> for a developer to determine if a CI job is running as expected from a duration perspective or whether a CI job is unhealthy, as represented by an increase in job failures. As a result, customers have had to create custom reporting systems or implement third-party observability tools using data exposed in the GitLab jobs API.</p>
+<p>Our goal for the second half of FY25 is to <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/4444681">improve the GitLab CI/CD analytics view</a> to incorporate the critical metrics our customers tell us they need to use, monitor, and optimize GitLab CI/CD efficiently. That includes providing insights into the pipeline and CI/CD job performance metrics with drill-down capabilities to individual jobs so developers can quickly identify CI/CD jobs with abnormal failure rates, leading to proactive CI/CD job optimization and improved reliability. Providing visibility into all aspects of CI/CD job performance is only the foundation. We intend to develop solutions using this data that seek to eliminate developer pain and frustration related to slow CI/CD job start times, less than optimal CI/CD job duration, and job failures that result in lost developer productivity as developers troubleshoot CI/CD failures instead of working on coding tasks.</p>
+<h4 id=what-is-next-for-us>What is next for us</h4>
+
+<p>In the next three months (August to October) we are focused on the following:</p>
+<p><strong>CI/CD Insights</strong></p>
+<p><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/444468">Improve the GitLab CI/CD analytics view</a></p>
+<h4 id=what-we-are-currently-working-on>What we are currently working on</h4>
+
+<ul>
+<li>In 17.3 (August) and 17.4 (September) we are working on adding the foundational API's required to deliver the new <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/444468">GitLab CI/CD analytics view</a></li>
+</ul>
+<h4 id=what-we-recently-completed>What we recently completed</h4>
+
+<p>In the past three months, we have shipped the following key features:</p>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/411923">Add UI to allow disabling use of registration tokens for top-level groups</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/424789">Fleet Dashboard for Groups</a></li>
+</ul>
+<h4 id=what-is-not-planned-right-now>What is Not Planned Right Now</h4>
+
+<p>In the near term we are not focused on design or development efforts to improve Runners usability in <a href="https://docs.gitlab.com/ee/administration/#cicd-settings">CI/CD settings</a> at the <a href="https://gitlab.com/groups/gitlab-org/-/epics/6867">project level</a>.</p>
+<p>While improvements in this view could be valuable to the <a href="/handbook/product/personas/#sasha-software-developer">software developer</a> persona, feedback from customers indicates that providing meaningful CI insights that cover vital metrics such as CI job success and failure rates, job duration metrics, average job retries, average queue time for each job, are more valuable for customers and are critical enablers for broader CI adoption.</p>
+<h3 id=best-in-class-landscape>Best in Class Landscape</h3>
+
+<p>BIC (Best In Class) is an indicator of forecasted near-term market performance based on a combination of factors, including analyst views, market news, and feedback from the sales and product teams. It is critical that we understand where GitLab appears in the BIC landscape.</p>
+<p>At GitLab, a critical challenge is simplifying the administration and management of a CI/CD build fleet at an enterprise scale. This effort is one foundational pillar to realizing the vision of GitLab Duo AI-optimized DevSecOps. Competitors are also investing in this general category. Earlier this year GitHub announced a new management experience that provides a summary view of GitHub-hosted runners. This is a signal that there will be a focus on reducing maintenance and configuration overhead for managing a CI/CD build environment at scale across the industry.</p>
+<p>We also now see additional features on the GitLab public roadmap signaling an increased investment in the category we coined here at GitLab, 'Runner Fleet.' These features suggest that GitHub aims to provide a first-class experience for managing GitHub Actions runners and include features in the UI to simplify runner queue management and resolve performance bottlenecks. With this level of planned investment, it is clear that there is recognition in the market that simplifying the administrative maintenance and overhead of the CI build fleet is critical for large customers and will help enable deeper product adoption.</p>
+<p>Indirect competitor Actutated is the first solution that we have seen whose product includes a <a href="https://docs.actuated.dev/dashboard/#runners">dashboard for Runners and build queue</a> visibility. This is another strong signal that providing solutions that reduce the CI/CD build infrastructure's management overhead is valuable for organizations with mature DevOps practices.</p>
+<p>In the CI Insights arena, a few startups, for example, <a href="https://trunk.io/ci-analytics">Trunk.io</a>, are providing CI visibility solutions for GitHub actions. The <a href="https://www.datadoghq.com/product/ci-cd-monitoring/">Datadog CI Visbility product</a> is a mature, full-featured offering that provides CI/CD insights for GitLab CI/CD using the GitLab jobs API as the foundational layer.</p>
+<p>To ensure that our GitLab customers can fully realize the value of GitLab's product vision, we must provide solutions that eliminate the complexities, manual tasks, and operational overhead and reduce the costs of delivering a CI build environment at scale. Our goal in FY25 is to include good enough Fleet visibility solutions that customers not yet fully invested in third-party observability or custom tooling can use out of the box to observe, analyze, optimize CI jobs, or troubleshoot CI job failures natively in GitLab.</p>
+<h4 id=key-capabilities>Key Capabilities</h4>
+
+<p>The key capabilities that we hear from customers describing fleet management and CI insights pain points are as follows:</p>
+<ul>
+<li>What it the root cause of a CI pipeline failure?</li>
+<li>CI/CD job failure rate trends</li>
+<li>CI/CD job duration trends</li>
+<li>CI/CD job retry rate trends</li>
+<li>Runner queue visibility (wait time)</li>
+<li>Runner Fleet management metrics</li>
+<li>Frictionless upgrades</li>
+<li>Security</li>
+<li>Cost visibility for runners hosted on public cloud infrastructure</li>
+<li>Fleet autoscaling</li>
+<li>Fleet cost management while maintaining internal service level objectives (SLOs)</li>
+<li>Automatic fleet configuration optimization</li>
+<li>Managing runner sprawl</li>
+<li>Configuring and managing a heterogeneous runner fleet (container builds on Linux, container builds on Windows, shell builds on Windows, shell builds on macOS)</li>
+<li>Self-service runner creation for the developer persona</li>
+<li>Automating choosing the right cloud and compute to host a Runner based on CI/CD build performance</li>
+</ul>
+<h4 id=top-123-competitive-solutions>Top [1/2/3] Competitive Solutions</h4>
+<p>Runner Fleet is still a nascent category; competitors like GitHub are beginning to invest in this area. On their future roadmap, GitHub plans to introduce <a href="https://github.com/github/roadmap/issues/504">seamless management of GitHub-hosted and self-hosted runners</a>. This feature aims to deliver a "single management plane to manage all runners for a team using GitHub." GitHub also plans to offer <a href="https://github.com/github/roadmap/issues/561">Actions Performance Metrics</a> to provide organizations with deep insights into critical CI/CD performance metrics. One example of how the cloud infrastructure market can evolve is <a href="https://cloud.google.com/solutions/active-assist">Active Assist for Google Cloud</a> - a solution to optimize cloud operations cost reduction. Therefore we can imagine a future where Microsoft and GitHub bring to market AI-based solutions that integrate GitHub Actions with infrastructure on Azure. Our GitLab competitive position is solid in that we will continue to invest in features and capabilities to ensure that customers can use GitLab Runners efficiently on any cloud provider.</p>
+<p>In the insights space DataDog has a <a href="https://docs.datadoghq.com/continuous_integration/">CI and Test Visibility</a> offering and <a href="https://circleci.com/docs/insights/">CircleCI</a> has had an insights offering for some time. While there is no main GitHub actions functionality there are several offerings in the marketplace for collecting test/run data and displaying it on a dashboard.</p>
+<p>Harness.io, Software Engineering Insights](https://developer.harness.io/docs/software-engineering-insights) includes several configurable <a href="https://developer.harness.io/docs/software-engineering-insights/sei-metrics-and-reports/velocity-metrics-reports/ci-cd-reports">CI/CD job</a> and pipeline metric widgets. The <a href="https://developer.harness.io/docs/software-engineering-insights/sei-metrics-and-reports/velocity-metrics-reports/ci-cd-reports#job-count-reports">CI/CD job count</a> metric category aims to provide developers with insights into CI/CD job success and failure rates. We also see additional investment planned by <a href="https://developer.harness.io/roadmap/#platform">Harness.io</a> with their Pipeline Analytics feature slated for Q3 2024 (August 2024+).</p>
+<p>In the Test Reduction area Sealights offers a <a href="https://www.sealights.io/solutions/cut-end-to-end-tests-cycle-time/">CutTests</a> solution and <a href="https://www.redefine.dev/product">Redefine.dev</a> is a new player in the space taking advantage of AI to reduce future test runs for faster pipelines.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/verify/fleet_visibility/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/verify/fleet_visibility/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

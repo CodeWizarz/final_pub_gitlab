@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Integrations
+|
+GitLab
+</title>
+<meta content='This GitLab product category is focused on enabling intuitive collaboration with tools GitLab&#39;s customers rely on. Find more information here!' name=description />
+<meta content='This GitLab product category is focused on enabling intuitive collaboration with tools GitLab&#39;s customers rely on. Find more information here!' name='twitter:description'/>
+<meta content='This GitLab product category is focused on enabling intuitive collaboration with tools GitLab&#39;s customers rely on. Find more information here!' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Integrations' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/foundations/import_and_integrate/integrations/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/foundations/import_and_integrate/integrations/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Integrations' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/foundations/import_and_integrate/integrations/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Integrations
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/joshlambert'>
+<img
+src='/images/team/joshua.png'
+class=codeowner-avatar-img
+alt='Joshua Lambert'
+title='Joshua Lambert'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/m_frankiewicz'>
+<img
+src='/images/team/magdalenafrankiewicz.jpg'
+class=codeowner-avatar-img
+alt='Magdalena Frankiewicz'
+title='Magdalena Frankiewicz'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/foundations/import_and_integrate/integrations/index.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/foundations/">Product Stage Direction - Foundations</a></li><li><a href="/direction/foundations/import_and_integrate/">Group Direction - Import and Integrate</a></li><li>Category Direction - Integrations</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#integrations" id=markdown-toc-integrations>Integrations</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and Themes</a></li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a> <ul>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is Not Planned Right Now</a></li>
+<li><a href="#building-a-marketplace" id=markdown-toc-building-a-marketplace>Building a "marketplace"</a></li>
+<li><a href="#developing-new-domain-specific-integrations" id=markdown-toc-developing-new-domain-specific-integrations>Developing new domain-specific integrations</a></li>
+</ul>
+</li>
+<li><a href="#integration-ownership" id=markdown-toc-integration-ownership>Integration Ownership</a></li>
+<li><a href="#insights" id=markdown-toc-insights>Insights</a> <ul>
+<li><a href="#customer-insights" id=markdown-toc-customer-insights>Customer Insights</a></li>
+</ul>
+</li>
+<li><a href="#contributing" id=markdown-toc-contributing>Contributing</a></li>
+<li><a href="#partnership" id=markdown-toc-partnership>Partnership</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=integrations>Integrations</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/foundations/">Foundations</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">Viable</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-04-22</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+<p>Thanks for visiting this category direction page on Integrations in GitLab. This page belongs to the <a href="https://about.gitlab.com/handbook/product/categories/#import-and-integrate-group">Import and Integrate</a> group of the Foundations stage and is maintained by the group's Product Manager, <a href="https://gitlab.com/m_frankiewicz">Magdalena Frankiewicz</a> (<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#102;&#114;&#097;&#110;&#107;&#105;&#101;&#119;&#105;&#099;&#122;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">E-mail</a>, <a href="https://calendly.com/gitlab-magdalenafrankiewicz/45mins">Calendly</a>).</p>
+<p>This direction page is a work in progress, and everyone can contribute:</p>
+<ul>
+<li>Please comment and contribute in the linked <a href="https://gitlab.com/groups/gitlab-org/-/issues/?sort=created_date&amp;state=opened&amp;label_name%5B%5D=Category%3AIntegrations&amp;first_page_size=20">issues</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics?state=opened&amp;page=1&amp;sort=start_date_desc&amp;label_name[]=Category:Integrations">epics</a> on this page. Sharing your feedback directly on GitLab.com is the best way to contribute to our strategy and vision.</li>
+<li>Please share feedback directly via email, Twitter, or on a video call. If you're a GitLab user and want to discuss how GitLab can improve Importers, we'd especially love to hear from you.</li>
+</ul>
+<h3 id=strategy-and-themes>Strategy and Themes</h3>
+
+<p>GitLab's vision is to be the best <a href="/handbook/product/single-application/">single application for every part of the DevOps toolchain</a>. However, we acknowledge that to achieve this, there are many workflows, custom scripts, and nuanced integrations that customers require and GitLab may not be able to prioritize.</p>
+<p>To make the most impact and keep the Integrations category sustainable, we will focus on improvements to the technical foundations of integrations as well as documentation, guides, and best practices to assist the broader community in contributing to integrations.</p>
+<p>As we continue to scale how we support integrations at GitLab, we are working closely with product teams to shift support and prioritization to the relevant areas of the product. Similar to APIs, webhooks, audit events, authentication, and other horizontal services, integrations are better supported by the teams closest to the source of customer pain and need. Rather than centralized prioritization, this enables teams to think outside of the box about how integrations can take their features to the next level, gain more exposure from new audiences, or integrate strategically with competitors to achieve business outcomes.</p>
+<p>To support teams in building integrations, we'll be focusing on the technology and tools product teams will leverage to build integrations, including our APIs, webhooks, our Static Integrations DSL, and further abstractions to simplify the process of building integrations.</p>
+<p>To achieve this we'll be focusing on the following areas:</p>
+<ul>
+<li>Defining ownership of integrations in GitLab</li>
+<li>Adding all existing integrations to our <a href="https://gitlab.com/groups/gitlab-org/-/epics/7652">Integrations Static DSL</a></li>
+<li>Improving our review process with <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/385969">automations to guide new contributors (internal and external)</a></li>
+<li>Enhancing our <a href="https://docs.gitlab.com/ee/development/integrations/">Integrations Development Guide</a> to support more use cases.</li>
+</ul>
+<h3 id=1-year-plan>1 year plan</h3>
+
+<p>Considering Integrations domain, so far in 2024 we worked on:</p>
+<ul>
+<li>Jira integrations</li>
+<li>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/integration/jira/configure.html">Jira issue integration</a> - that works with all Jira types (Cloud, Server, Data Center) and allows for <a href="https://docs.gitlab.com/ee/integration/jira/issues.html">managing Jira issues from GitLab</a>, like cross-referencing Jira issues and GitLab MRs. Premium customers can also as view Jira issues in GitLab.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/integration/jira/development_panel.html">GitLab for Jira Cloud app</a> - that works only with Jira Cloud and shows GitLab development information in Jira, in the Jira development panel.</li>
+</ul>
+</li>
+<li>GitLab for Slack app.</li>
+</ul>
+<p>From May 2024 we discontinue working on Jira integrations, so that we can instead focus on developing Jira importer.</p>
+<p>We will continue improving the GitLab for Slack app at a slow pace.</p>
+<h4 id=what-is-next-for-us>What is next for us</h4>
+
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/401920">Improved set up of GitLab for Slack app for SM instances</a></li>
+</ul>
+<h4 id=what-we-are-currently-working-on>What we are currently working on</h4>
+
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12609">Allow multiple Jira project keys to view Jira issues in GitLab</a></li>
+</ul>
+<h4 id=what-we-recently-completed>What we recently completed</h4>
+
+<ul>
+<li><a href="https://about.gitlab.com/releases/2024/02/15/gitlab-16-9-released/#enable-jira-issues-at-the-group-level">Enable Jira issues at the group level</a> <em>16.9</em></li>
+<li><a href="https://about.gitlab.com/releases/2024/02/15/gitlab-16-9-released/#rest-api-support-for-the-gitlab-for-slack-app">REST API support for GitLab for Slack app</a> <em>16.9</em></li>
+<li><a href="https://about.gitlab.com/releases/2024/04/18/gitlab-16-11-released/#gitlab-for-slack-app-configurable-for-groups-and-instances">GitLab for Slack app configurable for groups and instances</a> <em>16.11</em></li>
+</ul>
+<h4 id=what-is-not-planned-right-now>What is Not Planned Right Now</h4>
+
+<h4 id=building-a-marketplace>Building a "marketplace"</h4>
+<p>GitLab does not utilize a plugin model for integrations with other common tools and services, or provide a marketplace for them. As an <a href="https://en.wikipedia.org/wiki/Open-core_model">open core project</a>, integrations can live directly inside the product. Learn more about our reasons for this in our <a href="/handbook/product/product-principles/#avoid-plugins-and-marketplaces">Product Handbook</a>.</p>
+<p>This does not mean we will <strong>never</strong> build a "marketplace" for GitLab, it just means we have no intention of doing it at this time.</p>
+<h4 id=developing-new-domain-specific-integrations>Developing new domain-specific integrations</h4>
+<p>Import and Integrate group won't focus on developing new integrations, but we will continue to support other GitLab product groups, partners and Community contributors in doing that.</p>
+<p>We'll continue to support core functionality for cross-stage integrations, primarily "notification" integrations, such as Slack or Google Chat. Cross-functional teams, however, will be responsible for building new domain-specific integration features that apply to their particular product group or stage.</p>
+<h3 id=integration-ownership>Integration Ownership</h3>
+<p>We are <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/438682">working to shift responsibilities as DRIs of integrations</a> to individual product teams within the domain areas across GitLab. This will give groups full visibility and ownership in serving customers in their domains, based on group's comprehensive strategy. This will also help to make Integration category more sustainable. We want more integrations to be added over time, and sharing the ownership of these with other groups makes this possible and scalable.</p>
+<p>Group Import and Integrate keeps ownership of the foundations of integrations and the <a href="https://docs.gitlab.com/ee/development/integrations/">Integration development guidelines</a>. We keep offering guidance on integrations best practices to anyone that contribute.</p>
+<p>As we work to better define ownership of integrations across GitLab, the list below clarifies the current ownership of maintenance, security, and new feature development of each integration.</p>
+<p>Security related integrations, owned by group Anti-Abuse:</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/integration/akismet.html">Akismet</a></li>
+<li><a href="https://docs.gitlab.com/ee/integration/arkose.html">Arkose Protect</a></li>
+<li><a href="https://docs.gitlab.com/ee/integration/recaptcha.html">ReCAPTCHA</a></li>
+</ul>
+<p>CI/CD integrations, owned by group Pipeline Execution:</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/bamboo.html">Bamboo CI</a></li>
+<li>Drone CI</li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/github.html">GitHub</a></li>
+<li><a href="https://docs.gitlab.com/ee/integration/jenkins.html">Jenkins</a></li>
+<li>JetBrains TeamCity CI</li>
+<li><a href="https://docs.gitlab.com/ee/integration/diffblue_cover.html">Diffblue Cover</a></li>
+</ul>
+<p>Integrations owned by group Project Management:</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/administration/integration/kroki.html">Kroki diagrams</a></li>
+<li><a href="https://docs.gitlab.com/ee/administration/integration/mailgun.html">Mailgun</a></li>
+</ul>
+<p>Integrations owned by group Source Code:</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/administration/integration/plantuml.html">PlantUML</a></li>
+<li><a href="https://docs.gitlab.com/ee/integration/sourcegraph.html">Sourcegraph</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/beyond_identity.html">Beyond Identity</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/git_guardian.html">GitGuardian</a></li>
+</ul>
+<p>Integrations owned by group Incubation:</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/apple_app_store.html">Apple App Store Connect</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/google_play.html">Google Play</a></li>
+</ul>
+<p><a href="https://docs.gitlab.com/ee/integration/elasticsearch.html">Elasticsearch integration</a> is owned by group Global Search.</p>
+<p><a href="https://docs.gitlab.com/ee/integration/datadog.html">Datadog integration</a> is owned by group Runner.</p>
+<p><a href="https://docs.gitlab.com/ee/integration/gitpod.html">Gitpod integration</a> is owned by group IDE.</p>
+<p><a href="https://docs.gitlab.com/ee/user/project/integrations/harbor.html">Harbor integration</a> is owned by group Container Registry.</p>
+<p>Packagist is owned by group Package Registry.</p>
+<p><a href="https://docs.gitlab.com/ee/user/project/repository/vscode.html">Visual Studio Code extension</a> is owned by group Editor Extensions.</p>
+<p>External issue trackers, ownership negotiated with group Project Management, currently maintained by group Import and Integrate:</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/asana.html">Asana</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/bugzilla.html">Bugzilla</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/clickup.html">ClickUp</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/custom_issue_tracker.html">Custom issue tracker</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/ewm.html">EWM - IBM Enginnering Workflow Management</a></li>
+<li><a href="https://docs.gitlab.com/ee/integration/jira/configure.html">Jira issue integration</a></li>
+<li><a href="https://docs.gitlab.com/ee/integration/jira/development_panel.html">GitLab for Jira Cloud app</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/pivotal_tracker.html">Pivotal Tracker</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/redmine.html">Redmine</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/youtrack.html">YouTrack</a></li>
+</ul>
+<p>"Notification" integrations, maintained by group Import and Integrate:</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/slack.html">Slack Notifications</a> (deprecated)</li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/slack_slash_commands.html">Slack slash commands</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/slack.html">GitLab for Slack app</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/discord_notifications.html">Discord</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/hangouts_chat.html">Gooogle chat</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/irker.html">Irker</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/mattermost.html">Mattermost notifications</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/mattermost.html">Mattermost slash commands</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/microsoft_teams.html">Microsoft Teams</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/pumble.html">Pumble</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/unify_circuit.html">Unify Circuit</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/webex_teams.html">Webex Teams</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/telegram.html">Telegram</a></li>
+</ul>
+<p>Other integrations, currently maintained by group Import and Integrate:</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/integration/trello_power_up.html">Trello PowerUp</a> - ownership negotiated with group Project Management</li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/pipeline_status_emails.html">Pipeline status emails</a> - ownership negotiated with stage Verify</li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/emails_on_push.html">Emails on push</a></li>
+<li><a href="https://docs.gitlab.com/ee/integration/gmail_action_buttons_for_gitlab.html">Gmail Actions Buttons</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/mock_ci.html">Mock CI</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/integrations/squash_tm.html">Squash TM</a> - ownership negotiated with group Product Planning</li>
+</ul>
+<h3 id=insights>Insights</h3>
+<h4 id=customer-insights>Customer Insights</h4>
+<ul>
+<li><a href="https://docs.google.com/document/d/1RzZpN-_trbyPZu6-vL4YpDW-3PLj_TaRynJMvt6ZzSc/edit?usp=sharing">Top Growth Opportunities</a></li>
+<li>In our <a href="https://docs.google.com/presentation/d/1ovHeGfEnFAWzQTEYJe6SHIC2cUyn4QjO35-uQmVskSo/edit#slide=id.g19bafe62b00_0_588">Integrations Leadership Survey [Dec 2022 Report]</a>, we investigated the importance of integrations to GitLab users who are either buyers or influence purchase decisions for new tools at their company. We learned that:
+<ul>
+<li>Integrations has an impact on the decision to purchase GitLab for 62% of respondents.</li>
+<li>Leaders preferred that GitLab provide deeper integration instead of focusing on new integrations.</li>
+<li>CI and AppDev are the two most critical workflows when it comes to integration.</li>
+<li>Leaders were interested in more API support for integrations, as well as the ability to use CLI or SDK to connect home grown systems.</li>
+<li>Many wanted deeper Slack integration, or use CI integrations to solve for more Slack use cases</li>
+<li>Native integrations are often not customizable enough to suit varied use cases, requiring too much work to get them functional</li>
+</ul>
+</li>
+</ul>
+<h3 id=contributing>Contributing</h3>
+<p>If you want to contribute to an existing integrations, you can look for open issues labelled with this integration name, e.g "Integration::Asana" or "Integration::Jira".</p>
+<p>If you'd like to contribute a new integration, please first review <a href="https://docs.gitlab.com/ee/development/integrations/">Integration development guidelines</a>. Contact GitLab group owning the domain the new integration fits best, so that the group is aware of the planned contribution. Import and Integrate offers guidance on integrations best practices during development, by reviewing MRs and answering technical questions.</p>
+<p>If you're interested in general Integrations area, <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/?sort=created_date&amp;state=opened&amp;label_name%5B%5D=Category%3AIntegrations&amp;first_page_size=20">you can find open issues with ~"Category:Integrations" label</a>, however this list contains issues specific to particular integrations as well.</p>
+<p>Feel free to reach out to the team directly if you need guidance or want
+feedback on your work by using the ~"group::import and integrate" label on your open merge requests.</p>
+<p>You can read more about our general contribution guidelines <a href="https://gitlab.com/gitlab-org/gitlab/-/blob/master/CONTRIBUTING.md">here</a>.</p>
+<h3 id=partnership>Partnership</h3>
+<p>If your company is interested in partnering with GitLab, check out the <a href="https://about.gitlab.com/partners/">GitLab Partner Program</a> page for more info.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/foundations/import_and_integrate/integrations/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/foundations/import_and_integrate/integrations/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

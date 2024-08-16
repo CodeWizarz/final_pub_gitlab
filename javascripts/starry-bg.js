@@ -1,0 +1,1 @@
+!function(){for(var a=$(".galaxy"),t=0;t<=100;){var o=Math.random(),r=Math.random(),d=Math.floor(3*Math.random()+1),h={x:a.width()*o,y:a.height()*r};$('<div class="star star-type'+d+'"></div>').appendTo(a).css({top:h.y,left:h.x}),t++}}();

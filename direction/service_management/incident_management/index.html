@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Incident Management
+|
+GitLab
+</title>
+<meta content='A robust incident management platform consumes inputs from all sources and empowers the response team to quickly understand and remediate the problem at hand.' name=description />
+<meta content='A robust incident management platform consumes inputs from all sources and empowers the response team to quickly understand and remediate the problem at hand.' name='twitter:description'/>
+<meta content='A robust incident management platform consumes inputs from all sources and empowers the response team to quickly understand and remediate the problem at hand.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Incident Management' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/service_management/incident_management/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/service_management/incident_management/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Incident Management' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/service_management/incident_management/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Incident Management
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<div class=codeowners-single>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Hillary Benson
+</div>
+<div class=codeowners-handle>
+@hbenson
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/service_management/incident_management/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/service_management/">Product Direction - Service Management</a></li><li>Category Direction - Incident Management</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#demo" id=markdown-toc-demo>Demo</a></li>
+<li><a href="#vision" id=markdown-toc-vision>Vision</a></li>
+<li><a href="#challenges" id=markdown-toc-challenges>Challenges</a></li>
+<li><a href="#opportunities" id=markdown-toc-opportunities>Opportunities</a></li>
+</ul>
+</li>
+<li><a href="#target-audience-and-experience" id=markdown-toc-target-audience-and-experience>Target Audience and Experience</a></li>
+<li><a href="#roadmap" id=markdown-toc-roadmap>Roadmap</a> <ul>
+<li><a href="#now---next-1-4-milestones" id=markdown-toc-now---next-1-4-milestones>Now - (next 1-4 milestones)</a></li>
+<li><a href="#next-next-5-8-milestones" id=markdown-toc-next-next-5-8-milestones>Next (next 5-8 milestones)</a></li>
+<li><a href="#future-next-9-12-milestones" id=markdown-toc-future-next-9-12-milestones>Future (next 9-12 milestones)</a></li>
+<li><a href="#long-term-2-years-fy26-and-beyond" id=markdown-toc-long-term-2-years-fy26-and-beyond>Long Term (2+ years, FY26 and beyond)</a></li>
+<li><a href="#workflow" id=markdown-toc-workflow>Workflow</a> <ul>
+<li><a href="#maturity-plan" id=markdown-toc-maturity-plan>Maturity Plan</a></li>
+<li><a href="#what-is-next--why" id=markdown-toc-what-is-next--why>What is Next &amp; Why?</a></li>
+<li><a href="#dogfooding-plan" id=markdown-toc-dogfooding-plan>Dogfooding Plan</a> <ul>
+<li><a href="#incident-management-features-the-infrastructure-team-is-currently-dogfooding" id=markdown-toc-incident-management-features-the-infrastructure-team-is-currently-dogfooding>Incident Management features the Infrastructure team is currently Dogfooding</a></li>
+</ul>
+</li>
+<li><a href="#marketing--sales-enablement" id=markdown-toc-marketing--sales-enablement>Marketing &amp; Sales Enablement</a></li>
+<li><a href="#pricing" id=markdown-toc-pricing>Pricing</a> <ul>
+<li><a href="#incidents" id=markdown-toc-incidents>Incidents</a></li>
+<li><a href="#alerts" id=markdown-toc-alerts>Alerts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive Landscape</a></li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst Landscape</a> <ul>
+<li><a href="#gartner" id=markdown-toc-gartner>Gartner</a></li>
+<li><a href="#451-research" id=markdown-toc-451-research>451 Research</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id=overview>Overview</h2>
+<p>Downtime is expensive - it costs companies hundreds of thousands of dollars, or more, in a single hour.</p>
+<p>While downtime avoidance is preferable, downtime is not avoidable. As such, it is imperative that organizations are geared towards being able to respond to production problems efficiently and effectively. Put another way, organizations need to be resilient.</p>
+<p>The majority of investment and focus of the DevOps industry (including GitLab) to date has been on downtime avoidance. There are some entrenched competitors approaching incident management from the perspective of workflows (ServiceNow), or incident notification (Pager Duty, OpsGenie). Despite this, holistic incident management products are lacking resulting in many organizations stitching together point solutions mixed with a healthy dose of DIY. We believe that many organizations are looking for ways to avoid reinventing the wheel on incident management</p>
+<h3 id=demo>Demo</h3>
+<p>Check out this short video from our engineer Paulina that demos <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/373854">incident tags</a>.</p>
+
+<figure class=video_container>
+<iframe src="https://www.youtube-nocookie.com/embed/gs0gbRTaD7k" frameborder=0 allowfullscreen=true> </iframe>
+</figure>
+
+<p>To see past demos take a look at the <a href="https://www.youtube.com/playlist?list=PL05JrBw4t0KoO5WmppV5TduOD9D-IP2p0">Respond Group playlist</a> or click the link(s) below.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=MIjGyoTh7hQ">August 2022</a> - What we've built so far; on-call schedules, escalation policies, alerts, and incidents.</li>
+<li><a href="https://www.youtube.com/watch?v=ResCq5DsjME">September 2022</a> - GitLab Incidents as the single source of truth (SSOT).</li>
+<li><a href="https://www.youtube.com/watch?v=l2Larebm1Ic&amp;t=1s">October 2022</a> - Important incident metrics and how you will be able to track them in GitLab Incidents.</li>
+<li><a href="https://www.youtube.com/watch?v=zj6sYY7NTIo">November 2022</a> - Slack App for Incident Management design and <a href="https://gitlab.com/groups/gitlab-org/-/epics/8545">epic</a> overview</li>
+<li><a href="https://www.youtube.com/watch?v=Gtdvpk8Pjm4">December 2022</a> - A short demo video that highlights our <strong>designs</strong> for our <a href="https://gitlab.com/groups/gitlab-org/-/epics/9447">Post-incident review MVC</a>.</li>
+</ul>
+<h3 id=vision>Vision</h3>
+<p>GitLab Incident Management helps teams build resiliency in their software and processes against downtime, outages, and other unexpected situations.</p>
+<p>We plan to achieve this by:</p>
+<ul>
+<li>Capturing the single source of truth (SSOT) with <strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/6376">incident timelines</a></strong>.</li>
+<li>Continuously improving software and process resiliency through <strong>incident reviews</strong> and <strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/3961">incident dashboards</a></strong>.</li>
+<li>Facilitating planning and coordination through the use <strong><a href="/direction/service_management/on-call_schedule_management/">on-call schedule management</a></strong>.</li>
+<li>Boosting signals and notifying on-call responders through the use of <strong><a href="/direction/service_management/alert_management/">alert integration</a></strong> and <strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/4638">escalations</a></strong>.</li>
+<li>Communicating with customers via <strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/2479">status pages</a></strong>.</li>
+</ul>
+<p>We've also created a series of vision items for the category, which are visible in this <a href="https://gitlab.com/gitlab-org/monitor/monitor/-/issues/41">issue</a>. A video walk-through of our vision items is also available on <a href="https://www.youtube.com/watch?v=wq-JCueATZQ">YouTube</a>.</p>
+<h3 id=challenges>Challenges</h3>
+<p>As we invest R&amp;D in building out Incident Management at GitLab, we are faced with the following challenges:</p>
+<ul>
+<li>The market is dominated by incident management companies that have been around for longer. Specific examples are included in the <a href="#competitive-landscape">Competitive Landscape</a> section.</li>
+<li>We lack brand identification with Enterprise Ops buyers (also mentioned on the <a href="https://about.gitlab.com/direction/ops/#challenges">Ops Vision page</a>)</li>
+<li>Incident management tools typically work in conjunction with other monitoring tools. Having a robust ecosystem of integration with monitoring tools is an expensive investment.</li>
+</ul>
+<h3 id=opportunities>Opportunities</h3>
+<p>We are uniquely positioned to take advantage of the following opportunities:</p>
+<ul>
+<li>Colocation of code and incidents significantly reduces context switching and accelerates <a href="https://en.wikipedia.org/wiki/Mean_time_to_repair">MTTR</a>. We can correlate development events such as merge requests or deployments with incidents, shortening the time it takes to find the root cause and automates some of the work required to prepare a timeline of events necessary for Post Incident Reviews</li>
+<li>We are well-practiced in building <a href="/handbook/values/#boring-solutions">boring solutions</a> and <a href="/handbook/values/#iteration">iteration</a>. This will enable us to quickly produce a simple version of Incident Management "just-good-enough" to displace DIY solutions</li>
+<li>We can uniquely serve the needs of Operations Managers who struggle to answer the question - "Are my teams spending all their time firefighting, or are they proactively managing the health of their applications?"</li>
+</ul>
+<h2 id=target-audience-and-experience>Target Audience and Experience</h2>
+<p>Our current Incident Management tools have been built for users who align with our <a href="https://about.gitlab.com/handbook/product/personas/#allison-application-ops">Allison (Application Ops)</a> and <a href="https://about.gitlab.com/handbook/product/personas/#ingrid-infrastructure-operator">Ingrid (Infrastructure Operator)</a> personas. The experience targets DevOps teams at smaller companies where it is common for the engineers to be on-call and responding to alerts for the software that they also write code for. As we mature this category, we will evolve the experience to appeal to and serve the enterprise customer. <a href="https://about.gitlab.com/handbook/engineering/development/ops/monitor/respond/jtbd/">Here</a> is a list of all jobs to be done (JTBD) for incident management.</p>
+<h1 id=roadmap>Roadmap</h1>
+<h3 id=now---next-1-4-milestones>Now - (next 1-4 milestones)</h3>
+<p><code>GitLab Incidents are the single source of truth (SSOT)</code></p>
+<p><strong><em>Prioritized Development Work</em></strong></p>
+<ul>
+<li>Incident metrics are a set of standard, quantifiable measurements used to track the incident response process. We are also working on allowing <a href="https://gitlab.com/gitlab-org/gitlab-design/-/issues/1911">incident response teams can track timestamps in incidents</a>!</li>
+<li>The majority of do it yourself (DIY) users use Slack or similar apps as the main collaboration tool during an incident. We want to make it easy for incident response teams to use Slack <em>and</em> GitLab incident management, ensuring <a href="https://gitlab.com/gitlab-org/gitlab-design/-/issues/1944">Slack-to-GitLab workflows are seamless to minimize repetitive, manual work for incident response teams</a>. For our internal team, we plan to replace <a href="https://gitlab.com/gitlab-com/gl-infra/woodhouse">woodhouse</a> with a productized Slack integration.</li>
+<li>Every incident is an investment and users want to improve their incident response posture and learn from past incidents. We're <a href="https://gitlab.com/gitlab-org/gitlab-design/-/issues/1945">introducing a post-incident review process so teams can learn from past incidents and better prepare for future, similar events</a>.</li>
+</ul>
+<p><strong><em>How are we tracking success?</em></strong></p>
+<ul>
+<li>Ship <a href="https://gitlab.com/groups/gitlab-org/-/epics/8545">Slack App for Incident Management</a>; measure the number of integrations setup and work on a <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/389002">go to market (GTM) effort directly with Slack</a>.</li>
+<li>Ship <a href="https://gitlab.com/gitlab-org/gitlab-design/-/issues/1945">Incident Review</a>. We will track usage, particularly percentage of incident reviews conducted relative to the number of ~"severity::1" incidents created.</li>
+<li>Ship <a href="https://gitlab.com/groups/gitlab-org/-/epics/8741">Incident Tags MVC</a> so users can start measuring important incident metrics.</li>
+</ul>
+<h3 id=next-next-5-8-milestones>Next (next 5-8 milestones)</h3>
+<p><code>On-call incident responders never miss an alert.</code>
+<strong><em>Prioritized Development Work</em></strong></p>
+<ul>
+<li>We are working on <a href="https://gitlab.com/gitlab-org/gitlab-design/-/issues/1903">ensuring on-call schedule experience is accurate and flexible enough to fit incident response teams' needs</a>. Sometimes responders need to get their shifts covered; we'll be introducing <a href="https://gitlab.com/groups/gitlab-org/-/epics/5311">scheduled overrides</a>. Additionally, being on-call during normal working/ business hours isn't the same as being on-call during a Friday evening or weekend; we're introducing the ability for <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/355807">on-call schedules to allow for specific days</a>.</li>
+<li>Responders need to be automatically notified when an alert is triggered and they want to define <em>how</em> they are contacted/paged. This will increase their responsiveness to an alert that needs to be triaged. We will be introducing <a href="https://gitlab.com/groups/gitlab-org/-/epics/1438">paging options</a> beyond email like a phone call or an SMS text message.</li>
+</ul>
+<p><strong><em>How are we tracking success?</em></strong></p>
+<ul>
+<li>Users subscribe to usage based pricing for on-call schedules (more than 5 pages a month)</li>
+<li>The number of on-call schedules monthly active users increases.</li>
+<li>GitLab On-Call reaches <a href="https://gitlab.com/groups/gitlab-org/-/epics/7026">viable maturity</a>!</li>
+</ul>
+<h3 id=future-next-9-12-milestones>Future (next 9-12 milestones)</h3>
+<p><code>Alerts can be easily triaged</code></p>
+<p><strong><em>Prioritized Development Work</em></strong></p>
+<ul>
+<li>We will continue to build more incident management features, making GitLab <a href="https://docs.gitlab.com/ee/operations/incident_management/alerts.html#alerts">alerts</a> <a href="https://gitlab.com/gitlab-org/gitlab-design/-/issues/1820">more robust so teams can quickly and effectively triage them</a>.</li>
+<li>We will work across stages, ensuring GitLab events that warrant and alert, <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/217770">like a failed pipeline</a>, are surfaced in the <a href="https://docs.gitlab.com/ee/operations/incident_management/alerts.html#alert-list">alert list</a>.</li>
+</ul>
+<p><strong><em>Exploratory work to inform future priorities</em></strong></p>
+<ul>
+<li>Explore <a href="https://gitlab.com/gitlab-org/gitlab-design/-/issues/1975">incident roles so it's immediately visible who-is-responsible-for-what during an incident.</a></li>
+<li>Determine <a href="https://gitlab.com/gitlab-org/ux-research/-/issues/2156">how users find out who can help when there is an incident?</a></li>
+</ul>
+<p><strong><em>How are we tracking success?</em></strong></p>
+<ul>
+<li>Through cross stage adoption we see an increase in our Group Monthly Active Users (GMAU).</li>
+<li>GitLab Incident Management reaches <a href="https://gitlab.com/groups/gitlab-org/-/epics/1494">complete maturity</a>!</li>
+</ul>
+<h3 id=long-term-2-years-fy26-and-beyond>Long Term (2+ years, FY26 and beyond)</h3>
+<p><code>Users come to GitLab for their incident management solution</code></p>
+<ul>
+<li>Strong bi-directional product tie-in to other GitLab stages and Monitor categories including, Error Tracking, Tracing, Logging, Metrics, Continuous Verification, Service Catalog and Runbooks. What could this look like in practice?:
+<ul>
+<li>Users can see auto-generated incidents directly in their alerting tool.</li>
+<li>Users can quickly identify what service, code change, or customer is experiencing degraded performance.</li>
+<li>Users leverage automation to link past incidents to current incidents, creating merge requests with a proposed solution or pointing engineers on-call to a knowledge base.</li>
+<li>Users can execute suggested runbooks with the click of a button.</li>
+</ul>
+</li>
+<li>Users can quantify and show a decrease in mean time to resolve (MTTR). GitLab takes decreasing MTTR one step further; users are able to demonstrate that they catch more incidents before they happen through continuous verification, chaos engineering, and capacity forecasting.</li>
+</ul>
+<h2 id=workflow>Workflow</h2>
+<p>Incident Management is a broad category. The following diagram explains all functionality that is currently within scope for our vision of the category.</p>
+<p><img src="/direction/service_management/incident_management/incident_management_workflow.png" alt="image.png"/></p>
+<h3 id=maturity-plan>Maturity Plan</h3>
+<p>We are currently working to mature the <strong>Incident Management</strong> category from <code>viable</code> to <code>complete</code>. Definitions of these maturity levels can be found on <a href="https://about.gitlab.com/direction/maturity/">GitLab's Maturity page</a>. The following epics group the functionality we have planned to mature Incident Management.</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/1494">Complete</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/1539">Lovable</a></li>
+</ul>
+<h3 id=what-is-next--why>What is Next &amp; Why?</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8545">Introduce incident management workflow to GitLab Slack App</a> to ensure Slack-to-GitLab workflows are seamless to minimize repetitive, manual work for incident response teams.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8741">Incident Tags MVC</a> to start capturing relevant incident timestamps to begin measuring important inincidentcient metrics like mean time to resolve (MTTR).</li>
+</ul>
+<h3 id=dogfooding-plan>Dogfooding Plan</h3>
+<p>We are actively <a href="https://about.gitlab.com/handbook/product/product-processes/#when-do-we-dogfood">dogfooding</a> Incident Management features with the <a href="https://about.gitlab.com/handbook/engineering/infrastructure/team/">Infrastructure team</a>. Today, the Infrastructure team relies partially on PagerDuty to maintain GitLab.com and the other services they are responsible for. Ultimately the joint goal of the Infrastructure team and the Respond group is for the Infrastructure team to rely soley on GitLab Incident Management. Our plan to achieve this goal is as follows:</p>
+<ol>
+<li>Prioritize new functionality based on the <a href="https://gitlab.com/gitlab-org/monitor/health/-/issues/36">gap analysis</a></li>
+<li>Meet with the Infrastructure team on a monthly cadence to gather feedback and incorporate changes into upcoming milestones.</li>
+<li>Incrementally dogfood new features via simulation days (<a href="https://gitlab.com/gitlab-org/gitlab/-/issues/231518">example</a>) to gather immediate feedback on for improvements</li>
+<li>Begin a full migration once we have completed filling in the gap analysis - view migration plan <a href="https://gitlab.com/groups/gitlab-com/gl-infra/-/epics/322">here</a></li>
+</ol>
+<h4 id=incident-management-features-the-infrastructure-team-is-currently-dogfooding>Incident Management features the Infrastructure team is currently Dogfooding</h4>
+<details><summary><b>Feature List</b></summary>
+<table>
+<tr>
+<td>General Feature</td>
+<td>Specific Feature</td>
+<td>Dogfooding?</td>
+<td>Example</td>
+<td>Feature needs 'x' to dogfood</td>
+</tr>
+<tr>
+<td><b>Incidents</b></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/incidents.html">Incident issue type</a></p>
+</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/manage_incidents.html#create-an-incident">Creating incidents manually</a></p>
+</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/manage_incidents.html#automatically-when-an-alert-is-triggered">Creating incidents automatically</a></p>
+</td>
+<td>✅</td>
+<td><p><a href="https://gitlab.com/gitlab-com/gl-infra/production/-/issues/6159">Sample incident</a></p> created via ops.gitlab.net</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/incidents.html#timeline-events">Incident timelines</a></p>
+</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/linked_resources.html">Linked resources</a></p>
+</td>
+<td>🔴</td>
+<td>TBD, just released, <p><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/370133">Dogfood issue</a></p></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/manage_incidents.html#using-the-pagerduty-webhook">Creating incidents via the PagerDuty webhook</a></p></td>
+<td>🔴</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/incidents.html#incident-list">Incident list</a></p></td>
+<td>🔴</td>
+<td></td>
+<td>Labels need to be included on the incident list.</td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/incidents.html#metrics">Metrics tab</a></p></td>
+<td>🔴</td>
+<td></td>
+<td>There isn't a working integration with our observability vendor. Metrics are added as screen shots <p><a href="https://gitlab.com/gitlab-com/gl-infra/production/-/issues/6159#note_808876372">(example)</a></p> to the incident.</td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/incidents.html#alert-details">Alert details tab</a></p></td>
+<td>🔴</td>
+<td></td>
+<td>Not currently dogfooding GitLab alerts</td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/incidents.html#service-level-agreement-countdown-timer">Service Level Agreement countdown timer</a></p></td>
+<td>🔴</td>
+<td></td>
+<td>SLAs aren't based on a per incident basis</td>
+</tr>
+<tr>
+<td><b>Alerts</b></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/alerts.html">GitLab Alerts</a></p>
+</td>
+<td>🔴</td>
+<td></td>
+<td>Alert improvments are noted <p><a href="https://gitlab.com/gitlab-org/monitor/respond/-/issues/149#opportunities-for-alert-improvements">here</a></p></td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/alerts.html#alert-list">Alert list</a></p></td>
+<td>🔴</td>
+<td></td>
+<td>Dependent on dogfooding alerts.</td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/alerts.html#alert-details-tab">Alert details tab</a></p></td>
+<td>🔴</td>
+<td></td>
+<td>Dependent on dogfooding alerts.</td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/alerts.html#metrics-tab">Metrics tab</a></p></td>
+<td>🔴</td>
+<td></td>
+<td>Dependent on dogfooding alerts.</td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/incident_management/integrations.html#http-endpoints">HTTP endpoints</a></p></td>
+<td>🔴</td>
+<td></td>
+<td>Mapping a complex payload to the custom mapping was cumbersome. Alerts showed a new alert when the payload changed.</td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/metrics/alerts.html#external-prometheus-instances">Prometheus integration</a></p>
+</td>
+<td>🔴</td>
+<td></td>
+<td>Right now Pager Duty is the single source of truth for alerts. There is not any value, beyond associating GitLab Alerts to GitLab Incidents.</td>
+</tr>
+<tr>
+<td></td>
+<td><p><a href="https://docs.gitlab.com/ee/operations/metrics/alerts.html#external-prometheus-instances">Grouping of identical alerts</a></p>
+</td>
+<td>🔴</td>
+<td></td>
+<td>Dependent on dogfooding alerts. Looking for the ability to manually add similar alerts to the same incident.</td>
+</tr>
+</table>
+</details>
+<h3 id=marketing--sales-enablement>Marketing &amp; Sales Enablement</h3>
+<p>Marketing and Sales Enablement material can be found <a href="https://about.gitlab.com/handbook/marketing/brand-and-product-marketing/product-and-solution-marketing/usecase-gtm/incident-management/">here</a>.</p>
+<h3 id=pricing>Pricing</h3>
+<p>Features in the Incident Management category have been placed in tiers based on GitLab's <a href="https://about.gitlab.com/company/pricing/#buyer-based-tiering-clarification">Buyer Based Tiering</a> strategy. The following pricing plan represents existing and future features.</p>
+<h4 id=incidents>Incidents</h4>
+<table>
+<thead>
+<tr>
+<th>Functionality</th>
+<th>Free</th>
+<th>Premium</th>
+<th>Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.gitlab.com/ee/operations/incident_management/manage_incidents.html#from-the-incidents-list">Manual incident creation</a></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Incident creation based on limited criteria (e.g. integration or severity)</td>
+<td> </td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="https://docs.gitlab.com/ee/operations/incident_management/incident_timeline_events.html">Incident timelines</a></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Incident tags</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="https://docs.gitlab.com/ee/operations/incident_management/linked_resources.html">Linked resources</a></td>
+<td> </td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Incident Reviews</td>
+<td> </td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="https://docs.gitlab.com/ee/operations/incident_management/slack.html">Slack app for incident management</a></td>
+<td> </td>
+<td> </td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Incident dashboards</td>
+<td> </td>
+<td> </td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h4 id=alerts>Alerts</h4>
+<table>
+<thead>
+<tr>
+<th>Functionality</th>
+<th>Free</th>
+<th>Premium</th>
+<th>Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One <a href="https://docs.gitlab.com/ee/operations/incident_management/alert_integrations.html#generic-http-endpoint">Generic HTTP Endpoint</a></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Internal GitLab Alerts</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>One <a href="https://docs.gitlab.com/ee/operations/incident_management/alert_integrations.html#generic-http-endpoint">Generic HTTP Endpoint</a></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/4056">Email integration</a></td>
+<td> </td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Multiple email endpoints</td>
+<td> </td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="https://docs.gitlab.com/ee/operations/incident_management/alert_integrations.html#external-prometheus-integration">External Prometheus integration</a></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/4443">Custom mapping for alert formats to endpoints</a></td>
+<td> </td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Special bi-directional out of the box integrations with popular monitoring tools</td>
+<td> </td>
+<td> </td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h2 id=competitive-landscape>Competitive Landscape</h2>
+<table>
+<thead>
+<tr>
+<th>Name of Competitor</th>
+<th>Year Founded</th>
+<th>Relative Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atlassian Opsgenie</td>
+<td>2012</td>
+<td><a href="https://www.opsgenie.com/">Website Link</a></td>
+</tr>
+<tr>
+<td>AWS Incident Manager</td>
+<td>2021</td>
+<td><a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/what-is-incident-manager.html">Website Link</a></td>
+</tr>
+<tr>
+<td>Grafana OnCall (Previously Amixr)</td>
+<td>2018, acquired by Grafana in 2021</td>
+<td><a href="https://www.opsgenie.com/">Website Link</a> <br/> <a href="https://gitlab.com/gitlab-com/Product/-/issues/3380">Competitive Analysis</a></td>
+</tr>
+<tr>
+<td>Jeli</td>
+<td>2019</td>
+<td><a href="https://www.jeli.io/#what-is-it">Website Link</a></td>
+</tr>
+<tr>
+<td>PagerDuty</td>
+<td>2009</td>
+<td><a href="https://www.pagerduty.com/">Website Link</a></td>
+</tr>
+<tr>
+<td>Rootly</td>
+<td>2020</td>
+<td><a href="https://rootly.io/">Website Link</a> <br/> <a href="https://gitlab.com/gitlab-com/Product/-/issues/2943">Competitive Analysis</a></td>
+</tr>
+<tr>
+<td>ServiceNOW</td>
+<td>2003</td>
+<td><a href="https://www.servicenow.com/products/incident-management.html">Website Link</a></td>
+</tr>
+<tr>
+<td>Splunk On-Call (Previously VictorOps)</td>
+<td>2021, acquired by Splunk in 2018</td>
+<td><a href="https://www.splunk.com/en_us/software/splunk-on-call.html">Website Link</a></td>
+</tr>
+<tr>
+<td>XMatters</td>
+<td>2000</td>
+<td><a href="https://www.xmatters.com/use-cases/major-incident-management-mim/">Website Link</a></td>
+</tr>
+<tr>
+<td>FireHydrant</td>
+<td>2018</td>
+<td><a href="https://firehydrant.com/">Website Link</a> <br/> <a href="https://gitlab.com/gitlab-org/monitor/respond/-/issues/117">Competitive Analysis</a></td>
+</tr>
+<tr>
+<td>Blameless</td>
+<td>2017</td>
+<td><a href="https://blameless.com/">Website Link</a> <br/> <a href="https://gitlab.com/gitlab-org/monitor/respond/-/issues/117">Competitive Analysis</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id=analyst-landscape>Analyst Landscape</h2>
+<p>Analyst firms such Gartner and 451 have recently published articles on the rising prevalence of automation in incident response workflows.</p>
+<h3 id=gartner>Gartner</h3>
+<p>Gartner's recent research study titled <strong>Automate Incident Response to Enhance Incident management</strong>, focuses on the importance of leveling up manual incident response processes with automation: "Organizations targeting best-in-class incident management must address the manual processes and collaboration challenges between teams.” They go on to outline some of their key findings which highlight that “I&amp;O organizations are looking to enhance incident response by focusing on automation, third-party integration, stakeholder management and improved detection response feedback loops.”</p>
+<p>Their recommendations include the following:</p>
+<ul>
+<li>"Invest in a centralized on-call management system and automate incident response workflows with wide integrations that create a holistic incident response management solution."</li>
+<li>"Integrate monitoring solutions and Service Desk systems with bidirectional synchronization to incident response systems, which keeps the incident status synchronized across systems."</li>
+<li>"Leverage automation to extend incident response capabilities that can integrate with DevOps toolchain monitoring."</li>
+<li>"Improve incident communication and collaboration by integrating incident workflow processes with ChatOps tools like Slack or Microsoft Teams."</li>
+</ul>
+<p><em>Gartner, Automate Incident Response to Enhance Incident management, By: Venkat Rayapudi &amp; Steve White, Published 18 September 2020</em></p>
+<p>Competitors (listed above in <a href="#competitive_landscape">competitive landscape</a>) enable the automation of these processes to different extents. Automattion functionality is typically offered with higher pricing tiers across the board. In order to take advantage of these automation features, companies must invest significant time in the configuration and fine-tuning of systems and processes.</p>
+<p>In the near term, GitLab is positioned to enable Gartner’s recommendations for a best in-class incident management platform via the centralization of <a href="https://gitlab.com/groups/gitlab-org/-/epics/3960">on-call schedule management</a> to enable the automatic routing of alerts to the right responders at the right time.</p>
+<h3 id=451-research>451 Research</h3>
+<p>451 Research published an article on the acquisition of Rundeck by PagerDuty in September 2020. Read more about this on Rundecks <a href="https://www.rundeck.com/pagerduty">website</a>. This was a strategic move to meet the demands of the enterprise for more automation in incident response.</p>
+<p>GitLab has plans to investigate using Rundeck for Runbooks via <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/36655">Runbooks - Rundeck Validation</a>, this will be interesting opportunity to connect the PagerDuty lifecycle into GitLab Runbooks and Monitoring capabilities.</p>
+<p>There is an existing landscape of comparable tools and even "ServiceNow and xMatters have orchestration engines that can be deployed to build workflows across tools, but they aren't typically extensively used to execute remediations." VictorOps (owned by Splunk) and OpsGenie (owned by Atlassian) are other similar tools with visions like PagerDuty.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/service_management/incident_management/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/service_management/incident_management/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

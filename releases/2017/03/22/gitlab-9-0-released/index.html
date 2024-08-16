@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab 9.0 released with Subgroups and Deploy Boards
+|
+GitLab
+</title>
+<meta content='GitLab 9.0 Released with Subgroups, Deploy Boards, Export Issues, Environment Monitoring, and much more!' name=description />
+<meta content='GitLab 9.0 Released with Subgroups, Deploy Boards, Export Issues, Environment Monitoring, and much more!' name='twitter:description'/>
+<meta content='GitLab 9.0 Released with Subgroups, Deploy Boards, Export Issues, Environment Monitoring, and much more!' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab 9.0 released with Subgroups and Deploy Boards' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2017-03-22-gitlab-9-0-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2017/03/22/gitlab-9-0-released/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/tweets/gitlab-9-0-released.jpg" property="og:image">
+<meta content="https://about.gitlab.com/images/tweets/gitlab-9-0-released.jpg" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab 9.0 released with Subgroups and Deploy Boards' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2017/03/22/gitlab-9-0-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/release-posts.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Mar 22, 2017
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#victorwu416">Victor Wu</a>
+<a href="https://gitlab.com/victorwu"><span>&nbsp;</span>
+<span class=author-gitlab>
+<i class='fab fa-gitlab'></i>
+</span>
+</a><a href="https://twitter.com/victorwu416"><span>&nbsp;</span>
+<span class=author-twitter>
+<i class='fab fa-twitter'></i>
+</span>
+</a></span>
+<div class=release-number>
+9.0
+</div>
+<h1>
+GitLab 9.0 released with Subgroups and Deploy Boards
+</h1>
+<p class=description>
+GitLab 9.0 Released with Subgroups, Deploy Boards, Export Issues, Environment Monitoring, and much more!
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/9_0/9_0-cover-image.jpeg);'></div>
+<div class=content>
+<section class=release-post-section>
+<p>Today we are releasing <strong>GitLab 9.0</strong>, 18 months after <a href="/releases/2015/09/22/gitlab-8-0-released/">releasing 8.0</a>. We've made <a href="/releases/">significant advances to GitLab during this period</a>, shipping a version every single month on the 22nd. Let's quickly recap how far we've come since 8.0, and see those features dovetailing into today's 9.0 release. Or <a href="#subgroups-ce-ee">jump ahead</a> to 9.0 features.</p>
+<hr/>
+<h3 id=idea-to-production>Idea to Production</h3>
+<p>In the last several releases, GitLab has transformed how development teams get from idea to production. In just a few minutes, you can deploy GitLab to a container scheduler, add CI/CD with auto deployed review apps, utilize ChatOps, and analyze your cycle time. With 9.0 you can now watch your deploys with deploy boards and monitor application performance with Prometheus. Building on our <a href="/blog/2016/09/14/gitlab-live-event-recap/">Master Plan</a>, GitLab 9.0 truly delivers the entire DevOps toolchain, so let's see how it all fits together:</p>
+<figure class=video_container>
+<iframe src="https://www.youtube.com/embed/PoBaY_rqeKA" frameborder=0 allowfullscreen=true></iframe>
+</figure>
+<h3 id=usability-and-design>Usability and Design</h3>
+<p>In <a href="/releases/2015/09/22/gitlab-8-0-released/">8.0</a>, we refreshed GitLab's look and feel, modernizing almost every UI element and significantly improving usability. (We had even updated our logo a few months prior.) Since then, we have continued to invest in design, ramping up our UX design and research <a href="/company/team/">team</a>, who are dedicated to improving usability and solving major pain points, everything from small CSS tweaks, to major UX flows. In each 8.x release we have iteratively evolved the design. And with GitLab 9.0, we made huge strides in <a href="#updated-navigation-ce-ee">simplifying our global, group, and project navigation</a>, a crucial enhancement as GitLab's feature set becomes increasingly powerful.</p>
+<p>In an effort to continue improving our UX, we now have a <a href="/community/gitlab-first-look/">research panel</a> where you can help shape the future of GitLab! By joining our panel, you'll be the first to see new features and your thoughts will drive product improvements!</p>
+<p><a href="/community/gitlab-first-look/" class="btn btn-lg btn-red webcast-button">Join our research panel</a></p>
+<h3 id=collaboration-on-digital-work>Collaboration on Digital Work</h3>
+<p>GitLab helps you collaborate on digital work. We made many enhancements to issues, a core part of collaboration in GitLab. This includes weights (<a href="/releases/2015/12/22/gitlab-8-3-released/#issue-weight-ee-only">8.3</a>), linking to merge requests (<a href="/releases/2015/12/22/gitlab-8-3-released/#merge-request-references-in-issues">8.3</a>), moving an issue to another project (<a href="/releases/2016/03/22/gitlab-8-6-released/#move-issues-to-other-projects">8.6</a>), and a powerful filter/search interface (<a href="/releases/2017/01/22/gitlab-8-16-released/#new-issues-search-and-filter-interface">8.16</a>). We also released issue boards (<a href="/releases/2016/08/22/gitlab-8-11-released/#issue-board">8.11</a>), providing a simple mechanism for issue workflow management using stages ("lists", in GitLab parlance). GitLab 9.0 continues to enhance boards further, <a href="#boards-with-milestones-ees">by improving its integration with milestones</a>.</p>
+<p>We are excited to ship <a href="#subgroups-ce-ee"><strong>subgroups</strong> in GitLab 9.0</a>, another huge step in furthering GitLab collaboration. This powerful new paradigm of groups within groups allows for truly team-based and team-first collaboration in even very large organizations with many different departments. We're on a <a href="/company/mission/#mission">mission</a> to enable <strong>everyone to contribute</strong>. 9.0 continues to help break down silos wherever you work so that indeed everyone in your organization can contribute.</p>
+<h3 id=code-review-and-code-collaboration>Code Review and Code Collaboration</h3>
+<p>We've continued to improve code review and code collaboration in GitLab since 8.0, including features such as merge when pipeline succeeds (<a href="/releases/2015/12/22/gitlab-8-3-released/#auto-merge-on-build-success">8.3</a>), code diffs (<a href="/releases/2016/01/22/gitlab-8-4-released/#code-highlighting-in-diffs">8.4</a>, <a href="/releases/2016/02/22/gitlab-8-5-released/#render-svgs-in-diffs">8.5</a>, <a href="/releases/2016/04/22/gitlab-8-7-released/#better-diffs">8.7</a>, <a href="/releases/2016/07/22/gitlab-8-10-released/#improved-diffs">8.10</a>, <a href="/releases/2016/12/22/gitlab-8-15-released/#diff-in-notification-emails">8.15</a>), a conflict editor (<a href="/releases/2016/08/22/gitlab-8-11-released/#merge-conflict-resolution">8.11</a>, <a href="/releases/2016/10/22/gitlab-8-13-released/#merge-conflict-editor">8.13</a>), merge request versions (<a href="/releases/2016/09/22/gitlab-8-12-released/#merge-request-versions">8.12</a>), blocking merge until discussions resolved (<a href="/releases/2016/11/22/gitlab-8-14-released/#prevent-merge-until-review-is-done">8.14</a>), toggling approvals (<a href="/releases/2017/01/22/gitlab-8-16-released/#removing-your-approval-in-ee-merge-requests">8.16</a>), as well as squash and merge (<a href="/releases/2017/02/22/gitlab-8-17-released/#squash-and-merge-ee">8.17</a>). Many of these and other features involve the merge request widget. So in GitLab 9.0, we are <a href="#merge-request-widget-usability-ce-ee">revamping its design</a> to accommodate the many existing and upcoming features that integrate with it.</p>
+<h3 id=continuous-integration>Continuous Integration</h3>
+<p><a href="/releases/2015/09/22/gitlab-8-0-released/#continuous-integration-in-gitlab">8.0</a> was a pivotal release as it fully integrated continuous integration (CI) into GitLab itself. Subsequently, new CI features were implemented into the API (<a href="/releases/2016/01/22/gitlab-8-4-released/#new-ci-features-in-api">8.4</a>) and pipeline events were exposed through webhooks (<a href="/releases/2016/08/22/gitlab-8-11-released/#pipelines-web-hooks">8.11</a>). Pipelines were also integrated into merge requests (<a href="/releases/2016/08/22/gitlab-8-11-released/#pipelines-in-mrs">8.11</a>, <a href="/releases/2017/02/22/gitlab-8-17-released/#additional-pipeline-details-included-in-merge-request-workflow">8.17</a>) and commits (<a href="/releases/2016/10/22/gitlab-8-13-released/#pipelines-for-commits">8.13</a>), as well as its own visual graph (<a href="/releases/2016/08/22/gitlab-8-11-released/#pipelines-graph">8.11</a>). GitLab runner was improved in every release from <a href="/releases/">8.10 to 8.17</a>. We released review apps (<a href="/releases/2016/09/22/gitlab-8-12-released/#review-apps-experimental">8.12</a>, <a href="/releases/2016/10/22/gitlab-8-13-released/#ability-to-stop-review-apps">8.13</a>, <a href="/releases/2016/11/22/gitlab-8-14-released/#review-apps">8.14</a>) and auto deploy (<a href="/releases/2016/12/22/gitlab-8-15-released/#auto-deploy">8.15</a>) to automatically deploy code into automatically created environments. And now with GitLab 9.0, we are shipping <a href="#deploy-boards-eep">deploy boards</a>, allowing you track how your app is being deployed to multiple servers.</p>
+<h3 id=feedback-and-insight>Feedback and Insight</h3>
+<p>GitLab also provides you feedback and insight into your code and development process. We released contribution analytics (<a href="/releases/2015/12/22/gitlab-8-3-released/#contribution-analytics-ee-only">8.3</a>) and cycle analytics (<a href="/releases/2016/09/22/gitlab-8-12-released/#cycle-analytics">8.12</a>, <a href="/releases/2016/10/22/gitlab-8-13-released/#cycle-analytics-improvements">8.13</a>, <a href="/releases/2016/11/22/gitlab-8-14-released/#cycle-analytics-events">8.14</a>). We released time tracking (<a href="/releases/2016/11/22/gitlab-8-14-released/#time-tracking-beta-ee">8.14</a>, <a href="/releases/2017/01/22/gitlab-8-16-released/#time-tracking-in-ce-and-api">8.16</a>). In <a href="/releases/2017/01/22/gitlab-8-16-released/#monitoring-gitlab-with-prometheus">8.16</a> and <a href="/releases/2017/02/22/gitlab-8-17-released/#monitoring-gitlab-with-prometheus">8.17</a>, we shipped open source <a href="https://prometheus.io">Prometheus</a> to extend that feedback into monitoring the server that hosts your GitLab instance, through the Prometheus console. In GitLab 9.0, we are releasing <a href="#environment-monitoring-ce-ee">environment monitoring</a> integrated into the GitLab UI itself, building on top of the Prometheus foundation.</p>
+<h3 id=thank-you>Thank You</h3>
+<p>We're humbled by our community continuing to actively create and comment in numerous issues, as well as directly contributing source code. <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests?label_name%5B%5D=Community+Contribution&amp;milestone_title=9.0&amp;scope=all&amp;state=merged">In 9.0, there are over 130 merge requests from the community</a>, with <a href="#notable-community-contributions-ce">many notable contributions</a>.</p>
+<p>As an open source project, GitLab CE now has over <a href="https://gitlab.com/gitlab-org/gitlab-ce/commits/master">47,000 commits</a> (more than doubling the <a href="/releases/2015/10/22/gitlab-8-1-released/">20,000 count set back in 8.1</a>). Today, GitLab has <a href="http://contributors.gitlab.com">over 1,500 contributors</a>. Thank you! 👏🙏</p>
+<h3 id=growth>Growth</h3>
+<p>We've also grown quickly during this time. We had just under 25 team members in 7 countries when we shipped 8.0. Today, we have <a href="/company/team/">over 150 folks spread across 37 countries</a>. That has helped us now to ship self-managed GitLab in three versions, <a href="/stages-devops-lifecycle/">Community Edition (CE), Enterprise Edition Starter (EES), and Enterprise Edition Premium (EEP)</a>.</p>
+<h3 id=unique-platform>Unique Platform</h3>
+<p>Over the past years we’ve seen application lifecycle management (ALM) tools
+move into the direction of offering a single, integrated experience. GitLab is
+at the forefront of this and we're now shipping with monitoring by default, completing our <a href="/direction/#scope">scope</a>.
+If you want to design, code, build, deploy, and
+monitor an application, you can now all do that straight from within GitLab.</p>
+<p>GitLab is a complete and opinionated application lifecycle management tool with
+one interface and one data-store. GitLab’s integrated approach brings emergent
+benefits such as shorter time to market (measurable through cycle analytics),
+higher developer efficiency, and a consistent development process.</p>
+<p>Enjoy 9.0 and read on for details!</p>
+<p><a href="https://www.youtube.com/watch?v=rEChfZEsuVw&amp;feature=youtu.be" class="btn btn-lg btn-red">Watch our release webcast!</a></p>
+<h3 id=gitlab-90-meetups>GitLab 9.0 Meetups</h3>
+<p>Let's get together and talk about all the awesomeness coming with GitLab 9.0. We'll be in San Francisco,
+Denver, Boston, Amsterdam, London, and New Orleans. 🙌</p>
+<p><a href="/events/" class="btn btn-lg btn-red">Join GitLab Meetups</a></p>
+</section>
+<section class="mvp gray-section">
+<div class=release-post-section>
+<p><img src="/images/mvp_badge.png" alt=mvp-badge /></p>
+<h2 id=this-months-most-valuable-person-mvp-is-jacopo-beschi>This month's Most Valuable Person (<a href="/community/mvp/">MVP</a>) is <a href="https://gitlab.com/jacopo-beschi">Jacopo Beschi</a></h2>
+<p>Jacopo made it possible to <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8691">undo marking a todo item as done in the todos list</a>. This is a huge productivity enhancement that helps you recover from mistakes in managing todos. Thanks Jacopo!</p>
+</div>
+</section>
+<section class=release-post-section>
+<h2 id=subgroups-ce-ees-eep>Subgroups ce ees eep</h2>
+<p>GitLab has always been the simplest way for people to collaborate on code in a project. Just create a project, and you're on your way from idea to production. Users have <em>also</em> told us that they want GitLab to be a team-based collaboration tool that supports hierarchical team structures sharing different code repositories. With 9.0, we are excited to ship our brand new version of GitLab groups that allows for groups within groups, i.e. "subgroups".</p>
+<p>Each group, at each level, is itself a first-class citizen GitLab group, with the ability to have multiple projects. The new version of groups thus enables you to have a hierarchy of code repositories. You can create up to 20 levels of subgroups, giving you an incredible level of flexibility.</p>
+<p>In this example, the organization represented by the <code>gitlab-nested</code> group has a design team, a backend team, and a frontend team, each represented by a group within the <code>gitlab-nested</code> group. The <code>design</code> and <code>backend</code> groups have further subgroups within them.</p>
+<p><img src="/images/9_0/gitlab-nested.png" alt=Subgroups class=shadow /></p>
+<p>Feel free to look at and provide feedback on what we are working on for <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues?label_name%5B%5D=subgroups">groups in future releases of GitLab</a>.</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/ee/user/group/subgroups/">Learn more about subgroups in our docs</a></p>
+</section>
+<section class=release-row>
+<div class=column>
+<h2 id=deploy-boards-eep>Deploy Boards eep</h2>
+<p>GitLab has an incredibly powerful CI/CD system, with over a thousand runners executing pipelines for GitLab.com projects alone. These pipelines perform builds to compile and package software, run automated tests, spawn review apps, and can even deploy software to staging and production. To date, these deployments would report back whether the environment was successfully updated, but what if you wanted more fidelity? Or a single pane to view all deployments across all environments? For larger organizations, the answers to these questions become particularly important.</p>
+<p>Today with 9.0, we are excited to release Deploy Boards for environments running on Kubernetes. The Environments page of Pipelines now offers a single place to view the current health and deployment status of each environment, displaying the specific status of each pod in the deployment. Developers and other teammates can view the progress and status of a rollout, pod by pod, in the workflow they already use without any need to access Kubernetes.</p>
+<p>To celebrate the launch, Deploy Boards will be available in 9.0 as a free trial for Enterprise Edition Starter customers.</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/ee/user/project/deploy_boards.html">Learn more about Deploy Boards in our docs</a></p>
+</div>
+<div class=column>
+<p><img src="/images/9_0/deploy_boards.png" alt="Deploy Boards" class=shadow /></p>
+</div>
+</section>
+<section class="release-row image-left">
+<div class="column text-column">
+<h2 id=export-issues-ees-eep>Export Issues ees eep</h2>
+<p>GitLab already enables you to filter, search, and navigate through the many issues you use daily. But users say they want a snapshot of issues for offline analysis or to communicate with other teams who may not be in GitLab just yet. With 9.0 EES, GitLab will email you a CSV export of issues if you click the download button at the top right in the issue list view.</p>
+<p>We designed and integrated the feature directly into the project issue list view. This allows you to leverage the existing powerful filter and search capability so that you can export exactly just the issues you care about. The actual processing and email sending happens asynchronously in the background once you confirm the action, so that it gets out of your way and you can continue to use GitLab as normal.</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/ee/user/project/issues/csv_export.html">Learn more about exporting issues in CSV in our docs</a></p>
+</div>
+<div class="column image-column">
+<p><img src="/images/9_0/export_issues.png" alt="Export Issues" class=shadow /></p>
+</div>
+</section>
+<section class=release-row>
+<div class=column>
+<h2 id=environment-monitoring-ce-ees-eep>Environment Monitoring ce ees eep</h2>
+<p>A robust monitoring infrastructure is crucial to operating a successful application. It ensures your app is responsive, provides valuable insight into the impact of changes, and enables quick debugging when problems occur. However setting this infrastructure up is often a lower priority, in particular for non-production environments, and it is often not integrated with the rest of your toolchain.</p>
+<p>With GitLab 9.0, we are proud to introduce the first monitoring system that is fully integrated with your CI/CD pipelines and source code repository. Leveraging <a href="https://prometheus.io">Prometheus</a>, GitLab will now bring the same technology used for production systems to development environments like staging and even review apps.</p>
+<p>In this initial release we are tracking the CPU and Memory utilization of your app running on each Kubernetes based environment, and this is only the beginning. In the near feature we will gauge the performance impact of a merge, support a much broader range of application metrics, and fuse monitoring data with Deploy Boards.</p>
+<p>Participate in the discussion and future of performance monitoring with GitLab <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues?scope=all&amp;utf8=✓&amp;state=opened&amp;label_name[]=Prometheus&amp;label_name[]=feature%20proposal">here</a>.</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/ee/user/project/integrations/prometheus.html">Learn more about the Prometheus project integration in our docs</a></p>
+</div>
+<div class=column>
+<p><img src="/images/9_0/prometheus.png" alt="Environment monitoring with Prometheus" class=shadow /></p>
+</div>
+</section>
+<section class=release-row>
+<div class=column>
+<h2 id=performance-improvements-ce-ees-eep>Performance Improvements ce ees eep</h2>
+<p>As with every release, we've worked hard to make GitLab faster. With 9.0 in particular, we've put a particular focus on noticeable performance improvements across the board. Elasticsearch (ES) gets an upgrade in GitLab EE 9.0, with support for ES 5.1 and a host of smaller fixes. In accordance with our "cloud native" philosophy, we've added support for <a href="https://aws.amazon.com/elasticsearch-service/">AWS-hosted</a> and HTTPS Elasticsearch clusters. Larger GitLab EE installations will benefit from improvements in the initial indexing process, and minor performance improvements have been made to repository indexing.</p>
+<p>The improvements to the dashboards were focused on <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/9030">more efficient searching by author or assignee</a>, and <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/9006">removing unnecessary queries</a>. As the most common use for the dashboard is to view issues or merge requests assigned to you, this should be noticeable for most users. On GitLab.com, we saw transaction timings drop significantly for issues and merge requests.</p>
+<p><a href="https://gitlab.com/gitlab-org/gitlab-ce/issues?label_name%5B%5D=performance&amp;milestone_title=9.0&amp;scope=all&amp;state=closed">Take a look</a> at the full list of performance improvements in 9.0 and keep an eye out for further improvements in upcoming releases as GitLab continues to get faster, especially for large installations.</p>
+<p>Did you know, <a href="https://gitlab.com">GitLab.com</a> is "merely" a massive-scale implementation of GitLab EE with hundreds of thousands of users? This just shows the level of scale that you can run GitLab EE and these performance improvements should start making a noticeable difference to the speed and reliability of GitLab.com.</p>
+</div>
+<div class=column>
+<p><img src="/images/9_0/issues_dashboard.png" alt="Issues dashboard"/><em class=shadow>Transaction timings dropping significantly for issues dashboard</em></p>
+<p><img src="/images/9_0/merge_requests_dashboard.png" alt="Merge requests dashboard"/><em class=shadow>Transaction timings dropping significantly for merge requests dashboard</em></p>
+</div>
+</section>
+<section class="release-row image-left">
+<div class="column text-column">
+<h2 id=database-load-balancing-ees-eep>Database Load Balancing ees eep</h2>
+<p>Load balancing of database queries allows one to spread the load and impact of
+queries across multiple database servers. Traditionally this involves additional
+software such as <a href="http://www.pgpool.net/">pgpool</a>. Starting with 9.0, GitLab
+Enterprise Edition supports load balancing of queries when using PostgreSQL.</p>
+<p>Load balancing queries can bring many benefits, such as reducing the load and
+memory usage of the primary, and reducing response timings. Spreading the load
+also means that badly behaving database queries will not impact queries
+executing on a different database server, reducing the likelihood of such
+queries negatively affecting a GitLab installation.</p>
+<p>GitLab's load balancer also responds to database failovers. When a primary is
+unresponsive or was changed to a secondary, the load balancer will wait a brief
+moment before retrying an operation. When secondaries become unavailable, they
+are ignored until they become available again. For this to work in the most
+transparent way you will need to use a load balancer (e.g. HAProxy) for every
+database host.</p>
+<p>One problem of load balancing is dealing with replication lag. For example, if a
+write happens and you then read from a secondary it's possible for said
+secondary to not yet have the data. One way of dealing with this is to use
+synchronous replication. However, synchronous replication is not ideal as
+replication lag could cause queries to take a very long time. Furthermore, if a
+replica were to become unavailable the whole system can grind to a halt.</p>
+<p>To work around this the database load balancer uses "sticky sessions". When a
+user triggers a write to the primary the user's session will keep using the
+primary. Session sticking is disabled again once a timeout expires (30 seconds),
+or when the written data is available on all secondaries.</p>
+<p>For more information on how to set up database load balancing you can refer to
+the documentation section <a href="https://docs.gitlab.com/ee/administration/database_load_balancing.html">"Database Load Balancing"</a>.</p>
+</div>
+<div class="column image-column">
+<p><img src="/images/9_0/load_balancing_load.png" alt="Load Balancing Load" class=shadow /></p>
+<p><img src="/images/9_0/load_balancing_memory_usage.png" alt="Load Balancing Memory Usage" class=shadow /></p>
+<p><img src="/images/9_0/load_balancing_timing_improvements.png" alt="Load Balancing Timing Improvements" class=shadow /></p>
+</div>
+</section>
+<section class=release-post-section>
+<h2 id=updated-navigation-ce-ees-eep>Updated Navigation ce ees eep</h2>
+<p>Here at GitLab, most of our business functions (not just product development) occur on GitLab.com itself. So we definitely understand the importance of navigation. We want to make it frictionless, intuitive, and efficient for you to perform your daily tasks, especially if you are using GitLab for several hours each day.</p>
+<p>Navigation design is a crucial component in achieving that, and with 9.0, we have modernized the interface, leveraging best practices from our design team, as well as incorporating feedback from user research. At first glance, it doesn't seem like a lot has changed. But that was intentional. We meticulously analyzed what was already working well, and changed only the problem areas.</p>
+<p>The menu items in the tabbed navigation interface have been re-arranged (and in some cases, merged and renamed) for both the main and subtabs. The activity tab is now a subtab of the project tab. The main tabs of repository, issues, merge requests, and pipelines and now positioned from left to right in that order, reflecting the idea to production flow. The subtabs in the main graph tab have been re-arranged and placed in other locations. Again, we carefully considered where each menu should be located drawing from feedback and analysis. <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/26348">Read more about the details of the change.</a></p>
+<p>Another notable change is the pop-in sidebar. That has been now replaced by a less intrusive dropdown menu in the top left, that doesn't unnecessarily cover too much screen content. Previously there was a dropdown menu for settings, accessed from a cog icon at the top right for the project and group pages. These have been now pulled into the existing tabbed menu interface, harmonizing and simplifying the entire experience.</p>
+<p>In 9.0, we simplified the project view configuration settings so that you can now choose between viewing (1) Files and README or (2) Activity on the main project tab for any project. (This is a profile setting that applies to all projects you view.) The first option is the default. Previously, we had a third option for viewing just the README, which was the default. We wanted something that was helpful for both new and existing users, and based on user feedback and research, we are opting for this design.</p>
+<p>We also brought back the ability the create a new project quickly, by simply clicking the <code>+</code> button at the top right.</p>
+<p><img src="/images/9_0/navigation.png" alt=Navigation class=shadow /></p>
+</section>
+<section class=release-row>
+<div class=column>
+<h2 id=reorder-issues-in-board-list-ce-ees-eep>Reorder Issues in Board List ce ees eep</h2>
+<p><a href="/stages-devops-lifecycle/issueboard/">Issue Boards</a> are a great way to manage issues moving through the different stages ("lists" in GitLab), in order to quickly get an idea to production. But users often want to further represent order or priority of issues within a single list. With 9.0, you can now reorder issues within an issue board list, using the intuitive and existing drag and drop mechanism.</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/ee/user/project/issue_board.html">Learn more about Issue Boards for Community Edition in our docs</a>.</p>
+</div>
+<div class=column>
+<p><img src="/images/9_0/boards_reorder.gif" alt="Boards Reorder" class=shadow /></p>
+</div>
+</section>
+<section class="release-row image-left">
+<div class="column text-column">
+<h2 id=boards-with-milestones-ees-eep>Boards with Milestones ees eep</h2>
+<p>A GitLab Issue Board enables you to manage a group of issues within a single milestone, but requires you to select the associated milestone filter each time you navigate to it. With GitLab 9.0 EES, you can now create an Issue Board that is associated to a specific milestone. This allows you to create unique boards for individual milestones.</p>
+<p>As you plan and execute work in each new milestone, we suggest you keep creating new boards. This allows you to conveniently straddle between milestones, while also allowing you to save and look back at previous completed milestones.</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/ee/user/project/issue_board.html">Learn more about Issue Boards for Enterprise Edition in our docs</a>.</p>
+</div>
+<div class="column image-column">
+<p><img src="/images/9_0/boards_milestone.gif" alt="Boards Milestone" class=shadow /></p>
+</div>
+</section>
+<section class=release-post-section>
+<h2 id=api-v4-ce-ees-eep>API v4 ce ees eep</h2>
+<p>Our <a href="https://docs.gitlab.com/ee/api/">API</a> is a great way to automate tasks, control and automate GitLab in new and powerful ways. Over time, we have continued to improve our API to make it more complete and support the new features we add every month to make GitLab the best end-to-end development environment.</p>
+<p>This constant iteration has resulted in a few inconsistencies in our existing API. Today we are announcing v4 of our API, which aims to make the API more consistent and more RESTful.</p>
+<p>We will continue to support v3 of the API until August 2017 and so we encourage you to make any necessary changes to applications that use the v3 API.</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/ee/api/v3_to_v4.html">Take a look at the changes in v4 to see what's different.</a></p>
+</section>
+<section class=release-post-section>
+<h2 id=disaster-recovery-alpha-eep>Disaster Recovery Alpha eep</h2>
+<p>Regardless of the size of your company, you need to make sure that your
+infrastructure is resilient to any kind of natural or human-induced disasters
+that can happen. One of the best practices in this case is to have a least two
+servers (one primary, one secondary) in two different locations to make sure
+that if the primary server goes down, the other one can take over. Having this
+in place is critical for any teams to make sure you reduce the downtime as much
+as possible, and reduce the risk of data loss. We have received many requests to
+offer a disaster recovery solution built in GitLab and today we are introducing
+a first step towards supporting this.</p>
+<p>Since <a href="/releases/2016/02/22/gitlab-8-5-released/">GitLab 8.5</a>,
+GitLab ships with <a href="/solutions/geo/">Geo</a>, a
+feature that lets you have one or more secondary instances that mirror your main
+GitLab instance. Geo's primary goal was to drastically speed up cloning and
+fetching projects over large distances. While Geo works really well for this
+use case, it has one point that prevents us to use this technology to support a
+full disaster recovery scenario: files that are saved on disk were not
+replicated.</p>
+<p>This is <a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/846">what we are actively working on</a>
+and with GitLab 9.0, we are releasing a first step towards providing support for
+Disaster Recovery scenarios. We call it Disaster Recovery in Alpha. A bunch of
+important changes to Geo have been introduced with this release:</p>
+<ul>
+<li>If you use LFS, LFS objects will automatically be replicated to the secondary
+nodes (<a href="https://gitlab.com/gitlab-org/gitlab-ee/merge_requests/1237">Merge request</a>).</li>
+<li>All file uploads are now recorded in the database
+(<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8893">Merge request</a>).
+This will allow us to replicate those files in a future iteration.</li>
+<li>There is a new process to automatically backfill repositories
+(<a href="https://gitlab.com/gitlab-org/gitlab-ee/merge_requests/1197">Merge request</a>).</li>
+<li>You can now disable a secondary node through the UI.</li>
+<li>Both GitLab Geo and Disaster Recovery are under development and not production-ready.</li>
+</ul>
+<p><img src="/images/9_0/geo_dr.png" alt=Navigation class=shadow /></p>
+<p>To enable Disaster Recovery in Alpha, refer to <a href="https://docs.gitlab.com/ee/administration/geo/replication/configuration.html">the documentation</a>.</p>
+<p>Disaster Recovery in Alpha is available to all Enterprise Edition Premium
+customers as part of GitLab Geo.</p>
+<p>On a sidenote, due to <a href="#postgresql-version-upgrade">PostgreSQL's upgrade</a> happening with GitLab
+9.0, GitLab Geo 8.x is not compatible with GitLab Geo 9.0 and requires a
+manual update. If you are an existing Geo user, please read the
+<a href="https://docs.gitlab.com/ee/administration/geo/replication/updating_the_geo_nodes.html">upgrade instructions</a>
+before upgrading to GitLab 9.0.</p>
+</section>
+<section class="release-post-section text-center zero-bottom-margin">
+<h2 id=other-improvements-in-gitlab-90>Other Improvements in GitLab 9.0</h2>
+</section>
+<section class="release-row align-top divider">
+<div class=column>
+<h3 id=native-unicode-emoji--ce-ees-eep>Native Unicode Emoji 🔥 ce ees eep</h3>
+<p>Unicode emojis allow for a more consistent feel with the rest of your OS and equates to you being able to add emojis faster 🚀. We were able to get rid some of the hefty images and JSON payloads and generate the awards emoji menu immediately instead of having a loading spinner to wait for an async response. 👯 ✨ 🏋 👌</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/ee/user/award_emojis.html">Learn more about award emojis in our docs</a></p>
+<p><img src="/images/9_0/native_unicode_emojis.gif" alt="Native unicode emojis" class=shadow /></p>
+<h3 id=gitlab-ci-ce-ees-eep>GitLab CI ce ees eep</h3>
+<p>To follow conventions of naming across GitLab, and to further move away from the
+<code>build</code> term and toward <code>job</code>, CI variables <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/9756">have been renamed</a> for the 9.0
+release.</p>
+<table>
+<thead>
+<tr>
+<th>8.X name</th>
+<th>9.0 name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CI_BUILD_ID</code></td>
+<td><code>CI_JOB_ID</code></td>
+</tr>
+<tr>
+<td><code>CI_BUILD_REF</code></td>
+<td><code>CI_COMMIT_SHA</code></td>
+</tr>
+<tr>
+<td><code>CI_BUILD_TAG</code></td>
+<td><code>CI_COMMIT_TAG</code></td>
+</tr>
+<tr>
+<td><code>CI_BUILD_REF_NAME</code></td>
+<td><code>CI_COMMIT_REF_NAME</code></td>
+</tr>
+<tr>
+<td><code>CI_BUILD_REF_SLUG</code></td>
+<td><code>CI_COMMIT_REF_SLUG</code></td>
+</tr>
+<tr>
+<td><code>CI_BUILD_NAME</code></td>
+<td><code>CI_JOB_NAME</code></td>
+</tr>
+<tr>
+<td><code>CI_BUILD_STAGE</code></td>
+<td><code>CI_JOB_STAGE</code></td>
+</tr>
+<tr>
+<td><code>CI_BUILD_REPO</code></td>
+<td><code>CI_REPOSITORY_URL</code></td>
+</tr>
+<tr>
+<td><code>CI_BUILD_TRIGGERED</code></td>
+<td><code>CI_PIPELINE_TRIGGERED</code></td>
+</tr>
+<tr>
+<td><code>CI_BUILD_MANUAL</code></td>
+<td><code>CI_JOB_MANUAL</code></td>
+</tr>
+<tr>
+<td><code>CI_BUILD_TOKEN</code></td>
+<td><code>CI_JOB_TOKEN</code></td>
+</tr>
+</tbody>
+</table>
+<p>The old variables continue to work, however they are deprecated and will be removed soon.</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/ee/ci/variables/">Read more about the CI variables in our documentation</a></p>
+<h3 id=gitaly-ce-ees-eep>Gitaly ce ees eep</h3>
+<p>In every release, GitLab becomes faster with huge performance boosts. Today's
+release is no different. Along with <a href="#performance-improvements-ce-ee">other performance improvements</a>,
+GitLab now ships with <a href="https://gitlab.com/gitlab-org/gitaly">Gitaly</a>, our own
+open-source solution to handle git calls made by GitLab. While completely
+transparent, this change in how GitLab operates internally is important and
+will make GitLab faster. We are actively working on Gitaly, so you can expect
+more news about it in future releases.</p>
+<h3 id=group-search-and-filtering-ce-ees-eep>Group search and filtering ce ees eep</h3>
+<p>With our new version of groups in 9.0, we anticipate you'll create much more of them. So we've made it possible to filter and search groups in the list view, and also allow you to sort by when they were created or updated.</p>
+<p><img src="/images/9_0/filter_groups.png" alt="Filter Groups" class=shadow /></p>
+<h3 id=tokenized-filter-and-search-in-issues-and-merge-requests-ce-ees-eep>Tokenized Filter and Search in Issues and Merge Requests ce ees eep</h3>
+<p>We first introduced the new streamlined filter and search interface for issues in <a href="/releases/2017/01/22/gitlab-8-16-released/">8.16</a>. With 9.0, we are tokenizing the filter attributes for even more visual clarity. Many other places in GitLab deserve this new interface. We're bringing it to merge requests in 9.0, and will roll it out to other parts of GitLab in future releases.</p>
+<p><img src="/images/9_0/mr_new_search_interface.png" alt="Merge Requests New Search Interface" class=shadow /></p>
+<h3 id=impersonation-tokens-ce-ees-eep>Impersonation Tokens ce ees eep</h3>
+<p>Alongside the new API, we've also added <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/25367">Impersonation tokens</a>. If you've ever built a bot or a piece of functionality with our API, you'll often have to retrieve a token via OAuth. This can sometimes be undesirable and cumbersome to have to go through a UI flow in order to retrieve this token. Administrators of a GitLab instance can now retrieve an impersonation token on behalf of a user to make this process a lot easier and centrally controlled. This process will also alleviate any issues caused by users inadvertently invalidating tokens in use for other applications.</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/ee/api/index.html#impersonation-tokens">Read more about impersonation tokens in our API docs</a></p>
+<h3 id=gitlab-pages-artifacts-cleaned-after-deployment-ce-ees-eep>GitLab Pages artifacts cleaned after deployment ce ees eep</h3>
+<p>In order to more efficiently utilize artifact storage space, <a href="https://pages.gitlab.io/">GitLab Pages</a> artifacts are now automatically deleted after they have been deployed. If you would like to retain artifacts, an <a href="https://docs.gitlab.com/ee/ci/yaml/#artifacts-expire_in">expiry duration</a> can be set.</p>
+<h3 id=comments-in-diffs-ce-ees-eep>Comments in diffs ce ees eep</h3>
+<p>Commenting in diffs is now much easier with a purple background indicating which line we are selecting.
+Going through discussion in comments is also much easier now that we can collapse discussions and
+see note authors avatars in the sidebar of the diff.</p>
+<p><img src="/images/9_0/diff_comments.gif" alt="Comments in diffs" class=shadow /></p>
+<h3 id=pipeline-triggers-with-user-permissions-ce-ees-eep>Pipeline triggers with User permissions ce ees eep</h3>
+<p>A new <a href="https://docs.gitlab.com/ee/api/pipeline_triggers.html">Pipeline Trigger API</a> and UI is now available, which utilize the user level permissions of their creator. This enables the token to be used not just for the current project, but also all dependent projects as well. The Build Trigger API remains functional, however it is deprecated and will be removed soon.</p>
+<h3 id=new-default-value-for-ci-variable-cachekey-ce-ees-eep>New default value for CI variable "cache:key" ce ees eep</h3>
+<p>Unless specifically configured, the value of <a href="https://docs.gitlab.com/ee/ci/yaml/#cachekey"><code>cache:key</code></a> is now <code>default</code>. This allows the cache to be shared between all pipelines and jobs within the project, increasing CI/CD efficiency and speed.</p>
+<h3 id=blocking-manual-actions-in-pipelines-ce-ees-eep>Blocking manual actions in pipelines ce ees eep</h3>
+<p><a href="https://docs.gitlab.com/ee/ci/jobs/job_control.html#create-a-job-that-must-be-run-manually">Manual actions</a> can now be configured to block pipelines until they are completed. Pipelines blocked by manual actions have a status of <code>manual</code>, and can be enabled by setting <code>allow_failure</code> to <code>false</code>.</p>
+<h3 id=more-control-over-http-strict-transport-security-ce-ees-eep>More control over HTTP Strict Transport Security ce ees eep</h3>
+<p>Now you fine tune your Strict Transport Security enforcement just by changing settings in your Omnibus GitLab config.
+Use HTTP Strict Transport Security to provide your installation with even better protection against MITM attacks.</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/omnibus/settings/nginx.html#setting-http-strict-transport-security">Learn more about HSTS in Omnibus in our docs</a></p>
+</div>
+<div class=column>
+<h3 id=new-branch-for-bare-projects-ce-ees-eep>New Branch for Bare Projects ce ees eep</h3>
+<p>When you click the <code>New branch</code> button in an issue, you may want to start creating code right away.
+But for a project with an empty repository, GitLab, prior to 9.0, stubbornly sends you back to the main project view when you click the button.
+With 9.0, when you do click the <code>New branch</code> in an empty repository project, GitLab automatically creates the master branch, commits a blank <code>README.md</code> file to it, and creates and redirects you to a new branch based on the issue title.
+If your <a href="https://docs.gitlab.com/ee/user/project/integrations/project_services.html">project is already configured with a deployment service</a> (e.g. Kubernetes), GitLab takes one step further and prompts you to set up <a href="https://docs.gitlab.com/ee/topics/autodevops/stages.html">auto deploy</a> by helping you create a <code>.gitlab-ci.yml</code> file.</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-new-branch-from-an-issue">Read more about creating new branches from issues in our docs</a></p>
+<p><img src="/images/9_0/no_repo_new_branch.png" alt="New Branch for Repo-less Projects in GitLab 9.0" class=shadow /></p>
+<h3 id=merge-request-widget-usability-ce-ees-eep>Merge Request Widget Usability ce ees eep</h3>
+<p>The merge request plays a crucial role in code collaboration and deployment. In particular, a lot of important information and call-to-actions are located in the merge request widget. With 9.0, we are starting to improve the usability of that widget. We want to present the most relevant information and allow you to see, at a glance, the status of the code, whether it's in review, or if it's already deployed in an environment. We will continue to iterate on this new cleaner design, and continue to make the entire merge request more powerful.</p>
+<p><img src="/images/9_0/merge_request_widget.png" alt="Merge Request Widget" class=shadow /></p>
+<h3 id=create-mattermost-team-when-creating-gitlab-group-ce-ees-eep>Create Mattermost Team when Creating GitLab Group ce ees eep</h3>
+<p>Sometimes chatting with your workgroup is the best way to get an idea rolling. To help you with that, GitLab integrates with <a href="https://about.mattermost.com/">Mattermost</a>. With GitLab 9.0, setting up a <a href="https://docs.gitlab.com/omnibus/gitlab-mattermost/README.html#gitlab-mattermost">Mattermost team</a> for your GitLab group to chat and collaborate is effortless. When creating a GitLab group, select the appropriate checkbox, and GitLab will tell your Mattermost instance to create a team with the same name.</p>
+<p><img src="/images/9_0/group-creation-mm.png" alt="Create GitLab Group Create Mattermost Team" class=shadow /></p>
+<h3 id=paginated-environments-ce-ees-eep>Paginated environments ce ees eep</h3>
+<p>Pagination was added to environments list in order to improve performance and user experience.
+Environments that belong to a folder are now shown in a new view.</p>
+<p><img src="/images/9_0/environments_pagination.png" alt="Root Level Environments" class=shadow />
+<img src="/images/9_0/environments_folder_view.png" alt="Environments inside a folder" class=shadow /></p>
+<h3 id=notable-community-contributions-ce>Notable Community Contributions ce</h3>
+<ul>
+<li>Add the Username to the HTTP(S) clone URL of a Repository (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/9347">!9347</a>)</li>
+<li>API: Make it possible to pass coverage value to commit status endpoint (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/9214">!9214</a>)</li>
+<li>Show directory hierarchy when listing wiki pages (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8133">!8133</a>)</li>
+<li>Add a feature to create a 'directly addressed' Todo when mentioned in the beginning of a line (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/7926">!7926</a>)</li>
+<li>Todos can now be undone (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8691">!8691</a>)</li>
+<li>Show 99+ for large count in todos notification bell (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/9171">!9171</a>)</li>
+<li>Add the option to filter todos by Added (Marked) and Pipelines (Build failed) (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8861">!8861</a>)</li>
+<li>Add merge request count to each issue on issues list (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/9252">!9252</a>)</li>
+<li>Introduce <code>/award</code> slash command; Allow posting of just an emoji in comment (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/9382">!9382</a>)</li>
+<li>Add a button to create an issue for a failing build (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/9391">!9391</a>)</li>
+<li>Add user &amp; build links in Slack Notifications (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8641">!8641</a>)</li>
+<li>Add the ability to copy a branch name to the clipboard (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/9103">!9103</a>)</li>
+<li>Brand header logo for pipeline emails (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/9049">!9049</a>)</li>
+</ul>
+<h3 id=omnibus-gitlab-package-improvements-ce-ees-eep>Omnibus GitLab Package Improvements ce ees eep</h3>
+<h4 id=postgresql-version-upgrade>PostgreSQL version upgrade</h4>
+<p>Previous GitLab releases were shipped with PostgreSQL 9.2 by default. PostgreSQL
+9.2's end of life (EOL) is <a href="https://www.postgresql.org/support/versioning/">set to September 2017</a>.
+For this reason, as well as to have the latest features and performance
+improvements, we need to update the PostgreSQL version that GitLab uses.</p>
+<p>GitLab 9.0 now ships with PostgreSQL 9.6 by default. For existing installations,
+the omnibus-gitlab packages for GitLab 9.0 will attempt to automatically upgrade
+your database, using the <code>gitlab-ctl pg-upgrade</code> tool that is included
+<a href="/releases/2016/12/22/gitlab-8-15-released/#postgresql-version-upgrade">since 8.15</a>.</p>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/omnibus/settings/database.html#upgrade-packaged-postgresql-server">Read more about database upgrade in our docs</a></p>
+<p>Ran into issues? Create an issue at the <a href="https://gitlab.com/gitlab-org/omnibus-gitlab/issues">omnibus-gitlab issue tracker</a>,
+and reference it in the <a href="https://gitlab.com/gitlab-org/omnibus-gitlab/issues/1783">upgrade problems meta issue.</a></p>
+<h4 id=gitlab-mattermost-37>GitLab Mattermost 3.7</h4>
+<p><a href="https://about.mattermost.com/mattermost-3-7">Mattermost 3.7</a> is included in
+GitLab 9.0. The <a href="https://about.mattermost.com/">open source Slack-alternative's</a>
+newest release offers group messaging for quick, direct chats, custom channel push
+notification preferences, new website link previews and much more.</p>
+<p>This version includes <a href="http://about.mattermost.com/security-updates/">security updates</a>
+and upgrade is recommended.</p>
+<h4 id=raspberry-pi-2-changes>Raspberry Pi 2 changes</h4>
+<p>Due to a fault in release process that was caused by changes in build infrastructure,
+packages for Raspberry Pi 2 <a href="https://gitlab.com/gitlab-org/omnibus-gitlab/issues/1303">were tagged under Debian distribution instead of Raspbian</a>.</p>
+<p>We've resolved this issue and also synced all latest versions of packages
+to <code>Raspbian</code> distribution.</p>
+<p>Going forward, we will only release Raspberry Pi 2 packages under <code>Raspbian</code> distribution.
+Further more, as <a href="/releases/2017/02/22/gitlab-8-17-released/#raspbian-wheezy-package">announced in 8.17 release post</a>,
+we will provide only Jessie packages for Raspberry Pi 2.</p>
+<p>If you did any manual changes to the apt repository as a workaround, you will need to change the distribution.
+You can do this by running:</p>
+<div class=highlight><pre class="highlight plaintext"><code>sed -i 's/debian/raspbian/g' /etc/apt/sources.list.d/gitlab_raspberry-pi2.list
+</code></pre></div>
+<h4 id=monitoring-gitlab-with-prometheus>Monitoring GitLab with Prometheus</h4>
+<p>With the release of GitLab 9.0, Prometheus and its associated exporters are now on by default. It is now easier than ever to ensure your GitLab service is healthy and responsive, with over 100 metrics available for monitoring. If you would like to disable Prometheus and all of it's related services, simply set:</p>
+<div class=highlight><pre class="highlight plaintext"><code>prometheus_monitoring['enable'] = false
+</code></pre></div>
+<p><i class="fas fa-book" aria-hidden=true></i>
+<a href="https://docs.gitlab.com/ee/administration/monitoring/prometheus/">Read more on monitoring with Prometheus docs</a></p>
+</div>
+</section>
+<section class=release-post-section>
+<h2 class=text-center id=deprecations>Deprecations</h2>
+<h3 id=gitlab-runner-deprecation>GitLab Runner Deprecation</h3>
+<p>Please note that GitLab Runners prior to 9.0 utilize API v3, and therefore are deprecated along with the v3 API. Runners version 9.0 and above utilize the <a href="#api-v4-ce-ee">new v4 API</a>, requiring a minimum of GitLab 9.0.</p>
+<p>Due: <strong>August 2017</strong>.</p>
+<h3 id=git-annex-deprecation>Git-Annex deprecation</h3>
+<p>As <a href="/releases/2017/02/22/gitlab-8-17-released/#git-annex-support">previously announced</a>,
+support for <a href="https://docs.gitlab.com/ee/administration/git_annex.html">Git-Annex</a> has
+been deprecated in GitLab 9.0.</p>
+<p>Read through the
+<a href="https://docs.gitlab.com/ee/topics/git/lfs/migrate_from_git_annex_to_git_lfs.html">Git-Annex to Git-LFS migration guide</a>.</p>
+<p>Due: <strong>today</strong>.</p>
+<h3 id=gitlab-pages-ip-on-gitlabcom>GitLab Pages IP on GitLab.com</h3>
+<p>We've changed the <strong>IP address</strong> of GitLab Pages server on <strong>GitLab.com</strong>. Your DNS <code>A</code> record needs update.
+For more info, please read the blog post "<a href="/releases/2017/03/06/we-are-changing-the-ip-of-gitlab-pages-on-gitlab-com/">We are changing the IP of GitLab Pages on GitLab.com</a>".</p>
+<p>Due: <strong>March 31st</strong>, 2017 at 23:59h UTC.</p>
+</section>
+
+
+<section class=release-post-section>
+<h2 class=text-center id=upgrade-barometer>Upgrade barometer</h2>
+<p>To upgrade to GitLab 9.0, downtime is required. Larger instances (&gt;1000 users)
+should expect about 15 minutes of downtime.</p>
+<p>The specific migrations requiring downtime or taking significant time are described below.</p>
+<ul>
+<li>Some columns are renamed. This operation requires downtime.</li>
+<li>A new column is added to users table, which does not require downtime but may take some time to complete.</li>
+<li>The builds table is updated, which does not require downtime but may take some time depending on your CI usage.</li>
+</ul>
+<p>GitLab 9.0 introduces a <a href="#api-v4">new version of our API</a>. While existing calls
+to API v3 will continue to work until August 2017, we advise you to make any
+necessary changes to applications that use the v3 API. <a href="https://docs.gitlab.com/ee/api/v3_to_v4.html">Read the documentation</a>
+to learn more.</p>
+<p>Because of PostgreSQL's upgrade, GitLab 9.0 introduces a breaking change to
+GitLab Geo. If you are an existing Geo user, please refer to the <a href="https://docs.gitlab.com/ee/administration/geo/replication/updating_the_geo_nodes.html">documentation
+before upgrading to 9.0</a>.</p>
+<h4 id=note>Note</h4>
+<p>We assume you are upgrading from the latest version. If not, then also consult the upgrade barometers of any intermediate versions you are skipping.
+If you are upgrading from a GitLab version prior to 8.0 <em>and</em> you have CI enabled, you have to upgrade to GitLab 8.0 <a href="/releases/2015/09/22/gitlab-8-0-released/">first</a>.</p>
+<p>New configuration options have been introduced in the omnibus-gitlab packages. To
+check what changed compared to your <code>/etc/gitlab/gitlab.rb</code> configuration
+file, run <code>sudo gitlab-ctl diff-config</code>.</p>
+<p>Please be aware that by default the Omnibus packages will stop, run migrations,
+and start again, no matter how “big” or “small” the upgrade is. This behavior
+can be changed by adding a <a href="https://docs.gitlab.com/omnibus/update/README.html"><code>/etc/gitlab/skip-auto-migrations</code>
+file</a>.</p>
+<p>If you're GitLab EE user, please be aware that in 9.0 release we bumped the required version of Elasticsearch from 2.4.x to 5.1.x.
+Please update it following the official <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/setup-upgrade.html">documentation</a>.
+Indexes created by Elasticsearch 2.4.x can be read by Elasticsearch 5.1.x.</p>
+</section>
+
+<section class=gray-section>
+<div class="release-row align-top">
+<div class=column>
+<h3 id=changelog>Changelog</h3>
+<p>Please check out the changelog to see all the named changes:</p>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CHANGELOG.md">GitLab CE</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab-ee/blob/master/CHANGELOG.md">GitLab EE</a></li>
+</ul>
+<h3 id=installing>Installing</h3>
+<p>If you are setting up a new GitLab installation please see the
+<a href="/install/">download GitLab page</a>.</p>
+<h3 id=updating>Updating</h3>
+<p>Check out our <a href="/update/">update page</a>.</p>
+</div>
+<div class=column>
+<h3 id=gitlab-products>GitLab Products</h3>
+<p>We offer four different <a href="/stages-devops-lifecycle/">products</a> for you and your company:</p>
+<ul>
+<li id=ce><strong>GitLab Community Edition (CE)</strong>: <a href="https://gitlab.com/gitlab-org/gitlab-ce">Open source</a>, self-managed solution of GitLab. Ideal for personal projects or small teams with minimal user management and workflow control needs. Every feature available in GitLab CE, is also available on GitLab Enterprise Edition (Starter and Premium), and GitLab.com.</li>
+<li id=ee><strong><a href="/pricing/">GitLab Enterprise Edition</a> (EE)</strong>: <a href="https://gitlab.com/gitlab-org/gitlab-ee/">Open core</a>, self-managed, fully featured solution of GitLab. Available in two different subscriptions:
+<ul>
+<li id=ees><strong>GitLab Enterprise Edition Starter (EES)</strong>: Ideal for co-located teams who need additional security and workflow controls for their professional projects.</li>
+<li id=eep><strong>GitLab Enterprise Edition Premium (EEP)</strong>: Ideal for distributed teams who need advanced workflow controls, premium features, High Availability, and Premium Support.</li>
+</ul>
+</li>
+<li id=gitlab-dot-com>**<a href="/pricing/">GitLab.com</a> **: Free GitLab solution, which runs on top of GitLab EES, hosted by GitLab, Inc. Ideal for individuals who want to get their projects up and running quickly. Administrated by GitLab (users don't have access to admin settings).</li>
+</ul>
+</div>
+</div>
+</section>
+<section class=release-post-section>
+<p class="note text-center"><a href="https://www.pexels.com/photo/landscape-nature-mountain-lake-37650/">Cover image</a> licensed under <a href="https://www.pexels.com/photo-license/">CC0</a>.</p>
+</section>
+<style>
+  .badge-container a {
+    margin-right: 3px;
+  }
+</style>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+9.0+released+with+Subgroups+and+Deploy+Boards+via+%40victorwu416&amp;url=https://about.gitlab.com/releases/2017/03/22/gitlab-9-0-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab 9.0 released with Subgroups and Deploy Boards
+via @victorwu416
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2017/03/22/gitlab-9-0-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2017/03/22/gitlab-9-0-released/&amp;text=GitLab 9.0 released with Subgroups and Deploy Boards' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2017/03/22/gitlab-9-0-released/&amp;title=GitLab 9.0 released with Subgroups and Deploy Boards&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2017/03/22/gitlab-9-0-released/&amp;t=GitLab 9.0 released with Subgroups and Deploy Boards' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2017/03/20/gitlab-8-dot-17-dot-4-security-release/" title="GitLab 8.17.4, 8.16.8, and 8.15.8 released"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.17.4, 8.16.8, and 8.15.8 released
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2017/03/28/gitlab-9-dot-0-dot-1-released/" title="GitLab Patch Release: 9.0.1"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab Patch Release: 9.0.1
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2017-03-22-gitlab-9-0-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2017-03-22-gitlab-9-0-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/release-posts_former_ce_ee.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

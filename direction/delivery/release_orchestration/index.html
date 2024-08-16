@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Release Orchestration
+|
+GitLab
+</title>
+<meta content='Release Orchestration is the ability to coordinate complex releases across projects, in an efficient way that leverages as-code behaviors as much as possible.' name=description />
+<meta content='Release Orchestration is the ability to coordinate complex releases across projects, in an efficient way that leverages as-code behaviors as much as possible.' name='twitter:description'/>
+<meta content='Release Orchestration is the ability to coordinate complex releases across projects, in an efficient way that leverages as-code behaviors as much as possible.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Release Orchestration' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/delivery/release_orchestration/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/delivery/release_orchestration/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Release Orchestration' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/delivery/release_orchestration/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Release Orchestration
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/nagyv-gitlab'>
+<div class=codeowners-single>
+<img
+src='/images/team/viktornagy.jpg'
+class=codeowner-avatar-img
+alt='Viktor Nagy'
+title='Viktor Nagy'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Viktor Nagy
+</div>
+<div class=codeowners-handle>
+@nagyv-gitlab
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/delivery/release_orchestration/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/delivery/">Delivery Direction</a></li><li>Category Direction - Release Orchestration</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#release-orchestration" id=markdown-toc-release-orchestration>Release Orchestration</a> <ul>
+<li><a href="#vision" id=markdown-toc-vision>Vision</a></li>
+</ul>
+</li>
+<li><a href="#manual-processes-vs-automation" id=markdown-toc-manual-processes-vs-automation>Manual Processes vs. Automation</a> <ul>
+<li><a href="#compliance-and-security-in-the-release-pipeline" id=markdown-toc-compliance-and-security-in-the-release-pipeline>Compliance and Security in the Release Pipeline</a></li>
+</ul>
+</li>
+<li><a href="#whats-next--why" id=markdown-toc-whats-next--why>What's Next &amp; Why</a></li>
+<li><a href="#maturity-plan" id=markdown-toc-maturity-plan>Maturity Plan</a></li>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive Landscape</a></li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst Landscape</a></li>
+<li><a href="#top-customer-successsales-issues" id=markdown-toc-top-customer-successsales-issues>Top Customer Success/Sales Issue(s)</a></li>
+<li><a href="#top-customer-issues" id=markdown-toc-top-customer-issues>Top Customer Issue(s)</a></li>
+<li><a href="#top-internal-customer-issues" id=markdown-toc-top-internal-customer-issues>Top Internal Customer Issue(s)</a></li>
+<li><a href="#top-vision-items" id=markdown-toc-top-vision-items>Top Vision Item(s)</a></li>
+<li><a href="#whats-next" id=markdown-toc-whats-next>What's Next</a> <ul>
+<li><a href="#specific-issues-and-epics" id=markdown-toc-specific-issues-and-epics>Specific issues and epics</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=release-orchestration>Release Orchestration</h2>
+<p>Release Orchestration is the ability to coordinate complex releases, particularly
+across projects, in an efficient way that leverages as-code behaviors as much as
+possible. We also recognize that there are manual steps and coordination points
+involving human decisions throughout software delivery in the enterprise. In these cases, there are teams and release manager roles dedicated to groundguiding these complex enterprise releases, rather than individuals continuously deploying to production.</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=Category%3ARelease%20Orchestration">Issue List</a></li>
+<li><a href="/direction/ops/#release">Overall Vision</a></li>
+<li><a href="https://gitlab.com/gitlab-org/ux-research/-/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=all&amp;label_name[]=Category%3ARelease%20Orchestration">UX Research</a> - <a href="https://gitlab.com/gitlab-org/uxr_insights/-/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=all&amp;label_name[]=Category%3ARelease%20Orchestration">Research Insights</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2622">Competitive Analysis</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/releases/index.html">Documentation</a></li>
+</ul>
+<h3 id=vision>Vision</h3>
+<p>GitLab contains all the necessary tooling for enterprises to orchestrate any complex release. Enterprises are able to plan upcoming launches, garner the necessary approvals, meet organizational compliance requirements, coordinate the entire development lifecycle, and deploy the application to production all from within GitLab.</p>
+<p>All of the people involved with a release are able to use GitLab to perform the necessary manual actions where needed and GitLab can help automate everything else.</p>
+<p>GitLab Release Orchestration enables precise deployment of applications of any complexity, making traditional war rooms much more efficient or even unnecessary. Instead, all of the tedious work to step through a launch can be done right within GitLab.</p>
+<h2 id=manual-processes-vs-automation>Manual Processes vs. Automation</h2>
+<p>At GitLab we believe organizations can accomplish these enterprise grade releases elegantly and effectively with automation. We are a powerful platform that unlocks efficiency within DevOps. As such, we avoid adding manual, non-automated controls to the delivery pipeline. We have completed a competitive analysis of tools that help manage dependencies and advance deployment orchestration in <a href="https://gitlab.com/groups/gitlab-org/-/epics/4635">gitlab&amp;4635</a>. There are many ways GitLab can improve the quality of life for organizations and teams managing deployments.</p>
+<p>A related category in the <a href="/direction/delivery/">Configure stage</a> describes one approach for users to embrace an <a href="/topics/gitops/infrastructure-as-code/">infrastructure as code</a> approach to tasks in the category of runbooks. Release Management will be making contributions to this direction as we begin to support more demands for workflows within the GitLab platform.</p>
+<h3 id=compliance-and-security-in-the-release-pipeline>Compliance and Security in the Release Pipeline</h3>
+<p>Security, compliance, control and governance of the release pipeline is handled as part of <a href="/direction/release/release_evidence/">Release Evidence</a>. Secrets in the pipeline are part of our <a href="/direction/verify/secrets_management/">Secrets Management</a> category. Another category for governance and security within GitLab is <a href="/direction/govern/compliance/compliance-management/">Compliance Management</a>, which is inclusive of change management and approval workflows. For governance workflows pertaining to issues and requirements, check out our category of Requirements Management from the <a href="/direction/plan/">Plan</a> stage.</p>
+<h2 id=whats-next--why>What's Next &amp; Why</h2>
+<ol>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/273757">Rename <code>filepath</code> parameter in Release REST API</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/375489">Download/install GitLab release binary via private Homebrew tap</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/26015">Automatically insert changelog into Release</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/3561">Group Releases</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2285">Release Notes</a></li>
+</ol>
+<h2 id=maturity-plan>Maturity Plan</h2>
+<p>This category is currently at the "Viable" maturity level, and our next maturity target is "Complete" (see our <a href="/direction/maturity/">definitions of maturity levels</a>).</p>
+<p>We believe that expanding interactions from the Release page will progress the maturity to Complete. The Releases page will connect the issues assigned to specific milestone and artifacts generated from a deployment, delivering a single view for a release.</p>
+<p>Key deliverables to achieve this are:</p>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/issues/9427">Add link to runbook in release assets</a> (Complete)</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2312">Support More actions in the Release Pages UI</a> (Complete)</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2510">Release generation from within <code>.gitlab-ci.yml</code></a> (Complete)</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/issues/24295">Set a deploy freeze in the UI</a> (Complete)</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/214244">Update "Create Release" flow to re-use the "Edit Release" form</a> (Complete)</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/4180">Deployer Role in GitLab</a> (Complete)</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/235391">Associate Group Milestones to Release via API</a>(Complete)</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/4209">Provide a Raw Package Registry for Release Artifacts</a> (Complete)</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/36133">Add binary assets to Releases</a> (Complete)</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/121476">Associate group milestones to releases</a> (Complete)</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/121476">Support release association to group milestones in UI</a> (Complete)</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/259703">Release analytics at the group level</a> (Complete)</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/4159">Auto changelog for release</a> (Partial)</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/241506">Group Environments Page</a></li>
+</ul>
+<h2 id=competitive-landscape>Competitive Landscape</h2>
+<p>Release orchestration tools tend to have great features for managing releases,
+as you'd expect; they are built from the ground up as a release management
+workflow tool and are very capable in those areas. Our approach to release
+orchestration will be a bit different, instead of being workflow-oriented we
+are going to approach release orchestration from a publishing point of view.
+What this means is instead of building complicated workflows for your releases,
+we will focus more on the artifact of the release itself and embedding the
+checks and steps into it.</p>
+<p><a href="/blog/2020/01/16/2019-gartner-aro-mq/">Gartner listed GitLab as a challenger in Application Release Orchestration</a>,
+celebrating the "single product" offering of GitLab as "cloud-native, with a large and rapidly growing customer base". The blurring of the market with the
+convergence of features across various tools in ARO, CI/CS, PaaS, means functionality like AutoDevops and release automation is advantageously positioned to solve
+the problems of more traditional ARO solutions. <a href="https://www.forrester.com/report/The+Forrester+Wave+Continuous+Delivery+And+Release+Automation+Q2+2020/-/E-RES157265">Forrester recently listed GitLab as a Strong Performer for the Continous Delivery and Release Automation Wave</a>, highlighting the advanced controls of release ochestration for cloud native applications. GitLab's ranking as a Forrester Strong Performer is reviewed in a <a href="https://about.gitlab.com/blog/2020/07/08/forrester-cdra2020/">published blog</a>. We are looking forward to administration of releases at scale via <a href="https://gitlab.com/groups/gitlab-org/-/epics/3298">gitlab&amp;3298</a>, where we will re-design the current <a href="https://docs.gitlab.com/ee/ci/environments/environments_dashboard.html">Environments Dashboard</a> for management of legacy style deployments. Gartner's 2020 Peer Insights' 'Voice of the Customer' synthesized hundreds of reviews and ratings from the perspective of peers to help IT decision makers choose the best solution them. We're excited to be recognized as a "Customers' Choice" for <a href="https://about.gitlab.com/analysts/gartner-votc20/">Application Release Orchestration</a> based on the qualifications set by Gartner Peer Insights.</p>
+<p><img src="/images/AROcustomerchoice.png" alt=Gartnerpeerinsights title="ARO Peer Insights Quadrant"/></p>
+<p>We have conducted a detailed analysis of XebiaLabs' XL Release offering in (<a href="https://gitlab.com/groups/gitlab-org/-/epics/2369">gitlab#2369</a>). XL Release's elegance of cross team views, administration of deployments and environments as well as actionable metrics for how Releases are performing are all areas of note. We will be able to compete pointedly by offering <a href="https://gitlab.com/gitlab-org/gitlab/issues/24295">deploy freeze capabilities</a> and <a href="https://gitlab.com/gitlab-org/gitlab/issues/9427">runbook visibility</a>. Where we will strengthen our approach and confidence in head to head scenarios with XL, will in our next validation tracks. In light of this analysis we aim to improve our experience with environment features like roll backs via (<a href="https://gitlab.com/gitlab-org/gitlab/issues/198364">gitlab#198364</a>), blue green deployments with (<a href="https://gitlab.com/gitlab-org/gitlab/issues/14763">gitlab#14763</a>) and support a better view at the group-level in with director-level dashboard for Releases in (<a href="https://gitlab.com/gitlab-org/gitlab/issues/3277">gitlab#3277</a>). Despite the <a href="https://www.businesswire.com/news/home/20200121006172/en/CollabNet-VersionOne-XebiaLabs-Combine-Create-Integrated-Agile">merger of XebiaLabs by CollabNet</a>, GitLab will continue to thrive as a result of the single platform, single data model. This is especially true as we begin to support more non-technical personas by enhancing the UI experience of release orchestration that many enterprises are interested in.</p>
+<p>Implementing a compelling deployment plan or native runbook offering, such as discussed in <a href="https://gitlab.com/groups/gitlab-org/-/epics/4218">gitlab&amp;4218</a>, will help us more holistically compete with Electric Cloud, as discovered in the competitive analysis conducted in <a href="https://gitlab.com/groups/gitlab-org/-/epics/3917">gitlab&amp;3917</a>.</p>
+<h2 id=analyst-landscape>Analyst Landscape</h2>
+<p>Analysts at this time are looking for more quality of life features that make
+a difference in people's daily workflows - how does this make my day better?
+By introducing features like (<a href="https://gitlab.com/gitlab-org/gitlab/issues/26015">gitlab#26015</a>)
+to automatically manage changelogs and release notes as part of releases, we can demonstrate
+how our solution is already capable of doing this.</p>
+<p>Deploy freezes (<a href="https://gitlab.com/gitlab-org/gitlab/issues/24295">gitlab#24295</a>)
+will help compliance teams enforce periods where production needs to remain stable/not change. The 2020 CDRA Wave Analysts featured criteria around scheduling for maintenance windows, which deploy freezes would satisfy.</p>
+<p>Legacy deployment methods, calendar view for deployments and being able to see across a portfolio of releases is becoming more and more relevant as Analysts rank competing solutions like <a href="https://explore.digital.ai/news-media-coverage/digitalai-named-a-leader-in-gartner-magic-quadrant-for-8th-time-in-a-row">Digital.ai</a> and <a href="https://www.previous.cloudbees.com/press/cloudbees-named-one-g2%E2%80%99s-top-50-enterprise-products-2020">Cloudbees</a>. Better analytics and reporting, such as the CI/CD dashboard in <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/199739">gitlab#199739</a> and supporting DORA 4 metrics via <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/37139">gitlab#37139</a>, will move the needle for these audiences. Native runbooks, as discussed in <a href="https://gitlab.com/groups/gitlab-org/-/epics/4218">gitlab&amp;4218</a>, are well-positioned to address the need to support non-cloud native deployment plans and are a direct response to rankings on support of legacy deployment methods from the 2020 CDRA Wave.</p>
+<h2 id=top-customer-successsales-issues>Top Customer Success/Sales Issue(s)</h2>
+<p>Some customers are looking for deeper seperation of duties and have requested the ability to introduce a new permission setting for allowing specific users or roles to create/edit or delete protected environments in <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/262011.">gitlab#262011</a></p>
+<h2 id=top-customer-issues>Top Customer Issue(s)</h2>
+<p>Auto-generating release notes from annotated tags via (<a href="https://gitlab.com/gitlab-org/gitlab/issues/15563">gitlab#15563</a>) can help with automating release orchastration and eliminate redundant work.</p>
+<h2 id=top-internal-customer-issues>Top Internal Customer Issue(s)</h2>
+<p>A lot of interest has been expressed in adding the ability to clean up stale environments in the UI (<a href="https://gitlab.com/gitlab-org/gitlab/issues/19724">gitlab#19724</a>).</p>
+<h2 id=top-vision-items>Top Vision Item(s)</h2>
+<p>This YouTube video on the Release Stage vision, captures a walkthrough of our <a href="https://gitlab.com/groups/gitlab-org/-/epics/3825">3 year mocks</a> for our broader vision for the release stage:</p>
+
+<figure class=video_container>
+<iframe src="https://www.youtube.com/embed/UP7Ao4-vibc" frameborder=0 allowfullscreen=true> </iframe>
+</figure>
+
+<p>We are currently designing and thinking about how to better connect the <a href="/direction/ops/#package">Package</a> stage with Releases. We are seeing a great use case for adding semantic versioning to Releases as outlined in <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/213838">gitlab#213838</a>, as well improving the <a href="/direction/versioned-dependencies/">Versioned Dependencies</a> category by implementing better connections between the Release's page of project and the packages created via <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/215390">gitlab#215390</a>.</p>
+<p>We have begun investigating the extension of <a href="https://docs.gitlab.com/ee/ci/pipelines/merge_trains.html">Merge Trains</a> to include final deployment jobs, which are preliminarily called Release Trains, via <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/268246">gitlab#268246</a>.</p>
+<h2 id=whats-next>What's Next</h2>
+<h3 id=specific-issues-and-epics>Specific issues and epics</h3>
+<ol>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/367893">Creating a new tag is not clear on new release page</a></li>
+</ol>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/delivery/release_orchestration/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/delivery/release_orchestration/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

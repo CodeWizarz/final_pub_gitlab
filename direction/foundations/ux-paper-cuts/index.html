@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Direction - UX Paper Cuts
+|
+GitLab
+</title>
+<meta content='The UX Paper Cuts team is responsible for identifying and fixing small but impactful usability issues in the GitLab product.' name=description />
+<meta content='The UX Paper Cuts team is responsible for identifying and fixing small but impactful usability issues in the GitLab product.' name='twitter:description'/>
+<meta content='The UX Paper Cuts team is responsible for identifying and fixing small but impactful usability issues in the GitLab product.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Direction - UX Paper Cuts' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/foundations/ux-paper-cuts/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/foundations/ux-paper-cuts/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Direction - UX Paper Cuts' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/foundations/ux-paper-cuts/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Direction - UX Paper Cuts
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/joshlambert'>
+<img
+src='/images/team/joshua.png'
+class=codeowner-avatar-img
+alt='Joshua Lambert'
+title='Joshua Lambert'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/foundations/ux-paper-cuts/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/foundations/">Product Stage Direction - Foundations</a></li><li>Product Direction - UX Paper Cuts</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 class=no_toc id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#ux-paper-cuts-overview" id=markdown-toc-ux-paper-cuts-overview>UX Paper Cuts overview</a></li>
+<li><a href="#mission-and-vision" id=markdown-toc-mission-and-vision>Mission and vision</a></li>
+<li><a href="#what-we-work-on" id=markdown-toc-what-we-work-on>What we work on</a></li>
+<li><a href="#how-we-work" id=markdown-toc-how-we-work>How we work</a></li>
+<li><a href="#how-we-plan" id=markdown-toc-how-we-plan>How we plan</a></li>
+<li><a href="#how-we-communicate" id=markdown-toc-how-we-communicate>How we communicate</a></li>
+<li><a href="#how-we-collaborate" id=markdown-toc-how-we-collaborate>How we collaborate</a></li>
+<li><a href="#where-we-look-for-ux-paper-cuts-and-how-to-send-them-to-us" id=markdown-toc-where-we-look-for-ux-paper-cuts-and-how-to-send-them-to-us>Where we look for UX paper cuts (and how to send them to us)</a></li>
+</ul>
+<h2 id=ux-paper-cuts-overview>UX Paper Cuts overview</h2>
+<p>The UX Paper Cuts team has a unique scope; we are responsible for identifying and fixing small yet impactful usability issues across the GitLab product. The term “paper cut” refers to a small usability or accessibility issue that can cause annoyance or frustration for our users and customers. In aggregate, these paper cuts can impact the overall impression users have of the product and brand.</p>
+<h2 id=mission-and-vision>Mission and vision</h2>
+<p>The UX Paper Cuts team continuously improves the user experience by addressing small usability, accessibility and design consistency issues. By focusing on small details across the entire product, the team helps create a more polished and user-friendly interface, leading to increased user satisfaction, engagement, and ultimately a more successful product.</p>
+<h2 id=what-we-work-on>What we work on</h2>
+<ul>
+<li>By default, the UX Paper Cuts team does not take on new feature work, nor is the team used as a resource for another Group. Instead, the team focuses on usability and accessibility issues, design inconsistencies, and out-of-date UI across the entire product.</li>
+<li>The typical or canonical UX paper cut is a small or seemingly insignificant problem that can cause annoyance or frustration for users but paper cuts can at times be larger in scope, and for these the team partners with Product and UX Research.</li>
+<li>Like the <a href="https://handbook.gitlab.com/handbook/engineering/development/dev/manage/personal_productivity/">Personal productivity team</a>, UX Paper Cuts doesn’t work within a specific product area, but across the product as a whole.</li>
+<li>UX Paper Cuts work can look like (smallest to biggest):
+<ul>
+<li>A small paper cut such as migrating components to the <a href="https://design.gitlab.com/">Pajamas design system</a>, improving product accessibility and increasing design consistency.</li>
+<li>A larger design change to a component or feature.</li>
+<li>A series of many similar paper cuts and design updates with a theme. See <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/424396">accessibility</a>.</li>
+<li>Helping to refresh an entire product area. See <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/398215">Settings UI</a>.</li>
+</ul>
+</li>
+</ul>
+<h2 id=how-we-work>How we work</h2>
+<ul>
+<li>Each <a href="https://handbook.gitlab.com/job-families/product/product-designer/#ux-paper-cuts-specialty">UX Paper Cuts designer</a> is responsible for all the design and development updates needed to fix the paper cut, acting as a <a href="https://handbook.gitlab.com/handbook/leadership/#managers-of-one">manager of one</a>.</li>
+<li>The team finds or receives paper cuts from around the product and maintains their own roadmap without a PM or engineers.</li>
+<li>The team collaborates with Groups responsible for their areas of the product, acting as an informed partner.</li>
+<li>The UX Paper Cuts team does not have the final say on work done by a Group and does not override decisions by a Group.</li>
+</ul>
+<h2 id=how-we-plan>How we plan</h2>
+<p>DRI: Manager of Product Design</p>
+<ul>
+<li>The UX Paper Cuts team updates our plan quarterly and follows a yearly roadmap.</li>
+<li>The team works in monthly <a href="https://about.gitlab.com/releases/">milestones</a>, each with a specific theme.</li>
+<li>The aim of using themes in milestones is to focus the work in one area (vs spreading paper cuts across the whole product), increasing the chances it will have an noticeable impact for our users.</li>
+<li>Examples of themes include:
+<ul>
+<li>Areas of high traffic.</li>
+<li>Areas that don't currently have design resources.</li>
+<li>Areas that are out-of-date or are inconsistent in their use of our design guidelines or design system.</li>
+<li>Areas that are deprioritized by a PM or where we are invited in to help by a PM.</li>
+<li>Areas with recent feature releases.</li>
+</ul>
+</li>
+<li>The goal is to always be planning 3 milestone in advance (in quarterly planning issues e.g. like <a href="https://gitlab.com/gitlab-com/gitlab-ux/ux-paper-cuts/team-tasks/-/issues/3" title="FY25 Q1 Paper Cuts theme brainstorm (covers milestones 16.10, 16.11, 16.12)">this one</a>).</li>
+<li>We will solicit theme ideas from counterparts and keep a <a href="https://gitlab.com/groups/gitlab-org/-/epics/10026" title="✂ UX Paper Cuts">list of milestones and potential milestones</a>.</li>
+<li>We will review the backlog of issues, feedback, research, and bug reports to map them to the upcoming themed issues.</li>
+</ul>
+<h2 id=how-we-communicate>How we communicate</h2>
+<p>DRI: Manager of Product Design</p>
+<ul>
+<li>Our default is to communicate the milestones to the product team in the <code>#product</code> Slack channel, and ensure Groups affected by any particular theme or issue are aware of the upcoming milestones.</li>
+<li>We try to ping the relevant Group again a week before the planned milestone starts.</li>
+<li>We will also ping the stage group PM and designers (if there are any) on the larger paper cuts work before the work starts, and ask for input to give Groups more awareness of upcoming work.
+<ul>
+<li>Note: the UX Paper Cuts team is designed to move quickly and not get locked into the red tape and thus doesn't need explicit approvals before work.</li>
+<li>We do however have to have high confidence in our solutions.</li>
+<li>We have to ensure we're not introducing something that goes in the opposite direction the PM has set.</li>
+<li>And if UX Paper Cuts is working on something with lower confidence (or no data) then we do have to validate first (via PM, UX research, feature flags, etc.) before creating MRs.</li>
+</ul>
+</li>
+</ul>
+<h2 id=how-we-collaborate>How we collaborate</h2>
+<p>DRI: UX Paper Cuts designers</p>
+<ul>
+<li>All UX Paper Cuts team members work from the same milestone planning document and are responsible for adding and describing upcoming issues or tasks, so we can communicate and collaborate with affected Groups in advance.</li>
+<li>Since we work in other Group's areas, we make an extra effort in our MR descriptions. We explain the what and the <em>why</em> behind the proposed changes.</li>
+<li>Each team member will make sure designer and engineer in affected Group is either set as a merge request reviewer or pinged in a thread for awareness (each Group can decide their preference).</li>
+<li>The UX Paper Cuts team will pre-plan most of the work for each milestone and spend the majority of the milestone working on work related to the theme.</li>
+<li>On larger changes, the UX Paper Cuts team will meaningfully communicate and collaborate with affected Groups, ensuring they are aware of upcoming work and are given the opportunity to participate in solutions.</li>
+<li>The UX Paper Cuts team will monitor feedback after MRs are merged and continue to update and support that work.</li>
+<li>The UX Paper Cuts team will follow our standard development practices including updating front-end tests.</li>
+</ul>
+<h2 id=where-we-look-for-ux-paper-cuts-and-how-to-send-them-to-us>Where we look for UX paper cuts (and how to send them to us)</h2>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/417911" title="💬 Paper cuts possibilities &amp; requests">Paper Cuts Possibilities issue</a></li>
+<li>Issue labels
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/issues/?label_name%5B%5D=UX%20Paper%20Cuts">Issues labeled `UX Paper Cuts`</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/issues/?sort=updated_desc&amp;state=opened&amp;label_name%5B%5D=bug%3A%3Aux&amp;first_page_size=100">Open UX bugs</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/issues/?sort=updated_desc&amp;state=opened&amp;label_name%5B%5D=UX&amp;label_name%5B%5D=severity%3A%3A4&amp;first_page_size=100">Sev 4 UX issues</a></li>
+</ul>
+</li>
+<li>UX Research: SUS verbatim, CSAT verbatim and Usability Benchmarks reports
+<ul>
+<li>Examples include:
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/ux-research/-/issues/2429" title="📘 Q1 FY24 SUS Verbatim Product Level Analysis - Papercut Possibilties">Q1 FY24 SUS Verbatim Product Level Analysis - Papercut Possibilities</a></li>
+<li><a href="https://gitlab.com/gitlab-org/ux-research/-/issues/2611" title="📘 Q2 FY24 SUS Verbatim Product Level Analysis - Papercut Possibilties">Q2 FY24 SUS Verbatim Product Level Analysis - Papercut Possibilities</a></li>
+<li><a href="https://docs.google.com/presentation/d/1qJ6u0llZfwcwu60axRHVirQCdRhTKvroXvvDc9Awc3A/edit#slide=id.p1">Q3FY23 Secure Stage Benchmarking Report</a></li>
+<li><a href="https://gitlab.com/gitlab-org/ux-research/-/issues/2823" title="FY24-Q3 Quarterly Navigation Survey Insight: Address potential Paper Cuts candidates related to the GitLab navigation">FY24-Q3 Quarterly Navigation Survey Insight: Address potential Paper Cuts candidates related to the GitLab navigation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Posts in <code>#is-this-known</code> Slack channel</li>
+<li>Posts in <code>#g_ux_paper_cuts</code> Slack channel</li>
+<li>Twitter / X </li>
+<li>Customer feedback</li>
+</ul>
+<p>You can find changes made by UX Paper Cuts by following along in the <a href="https://papercuts.gitlab.com/">GitLab UI Polish Gallery</a>, the internal Slack channel #ux_paper_cuts_mrs, or by searching the GitLab label <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/?sort=created_date&amp;state=opened&amp;label_name%5B%5D=UX%20Paper%20Cuts&amp;first_page_size=100">UX Paper Cuts</a>.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/foundations/ux-paper-cuts/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/foundations/ux-paper-cuts/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Design Management
+|
+GitLab
+</title>
+<meta content='Our goal at GitLab with Design Management is to treat Designers as first-class users within GitLab and support their workflows as good as any product can.' name=description />
+<meta content='Our goal at GitLab with Design Management is to treat Designers as first-class users within GitLab and support their workflows as good as any product can.' name='twitter:description'/>
+<meta content='Our goal at GitLab with Design Management is to treat Designers as first-class users within GitLab and support their workflows as good as any product can.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Design Management' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/plan/design_management/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/plan/design_management/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Design Management' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/plan/design_management/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Design Management
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/mushakov'>
+<img
+src='/images/team/melissaushakov.jpg'
+class=codeowner-avatar-img
+alt='Melissa Ushakov'
+title='Melissa Ushakov'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/amandarueda'>
+<img
+src='/images/team/arueda.jpeg'
+class=codeowner-avatar-img
+alt='Amanda Rueda'
+title='Amanda Rueda'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/plan/design_management/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/plan/">Product Stage Direction - Plan</a></li><li>Category Direction - Design Management</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#design-management" id=markdown-toc-design-management>Design Management</a></li>
+<li><a href="#introduction" id=markdown-toc-introduction>Introduction</a></li>
+<li><a href="#key-terminology-that-helps-us-segment-our-roadmap" id=markdown-toc-key-terminology-that-helps-us-segment-our-roadmap>Key terminology that helps us segment our roadmap</a> <ul>
+<li><a href="#proactive-vs-reactive-design-features" id=markdown-toc-proactive-vs-reactive-design-features>Proactive vs Reactive design features</a></li>
+<li><a href="#transient-vs-evergreen-design-features" id=markdown-toc-transient-vs-evergreen-design-features>Transient vs Evergreen design features</a></li>
+</ul>
+</li>
+<li><a href="#long-term-strategy" id=markdown-toc-long-term-strategy>Long Term Strategy</a> <ul>
+<li><a href="#typical-designer-workflow-across-tools" id=markdown-toc-typical-designer-workflow-across-tools>Typical designer workflow across tools</a></li>
+<li><a href="#gitlab-vision-for-a-new-designer-workflow" id=markdown-toc-gitlab-vision-for-a-new-designer-workflow>GitLab vision for a new designer workflow</a></li>
+</ul>
+</li>
+<li><a href="#target-audience-and-experience" id=markdown-toc-target-audience-and-experience>Target Audience and Experience</a></li>
+<li><a href="#whats-next--why" id=markdown-toc-whats-next--why>What's Next &amp; Why</a> <ul>
+<li><a href="#now" id=markdown-toc-now>Now</a></li>
+<li><a href="#next" id=markdown-toc-next>Next</a></li>
+<li><a href="#achieved-goal-1-moving-up-to-viable-maturity" id=markdown-toc-achieved-goal-1-moving-up-to-viable-maturity>[Achieved] Goal 1: Moving up to viable maturity</a></li>
+<li><a href="#achieved-goal-2-growth-and-performance-indicators" id=markdown-toc-achieved-goal-2-growth-and-performance-indicators>[Achieved] Goal 2: Growth and Performance Indicators</a></li>
+<li><a href="#goal-3-empower-more-personas" id=markdown-toc-goal-3-empower-more-personas>Goal 3: Empower more personas</a></li>
+<li><a href="#later" id=markdown-toc-later>Later</a></li>
+</ul>
+</li>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive Landscape</a></li>
+<li><a href="#market-research" id=markdown-toc-market-research>Market Research</a></li>
+<li><a href="#business-opportunity" id=markdown-toc-business-opportunity>Business Opportunity</a> <ul>
+<li><a href="#estimating-our-csm-for-design-management" id=markdown-toc-estimating-our-csm-for-design-management>Estimating our CSM for Design Management</a></li>
+<li><a href="#growth-of-other-tools" id=markdown-toc-growth-of-other-tools>Growth of other tools</a></li>
+</ul>
+</li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst Landscape</a></li>
+<li><a href="#top-customer-successsales-issues" id=markdown-toc-top-customer-successsales-issues>Top Customer Success/Sales issue(s)</a></li>
+<li><a href="#top-user-issues" id=markdown-toc-top-user-issues>Top user issue(s)</a></li>
+<li><a href="#top-dogfooding-issues" id=markdown-toc-top-dogfooding-issues>Top dogfooding issues</a></li>
+<li><a href="#top-vision-items" id=markdown-toc-top-vision-items>Top Vision Item(s)</a></li>
+</ul>
+<h2 id=design-management>Design Management</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/plan/">Plan</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">Viable</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2023-01-16</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id=introduction>Introduction</h2>
+
+<p><strong>Our goal with Design Management is to give product teams a first-class way to post, discuss and execute on their designs within GitLab. Right now, our feature is only on GitLab issues. We support integrations with major design tools and diagramming tools. Design management will consider the design life cycle from generating ideas, design reviews, design systems, and more.</strong></p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=Category%3ADesign%20Management">Issue List</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=Category%3ADesign%20Management">Epic List</a></li>
+<li><a href="/direction/plan/">Overall Vision</a></li>
+</ul>
+<h2 id=key-terminology-that-helps-us-segment-our-roadmap>Key terminology that helps us segment our roadmap</h2>
+<h3 id=proactive-vs-reactive-design-features>Proactive vs Reactive design features</h3>
+<p>One of the interesting concepts we brainstormed and learned from our analyst conversations was the difference between being proactive or reactive as a designer. Right now, our design management features focus mostly on <strong>reactive design</strong>.</p>
+<p><strong>Examples of Reactive design work:</strong></p>
+<ul>
+<li>Attaching designs to issues that were already defined by a PM</li>
+<li>Participating in a workflow or UX research</li>
+<li>Responding with a UI fix for a bug</li>
+</ul>
+<p><strong>Examples of Proactive design work:</strong></p>
+<ul>
+<li>Thinking ahead and sketching an idea you had in the shower</li>
+<li>Rough wireframes or flow diagrams of a new concept</li>
+<li>Iterating and posting, then evangelizing the change you came up with</li>
+<li>Showing designs to colleagues for feedback before an issue is created</li>
+</ul>
+<h3 id=transient-vs-evergreen-design-features>Transient vs Evergreen design features</h3>
+<p>Design Management at GitLab encompasses two broad areas of features:</p>
+<ul>
+<li>
+<p><strong>1) Transient "Communication-based" features</strong> which have a beginning and end similar to Issues.</p>
+<p>Examples of Transient "Communication-based" Design Management features:</p>
+<ul>
+<li>Attaching Designs to Issues</li>
+<li>Visual communication in comments on designs</li>
+<li>Approvals of Designs</li>
+<li>Links to prototypes in description of issue</li>
+<li>Developer handoff with specifications</li>
+<li>Production Design Inspect to compare the code to the design</li>
+<li>Issues are closed and Designs are "done"</li>
+</ul>
+</li>
+<li>
+<p><strong>2) Evergreen "Project-based" features</strong> which live as a project or asset on their own.</p>
+<p>Examples of Evergreen "Project-based" Design Management features</p>
+<ul>
+<li>Customized Design repositories for backing up native design files</li>
+<li>Customized Design repositories for connecting local design system files to their live frontend assets</li>
+<li>Deep linking of assets to original repo files</li>
+</ul>
+</li>
+</ul>
+<p>GitLab is in a unique position to offer both types of Design features because our platform supports issues (collaboration with engineering) and repositories (where the actual code lives).</p>
+<h2 id=long-term-strategy>Long Term Strategy</h2>
+<p>Long term, we'll need we need to adapt GitLab to incorporate the design persona as a first class user within the app. From our research, we understand that design workflows are often different from the typical DevOps flow. Many companies that employ "Design First" workflows are often working so far ahead of the DevOps process that we need to consider this as its own ecosystem and key in on. We recognize that this workflow can be quite iterative and often done and presented/approved well ahead of an issue ever being written.</p>
+<p>Ideally, GitLab will support the flexibility of any design workflow, while featuring a simplified way to share of Design work. It would allow for independent design deadlines or separate milestones from engineering, and empower the Designer to easily track/follow the issue through to production.</p>
+<h3 id=typical-designer-workflow-across-tools>Typical designer workflow across tools</h3>
+<p><img src="/direction/plan/design_management/images/Typical-designer-workflow.png" alt="Typical designer workflow across tools"/></p>
+<h3 id=gitlab-vision-for-a-new-designer-workflow>GitLab vision for a new designer workflow</h3>
+<p><img src="/direction/plan/design_management/images/GitLab-designer-workflow.png" alt="Typical designer workflow across tools"/></p>
+<h2 id=target-audience-and-experience>Target Audience and Experience</h2>
+
+<p>Design Management is targeted at <a href="/handbook/product/personas/#presley-product-designer">product designers</a> who collaborate with <a href="/handbook/product/personas/#parker-product-manager">product managers</a> and <a href="/handbook/product/personas/#sasha-software-developer">software developers</a>.</p>
+<p>The <strong>minimal</strong> user journey provides designers with the ability to upload mockups to an issue, and for point of interest discussions to happen on each image. Over time these mockups can be updated to resolve the discussions. As the mockups are changed, new versions will be created to facilitate iteration.</p>
+<p>We have achieved the core workflow for a design persona on a GitLab Issue and are considering how to build additional Design Management features targeted at <a href="/handbook/product/personas/#sasha-software-developer">software developers</a> and <a href="/handbook/product/personas/#parker-product-manager">product managers</a> to expand our growth.</p>
+<h2 id=whats-next--why>What's Next &amp; Why</h2>
+
+<h3 id=now>Now</h3>
+<p>Since Design Management has moved to the Product Planning group, we've paused on new development and are reevaluating direction.</p>
+<h3 id=next>Next</h3>
+<p>Once work on this category resumes, our focus will be on new expansion themes that will enable more users to use design management:</p>
+<ol>
+<li>Personas - Only 0.86% of all GitLab users identify as "Designer". We want to open the design view to more personas by enabling the design view on attachments, repo files, and diagram integrations.</li>
+<li>Expand to more stages - Designs on e.g. MRs (highest traffic), epics and the left sidebar.</li>
+<li>Integrations - Allowing more tools to push to designs (Figma, Draw.io, Sketch, Adobe XD).</li>
+</ol>
+<h3 id=achieved-goal-1-moving-up-to-viable-maturity>[Achieved] Goal 1: Moving up to viable maturity</h3>
+<p><strong>Dogfood Design Management and get out of Minimal</strong> - We're working on an <a href="https://gitlab.com/groups/gitlab-org/-/epics/2582">internal dogfooding epic</a> which contains the issues that will help us remove the major pain points that our internal GitLab team has surfaced. This will take us a long way towards viable as these are the biggest usability concerns.</p>
+<h3 id=achieved-goal-2-growth-and-performance-indicators>[Achieved] Goal 2: Growth and Performance Indicators</h3>
+<p>** <a href="https://gitlab.com/groups/gitlab-org/-/epics/3222">Enable our product analytics</a>**</p>
+<p>** <a href="https://gitlab.com/groups/gitlab-org/-/epics/2405">Integrate with major design tools to support current workflows and increase users</a>** - We started official <a href="https://gitlab.com/gitlab-org/gitlab-figma-plugin">Figma</a> and <a href="https://gitlab.com/gitlab-org/gitlab-sketch-plugin">Sketch</a> projects to work on our plugins.</p>
+<h3 id=goal-3-empower-more-personas>Goal 3: Empower more personas</h3>
+<p><strong>Next: <a href="https://gitlab.com/gitlab-org/gitlab/issues/199694">Adding drawing and diagram files to the Designs</a></strong> - Allow the creation of a diagram or drawing directly inside the browser via an integration. We'll investigate the right ways to "open up the drawing board" to anyone working on an issue.</p>
+<p><strong>Next: <a href="https://gitlab.com/gitlab-org/gitlab/issues/196240">Empower Product Designers and Leaders to easily stay on top of design progress at GitLab</a></strong> - Move "Designs" to its own space on the left side menu above Issues. Here we'll see all design updates in real time and map design images to issues in a more seamless and connected flow. Also to consider here would be to allow designs posted without an issue to encourage rapid feedback and turn around on ideas.</p>
+<h3 id=later>Later</h3>
+<p><strong>Later: <a href="https://gitlab.com/groups/gitlab-org/-/epics/2406">Developer Handoff in Review Apps</a></strong> - Upgrade the existing Visual Review feature to have original Epic or Issue Designs move forward in the GitLab workflow for visual inspection in the merge request. The Product Designer would be notified and invited to also inspect which would cut down on a lot of back and forth communication that currently happens offline. Empower the Engineer and the Product Designer to compare the original design with live app. Allow them to give visual feedback by attaching comments to dom elements or on an x,y access. For example: Move a transparent overlay of the original design around to check measurements and other visual aspects.</p>
+<p><strong>Later: <a href="https://gitlab.com/groups/gitlab-org/-/epics/990">Design reviews and approvals</a></strong> - Once we have more usage of our designs throughout the DevOps flow, add approvals or other checks and balances that may be needed to lock down a design. The first step is to understand how current review and approval processes work outside of GitLab and how we could adapt those to GitLab.</p>
+<p><strong>Later: <a href="https://gitlab.com/groups/gitlab-org/-/epics/1728">Design Management prototyping support</a></strong> - currently Design Management only supports static images which are a valuable part of the design process, but may not be able to fully communicate the user experience. Part of enabling communication around that process is to allowing users to create simple click-through prototypes for designs.</p>
+<p><strong>Later: <a href="https://gitlab.com/gitlab-org/gitlab/issues/200088">Git backup of design files</a></strong> - When teams share source files such as the Pajamas Sketch file there is a lot of overhead with checking that file in and out of a repo and having a design team share the file. We also would consider LFS (Large file system) and design agencies who may have huge repositories and would only be able to check out just a part of the entire repo for use.</p>
+<p><strong>Later: Live Sketching in Issues</strong> Allow users to draw freehand on a digital whiteboard and see the real time cursor and sketching of other users who are live with them. We think this will enable more "off-the-cuff" brainstorming and foster an in-person experience with colleagues, even if working remote.</p>
+<p><strong>Later: Deep linking of assets</strong> - Imagine seeing an image asset in your repo or within a wiki and being able to click a button to pull down its original artwork from Sketch/Photoshop or beyond. If we achieve git backup of design files, we should be able to create deep links to their source artboards.</p>
+<p><strong>Later: AI to compare Designs to Production</strong> With the emergence of AI technologies, eventually Design AI could be a part of the CI pipeline to scan for visual changes against the original design, report differences, and recommend changes.</p>
+<h2 id=competitive-landscape>Competitive Landscape</h2>
+
+<p>Within the Design Tools market, each product broadly solves one or more of these problems:</p>
+<ul>
+<li>Approvals and lock down of designs</li>
+<li>Generate developer specifications (Developer handoff)</li>
+<li>Version control</li>
+<li>Visual communication via comments</li>
+<li>UX Research and UI Testing</li>
+<li>Designing and prototyping</li>
+<li>Design System creation and management</li>
+</ul>
+<p>The most full featured Design Tools, that are attempting to solve all these problems are:</p>
+<ul>
+<li><a href="https://www.invisionapp.com/studio">Invision Studio</a></li>
+<li><a href="https://figma.com">Figma</a></li>
+<li><a href="https://www.uxpin.com/">UX Pin</a></li>
+</ul>
+<p>What is missed in the current market:</p>
+<ul>
+<li>"Production Design Inspect": Visual inspection of frontend code against the original designs on the issue or original prototype with a focus on the fidelity review of the code a developer actually implemented vs. the design they meant to implement</li>
+<li>Tracking and conversion of local design elements to their live Design System counterpart in the repo</li>
+</ul>
+<p>Given GitLab's unique strength as the single source of truth for planning and source code, we are well positioned to work with Product Design teams and encourage Product Designers to participate from design iteration through to production:</p>
+<ul>
+<li>Review and collaboration, bringing designers deeper into the tool that they already use to understand what needs to be designed and built, and integrating the design workflow into the planning and development workflow.</li>
+<li>Version control for source code is a core competency of GitLab, with great support for LFS and upcoming native support for large files in Git. Building on this to support versioning of designs and automation with CI is a natural fit.</li>
+</ul>
+<h2 id=market-research>Market Research</h2>
+
+<p>A <a href="https://docs.google.com/document/d/12o6h6Fm7bAjhW5AK1r-PNhvn0QrQwZncorYNia12e3Q/edit">competitive analysis</a> was also conducted to further understand existing players in the market.</p>
+<h2 id=business-opportunity>Business Opportunity</h2>
+
+<h3 id=estimating-our-csm-for-design-management>Estimating our CSM for Design Management</h3>
+<p>We've learned that a typical designer:developer ratio is <a href="https://techcrunch.com/2017/05/31/here-are-some-reasons-behind-techs-design-shortage/">1:8</a> (at GitLab, our ratio is 1:7).</p>
+<p>Also, we know there are <a href="https://www.statista.com/statistics/627312/worldwide-developer-population/">24M developers worldwide</a>.</p>
+<p>24M / 8 = 3M designers worldwide</p>
+<p>If we achieved signing up all of these designers for GitLab, our CSM would be $684M on Premium and $3.6B on Ultimate.</p>
+<h3 id=growth-of-other-tools>Growth of other tools</h3>
+<p>There is a significant opportunity for an application that can successfully engage developers and design teams before and during the DevOps lifecycle. If GitLab integrates with the major design tools such as InVision (5,000,000 users), Sketch (1,000,000 users,) and Figma (1,000,000 users) and adds value in the form of visual developer handoffs, we believe product quality will increase.</p>
+<h2 id=analyst-landscape>Analyst Landscape</h2>
+
+<p>We've had briefings with Redmonk, Forrester and Gartner. We've validated that we are solving a big problem with our proposal to bring Designers into Devops. We learned that a new potential term for this type of software is: "Digital product design platforms" and we are also considering the term "DesignOps" which might play well with DevOps at GitLab.</p>
+<h2 id=top-customer-successsales-issues>Top Customer Success/Sales issue(s)</h2>
+
+<p>No customer issues yet, because the feature is so new</p>
+<h2 id=top-user-issues>Top user issue(s)</h2>
+
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/15932">Visual UML Editor</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/230286">Disable Design Management</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/230286">Enable uploading of PDFs for Design Management</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/10419">User Journey Mapping</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/231240">Make the design management LFS placeholder dismissable</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/204743">Rethinking information architecture of Design Management</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/204743">Show designs on epics</a></li>
+</ul>
+<h2 id=top-dogfooding-issues>Top dogfooding issues</h2>
+
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2582">Internal dogfooding epic</a> - this gets us through the major pain points that our internal GitLab team has surfaced</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/660">Versioned designs and point of interest discussions</a> - the MVC addresses the most frequent frustrations with the current workflow which involves uploading images in a markdown table.</li>
+</ul>
+<h2 id=top-vision-items>Top Vision Item(s)</h2>
+
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/991">Design process automation</a> - version control the source files in a git repo, and push to update the designs attached to issues.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/1728">Design Management prototyping support</a> - static designs don't fully communicate the user experience; adding support for prototypes can further expand collaboration</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/990">Design reviews and approvals</a> - like merge requests, designs need reviews and approvals before being approved to proceed.</li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/plan/design_management/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/plan/design_management/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+about.gitlab.com Markdown Guide
+|
+GitLab
+</title>
+<meta content='Read through our Markdown kramdown Style Guide for about.gitlab.com!' name=description />
+<meta content='Read through our Markdown kramdown Style Guide for about.gitlab.com!' name='twitter:description'/>
+<meta content='Read through our Markdown kramdown Style Guide for about.gitlab.com!' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='about.gitlab.com Markdown Guide' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='community/markdown-guide-middleman/index.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/community/markdown-guide-middleman/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='about.gitlab.com Markdown Guide' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/handbook/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/handbook/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/handbook/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/handbook/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/handbook/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/handbook/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/community/markdown-guide-middleman/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/highlight-tooltip.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+about.gitlab.com Markdown Guide
+</h1>
+</div>
+</div>
+<div id=highlight-tooltip role=tooltip>
+<a class="highlight-tooltip-link highlight-tooltip-link-tweet" href="#" target=_blank>
+<i class="fab fa-twitter"></i>
+<span class=sr-only>Share on Twitter</span>
+</a>
+<a class="highlight-tooltip-link highlight-tooltip-link-edit" href="#" target=_blank>
+<i class="fab fa-gitlab"></i>
+<span class=sr-only>Edit this page</span>
+</a>
+<a class="highlight-tooltip-link highlight-tooltip-link-web-ide" href="#" target=_blank>
+<i class="fas fa-pen"></i>
+<span class=sr-only>Open Web IDE</span>
+</a>
+<div id=highlight-tooltip-arrow data-popper-arrow></div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/esalvadorp'>
+<img
+src='/images/team/esalvador.png'
+class=codeowner-avatar-img
+alt='Emilio Salvador'
+title='Emilio Salvador'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/akramer'>
+<img
+src='/images/team/ashleykramer.jpeg'
+class=codeowner-avatar-img
+alt='Ashley Kramer'
+title='Ashley Kramer'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/nick_vh'>
+<img
+src='/images/team/nickveenhof.jpg'
+class=codeowner-avatar-img
+alt='Nick Veenhof'
+title='Nick Veenhof'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/community/markdown-guide-middleman/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li class=meta-signage-header>You are here:</li>
+<li>about.gitlab.com Markdown Guide</li>
+</ol>
+<input class=st-handbook id=search-handbook placeholder='Search through the handbook...'/>
+<div class='hidden-md hidden-lg'>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/esalvadorp'>
+<img
+src='/images/team/esalvador.png'
+class=codeowner-avatar-img
+alt='Emilio Salvador'
+title='Emilio Salvador'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/akramer'>
+<img
+src='/images/team/ashleykramer.jpeg'
+class=codeowner-avatar-img
+alt='Ashley Kramer'
+title='Ashley Kramer'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/nick_vh'>
+<img
+src='/images/team/nickveenhof.jpg'
+class=codeowner-avatar-img
+alt='Nick Veenhof'
+title='Nick Veenhof'
+>
+</a>
+</div>
+</div>
+</div>
+<h2 class="no_toc hidden-md hidden-lg" id=on-this-page>On this page</h2>
+<ul class="hidden-md hidden-lg" id=markdown-toc>
+<li><a href="#markdown-style-guide-for-aboutgitlabcom" id=markdown-toc-markdown-style-guide-for-aboutgitlabcom>Markdown Style Guide for about.GitLab.com</a> <ul>
+<li><a href="#blog" id=markdown-toc-blog>Blog</a></li>
+</ul>
+</li>
+<li><a href="#headings" id=markdown-toc-headings>Headings</a></li>
+<li><a href="#paragraphs-breaks-and-horizontal-lines" id=markdown-toc-paragraphs-breaks-and-horizontal-lines>Paragraphs, breaks, and horizontal lines</a> <ul>
+<li><a href="#wrapping-text" id=markdown-toc-wrapping-text>Wrapping Text</a> <ul>
+<li><a href="#regular-paragraphs-and-automatic-join" id=markdown-toc-regular-paragraphs-and-automatic-join>Regular paragraphs and automatic join</a></li>
+</ul>
+</li>
+<li><a href="#additional-breaks" id=markdown-toc-additional-breaks>Additional breaks</a></li>
+<li><a href="#horizontal-lines" id=markdown-toc-horizontal-lines>Horizontal lines</a></li>
+</ul>
+</li>
+<li><a href="#emphasis-bold-and-italic" id=markdown-toc-emphasis-bold-and-italic>Emphasis: bold and italic</a></li>
+<li><a href="#links" id=markdown-toc-links>Links</a> <ul>
+<li><a href="#inline-links" id=markdown-toc-inline-links>Inline Links</a></li>
+<li><a href="#relative-links" id=markdown-toc-relative-links>Relative links</a></li>
+<li><a href="#mailto-links" id=markdown-toc-mailto-links>Mailto links</a></li>
+</ul>
+</li>
+<li><a href="#lists" id=markdown-toc-lists>Lists</a> <ul>
+<li><a href="#ordered-lists" id=markdown-toc-ordered-lists>Ordered lists</a></li>
+<li><a href="#unordered-lists" id=markdown-toc-unordered-lists>Unordered lists</a></li>
+<li><a href="#split-lists" id=markdown-toc-split-lists>Split lists</a></li>
+</ul>
+</li>
+<li><a href="#images" id=markdown-toc-images>Images</a></li>
+<li><a href="#diagrams" id=markdown-toc-diagrams>Diagrams</a> <ul>
+<li><a href="#mermaid" id=markdown-toc-mermaid>Mermaid</a></li>
+<li><a href="#plantuml" id=markdown-toc-plantuml>PlantUML</a></li>
+</ul>
+</li>
+<li><a href="#videos" id=markdown-toc-videos>Videos</a> <ul>
+<li><a href="#display-videos-from-youtube" id=markdown-toc-display-videos-from-youtube>Display videos from YouTube</a></li>
+<li><a href="#display-local-videos-html5" id=markdown-toc-display-local-videos-html5>Display local videos (HTML5)</a></li>
+<li><a href="#display-other-videos" id=markdown-toc-display-other-videos>Display other videos</a></li>
+<li><a href="#display-multiple-videos" id=markdown-toc-display-multiple-videos>Display multiple videos</a></li>
+</ul>
+</li>
+<li><a href="#table-of-contents-toc" id=markdown-toc-table-of-contents-toc>Table of Contents (ToC)</a></li>
+<li><a href="#tables" id=markdown-toc-tables>Tables</a></li>
+<li><a href="#collapse" id=markdown-toc-collapse>Collapse</a></li>
+<li><a href="#code-blocks" id=markdown-toc-code-blocks>Code blocks</a> <ul>
+<li><a href="#in-line" id=markdown-toc-in-line>In-line</a></li>
+<li><a href="#fenced" id=markdown-toc-fenced>Fenced</a></li>
+<li><a href="#indented" id=markdown-toc-indented>Indented</a></li>
+<li><a href="#nested" id=markdown-toc-nested>Nested</a></li>
+<li><a href="#in-lists" id=markdown-toc-in-lists>In lists</a></li>
+</ul>
+</li>
+<li><a href="#blockquotes" id=markdown-toc-blockquotes>Blockquotes</a></li>
+<li><a href="#notes" id=markdown-toc-notes>Notes</a></li>
+<li><a href="#comments" id=markdown-toc-comments>Comments</a></li>
+<li><a href="#anchors" id=markdown-toc-anchors>Anchors</a></li>
+<li><a href="#font-awesome" id=markdown-toc-font-awesome>Font Awesome</a> <ul>
+<li><a href="#puzzle" id=markdown-toc-puzzle><i class="fas fa-puzzle-piece" aria-hidden=true></i> Puzzle Icon</a></li>
+<li><a href="#tanuki-purple" id=markdown-toc-tanuki-purple><i class="fab fa-gitlab fa-fw" style="color:rgb(107,79,187); font-size:.85em" aria-hidden=true></i> Purple GitLab Tanuki</a></li>
+<li><a href="#tanuki-orange" id=markdown-toc-tanuki-orange><i class="fab fa-gitlab fa-fw" style="color:rgb(252,109,38); font-size:.85em" aria-hidden=true></i> Orange GitLab Tanuki</a></li>
+</ul>
+</li>
+<li><a href="#classes-ids-and-attributes" id=markdown-toc-classes-ids-and-attributes>Classes, IDs, and attributes</a> <ul>
+<li><a href="#special-classes" id=markdown-toc-special-classes>Special classes</a> <ul>
+<li><a href="#shadow" id=markdown-toc-shadow>Shadow</a></li>
+<li><a href="#note" id=markdown-toc-note>Note</a></li>
+<li><a href="#colors" id=markdown-toc-colors>Colors</a></li>
+<li><a href="#text-align" id=markdown-toc-text-align>Text Align</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#mix-html--markdown-markup" id=markdown-toc-mix-html--markdown-markup>Mix HTML + Markdown Markup</a></li>
+<li><a href="#mix-erb--markdown" id=markdown-toc-mix-erb--markdown>Mix ERB + Markdown</a></li>
+<li><a href="#colorful-sections" id=markdown-toc-colorful-sections>Colorful sections</a> <ul>
+<li><a href="#additional-information" id=markdown-toc-additional-information>Additional Information</a></li>
+<li><a href="#warnings" id=markdown-toc-warnings>Warnings</a></li>
+<li><a href="#danger" id=markdown-toc-danger>Danger</a></li>
+<li><a href="#dos-and-donts" id=markdown-toc-dos-and-donts>Do's and Don'ts</a></li>
+<li><a href="#custom-alert-panels-and-alert-boxes" id=markdown-toc-custom-alert-panels-and-alert-boxes>Custom alert panels and alert boxes</a> <ul>
+<li><a href="#gitlab-orange-alert-panel" id=markdown-toc-gitlab-orange-alert-panel>GitLab Orange Alert Panel</a></li>
+<li><a href="#gitlab-orange-alert-box" id=markdown-toc-gitlab-orange-alert-box>GitLab Orange Alert Box</a></li>
+<li><a href="#gitlab-purple-alert-panel" id=markdown-toc-gitlab-purple-alert-panel>GitLab Purple Alert Panel</a></li>
+<li><a href="#gitlab-purple-alert-box" id=markdown-toc-gitlab-purple-alert-box>GitLab Purple Alert Box</a></li>
+</ul>
+</li>
+<li><a href="#gitlab-webcast-alert-box" id=markdown-toc-gitlab-webcast-alert-box>GitLab Webcast Alert Box</a></li>
+</ul>
+</li>
+<li><a href="#styles" id=markdown-toc-styles>Styles</a></li>
+<li><a href="#embed-documents" id=markdown-toc-embed-documents>Embed documents</a> <ul>
+<li><a href="#google-products" id=markdown-toc-google-products>Google products</a> <ul>
+<li><a href="#google-sheets" id=markdown-toc-google-sheets>Google Sheets</a></li>
+<li><a href="#google-slides" id=markdown-toc-google-slides>Google Slides</a></li>
+<li><a href="#google-docs" id=markdown-toc-google-docs>Google Docs</a></li>
+</ul>
+</li>
+<li><a href="#slideshare" id=markdown-toc-slideshare>SlideShare</a></li>
+</ul>
+</li>
+<li><a href="#embed-tweets" id=markdown-toc-embed-tweets>Embed Tweets</a></li>
+<li><a href="#embed-instagram-posts" id=markdown-toc-embed-instagram-posts>Embed Instagram posts</a></li>
+<li><a href="#embed-gitlab-snippets" id=markdown-toc-embed-gitlab-snippets>Embed GitLab Snippets</a></li>
+<li><a href="#markdown-editors" id=markdown-toc-markdown-editors>Markdown Editors</a></li>
+<li><a href="#tips--tricks" id=markdown-toc-tips--tricks>Complementary Notes</a></li>
+</ul>
+<h2 id=markdown-style-guide-for-aboutgitlabcom>Markdown Style Guide for about.GitLab.com</h2>
+<p class="alert alert-info">This style guide is for <code>about.gitlab.com</code> (files in the <code>www-gitlab-com</code> repository). For styles in the <a href="https://handbook.gitlab.com/handbook/">GitLab Handbook</a> see the <a href="https://handbook.gitlab.com/docs/markdown-guide/">Handbook Markdown Guide</a>. For styles in the GitLab UI, see the <a href="https://docs.gitlab.com/ee/user/markdown.html">GitLab Flavored Markdown documentation</a>.</p>
+<p>The <code>about.gitlab.com</code> website was generated by <a href="https://middlemanapp.com/">Middleman</a>, a blog-aware Static Site Generator (<a href="https://www.staticgen.com/">SSG</a>) widely used by web developers.
+<a href="https://en.wikipedia.org/wiki/Markup_language">Markup language</a> is part of the structure of any SSG. It is a system to write documents making them somehow
+syntactically distinguishable from text. <a href="https://en.wikipedia.org/wiki/Lightweight_markup_language">Lightweight markup languages</a> have a simplified and unobtrusive syntax,
+designed to be easily written within any text editor. That's what we use to write our content. The majority of
+SSGs use markdown engines for this purpose. Read through our blog post on <a href="/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/">Modern Static Site Generators</a>
+to understand how they work.</p>
+<p>For <code>about.gitlab.com</code> we use <a href="http://kramdown.gettalong.org/">kramdown</a>, which is an advanced Markdown engine with a lot of interesting features that most of the other engines don't have, such as <a href="https://kramdown.gettalong.org/syntax.html#inline-attribute-lists">inline attribute lists</a> (IALs), which enable easy styling beyond the standard Markdown options. <a href="http://kramdown.gettalong.org/">kramdown</a> has <a href="https://kramdown.gettalong.org/quickref.html">documentation</a> on how their markdown parser works, as well as <a href="https://kramdown.gettalong.org/syntax.html">documentation</a> for their full syntax.</p>
+<p>If you never have written a single line in markdown markup, don't worry, it's easy to learn and even easier to use. You'll
+probably be surprised how handy it is once you get used to it. And you'll miss it whenever the tech you're using doesn't support
+markdown.</p>
+<p>In most of GitLab text areas you'll find markdown support. Not all of them run with kramdown, so the markup will not
+behave equally "GitLabwide". For <strong>GitLab.com</strong>, <strong>GitLab CE</strong> and <strong>GitLab EE</strong> text areas, the markdown engine is currently
+<a href="https://github.com/gjtorikian/commonmarker">CommonMarker</a>. Here you can find the <a href="https://docs.gitlab.com/ee/user/markdown.html">markdown style guide</a> for them.</p>
+<p>This guide has been made to make it easier for everyone to use kramdown features and save a lot of time writing content for
+<code>about.gitlab.com</code>, including handbook pages, website pages, blog posts and everything else within the project <a href="https://gitlab.com/gitlab-com/www-gitlab-com">www-gitlab-com</a>.</p>
+<p>There are different possible syntaxes for most of the markups described below, but this guide is to be considered the
+standard for <code>about.gitlab.com</code>.</p>
+<p class=note><strong>Note:</strong> This document is maintained by the <a href="https://handbook.gitlab.com/handbook/product/ux/technical-writing/">Technical Writing</a> Team.</p>
+<h3 id=blog>Blog</h3>
+<p>For our <a href="/blog/">Blog</a>, everything in this guide can be applied. Read through the <a href="https://handbook.gitlab.com/handbook/marketing/blog/#formatting-guidelines">Blog Formatting Guidelines</a> for further information.</p>
+<h2 id=headings>Headings</h2>
+<div class=highlight><pre class="highlight markdown"><code><span class="gu">## Heading h2</span>
+
+<span class="gu">### Heading h3</span>
+
+<span class="gu">#### Heading h4</span>
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<h2 class=no_toc style="margin-top:0" id=heading-h2>Heading h2</h2>
+<h3 class=no_toc id=heading-h3>Heading h3</h3>
+<h4 class=no_toc id=heading-h4>Heading h4</h4>
+</div>
+</div>
+<p>Notes:</p>
+<ul>
+<li>We don't use <code>h1</code> headings, as they already are displayed on every page as its title, and we should not apply more than one <code>h1</code> per page.
+<blockquote>
+<p><em>When you use a top level heading, or an <code>&lt;h1&gt;</code>, you're setting up a semantic relationship between that heading and the remainder of the content on a page, describing what it is about. If you then use a second <code>&lt;h1&gt;</code> on the same page, you're creating some potential confusion, because someone, or a search engine might see that as the ending of the semantic relationship between the content after the first <code>&lt;h1&gt;</code> and the start of this new <code>&lt;h1&gt;</code>.</em> <a href="http://www.seobythesea.com/2012/01/heading-elements-and-the-folly-of-seo-expert-ranking-lists/">SEO Guide</a></p>
+</blockquote>
+</li>
+<li>Always start with <code>h2</code> (<code>##</code>), and respect the order <code>h2</code> → <code>h3</code> → <code>h4</code>. Never skip the hierarchy level, such as <code>h2</code> → <code>h4</code>.
+<blockquote>
+<p><em>The six heading elements, H1 through H6, denote section headings. Although the order and occurrence of headings is not constrained by the HTML DTD, documents <strong>should not skip levels</strong> (for example, from H1 to H3), as converting such documents to other representations is often problematic.</em> <a href="https://www.w3.org/MarkUp/html-spec/html-spec_5.html#SEC5.4">W3C</a></p>
+</blockquote>
+</li>
+<li>Always leave a blank space between the hash <code>#</code> and the text next to it, otherwise it won't render properly.</li>
+<li>For keeping the text clear and the markdown consistent, <a href="#jump-a-line">jump a line</a> between any heading and its subsequent paragraph.</li>
+</ul>
+<h2 id=paragraphs-breaks-and-horizontal-lines>Paragraphs, breaks, and horizontal lines</h2>
+<p>Regular paragraphs are obtained by just writing text lines:</p>
+<ul>
+<li>If you hit <strong>enter</strong> between two lines, both lines will be joined into a single paragraph, which is called <a href="/blog/2016/10/11/wrapping-text/#do-wrap-it.">wrapping text</a>.</li>
+<li>If you leave a blank line between them, they will split into two paragraphs.</li>
+<li>If you end a line with a backslash (<code>\</code>) or two spaces, the next line appears on a new line in the same paragraph (a line break).</li>
+</ul>
+<p>In some Git tools, <code>diffs</code> in future MRs may be easier to understand with additional line breaks, however GitLab's web interface as well as many desktop Git tools feature substring change highlighting within lines and side-by-side or similar version comparison so there is no need for artificial line breaks.</p>
+<h3 id=wrapping-text>Wrapping Text</h3>
+<p>Splitting long lines (preferably up to 100 characters) can make it easier to provide feedback on small chunks of text.</p>
+<h4 id=regular-paragraphs-and-automatic-join>Regular paragraphs and automatic join</h4>
+<div class=highlight><pre class="highlight markdown"><code>This text is a paragraph.
+This won't be another paragraph, it will join the line above it.
+
+This will be another paragraph, as it has a blank line above it.
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p>This text is a paragraph.
+This won't be another paragraph, it will join the line above it.</p>
+<p>This will be another paragraph, as it has a blank line above it.</p>
+</div>
+</div>
+<h3 id=additional-breaks>Additional breaks</h3>
+<p>In case you need an additional break (or some extra space between lines), you can simply use the HTML break tag <code>&lt;br&gt;</code>,
+leaving blank lines above and below it:</p>
+<div class=highlight><pre class="highlight html"><code>Text A
+<span class="c">&lt;!-- blank line --&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="c">&lt;!-- blank line --&gt;</span>
+Text B
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p>Text A</p>
+<p><br/></p>
+<p>Text B</p>
+</div>
+</div>
+<h3 id=horizontal-lines>Horizontal lines</h3>
+<p>A sequence of three or more dashes will produce a horizontal line, but let's use always <strong>4</strong> as standard. Leave blank
+lines after and before it:</p>
+<div class=highlight><pre class="highlight html"><code>Text
+<span class="c">&lt;!-- blank line --&gt;</span>
+----
+<span class="c">&lt;!-- blank line --&gt;</span>
+Text
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p>Text</p>
+<hr/>
+<p>Text</p>
+</div>
+</div>
+<h2 id=emphasis-bold-and-italic>Emphasis: bold and italic</h2>
+<p>To display bold or italic text, wrap it in 2 stars (for bold) or underscores (for italic).
+For both italic and bold, wrap it in 3 stars:</p>
+<div class=highlight><pre class="highlight markdown"><code>This is <span class="gs">**bold**</span> and this is <span class="ge">*italic*</span>.
+
+This is <span class="gs">***bold and italic**</span><span class="err">*</span>.
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p>This is <strong>bold</strong> and this is <em>italic</em>.</p>
+<p>This is <strong><em>bold and italic</em></strong>.</p>
+</div>
+</div>
+<p>Markdown doesn't natively support underlined text. If necessary you can hardcode it with the
+HTML tag <code>ins</code> (<code>&lt;ins&gt;underlined text&lt;/ins&gt;</code>), however, it is inadvisable to do so.</p>
+<h2 id=links>Links</h2>
+<p>There are a few different ways to display links with markdown markup, but
+to keep some standards, let's try to use the following options only.</p>
+<p id=links-important-notes>Important notes:</p>
+<ul>
+<li id=note-meaningful-links>Don't take it as a restrictive rule, but <a href="https://handbook.gitlab.com/handbook/communication/#writing-style-guidelines">avoid using meaningless text for links</a> as "this article" or "read here." The link text should be meaningful even if taken out of context; this makes the links more useful and accessible for people using screen readers.</li>
+<li id=note-deadlinks-checker>Check for broken links: <a href="http://www.deadlinkchecker.com/">http://www.deadlinkchecker.com/</a></li>
+</ul>
+<h3 id=inline-links>Inline Links</h3>
+<p>We'd rather use inline links, such as <code>[Text to display](link)</code>, as they are easier to maintain. To make an inline link open in a new tab, you can add {:target="_blank"} to the end. Ex: <code>[Text to display](link){:target="_blank"}</code></p>
+<h3 id=relative-links>Relative links</h3>
+<p>Use relative links when referring to links found on <code>about.gitlab.com</code>. For example, a link to our blog handbook should look like this <code>/blog/</code> and <strong>not</strong> this <code>https://about.gitlab.com/blog/</code>. Remove everything from the <code>https</code> through <code>about.gitlab.com</code>, but retain the forward slash after <code>.com</code>.</p>
+<p>Learn more in the <a href="#links">Markdown Guide</a>.</p>
+<p>For links to GitLab.com or anywhere else you must use the entire link, including the <code>http:</code>.</p>
+<h3 id=mailto-links>Mailto links</h3>
+<p>If you're adding an email address to a page be sure to format your link with <code>mailto</code> to avoid creating broken links. For example, <code>[example@gitlab.com](mailto:example@gitlab.com)</code></p>
+<h2 id=lists>Lists</h2>
+<p>Both ordered and unordered lists are very straightforward to produce. There are a few ways to produce the same results, but let's stick with the following, again, to maintain some standards.</p>
+<ol>
+<li>Always start list items with a capital letter.</li>
+<li>Always leave a blank line before and after a list.</li>
+<li>Begin a line with spaces (not tabs) to denote a nested sub-item. Items nested in lists should always align with the first character of the list item.
+<ol>
+<li>For <a href="#unordered-lists">Unordered lists</a>, use two spaces for each level of indentation.</li>
+<li>For <a href="#ordered-lists">Ordered lists</a>, use three spaces for each level of indentation.</li>
+</ol>
+</li>
+</ol>
+<p>Tip: don't leave blank lines <strong>between the items</strong>, unless you have a reason to do so.</p>
+<p class="alert alert-info"><strong>Important:</strong> Always leave a blank line between <a href="#headings">Headings</a> and the subsequent list! If you don't, the list will not render.</p>
+<p>The <a href="https://handbook.gitlab.com/handbook/communication/#writing-style-guidelines">Writing Style Guide</a> recommends using <a href="#ordered-lists">ordered lists</a> when you have multiple items, because <code>Numbered lists are easier to reference during a discussion over bulleted lists</code>.</p>
+<p class=note><strong>Note:</strong> This guidance does not apply to product documentation.</p>
+<p>See the <a href="https://docs.gitlab.com/ee/development/documentation/styleguide/#lists">Documentation Style Guide</a> for other helpful tips.</p>
+<h3 id=ordered-lists>Ordered lists</h3>
+<p>Ordered lists are pretty easy to create. Couldn't be more intuitive:</p>
+<div class=highlight><pre class="highlight markdown"><code>Paragraph:
+<span class="p">
+1.</span> Item one
+<span class="p">   1.</span> Sub item one
+<span class="p">   2.</span> Sub item two
+<span class="p">   3.</span> Sub item three
+<span class="p">2.</span> Item two
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p>Paragraph:</p>
+<ol>
+<li>Item one
+<ol>
+<li>Sub item one</li>
+<li>Sub item two</li>
+<li>Sub item three</li>
+</ol>
+</li>
+<li>Item two</li>
+</ol>
+</div>
+</div>
+<p>To be practical and avoid errors on the numbers, use "1" for all the items. The markdown engine will output them
+in the correct order.</p>
+<div class=highlight><pre class="highlight markdown"><code>Paragraph:
+<span class="p">
+1.</span> Item one
+<span class="p">   1.</span> Sub item one
+<span class="p">   1.</span> Sub item two
+<span class="p">1.</span> Item two
+<span class="p">1.</span> Item three
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p>Paragraph:</p>
+<ol>
+<li>Item one
+<ol>
+<li>Sub item one</li>
+<li>Sub item two</li>
+</ol>
+</li>
+<li>Item two</li>
+<li>Item three</li>
+</ol>
+</div>
+</div>
+<h3 id=unordered-lists>Unordered lists</h3>
+<p>Unordered lists are very easy to create too:</p>
+<div class=highlight><pre class="highlight markdown"><code>Paragraph:
+<span class="p">
+-</span> Item 1
+<span class="p">-</span> Item 2
+<span class="p">-</span> Item 3
+<span class="p">  -</span> Sub item 1
+<span class="p">  -</span> Sub item 2
+<span class="p">-</span> Item 4
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p>Paragraph:</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3
+<ul>
+<li>Sub item 1</li>
+<li>Sub item 2</li>
+</ul>
+</li>
+<li>Item 4</li>
+</ul>
+</div>
+</div>
+<h3 id=split-lists>Split lists</h3>
+<p>Let's say, for some reason, you want to split a list in different parts. To do that, use the
+markup <code>^</code> to indicate the end of a list and the beginning of the next:</p>
+<div class=highlight><pre class="highlight markdown"><code><span class="p">-</span> list one - item 1
+<span class="p">-</span> list one - item 2
+<span class="p">  -</span> sub item 1
+<span class="p">  -</span> sub item 2
+<span class="p">-</span> list one - item 3
+^
+<span class="p">-</span> list two - item A
+<span class="p">-</span> list two - item B
+^
+<span class="p">-</span> list three - item <span class="ge">*i*</span>
+<span class="p">-</span> list three - item <span class="ge">*ii*</span>
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<ul>
+<li>list one - item 1</li>
+<li>list one - item 2
+<ul>
+<li>sub item 1</li>
+<li>sub item 2</li>
+</ul>
+</li>
+<li>list one - item 3</li>
+</ul>
+<ul>
+<li>list two - item A</li>
+<li>list two - item B</li>
+</ul>
+<ul>
+<li>list three - item <em>i</em></li>
+<li>list three - item <em>ii</em></li>
+</ul>
+</div>
+</div>
+<h2 id=images>Images</h2>
+<p>To insert images to your markdown file, use the markup <code>![ALT](/path/image.ext)</code>. The path can either
+be relative to the website, or a full URL for an external image. The supported formats are
+<code>.png</code>, <code>.jpg</code>, <code>.gif</code>. You might be able to use some <code>.svg</code> files too, depending on its structure.</p>
+<div class=highlight><pre class="highlight markdown"><code><span class="p">![</span><span class="nv">Semantic description of image</span><span class="p">](</span><span class="sx">/images/path/to/folder/image.png</span> <span class="nn">"Image Title"</span><span class="p">)</span>
+</code></pre></div>
+<p>You can also use an identifier, as we do for <a href="#links">links</a>:</p>
+<div class=highlight><pre class="highlight markdown"><code><span class="p">![</span><span class="nv">Semantic description of image</span><span class="p">][</span><span class="ss">identifier</span><span class="p">]</span>
+</code></pre></div>
+<p>If you want to add a caption to your image, it's easily achieved with:</p>
+<div class=highlight><pre class="highlight markdown"><code><span class="p">![</span><span class="nv">Semantic description of image</span><span class="p">](</span><span class="sx">/images/path/to/folder/image.png</span><span class="p">)</span><span class="ge">*My caption*</span>
+</code></pre></div>
+<p>For clickable images, simply wrap the image markup into a <a href="#links">link markup</a>:</p>
+<div class=highlight><pre class="highlight markdown"><code><span class="p">[</span><span class="nv">![Semantic description of image</span><span class="p">](</span><span class="sx">/images/path/to/folder/image.png</span> <span class="nn">"Hello World"</span><span class="p">)</span><span class="ge">*My caption*</span>]<span class="p">[</span><span class="nv">/</span><span class="p">]</span>
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p>[<img src="/images/about-gitlab-com.png" alt="Semantic description of image" title="Hello World"/><em>My caption</em>][/]</p>
+</div>
+</div>
+<p id=images-important-notes><strong>Important notes:</strong></p>
+<ul>
+<li id=image-shadow>Apply <a href="#shadow">shadow</a> to your images!</li>
+<li id=image-requirements>All images must be placed <a href="https://gitlab.com/gitlab-com/www-gitlab-com/tree/master/source/images">under <code>/source/images/</code></a>, in an appropriate directory. Only screenshots and public domain images are permitted.</li>
+<li id=image-alt-text>The text inside the square brackets is an image attribute called <code>ALT</code>, which stands for <em>alternative text</em>.
+<a href="https://webaim.org/techniques/alttext/">Including descriptive alt text</a> helps maintain accessibility for every visitor and should always be included with an image. When you add alt text be sure to describe the content and function of an image. In addition to the accessibility benefits, <code>ALT</code> is useful for SEO, and it is displayed when, for some reason, that image is not loaded by the browser.</li>
+<li id=image-filename>For the same reasons, the image must contain a name related to it. Example: instead of <code>image-01.jpg</code>,
+name it <code>black-dog.jpg</code>, if it's a photo of a black dog.</li>
+<li id=image-title>It's also recommendable adding an image title, as the "Hello World" exemplified above.</li>
+</ul>
+<h2 id=diagrams>Diagrams</h2>
+<p>There are two ways to insert diagrams via Markdown:</p>
+<ol>
+<li>Mermaid</li>
+<li>PlantUML</li>
+</ol>
+<h3 id=mermaid>Mermaid</h3>
+<p>See the <a href="https://docs.gitlab.com/ee/user/markdown.html#mermaid">examples in the GitLab docs</a>
+on how to use Mermaid. We have a number of Handbook-specific example in the <a href="https://handbook.gitlab.com/handbook/tools-and-tips/#using-mermaid">Tools and Tips Section</a>.</p>
+<h3 id=plantuml>PlantUML</h3>
+<p>You can use <a href="http://plantuml.com/">PlantUML</a> in Markdown blocks. For
+example:</p>
+<div class=highlight><pre class="highlight plaintext"><code>```plantuml
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.1.0
+skinparam defaultTextAlignment center
+!include ICONURL/common.puml
+!include ICONURL/font-awesome-5/gitlab.puml
+!include ICONURL/font-awesome-5/java.puml
+!include ICONURL/font-awesome-5/rocket.puml
+!include ICONURL/font-awesome/newspaper_o.puml
+FA_NEWSPAPER_O(news,good news!,node) #White {
+FA5_GITLAB(gitlab,GitLab.com,node) #White
+FA5_JAVA(java,PlantUML,node) #White
+FA5_ROCKET(rocket,Integrated,node) #White
+}
+gitlab ..&gt; java
+java ..&gt; rocket
+```
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<div class=imageblock><div class=content><img class=plantuml src="https://plantuml.gitlab-static.net/png/U9oDa4zhma0GnU_v52kzf93izWzUUYYaOiKsLR5QZs5DnhWrsLrs9ree_UvE31J4YvTXbldjl7clLy16QM3ZmNIodATiYsZzan1E7dYfSDki6mykDnf18yzDBR2nid2FmbPIOrDNiQ9fl24YzjOf12_s3_oUtmL-fxILJjQCH6HJuG9-CAbKgMjQnd8gu8AUqddL5Fyd21AfZUQMTbyEJpho0DxK4FS5dLZ9zNNijzpBwqXdyXtW5QpGSF1MMd2PwV3N99iCLv-pP3QSPzEmdKUbCGLhkrwaJG6tx6QrfPpOBz7zR3HUfCbBs3c9HWfJCaGPdB4dyYtvIiBMHJHhirz-f9VCV3fu7ox2pa4qfeHB9n6AS_8lwEGOvy-itHYqvVJgVWP72b2u4m00"></div></div>
+</div>
+</div>
+<h2 id=videos>Videos</h2>
+<p>There are two ways of displaying videos: within HTML5 <code>&lt;video&gt;</code> tags and within <code>&lt;iframe&gt;</code> tags.</p>
+<h3 id=display-videos-from-youtube>Display videos from YouTube</h3>
+<p>This method works for YouTube videos and any other embed video within an <code>&lt;iframe&gt;</code> tag.</p>
+<ol>
+<li>Copy the code below and paste it into your markdown file. Leave a blank line above
+and below it. <strong>Do NOT edit the code block</strong> (e.g., remove spaces - the video iframe
+may not render properly)</li>
+<li>Go the video URL you want to display</li>
+<li>Click on "Share", then "Embed"</li>
+<li>Copy the <code>&lt;iframe&gt;</code> source (<code>src</code>) URL <strong>only</strong>, and paste it replacing the <code>src</code> below:</li>
+</ol>
+<div class=highlight><pre class="highlight html"><code><span class="c">&lt;!-- blank line --&gt;</span>
+<span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"video_container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://www.youtube.com/embed/enMumwvLAug"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">allowfullscreen=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+<span class="c">&lt;!-- blank line --&gt;</span>
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<figure class=video_container>
+<iframe src="https://www.youtube.com/embed/enMumwvLAug" frameborder=0 allowfullscreen=true></iframe>
+</figure>
+</div>
+</div>
+<h3 id=display-local-videos-html5>Display local videos (HTML5)</h3>
+<p>This method works for any video uploaded to somewhere retrievable from the internet from a URL, or from a relative
+path like <code>path/to/video.mp4</code>.</p>
+<ol>
+<li>Read through the <a href="http://www.w3schools.com/tags/tag_video.asp">w3schools HTML5 video guide</a>, or the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">MDN <code>&lt;video&gt;</code> guide</a>.</li>
+<li>Record or export the video in these three formats to achieve cross-browser and cross-device
+compatibility: <code>.mp4</code>, <code>.ogg</code> and <code>.webm</code>.</li>
+<li>Get the URL for your video</li>
+<li>Choose an image to use as a poster</li>
+<li>Copy the code below and paste it to your file</li>
+<li>Replace the <code>src</code> URLs for your video URLs</li>
+</ol>
+<div class=highlight><pre class="highlight html"><code><span class="c">&lt;!-- blank line --&gt;</span>
+<span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"video_container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;video</span> <span class="na">controls=</span><span class="s">"true"</span> <span class="na">allowfullscreen=</span><span class="s">"true"</span> <span class="na">poster=</span><span class="s">"path/to/poster_image.png"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"path/to/video.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"path/to/video.ogg"</span> <span class="na">type=</span><span class="s">"video/ogg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"path/to/video.webm"</span> <span class="na">type=</span><span class="s">"video/webm"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/video&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+<span class="c">&lt;!-- blank line --&gt;</span>
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<figure class=video_container>
+<video controls=true allowfullscreen=true poster="/images/default-blog-image.png">
+<source src="html5-demo.mp4" type="video/mp4"/>
+</video>
+</figure>
+</div>
+</div>
+<p class=note><strong>Note:</strong> In case you don't have all formats recommended by <strong>w3schools</strong>, you can use just one of them, but your video most likely won't be supported in all devices and browsers. The video above (<code>.mp4</code> only) worked on Mozilla Firefox for macOS, Android, and Windows, and on Chrome for Android and for Windows. But it may not work on other devices/browser, such as Chrome for macOS and iOS, or Safari. In fact, the best option is using YouTube or Vimeo embed videos in <code>&lt;iframe&gt;</code> tags.*</p>
+<h3 id=display-other-videos>Display other videos</h3>
+<p>For any other videos, such as from Vimeo or Google Drive, grab the video iframe only, and proceed
+like we do for <a href="#display-videos-from-youtube">YouTube videos</a>, wrapping the <code>&lt;iframe&gt;</code>
+within a <code>&lt;figure class="video_container"&gt;</code>, for responsiveness. Copy and paste the code below,
+replacing <strong>only</strong> the iframe URL with your own:</p>
+<div class=highlight><pre class="highlight html"><code><span class="c">&lt;!-- blank line --&gt;</span>
+<span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"video_container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://drive.google.com/file/d/0B6m34D8cFdpMZndKTlBRU0tmczg/preview"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">allowfullscreen=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+<span class="c">&lt;!-- blank line --&gt;</span>
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<figure class=video_container>
+<iframe src="https://drive.google.com/file/d/0B6m34D8cFdpMZndKTlBRU0tmczg/preview" frameborder=0 allowfullscreen=true></iframe>
+</figure>
+</div>
+</div>
+<h3 id=display-multiple-videos>Display multiple videos</h3>
+<p>To display multiple videos on the same page, just repeat the <code>figure</code> code block
+where you want them to show up, replacing the video ID with the respective ID
+corresponding to your videos.</p>
+<p>To display multiple videos in a sequence, just copy the <code>figure</code> code block and
+paste it as many times as necessary. Always leave a blank line between the blocks.
+Do <strong>NOT</strong> remove the spaces, otherwise your videos may not render properly.</p>
+<div class=highlight><pre class="highlight html"><code><span class="c">&lt;!-- blank line --&gt;</span>
+<span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"video_container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://drive.google.com/file/d/0B6m34D8cFdpMZndKTlBRU0tmczg/preview"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">allowfullscreen=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+
+<span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"video_container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://drive.google.com/file/d/0B6m34D8cFdpMZndKTlBRU0tmczg/preview"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">allowfullscreen=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+
+<span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"video_container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://drive.google.com/file/d/0B6m34D8cFdpMZndKTlBRU0tmczg/preview"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">allowfullscreen=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+<span class="c">&lt;!-- blank line --&gt;</span>
+</code></pre></div>
+<h2 id=table-of-contents-toc>Table of Contents (ToC)</h2>
+<p>With kramdown, creating a Table of Contents is the easiest thing ever! The automatic ToC will include every heading in
+the document, unless you don't want it to be included. You do not need to add anchors individually to every title. This is
+an automated process.</p>
+<div class=highlight><pre class="highlight markdown"><code>
+<span class="gu">## On this page</span>
+{: .no_toc}
+<span class="p">
+-</span> TOC
+{:toc}
+<span class="p">
+----
+</span></code></pre></div>
+<p>As always, leave a blank line before and after the markup. Note that there are four dashes beginning
+and closing the block, which is not required, but recommendable for keeping the same standards throughout <code>about.gitlab.com</code>.</p>
+<p>The heading "On this page" can be adapted to your case, e.g., "In this tutorial", or "In this guide", etc. It's not required
+either, but recommended.</p>
+<p>The markup <code>{: .no_toc}</code> is used every time you don't want to include a heading into the ToC. Just add
+it right below the heading, and it won't be included into the ToC. In fact <code>no_toc</code> is a
+<a href="#classes-ids-and-attributes">custom class</a>, as described later in this guide.</p>
+<p>The <strong>output</strong> ToC can be found at the very beginning of this page.</p>
+<p>Alternatively, you can use ordered ToC too, displaying numbers at the beginning of the list. Just use the markup for
+ordered lists and kramdown will be smart enough to understand what you want:</p>
+<div class=highlight><pre class="highlight markdown"><code><span class="p">1.</span> TOC
+{:toc}
+</code></pre></div>
+<h2 id=tables>Tables</h2>
+<p>Tables for markdown are challenging. So, we have two possible approaches: use markdown whenever possible,
+but if you need pretty advanced table layouts, you are free to add them in HTML markup instead.</p>
+<blockquote id=quote>
+<p><em>Markdown is not a replacement for HTML, or even close to it. (<a href="http://daringfireball.net/projects/markdown/syntax#html">John Gruber</a>)</em></p>
+</blockquote>
+<p>As explained by John Gruber, the creator of markdown, it was not created to replace HTML,
+so there are situations we can't avoid using HTML. With complex tables, that's the case.</p>
+<p class=note><strong>Note:</strong> For very simple 2 column tables it is better to use <a href="#lists">lists</a> with strong text in preference
+to the complexity of using markdown tables.</p>
+<p>The following table has a header (first line), then markup to define the desired alignment (dashes and colons),
+then the table body. You can go ahead and add separators to create subsequent table bodies.</p>
+<p>However you prepare your table, its design will depend upon the CSS styles defined for them.</p>
+<p>The last markup <code>{: .custom-class #custom-id}</code> <strong>can</strong> be used in case you want to attribute
+a <a href="#classes-ids-and-attributes">custom class and/or a custom ID</a> to the <code>&lt;table&gt;</code> element.</p>
+<div class=highlight><pre class="highlight markdown"><code>| Default aligned | Left aligned | Center aligned  | Right aligned  |
+|-----------------|:-------------|:---------------:|---------------:|
+| First body part | Second cell  | Third cell      | fourth cell    |
+| Second line     | foo          | <span class="gs">**strong**</span>      | baz            |
+| Third line      | quux         | baz             | bar            |
+|-----------------+--------------+-----------------+----------------|
+| Second body     |              |                 |                |
+| 2nd line        |              |                 |                |
+|-----------------+--------------+-----------------+----------------|
+| Third body      |              |                 | Foo            |
+{: .custom-class #custom-id}
+
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<table class=custom-class id=custom-id>
+<thead>
+<tr>
+<th>Default aligned</th>
+<th style="text-align: left">Left aligned</th>
+<th style="text-align: center">Center aligned</th>
+<th style="text-align: right">Right aligned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First body part</td>
+<td style="text-align: left">Second cell</td>
+<td style="text-align: center">Third cell</td>
+<td style="text-align: right">fourth cell</td>
+</tr>
+<tr>
+<td>Second line</td>
+<td style="text-align: left">foo</td>
+<td style="text-align: center"><strong>strong</strong></td>
+<td style="text-align: right">baz</td>
+</tr>
+<tr>
+<td>Third line</td>
+<td style="text-align: left">quux</td>
+<td style="text-align: center">baz</td>
+<td style="text-align: right">bar</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>Second body</td>
+<td style="text-align: left"> </td>
+<td style="text-align: center"> </td>
+<td style="text-align: right"> </td>
+</tr>
+<tr>
+<td>2nd line</td>
+<td style="text-align: left"> </td>
+<td style="text-align: center">Hello World</td>
+<td style="text-align: right"> </td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>Third body</td>
+<td style="text-align: left"> </td>
+<td style="text-align: center"> </td>
+<td style="text-align: right">Foo</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<p>The bars, spaces, and dashes were used symmetrically in the previous example to
+help future page developers if they need to edit the table's contents. The
+symmetry isn't required.</p>
+<p>Some development tools can help you create your own complex table if you need
+to merge lines or columns, or if you require a more complex layout. This
+<a href="http://www.tablesgenerator.com/html_tables">table generator</a> may be able to help you do this.</p>
+<p>To add a numbered list in a table cell, add a blank line between the heading
+and the table to render the table correctly. Otherwise, the text and
+formatting won't appear.</p>
+<p>See the <a href="http://kramdown.gettalong.org/syntax.html#tables">kramdown syntax guide</a> for more information about tables.</p>
+<h2 id=collapse>Collapse</h2>
+<p>A collapsed content section is used to hide information until a user chooses to reveal it with a click or tap on the summary text. The hidden content is revealed inline. For example, this code:</p>
+<div class=highlight><pre class="highlight markdown"><code><span class="nt">&lt;details&gt;</span>
+  <span class="nt">&lt;summary</span> <span class="na">markdown=</span><span class="s">"span"</span><span class="nt">&gt;</span>This is the summary text, click me to expand<span class="nt">&lt;/summary&gt;</span>
+
+  This is the detailed text.
+
+  We can still use markdown, but we need to take the additional step of using the <span class="sb">`parse_block_html`</span> option as described in the <span class="p">[</span><span class="nv">Mix HTML + Markdown Markup section</span><span class="p">](</span><span class="sx">#mix-html--markdown-markup</span><span class="p">)</span>.
+
+  You can learn more about expected usage of this approach in the <span class="p">[</span><span class="nv">GitLab UI docs</span><span class="p">](</span><span class="sx">https://gitlab-org.gitlab.io/gitlab-ui/?path=/story/base-collapse--default</span><span class="p">)</span> though the solution we use above is specific to usage in markdown.
+<span class="nt">&lt;/details&gt;</span>
+</code></pre></div>
+<p>results in:</p>
+<details>
+<summary>This is the summary text, click me to expand</summary>
+<p>This is the detailed text.</p>
+<p>We can still use markdown, but we need to take the additional step of using the <code>parse_block_html</code> option as described in the <a href="#mix-html--markdown-markup">Mix HTML + Markdown Markup section</a>.</p>
+<p>You can learn more about expected usage of this approach in the <a href="https://gitlab-org.gitlab.io/gitlab-ui/?path=/story/base-collapse--default">GitLab UI docs</a> though the solution we use above is specific to usage in markdown.</p>
+</details>
+<p>The GitLab handbook also supports nested details sections.</p>
+<div class=highlight><pre class="highlight markdown"><code><span class="nt">&lt;details&gt;</span>
+<span class="nt">&lt;summary</span> <span class="na">markdown=</span><span class="s">"span"</span><span class="nt">&gt;</span>First level collapsible item<span class="nt">&lt;/summary&gt;</span>
+<span class="gs">**Lorem ipsum dolor sit amet...**</span>
+<span class="nt">&lt;details&gt;</span>
+<span class="nt">&lt;summary</span> <span class="na">markdown=</span><span class="s">"span"</span><span class="nt">&gt;</span>Second level collapsible item<span class="nt">&lt;/summary&gt;</span>
+<span class="ge">*Sed ut perspiciatis unde omnis iste natus...*</span>
+<span class="nt">&lt;/details&gt;</span>
+<span class="nt">&lt;/details&gt;</span>
+</code></pre></div>
+<p>results in:</p>
+<details>
+<summary>First level collapsible item</summary>
+<p><strong>Lorem ipsum dolor sit amet…</strong></p>
+<details>
+<summary>Second level collapsible item</summary>
+<p><em>Sed ut perspiciatis unde omnis iste natus…</em></p>
+</details>
+</details>
+<p>To add a table in the collapsed heading, be sure to add:</p>
+<div class=highlight><pre class="highlight plaintext"><code>&lt;details markdown="1"&gt;
+</code></pre></div>
+<h2 id=code-blocks>Code blocks</h2>
+<p>There are a few options for displaying code blocks with kramdown. Most of them use backticks <code>`</code>.</p>
+<h3 id=in-line>In-line</h3>
+<p>This is an <code>`in-line`</code> code block.</p>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p><em>In-line</em></p>
+<p>This is an <code>in-line</code> code block.</p>
+</div>
+</div>
+<h3 id=fenced>Fenced</h3>
+<div class=highlight><pre class="highlight plaintext"><code>```
+def hello
+   puts "Hello world!"
+end
+```
+</code></pre></div>
+<p><em>Fenced Highlighted</em></p>
+<div class=highlight><pre class="highlight plaintext"><code>```ruby
+def hello
+   puts "Hello world!"
+end
+```
+</code></pre></div>
+<p>or</p>
+<div class=highlight><pre class="highlight plaintext"><code>```
+def hello
+   puts "Hello world!"
+end
+```
+{: .language-ruby}
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p><em>Fenced</em></p>
+<div class=highlight><pre class="highlight plaintext"><code>def hello
+   puts "Hello world!"
+end
+</code></pre></div>
+<p><em>Fenced Highlighted</em></p>
+<div class=highlight><pre class="highlight ruby"><code><span class="k">def</span> <span class="nf">hello</span>
+   <span class="nb">puts</span> <span class="s2">"Hello world!"</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>or</p>
+<div class=highlight><pre class="highlight ruby"><code><span class="k">def</span> <span class="nf">hello</span>
+   <span class="nb">puts</span> <span class="s2">"Hello world!"</span>
+<span class="k">end</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id=indented>Indented</h3>
+<p>Add 4 white spaces before every line:</p>
+<div class=highlight><pre class="highlight plaintext"><code>    def hello
+       puts "Hello world!"
+    end
+</code></pre></div>
+<p><em>Indented Highlighted</em></p>
+<div class=highlight><pre class="highlight plaintext"><code>    def hello
+       puts "Hello world!"
+    end
+{: .language-ruby}
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p><em>Indented</em></p>
+<div class=highlight><pre class="highlight plaintext"><code>def hello
+   puts "Hello world!"
+end
+</code></pre></div>
+<p><em>Indented Highlighted</em></p>
+<div class=highlight><pre class="highlight ruby"><code><span class="k">def</span> <span class="nf">hello</span>
+   <span class="nb">puts</span> <span class="s2">"Hello world!"</span>
+<span class="k">end</span>
+</code></pre></div>
+</div>
+</div>
+<h3 id=nested>Nested</h3>
+<p>Add 4 white spaces before every line. This is used when you want to display a code block
+within a code block.</p>
+<div class=highlight><pre class="highlight plaintext"><code>    ```
+    def hello
+       puts "Hello world!"
+    end
+    ```
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p><em>Nested</em></p>
+<div class=highlight><pre class="highlight plaintext"><code>```
+def hello
+   puts "Hello world!"
+end
+```
+</code></pre></div>
+</div>
+</div>
+<h3 id=in-lists>In lists</h3>
+<p>Indent the text of each item in 3 white spaces. Leave blank lines between the code block and the list items,
+and ident the code block in 5 white spaces:</p>
+<div class=highlight><pre class="highlight plaintext"><code>1. Item 1
+1. Item 2
+
+     ```ruby
+     def hello
+        puts "Hello world!"
+     end
+     ```
+
+1. Item 3
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<ol>
+<li>Item 1</li>
+<li>
+<p>Item 2</p>
+<div class=highlight><pre class="highlight ruby"><code>  <span class="k">def</span> <span class="nf">hello</span>
+     <span class="nb">puts</span> <span class="s2">"Hello world!"</span>
+  <span class="k">end</span>
+</code></pre></div> </li>
+<li>Item 3</li>
+</ol>
+</div>
+</div>
+<h2 id=blockquotes>Blockquotes</h2>
+<p>Blockquotes are good resources to mentioning someone else's quotes, like we did <a href="#quote">just above</a>.
+Also, can be used to emphasize a sentence or a small paragraph.</p>
+<div class=highlight><pre class="highlight markdown"><code><span class="gt">&gt; This is a blockquote.</span>
+<span class="gt">&gt; On multiple lines.</span>
+That may be lazy.
+<span class="gt">&gt;</span>
+<span class="gt">&gt; This is the second paragraph.</span>
+<span class="p">
+----
+</span><span class="gt">
+&gt; This is a paragraph.</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; &gt; A nested blockquote.</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; ### Headers work</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; - lists too</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; and all other block-level **elements**.</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; Even code blocks:</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt;      def hello</span>
+<span class="gt">&gt;        puts "Hello world!"</span>
+<span class="gt">&gt;      end</span>
+<span class="gt">&gt; {: .language-ruby}</span>
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<blockquote>
+<p>This is a blockquote.
+On multiple lines.
+That may be lazy.</p>
+<p>This is the second paragraph.</p>
+</blockquote>
+<hr/>
+<blockquote>
+<p>This is a paragraph.</p>
+<blockquote>
+<p>A nested blockquote.</p>
+</blockquote>
+<h3 class=no_toc id=headers-work>Headers work</h3>
+<ul>
+<li>lists too</li>
+</ul>
+<p>and all other block-level <strong>elements</strong>.</p>
+<p>Even a code block:</p>
+<div class=highlight><pre class="highlight ruby"><code> <span class="k">def</span> <span class="nf">hello</span>
+   <span class="nb">puts</span> <span class="s2">"Hello world!"</span>
+ <span class="k">end</span>
+</code></pre></div> </blockquote>
+</div>
+</div>
+<h2 id=notes>Notes</h2>
+<div class=highlight><pre class="highlight markdown"><code>This is a regular paragraph.
+
+<span class="gs">**Note:**</span> A note is something that needs to be mentioned but is apart from the context.
+{: .note}
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p>This is a regular paragraph.</p>
+<p class=note><strong>Note:</strong> A note is something that needs to be mentioned but is apart from the context.</p>
+</div>
+</div>
+<h2 id=comments>Comments</h2>
+<p><em>Markdown markup</em></p>
+<div class=highlight><pre class="highlight markdown"><code>This is a paragraph
+{::comment}
+This is a comment which is
+completely ignored.
+{:/comment}
+... paragraph continues here.
+</code></pre></div>
+<p><em>Regular HTML markup</em></p>
+<div class=highlight><pre class="highlight html"><code><span class="c">&lt;!-- This is accepted as a comment too --&gt;</span>
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p>This is a paragraph
+
+… paragraph continues here.</p>
+
+</div>
+</div>
+<h2 id=anchors>Anchors</h2>
+<p>Add an anchor anywhere with:</p>
+<div class=highlight><pre class="highlight plaintext"><code>[](){: name="hello-world"}
+
+Some text
+</code></pre></div>
+<p>Or simply use an ID:</p>
+<div class=highlight><pre class="highlight plaintext"><code>Some text
+{: #hello-world}
+</code></pre></div>
+<h2 id=font-awesome>Font Awesome</h2>
+<p>Yes, we can use fancy (free) <a href="https://fontawesome.com/search?m=free&amp;o=r">Font Awesome</a> icons too.</p>
+<p><em>Regular</em></p>
+<div class=highlight><pre class="highlight plaintext"><code>### &lt;i class="fas fa-puzzle-piece" aria-hidden="true"&gt;&lt;/i&gt; Puzzle Icon
+{: #puzzle}
+</code></pre></div>
+<p>And you can go further, such as the following.</p>
+<p><em>Styled</em></p>
+<div class=highlight><pre class="highlight plaintext"><code>### &lt;i class="fab fa-gitlab fa-fw" style="color:rgb(107,79,187); font-size:.85em" aria-hidden="true"&gt;&lt;/i&gt; Purple GitLab Tanuki
+{: #tanuki-purple}
+
+### &lt;i class="fab fa-gitlab fa-fw" style="color:rgb(252,109,38); font-size:.85em" aria-hidden="true"&gt;&lt;/i&gt; Orange GitLab Tanuki
+{: #tanuki-orange}
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p><em>Regular</em></p>
+<h3 id=puzzle><i class="fas fa-puzzle-piece" aria-hidden=true></i> Puzzle Icon</h3>
+<hr/>
+<p><em>Styled</em></p>
+<h3 id=tanuki-purple><i class="fab fa-gitlab fa-fw" style="color:rgb(107,79,187); font-size:.85em" aria-hidden=true></i> Purple GitLab Tanuki</h3>
+<h3 id=tanuki-orange><i class="fab fa-gitlab fa-fw" style="color:rgb(252,109,38); font-size:.85em" aria-hidden=true></i> Orange GitLab Tanuki</h3>
+</div>
+</div>
+<p>When doing something like this to a heading, it's important give it a custom ID (e.g., <code>{: #puzzle}</code>),
+otherwise the one automatically created by kramdown will sound very awkward.</p>
+<p>The class <code>fa-fw</code> is used when you want to display the icons as a list. They will be aligned, as well as
+the text right beside them.</p>
+<p>See live examples <a href="/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/">on this post</a>, where the icons are used to illustrate the text.</p>
+<h2 id=classes-ids-and-attributes>Classes, IDs, and attributes</h2>
+<p>Defining CSS classes, and elements IDs and attributes with markdown is definitely something unusual (kramdown magic!).</p>
+<p>But yes, if you know how to use it, you'll love it! Check how easy it is to do that with kramdown:</p>
+<div class=highlight><pre class="highlight plaintext"><code>Paragraph
+{: .class .class-1 .class-2}
+
+Paragraph
+{: #custom-id}
+
+Paragraph
+{: .class .class-1 #custom-id-1}
+
+## Heading
+{: .class .class-1 #custom-id-2}
+
+Paragraph
+{: .class #custom-id-3 style="padding-top:0" key="value"}
+
+## Heading {#hello}
+
+List:
+
+- {: .class} List item with custom class
+- {:#id} List item with custom id
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p class="class class-1 class-2">Paragraph</p>
+<p id=custom-id>Paragraph</p>
+<p class="class class-1" id=custom-id-1>Paragraph</p>
+<h3 class="class class-1 no_toc" id=custom-id-2>Heading</h3>
+<p class=class id=custom-id-3 style="padding-top:0" key=value>Paragraph</p>
+<h3 id=hello class=no_toc>Heading</h3>
+<p>List:</p>
+<ul>
+<li class=class>List item with custom class</li>
+<li id=id>List item with custom id</li>
+</ul>
+</div>
+</div>
+<h3 id=special-classes>Special classes</h3>
+<h4 id=shadow>Shadow</h4>
+<p>The CSS class called <code>shadow</code> should be used when your image edges are not clearly defined.
+This happens when it has a white background or when it's a screenshot with text (for example,
+a screenshot of our user interface). For example, this image can be mistaken as part
+of the text:</p>
+<p><img src="/images/handbook/marketing/markdown-guide-image-plain-text.png" alt="text screenshot"/></p>
+<p>Now, if you apply the class <code>shadow</code> to the image, it's discreetly highlighted from the text:</p>
+<p><img src="/images/handbook/marketing/markdown-guide-image-plain-text.png" alt="text screenshot with box shadow" class=shadow /></p>
+<p>To do that, apply the class directly to the image by adding the markup <code>{: .shadow}</code> right after the image
+markup:</p>
+<div class=highlight><pre class="highlight markdown"><code><span class="p">![</span><span class="nv">image alternative text</span><span class="p">](</span><span class="sx">/path/to/image.png</span><span class="p">)</span>{: .shadow}
+</code></pre></div>
+<h4 id=note>Note</h4>
+<p>As <a href="#notes">previously</a> explained, you can add the class <code>note</code> to paragraphs that
+you don't want to call attention to:</p>
+<p class=note><strong>Note:</strong> This is something I don't want to call attention to.</p>
+<p>Markup:</p>
+<div class=highlight><pre class="highlight markdown"><code><span class="gs">**Note:**</span> This is something I don't want to call attention to.
+{: .note}
+</code></pre></div>
+<h4 id=colors>Colors</h4>
+<p>Add a custom class to a heading or paragraph using the following special classes.</p>
+<p><strong>GitLab Orange</strong></p>
+<h4 class="gitlab-orange no_toc" id=gitlab-orange-heading>GitLab Orange Heading</h4>
+<p>Markup:</p>
+<div class=highlight><pre class="highlight plaintext"><code>### GitLab Orange Heading
+{: .gitlab-orange}
+</code></pre></div>
+<p><strong>GitLab Purple</strong></p>
+<h4 class="gitlab-purple no_toc" id=gitlab-purple-heading>GitLab Purple Heading</h4>
+<p>Markup:</p>
+<div class=highlight><pre class="highlight plaintext"><code>### GitLab Purple Heading
+{: .gitlab-purple}
+</code></pre></div>
+<h4 id=text-align>Text Align</h4>
+<p>By default, the text will always be aligned to the left. You have a few
+options to customize it with custom classes:</p>
+<ul>
+<li>Center: <code>.text-center</code></li>
+<li>Right: <code>.text-right</code></li>
+<li>Justify: <code>.text-justify</code></li>
+</ul>
+<p>For demonstrations purposes, they are aligned
+in an <a href="#colorful-sections">alert box</a>, but this can be
+applied to regular paragraphs and headings.</p>
+<p><strong>Align to the center</strong></p>
+<p class="alert alert-info text-center">Center-aligned</p>
+<p>Alert box markup:</p>
+<div class=highlight><pre class="highlight markdown"><code>Center-aligned
+{: .alert .alert-info .text-center}
+</code></pre></div>
+<p>Paragraph markup:</p>
+<div class=highlight><pre class="highlight markdown"><code>Center-aligned
+{: .text-center}
+</code></pre></div>
+<p>Heading markup:</p>
+<div class=highlight><pre class="highlight markdown"><code><span class="gu">### Center-aligned</span>
+{: .text-center}
+</code></pre></div>
+<p><strong>Align to the right</strong></p>
+<p class="alert alert-info text-right">Right-aligned</p>
+<div class=highlight><pre class="highlight markdown"><code>Right-aligned
+{: .alert .alert-info .text-right}
+</code></pre></div>
+<p><strong>Justify</strong></p>
+<p class="alert alert-info text-justify">Justified</p>
+<div class=highlight><pre class="highlight markdown"><code>Justified
+{: .alert .alert-info .text-justify}
+</code></pre></div>
+<h2 id=mix-html--markdown-markup>Mix HTML + Markdown Markup</h2>
+<p>Mixing HTML markup with markdown is something almost "unthinkable" to someone used to regular markdown.
+And it's all over this document!</p>
+<p>Use the following markup at the beginning of your document:</p>
+<div class=highlight><pre class="highlight markdown"><code>{::options parse_block_html="true" /}
+</code></pre></div>
+<p>And feel free to mix everything up:</p>
+<div class=highlight><pre class="highlight plaintext"><code>Something in **markdown**.
+
+&lt;p&gt;Then an HTML tag with crazy **markup** *all over* the place!&lt;/p&gt;
+</code></pre></div>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p>Something in <strong>markdown</strong>.</p>
+<p>Then an HTML tag with crazy <strong>markup</strong> <em>all over</em> the place!</p>
+</div>
+</div>
+<p>You can close the markup parser tag at any point, if you want to:</p>
+<div class=highlight><pre class="highlight markdown"><code>{::options parse_block_html="false" /}
+</code></pre></div>
+<h2 id=mix-erb--markdown>Mix ERB + Markdown</h2>
+<p>You may want to use Embedded Ruby (ERB) in your markdown, for example, to include a <a href="https://middlemanapp.com/basics/partials/"><code>partial</code></a>. To do this, make sure your file extension is <code>.html.md.erb</code> as <code>.html.md</code> will not parse the Embedded Ruby.</p>
+<h2 id=colorful-sections>Colorful sections</h2>
+<p>To add notes and warning blocks into colorful boxes,
+we are making use of Bootstrap's <a href="https://getbootstrap.com/components/#panels-alternatives">panel blocks</a> and <a href="https://getbootstrap.com/components/#alerts">alert boxes</a>.</p>
+<p>Colorful sections are applied for very specific purposes and must not be overused.</p>
+<p>Use panels when your description contains more than one paragraph, or a
+long paragraph. For single and short paragraphs, use alert boxes instead.</p>
+<p id=html-parser>When using panels, make sure to add the HTML parser markup to the beginning of your document's body:
+<code>{::options parse_block_html="true" /}</code>.</p>
+<p>Copy paste the following code according to what you want to present to the user
+and replace only the description. The available colors are:
+blue (<code>info</code>), green (<code>success</code>), amber (<code>warning</code>) and red (<code>danger</code>), as follows.</p>
+<h3 id=additional-information>Additional Information</h3>
+<p>Use the following code for <strong>important notes</strong> and additional information:</p>
+<div class=highlight><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-info"</span><span class="nt">&gt;</span>
+**Note**
+{: .panel-heading}
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+
+NOTE DESCRIPTION
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>To apply to a single paragraph, use an alert box:</p>
+<div class=highlight><pre class="highlight plaintext"><code>My important paragraph.
+{: .alert .alert-info}
+</code></pre></div>
+<p>Blue panels render like:</p>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Note</strong></p>
+<div class=panel-body>
+<p>NOTE DESCRIPTION</p>
+</div>
+</div>
+<p>And blue alert boxes render like:</p>
+<p class="alert alert-info">My important paragraph.</p>
+<p>If you want the text inside the alert box to be blue as well, we need to apply <a href="#styles">custom styles</a>
+to the markdown document. They will override the existing ones. Add the following <code>style</code> tag to the end of your file.</p>
+<div class=highlight><pre class="highlight css"><code><span class="o">&lt;</span><span class="nt">style</span><span class="o">&gt;</span>
+<span class="nc">.alert-info</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">49</span><span class="p">,</span><span class="m">112</span><span class="p">,</span><span class="m">143</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span>
+</code></pre></div>
+<h3 id=warnings>Warnings</h3>
+<p>Use the following code for warnings, like information that may have a different
+result if not used correctly:</p>
+<div class=highlight><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-warning"</span><span class="nt">&gt;</span>
+**Warning**
+{: .panel-heading}
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+
+WARNING DESCRIPTION
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>To apply to a single paragraph, use an alert box:</p>
+<div class=highlight><pre class="highlight plaintext"><code>My warning paragraph.
+{: .alert .alert-warning}
+</code></pre></div>
+<p>Amber panels render like:</p>
+<div class="panel panel-warning">
+<p class=panel-heading><strong>Warning</strong></p>
+<div class=panel-body>
+<p>WARNING DESCRIPTION</p>
+</div>
+</div>
+<p>And amber alert boxes render like:</p>
+<p class="alert alert-warning">My warning paragraph.</p>
+<p>If you want the text inside the alert box to be amber as well, we need to apply <a href="#styles">custom styles</a>
+to the markdown document. They will override the existing ones. Add the following <code>style</code> tag to the end of your file.</p>
+<div class=highlight><pre class="highlight css"><code><span class="o">&lt;</span><span class="nt">style</span><span class="o">&gt;</span>
+<span class="nc">.alert-warning</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">138</span><span class="p">,</span><span class="m">109</span><span class="p">,</span><span class="m">59</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span>
+</code></pre></div>
+<h3 id=danger>Danger</h3>
+<p>Use the following code for crucial warnings, like commands that result in loss
+of data:</p>
+<div class=highlight><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-danger"</span><span class="nt">&gt;</span>
+**Danger**
+{: .panel-heading}
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+
+DANGER DESCRIPTION
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>To apply to a single paragraph, use an alert box:</p>
+<div class=highlight><pre class="highlight plaintext"><code>My danger paragraph.
+{: .alert .alert-danger}
+</code></pre></div>
+<p>Red panels render like:</p>
+<div class="panel panel-danger">
+<p class=panel-heading><strong>Danger</strong></p>
+<div class=panel-body>
+<p>DANGER DESCRIPTION</p>
+</div>
+</div>
+<p>And red alert boxes render like:</p>
+<p class="alert alert-danger">My danger paragraph.</p>
+<p>If you want the text inside the alert box to be red as well, we need to apply <a href="#styles">custom styles</a>
+to the markdown document. They will override the existing ones. Add the following <code>style</code> tag to the end of your file.</p>
+<div class=highlight><pre class="highlight css"><code><span class="o">&lt;</span><span class="nt">style</span><span class="o">&gt;</span>
+<span class="nc">.alert-danger</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">169</span><span class="p">,</span><span class="m">68</span><span class="p">,</span><span class="m">66</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span>
+</code></pre></div>
+<h3 id=dos-and-donts>Do's and Don'ts</h3>
+<p>You can use the combination of green and red panels or alert boxes for "Do's and Don'ts":</p>
+<div class=highlight><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-success"</span><span class="nt">&gt;</span>
+**Do's**
+{: .panel-heading}
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+
+THINGS TO DO
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>or, use an alert box:</p>
+<div class=highlight><pre class="highlight plaintext"><code>TO DO.
+{: .alert .alert-success}
+</code></pre></div>
+<p>Not to do:</p>
+<div class=highlight><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-danger"</span><span class="nt">&gt;</span>
+**Don'ts**
+{: .panel-heading}
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+
+THINGS NOT TO DO
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>or, use an alert box:</p>
+<div class=highlight><pre class="highlight plaintext"><code>NOT TO DO.
+{: .alert .alert-danger}
+</code></pre></div>
+<p>By doing so, the green panels for "DO'S" will look like:</p>
+<div class="panel panel-success">
+<p class=panel-heading><strong>Do's</strong></p>
+<div class=panel-body>
+<p>THINGS TO DO</p>
+</div>
+</div>
+<p>or, if you chose an alert box:</p>
+<p class="alert alert-success">TO DO.</p>
+<p>If you want the text inside the alert box to be green as well,
+we need to apply <a href="#styles">custom styles</a>
+to the markdown document. They will override the existing ones.
+Add the following <code>style</code> tag to the end of your file.</p>
+<div class=highlight><pre class="highlight css"><code><span class="o">&lt;</span><span class="nt">style</span><span class="o">&gt;</span>
+<span class="nc">.alert-green</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">60</span><span class="p">,</span><span class="m">118</span><span class="p">,</span><span class="m">61</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>And for your "DON'TS" within red panels will look like:</p>
+<div class="panel panel-danger">
+<p class=panel-heading><strong>Don'ts</strong></p>
+<div class=panel-body>
+<p>THINGS NOT TO DO</p>
+</div>
+</div>
+<p>or, if you chose a red alert box:</p>
+<p class="alert alert-danger">NOT TO DO.</p>
+<h3 id=custom-alert-panels-and-alert-boxes>Custom alert panels and alert boxes</h3>
+<p>All the previously mentioned alert boxes and panels are available by
+default by <a href="http://getbootstrap.com/components/#alerts">Bootstrap</a>. If we want them in a different
+color, we need <a href="#styles">custom styles</a>. At <code>about.gitlab.com</code>, we
+can use the orange and the purple one, as follows.</p>
+<p>When using panels, don't forget to add to the beginning of your file the
+<a href="#html-parser">HTML parser markup</a> to be able to mix HMTL + Markdown:
+<code>{::options parse_block_html="true" /}</code>.</p>
+<h4 id=gitlab-orange-alert-panel>GitLab Orange Alert Panel</h4>
+<div class="panel panel-gitlab-orange">
+<p class=panel-heading><strong>Heading</strong></p>
+<div class=panel-body>
+<p>Text in markdown.</p>
+</div>
+</div>
+<p>Panel block markup:</p>
+<div class=highlight><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-gitlab-orange"</span><span class="nt">&gt;</span>
+**Heading**
+{: .panel-heading}
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+
+Text in markdown.
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<h4 id=gitlab-orange-alert-box>GitLab Orange Alert Box</h4>
+<p class="alert alert-gitlab-orange">My text in an orange box.</p>
+<p>Box block markup:</p>
+<div class=highlight><pre class="highlight markdown"><code>My text in an orange box.
+{: .alert .alert-gitlab-orange}
+</code></pre></div>
+<h4 id=gitlab-purple-alert-panel>GitLab Purple Alert Panel</h4>
+<div class="panel panel-gitlab-purple">
+<p class=panel-heading><strong>Heading</strong></p>
+<div class=panel-body>
+<p>Text in markdown.</p>
+</div>
+</div>
+<p>Panel block markup:</p>
+<div class=highlight><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-gitlab-purple"</span><span class="nt">&gt;</span>
+**Heading**
+{: .panel-heading}
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+
+Text in markdown.
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<h4 id=gitlab-purple-alert-box>GitLab Purple Alert Box</h4>
+<p class="alert alert-gitlab-purple">My text in an purple box.</p>
+<p>Box block markup:</p>
+<div class=highlight><pre class="highlight markdown"><code>My text in an purple box.
+{: .alert .alert-gitlab-purple}
+</code></pre></div>
+<h3 id=gitlab-webcast-alert-box>GitLab Webcast Alert Box</h3>
+<p>To be used in a CTA for webcast announcement in blog posts.
+You can use it for other purposes as well. Use it together with the <a href="#html-parser">HMTL parser</a>:</p>
+<p class="alert alert-webcast"><i class="fab fa-gitlab" style="color:rgb(107,79,187); font-size:.85em" aria-hidden=true></i>
+The webcast I want to announce - [Register here][#]!
+<i class="fab fa-gitlab" style="color:rgb(107,79,187); font-size:.85em" aria-hidden=true></i></p>
+<div class=highlight><pre class="highlight markdown"><code>{::options parse_block_html="true" /}
+
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fab fa-gitlab"</span> <span class="na">style=</span><span class="s">"color:rgb(107,79,187); font-size:.85em"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span><span class="ni">&amp;nbsp;&amp;nbsp;</span>
+The webcast I want to announce - <span class="p">[</span><span class="nv">Register here</span><span class="p">][</span><span class="ss">#</span><span class="p">]</span>!
+<span class="ni">&amp;nbsp;&amp;nbsp;</span><span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fab fa-gitlab"</span> <span class="na">style=</span><span class="s">"color:rgb(107,79,187); font-size:.85em"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>
+{: .alert .alert-webcast}
+</code></pre></div>
+<h2 id=styles>Styles</h2>
+<p>Yes, guess what?</p>
+<p>This:</p>
+<div class=highlight><pre class="highlight css"><code><span class="o">&lt;</span><span class="nt">style</span><span class="o">&gt;</span>
+  <span class="nc">.purple</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span><span class="nb">inherit</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.purple</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span><span class="nb">rgb</span><span class="p">(</span><span class="m">107</span><span class="p">,</span><span class="m">79</span><span class="p">,</span><span class="m">187</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span>
+</code></pre></div>
+<style>
+  .purple {
+    color:inherit;
+  }
+  .purple:hover {
+    color:rgb(107,79,187);
+  }
+</style>
+<p>Plus:</p>
+<div class=highlight><pre class="highlight plaintext"><code>Hey! Hover the cursor over me and guess what?! :)
+{: .purple}
+</code></pre></div>
+<p>Equals to:</p>
+<div class="panel panel-info">
+<p class=panel-heading><strong>Output</strong></p>
+<div class=panel-body>
+<p class=purple>Hey! Hover the cursor over me and guess what?! :)</p>
+</div>
+</div>
+<p>And yes, the <code>&lt;style&gt;</code> tag is <em>in</em> this very markdown file. Believe it or not!</p>
+<h2 id=embed-documents>Embed documents</h2>
+<p>It's easy to embed Google Docs, Sheets, Slides, and pretty much everything that
+provides an iframe to use with. The only thing you need to do is use the
+following code inside your markdown file and replace the iframe from the document
+you want to embed:</p>
+<div class=highlight><pre class="highlight html"><code><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"video_container"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">IFRAME</span> <span class="na">CONTENT</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+</code></pre></div>
+<h3 id=google-products>Google products</h3>
+<p>For Google products, with your document opened, click <strong>File</strong> -&gt; <strong>Share</strong> -&gt; <strong>Publish to web</strong>.
+For example, here's what Google sheets will look like:</p>
+<p><img src="/images/markdown-guide/publish-to-the-web-updated.png" alt="Google Sheets - File - Publish to the web"/></p>
+<p>Choose <strong>Embed</strong>, check your settings, click on <strong>Publish</strong> and copy the <code>&lt;iframe&gt;</code>.
+Then go to your markdown file and wrap the iframe into a <code>&lt;figure&gt;</code> tag with the
+responsive <code>video_container</code> class, as shown <a href="#embed-documents">in the beginning</a>.</p>
+<h4 id=google-sheets>Google Sheets</h4>
+<p>Let's exemplify with this <a href="https://docs.google.com/a/gitlab.com/spreadsheets/d/1jAnvYpRmNu8BISIrkYGTLolOTmlCoKLbuHVWzCXJSY4/edit?usp=sharing">simple spreadsheet</a>. Follow the info <a href="#google-products">above</a> to find the iframe:</p>
+<p><img src="/images/markdown-guide/embed-google-sheet.png" alt="Google Sheets - Embed iframe"/></p>
+<p>Copy the code below and paste to your markdown file (leave a blank line above and below it). Then replace the <code>&lt;iframe&gt;</code> with your own:</p>
+<div class=highlight><pre class="highlight html"><code><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"video_container"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://docs.google.com/spreadsheets/d/1jAnvYpRmNu8BISIrkYGTLolOTmlCoKLbuHVWzCXJSY4/pubhtml?widget=true&amp;amp;headers=false"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+</code></pre></div>
+<h4 class=no_toc id=output>Output:</h4>
+<figure class=video_container>
+<iframe src="https://docs.google.com/spreadsheets/d/1jAnvYpRmNu8BISIrkYGTLolOTmlCoKLbuHVWzCXJSY4/pubhtml?widget=true&amp;headers=false"></iframe>
+</figure>
+<p><br/></p>
+<h4 id=google-slides>Google Slides</h4>
+<p>Let's exemplify with this <a href="https://docs.google.com/presentation/d/1fWjiVgSNMKTHyC6_nWDY5rDhvdm-zEQMQytZysIXAzk/edit?usp=sharing">GitLab slide deck</a>. Follow the steps <a href="#embed-documents">above</a> to find the iframe:</p>
+<p><img src="/images/markdown-guide/embed-google-slides.png" alt="Google Slides - Embed iframe"/></p>
+<p>Copy the code below and paste to your markdown file (leave a blank line above and below it). Then replace the <code>&lt;iframe&gt;</code> with your own:</p>
+<div class=highlight><pre class="highlight html"><code><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"video_container"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://docs.google.com/presentation/d/e/2PACX-1vS_iuMXnp61wlo4amm5nvHr4Ir8VUzisJSBsr7YEL7fKWAiT-9bmehyngtb9TYaFEsFnRokCyIXwsvY/embed?start=false&amp;loop=false&amp;delayms=3000"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"960"</span> <span class="na">height=</span><span class="s">"569"</span> <span class="na">allowfullscreen=</span><span class="s">"true"</span> <span class="na">mozallowfullscreen=</span><span class="s">"true"</span> <span class="na">webkitallowfullscreen=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+</code></pre></div>
+<h4 class=no_toc id=output-1>Output:</h4>
+<figure class=video_container>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS_iuMXnp61wlo4amm5nvHr4Ir8VUzisJSBsr7YEL7fKWAiT-9bmehyngtb9TYaFEsFnRokCyIXwsvY/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder=0 width=960 height=569 allowfullscreen=true mozallowfullscreen=true webkitallowfullscreen=true></iframe>
+</figure>
+<p><br/></p>
+<h4 id=google-docs>Google Docs</h4>
+<p>Embedding Google Docs is not a recommended practice. Prefer converting your document content
+to markdown instead. If you need to embed it anyway, follow the same instructions and the same logic as
+we presented for Google Sheets and Slides, wrapping the <code>&lt;iframe&gt;</code> with a <code>&lt;figure&gt;</code> tag:</p>
+<div class=highlight><pre class="highlight html"><code><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"video_container"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://docs.google.com/document/d/1mHhOhvvrz7xgUPyn5VWCNuKgew5MRRGZp761B9prPqs/pub?embedded=true"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+</code></pre></div>
+<h3 id=slideshare>SlideShare</h3>
+<p>To embed from SlideShare, go to the document you want to embed and hit the <strong>Share</strong>
+button located below the slides. Copy the code under <strong>Embed</strong> and place it
+inside the <code>figure</code> tag.</p>
+<p class="alert alert-warning"><i class="fas fa-exclamation-triangle" aria-hidden=true style="color: rgb(138, 109, 59) ;"></i> Be careful to only include the iframe content and strip anything else.
+SlideShare will also add some other information in the embed code which you
+will have to remove, otherwise the markdown page will be broken.</p>
+<p>For example, let's say we wanted to include the slides from <a href="http://www.slideshare.net/creatop/how-to-use-any-static-site-generator-with-gitlab-pages">Ivan's talk on GitLab Pages</a>. Copying the embed code and stripping everything else except from the iframe, would result in this:</p>
+<div class=highlight><pre class="highlight html"><code><span class="nt">&lt;figure&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"//www.slideshare.net/slideshow/embed_code/key/EixD8OUMBX65Jy"</span> <span class="na">width=</span><span class="s">"595"</span> <span class="na">height=</span><span class="s">"485"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">marginwidth=</span><span class="s">"0"</span> <span class="na">marginheight=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"no"</span> <span class="na">style=</span><span class="s">"border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;"</span> <span class="na">allowfullscreen</span><span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+</code></pre></div>
+<p class="alert alert-info"><i class="fas fa-info-circle" aria-hidden=true style="color: rgb(49, 112, 143) ;"></i> You can safely omit the <code>&lt;figure&gt;</code> tag since SlideShare's widget is
+already responsive, but we are showing this that way in order to be consistent
+with the rest of the handbook.</p>
+<h4 class=no_toc id=output-2>Output:</h4>
+<figure>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/EixD8OUMBX65Jy" width=595 height=485 frameborder=0 marginwidth=0 marginheight=0 scrolling=no style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""></iframe>
+</figure>
+<h2 id=embed-tweets>Embed Tweets</h2>
+<p>To add tweets to markdown, copy both <code>&lt;blockquote&gt;</code> and <code>&lt;script&gt;</code> tags
+from the twitter post and paste it into your file. To make it look much
+nicer, wrap the script into a <code>div.center</code> (created for this specific purpose).</p>
+<p class="alert alert-info"><strong>Important:</strong> if you used the <a href="#mix-html--markdown-markup">HTML parser</a> in your
+post or page, you'll need to set it to <code>false</code> before the <code>div</code>.</p>
+<div class=center>
+<blockquote class=twitter-tweet data-partner=tweetdeck><p lang=en dir=ltr>Thanks to <a href="https://twitter.com/gitlab">@gitlab</a> for joining <a href="https://twitter.com/RailsGirlsCluj">@RailsGirlsCluj</a>! <a href="https://t.co/NOoiqDWKVY">pic.twitter.com/NOoiqDWKVY</a></p>&mdash; RailsGirlsCluj (@RailsGirlsCluj) <a href="https://twitter.com/RailsGirlsCluj/status/784847271645028352">October 8, 2016</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset=utf-8></script>
+</div>
+<p><br/></p>
+<p>Markup:</p>
+<div class=highlight><pre class="highlight markdown"><code>{::options parse_block_html="false" /}
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"center"</span><span class="nt">&gt;</span>
+
+<span class="nv">&lt;blockquote class="twitter-tweet" data-partner="tweetdeck"&gt;&lt;p lang="en" dir="ltr"&gt;Thanks to &lt;a href="https://twitter.com/gitlab"&gt;@gitlab&lt;/a&gt; for joining &lt;a href="https://twitter.com/RailsGirlsCluj"&gt;@RailsGirlsCluj&lt;/a&gt;! &lt;a href="https://t.co/NOoiqDWKVY"&gt;pic.twitter.com/NOoiqDWKVY&lt;/a&gt;&lt;/p&gt;&amp;mdash; RailsGirlsCluj (@RailsGirlsCluj) &lt;a href="https://twitter.com/RailsGirlsCluj/status/784847271645028352"&gt;October 8, 2016&lt;/a&gt;&lt;/blockquote&gt;</span>
+<span class="nt">&lt;script </span><span class="na">async</span> <span class="na">src=</span><span class="s">"//platform.twitter.com/widgets.js"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>For more than one Tweet, copy and paste all the code blocks from Twitter into one <code>div.center</code>:</p>
+<div class=highlight><pre class="highlight markdown"><code>{::options parse_block_html="false" /}
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"center"</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- first tweet --&gt;</span>
+<span class="nv">&lt;blockquote class="twitter-tweet" data-partner="tweetdeck"&gt;&lt;p lang="en" dir="ltr"&gt;Thanks to &lt;a href="https://twitter.com/gitlab"&gt;@gitlab&lt;/a&gt; for joining &lt;a href="https://twitter.com/RailsGirlsCluj"&gt;@RailsGirlsCluj&lt;/a&gt;! &lt;a href="https://t.co/NOoiqDWKVY"&gt;pic.twitter.com/NOoiqDWKVY&lt;/a&gt;&lt;/p&gt;&amp;mdash; RailsGirlsCluj (@RailsGirlsCluj) &lt;a href="https://twitter.com/RailsGirlsCluj/status/784847271645028352"&gt;October 8, 2016&lt;/a&gt;&lt;/blockquote&gt;</span>
+<span class="nt">&lt;script </span><span class="na">async</span> <span class="na">src=</span><span class="s">"//platform.twitter.com/widgets.js"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="c">&lt;!-- second tweet --&gt;</span>
+<span class="nv">&lt;blockquote class="twitter-tweet" data-partner="tweetdeck"&gt;&lt;p lang="en" dir="ltr"&gt;Thanks to &lt;a href="https://twitter.com/gitlab"&gt;@gitlab&lt;/a&gt; for joining &lt;a href="https://twitter.com/RailsGirlsCluj"&gt;@RailsGirlsCluj&lt;/a&gt;! &lt;a href="https://t.co/NOoiqDWKVY"&gt;pic.twitter.com/NOoiqDWKVY&lt;/a&gt;&lt;/p&gt;&amp;mdash; RailsGirlsCluj (@RailsGirlsCluj) &lt;a href="https://twitter.com/RailsGirlsCluj/status/784847271645028352"&gt;October 8, 2016&lt;/a&gt;&lt;/blockquote&gt;</span>
+<span class="nt">&lt;script </span><span class="na">async</span> <span class="na">src=</span><span class="s">"//platform.twitter.com/widgets.js"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<h2 id=embed-instagram-posts>Embed Instagram posts</h2>
+<p>To embed posts from Instagram, begin by pasting the following code into your file:</p>
+<div class=highlight><pre class="highlight plaintext"><code>{::options parse_block_html="false" /}
+
+&lt;div align="center"&gt;
+</code></pre></div>
+<p>Then go to the relevant Instagram post on the web: Go to the post URL if you have it, or you can search for the username on <a href="https://www.instagram.com/">Instagram.com</a>, visit their profile, and then click the post to expand it. Click the more […] button and select "Embed."</p>
+<p>Copy the code and paste it below <code>&lt;div align="center"&gt;</code>.</p>
+<p>Add <code>&lt;/div&gt;</code> after the code you pasted from Instagram.</p>
+<h2 id=embed-gitlab-snippets>Embed GitLab Snippets</h2>
+<p>To embed <a href="https://docs.gitlab.com/ee/user/snippets.html#embedded-snippets">GitLab Snippets</a>
+to a markdown file, copy the embed code from your public snippet and paste it in the file.</p>
+<p>Markup:</p>
+<div class=highlight><pre class="highlight html"><code><span class="c">&lt;!-- leave a blank line here --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://gitlab.com/gitlab-org/gitlab-ce/snippets/1717978.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="c">&lt;!-- leave a blank line here --&gt;</span>
+</code></pre></div>
+<p>Renders:</p>
+<script src="https://gitlab.com/gitlab-org/gitlab-ce/snippets/1717978.js"></script>
+<h2 id=markdown-editors>Markdown Editors</h2>
+<p>Please use the editors available on GitLab.com, one of the following code editors, or your preferred <strong>code editor</strong> to write in markdown.</p>
+<p>It is <strong>not</strong> recommended writing your document in a regular text editor like Google Docs, Microsoft Word, or macOS's Pages, then copy-pasting to markdown,
+as it most likely will bring some characters with a different encoding (non UTF-8), which will cause the
+markdown to not render correctly.</p>
+<p>In case you don't have a choice and need to import a text already written in a text editor, paste it
+to your markdown file using <strong>command+shift+V</strong> on a Mac, or <strong>control+shift+V</strong> on Windows or Linux.
+You might minimize the cause of trouble by pasting without format. But yet, is not guaranteed it
+is going to work, so double check your output.</p>
+<p>If the document was in Google Docs, you can install the <a href="https://workspace.google.com/marketplace/app/docs_to_markdown/700168918607">Docs to Markdown</a> add-on, which helps convert the Google Docs to markdown. You'll likely need to make minor updates or edits to the markdown that the add-on generates.</p>
+<p><em>Editors Available on GitLab.com</em></p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/user/project/web_ide/">Web IDE</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/repository/web_editor.html">Web Editor</a></li>
+</ul>
+<p><em>Regular Code Editors</em></p>
+<ul>
+<li><a href="https://www.sublimetext.com/3">Sublime Text 3</a></li>
+<li><a href="https://code.visualstudio.com/">VS Code</a></li>
+</ul>
+<p><em>Markdown editors (type and preview simultaneously)</em></p>
+<ul>
+<li>Markdown editors for Mac: <a href="https://macdown.uranusjr.com/">MacDown</a>, <a href="https://ia.net/writer/">iA Writer</a></li>
+<li>In-browser markdown editor: <a href="https://stackedit.io/">StackEdit</a></li>
+<li><a href="https://www.tablesgenerator.com/markdown_tables">Markdown Tables Generator</a></li>
+</ul>
+<p>If you're not used to writing markdown, these editors can be helpful. Many editors offer realtime previews and while these previews may not be exactly the same as the final result they can be a very good approximation, which gives you a good idea of what the output will be while you type.</p>
+<p><a href="https://stackedit.io/">StackEdit</a> is awesome too, you can work on a markdown file even if you're away from your computer,
+or out of resources. It works from every major browser and automatically saves your work to Google Drive.</p>
+<p>Do you want a simple way of copying a hyperlink title and address in markdown? The <a href="https://chrome.google.com/webstore/detail/format-link/pocemhmkmchpgamlnocemnbhlcjcbjgg">Format Link</a> extension offers a quick and easy way to do this, along with allowing you to customize any number of other formats. <a href="https://docs.google.com/document/d/1y3xdjwgiVsTpVBAEFhK1nn7G6iJm8p5nIEfAoKt_oBk/edit#heading=h.51mhaa5pq2zt">View detailed instructions and examples</a>.</p>
+<p>If you're looking for just the ability to copy something as markdown, try
+these <a href="https://addons.mozilla.org/firefox/search/?q=copy+markdown">Firefox add-ons</a>
+or <a href="https://chrome.google.com/webstore/search/copy+markdown">Chrome extensions</a>.</p>
+<h2 id=tips--tricks>Complementary Notes</h2>
+<ul>
+<li>Words must be separated by one single space only. Do not leave more blank spaces than the necessary,
+they can render differently than expected and can cause other issues.</li>
+<li>Do not leave blank spaces at the end of sentences.</li>
+<li id=jump-a-line>
+<p>Always leave a blank line between block-level markup elements, except between list items. Example:</p>
+<div class=highlight><pre class="highlight html"><code>  ---- (markup for horizontal line)
+  <span class="c">&lt;!-- blank line --&gt;</span>
+  Paragraph.
+  <span class="c">&lt;!-- blank line --&gt;</span>
+  Do not leave blank lines within list items:
+  <span class="c">&lt;!-- blank line --&gt;</span>
+  - Item 1
+  - Item 2
+  - Item 3
+</code></pre></div> </li>
+<li>As explained <a href="#headings">above</a>, do <strong>not</strong> skip headings. Always do h1 → h2 → h3 → h4. Never h2 → h4.</li>
+<li>Prefer short titles and headings. Do not punctuate them (unless they require a question mark or an exclamation).</li>
+<li>Try not to punctuate list items, but if you do, be consistent and do that throughout the list.</li>
+<li>If you have to mention a non-clickable URL, prefer using backticks: <code>http://an-example.com</code>.</li>
+<li>To add fancy emoji to your file, click <code>control+cmd+space</code> on your Mac and check the ⭐️ <strong>magic</strong> ⭐ or use a website like <a href="https://emojifinder.com/">Emoji Finder</a>. Do not overuse them, please!</li>
+<li>If you are confused about any markup that you've found in this file, you can check its <a href="https://gitlab.com/gitlab-com/www-gitlab-com/-/raw/master/sites/handbook/source/handbook/markdown-guide/index.html.md"><code>raw</code> file</a> for reference,
+where you'll be able to see exactly how everything was written to produce the results you are seeing on this page.</li>
+</ul>
+<h2 class=no_toc id=more>More</h2>
+<p>Anything else you know of and is not described here? Any new magic? Any trick? Please contribute!</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/community/markdown-guide-middleman/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/community/markdown-guide-middleman/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/popperjs.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/highlight-tooltip.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

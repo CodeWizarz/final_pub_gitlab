@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Group Direction - Anti-Abuse
+|
+GitLab
+</title>
+<meta content='Protect against abuse within GitLab instances' name=description />
+<meta content='Protect against abuse within GitLab instances' name='twitter:description'/>
+<meta content='Protect against abuse within GitLab instances' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Group Direction - Anti-Abuse' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/govern/anti-abuse/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/govern/anti-abuse/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Group Direction - Anti-Abuse' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/govern/anti-abuse/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target=".qnav">
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Group Direction - Anti-Abuse
+</h1>
+</div>
+</div>
+<div class="wrapper sidebar-layout-wrapper clearfix">
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/sam.white'>
+<img
+src='/images/team/samuelwhite.png'
+class=codeowner-avatar-img
+alt='Sam White'
+title='Sam White'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+</a>
+</div>
+</div>
+</aside>
+<div class=" container md-page">
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/govern/">Product Stage Direction - Govern</a></li><li>Group Direction - Anti-Abuse</li>
+</ol>
+<div class="hidden-md hidden-lg">
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/sam.white'>
+<img
+src='/images/team/samuelwhite.png'
+class=codeowner-avatar-img
+alt='Sam White'
+title='Sam White'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+</a>
+</div>
+</div>
+</div>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 class=no_toc id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#goal" id=markdown-toc-goal>Goal</a> <ul>
+<li><a href="#categories" id=markdown-toc-categories>Categories</a></li>
+</ul>
+</li>
+<li><a href="#mission" id=markdown-toc-mission>Mission</a></li>
+<li><a href="#our-responsibilities" id=markdown-toc-our-responsibilities>Our Responsibilities</a> <ul>
+<li><a href="#ownership" id=markdown-toc-ownership>Ownership</a> <ul>
+<li><a href="#captcha" id=markdown-toc-captcha>CAPTCHA</a></li>
+<li><a href="#user-trust-score" id=markdown-toc-user-trust-score>User Trust Score</a></li>
+<li><a href="#barriers-to-entry" id=markdown-toc-barriers-to-entry>Barriers to entry</a></li>
+<li><a href="#pvs-pipeline-validation-service" id=markdown-toc-pvs-pipeline-validation-service>PVS (Pipeline validation service)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#confidential-issues" id=markdown-toc-confidential-issues>Confidential issues</a></li>
+<li><a href="#the-plan" id=markdown-toc-the-plan>The Plan</a> <ul>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What We Recently Completed</a></li>
+</ul>
+</li>
+<li><a href="#overview-1" id=markdown-toc-overview-1>Overview</a></li>
+<li><a href="#priorities" id=markdown-toc-priorities>Priorities</a> <ul>
+<li><a href="#gitlab-team-members-can-reach-anti-abuse-via" id=markdown-toc-gitlab-team-members-can-reach-anti-abuse-via>GitLab team members can reach Anti-Abuse via:</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=overview>Overview</h2>
+<p>Create protections against abusive activity within a GitLab instance. This includes abuse, spam, and other activity for users within a GitLab instance.</p>
+<h3 id=goal>Goal</h3>
+<p>Protect GitLab instances from user behavior that disrupts productivity or an organization's ability to build and deploy code.</p>
+<p>This group will help eradicate fake accounts, proactively identify and remove bad actors, and help GitLab better understand our legitimate users. This group will directly protect the stability, performance, and scalability of GitLab for millions of users across the world ensuring they can effectively use GitLab for their daily development needs.</p>
+<h4 id=categories>Categories</h4>
+<p>The Anti-Abuse group is currently made up of two product categories:</p>
+<ul>
+<li><a href="/direction/govern/anti-abuse/instance_resiliency/">Instance Resiliency</a> - Detect and prevent malicious activity from occurring within GitLab Instances.</li>
+<li><a href="/direction/govern/anti-abuse/insider_threat/">Insider Threat</a> - Insider Threat identifies attacks and high-risk behaviors by correlating different data sources and observing behavioral patterns.</li>
+</ul>
+<h3 id=mission>Mission</h3>
+<p>We make abuse manageable.</p>
+<p>Our goal is not to completely eradicate abuse. Barriers to stopping abusive behavior have an exponentially diminishing rate of return. The more barriers that you impose to stop abuse the more you discourage legitimate usage. As a result, efforts to stop abuse become more costly than the abuse itself. Our goal is to surface abuse before it causes disruption and allow our automated systems, the Trust and Safety team, or the admin of the self-managed instance to take the correct action for that abuse – or correct any action that was taken in error</p>
+<h3 id=our-responsibilities>Our Responsibilities</h3>
+<ul>
+<li>Implement CAPTCHA to prevent malicious programmatic actions</li>
+<li>Implement User Trust Score to inform rate or usage limiting</li>
+<li>Introduce barriers to entry at signup to prevent repetitive abusers from accessing the platform</li>
+<li>Maintain Pipeline Validation Service (PVS) to prevent those users who make it through our barriers from utilizing the GitLab platform in a disruptive or malicious way.</li>
+<li>Manage the integration of <a href="https://arkoselabs.com">Arkose Labs</a> into GitLab.com to help protect against abuse and inauthentic behavior.</li>
+</ul>
+<h4 id=ownership>Ownership</h4>
+<h5 id=captcha>CAPTCHA</h5>
+<ul>
+<li>Utility
+<ul>
+<li>We use CAPTCHA to prevent programmable actions with the UI.</li>
+</ul>
+</li>
+<li>Stakeholders
+<ul>
+<li>Trust and Safety</li>
+</ul>
+</li>
+</ul>
+<h5 id=user-trust-score>User Trust Score</h5>
+<ul>
+<li>Utility
+<ul>
+<li>We use the User Trust Score to gauge the intent of a user. The score should predict how likely a user is to utilize the platform maliciously. Conversely, the User Trust Score should also predict how likely the user is to become a valuable user of the platform.</li>
+</ul>
+</li>
+<li>Stakeholders
+<ul>
+<li>Security Automation</li>
+<li>Growth</li>
+<li>Product Analytics</li>
+<li>Trust &amp; Safety</li>
+</ul>
+</li>
+</ul>
+<h5 id=barriers-to-entry>Barriers to entry</h5>
+<ul>
+<li>Utility
+<ul>
+<li>The majority of abuse stems from new users. Barriers to entry are a mechanism to prevent repetitive abuse by placing additional barriers in front of users that we determine could be at high risk of perpetrating abuse.</li>
+</ul>
+</li>
+<li>Stakeholders
+<ul>
+<li>Growth</li>
+</ul>
+</li>
+</ul>
+<h5 id=pvs-pipeline-validation-service>PVS (Pipeline validation service)</h5>
+<ul>
+<li>Utility
+<ul>
+<li>PVS monitors abusive behavior within pipelines to prevent users from utilizing pipelines for other-than-intended use cases.</li>
+</ul>
+</li>
+<li>Stakeholders
+<ul>
+<li>Enablement</li>
+</ul>
+</li>
+</ul>
+<h2 id=confidential-issues>Confidential issues</h2>
+<p>Several issues are intentionally confidential despite our value of transparency. This is because we don't want to make it obvious to abusers the exact details of our controls. We aren't relying on "security by obscurity"; however, we also don't want to make it easier for the abusers.</p>
+<h2 id=the-plan>The Plan</h2>
+<h3 id=what-we-recently-completed>What We Recently Completed</h3>
+<ul>
+<li>Initial implementation of <a href="https://docs.gitlab.com/ee/administration/external_pipeline_validation.html">Pipeline Validation Service</a></li>
+<li>Various changes to GitLab.com to help mitigate Cryptomining abuse. <a href="https://about.gitlab.com/blog/2021/05/17/prevent-crypto-mining-abuse/">Read more about coming changes</a>.</li>
+<li>Initial implementation of <a href="https://docs.gitlab.com/ee/user/group/reporting/git_abuse_rate_limit.html">Git abuse rate limiting</a></li>
+</ul>
+<h2 id=overview-1>Overview</h2>
+<p>Anti-abuse is a group in the Govern stage. There are two categories in the group and details on the direction can be viewed on the following individual category pages:</p>
+<ol>
+<li><a href="/direction/govern/anti-abuse/instance_resiliency/">Instance Resiliency</a></li>
+<li><a href="/direction/govern/anti-abuse/insider_threat/">Insider Threat</a></li>
+</ol>
+<h2 id=priorities>Priorities</h2>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Name</th>
+<th>DRI</th>
+<th>Size</th>
+<th>Target release</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/442049">Confidential</a></td>
+<td><code>TBD</code></td>
+<td><code>S</code></td>
+<td><code>16.11</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/modelops/anti-abuse/-/epics/32">Iteration 1: Instance Resiliency v2 Vision</a></td>
+<td><code>@eugielimpin</code></td>
+<td><code>L</code></td>
+<td><code>17.1</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/455706">Confidential</a></td>
+<td><code>TBD</code></td>
+<td><code>S</code></td>
+<td><code>TBD</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/modelops/anti-abuse/-/epics/33">Iteration 2: Instance Resiliency v2 Vision</a></td>
+<td><code>@imand3r</code></td>
+<td><code>L</code></td>
+<td><code>17.3</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13129">Cells 1.0 - Anti-abuse feature compatibility</a></td>
+<td><code>TBD</code></td>
+<td><code>L</code></td>
+<td><code>TBD</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/434261">Bug: Delayed user deletion does not consider elevated roles in subgroup for immediate deletion</a></td>
+<td><code>TBD</code></td>
+<td><code>S</code></td>
+<td><code>TBD</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/modelops/anti-abuse/-/epics/36">Iteration 3: Instance Resiliency v2 Vision</a></td>
+<td><code>TBD</code></td>
+<td><code>L</code></td>
+<td><code>TBD</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/modelops/anti-abuse/-/epics/37">Iteration 4: Instance Resiliency v2 Vision</a></td>
+<td><code>TBD</code></td>
+<td><code>L</code></td>
+<td><code>TBD</code></td>
+</tr>
+</tbody>
+</table>
+<p>*This page may contain information related to upcoming products, features and functionality.</p>
+<p>It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes.</p>
+<p>Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features, or functionality remain at the sole discretion of GitLab Inc.*</p>
+<h3 id=gitlab-team-members-can-reach-anti-abuse-via>GitLab team members can reach Anti-Abuse via:</h3>
+<p>Slack: #g_govern_anti-abuse channel</p>
+<p align=center>
+<i><br/>
+Last Reviewed: 2024-04-16<br/>
+Last Updated: 2024-04-16
+</i>
+</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/govern/anti-abuse/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/govern/anti-abuse/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

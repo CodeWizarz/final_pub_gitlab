@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+May 2, 2016 Security Release Root Cause Analysis
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab May 2, 2016 Security Release Root Cause Analysis for GitLab Community Edition (CE) and Enterprise Edition (EE)' name=description />
+<meta content='Learn more about GitLab May 2, 2016 Security Release Root Cause Analysis for GitLab Community Edition (CE) and Enterprise Edition (EE)' name='twitter:description'/>
+<meta content='Learn more about GitLab May 2, 2016 Security Release Root Cause Analysis for GitLab Community Edition (CE) and Enterprise Edition (EE)' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='May 2, 2016 Security Release Root Cause Analysis' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2016-06-29-may-2-2016-security-release-post-mortem.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2016/06/29/may-2-2016-security-release-post-mortem/' property='og:url'/>
+<meta content=2016-06-29 property='article:published_time'/>
+<meta content='https://about.gitlab.com/about' property='article:author'/>
+<meta content="https://about.gitlab.com/images/default-blog-image.png" property="og:image">
+<meta content="https://about.gitlab.com/images/default-blog-image.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='May 2, 2016 Security Release Root Cause Analysis' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2016/06/29/may-2-2016-security-release-post-mortem/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Jun 29, 2016
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#stanhu">Stan Hu</a>
+<a href="https://twitter.com/stanhu"><span>&nbsp;</span>
+<span class=author-twitter>
+<i class='fab fa-twitter'></i>
+</span>
+</a></span>
+<h1>
+May 2, 2016 Security Release Root Cause Analysis
+</h1>
+<p class=description>
+Learn more about GitLab May 2, 2016 Security Release Root Cause Analysis for GitLab Community Edition (CE) and Enterprise Edition (EE)
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/default-blog-image.png);'></div>
+<div class=content>
+<p>On May 2, 2016, we released a <a href="/releases/2016/05/02/cve-2016-4340-patches/">major security
+update</a>, primarily
+to fix a critical security issue that allowed a user to gain administrative
+access via the "impersonate" feature. Now that some time has passed and most
+of our users have had sufficient time to upgrade, we'd like to reflect on what
+happened, how it occurred, and what we're doing in the future to improve
+security in the GitLab code base.</p>
+<p>Since May 2, we have released a number of security updates to address certain
+vulnerabilities, but none of the updates have addressed a bug as serious as
+the one in the "impersonate user" feature, which is now known as
+<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4340">CVE-2016-4340</a>.
+We released this feature in November of 2015 in GitLab 8.2. It enables admins
+to diagnose issues with their GitLab installation by allowing them to see what
+their users see. Since the initial implementation, members from the community
+helped improve the code, but nobody noticed there was a security hole in one
+of the controller methods.</p>
+<h2 id=discovering-the-hole>Discovering the hole</h2>
+<p>All that changed on Friday, April 22, 2016, when Douwe Maan, our Backend Lead,
+began reviewing the code for the feature. Having reviewed hundreds of merge
+requests and handled an influx of <a href="https://hackerone.com">HackerOne</a> security
+reports, Douwe immediately spotted something wrong: a critical authorization
+flaw in one of the API endpoints. This flaw would allow a user to gain full
+GitLab administrative access. Within an hour, Douwe submitted a fix
+internally. Over the weekend, we began strategizing about how best to roll out
+this fix to the community.</p>
+<p>Our first question: How do we protect GitLab.com against this vulnerability
+without disclosing details that might harm users who have their own
+installations of GitLab? We first considered applying a hotfix to GitLab.com,
+but our infrastructure team had no desire to do this. Applying hotfixes to a
+live-running, production system is fraught with perils, and we did not want to
+risk causing other issues. Instead, our Infrastructure Lead, Pablo Carranza
+proposed blocking the vulnerable route via a HAProxy rule. This would only be
+a simple configuration change in one place. The following Tuesday, Pablo
+applied the HAProxy rule and verified that it successfully blocked the route.</p>
+<p>With GitLab.com patched with this workaround, we next had to consider: how
+much advance notice should we give to our users about a security release?
+Since GitLab is open source, releasing an update means the code would be
+available for any malicious user to study how to exploit the hole. At first,
+we decided on a 3-hour timeline:</p>
+<ol>
+<li>Send a security announcement on our security mailing list (T-3 hours)</li>
+<li>Make the GitLab packages online and update GitLab.com (T-1 hour)</li>
+<li>Announce on the blog (T)</li>
+</ol>
+<p>For most zero-day vulnerabilities, vendors simply announce updated packages and
+encourage users to update immediately. However, after further discussion, we
+felt releasing GitLab in a 3-hour window would not be responsible due to a
+number of reasons:</p>
+<ul>
+<li>Most administrators would be caught off-guard without at least 24-hour notice</li>
+<li>The severity and ease-of-exploit of the bug could cause significant problems</li>
+<li>Native package maintainers of GitLab (e.g. Debian, FreeBSD, etc.) would not
+have updates in time</li>
+</ul>
+<h2 id=warning-users>Warning Users</h2>
+<p>These reasons convinced us to take the unusual step of giving a notice of an
+impending release for the following Monday. On Wednesday, April 27 around
+5:30 pm UTC, we sent out this announcement to our security mailing list:</p>
+<blockquote>
+<p>We have discovered a critical security issue in all GitLab CE and EE versions from 8.2 to 8.7.</p>
+<p>On Monday May 2, 2016 at 5:00pm PDT, we will publish new GitLab patch releases
+for all affected versions. We strongly recommend that all installations
+running a version mentioned above be upgraded as soon as possible after the
+release. Please forward this alert to the appropriate person at your
+organization and have them subscribe to Security Notices. The following
+versions are affected:</p>
+<p>8.7.0</p>
+<p>8.6.0 through 8.6.7</p>
+<p>8.5.0 through 8.5.11</p>
+<p>8.4.0 through 8.4.9</p>
+<p>8.3.0 through 8.3.8</p>
+<p>8.2.0 through 8.2.4</p>
+</blockquote>
+<p>In addition, we shared patches privately with GitLab package maintainers, who
+all appreciated the advanced warning. They immediately began work on updating
+their native packages with the changes.</p>
+<h2 id=early-release>Early Release?</h2>
+<p>The next day, Thursday, we completed the long task of incorporating the
+patches and building a total of 42 Omnibus packages for all six releases to a
+private repository. We updated GitLab.com to 8.7.1, which contained the fix,
+and removed the HAProxy workaround.</p>
+<p>Some recipients of the e-mail <a href="https://news.ycombinator.com/item?id=11582634">expressed confusion on Hacker
+News</a> because they did not see
+a security announcement on our blog. They suspected the e-mail was spam.</p>
+<p>After reading the Hacker News post, CEO Sid Sijbrandij pointed out that
+announcing the affected versions dramatically reduced the search scope of the
+bug. An attacker could see what changed between 8.1 and 8.2 and discover the
+vulnerability. If someone exploited the bug over this weekend, customers would
+have no way to patch their installations for several days. A discussion ensued
+about whether to move up the release earlier. Instead of Monday, what about
+Thursday or Friday? We nixed Thursday because the day was over for our
+European team; more time was needed to have the packages ready. We considered
+moving the release up to Friday, but a number of people on the team argued that
+this was not a good idea. Senior Developer Robert Speicher articulated it well:</p>
+<blockquote>
+<p>We chose the date we did to give people time to prepare. A smart, nefarious
+person <em>might</em> figure out the exploit over the weekend, but releasing early
+<em>will</em> catch people off-guard and put the exploit into the wild.</p>
+</blockquote>
+<p>We decided to stay with Monday but prepare everything just in case we needed
+to release early. In addition, we <a href="/releases/2016/04/28/gitlab-major-security-update-for-cve-2016-4340/">belatedly posted a blog entry to match our
+security e-mail notice</a>,
+but this time we omitted the affected versions.</p>
+<h2 id=releasing-to-the-public>Releasing to the Public</h2>
+<p>Monday, May 2, 2016 came without incident, and the day of the rollout went
+smoothly. Around 11:59 UTC, we transferred all 42 Omnibus packages from our
+private repository to the public one and pushed up new Docker images to Docker
+Hub. We published the blog post, code, and disclosed all
+previously-confidential issues to the public on GitLab.com. The security
+update hit <a href="https://news.ycombinator.com/item?id=11617299">the front page of Hacker
+News</a>.</p>
+<h2 id=what-went-right>What Went Right</h2>
+<p>A number of things went right:</p>
+<ul>
+<li>There were no reported incidents of anyone exploiting this bug prior to our disclosure.</li>
+<li>We were able to reproduce, fix, and test the security vulnerabilities quickly.</li>
+<li>Even though we are a remotely-distributed team, we were able to effectively communicate and
+pull together to get the many tasks done for the security update.</li>
+</ul>
+<h2 id=what-we-are-doing-to-improve>What We Are Doing to Improve</h2>
+<p>At GitLab, we prioritize security issues and try to address them as soon as
+possible. Since this release, we have learned a number of things that have
+been put into action:</p>
+<ul>
+<li>We need a better workflow/tools to produce confidential merge requests and packages. <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/14567">#14567</a></li>
+<li>When we send out security notices via e-mail, we should always have an accompanying blog post.</li>
+<li>In the future, if we send an early security notice, we will omit the version
+numbers affected to prevent people zeroing in on the vulnerability.</li>
+<li>We need better abstractions for our permission checking <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/15450">#15450</a></li>
+<li>We need to <a href="/job-families/security/security-engineer/">hire full-time engineers to focus on improving security</a> and to conduct internal audits of our code</li>
+<li>We need to promote our <a href="https://hackerone.com/gitlab">bug bounty program</a> on sites like HackerOne</li>
+</ul>
+<p>In general, we received positive responses to this May 2016 security
+release. Many of our users understood that giving advance notice for a
+security update made sense. We thank the GitLab community for their patience
+and understanding. We will continue to be vigilant about security issues
+within GitLab.</p>
+<p>If you have not already, please sign up on for future <a href="/company/contact/">security
+notices</a> on this page.</p>
+<h2 id=join-us-on-july-27th-for-our-joint-webcast-with-yubico>Join us on July 27th for our joint webcast with Yubico</h2>
+<p>We recognize that security is a growing concern for a number of teams. We're partnering with
+Yubico again. This time to discuss industry trends and best practices for security. Here's
+a quick look at what we'll be talking about.</p>
+<ul>
+<li>Key trends that affect the security of your team</li>
+<li>Real-life examples of how both GitLab and Yubico work to improve security</li>
+<li>Advice on industry best practices</li>
+</ul>
+<p>If you're interested in learning more or asking security-related questions, please
+join us on July 27th. <a href="https://page.gitlab.com/July27WebcastSecurityWebcastwYubico_LandingPage.html">Register here.</a></p>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=May+2%2C+2016+Security+Release+Root+Cause+Analysis+via+%40stanhu&amp;url=https://about.gitlab.com/releases/2016/06/29/may-2-2016-security-release-post-mortem/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+May 2, 2016 Security Release Root Cause Analysis
+via @stanhu
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2016/06/29/may-2-2016-security-release-post-mortem/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2016/06/29/may-2-2016-security-release-post-mortem/&amp;text=May 2, 2016 Security Release Root Cause Analysis' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2016/06/29/may-2-2016-security-release-post-mortem/&amp;title=May 2, 2016 Security Release Root Cause Analysis&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2016/06/29/may-2-2016-security-release-post-mortem/&amp;t=May 2, 2016 Security Release Root Cause Analysis' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2016/06/28/gitlab-8-dot-9-dot-2-released/" title="GitLab 8.9.2, 8.8.6, and 8.7.8 released"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.9.2, 8.8.6, and 8.7.8 released
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2016/07/04/gitlab-8-dot-9-dot-4-released/" title="GitLab 8.9.4, 8.8.7, and 8.7.9 released"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.9.4, 8.8.7, and 8.7.9 released
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2016-06-29-may-2-2016-security-release-post-mortem.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2016-06-29-may-2-2016-security-release-post-mortem.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+document.getElementById("dismiss-trial").addEventListener("click",(function(){document.getElementById("sticky-banner").style.display="none"}));

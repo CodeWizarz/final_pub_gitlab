@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Feature Comparison: Azure DevOps vs. GitLab CI/CD
+|
+GitLab
+</title>
+<meta content='Microsoft has provided a feature comparison vs. GitLab which, although it is not fully accurate, highlights the areas where they see an advantage over us.' name=description />
+<meta content='Microsoft has provided a feature comparison vs. GitLab which, although it is not fully accurate, highlights the areas where they see an advantage over us.' name='twitter:description'/>
+<meta content='Microsoft has provided a feature comparison vs. GitLab which, although it is not fully accurate, highlights the areas where they see an advantage over us.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Feature Comparison: Azure DevOps vs. GitLab CI/CD' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/verify/continuous_integration/azure_devops_detail.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/verify/continuous_integration/azure_devops_detail.html' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Feature Comparison: Azure DevOps vs. GitLab CI/CD' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/verify/continuous_integration/azure_devops_detail.html' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Feature Comparison: Azure DevOps vs. GitLab CI/CD
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/jreporter'>
+<div class=codeowners-single>
+<img
+src='/images/team/jackiemeshell.png'
+class=codeowner-avatar-img
+alt='Jackie Porter'
+title='Jackie Porter'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Jackie Porter
+</div>
+<div class=codeowners-handle>
+@jreporter
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/verify/continuous_integration/azure_devops_detail.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/verify/">Verify Stage Direction</a></li><li><a href="/direction/verify/continuous_integration/">Category Direction - Continuous Integration</a></li><li>Feature Comparison: Azure DevOps vs. GitLab CI/CD</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#triggers-and-gates" id=markdown-toc-triggers-and-gates>Triggers and Gates</a></li>
+<li><a href="#platforms" id=markdown-toc-platforms>Platforms</a></li>
+<li><a href="#orchestration" id=markdown-toc-orchestration>Orchestration</a></li>
+<li><a href="#code-quality--security" id=markdown-toc-code-quality--security>Code Quality &amp; Security</a></li>
+<li><a href="#deployment-targets" id=markdown-toc-deployment-targets>Deployment Targets</a></li>
+<li><a href="#integrations-and-extensions" id=markdown-toc-integrations-and-extensions>Integrations and Extensions</a></li>
+</ul>
+<p>Microsoft has provided a <a href="https://docs.microsoft.com/en-us/azure/devops/learn/compare/azure-devops-vs-gitlab">feature comparison vs. GitLab</a> which, although it is not fully accurate, highlights the areas where they see an advantage over us. Areas noted are:</p>
+<h4 id=triggers-and-gates>Triggers and Gates</h4>
+<p>We're in the middle of making a major overhaul to our cross-pipeline triggering capabilities. We already have a <code>trigger</code> keyword to start a downstream pipeline in any project, and we're introducing a <code>needs</code> keyword to define these relationships from the downstream itself via <a href="https://gitlab.com/gitlab-org/gitlab/issues/9045">gitlab#9045</a>. We're also adding status checking behaviors via <a href="https://gitlab.com/gitlab-org/gitlab/issues/11238">gitlab#11238</a> that will enable control over waiting/acting on different</p>
+<p>As far as gates, we think it's important for CI/CD pipelines not to be built with manual approval gates in them. That said, we of course recognize the importance of collecting approvals as part of a well run, compliant delivery process. To that end we're implementing <a href="https://gitlab.com/gitlab-org/gitlab/issues/9187">gitlab#9187</a> to wait for approvals on the MR before proceeding, which can follow your standards for MR approvals. This bundles the approval nicely right into the natural development workflow, avoiding a "process trap" where a sub-optimal solution is easy to gravitate towards and get stuck in. More information on how we're thinking about compliance in the release process can be viewed at our <a href="/direction/release/release_governance">Release Governance</a> category page.</p>
+<p>Build triggering and batching is also something we're looking into. We're introducing Merge Trains via <a href="https://gitlab.com/gitlab-org/gitlab/issues/9186">gitlab#9186</a>, with a quick follow up to add a parallelization strategy <a href="https://gitlab.com/gitlab-org/gitlab/issues/11222">gitlab#11222</a>. Merge trains are a very powerful way to control the flow of changes into a target branch/environment by ensuring that master is always green. In concert with features like <a href="https://docs.gitlab.com/ee/ci/pipelines/merged_results_pipelines.html">merged results pipelines</a>, which run branch pipelines on the potential merge result into the target branch, it's very easy to keep a green master using GitLab.</p>
+<h4 id=platforms>Platforms</h4>
+<p>Auto DevOps works with Kubernetes on any of these platforms, including your own self-hosted Kubernetes, and looks and acts identically to your developers no matter which provider use. We do want to make it absolutely as easy as possible to deploy to these providers, even if you're not using Auto DevOps/Kubernetes, so we have issues like <a href="https://gitlab.com/gitlab-org/gitlab/issues/26777">gitlab#26777</a> which will provide syntactic sugar to make things simpler without locking you in.</p>
+<p>As far as runners, it is actually already possible to use runners with these operating systems, but it requires you to bring your own which is a definite barrier to getting up and running quickly. We are tracking the infrastructure deliverables we need to achieve this goal in our epic <a href="https://gitlab.com/groups/gitlab-com/-/epics/42">gitlab-com&amp;42</a>, along with the issue <a href="https://gitlab.com/gitlab-org/gitlab-runner/issues/4601">gitlab-runner#4601</a>. As these are completed we will bring Windows and macOS into the shared fleet as well.</p>
+<p>They also list that we do not support ARM development, however this is false. We do have an open issue for running a GitLab Runner on ARM at <a href="https://gitlab.com/gitlab-org/gitlab-runner/issues/2076">gitlab-runner#2076</a> which will allow you also to build <em>from</em> ARM devices.</p>
+<h4 id=orchestration>Orchestration</h4>
+<p>In the orchestration category it's listed that we don't provide a visual editor for build and release orchestration. This is true, but it's because we've prioritized trying to keep our YAML syntax clean and understandable. We have two related open issues: <a href="https://gitlab.com/gitlab-org/gitlab/issues/15622">gitlab#15622</a> (visualize YAML) and <a href="https://gitlab.com/gitlab-org/gitlab/issues/15754">gitlab#15754</a> (edit YAML) but for now we continue to plan to focus on keeping pipelines easy and efficient to work with as-code.</p>
+<p>That said, there is a role for non-technical users to engage with pipelines - we just don't see that as the same thing as providing visual tools for editing release automation. For us, we are focused on solving these problems in the <a href="/direction/release/release_orchestration">Release Orchestration</a> category where we want to provide better ways for these users to engage with the release process without worrying about (even abstracted) technical implementation details.</p>
+<h4 id=code-quality--security>Code Quality &amp; Security</h4>
+<p>Although the page says we do not, we support JUnit and Java testing natively via our support for <a href="https://docs.gitlab.com/ee/ci/unit_test_reports.html">unit test reports</a>. We also support a <code>parallel</code> <a href="https://docs.gitlab.com/ee/ci/yaml/#parallel">keyword</a> for automatically parallelizing your test runs. We support .NET TRX format by leveraging <a href="https://github.com/gfoidl/trx2junit">trx2junit</a>, an open source conversion tool, and also plan to support the TRX format directly via <a href="https://gitlab.com/gitlab-org/gitlab/issues/28798">gitlab#28798</a>. We have plans to improve how we show test results over time via <a href="https://gitlab.com/gitlab-org/gitlab/issues/1020">gitlab#1020</a>. We also do actually already provide easy dynamic provisioning of environment in not just Azure or AWS, but any platform (including on-premise) using our <a href="https://docs.gitlab.com/ee/ci/review_apps/">Review Apps</a> feature.</p>
+<p>Mobile app testing is a priority for us, and you can read more at our <a href="/direction#mobile-strategy">use case page for mobile</a>.</p>
+<p>Finally, we do not rely on third-party plugins for security scanning (although you're welcome to bring your own). GitLab has this built in, and you can see our vision for how we are continuing to improve on these capabilities in our <a href="/direction/secure/">Secure</a> and <a href="/direction/govern/">Govern</a> category pages.</p>
+<h4 id=deployment-targets>Deployment Targets</h4>
+<p>As opposed to the claim in the document, it's actually possible to run your own GitLab runners on premise without hosting your own GitLab instance. Simply register your runners and they will work without requiring opening up an inbound firewall port from GitLab. This works for any installation - on-premise Kubernetes, cloud, physical hardware - you can always keep your runners close to your code for security, and we support this out of the box.</p>
+<p>Although the page refers to stale documentation for publishing to the App Store, we do have a recent blog post describing <a href="https://about.gitlab.com/blog/2019/03/06/ios-publishing-with-gitlab-and-fastlane/">how to get up and running with GitLab and FastLane</a> which has everything you need to get up and running doing iOS builds and App Store deployments with GitLab. More information can be found about our mobile strategy on our <a href="/direction#mobile-strategy">Mobile Use Case</a> page.</p>
+<h4 id=integrations-and-extensions>Integrations and Extensions</h4>
+<p>GitLab CI/CD does in fact support <a href="https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/">using an external repo</a>, although we don't support SVN or other non-git repos except through technologies like <a href="https://subgit.com/">SubGit</a> which could provide a transparent gateway. We also can provide CI/CD for <a href="https://about.gitlab.com/solutions/github/">GitHub</a> or <a href="https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/bitbucket_integration.html">BitBucket</a> repositories easily.</p>
+<p>It's true we do not provide a marketplace for CI/CD plugins. For the moment, our strategy is that moving towards having GitLab rely on too many third party plugins is a major risk for DevOps teams, as any maintainer of a Jenkins server will testify. Instead, our strategy is to <a href="https://about.gitlab.com/handbook/product/gitlab-the-product/#plays-well-with-others">play well with others</a> and welcome anyone who wants to make integrations work together with GitLab. We just don't foresee, at least for now, a future where there's an ecosystem of third-party plugins that you need to draw from in order to get what would otherwise be basic functionality out of GitLab. If you see a gap here and would like some technology you use to work better with GitLab we'd love for you to create an issue and let us know.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/verify/continuous_integration/azure_devops_detail.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/verify/continuous_integration/azure_devops_detail.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab Cloud Licensing Overview
+|
+GitLab
+</title>
+<meta content='On this page you can find more information about Cloud Licensing - the method GitLab uses to activate self-managed customer subscriptions.' name=description />
+<meta content='On this page you can find more information about Cloud Licensing - the method GitLab uses to activate self-managed customer subscriptions.' name='twitter:description'/>
+<meta content='On this page you can find more information about Cloud Licensing - the method GitLab uses to activate self-managed customer subscriptions.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab Cloud Licensing Overview' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='pricing/licensing-faq/cloud-licensing/index.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/pricing/licensing-faq/cloud-licensing/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab Cloud Licensing Overview' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/pricing/licensing-faq/cloud-licensing/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+GitLab Cloud Licensing Overview
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/courtmeddaugh'>
+<div class=codeowners-single>
+<img
+src='/images/team/courtneymeddaugh.jpeg'
+class=codeowner-avatar-img
+alt='Courtney Meddaugh'
+title='Courtney Meddaugh'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Courtney Meddaugh
+</div>
+<div class=codeowners-handle>
+@courtmeddaugh
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/pricing/licensing-faq/cloud-licensing/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li>GitLab Cloud Licensing Overview</li>
+</ol>
+<h3 class=no_toc id=on-this-page>On this page</h3>
+<ul id=markdown-toc>
+<li><a href="#what-is-cloud-licensing" id=markdown-toc-what-is-cloud-licensing>What is Cloud Licensing?</a> <ul>
+<li><a href="#why-cloud-licensing" id=markdown-toc-why-cloud-licensing>Why Cloud Licensing?</a></li>
+<li><a href="#what-data-does-gitlab-collect-and-why" id=markdown-toc-what-data-does-gitlab-collect-and-why>What Data Does GitLab Collect and Why?</a></li>
+<li><a href="#how-can-i-enable-cloud-licensing" id=markdown-toc-how-can-i-enable-cloud-licensing>How Can I Enable Cloud Licensing?</a> <ul>
+<li><a href="#customer-prerequisites-and-availability" id=markdown-toc-customer-prerequisites-and-availability>Customer Prerequisites and Availability</a></li>
+<li><a href="#activating-cloud-licensing" id=markdown-toc-activating-cloud-licensing>Activating Cloud Licensing</a></li>
+</ul>
+</li>
+<li><a href="#offline-cloud-licensing" id=markdown-toc-offline-cloud-licensing>Offline Cloud Licensing</a> <ul>
+<li><a href="#what-is-an-offline-cloud-license" id=markdown-toc-what-is-an-offline-cloud-license>What is an Offline Cloud License?</a></li>
+<li><a href="#how-do-offline-cloud-licenses-work" id=markdown-toc-how-do-offline-cloud-licenses-work>How do Offline Cloud Licenses Work?</a></li>
+</ul>
+</li>
+<li><a href="#additional-resources" id=markdown-toc-additional-resources>Additional Resources</a> <ul>
+<li><a href="#questions" id=markdown-toc-questions>Questions?</a></li>
+<li><a href="#related-documenation" id=markdown-toc-related-documenation>Related Documenation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id=what-is-cloud-licensing>What is Cloud Licensing?</h2>
+<p>Cloud Licensing allows GitLab customers to activate paid subscription features on self-managed instances using an activation code, rather than managing license files and manually uploading them to instances. This licensing method was <a href="/blog/2021/07/20/improved-billing-and-subscription-management/">first introduced in August 2021</a> and became the default activation method for Self Managed customers in July 2022. By activating through Cloud Licensing, a customer’s GitLab instance will <a href="https://docs.gitlab.com/ee/subscriptions/self_managed/#subscription-data-synchronization">synchronize subscription data</a> daily with GitLab.</p>
+<p>These regular synchronizations of usage data enable GitLab to better support you as you grow, and provides you with a simpler and more efficient billing and subscription management experience for subscription overages reconciliation, mid-term add ons, and renewals.</p>
+<h3 id=why-cloud-licensing>Why Cloud Licensing?</h3>
+<p>GitLab is moving away from license files so that we can more efficiently support you and your company's growth. Cloud Licensing provides:</p>
+<ol>
+<li><strong>The flexibility to manage licenses on your time:</strong> With the previous licensing method, GitLab customers had to work directly with a GitLab Sales team member to obtain additional license files for each year of a multi-year subscription, additional seats purchased or a subscription renewal. This manual process could cause slow downs and inefficiencies. With Cloud Licensing, all of these purchase types are automatically synced to your instance, without any action needed from you.</li>
+<li><strong>The efficiency you’ve been waiting for:</strong> Cloud Licensing is an important iteration to improve license efficiency for purchases, renewals, and add-ons. Cloud Licensing allows you to enable <a href="https://docs.gitlab.com/ee/subscriptions/quarterly_reconciliation.html">Quarterly Subscription Reconciliation</a>, which allows you to pay on a go-forward quarterly basis for overages, rather than paying in arrears for the full subscription term with our <a href="https://docs.gitlab.com/ee/subscriptions/quarterly_reconciliation.html#quarterly-reconciliation-vs-annual-true-ups">legacy true-up process</a>. Cloud Licensing also allows you to enable auto-renewal, removing the need for the manual renewal process.</li>
+</ol>
+<h3 id=what-data-does-gitlab-collect-and-why>What Data Does GitLab Collect and Why?</h3>
+<p>Cloud Licensing is made up of two parts:</p>
+<ol>
+<li><strong>Activation Method:</strong> A new activation method using a single activation code to synchronize license entitlements rather than multiple license keys.</li>
+<li><strong>Subscription data synchronization:</strong> Daily transmission of subscription data to GitLab.</li>
+</ol>
+<p>The data transmitted is limited to what is necessary to administer a GitLab license and support future renewals, add ons, and seat reconciliation. The data does not include any intellectual property, source code, or user personal information except the name, company name, and email address of the administrator account associated with the subscription, which are all encrypted within the License Key. No fields can be excluded from what is transmitted.</p>
+<p><strong>For the exact list of data fields included in License Sync, please refer to our <a href="https://docs.gitlab.com/ee/subscriptions/self_managed/#subscription-data">Subscription Data documentation</a>.</strong></p>
+<h3 id=how-can-i-enable-cloud-licensing>How Can I Enable Cloud Licensing?</h3>
+<h4 id=customer-prerequisites-and-availability>Customer Prerequisites and Availability</h4>
+<p>Cloud Licensing is available to all GitLab Self Managed customers – both those who work with GitLab directly, and those who work indirectly through a Channel or Alliances partner, regardless of payment or contract method. Cloud Licensing is not currently available for Education, Open Source, Startup, or Free Tier customers.</p>
+<p><strong>To use Cloud Licensing, you must be on GitLab version 14.1 or higher and have an internet connection.</strong> If you are not yet on version 14.1, you can <a href="https://docs.gitlab.com/ee/update/">upgrade your instance</a> to take advantage of the benefits of Cloud Licensing. You may also be unable to use Cloud Licensing if your instance is blocked by a firewall. If you are unable to apply an activation code you received to your instance, please <a href="https://about.gitlab.com/support/">contact our Support team</a> for troubleshooting or to receive a legacy license file.</p>
+<h4 id=activating-cloud-licensing>Activating Cloud Licensing</h4>
+<p>If you purchase(d) a new or renewal GitLab Self Managed subscription after July 2022, you can access your Cloud License activation code in your initial purchase email or from the <a href="https://customers.gitlab.com/">Customers Portal</a>. You can review our documentation for further details on <a href="https://docs.gitlab.com/ee/administration/license.html">how to activate your instance with an activation code</a>.</p>
+<p>If you are an existing customer using a legacy license file, you can activate Cloud Licensing mid-term - no need to wait for a renewal!</p>
+<ul>
+<li>If you purchased your subscription from GitLab directly, you can copy your activation code from the <a href="https://customers.gitlab.com/">Customers Portal</a> and <a href="https://docs.gitlab.com/ee/administration/license.html">apply it to your instance</a>.
+If you purchased your subscription through an authorized reseller, please submit a <a href="https://support.gitlab.com/hc/en-us/requests/new">new Support request</a> and select the reason type 'Licensing and renewal problem' to receive your cloud activation code.</li>
+</ul>
+<h3 id=offline-cloud-licensing>Offline Cloud Licensing</h3>
+<h4 id=what-is-an-offline-cloud-license>What is an Offline Cloud License?</h4>
+<p>For customers with an offline or air-gapped instance <strong>on GitLab version 15.0 or higher</strong> who want to take advantage of the benefits of Cloud Licensing, an Offline Cloud License may be an option on an approval-only basis. Offline Cloud Licenses offer an alternative to online License Sync by requesting you to manually provide usage data to GitLab on a monthly basis. Offline Cloud Licenses can help with smoother renewals and add-ons by providing GitLab with insight into the current state of a subscription, but does not support automated syncs of additional purchases given the lack of internet connectivity. Additional license files will be required.</p>
+<h4 id=how-do-offline-cloud-licenses-work>How do Offline Cloud Licenses Work?</h4>
+<p>If you have been approved for an Offline Cloud License, you will receive your license file via email. If you purchased from GitLab directly, you can also access your Offline license from the <a href="https://customers.gitlab.com/">Customers Portal</a>.</p>
+<p>Once you <a href="https://docs.gitlab.com/ee/administration/license_file.html">upload your license file to your instance</a>, you will receive monthly email reminders (sent to the account's <code>Sold To</code> contact) and in-app banners (visible to all instance admins) to <a href="https://docs.gitlab.com/ee/subscriptions/self_managed/index.html#export-your-license-usage">export your usage data</a> and email it to <code>renewals-service@customers.gitlab.com</code>. Exported usage data files include the <a href="https://docs.gitlab.com/ee/subscriptions/self_managed/#subscription-data">same data fields</a> as a Cloud License online sync and help GitLab to understand the current state of your subscription. When we receive this data, we automatically match against the file’s contents (not on the <code>From</code> email address) to ensure this data is stored correctly. Mime-types of <code>'application/octet-stream'</code>, <code>'text/csv'</code> and <code>'application/vnd.ms-excel'</code> are supported for shared usage files.</p>
+<p>The in-app reminder banners will appear until an admin completes the export of data, at which point they become dismissable and will not be displayed again until the following month. If usage data is not shared monthly while on an Offline Cloud License, GitLab will not have any insight into your current usage, which can complicate additional purchases and the renewal process. However, you will <em>not</em> be at risk of any downgrades or other impacts to your instance.</p>
+<p>If you are interested in Offline Cloud Licensing, please reach out to your account manager to understand if you may be a candidate.</p>
+<h3 id=additional-resources>Additional Resources</h3>
+<h4 id=questions>Questions?</h4>
+<ul>
+<li>For more information on your eligiblity for Cloud Licensing or Offline Cloud licensing, please contact your sales representative or fill out <a href="https://about.gitlab.com/sales/">this form</a>.</li>
+<li>For assistance on applying an activation code or license file, please <a href="https://about.gitlab.com/support/">contact our Support team</a>.</li>
+</ul>
+<h4 id=related-documenation>Related Documenation</h4>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/administration/license.html">How to activate your instance with a Cloud License activation code</a></li>
+<li><a href="https://docs.gitlab.com/ee/subscriptions/self_managed/#subscription-data">What data is included in Cloud or Offline shared usage data?</a></li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/pricing/licensing-faq/cloud-licensing/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/pricing/licensing-faq/cloud-licensing/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

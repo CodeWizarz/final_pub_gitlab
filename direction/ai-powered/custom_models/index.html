@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Group Direction - Custom Models
+|
+GitLab
+</title>
+<meta content='Focused on grounding and enriching AI models with Customer data to produce higher quality model outputs' name=description />
+<meta content='Focused on grounding and enriching AI models with Customer data to produce higher quality model outputs' name='twitter:description'/>
+<meta content='Focused on grounding and enriching AI models with Customer data to produce higher quality model outputs' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Group Direction - Custom Models' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/ai-powered/custom_models/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/ai-powered/custom_models/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Group Direction - Custom Models' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/ai-powered/custom_models/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Group Direction - Custom Models
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/tmccaslin'>
+<img
+src='/images/team/taylormccaslin.png'
+class=codeowner-avatar-img
+alt='Taylor McCaslin'
+title='Taylor McCaslin'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/ai-powered/custom_models/index.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/ai-powered/">Stage Direction - AI-powered</a></li><li>Group Direction - Custom Models</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h1 id=overview>Overview</h1>
+<p>The <a href="https://gitlab.com/groups/gitlab-org/-/epics/13068">Custom Models group </a>is dedicated to empowering GitLab users with the flexibility to deploy and customize GitLab Duo Features within their local environments. We also aim to allow customers to adapt Duo Features with their own data, based on their own code, needs, requirements and styles. Our goal is to give customers a more tailored Duo experience.</p>
+<p>We will leverage a variety of open source AI models to enable GitLab Duo functionality on all GitLab surfaces, to include Air-Gapped, Self-Managed, Dedicated, and Gitlab.com. We will ensure that supported features are of the highest possible quality using GitLab’s <a href="https://about.gitlab.com/blog/2024/05/09/developing-gitlab-duo-how-we-validate-and-test-ai-models-at-scale/">validation process</a>, and support customers in tailoring GitLab Duo features with their own source code and data. We will also work with other teams within GitLab to explore opportunities for customizing AI models across the platform.</p>
+<h1 id=what-drives-the-need-for-custom-models>What Drives The Need For Custom Models?</h1>
+<p>Regardless of how customers access GitLab, they deserve the chance to leverage Duo features. Customers have a wide variety of security and compliance requirements, some of which may preclude them from utilizing our existing Duo features that are enabled through GitLab.com. Providing customers with a self-hosted deployment option for Duo features will allow them to reap the benefits of AI while meeting their security and compliance requirements.</p>
+<p>Customers may also want to adapt their Duo experience more directly to their own organization. For example, a customer may want the ability to adapt Code Suggestions to be based on their own code base so that any suggestions match their unique coding styles, standards, and programming language of preference. In addition, customers want to be able to orient Duo Chat to their internal knowledge bases to answer questions on their own documentation.</p>
+<h1 id=strategy>Strategy</h1>
+<p>The Custom Models team had dual foci of 1) enabling GitLab Duo features by leveraging customer-hosted open source (OS) models and 2) enabling customization of Duo features grounded in customer data.</p>
+<h3 id=self-hosted-models-><a href="https://gitlab.com/groups/gitlab-org/-/epics/13069">Self-Hosted Models </a></h3>
+<p>Custom Models is currently primarily focused on delivering self-hosted versions of existing <a href="https://docs.gitlab.com/ee/user/gitlab_duo/index.html">Gitlab Duo features</a>. We are actively iterating on self-hosted support to Code Suggestions and Gitlab Duo Chat, and aim to deliver Code Suggestions for General Availability in the next few milestones. Up-to-date information on our feature support and expected delivery milestones can be found on our <a href="https://gitlab.com/groups/gitlab-org/-/epics/13069">Self-Hosted Model Deployment epic</a>.</p>
+<p>Our aspirational goal is to support to a self-hosted (open-source based) version of each Gitlab Duo feature in line with the GA release of that feature. Due to the complexities of building a self-hosted version of a feature, this may not always be possible. This is predicated upon pre-GA validation of the feature, and an understanding of a feature as reaching a “mature” stage. Both validation and feature maturity creates a standard upon which to build and compare self-hosted feature variants. While self-hosted Duo features may not necessarily be as performant as features based on large, provider-hosted, 3rd party models, each feature should be validated as generally correct, useful, and reliable. Custom Models will also factor in customer demand, feasibility, and other relevant factors when determining support.</p>
+<p>Support for self-hosted versions of a Duo feature will be predicated upon following a data-centric approach. An understanding of the domain for each feature, as well as the performance of available open source models within that domain, are essential to this approach. Prior to developing self-hostable Duo features, the Custom Models team will first identify potential OS foundation models within the required domain space. Once Custom Models has identified the optimal OS model for a feature, we will work with the AI Validation team to baseline the performance of that model or models. Custom Models will then develop prompts specific to that model, and determine the appropriate architecture. To the extent that it is possible and sensical, we will attempt to leverage existing elements of the feature that we are seeking to adapt to self-hosting (i.e. pre- and post-processing, applicable data flows, etc).</p>
+<h3 id=customization><a href="https://gitlab.com/groups/gitlab-org/-/epics/13070">Customization</a></h3>
+<p>Customization is currently a secondary focus of the Custom Models group. Not all Duo features will benefit from a customized approach and we are assessing the added value of customization for several of the Duo features. Our first approach to customization of Duo features is grounded in a Retrieval Augmented Generation (RAG) approach. Our first customization approaches with RAG consider leveraging customer data to inform Code Suggestions Additional information on our considerations for customization can be found on our <a href="https://gitlab.com/groups/gitlab-org/-/epics/13070">Model Personalization epic</a>, with additional details on our <a href="https://gitlab.com/groups/gitlab-org/-/epics/13391">RAG for Model Personalization epic</a>.</p>
+<h3 id=logging>Logging</h3>
+<p>As we advance support for self-hosted models and customization approaches, we need to allow customers visibility into their own LLM flows for debugging, auditing, validation, and potentially accumulating data sets for supervised fine tuning. Currently GitLab does not enable customers to capture the input/outputs of LLM interactions; customers have no visibility into the flow of GenAI features. In order to address this issue, GitLab will enable customer-facing logging (not visible to GitLab) on self-managed instances. Additional information can be found on the <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/458844">Logging epic</a>.</p>
+<h3 id=validation>Validation</h3>
+<p>As we offer additional configuration options, either in the form of using OS models to underpin GitLab Duo features or in customizations, GitLab will not necessarily have insight into the performance of Duo features. Customers will want to assess the performance and functionality of their selected models and customizations. While GitLab has an internally facing validation process via the Centralized Evaluation Framework (CEF), configurations made within a self-managed customer space will not be visible to GitLab. Customers will require the ability to assess the performance of their chosen implementations. We are exploring a UI for validation that is fully integrated into the GitLab platform, allowing users to leverage prompt libraries to establish baselines performances for different models and RAG configurations.This will allow customers to deploy self-hosted models and leverage customization with confidence. Additional information on our plans can be found on the <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/461250">Customer-Facing Validation epic</a>.</p>
+<h1 id=focus>Focus</h1>
+<h4 id=identify-and-validate-models-that-can-be-customized-using-the-following-criteria>Identify and validate models that can be customized using the following criteria:</h4>
+<ul>
+<li>open source</li>
+<li>minimal computing requirements</li>
+<li>well suited for Duo feature use cases</li>
+<li>high quality output</li>
+</ul>
+<h4 id=deeply-understand-customer-privacy-and-security-concerns-associated-with-aiml-use-cases>Deeply understand customer privacy and security concerns associated with AI/ML use cases</h4>
+<h4 id=develop-blueprints-for-configuring-self-hosted-models>Develop Blueprints For Configuring Self Hosted Models</h4>
+<ul>
+<li>Perform customer research to Inventory which GitLab deployments customers are using (Gitlab.com, Dedicated, Self-Managed) and how they would like to deploy self-hosted models.</li>
+<li>Determine architectures for enabling Enterprise users to leverage customized models.</li>
+<li>Assess what security and compliance requirements will we need to consider based on our customer platforms and specifications.</li>
+</ul>
+<h4 id=research-techniques-to-enable-customer-customization-of-models>Research techniques to enable customer customization of models.</h4>
+<ul>
+<li>How can we allow customization without sacrificing the quality of Duo features?</li>
+<li>Techniques under consideration include:
+<ul>
+<li>RAG</li>
+<li>Fine-Tuning</li>
+</ul>
+</li>
+</ul>
+<h4 id=validate-customer-modification>Validate Customer Modification</h4>
+<p>Develop or identify a lightweight validation framework that can give customers assurances that customized product is performing at a high level of quality output and haven’t degraded performance of the model</p>
+<h4 id=what-we-are-not-doing>What We Are Not Doing</h4>
+<ul>
+<li>Bring your own model - we are not currently supporting any and all model; we need to ensure the quality of the features and so will be starting with a set of pre-defined model options.</li>
+<li>We are not supporting personalization at an individual user level, but rather Enterprise-level customization.</li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/ai-powered/custom_models/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/ai-powered/custom_models/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

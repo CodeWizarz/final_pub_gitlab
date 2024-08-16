@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Hosted runners
+|
+GitLab
+</title>
+<meta content='This is the Product Direction Page for the Hosted runners product category.' name=description />
+<meta content='This is the Product Direction Page for the Hosted runners product category.' name='twitter:description'/>
+<meta content='This is the Product Direction Page for the Hosted runners product category.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Hosted runners' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/verify/hosted_runners/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/verify/hosted_runners/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Hosted runners' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/verify/hosted_runners/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Hosted runners
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/jreporter'>
+<img
+src='/images/team/jackiemeshell.png'
+class=codeowner-avatar-img
+alt='Jackie Porter'
+title='Jackie Porter'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gabrielengel_gl'>
+<img
+src='/images/team/gabrielengel.jpg'
+class=codeowner-avatar-img
+alt='Gabriel Engel'
+title='Gabriel Engel'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/verify/hosted_runners/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/verify/">Verify Stage Direction</a></li><li>Category Direction - Hosted runners</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 id=hosted-runners>Hosted runners</h2>
+<table>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/verify/">Verify</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">Viable</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-06-17</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction>Introduction</h3>
+<p>Thanks for visiting this direction page on the Hosted runners category at GitLab. This page belongs to the <a href="https://handbook.gitlab.com/handbook/product/categories/#hosted-runners-group">Hosted runners Group</a> within the Verify Stage and is maintained by <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#103;&#101;&#110;&#103;&#101;&#108;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">Gabriel Engel</a>. Feel free to follow our <a href="https://www.youtube.com/playlist?list=PL05JrBw4t0KqcTxGhFdJtcUpvjdf05MHY">YouTube playlist</a> where we will upload walkthroughs of direction page updates and iteration kickoffs.</p>
+<h3 id=strategy-and-themes>Strategy and Themes</h3>
+<p>With the adoption of a DevSecOps approach and the resulting gains in developer and delivery efficiency, organizations are seeing an increased demand for computing power to run CI/CD pipelines.</p>
+<p>Our <strong>vision</strong> is to provide a fully managed, best-in-class hosted CI/CD build infrastructure that is fast and secure by default. We want to eliminate the overhead of hosting and maintaining your build infrastructure, ultimately enabling you to deliver software faster. Our platform approach will allow you to run cross-platform (Docker containers on Linux, Windows, macOS) builds in one CI/CD pipeline. With GitLab-hosted runners, we aim to help you realize increased cost savings and efficiency by providing a reliable service for running all CI/CD builds that do not need to run on your infrastructure.</p>
+<p>Today, the <a href="https://docs.gitlab.com/ee/ci/runners/">GitLab-hosted runners</a> product offerings are:</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/ci/runners/hosted_runners/linux.html">Hosted runners on Linux - GA</a></li>
+<li><a href="https://docs.gitlab.com/ee/ci/runners/hosted_runners/gpu_enabled.html">GPU-enabled hosted runners - GA</a></li>
+<li><a href="https://docs.gitlab.com/ee/ci/runners/hosted_runners/macos.html">Hosted runners on macOS - Beta</a></li>
+<li><a href="https://docs.gitlab.com/ee/ci/runners/hosted_runners/windows.html">Hosted runners on Windows - Beta</a></li>
+</ul>
+<h3 id=1-year-plan>1 year plan</h3>
+<p>The primary FY2025 runner themes focus on building a competitive and complete CI/CD offering that allows customers to build for all common platforms.</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11525">CI Steps (GA)</a> to support both <a href="https://about.gitlab.com/direction/verify/component_catalog">CI Components Catalog</a> and CI Events</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/ci-cd/runner-tools/-/epics/2">GRIT - Linux Docker template on AWS (GA)</a> to enable hosted runners on GitLab Dedicated</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8267">Hosted runners on macOS</a> transition to General Availability</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8442">Add ARM compute to hosted runners on Linux</a></li>
+<li><a href="https://gitlab.com/gitlab-org/ci-cd/shared-runners/infrastructure/-/issues/107">Large hosted runners on macOS</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2162">Hosted runners on Windows</a> transition to General Availability</li>
+</ul>
+<p>In addition we want to reduce operational overheads by dogfooding our new autoscaler &amp; GRIT for our fleet of runners.</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/ci-cd/shared-runners/-/epics/17">Transition Hosted runners on Linux to new Autoscaler</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/ci-cd/runner-tools/-/epics/1">Establish GitLab Runner Infrastructure Toolkit (GRIT) for GCP &amp; AWS</a> and transition our fleet to GRIT</li>
+</ul>
+<h3 id=3-year-plan>3 year plan</h3>
+<p>In the next three years, we want to enable enterprises, to fully focus on developing software without the hassle of managing infrastructure and make GitLab-hosted runners, to be the most widely adopted CI solution by enterprises in the market. We want to achieve this, by focusing on <a href="https://about.gitlab.com/company/team/structure/working-groups/ci-build-speed/">speed</a>, security, and cost efficiency.</p>
+<p>Our flagship offering will be <a href="https://gitlab.com/groups/gitlab-org/-/epics/10073">custom-hosted runners</a>, allowing users to create <a href="https://gitlab.com/gitlab-org/ci-cd/shared-runners/infrastructure/-/issues/148">custom GitLab-hosted runners via GitLab UI</a>, fully dedicated to their project, with more advanced features such as <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/364425">dedicated IP-range</a>, or <a href="https://gitlab.com/groups/gitlab-org/-/epics/10423">SSH access for debugging</a>. Combined with a new pricing model, it should be a superior choice for the enterprise hosting needs.</p>
+<h3 id=current-scope>Current scope</h3>
+<p>This section will give a high-level overview of what we are currently working on. Feel free to check our <a href="https://gitlab.com/groups/gitlab-org/ci-cd/shared-runners/-/epics/18">FY25 roadmap planning issue</a> or our specific <a href="https://gitlab.com/groups/gitlab-org/-/issues/?sort=title_asc&amp;state=opened&amp;label_name%5B%5D=Planning%20Issue&amp;label_name%5B%5D=Category%3AHosted%20Runners">iteration planning issues</a> for more details.</p>
+<h4 id=what-we-recently-completed>What we recently completed</h4>
+
+<ul>
+<li><a href="https://about.gitlab.com/releases/2024/05/16/gitlab-17-0-released/#introducing-hosted-runners-on-linux-arm">Introducing hosted runners on Linux Arm</a></li>
+<li><a href="https://about.gitlab.com/releases/2024/04/18/gitlab-16-11-released/#automate-the-creation-of-google-compute-engine-runners-from-gitlab-public-beta">Automated creation of Google Compute Engine Runners from GitLab - Beta</a></li>
+</ul>
+<h4 id=what-we-are-currently-working-on>What we are currently working on</h4>
+
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/ci-cd/shared-runners/infrastructure/-/issues/107">Large hosted runners on macOS</a></li>
+<li><a href="https://docs.gitlab.com/ee/ci/runners/hosted_runners/macos.html">Hosted runners on macOS</a> to <a href="https://gitlab.com/groups/gitlab-org/-/epics/8267">General Availability</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/ci-cd/shared-runners/-/epics/17">Transition GitLab Hosted runners on Linux to new Autoscaler and GRIT</a></li>
+</ul>
+<h4 id=what-is-next-for-us>What is next for us</h4>
+
+<p>In the next three months we plan to complete the following projects:</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/ci-cd/runner-tools/-/epics/2">GRIT - Linux Docker template on AWS (Beta)</a></li>
+<li><a href="https://gitlab.com/gitlab-org/ci-cd/runner-tools/grit/-/issues/7">GRIT - Linux Docker template on GCP (Beta)</a></li>
+</ul>
+<h3 id=best-in-class-landscape>Best in Class Landscape</h3>
+
+<p>BIC (Best In Class) is an indicator of forecated near-term market performance based on a combination of factors, including analyst views, market news, and feedback from the sales and product teams. It is critical that we understand where GitLab appears in the BIC landscape.</p>
+<h4 id=key-capabilities>Key Capabilities</h4>
+<p>Cloud-native CI/CD solutions, such as GitLab.com, Harness.io, CircleCI, and GitHub, allow to run CI/CD pipelines on a fully managed runner fleet with no setup required.</p>
+<p>In addition to eliminating CI build server maintenance costs, there are other critical considerations for organizations that can migrate 100% of their CI/CD processes to a cloud-native solution. These include security, reliability, performance, compute types, and on-demand scale.</p>
+<p>CI build speed or time-to-result, and the related CI build infrastructure cost efficiency are critical competitive vectors. <a href="https://circleci.com/circleci-versus-github-actions/">CircleCI</a> and <a href="https://www.harness.io/blog/announcing-speed-enhancements-and-hosted-builds-for-harness-ci">Harness.io</a> are promoting CI-build performance in their go-to-market strategy.
+Both <a href="https://github.blog/2022-12-08-experiment-the-hidden-costs-of-waiting-on-slow-build-times/">GitHub</a> and <a href="https://www.harness.io/blog/fastest-ci-tool">Harness.io</a> explored the cost impact of CI build performance measured by build times on hosted solutions.</p>
+<h4 id=top-competitive-solutions>Top Competitive Solutions</h4>
+<p><strong>Hosted Linux Compute</strong></p>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>Machine Specs</th>
+<th>GitLab</th>
+<th>GitHub</th>
+<th>CircleCI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>small</td>
+<td>2 vCPUs, 8GB RAM</td>
+<td>Available</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>medium</td>
+<td>4 vCPUs, 16GB RAM</td>
+<td>Available</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>large</td>
+<td>8 vCPUs, 32GB RAM</td>
+<td>Available</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>x-large</td>
+<td>16 vCPUs, 64GB RAM</td>
+<td>Available</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>2x-large</td>
+<td>32 vCPUs, 128GB RAM</td>
+<td>Available</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>3x-large</td>
+<td>48 vCPUs, 192GB RAM</td>
+<td>Not available</td>
+<td>Available</td>
+<td>Not available</td>
+</tr>
+<tr>
+<td>4x-large</td>
+<td>64 vCPUs, 256GB RAM</td>
+<td>Not available</td>
+<td>Available</td>
+<td>Not available</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hosted GPU Compute</strong></p>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>Machine Specs</th>
+<th>GitLab</th>
+<th>GitHub</th>
+<th>CircleCI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lite</td>
+<td>Nvidia Tesla P4</td>
+<td>Not available</td>
+<td>Not available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>standard</td>
+<td>Nvidia Tesla T4</td>
+<td>Available</td>
+<td>Available</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>premium</td>
+<td>Nvidia Tesla V100</td>
+<td>Not available</td>
+<td>Not available</td>
+<td>Available</td>
+</tr>
+</tbody>
+</table>
+<p><strong>macOS - Offer Positioning and Hosted Build Machines</strong></p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>GitLab</th>
+<th>GitHub</th>
+<th>Xcode Cloud</th>
+<th>CircleCI</th>
+<th>Bitrise.io</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Positioning statement</td>
+<td>Hosted runners on macOS provide an on-demand macOS build environment fully integrated with GitLab CI/CD.</td>
+<td>A GitHub-hosted runner is VM hosted by GitHub with the GitHub actions runner application installed.</td>
+<td>A CI/CD service built into Xcode, designed expressly for Apple developers.</td>
+<td>Industry-leading speed. No other CI/CD platform takes performance as seriously as we do.</td>
+<td>Build better mobile applications, faster.</td>
+</tr>
+<tr>
+<td>Value proposition</td>
+<td>You can take advantage of all the capabilities of the GitLab single DevOps platform and not have to manage or operate a build environment.</td>
+<td>When you use a GitHub-hosted runner, machine maintenance and upgrades are taken care of.</td>
+<td>Build your apps in the cloud and eliminate dedicated build infrastructure.</td>
+<td>The macOS execution environment allows you to test, build, and deploy macOS and iOS apps on CircleCI.</td>
+<td>CI for mobile - save time spent on testing, onboarding, and maintenance with automated workflows and triggers</td>
+</tr>
+<tr>
+<td>Available machines</td>
+<td>Apple silicon (M1): medium</td>
+<td>Apple silicon (M1): small+, medium+</td>
+<td>n/a</td>
+<td>Apple silicon (M1): medium, large</td>
+<td>Apple silicon (M1): medium, large; M1 Max: medium, large</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/verify/hosted_runners/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/verify/hosted_runners/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

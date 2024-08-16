@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Source Code Management
+|
+GitLab
+</title>
+<meta content='Direction for the Source Code Management group' name=description />
+<meta content='Direction for the Source Code Management group' name='twitter:description'/>
+<meta content='Direction for the Source Code Management group' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Source Code Management' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/create/source_code_management/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/create/source_code_management/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Source Code Management' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/create/source_code_management/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Source Code Management
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/mcbabin'>
+<img
+src='/images/team/mariechristinebabin.jpg'
+class=codeowner-avatar-img
+alt='Marie-Christine Babin'
+title='Marie-Christine Babin'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/derekferguson'>
+<img
+src='/images/team/derekferguson.jpg'
+class=codeowner-avatar-img
+alt='Derek Ferguson'
+title='Derek Ferguson'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/create/source_code_management/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/create/">Product Stage Vision - Create</a></li><li>Category Direction - Source Code Management</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#source-code-management" id=markdown-toc-source-code-management>Source Code Management</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and Themes</a> <ul>
+<li><a href="#strategic-pillars" id=markdown-toc-strategic-pillars>Strategic Pillars</a></li>
+<li><a href="#foundational-pillar" id=markdown-toc-foundational-pillar>Foundational Pillar</a></li>
+<li><a href="#challenges" id=markdown-toc-challenges>Challenges</a></li>
+</ul>
+</li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a> <ul>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is Not Planned Right Now</a></li>
+</ul>
+</li>
+<li><a href="#best-in-class-landscape" id=markdown-toc-best-in-class-landscape>Best in Class Landscape</a> <ul>
+<li><a href="#key-capabilities" id=markdown-toc-key-capabilities>Key Capabilities</a></li>
+<li><a href="#roadmap" id=markdown-toc-roadmap>Roadmap</a></li>
+<li><a href="#top-two-competitive-solutions" id=markdown-toc-top-two-competitive-solutions>Top two Competitive Solutions</a></li>
+</ul>
+</li>
+<li><a href="#maturity-plan" id=markdown-toc-maturity-plan>Maturity Plan</a></li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=source-code-management>Source Code Management</h2>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th><a href="/direction/create/">Create</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maturity</td>
+<td>Loveable</td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-06-18</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+
+<p>Thanks for visiting the category direction page on Source Code Management. The Source Code Management direction page belongs to the <a href="/handbook/product/categories/#source-code-group">Source Code</a> group of the Create stage, and is maintained by <a href="https://gitlab.com/mcbabin">Marie-Christine Babin</a>.</p>
+<p>This direction page is a work in progress, and everyone can contribute:</p>
+<ul>
+<li>Please comment and contribute to issues linked througout this page or contained in our <a href="https://gitlab.com/groups/gitlab-org/-/epics/12547">category epic</a>. Sharing your feedback directly on GitLab.com is the best way to contribute to our strategy and vision.</li>
+<li>If you would like to share your feedback directly or schedule a video call, please reach out directly to Marie-Christine Babin via <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#098;&#097;&#098;&#105;&#110;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">email</a>.</li>
+</ul>
+<h3 id=strategy-and-themes>Strategy and Themes</h3>
+
+<p>Source Code Management (SCM) is a foundational practice in software development. Building great software depends on teams working well together. Teams can rarely be divided into areas of complete independence.</p>
+<p><strong>GitLab's vision for Source Code Management is the following</strong>: Managing code and data with GitLab is a practice that ultimately sparks collaboration between all team members, by centralizing the sharing and synchronization of both code and data securely, efficiently and intuitively, regardless of the file type or size, making it easy to track, compare and revert changes and understand how code and data evolves over time.</p>
+<p>This vision stands in support of <a href="https://about.gitlab.com/company/mission/#mission">GitLab's mission</a> to make it so everyone can contribute. Teams in industries such as game development, automotive, healthcare, engineering, construction and architecture, and teams working with datasets in machine learning, have dependencies on code and data being tightly coupled to be able to iterate efficiently. As per our <a href="https://handbook.gitlab.com/handbook/values/">GitLab values</a>, we believe iteration enables results and efficiency. Facilitating collaboration for teams iterating with both code and data will help them iterate with less friction, enabling them to achieve results more efficiently.</p>
+<p>In support of GitLab's vision for Source Code Management, our strategy is to <strong>enable scale across team management, repository size and file size</strong>. This strategy stands on 3 strategic pillars and one foundational pillar:</p>
+<p><br/></p>
+<h4 id=strategic-pillars>Strategic Pillars</h4>
+<ul>
+<li><strong>Easy administration for large teams</strong>: Scale Source Code Management to large teams efficiently and intuitively.</li>
+<li><strong>High performance and better collaboration with large binary files</strong>: Handle large binary files effortlessly and collaborate seamlessly between developers and other team contributors, such as artists and designers, to support <a href="https://about.gitlab.com/company/mission/#mission">GitLab's mission</a> to make it so everyone can contribute.</li>
+<li><strong>High performance and streamlined workflows with large repositories</strong>: Easily manage and collaborate with large repositories, including monorepos.</li>
+</ul>
+<h4 id=foundational-pillar>Foundational Pillar</h4>
+<ul>
+<li><strong>Usability at scale</strong>: Manage source code with <strong>confidence</strong> with easy and intuitive workflows.</li>
+</ul>
+<p><img src="/images/../../../images/source_code_management/source_code_direction_pillars.png" alt="Source Code Management Strategy Pillars"/></p>
+<p><sub><em>Note: SCM is not only the most used function in GitLab but also the one with the longest history as it has been there from the beginning. As a result, we get a lot of feedback and have a long backlog of issues. Therefore, we need to spend a considerable share of our teams’ capacity on issues that are not at the center of this vision but address bugs, stability, security, and scalability to keep our users and customers happy.</em></sub></p>
+<p><br/></p>
+<h4 id=challenges>Challenges</h4>
+<p>GitLab's Source Code Management builds on top of Git. <a href="https://git-scm.com/">Git</a> is the leading Version Control System (VCS). It excels at tracking changes in source code and makes it easy and transparent to merge changes from different developers into one code base. Yet, neither Git nor GitLab SCM are perfect. Here are the current main shortcomings:</p>
+<ul>
+<li>GitLab's SCM UX, has shown to be partly unintuitive. For instance, controls to enforce rules are hard to discover, understand and manage at scale.</li>
+<li>Git is not particularly good at handling binary files. While <a href="https://docs.gitlab.com/ee/topics/git/lfs/">Git Large File Storage (LFS)</a> aims to address this, it is often deemed not suitable for use cases where teams iterate with a large amount of data such as game development, digital twins development (found in industries such as automotive, healthcare, engineering, construction and architecture) and for teams leveraging machine learning models with large datasets.</li>
+<li>Performance can be impacted when repositories become exceptionally large (even if they do not contain binary files), including for monorepos which are used in several large tech companies. <a href="https://docs.gitlab.com/ee/topics/git/partial_clone.html">Partial clone</a> addresses some of these issues.</li>
+</ul>
+<h3 id=1-year-plan>1 year plan</h3>
+
+<ul>
+<li>
+<p><strong>In Progress</strong>: <a href="https://gitlab.com/groups/gitlab-org/-/epics/8075">Branch Rules Editing MVC</a>: Branch rules editing will enable users to edit branch-level rules in one single place. This will allow us to subsequently move certain rules to the branch level, enabling more flexibility for configuring target branches.</p>
+</li>
+<li>
+<p><strong>Completed</strong>: <a href="https://about.gitlab.com/releases/2024/05/16/gitlab-17-0-released/#commit-signing-for-gitlab-ui-commits">Commit signing for GitLab UI commits (Self-Managed and GitLab Dedicated)</a>: You can now configure your self-managed instance with a signing key, a committer name, and email address to sign web and automated commits.</p>
+</li>
+<li>
+<p><strong>In Progress</strong>: <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/467692">Commit signing for GitLab UI commits on GitLab.com</a>: Once this is introduced, we will sign web commits and automated commits made by GitLab for all GitLab.com projects.</p>
+</li>
+<li>
+<p><strong>In Progress</strong>: <a href="https://gitlab.com/groups/gitlab-org/-/epics/13257">Beyond Identity Integration post-MVC improvements</a></p>
+</li>
+<li>SCM UX improvements
+<ul>
+<li><strong>Completed</strong>: <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/430775">"Find File" search on the repository page</a></li>
+<li><strong>Later</strong>: <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/431735">Update layout for Readme view of Project Overview</a></li>
+<li><strong>Completed</strong>: <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/429186">Project Overview page updates</a></li>
+<li><strong>Later</strong>: <a href="https://gitlab.com/groups/gitlab-org/-/epics/9913">Directory and single file pages improvements</a></li>
+<li><strong>Later</strong>: <a href="https://gitlab.com/groups/gitlab-org/-/epics/10696">Better organization of branches</a></li>
+<li><strong>Later</strong>: Improvements to the commit list to support filtered search with specific terms and <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/408589">Option to show only the first parent commit in the GitLab commit view page</a></li>
+</ul>
+</li>
+<li>
+<p><strong>In Progress</strong>: Improve support for Git LFS: <a href="https://gitlab.com/groups/gitlab-org/-/epics/10834">Git LFS performance improvements</a></p>
+</li>
+<li>
+<p><strong>Later</strong>: Introduce a new merge strategy option git merge –squash: <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/355613">Introduce git merge –squash</a>. This is part of our plans to enable users to <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/1822">squash merge MRs without merge commit</a>.</p>
+</li>
+<li>
+<p><strong>Later</strong>: Better support for large binary files: <a href="https://gitlab.com/groups/gitlab-org/-/epics/12872">Better Support for Large Binary Files</a></p>
+</li>
+<li>
+<p><strong>Later</strong>: <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/15958">Group-level snippets</a></p>
+</li>
+<li>
+<p><strong>Later</strong>: Continue to improve experience with CODEOWNERS: <a href="https://gitlab.com/groups/gitlab-org/-/epics/12549">CODEOWNERS Improvements</a></p>
+</li>
+<li><strong>Later</strong>: Additional repository statistics: <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/15807">Download (clone) statistics</a>. This is especially helpful for understanding popularity of open source projects.</li>
+</ul>
+<p><br/></p>
+<h4 id=what-is-next-for-us>What is next for us</h4>
+
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/467692">Commit signing for GitLab UI commits on GitLab.com</a>: We are planning for the rollout of commit signing for GitLab UI commits on GitLab.com now that the feature has been delivered for Self-Managed and GitLab Dedicated. Once this is introduced, we will sign web commits and automated commits made by GitLab for all GitLab.com projects.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8075">Branch Rules Editing MVC</a>: Branch rules editing will enable users to edit branch-level rules in one single place. This will allow us to subsequently move certain rules to the branch level, enabling more flexibility for configuring target branches.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9913">Directory and single file pages improvements</a></li>
+<li>
+<p><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/355613">Introduce git merge –squash</a>. We will introduce a new merge strategy option git merge –squash as part of our plans to enable users to <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/1822">squash merge MRs without merge commit</a>.</p>
+</li>
+<li>Provide support for internal projects with other teams:
+<ul>
+<li><a href="https://handbook.gitlab.com/handbook/company/working-groups/disaster-recovery/">Disaster Recovery Working Group</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/7582">GitLab Cells</a></li>
+</ul>
+</li>
+</ul>
+<p><br/></p>
+<h4 id=what-we-are-currently-working-on>What we are currently working on</h4>
+
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13257">Beyond Identity Integration Post-MVC Improvements</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8075">Branch Rules Editing MVC</a>: Branch rules editing will enable users to edit branch-level rules in one single place.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8679">Group-level protected branches MVC</a>: Rollout of group-level protected branches to general availability. This will add a group-level setting to specify a string for a protected branch that will apply to all projects within the group. When set, any branch in a child project with a name that matches the string or wildcard string should be protected.</li>
+<li>
+<p><a href="https://gitlab.com/groups/gitlab-org/-/epics/11872">Pure SSH LFS Transport</a>: Driven by community contributors. Users will now be able to use LFS with SSH as the LFS transport mechanism instead of HTTPS. Some environments are forbidden from using HTTPS. This will enable customers who could not previously use LFS to do so.</p>
+</li>
+<li>Providing support for internal projects with other teams:
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/7582">GitLab Cells</a></li>
+</ul>
+</li>
+</ul>
+<p><br/></p>
+<h4 id=what-we-recently-completed>What we recently completed</h4>
+
+
+<ul>
+<li><a href="https://about.gitlab.com/releases/2024/05/16/gitlab-17-0-released/#commit-signing-for-gitlab-ui-commits">Commit signing for GitLab UI commits (Self-Managed and GitLab Dedicated)</a>: Previously, web commits and automated commits made by GitLab could not be signed. Now you can configure your self-managed instance with a signing key, a committer name, and email address to sign web and automated commits.</li>
+</ul>
+
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/430775">"Find File" search on the repository page</a>: Allow users to search for a file directly on the page instead of navigating to a separate "find file" page.</li>
+</ul>
+
+<ul>
+<li>
+<p><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/431433">Beyond Identity Integration MVC</a></p>
+</li>
+<li>
+<p><a href="https://about.gitlab.com/releases/2024/02/15/gitlab-16-9-released/#authenticate-and-sign-commits-with-ssh-certificates">Authentication and commit signing with SSH certificates on GitLab.com</a>: Previously, Git access control options on GitLab.com relied on credentials set up in the user account. Now you can set up a process to make Git access possible using only SSH certificates. You can also use these certificates to sign commits.</p>
+</li>
+</ul>
+
+<ul>
+<li><a href="https://about.gitlab.com/releases/2024/01/18/gitlab-16-8-released/#view-blame-information-directly-in-the-file-page">View blame information directly in the file page</a>: In previous versions of GitLab, viewing file blame required you to access a different page. Now you can view the file blame information directly from the file page.</li>
+</ul>
+
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/24894">Minimal forking - only include the default branch</a>: In previous versions of GitLab, when forking a repository, the fork always included all branches within the repository. Now you can create a fork with only the default branch, reducing complexity and storage space.</li>
+</ul>
+
+<ul>
+<li>
+<p><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/216066">CODEOWNERS file syntax and format validation</a>: You can now see in the UI if your CODEOWNERS file has syntax or formatting errors. Being able to specify code owners offers great flexibility, allowing multiple file locations, sections, and rules to be configured by users.</p>
+<p>With this new syntax validation, errors in your CODEOWNERS file will be surfaced in the GitLab UI, making it easy to spot and fix issues.</p>
+</li>
+</ul>
+
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/413684">Improve Git LFS download performance</a>: For instances which store LFS objects in object storage without proxy download enabled, GitLab now processes LFS requests in bulk. This dramatically improves the performance of downloading a large number of LFS objects.</li>
+</ul>
+<p><br/></p>
+<h4 id=what-is-not-planned-right-now>What is Not Planned Right Now</h4>
+
+<p>The Source Code group is not investing in the following opportunities in the immediate future:</p>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/720">Branch read access controls</a>
+<ul>
+<li>Limiting which branches a user can read in a Git repository is possible in a basic sense, by only advertising a subset of refs, but it is not possible to guarantee that unreachable objects will not be sent to the client. This means that branch read access controls would be very weak, since they could not prevent exfiltration of data they do not have permission to read.</li>
+</ul>
+</li>
+<li>Path-level read access controls
+<ul>
+<li>From a commit, Git expects all trees and blobs to be reachable. Although Git supports partial clone and spares checkout, which allow data to be excluded from fetch and checkout, Git expects to be able to fetch missing objects on demand. Deliberately excluding objects by path is likely to cause unexpected failures.</li>
+</ul>
+</li>
+<li>Report number of lines per contributor
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8589#note_1462211450">Research</a> has shown that reporting the lines of code contributed could hurt individual users as this has a tendency to be misused as a false measure of contribution.</li>
+</ul>
+</li>
+<li>Improvements to <a href="https://gitlab.com/groups/gitlab-org/-/epics/2767">Project Templates</a>
+<ul>
+<li>Due to other priorities, we won't be able to progress <a href="https://docs.gitlab.com/ee/user/group/custom_project_templates.html">Project templates</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id=best-in-class-landscape>Best in Class Landscape</h3>
+
+<p>BIC (Best In Class) is an indicator of forecasted near-term market performance based on a combination of factors, including analyst views, market news, and feedback from the sales and product teams. It is critical that we understand where GitLab appears in the BIC landscape.</p>
+<h4 id=key-capabilities>Key Capabilities</h4>
+
+<p>This information is maintained on <a href="https://internal.gitlab.com/handbook/product/best-in-class/create/#source-code-management">this internal handbook page</a></p>
+<h4 id=roadmap>Roadmap</h4>
+
+<p>This information is maintained on <a href="https://internal.gitlab.com/handbook/product/best-in-class/create/#source-code-management">this internal handbook page</a></p>
+<h4 id=top-two-competitive-solutions>Top two Competitive Solutions</h4>
+
+<p>This information is maintained on <a href="https://internal.gitlab.com/handbook/product/best-in-class/create/#source-code-management">this internal handbook page</a></p>
+<h3 id=maturity-plan>Maturity Plan</h3>
+
+<p>This <a href="https://gitlab.com/gitlab-org/ux-research/-/issues/941">category is currently of <strong>Loveable</strong> maturity level</a> (see our <a href="https://about.gitlab.com/direction/maturity/">definitions of maturity levels</a>).</p>
+<h3 id=target-audience>Target Audience</h3>
+
+<p>All GitLab users use the Source Code category. The more intensive users are the following:</p>
+<ol>
+<li><a href="/handbook/product/personas/#sasha-software-developer">Sasha, Software Developer</a></li>
+<li><a href="/handbook/product/personas/#priyanka-platform-engineer">Priyanka, Platform Engineer</a></li>
+<li><a href="/handbook/product/personas/#delaney-development-team-lead">Delaney, Development Team Lead</a></li>
+<li><a href="/handbook/product/personas/#cameron-compliance-manager">Cameron, Compliance Manager</a></li>
+</ol>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/create/source_code_management/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/create/source_code_management/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

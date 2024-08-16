@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Gitaly
+|
+GitLab
+</title>
+<meta content='Gitaly is a Git RPC service for handling all the Git calls made by GitLab. Find more information here!' name=description />
+<meta content='Gitaly is a Git RPC service for handling all the Git calls made by GitLab. Find more information here!' name='twitter:description'/>
+<meta content='Gitaly is a Git RPC service for handling all the Git calls made by GitLab. Find more information here!' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Gitaly' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/gitaly/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/gitaly/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Gitaly' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/gitaly/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Gitaly
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/joshlambert'>
+<img
+src='/images/team/joshua.png'
+class=codeowner-avatar-img
+alt='Joshua Lambert'
+title='Joshua Lambert'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/mjwood'>
+<img
+src='/images/team/markwood.jpg'
+class=codeowner-avatar-img
+alt='Mark Wood'
+title='Mark Wood'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/gitaly/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Category Direction - Gitaly</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#gitaly" id=markdown-toc-gitaly>Gitaly</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#gitaly-overview" id=markdown-toc-gitaly-overview>Gitaly Overview</a> <ul>
+<li><a href="#gitaly-within-gitlab" id=markdown-toc-gitaly-within-gitlab>Gitaly within GitLab</a></li>
+<li><a href="#gitaly-development" id=markdown-toc-gitaly-development>Gitaly Development</a></li>
+<li><a href="#gitaly-cluster" id=markdown-toc-gitaly-cluster>Gitaly Cluster</a></li>
+</ul>
+</li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a></li>
+<li><a href="#improve-repository-data-safety" id=markdown-toc-improve-repository-data-safety>Improve Repository Data Safety</a></li>
+<li><a href="#ensure-gitaly-scales-gracefully" id=markdown-toc-ensure-gitaly-scales-gracefully>Ensure Gitaly Scales Gracefully</a></li>
+<li><a href="#improve-the-user-experience" id=markdown-toc-improve-the-user-experience>Improve the User Experience</a></li>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a> <ul>
+<li><a href="#reliable-and-scalable-cluster-replication" id=markdown-toc-reliable-and-scalable-cluster-replication>Reliable and Scalable Cluster Replication</a></li>
+<li><a href="#backups-and-disaster-recovery" id=markdown-toc-backups-and-disaster-recovery>Backups and disaster recovery</a></li>
+<li><a href="#cloud-native-gitaly" id=markdown-toc-cloud-native-gitaly>Cloud Native Gitaly</a></li>
+</ul>
+</li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is Not Planned Right Now</a></li>
+<li><a href="#best-in-class-landscape" id=markdown-toc-best-in-class-landscape>Best in Class Landscape</a> <ul>
+<li><a href="#key-capabilities" id=markdown-toc-key-capabilities>Key Capabilities</a></li>
+<li><a href="#top-2-competitive-solutions" id=markdown-toc-top-2-competitive-solutions>Top 2 Competitive Solutions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#git" id=markdown-toc-git>Git</a> <ul>
+<li><a href="#monorepo-performance" id=markdown-toc-monorepo-performance>Monorepo performance</a> <ul>
+<li><a href="#scaling-with-many-objects" id=markdown-toc-scaling-with-many-objects>Scaling with many objects</a></li>
+<li><a href="#scaling-with-large-objects" id=markdown-toc-scaling-with-large-objects>Scaling with large objects</a></li>
+<li><a href="#scaling-with-many-references" id=markdown-toc-scaling-with-many-references>Scaling with many references</a></li>
+<li><a href="#scaling-with-large-trees" id=markdown-toc-scaling-with-large-trees>Scaling with large trees</a></li>
+</ul>
+</li>
+<li><a href="#better-support-for-cloud-native-deployments" id=markdown-toc-better-support-for-cloud-native-deployments>Better support for cloud-native deployments</a></li>
+<li><a href="#user-experience" id=markdown-toc-user-experience>User Experience</a></li>
+<li><a href="#maintainability" id=markdown-toc-maintainability>Maintainability</a></li>
+<li><a href="#what-is-not-planned-right-now-1" id=markdown-toc-what-is-not-planned-right-now-1>What is Not Planned Right Now</a></li>
+</ul>
+</li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst Landscape</a> <ul>
+<li><a href="#sales-enablement" id=markdown-toc-sales-enablement>Sales Enablement</a> <ul>
+<li><a href="#what-is-gitaly" id=markdown-toc-what-is-gitaly>What is Gitaly?</a></li>
+<li><a href="#why-we-built-gitaly-cluster" id=markdown-toc-why-we-built-gitaly-cluster>Why we built Gitaly Cluster</a></li>
+<li><a href="#how-is-gitaly-cluster-differentiator-for-gitlab" id=markdown-toc-how-is-gitaly-cluster-differentiator-for-gitlab>How is Gitaly Cluster differentiator for GitLab</a></li>
+<li><a href="#when-should-customers-use-gitaly-cluster" id=markdown-toc-when-should-customers-use-gitaly-cluster>When should customers use Gitaly Cluster</a></li>
+<li><a href="#when-should-customers-not-use-gitaly-cluster" id=markdown-toc-when-should-customers-not-use-gitaly-cluster>When should customers not use Gitaly Cluster</a></li>
+<li><a href="#resources" id=markdown-toc-resources>Resources</a></li>
+</ul>
+</li>
+<li><a href="#deprecations-and-changes" id=markdown-toc-deprecations-and-changes>Deprecations and Changes</a></li>
+<li><a href="#maturity-plan" id=markdown-toc-maturity-plan>Maturity Plan</a></li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=gitaly>Gitaly</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Section</td>
+<td><a href="/direction/core_platform">Core Platform</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td>Non-marketable</td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td>2024-03-04</td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+<p>The Gitaly direction page belongs to the <a href="/handbook/product/categories/#systems-stage">Systems Stage</a> within the <a href="/handbook/product/categories/#core-platform-section">Core Platform</a>
+section, and is maintained by <a href="https://gitlab.com/mjwood">Mark Wood</a>. The Gitaly Engineering team and stable counterparts can be found on the <a href="https://about.gitlab.com/handbook/engineering/infrastructure/core-platform/systems/gitaly/">Engineering team page</a>.</p>
+<p>This strategy is a work in progress, and everyone can contribute.
+Please comment and contribute in the linked issues and epics.
+Sharing your feedback directly on GitLab.com is the best way to contribute to our strategy and vision.</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=group%3A%3Agitaly">Issue List</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics?label_name[]=group%3A%3Agitaly">Epic list</a></li>
+</ul>
+<p>If you would like support from the Gitaly team, please see the team's page detailing <a href="https://about.gitlab.com/handbook/engineering/infrastructure/core-platform/systems/gitaly/#how-to-contact-the-team">How to contact the Gitaly team</a>.</p>
+<h3 id=gitaly-overview>Gitaly Overview</h3>
+<p>Gitaly is the service responsible for the storage and maintenance of all Git repositories in GitLab for both our GitLab.com customers, as well as self-managed customers.
+Git repositories are essential to GitLab, for <a href="/direction/create/source_code_management/">Source Code Management</a>, <a href="/direction/plan/knowledge/wiki/">Wikis</a>, <a href="/direction/create/source_code_management/source_code_management/">Snippets</a>, Design Management, and <a href="/direction/create/ide/web_ide/">Web IDE</a>. Every stage of the DevOps lifecycle to the right of Create - Verify, Package, Release, Configure, Govern, Monitor and Secure - depends on the project repositories. Because the majority of GitLab capabilities depend on information stored in Git repositories, performance and availability are of primary importance.</p>
+<p>GitLab is used to store Git repositories by small teams of a few people all the way up to large enterprises with many terabytes of data. For this reason, Gitaly has been built to scale from small single server GitLab instances, to large high availability architectures.</p>
+<p>Gitaly provides multiple interfaces to read and write Git data:</p>
+<ul>
+<li>Git protocol over SSH, through the <a href="https://gitlab.com/gitlab-org/gitlab-shell">GitLab Shell</a> component.</li>
+<li>Git protocol over HTTP, through the <a href="https://gitlab.com/gitlab-org/gitlab/-/blob/master/doc/development/workhorse/index.md">GitLab Workhorse</a> component.</li>
+<li>gRPC internally to GitLab components. The public REST and GraphQL APIs to Git data are implemented using these RPCs.</li>
+</ul>
+
+<figure class=video_container>
+<iframe src="https://www.youtube.com/embed/RNLWrvIkB9E" frameborder=0 allowfullscreen=true></iframe>
+</figure>
+
+<h4 id=gitaly-within-gitlab>Gitaly within GitLab</h4>
+<p>While GitLab is the largest user of the Gitaly project, it is important to note that Gitaly is a standalone project that can be adopted separately from GitLab. As such, we strive to ensure that all business specific decisions are made within the GitLab application. Our belief is that Gitaly should provide the ability for management interfaces, but not make any specific management decisions.</p>
+<p>For example, some users may want the ability to move repositories between different storage nodes for either cost savings or performance reasons. While Gitaly should provide an easy to use interface to efficiently move repositories, the calling application should be making the decisions around which repositories to move where.</p>
+<p>Processes requiring no business data or inputs should be fully contained within Gitaly. These types of processes include repository maintenance and storage maintenance type tasks. We believe that these types of features provide substantial value for projects utilizing Gitaly and provide a compelling reason to chose Gitaly as a repository storage architecture.</p>
+<h4 id=gitaly-development>Gitaly Development</h4>
+<p>The Gitaly team is divided into two sub-teams which both strive to provide scalable and performant Git repository storage. These two teams are the Git team and the Cluster team, and represent two distinct focuses for the Gitaly group. (For additional details, see the <a href="https://handbook.gitlab.com/handbook/engineering/infrastructure/core-platform/systems/gitaly/">team page</a>.</p>
+<p><strong>Git Team</strong></p>
+<p>Gitaly is built on top of the open source <a href="https://git-scm.com/">Git project</a>, and we feel very strongly that we should be contributing to this project. As users and ambassadors of Git, it is our goal to actively engage in the Git community through bug fixes, feature additions, and mentoring. One of this team's major goals is to ensure we continue to enhance the Git project.</p>
+<p>In addition to contributing to upstream Git, the Gitaly Git team is responsible for integrating Git within the Gitaly product. This involves optimizing our internal usage of Git, performing housekeeping on repository data and generally ensuring that the repository storage for our customers is performing as well as possible for all shapes and sizes of data.</p>
+<p><strong>Cluster Team</strong></p>
+<p>The Cluster team's goal is to provide a durable, performant, and reliable Git storage layer for GitLab. This team will tightly collaborate with the Gitaly Git team as they will build directly upon the Git tooling. Areas where the Cluster team will focus on is High Availability Git storage (Gitaly Cluster), scalability of Gitaly storage mechanisms, and improved user and administrative experiences.</p>
+<h4 id=gitaly-cluster>Gitaly Cluster</h4>
+<p>In order to support highly available Git repository storage, <a href="https://docs.gitlab.com/ee/administration/gitaly/">Gitaly Cluster</a> has been released. This provides redundant storage benefits such as voted writes, read distribution, and data redundancy. For full documentation, please see the details on <a href="https://docs.gitlab.com/ee/administration/gitaly/praefect.html">Configuring Gitaly Cluster</a>.</p>
+<p>To fully appreciate the use-case for Gitaly Cluster, we must first clarify the role of highly available repository storage. From the Gitaly perspective, highly available (HA) storage means that a fault-tolerant interface for repository data exists, such that the loss of a single storage node will not compromise the ability to read / write Git data. Gitaly cluster fulfills this role by providing an interface to define multiple Gitaly storage nodes, and set a replication factor for stored repositories (how many nodes each repository should be stored on). In the event of a storage node loss, read and write operations continue as before, and when the cluster is returned to full capacity, the data is re-replicated to the returning node.</p>
+<p>What HA repository storage does not provide is improved performance. Though in some cases write performance improves (through read distribution), the general concept is that you are trading storage cost and potential performance impacts for fault tolerance.</p>
+<h3 id=1-year-plan>1 year plan</h3>
+
+<p>The one year plan for Gitaly Group is founded on three main principals discussed below. As Gitaly is one of the foundational elements of GitLab, these principals were chosen ensure that Gitaly is ready to meet future business needs.</p>
+<h3 id=improve-repository-data-safety>Improve Repository Data Safety</h3>
+<p>In the unlikely event that there is a repository data issue necessitating in data restoration, we want to ensure that there are sufficient tools in place to allow our customers to be up and running as efficiently and painlessly as possible. To this end, the Gitaly team are actively involved in the <a href="https://handbook.gitlab.com/handbook/company/working-groups/disaster-recovery/">GitLab Disaster Recovery Working Group</a> where we play a critical role in defining opportunities to improve overall repository data recovery time objectives (RTO) and recovery point objectives (RPO). We also meet regularly with customers to better understand our self-managed customer needs.</p>
+<p>Our one year focus areas are:</p>
+<ul>
+<li>Improve the user backup experience by designing a point in time backup and restore mechanism</li>
+<li>Apply our learnings from our GitLab Disaster Recovery Working Group to the overall Gitaly product, to improve RTO / RPO for our self-managed customers</li>
+</ul>
+<h3 id=ensure-gitaly-scales-gracefully>Ensure Gitaly Scales Gracefully</h3>
+<p>As our customers deploy larger installations of GitLab, they start to hit more pain points around the scalability of Gitaly and its repository management. This is especially true in light of our intent to make cloud-native deployments of Gitaly a reality, where nodes may be spun up and down more regularly.</p>
+<p>Our goals here are:</p>
+<ul>
+<li>Provide a better user journey for interacting with very large repositories (in collaboration with the <a href="https://about.gitlab.com/direction/create/source_code_management/">Source Code group</a>)</li>
+<li>Collaborate closely with our <a href="https://about.gitlab.com/direction/core_platform/tenant-scale/">Tenant Scale</a> team to keep scalable repository management at the forefront of our scalability plans</li>
+</ul>
+<h3 id=improve-the-user-experience>Improve the User Experience</h3>
+<p>We recognize that administrators of self-managed instances want to more easily configure and manage repository storage. In order to assist in both of these user journeys, we plan to do the following:</p>
+<ul>
+<li>Develop a cloud-native approach for Gitaly storage, though collaboration with our <a href="https://about.gitlab.com/direction/distribution/">Distribution group</a>.</li>
+<li>Improve our Gitaly Cluster offering to be more user friendly, and easier to manage</li>
+<li>Become a thought leader in the Git space, providing insights and native GitLab methodologies to perform common tasks in an easy to understand way.</li>
+</ul>
+<h3 id=what-is-next-for-us>What is next for us</h3>
+
+<p>Over the next quarter, the Gitaly team is focused on the following areas. While this is not an exhaustive list, it does give some insight into our major focus areas.</p>
+<h4 id=reliable-and-scalable-cluster-replication>Reliable and Scalable Cluster Replication</h4>
+<p>As our customers continue to grow their repositories (both in count and in size), it is critical that the underlying Gitaly services can scale appropriately to meet these demands. As a team, we have decided that the solution to several of the existing scalability issues surrounding Gitaly cluster is a paradigm shift in how we replicate Git data. As such, we have begun initial efforts in shifting to a <a href="https://gitlab.com/groups/gitlab-org/-/epics/8903">decentralized architecture for Gitaly Cluster</a>.</p>
+<p>The highlights of this forward thinking approach are as follows:</p>
+<ul>
+<li>The elimination of the Gitaly PostgreSQL database (Praefect) including the removal of the existing replication queue. This means that there is no more need to work around the single point of failure of this database by using external PostgreSQL redundancy solutions.</li>
+<li>Strong consistency guarantees, including for object pools</li>
+<li>Easier management for data migrations and node management</li>
+<li>Elimination of the difference between Gitaly and Gitaly Cluster. The resultant implementation can simply have a single Gitaly node or multiple Gitaly nodes configured to replicate data.</li>
+</ul>
+<h4 id=backups-and-disaster-recovery>Backups and disaster recovery</h4>
+<p>While this is not an area we own as a team, we believe that it is crucial for us to support the teams working in these areas to ensure that Git backups and data management allows for rapid and accurate restoration of Git data. The team is heavily involved in leading the <a href="https://about.gitlab.com/company/team/structure/working-groups/disaster-recovery/">GitLab disaster recovery working group</a>. As leaders in this working group, we're collaborating with a broad cross-functional team to help ensure our service's success long-term. As part of this effort, we're architecting a solution for <a href="https://gitlab.com/groups/gitlab-org/-/epics/8911">implementing write-ahead logging</a> on GitLab.com.</p>
+<h4 id=cloud-native-gitaly>Cloud Native Gitaly</h4>
+<p>We are in the beginning stages of investigating the <a href="https://gitlab.com/groups/gitlab-org/-/epics/6127#known-limitations">known limitations</a> around Gitaly running well in Kubernetes. This is going to be an ongoing theme across the next year, but we wanted to begin by ensuring that we understood first and foremost what issues exist today. The team is taking a data driven approach involving load testing in an effort to ensure we have clearly identified functional gaps.</p>
+
+
+<h3 id=what-is-not-planned-right-now>What is Not Planned Right Now</h3>
+
+<p>In order to best represent our <a href="https://about.gitlab.com/handbook/values/#transparency">Transparency Value</a>, it is just as important to clarify what the Gitaly team cannot prioritize currently. This does not mean that we do not recognize the need for some of these features, simply that we have a finite team.</p>
+<ul>
+<li>
+<p>Better Support for Administrative User Journeys</p>
+<p>We want to ensure that in the future, we support user journeys such as adding,
+removing, and replacing nodes cleanly, and provide a basic administrative dashboard to monitor node health.</p>
+</li>
+</ul>
+<h3 id=best-in-class-landscape>Best in Class Landscape</h3>
+
+<p>BIC (Best In Class) is an indicator of forecated near-term market performance based on a combination of factors, including analyst views, market news, and feedback from the sales and product teams. It is critical that we understand where GitLab appears in the BIC landscape.</p>
+<p>The version control systems market is expected to be valued at close to US$550mn in the year 2021 and is estimated to reach US$971.8md by 2027 according to <a href="https://www.futuremarketinsights.com/reports/version-control-systems-market">Future Market Insights</a> which is broadly consistent with revenue estimates of GitHub (<a href="https://www.owler.com/company/github">$250mn ARR</a>) and Perforce (<a href="https://www.owler.com/company/perforce">$130mn ARR</a>). The opportunity for GitLab to grow with the market, and grow it's share of the version control market is significant.</p>
+<p>Git is the market leading version control system, demonstrated by the <a href="https://insights.stackoverflow.com/survey/2018/#work-_-version-control">2018 Stack Overflow Developer Survey</a> where over 88% of respondents use Git. Although there are alternatives to Git, Git remains dominant in open source software, usage by developers continues to grow, it installed by default on macOS and Linux, and the project itself continues to adapt to meet the needs of larger projects and enterprise customers who are adopting Git, like the Microsoft Windows project.</p>
+<p>According to a <a href="https://blog.bitrise.io/state-of-app-development-2016#self-hosted">2016 Bitrise survey</a> of mobile app developers, 62% of apps hosted by SaaS provider were hosted in GitHub, and 95% of apps are hosted in by a SaaS provider. These numbers provide an incomplete view of the industry, but broadly represent the large opportunity for growth in SaaS hosting on GitLab.com, and in self hosted where GitLab is already very successful.</p>
+<h4 id=key-capabilities>Key Capabilities</h4>
+
+<p><strong>Support large repositories</strong></p>
+<p>As applications mature, the existing code base continues to grow. As such, average repository sizes are on the rise and version control systems must be able to handle these large repositories in a performant manner. Additionally, many development tasks may require version control of large files, which again, should be handled seamlessly.</p>
+<p><strong>Ensure data safety</strong></p>
+<p>Application code has a very high value to organizations. It is unacceptable to have a solution which does not make it easy to ensure the integrity of your data, as well as provide easy means of backing up and restoring your data should something go wrong. Ideally, these solutions should use efficient and cost effective storage to optimize your business infrastructure.</p>
+
+
+<h4 id=top-2-competitive-solutions>Top 2 Competitive Solutions</h4>
+
+<p>Important competitors are <a href="https://github.com">GitHub.com</a> and <a href="https://perforce.com">Perforce</a> which, in relation to Gitaly, compete with GitLab in terms of raw Git performance and support for enormous repositories respectively.</p>
+<p>Customers and prospects evaluating GitLab (GitLab.com and self hosted) benchmark GitLab's performance against GitHub.com, including Git performance. The Git performance of GitLab.com for easily benchmarked operations like cloning, fetching and pushing, show that GitLab.com similar to GitHub.com.</p>
+<p>Perforce competes with GitLab primarily on its ability to support enormous repositories, either from binary files or monolithic repositories with extremely large numbers of files and history. This competitive advantage comes naturally from its centralized design which means only the files immediately needed by the user are downloaded. Given sufficient support in Git for partial clone, and sufficient performance in GitLab for enormous repositories, existing customers are waiting to migrate to GitLab.</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/773">Git for enormous repositories</a></li>
+</ul>
+<h2 id=git>Git</h2>
+<p>Git lies at the core of what Gitaly does and is of critical importance to
+GitLab. We are aiming to increase up our investment into the Git community to
+ensure that it stays healthy in the long term.</p>
+<p>Direction for the GitLab contributions to the Git project is tracked separately
+from the Gitaly direction, even though they are closely tied to each other.
+This is done because not only is Git a standalone project, but more importantly
+it is a community-led open source project, and thus not under direct control of
+the Gitaly team.</p>
+<p>While we can influence the direction of Git somewhat by being regular
+contributors to the project and building trust and credit with the community,
+it will never be (and should not be!) under our full control. This is only
+natural in an open source project and also by design, as the success of Git
+relies on a healthy and diverse community with interests that may at times be
+conflicting with each other. We want to foster that community and collaborate
+with it, including with our direct competitors.</p>
+<h3 id=monorepo-performance>Monorepo performance</h3>
+<p>There's no question, repository data sets are growing rapidly. With the
+prevalence of machine learning and artificial intelligence adoptions, we're
+seeing a steady increase in repository size as well as the number of files
+needing to be stored. The Git team needs to ensure that repository storage
+scales with these expanding data storage needs.</p>
+<p>Monorepo performance is a complex topic that involves many different parts of
+Git.</p>
+<h4 id=scaling-with-many-objects>Scaling with many objects</h4>
+<p>As projects grow older and grow more commits, the repository's object graph
+naturally expands. This creates scalability issues over time regardless of the
+respective object sizes. We want to ensure that the object database of Git
+repositories can scale well when facing repositories with dozens of millions of
+objects.</p>
+<p>Our goals here are:</p>
+<ul>
+<li>
+<p><strong>Pluggable object databases</strong>: The object storage format and the transport
+format of Git are tightly coupled. Furthermore, access to the object format
+happens rather ad-hoc without a lot of abstraction. It is clear though that
+the current design of the object database has limited scalability, and the
+more features we pile on top of it the harder it becomes to continue scaling.</p>
+<p>We need to get back to the drawing board and explore whether it is feasible
+to make the object database pluggable. This is a huge effort and will likely
+span over multiple years, but it is needed to ensure long-term scalability of
+Git.</p>
+</li>
+<li>
+<p><strong>Better support for bundle URIs</strong>: We have started to use bundle URIs to help
+reduce the load on Gitaly servers. This is especially important in the
+context of CI systems. The feature is still relatively young though, and
+there are issues with both the implementation and the UX. We need to invest
+more time to help polish this feature.</p>
+</li>
+</ul>
+<h4 id=scaling-with-large-objects>Scaling with large objects</h4>
+<p>Despite issues with large object graphs, Git is also known to not scale well
+with large objects like binary files. These are becoming increasingly more
+important with the advent of AI, but are also critical to open up to additional
+markets that are heaviliy dependent on binary assets like game studios.</p>
+<p>Our goals are:</p>
+<ul>
+<li>
+<p><strong>Offloading blobs through promisor remotes</strong>: We need server side changes to
+enable a triangular workflow between Git server, client, and a promisor
+remote which will host blobs that we offload from the git server.</p>
+</li>
+<li>
+<p><strong>Allow easy access to promisor remotes</strong>: Make it easier for Git to access
+promisor remotes. If we have a lot of objects offloaded to object storage
+because they are rarely used, Git should be able to access the objects and
+metadata easily without having to pull the objects back into the repository.</p>
+</li>
+<li>
+<p><strong>Storing large objects more efficiently</strong>: Investigate whether we can store
+large objects more efficiently and allow for deduplication when such large
+objects are changed. One example would be to use rolling hash functions to
+split up large objects better, which would potentially allow us to store
+changes to such large objects incrementally. Furthermore, if we are able to
+expose those chunks via the transport layer, then this would potentially be
+able to provide a native replacement for Git LFS when combined with partial
+clones.</p>
+</li>
+<li>
+<p><strong>Sending large objects more efficiently</strong>: Next to the problem of storing
+large objects efficiently, we also need to investigate how to send incremental
+changes to large objects over the wire efficiently. This may require us to
+expose the above representation with rolling hash functions to clients to
+efficiently compute deltas. An alternative would be to introduce a new object
+type that allows us to serve large binaries more efficiently.</p>
+</li>
+</ul>
+<h4 id=scaling-with-many-references>Scaling with many references</h4>
+<p>We have seen repeatedly that Git and Gitaly start to struggle in repositories
+that have millions of references. While one approach should be to reduce the
+number of references that we need to store, we also need to acknowledge that
+our customers have valid usecases for repositories with this many references.
+Adapting Git so that it can handle repositories with many references is thus
+important.</p>
+<p>Our goals here are:</p>
+<ul>
+<li>
+<p><strong>Implement reftable support in GitLab</strong>: Reftables are a new storage data
+structure within Git that we have the privilege of contributing to upstream
+Git. This back end for Git references will improve the performance of
+repositories with many references, as well as eliminate the current race
+condition around updating reference. This will translate into better support
+for monorepos and will help ensure continued stability for our GitLab.com
+offering.</p>
+<p><a href="https://gitlab.com/groups/gitlab-org/-/epics/4220">Tracking Epic</a>.</p>
+</li>
+<li>
+<p><strong>Performance improvements for the reftable backend</strong>: While the reftable has
+been upstreamed and generally outperforms the files backend in most
+scenarios, there still are lots of performance optimizations feasible. To
+reap the full benefits of this new backend we should invest more time into
+this.</p>
+</li>
+<li>
+<p><strong>Partial-update transactions</strong>: For the reftable backend to operate
+efficiently, updates of multiple references should ideally happen in a single
+transaction. Tools like git-fetch(1) may want to update only a subset of
+those refs though where the expected state matches the actual state of a
+reference. This is done via separate transactions. With the introduction of
+partial-update transactions, we allow evicting references from such a
+transaction, while still continuing with remaining references.</p>
+</li>
+</ul>
+<h4 id=scaling-with-large-trees>Scaling with large trees</h4>
+<p>Many commands in Git scale with the size of the file tree, and large monorepos
+tend to have file trees that are both deep and broad. This creates bottlenecks
+in commands that scale with tree size. Adapting those commands to handle such
+large trees better is thus another angle for ensuring future scalability.</p>
+<p>Our goals here are:</p>
+<ul>
+<li>
+<p><strong>Better UI for sparse checkouts (client side)</strong>: Sparse checkouts help users
+scale by not requiring a fully checked out worktree. For one, this saves disk
+space. Second, this allows users to skip fetching many blobs for partial
+clones. The sparse checkout tool in Git is hardly used because of usability
+challenges. We can vastly improve this command to make it more easily usable for
+monorepo cases.</p>
+</li>
+<li>
+<p><strong>git-replay(1)</strong>: Improve git-replay(1) to support additional usecases for
+cherry-picks, rebases, rebasing merges and reverts.</p>
+</li>
+<li>
+<p><strong>git-blame-tree(1)</strong>: Upstream git-blame-tree(1) to improve performance when
+computing the last commit entries in a specific tree have been changed. This
+should speed up RPCs like <code>ListLastCommitsForTree()</code> significantly.</p>
+</li>
+</ul>
+<h3 id=better-support-for-cloud-native-deployments>Better support for cloud-native deployments</h3>
+<p>Many of our customers have expressed a big interest in cloud-native deployments
+of Gitaly. Our official stance is that this is not supported, where a huge
+contributor to this stance is that Git does not handle constrained environments
+well.</p>
+<p>Our goals here are:</p>
+<ul>
+<li><strong>Memory growth</strong>: Start to address memory growth issues in tools like
+git-pack-objects(1) in large monorepos. Hopefully, it shouldn't be required
+to allocate dozens of gigabytes of memory to pack objects. This is especially
+important in the context of monorepos and Kubernetes. It is assumed that this
+will be a moving target, and depending on how much bandwidth we allocate, we
+expect this to take multiple quarters.</li>
+</ul>
+<h3 id=user-experience>User Experience</h3>
+<p>Git can be an intimidating tool with very complex syntax. This poses a direct
+threat because it allows a contender in the same space to take away market
+share if they provide a significantly better user experience. This has been
+showing with the recent advent of Jujutsu, which is claimed by many to provide
+a superior user experience compared to Git.</p>
+<p>Our goals here are:</p>
+<ul>
+<li>
+<p><strong>More streamlined interfaces</strong>: The user interfaces provided by Git have
+grown organically over time and are often redundant, inconsistent, confusing
+and/or hard to discover. We want to invest the time to make the interfaces
+more consistent and thus easier to use. We want to help the community to
+adopt a set of guidelines to help adapt existing and design future user
+interfaces.</p>
+</li>
+<li>
+<p><strong>Better user journey with large repositories</strong>: Provide a better user journey
+for interacting with very large repositories (in collaboration with the
+<a href="https://about.gitlab.com/direction/create/source_code_management/">Source Code group</a>).</p>
+</li>
+<li>
+<p><strong>Observe challengers like Jujutsu</strong>: We want to observe development of
+challengers like <a href="https://martinvonz.github.io/jj/latest/">Jujutsu</a> (JJ), a
+new version control system funded by Google for improved user experience with
+monorepos. We have noticed that many users praise its usability, especially
+compared to Git. As JJ can use Git repositories as backend, we may want to
+investigate whether it may be a good addition to the toolchain of users.</p>
+<p>Furthermore, we may want to help Google with the libification of Git in this
+context. If the Git backend used by JJ plays well with Git due to this
+effort, then we ensure that JJ will stay compatible with repositories hosted
+on GitLab.</p>
+<p>By staying close to developments in JJ, we position ourselves such that we can
+start to pivot to JJ if this ever becomes necessary.</p>
+</li>
+</ul>
+<h3 id=maintainability>Maintainability</h3>
+<p>As we have started to invest more into the Git community, we need to treat it
+with the same focus on maintainability as we treat projects that are owned by
+GitLab. We want to ensure that the codebase remains accessible to existing and
+new contributors and readily extensible. As we entrust Git with handling our
+customer's most important data, we also need to ensure that the Git project is
+safe.</p>
+<p>Our goals here are:</p>
+<ul>
+<li>
+<p><strong>Integer overflows</strong>: During the audit of X41 D-Sec we found many integer
+overflows in Git that can lead to exploitable out-of-bounds writes. The worst
+issues were able to trigger remote code execution bugs in Gitaly. While known
+instances have been fixed, Git is full of implicit integer conversions that
+can lead to this kind of bug. We should invest the time to harden Git against
+this kind of vulnerability and fix this whole class of bugs. This requires
+lots of fixes throughout the codebase so that we can enable relevant compiler
+warnings.</p>
+</li>
+<li>
+<p><strong>Memory leaks</strong>: While many parts of Git are leak free, others aren't. This
+is reflected in Git's test suite, where only a subset of tests run with the
+leak sanitizer enabled. This makes it easy to introduce new memory leaks that
+go unnoticed. The effect is that we are working against a moving target when
+trying to reduce memory usage of Git overall. We want to help the Git project
+such that the whole test suite is free of memory leaks.</p>
+</li>
+<li>
+<p><strong>Libification</strong>: The Git project provides the command line tools as the only
+interface to Git repositories, which makes it hard to embed Git-related
+functionality into applications directly. There are ongoing efforts to also
+provide a linkable library that exposes parts of Git's functionality to such
+applications. This requires a large effort to make Git play nice for such a
+usecases: removal of global state, removing calls to <code>exit()</code> and <code>abort()</code> and
+general refactorings of the to-be-exposed interfaces. We want to help this
+effort to eventually have a proper Git library, which would also open up the
+ability for ourselves to for example provide long-running Git daemons.</p>
+</li>
+<li>
+<p><strong>Structured error handling</strong>: Improve error handling such that Git can return
+information about the root cause of failures in a structured way. We
+currently have to rely on parsing error messages to figure out what exactly
+has gone wrong, which is fragile and often leads to bugs.</p>
+</li>
+<li>
+<p><strong>Improved tracking of direction</strong> While core developers of the Git community
+are typically aware of ongoing projects, this is less true for the wider
+community. This makes it hard to pick up work as a new contributor, requires
+the community to often re-hash similar discussions, and doesn't allow outside
+parties to learn about the direction. We want to help the Git project to
+track direction better to improve the flow of information.</p>
+</li>
+</ul>
+<h3 id=what-is-not-planned-right-now-1>What is Not Planned Right Now</h3>
+<ul>
+<li>
+<p><a href="https://gitlab.com/groups/gitlab-org/-/epics/93">VFS for Git</a></p>
+<p>Partial Clone is built-in to Git and available in GitLab 13.0 or newer.
+<a href="https://devblogs.microsoft.com/devops/introducing-scalar/">Scalar</a> is
+compatible with partial clone, and Microsoft is contributing to its
+improvement based on their learnings from the VFS for Git protocol.</p>
+</li>
+<li>
+<p>Divergent solution for CDN Offloading</p>
+<p>While we recognize that a lot of good work has gone into independent
+solutions, we are committed to work with the Git community on a CDN
+approach. We intend to support, implement, and contribute to this
+solution as it be comes available. This is currently being explored
+in our <a href="https://gitlab.com/groups/gitlab-org/-/epics/1692">Support Git CDN offloading</a>
+epic.</p>
+</li>
+</ul>
+<h2 id=analyst-landscape>Analyst Landscape</h2>
+
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/773">Native support for large files</a> is important to companies that need to version large binary assets, like game studios. These companies primarily use Perforce because Git LFS provides poor experience with complex commands and careful workflows needed to avoid large files entering the repository. GitLab has been supporting work to provide a more native large file workflow based on promiser packfiles which will be very significant to analysts and customers when the feature is ready.</li>
+</ul>
+<h3 id=sales-enablement>Sales Enablement</h3>
+<p>This section contains messaging, questions, and resources for our sales counterparts to successfully position and sell Gitaly Cluster. It is important to note that Gitaly Cluster is not perfect for every installation. Our goal is to provide options for our customers so they can choose the best repository storage mechanism for their particular business needs.</p>
+<h4 id=what-is-gitaly>What is Gitaly?</h4>
+<p>Gitaly is a centralized service which handles all access to files to file storage for GitLab. Gitaly services Git requests from the GitLab web application, command line, and via the API. Gitaly is highly configurable and can utilize one or more storage locations to read / write repository data.</p>
+<p>The Gitaly service is required for all GitLab installs, and is a separate product from Gitaly Cluster. While Gitaly handles accessing repository storage, Gitaly Cluster provides a highly available repository storage solution for our customers.</p>
+<h4 id=why-we-built-gitaly-cluster>Why we built Gitaly Cluster</h4>
+<p>Gitaly Cluster was built to address the industry-wide difficulty around expanding Git repository storage in addition to the lack of high availability (HA) Git storage for critical applications. A prominent theme in industry is the idea of an ever expanding NFS storage location for repository storage. While this can work, over time performance degrades, and management becomes increasingly complex. Additionally, while the NFS file system is ideal for many types of files, it's well documented that the types of file accesses created by Git repository access can cause performance issues.</p>
+<p>Our goal with Gitaly cluster is to build a Git repository storage system capable of scaling with our users needs, and providing a configurable level of redundancy to keep businesses operating, iterating, and growing.</p>
+<h4 id=how-is-gitaly-cluster-differentiator-for-gitlab>How is Gitaly Cluster differentiator for GitLab</h4>
+<p>Gitaly Cluster is a unique open-core project aimed at providing a scalable and high availability platform for Git repository storage. Gitaly Cluster enable horizontal scalability, allowing our customers to grow their storage in a simple, and well defined manner. We also capitalize on the redundant copies of data needed for HA by increasing read performance through read-distribution.</p>
+<h4 id=when-should-customers-use-gitaly-cluster>When should customers use Gitaly Cluster</h4>
+<p>Customers should utilize Gitaly Cluster in a few key situations:</p>
+<ul>
+<li><strong>There is a need for high availability</strong> - Customers who wish to ensure that losing a single node does not induce downtime are ideally suited to a Gitaly Cluster installation.</li>
+<li><strong>There is a need for expandable storage</strong> - Customers whose repository storage size continues to grow and want to be able to horizontally scale their storage infrastructure.</li>
+<li><strong>There is a large read demand on Git data</strong> - Environments where there is a large read demand on data can benefit greatly from the distributed read functionality provided by Gitaly Cluster.</li>
+</ul>
+<h4 id=when-should-customers-not-use-gitaly-cluster>When should customers not use Gitaly Cluster</h4>
+<p>Customers may not desire to utilize Gitaly Cluster for the following reasons:</p>
+<ul>
+<li><strong>Cost</strong> - Having data stored in a highly available / redundant manner requires more infrastructure and therefore incurs higher storage / hosting costs.</li>
+<li><strong>Very low RPO / RTO needs</strong> - Recognize that restoration of an entire cluster &amp; Praefect database will naturally take longer than a single node. However, this is mostly mitigated by the fact that loss of a single node should not require restoration, and therefore should be an unlikely scenario.</li>
+<li><strong>Require snapshot backups</strong> - It is very difficult to backup the Gitaly Cluster nodes &amp; Praefect database at the exact same time, which will result in a non-congruent backup. Therefore, Gitaly Cluster does not support snapshot backups. However, we are making progress on releasing an <a href="https://gitlab.com/groups/gitlab-org/-/epics/2094">incremental backup solution</a> that will be fully compatible with Gitaly Cluster.</li>
+</ul>
+<h4 id=resources>Resources</h4>
+<p><strong>Documentation Resources</strong></p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/administration/configure.html#gitaly-capabilities">Gitaly Cluster Recommendations</a></li>
+<li><a href="https://docs.gitlab.com/ee/administration/gitaly/">Gitaly Cluster documentation</a></li>
+<li><a href="https://docs.gitlab.com/ee/administration/gitaly/faq.html">FAQ</a></li>
+</ul>
+<p><strong>Enablement Presentation</strong> (Internal GitLab Only)</p>
+<ul>
+<li><a href="https://youtu.be/zI1t0IyHayM">Video: Gitaly Cluster Enablement Presentation</a></li>
+<li><a href="https://docs.google.com/presentation/d/1RV-dOah-EO4D4VZvSwEVxaXEXbVSlc6FzjZjQIYSre8/edit#slide=id.g29a70c6c35_0_68">Deck: Self-hosted options for GitLab</a></li>
+</ul>
+
+<h3 id=deprecations-and-changes>Deprecations and Changes</h3>
+<p>As Gitaly and Gitaly Cluster evolve, it is sometimes necessary to deprecate features. When this occurs, we will follow the documented <a href="https://about.gitlab.com/handbook/marketing/blog/release-posts/#deprecations-removals-and-breaking-changes">Deprecations, removals and breaking changes</a> procedure. This ensures that all stable counterparts within GitLab are informed, and that the <a href="https://docs.gitlab.com/ee/update/deprecations">GitLab Documentation</a> is also updated to keep our customers informed.</p>
+<p>In addition, we will track all deprecations throughout the 16.x milestones, and breaking changes occurring in the 17.0 milestone on the following epic:</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11037">Gitaly 16.x through 17.0 Deprecations and Removals</a></li>
+</ul>
+<h3 id=maturity-plan>Maturity Plan</h3>
+
+<p>Gitaly is a <strong>non-marketable</strong> category, and is therefore not assigned a maturity level.</p>
+<h3 id=target-audience>Target Audience</h3>
+
+<p><strong>Systems Administrators</strong> directly interact with Gitaly when installing, configuring, and managing a GitLab server, particularly when high availability is a requirement. In the past, systems administrators needed to create and manage an NFS cluster to configure a high availability GitLab instance, and manually manage the failover to new Gitaly nodes mounted on the same NFS cluster. In order to scale such a solution individual storage nodes needed to be re-sized, or a sharded Gitaly approach was required. Now that Gitaly Cluster is available, is possible to eliminate the NFS cluster from architecture and rely on Gitaly for replication. Gitaly Cluster brings with it automatic failover, horizontal scaling, and read access across replicas will deliver 99.999% uptime (five 9's) and improved performance without regular intervention. Systems administrators will have fewer applications to manage, as the last projects are migrated to GitLab and other version control systems are retired.</p>
+<p><strong>Developers</strong> will benefit from increasing performance of repositories of all shapes and sizes, on the command line and in the GitLab application, as performance improvements continue. Once support for monolithic repositories reaches minimal and continues maturing, developers will no longer be split between Git and legacy version control systems, as projects consolidate increasingly on Git. Developers that heavily use binary assets, like <strong>Game Developers</strong>, will at long last be able to switch to Git and eliminate Git LFS by adopting native large file support in Git.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/gitaly/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/gitaly/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

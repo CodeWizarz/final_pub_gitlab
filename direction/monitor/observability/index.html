@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Direction - Monitor:Observability
+|
+GitLab
+</title>
+<meta content='The Product Direction for GitLab&#39;s Observability Group.' name=description />
+<meta content='The Product Direction for GitLab&#39;s Observability Group.' name='twitter:description'/>
+<meta content='The Product Direction for GitLab&#39;s Observability Group.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Direction - Monitor:Observability' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/monitor/observability/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/monitor/observability/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Direction - Monitor:Observability' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/monitor/observability/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Direction - Monitor:Observability
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/sguyon'>
+<div class=codeowners-single>
+<img
+src='/images/team/sachaguyon.png'
+class=codeowner-avatar-img
+alt='Sacha Guyon'
+title='Sacha Guyon'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Sacha Guyon
+</div>
+<div class=codeowners-handle>
+@sguyon
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/monitor/observability/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/monitor/">Stage Direction - Monitor</a></li><li>Product Direction - Monitor:Observability</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a></li>
+<li><a href="#current-categories" id=markdown-toc-current-categories>Current Categories</a></li>
+<li><a href="#what-is-observability" id=markdown-toc-what-is-observability>What is Observability?</a></li>
+<li><a href="#vision" id=markdown-toc-vision>Vision</a></li>
+<li><a href="#principles" id=markdown-toc-principles>Principles</a> <ul>
+<li><a href="#developer-first" id=markdown-toc-developer-first>Developer-first</a></li>
+<li><a href="#support-platform-engineers" id=markdown-toc-support-platform-engineers>Support Platform engineers</a></li>
+<li><a href="#cloud-native-first" id=markdown-toc-cloud-native-first>Cloud-Native first</a></li>
+<li><a href="#working-out-of-the-box" id=markdown-toc-working-out-of-the-box>Working out of the box</a></li>
+<li><a href="#unified-data-platform" id=markdown-toc-unified-data-platform>Unified Data Platform</a></li>
+<li><a href="#integrated-ui" id=markdown-toc-integrated-ui>Integrated UI</a></li>
+<li><a href="#opentelemetry-as-the-instrumentation-standard" id=markdown-toc-opentelemetry-as-the-instrumentation-standard>OpenTelemetry as the instrumentation standard</a></li>
+</ul>
+</li>
+<li><a href="#what-has-been-released-over-the-last-year" id=markdown-toc-what-has-been-released-over-the-last-year>What has been released over the last year?</a> <ul>
+<li><a href="#160-2023-05-22-error-tracking-is-now-ga-for-saas" id=markdown-toc-160-2023-05-22-error-tracking-is-now-ga-for-saas><strong>16.0 (2023-05-22):</strong> Error Tracking is now GA for SaaS</a></li>
+<li><a href="#162-2023-07-22-distributed-tracing-experiment-release" id=markdown-toc-162-2023-07-22-distributed-tracing-experiment-release><strong>16.2 (2023-07-22):</strong> Distributed Tracing Experiment release</a></li>
+<li><a href="#167-2023-12-21-distributed-tracing-beta-release" id=markdown-toc-167-2023-12-21-distributed-tracing-beta-release><strong>16.7 (2023-12-21):</strong> Distributed Tracing Beta Release</a></li>
+<li><a href="#168-2024-01-18-metrics-experiment-release" id=markdown-toc-168-2024-01-18-metrics-experiment-release><strong>16.8 (2024-01-18):</strong> Metrics Experiment release</a></li>
+<li><a href="#169-2023-02-15-tracing-ui-improvements" id=markdown-toc-169-2023-02-15-tracing-ui-improvements><strong>16.9 (2023-02-15):</strong> Tracing UI improvements</a></li>
+<li><a href="#1610-2023-03-21-logs-experiment-release" id=markdown-toc-1610-2023-03-21-logs-experiment-release><strong>16.10 (2023-03-21):</strong> Logs Experiment release</a></li>
+<li><a href="#1611-2023-04-18-metrics-beta-release" id=markdown-toc-1611-2023-04-18-metrics-beta-release><strong>16.11 (2023-04-18):</strong> Metrics Beta release</a></li>
+<li><a href="#170-2023-05-16-logs-beta-release" id=markdown-toc-170-2023-05-16-logs-beta-release><strong>17.0 (2023-05-16):</strong> Logs Beta release</a></li>
+<li><a href="#171-2023-06-20-data-correlation" id=markdown-toc-171-2023-06-20-data-correlation><strong>17.1 (2023-06-20):</strong> Data Correlation</a></li>
+<li><a href="#172-2023-07-18-usage-tracking" id=markdown-toc-172-2023-07-18-usage-tracking><strong>17.2 (2023-07-18):</strong> Usage Tracking</a></li>
+</ul>
+</li>
+<li><a href="#whats-coming-next" id=markdown-toc-whats-coming-next>What's coming next?</a> <ul>
+<li><a href="#planissues-integration-eta-173-2024-08-15" id=markdown-toc-planissues-integration-eta-173-2024-08-15>Plan/issues integration: ETA 17.3 (2024-08-15)</a></li>
+<li><a href="#cloud-connector-integration-eta-174-2024-09-19" id=markdown-toc-cloud-connector-integration-eta-174-2024-09-19>Cloud Connector integration: ETA 17.4 (2024-09-19)</a></li>
+<li><a href="#exploratory-work" id=markdown-toc-exploratory-work>Exploratory work:</a></li>
+</ul>
+</li>
+<li><a href="#whats-our-1-year-plan" id=markdown-toc-whats-our-1-year-plan>What's our 1 year plan?</a></li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a></li>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive Landscape</a></li>
+<li><a href="#faq" id=markdown-toc-faq>FAQ</a></li>
+</ul>
+<p>Content Last Reviewed: <code>2024-07-22</code></p>
+<h2 id=overview>Overview</h2>
+<p>This page outlines the direction for the Monitor:Observability group. Feedback is welcome: you can <a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/new">create a new issue</a> or reach out to this page maintainer if you have any questions or suggestions.</p>
+<h2 id=current-categories>Current Categories</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Availability</th>
+<th>Maturity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://about.gitlab.com/direction/monitor/observability/error_tracking/">Error Tracking</a></td>
+<td>Detect, visualize and triage applications errors</td>
+<td>GA</td>
+<td>Minimal</td>
+</tr>
+<tr>
+<td><a href="https://docs.gitlab.com/ee/operations/tracing">Distributed Tracing</a></td>
+<td>Track and visualize application requests across distributed services</td>
+<td>Beta</td>
+<td>Minimal</td>
+</tr>
+<tr>
+<td><a href="https://docs.gitlab.com/ee/operations/metrics.html">Metrics</a></td>
+<td>Collect and visualize application performance and health metrics</td>
+<td>Beta</td>
+<td>Minimal</td>
+</tr>
+<tr>
+<td><a href="https://docs.gitlab.com/ee/operations/logs">Logging</a></td>
+<td>Centralize application and infrastructure logs collection, storage and analysis</td>
+<td>Beta</td>
+<td>Minimal</td>
+</tr>
+</tbody>
+</table>
+<h2 id=what-is-observability>What is Observability?</h2>
+<p>Observability software enables the visualization and analysis of application performance, availability and user experience, based on the telemetry data it generates, such as traces, metrics or logs. It allows developers and operators to understand the <strong>impact of a code or configuration change</strong>, answering questions such as:</p>
+<ul>
+<li>"What caused this failure?"</li>
+<li>"What caused this change in behavior?"</li>
+<li>"Why do a particular user’s requests fail?"</li>
+<li>"What are the performance bottlenecks impacting user experience?</li>
+<li>"Is my latest canary deployment stable?"</li>
+</ul>
+<p>Common capabilities include the configuration of dashboards and alerts for issue detection and triage, the execution of analytical queries for deeper issue investigation and root cause analysis, as well as the capability to share findings with team members. By centralizing data from multiple sources into a single, unified platform, observability tools facilitate collaboration across software development and operations teams, enabling companies to resolve issues faster and minimize downtimes.</p>
+<h2 id=vision>Vision</h2>
+<p>We aim to provide a best-in-class observability solution that enables our customers to monitor their applications and infrastructure performance directly within GitLab. This will allow organizations to further consolidate their DevOps workflows into a single platform, enhancing operational efficiency.</p>
+<h2 id=principles>Principles</h2>
+<p>We will pursue this vision with the following principles:</p>
+<h4 id=developer-first>Developer-first</h4>
+<p>We are focused on solving problems for <a href="https://handbook.gitlab.com/handbook/product/personas/#sasha-software-developer">modern development teams</a> first. In doing so, we immediately add value to the majority of our current users. Over time, this will allows us to provide a unique, modern approach to observability, helping companies to further "shift-left" their monitoring workflows.</p>
+<h4 id=support-platform-engineers>Support Platform engineers</h4>
+<p><a href="https://handbook.gitlab.com/handbook/product/personas/#priyanka-platform-engineer">Platform teams</a> are key to building an onramp to the product. Providing them capabilities to observe and improve the performance of their software delivery platform will allow us to land our first champion users within an organization, and help expanding to development teams.</p>
+<h4 id=cloud-native-first>Cloud-Native first</h4>
+<p>Building features first for <a href="https://handbook.gitlab.com/handbook/product/product-principles/#modern-first">modern</a>, <a href="https://handbook.gitlab.com/handbook/product/product-principles/#cloud-native-first">cloud-native</a> environment allows us to focus on where development is going, and deliver solutions that every company aspires to use eventually.</p>
+<h4 id=working-out-of-the-box>Working out of the box</h4>
+<p>We want developers to have immediate access to an available observability solution. That means we will ensure it is on by default, starts with convention over configuration, and is easy to use.</p>
+<h4 id=unified-data-platform>Unified Data Platform</h4>
+<p>Consolidating data into a single place facilitates collaboration and enables to surface unique insights by correlating diverse set of information, which would otherwise be overlooked if siloed. To achieve this, we aim to store all types of telemetry data that are useful for DevOps teams - from metrics, logs, traces, and errors, to <a href="https://about.gitlab.com/direction/monitor/cross-stage-vision.html">usage analytics data</a> into a cohesive data platform that can span the entire DevOps process.</p>
+<h4 id=integrated-ui>Integrated UI</h4>
+<p>The data visualization and investigation capabilities we are building are aimed to be seamlessly integrated into the platform and enhance other GitLab features and contribute to the direction for customizable dashboards in GitLab.</p>
+<h4 id=opentelemetry-as-the-instrumentation-standard>OpenTelemetry as the instrumentation standard</h4>
+<p>We are supporting <a href="https://opentelemetry.io/">OpenTelemetry</a> as the primary way to instrument, generate, collect and export telemetry data. This approach aligns with GitLab's values, as it emphasizes our support for open-source industry standards. This way, we hope to contribute to improve OpenTelemetry, and that our customers will be able to do the same. We will progressively deprecate previously built solutions based on other agents or SDK.</p>
+<h2 id=what-has-been-released-over-the-last-year>What has been released over the last year?</h2>
+<h4 id=160-2023-05-22-error-tracking-is-now-ga-for-saas><strong>16.0 (2023-05-22):</strong> Error Tracking is now GA for SaaS</h4>
+<p>GitLab error tracking allows developers to discover and view errors generated by their application directly within GitLab, removing the need to switch between multiple tools when debugging. In this release, we are supporting both the <a href="https://docs.gitlab.com/ee/operations/error_tracking.html#integrated-error-tracking">GitLab integrated error tracking</a> and the <a href="https://docs.gitlab.com/ee/operations/error_tracking.html#sentry-error-tracking">Sentry-based</a> backends.</p>
+<p>Learn more: <a href="https://about.gitlab.com/releases/2023/05/22/gitlab-16-0-released/#error-tracking-is-now-generally-available">Release Post</a>, <a href="https://about.gitlab.com/direction/monitor/observability/error_tracking/">Direction page</a></p>
+<h4 id=162-2023-07-22-distributed-tracing-experiment-release><strong>16.2 (2023-07-22):</strong> Distributed Tracing Experiment release</h4>
+<p>With GitLab Distributed Tracing, users can now troubleshoot application performance issues by inspecting how a request moves through different services and systems, the timing of each operation, and any errors as they occur. It is particularly useful in the context of micro-service applications, which group multiple independent services collaborating to fulfill user requests.</p>
+<p>Telemetry data can be collected via any OpenTelemetry SDK:</p>
+<ul>
+<li>OpenTelemetry <a href="">code instrumentation is </a><a href="https://opentelemetry.io/docs/instrumentation/">supported</a> for many popular programming languages, making it very easy for users to send data to GitLab from any application.</li>
+<li>Collected Traces are instantly visible in GitLab, making debugging more efficient for users, and directly integrated within their development workflows.</li>
+</ul>
+<p>Collected Traces can be queried and visualized via a new integrated UI, replacing previous Jaeger-based front-end:</p>
+<ul>
+<li>Simple Search UI with free text search.</li>
+<li>Individual traces are displayed as a waterfall diagram providing a complete view of a request distributed across different services and operations (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2253" title="frontend: Trace Details UI">issue</a>).</li>
+</ul>
+<h4 id=167-2023-12-21-distributed-tracing-beta-release><strong>16.7 (2023-12-21):</strong> Distributed Tracing Beta Release</h4>
+<p>The Beta release adds the following features:</p>
+<ul>
+<li>Users can query traces up to 30 days in the past.</li>
+<li><a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2364" title="Tracing UI beta requirements">Improved Search UI</a>:
+<ul>
+<li>Filter by services, operation name, and time range.</li>
+<li>Autocomplete services and operation names to simplify querying (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2379" title="Add prepopulated Period filter to tracing search bar">issue</a>).</li>
+<li>Scatter plot graph surfacing trace outliers such as slow traces and errors (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2384" title="Show scatter chart on top of trace results">issue</a>).</li>
+<li>Continuous scrolling with progressive loading of results to accelerate browsing through large volume of data (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2272" title="frontend: Add Infinite Scrolling to tracing list">issue</a>).</li>
+</ul>
+</li>
+</ul>
+<p>Learn more: <a href="https://docs.gitlab.com/ee/operations/tracing">Tracing documentation page</a></p>
+<h4 id=168-2024-01-18-metrics-experiment-release><strong>16.8 (2024-01-18):</strong> Metrics Experiment release</h4>
+<p>With GitLab Metrics, users can collect application and infrastructure metrics, offering valuable insights for tracking performance and system health. This first release has the following features and limitations:</p>
+<ul>
+<li>Metrics can be collected from any compatible OpenTelemetry SDK or Receiver, ie. <a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/README.md">host-level metrics</a> (CPU/Memory usage), <a href="https://opentelemetry.io/docs/kubernetes/getting-started/">Kubernetes cluster</a>, <a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/awscloudwatchmetricsreceiver">AWS metrics</a><span dir="">.</span>..</li>
+<li>User can list collected metrics per project and visualize metrics values per dimensions as a time-series chart.</li>
+<li>Metrics values are visible for 24 hours in the UI.</li>
+</ul>
+<p>Learn more: <a href="https://docs.gitlab.com/ee/operations/metrics">Metrics documentation page</a></p>
+<h4 id=169-2023-02-15-tracing-ui-improvements><strong>16.9 (2023-02-15):</strong> Tracing UI improvements</h4>
+<ul>
+<li>Visualize RED metrics charts in Trace list (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2582">issue</a>)</li>
+<li>Filter by trace status (<a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/141784">MR</a>)</li>
+<li>Hightlight error spans in search results (<a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/140794">MR</a>)</li>
+</ul>
+<p>Learn more: see <a href="https://gitlab.com/gitlab-org/opstrace/general/-/issues/186#note_1759066679">internal release notes</a></p>
+<h4 id=1610-2023-03-21-logs-experiment-release><strong>16.10 (2023-03-21):</strong> Logs Experiment release</h4>
+<ul>
+<li>Collect and retain historical logs from any source compatible with OpenTelemetry SDK: infrastructure, system or application logs in one place</li>
+<li>Query multiple sources together to correlate disparate events, and connect the dots between the different parts of a system when looking for the root cause of an issue.</li>
+<li>By combining Logs with Traces and Metrics collection, users have now a complete toolkit to monitor, troubleshoot and remediate production issues within GitLab.</li>
+</ul>
+<p>Learn more: see <a href="https://gitlab.com/gitlab-org/opstrace/general/-/issues/186#note_1791864153">release notes</a></p>
+<h4 id=1611-2023-04-18-metrics-beta-release><strong>16.11 (2023-04-18):</strong> Metrics Beta release</h4>
+<ul>
+<li>Run analytical queries on real-time and historical data (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2487">epic</a>)</li>
+<li>Visualize data as <a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2436">time-series</a> and <a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2574">histogram</a> charts</li>
+<li>Improved support for incomplete traces (<a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/146803">issue</a>)</li>
+</ul>
+<p>Learn more: see <a href="https://gitlab.com/gitlab-org/opstrace/general/-/issues/188#note_1839897657">release notes</a></p>
+<h4 id=170-2023-05-16-logs-beta-release><strong>17.0 (2023-05-16):</strong> Logs Beta release</h4>
+<ul>
+<li>Filter Logs by attribute and time (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2646">epic</a>)</li>
+<li>Visualize Logs volume chart in Logs search results (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2647">issue</a>)</li>
+<li>Auto-suggest value for common Logs attributes in Logs search (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2782">issue</a>)</li>
+<li>Log queries URL can be copied and shared to collaborate on issue investigation (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2676">issue</a>)</li>
+<li>Group Metric by attributes (<a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/149117">issue</a>)</li>
+</ul>
+<p>Learn more: see <a href="https://gitlab.com/gitlab-org/opstrace/general/-/issues/197#note_1839895965">release notes</a></p>
+<h4 id=171-2023-06-20-data-correlation><strong>17.1 (2023-06-20):</strong> Data Correlation</h4>
+<ul>
+<li>View Logs related to a specific Trace (and vice versa) (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2856">issue</a>)</li>
+<li>Improved Logs search UX</li>
+</ul>
+<p>Learn more: see <a href="https://gitlab.com/gitlab-org/opstrace/general/-/issues/198#note_1839896800">release notes</a></p>
+<h4 id=172-2023-07-18-usage-tracking><strong>17.2 (2023-07-18):</strong> Usage Tracking</h4>
+<ul>
+<li>Track observability data usage per month at the project level (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2829">issue</a>)</li>
+<li>Instrument Observability with usage metrics (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2806">issue</a>)</li>
+<li>Enabled sample logs collection in <a href="https://gitlab.com/gitlab-org/opstrace/sandbox/otel-demo/">demo project</a> (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2630">issue</a>)</li>
+</ul>
+<p>Learn more: see <a href="https://gitlab.com/gitlab-org/opstrace/general/-/issues/199#note_1839896893">release notes</a></p>
+<h2 id=whats-coming-next>What's coming next?</h2>
+<p>In the next 3 months (2024-08 - 2024-10), we plan to release the following:</p>
+<h3 id=planissues-integration-eta-173-2024-08-15>Plan/issues integration: ETA 17.3 (2024-08-15)</h3>
+<ul>
+<li>Create and link issues from Metrics, Logs and Traces (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2713">issue</a>)</li>
+<li>Embed Metrics, Logs and Traces into issues description (<a href="https://gitlab.com/gitlab-org/opstrace/opstrace/-/issues/2717">issue</a>)</li>
+</ul>
+<h3 id=cloud-connector-integration-eta-174-2024-09-19>Cloud Connector integration: ETA 17.4 (2024-09-19)</h3>
+<p>Integrating with <a href="https://about.gitlab.com/direction/cloud-connector/">Cloud Connector</a> will enable self-managed customers to use observability features by storing data remotely (on gitlab.com), and querying and visualizing data seamlessly from their self-managed instance (<a href="https://gitlab.com/groups/gitlab-org/opstrace/-/epics/95">epic</a>).</p>
+<h3 id=exploratory-work>Exploratory work:</h3>
+<p>During this period, we will also explore:</p>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/ux-research/-/issues/2691">Navigation</a>: Understand how users expect to discover and access Observability features Observability features, to determine the optimal information architecture navigation placement within the application</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/opstrace/-/epics/112">Dashboards</a>: Visualize telemetry data in built-in or user-configurable dashboards alongside business and user-level analytics</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/opstrace/-/epics/118">Services list</a>: Provide an overview of instrumented services and their top-level metrics</li>
+</ul>
+<h2 id=whats-our-1-year-plan>What's our 1 year plan?</h2>
+<p>Our goal is to achieve minimal maturity and GA for all Observability categories, so customers can further consolidate their monitoring workflows within GitLab.</p>
+<p>While we don't expect customers to fully replace existing solutions they may use with higher level of maturity, we expect to be able to provide development teams that are currently not using any monitoring tools a basic set of capabilities available directly in GitLab. This way, they will be able to start tracking and improving their application performance and availability.</p>
+<p><strong>Prioritized development work:</strong></p>
+<ul>
+<li>Collect and store main telemetry data types (Traces, Metrics, Logs) at enterprise scale</li>
+<li>Run performant and cost-efficient analytical queries for real-time, interactive exploration and analysis of this data</li>
+<li>Support self-managed customers via cloud connector integration</li>
+</ul>
+<p><strong>Exploratory work:</strong></p>
+<ul>
+<li>
+<p>Automatically discover and centralize the listing of <a href="https://gitlab.com/groups/gitlab-org/opstrace/-/epics/118">monitored software components</a> (ie. services, application) and cloud infrastructure resources (ie. hosts, clusters, environments), surfacing key metrics and issues in context</p>
+</li>
+<li>
+<p>Support Deployment Tracking / Continuous Verification use cases, integrating with <a href="https://about.gitlab.com/direction/delivery/">Delivery</a> capabilities - so customers can surface health and performance metrics directly within their deployments workflows in GitLab</p>
+</li>
+<li>
+<p>Support <a href="https://gitlab.com/groups/gitlab-org/opstrace/-/epics/120">GitLab self-monitoring</a> use cases: what GitLab platform administrators need to troubleshoot performance issues in their software delivery platform at the application, infrastructure or pipeline level.</p>
+</li>
+</ul>
+<p>Learn more: <a href="https://gitlab.com/groups/gitlab-org/opstrace/-/epics/92" title="Observability Group - FY25 HQ">see epic</a></p>
+<h2 id=target-audience>Target Audience</h2>
+<ul>
+<li>Infrastructure platform teams (SREs, Infrastructure managers, Ops teams) in medium to large-scale enterprises, who are responsible for maintaining the health, performance, and reliability of software applications and their related infrastructure.
+<ul>
+<li>User personas:
+<ul>
+<li><a href="https://handbook.gitlab.com/handbook/product/personas/#allison-application-ops">Allison (Application Ops/SRE)</a></li>
+<li><a href="https://handbook.gitlab.com/handbook/product/personas/#sidney-systems-administrator">Sidney (Systems Administrator)</a></li>
+<li><a href="https://handbook.gitlab.com/handbook/product/personas/#ingrid-infrastructure-operator">Ingrid (Infrastructure Operator)</a></li>
+<li><a href="https://handbook.gitlab.com/handbook/product/personas/#rachel-release-manager">Rachel (Release Manager)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Development teams that share the on-call responsibility
+<ul>
+<li>User personas:
+<ul>
+<li><a href="https://handbook.gitlab.com/handbook/product/personas/#sasha-software-developer">Sasha (Software Developer)</a></li>
+<li><a href="https://handbook.gitlab.com/handbook/product/personas/#delaney-development-team-lead">Delaney (Development team lead</a>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id=competitive-landscape>Competitive Landscape</h2>
+<p>See <a href="/direction/monitor/observability/competitors.html">competitors page</a></p>
+<h2 id=faq>FAQ</h2>
+<ol>
+<li><strong>What is Opstrace?</strong> On Dec 14, 2021, GitLab <a href="https://about.gitlab.com/press/releases/2021-12-14-gitlab-acquires-opstrace-to-expand-its-devops-platform-with-open-source-observability-solution/">acquired Opstrace</a> to accelerate GitLab's Observability roadmap. Opstrace product has been integrated into GitLab as the foundational component of our data management platform, on top of which we are now building upon additional capabilities.</li>
+<li><strong>What is going to happen with the Opstrace name?</strong> We are going to archive the name Opstrace as a standalone product, and instead focus on Observability features on the GitLab DevOps platform. Timeline and work that needs to be done are tracked in <a href="https://gitlab.com/gitlab-org/opstrace/general/-/issues/91" title="Archive the name Opstrace and focus on Observability in GitLab">this issue</a> (internal only).</li>
+</ol>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/monitor/observability/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/monitor/observability/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

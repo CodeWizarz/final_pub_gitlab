@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Organization
+|
+GitLab
+</title>
+<meta content='' name=description />
+<meta content='' name='twitter:description'/>
+<meta content='' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Organization' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/core_platform/tenant-scale/organization/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/core_platform/tenant-scale/organization/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Organization' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/core_platform/tenant-scale/organization/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Organization
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/joshlambert'>
+<img
+src='/images/team/joshua.png'
+class=codeowner-avatar-img
+alt='Joshua Lambert'
+title='Joshua Lambert'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/lohrc'>
+<img
+src='/images/team/ChristinaLohr.jpg'
+class=codeowner-avatar-img
+alt='Christina Lohr'
+title='Christina Lohr'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/core_platform/tenant-scale/organization/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/core_platform/">Product Section Direction - Core Platform</a></li><li><a href="/direction/core_platform/tenant-scale/">Group Direction - Tenant Scale</a></li><li>Category Direction - Organization</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#organization" id=markdown-toc-organization>Organization</a></li>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#opportunities" id=markdown-toc-opportunities>Opportunities</a></li>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and themes</a></li>
+<li><a href="#goals" id=markdown-toc-goals>Goals</a> <ul>
+<li><a href="#near-term-goals" id=markdown-toc-near-term-goals>Near term goals</a></li>
+<li><a href="#mid-term-goals" id=markdown-toc-mid-term-goals>Mid term goals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a> <ul>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is not planned right now</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=organization>Organization</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/core_platform/">Data Stores</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">Planned</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-07-23</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id=introduction-and-how-you-can-help>Introduction and how you can help</h2>
+<p>Thanks for visiting this category direction page on Organizations at GitLab.
+The Organization category is part of the <a href="https://about.gitlab.com/handbook/product/categories/#tenant-scale-group">Tenant Scale group</a> within the <a href="https://about.gitlab.com/direction/core_platform/">Core Platform</a> section and is maintained by <a href="https://about.gitlab.com/company/team/#lohrc">Christina Lohr</a>.</p>
+<p>This vision and direction is constantly evolving and everyone can contribute:</p>
+<ul>
+<li>Please comment in the linked <a href="https://gitlab.com/groups/gitlab-org/-/issues/?sort=popularity&amp;state=opened&amp;label_name%5B%5D=Category%3AOrganization&amp;label_name%5B%5D=group%3A%3Atenant%20scale&amp;first_page_size=100">issues</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics?state=opened&amp;page=1&amp;sort=start_date_desc&amp;label_name[]=Category:Organization&amp;label_name[]=group::tenant+scale">epics</a>. Sharing your feedback directly on GitLab.com or submitting a merge request to this page are the best ways to contribute to our strategy.</li>
+<li>Please share feedback directly via <a href="https://gitlab.com/lohrc">email</a>, or <a href="https://calendly.com/christinalohr/30min">schedule a video call</a>. If you're a GitLab user and have direct feedback about your needs for the organization, we'd love to hear from you.</li>
+<li>Please open an issue using the ~"Category:Organization" label, or reach out to us internally in the #g_tenant-scale Slack channel.</li>
+</ul>
+<h2 id=overview>Overview</h2>
+<p>The Organization category focuses on creating a better experience for organizations to manage their GitLab implementation.
+This includes making administrative capabilities that previously only existed for self-managed users available to our SaaS users as well, such as management of users and groups and supporting cascading settings.
+The result of this effort will be a more intuitive user experience for all our users towards more aligned behaviors throughout our product.</p>
+<h4 id=opportunities>Opportunities</h4>
+<p>Iterating on Organizations will allow us to solve a number of problems with the current SaaS experience:</p>
+<ol>
+<li>Enables grouping of top-level groups. For example, the following top-level groups would belong to the Organization GitLab:
+<ul>
+<li>https://gitlab.com/gitlab-org/</li>
+<li>https://gitlab.com/gitlab-com/</li>
+</ul>
+</li>
+<li>Allows different Organizations to be isolated. Top-level groups of the same Organization can interact with each other but not with groups in other Organizations, providing clear boundaries for an Organization, similar to a self-managed instance. An Organization should feel like a self-contained space where an enterprise can work independently of the rest of Gitlab.com. Users in a group owned by an enterprise should be able to complete all their day to day activities without leaving their Organization. Isolation should have a positive impact on performance and availability as things like user dashboards can be scoped to Organizations.</li>
+<li>Allows integration with <a href="https://handbook.gitlab.com/handbook/engineering/architecture/design-documents/cells/">Cells</a>. Isolating Organizations makes it possible to allocate and distribute them across different Cells.</li>
+<li>Removes the need to define hierarchies. An Organization is a container that could be filled with whatever hierarchy/entity set makes sense.</li>
+<li>Enables centralized control of user profiles. With an Organization-specific user profile, administrators can control the user’s role in a company, enforce user emails, or show a graphical indicator that a user is part of the Organization. An example could be adding a “GitLab employee” stamp on comments.</li>
+<li>Organizations bring an on-premise-like experience to SaaS (GitLab.com). The Organization admin will have access to instance-equivalent Admin Area settings with most of the configuration controlled at the Organization level.</li>
+</ol>
+<h3 id=strategy-and-themes>Strategy and themes</h3>
+<p>The video below contains a high-level overview of what the Organization is trying to accomplish, some initial design considerations, and how Organizations build the foundation for Cells.</p>
+<figure class=video_container>
+<iframe src="https://www.youtube.com/embed/ltFRc05cnbc" frameborder=0 allowfullscreen=true> </iframe>
+</figure>
+<p>Today, GitLab's features exist at 3 levels:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instance</td>
+<td>Features for the entire instance. These are generally admin features (restricted to the Admin Area or via a config like <code>gitlab.rb</code>), but not always (<a href="https://docs.gitlab.com/ee/user/operations_dashboard/">Operations Dashboard</a>).</td>
+<td><a href="https://docs.gitlab.com/ee/administration/auth/ldap/#configuration-core-only">LDAP</a>, <a href="https://docs.gitlab.com/ee/administration/admin_area.html#admin-area-sections">admin-level push rules</a></td>
+</tr>
+<tr>
+<td>Group</td>
+<td>Features configured and used at the group level. These generally inherit behavior or objects down into subgroups (like epics, settings, or memberships).</td>
+<td><a href="https://docs.gitlab.com/ee/user/group/epics/">Epics</a></td>
+</tr>
+<tr>
+<td>Project</td>
+<td>Features used at the project level.</td>
+<td><a href="https://docs.gitlab.com/ee/user/project/requirements/">Requirements Management</a></td>
+</tr>
+</tbody>
+</table>
+<p>This leads to a few problems:</p>
+<ul>
+<li>3 ways to build a feature lead to follow-on requests to build a feature at some other level and additional engineering effort.</li>
+<li>Restricts the audience, especially with instance-level features. Many of these features are admin-only, which is a tiny percentage of most users on an instance. If we make a feature instance level, we're locking ourselves into a few thousand self-managed users and locking out GitLab.com users.</li>
+<li>Poor UX. Inconsistencies between the features available at the project and group levels create navigation and usability issues. Moreover, there isn't a dedicated place for organization-level features.</li>
+</ul>
+<p>While it would be ideal to have one way to build a new feature, most GitLab functionality should exist at the group or organization level rather than the instance level at a minimum.</p>
+<p>We should extract features from the Admin Area into a new object called <a href="https://docs.gitlab.com/ee/architecture/blueprints/organization/index.html">Organization</a> that acts as an umbrella to all the projects and groups it contains.</p>
+<h3 id=goals>Goals</h3>
+<p>The <a href="https://handbook.gitlab.com/handbook/engineering/architecture/design-documents/organization/">Organization</a> focuses on creating a better experience for organizations and enterprises to manage their GitLab experience. By introducing Organizations and <a href="/direction/core_platform/tenant-scale/cell/">Cells</a> we can improve the reliability, performance and availability of our SaaS Platforms.</p>
+<ul>
+<li>Wider audience: Many instance-level features are admin only. We do not want to lock out users of GitLab.com in that way. We want to make administrative capabilities that previously only existed for self-managed users available to our SaaS users as well. This also means we would give users of GitLab.com more independence from GitLab.com admins in the long run. Today, there are actions that self-managed admins can perform that GitLab.com users have to request from GitLab.com admins.</li>
+<li>Improved user experience: Inconsistencies between features available at the project and group level create navigation and usability issues. Moreover, there isn’t a dedicated place for organization-level features.</li>
+<li>Aggregation: Data from all groups and projects in an Organization can be aggregated.</li>
+<li>An Organization includes settings, data, and features from all groups and projects under the same owner (including personal namespaces).</li>
+<li>Cascading behavior: Organization cascades behavior to all the projects and groups that are owned by the same Organization. It can be decided at the organization-level whether a setting can be overridden or not on the levels beneath.</li>
+</ul>
+<h4 id=near-term-goals>Near term goals</h4>
+<p>Over the next few months, we are focussing on delivering the <a href="https://gitlab.com/groups/gitlab-org/-/epics/14111">Organization backend</a>. This serves as a foundation for <a href="/direction/core_platform/tenant-scale/cell/">Cells</a> and for other teams to add functionality that is needed at the organization-level. The initial Organization release will contain the following functionality:</p>
+<ul>
+<li>Instance setting to allow the creation of multiple Organizations. This will be enabled by default on GitLab.com, and disabled for self-managed GitLab.</li>
+<li>Organization Owner. The creation of an Organization appoints that user as the Organization Owner. Once established, the Organization Owner can appoint other Organization Owners.</li>
+<li>Organization users. A user is managed by one Organization, but can be part of multiple Organizations. Users are able to navigate between the different Organizations they are part of.</li>
+<li>Organization settings page. Containing the Organization name, ID, description, and avatar. Settings are editable by the Organization Owner.</li>
+<li>Setup flow. Users are able to migrate existing top-level groups to newly created Organizations. New users are able to create an Organization from scratch and start building top-level groups from there.</li>
+<li>Visibility. Initially, Organizations will be restricted to be private, containing only private top-level groups. Visibility is editable by the Organization Owner. Public visibility is planned for a later iteration.</li>
+<li>Groups. This includes the ability to create, edit, and delete groups, as well as a Groups overview that can be accessed by the Organization Owner.</li>
+<li>Projects. This includes the ability to create, edit, and delete projects, as well as a Projects overview that can be accessed by the Organization Owner.</li>
+</ul>
+<h4 id=mid-term-goals>Mid term goals</h4>
+<p>Once established, we want to focus on improving workflows and functionality for users of the Organiztion by addressing the following gaps:</p>
+<ul>
+<li>Internal visibility will be made available on Organizations that are part of GitLab.com. Currently, <code>internal</code> visibility is only available on self-managed GitLab, and the only way for customers of GitLab.com to shield their content is to set the visibility of all of their groups and projects to <code>private</code>. This setting is often too restrictive for users to easily find their way around an Organization. By making <code>internal</code> visibility available, administrators can enable their users to safely explore projects without having to supervise their membership.</li>
+</ul>
+<h2 id=1-year-plan>1 year plan</h2>
+<p>Within the next year, we are planning to release the <a href="https://handbook.gitlab.com/handbook/engineering/architecture/design-documents/organization/">Organization</a>.</p>
+<h3 id=what-we-are-currently-working-on>What we are currently working on</h3>
+<p>Our immediate focus is to release an <a href="https://docs.gitlab.com/ee/architecture/blueprints/organization/index.html#iteration-1-organization-prototype-fy24q3">Organization prototype</a> containing:</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/14111">Organization backend</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11188">Organization group overview</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11187">Organization front page</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11190">Organization navigation</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11670">Organization isolation</a></li>
+</ul>
+<h3 id=what-we-recently-completed>What we recently completed</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11189">Organization project overview</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11191">Organization creation</a></li>
+</ul>
+<h3 id=what-is-not-planned-right-now>What is not planned right now</h3>
+<ul>
+<li>We are currently not considering making the Organization part of the namespace framework.</li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/core_platform/tenant-scale/organization/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/core_platform/tenant-scale/organization/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

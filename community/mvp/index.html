@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+MVP
+|
+GitLab
+</title>
+<meta content='Every release a contributor is awarded the prestigious golden fork as the Most Valuable Person (MVP). Below is the list of all MVPs and the selection process.' name=description />
+<meta content='Every release a contributor is awarded the prestigious golden fork as the Most Valuable Person (MVP). Below is the list of all MVPs and the selection process.' name='twitter:description'/>
+<meta content='Every release a contributor is awarded the prestigious golden fork as the Most Valuable Person (MVP). Below is the list of all MVPs and the selection process.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content=MVP property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='community/mvp/index.html.haml' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/community/mvp/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content=MVP name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/community/mvp/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/mvp.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body class='community community_mvp community_mvp_index ' data-offset=90 data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<div class=container>
+<h1 class=title>
+GitLab Hall of
+<b>Fame</b>
+</h1>
+<div class=mvp-badge>
+<img src="/images/mvp_badge.png" alt=""/>
+</div>
+</div>
+</div>
+<div class=container>
+<h2 class=block-title>GitLab MVP</h2>
+<p class=description>
+Each month GitLab recognizes one or more community contributors as GitLab MVPs ("Most Valuable Persons") to be featured in the GitLab release post.
+Nominations are a rolling process so that contributors can be nominated and supported at anytime.
+The selection process is described in the
+<a href="https://handbook.gitlab.com/handbook/marketing/developer-relations/contributor-success/mvp-process/">Contributor Success Handbook</a>
+and the list of all MVPs is as follows:
+</p>
+<div class=row>
+<dl class='col-lg-10 col-lg-offset-1 col-lg-8 col-lg-offset-2'>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2024/08/15/gitlab-17-3-released/#mvp">17.3 (August 15, 2024)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/antonkalmykov">Anton Kalmykov (@antonkalmykov)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2024/07/18/gitlab-17-2-released/#mvp">17.2 (July 18, 2024)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/lifez">Phawin Khongkhasawan (@lifez)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2024/06/20/gitlab-17-1-released/#mvp">17.1 (June 20, 2024)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/imskr">Shubham Kumar (@imskr)</a> and <a href="https://gitlab.com/joe-snyder">Joe Snyder (@joe-snyder)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2024/05/16/gitlab-17-0-released/#mvp">17.0 (May 16, 2024)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/Taucher2003">Niklas van Schrick (@Taucher2003)</a> and <a href="https://gitlab.com/gerardo-navarro">Gerardo Navarro (@gerardo-navarro)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2024/04/18/gitlab-16-11-released/#mvp">16.11 (April 18, 2024)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/bahek2462774">Ivan Shtyrliaiev (@bahek2462774)</a> and <a href="https://gitlab.com/BaptisteLalanne">Baptiste Lalanne (@BaptisteLalanne)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2024/03/21/gitlab-16-10-released/#mvp">16.10 (March 21, 2024)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/X_Sheep">Lennard Sprong (@X_Sheep)</a> and <a href="https://gitlab.com/zillemarco">Marco Zille (@zillemarco)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2024/02/15/gitlab-16-9-released/#mvp">16.9 (February 15, 2024)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/ravi.dharmawan">Ravi Dharmawan (@ravi.dharmawan)</a> and <a href="https://gitlab.com/iwalker">Ian Walker (@iwalker)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2024/01/18/gitlab-16-8-released/#mvp">16.8 (January 18, 2024)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/tedtran2019">Ted Tran (@tedtran2019)</a> and <a href="https://gitlab.com/schurzi">Martin Schurz (@schurzi)</a> and <a href="https://gitlab.com/heliocola">Helio Cola (@heliocola)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2023/12/21/gitlab-16-7-released/#mvp">16.7 (December 21, 2023)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/ar-mali">Muhammed Ali (@ar-mali)</a> and <a href="https://gitlab.com/Taucher2003">Niklas van Schrick (@Taucher2003)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2023/11/16/gitlab-16-6-released/#mvp">16.6 (November 16, 2023)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/joe-snyder">Joe Snyder (@joe-snyder)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2023/10/22/gitlab-16-5-released/#mvp">16.5 (October 22, 2023)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/n0rdlicht">Thorben Westerhuys (@n0rdlicht)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2023/09/22/gitlab-16-4-released/#mvp">16.4 (September 22, 2023)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/oelmekki">Kik (@oelmekki)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2023/08/22/gitlab-16-3-released/#mvp">16.3 (August 22, 2023)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/tspearconquest">Thomas Spear (@tspearconquest)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2023/07/22/gitlab-16-2-released/#mvp">16.2 (July 22, 2023)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/blanet">Xing Xin (@blanet)</a> and <a href="https://gitlab.com/missy-davies">Missy Davies (@missy-davies)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2023/06/22/gitlab-16-1-released/#mvp">16.1 (June 22, 2023)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/gerardo-navarro">Gerardo Navarro (@gerardo-navarro)</a> and <a href="https://gitlab.com/nE0sIghT">Yuri Konotopov (@nE0sIghT)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2023/05/22/gitlab-16-0-released/#mvp">16.0 (May 22, 2023)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/jimmy-outschool">Jimmy Berry (@jimmy-outschool)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2023/04/22/gitlab-15-11-released/#mvp">15.11 (April 22, 2023)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/weyert-tapico">Weyert de Boer (@weyert-tapico)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2023/03/22/gitlab-15-10-released/#mvp">15.10 (March 22, 2023)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/mohamedin">Mohamed Mohamedin (@mohamedin)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2023/02/22/gitlab-15-9-released/#mvp">15.9 (February 22, 2023)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/KyleFromKitware">Kyle Edwards (@KyleFromKitware)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2023/01/22/gitlab-15-8-released/#mvp">15.8 (January 22, 2023)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/PatrickRice">Patrick Rice (@PatrickRice)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2022/12/22/gitlab-15-7-released/#mvp">15.7 (December 22, 2022)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/Taucher2003">Niklas van Schrick (@Taucher2003)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2022/11/22/gitlab-15-6-released/#mvp">15.6 (November 22, 2022)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/dlkeith90">Deja Norby (@dlkeith90)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2022/10/22/gitlab-15-5-released/#mvp">15.5 (October 22, 2022)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/abitrolly">Anatoli Babenia (@abitrolly)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2022/09/22/gitlab-15-4-released/#mvp">15.4 (September 22, 2022)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/X_Sheep">Lennard Sprong (@X_Sheep)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2022/08/22/gitlab-15-3-released/#mvp">15.3 (August 22, 2022)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/zillemarco">Marco Zille (@zillemarco)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2022/07/22/gitlab-15-2-released/#mvp">15.2 (July 22, 2022)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/kyrie.31415926535">kyrie.31415926535 (@kyrie.31415926535)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2022/06/22/gitlab-15-1-released/#mvp">15.1 (June 22, 2022)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/feistel">feistel (@feistel)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2022/05/22/gitlab-15-0-released/#mvp">15.0 (May 22, 2022)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/leetickett">Lee Tickett (@leetickett)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2022/04/22/gitlab-14-10-released/#mvp">14.10 (April 22, 2022)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/JeremyWuuuuu">Jeremy Wu (@JeremyWuuuuu)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2022/03/22/gitlab-14-9-released/#mvp">14.9 (March 22, 2022)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/tuxtimo">Timo Furrer (@tuxtimo)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2022/02/22/gitlab-14-8-released/#mvp">14.8 (February 22, 2022)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/trakos">Piotr Stankowski (@trakos)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2022/01/22/gitlab-14-7-released/#mvp">14.7 (January 22, 2022)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/fh1ch">Fabio Huser (@fh1ch)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2021/12/22/gitlab-14-6-released/#mvp">14.6 (December 22, 2021)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/KevSlashNull">Kev (@KevSlashNull)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2021/11/22/gitlab-14-5-released/#mvp">14.5 (November 22, 2021)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/wwwjon">Jonas Wälter (@wwwjon)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2021/10/22/gitlab-14-4-released/#mvp">14.4 (October 22, 2021)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/firelizzard">Ethan Reesor (@firelizzard)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2021/09/22/gitlab-14-3-released/#mvp">14.3 (September 22, 2021)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/feistel">feistel (@feistel)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2021/08/22/gitlab-14-2-released/#mvp">14.2 (August 22, 2021)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/corneliusludmann">Cornelius Ludmann (@corneliusludmann)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2021/07/22/gitlab-14-1-released/#mvp">14.1 (July 22, 2021)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/espadav8">Andrew Smith (@espadav8)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2021/06/22/gitlab-14-0-released/#mvp">14.0 (June 22, 2021)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/sathieu">Mathieu Parent (@sathieu)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2021/05/22/gitlab-13-12-released/#mvp">13.12 (May 22, 2021)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/leetickett">Lee Tickett (@leetickett)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2021/04/22/gitlab-13-11-released/#mvp">13.11 (Apr 22, 2021)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/yo">Yogi (@yo)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2021/03/22/gitlab-13-10-released/#mvp">13.10 (Mar 22, 2021)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/dlouzan">Diego Louzán (@dlouzan)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2021/02/22/gitlab-13-9-released/#mvp">13.9 (Feb 22, 2021)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/agravgaard">Andreas Gravgaard Andersen (@agravgaard)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2021/01/22/gitlab-13-8-released/#mvp">13.8 (Jan 22, 2021)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/yo">Yogi (@yo)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2020/12/22/gitlab-13-7-released/#mvp">13.7 (Dec 22, 2020)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/gottesman.rachelg">Rachel Gottesman (@gottesman.rachelg)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2020/11/22/gitlab-13-6-released/#mvp">13.6 (Nov 22, 2020)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/ksashikumar">Sashi (@ksashikumar)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2020/10/22/gitlab-13-5-released/#mvp">13.5 (Oct 22, 2020)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/williams.brian-heb">Brian Williams (H-E-B Digital) (@williams.brian-heb)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2020/09/22/gitlab-13-4-released/#mvp">13.4 (Sep 22, 2020)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/fh1ch">Fabio Huser (@fh1ch)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2020/08/22/gitlab-13-3-released/#mvp">13.3 (Aug 22, 2020)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/gilangmlr">Gilang Gumilar (@gilangmlr)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2020/07/22/gitlab-13-2-released/#mvp">13.2 (Jul 22, 2020)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/jessehall3">Jesse Hall (@jessehall3)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2020/06/22/gitlab-13-1-released/#mvp">13.1 (Jun 22, 2020)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/jacopo-beschi">Jacopo Beschi (@jacopo-beschi)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2020/05/22/gitlab-13-0-released/#mvp">13.0 (May 22, 2020)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/ksashikumar">Sashi (@ksashikumar)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2020/04/22/gitlab-12-10-released/#mvp">12.10 (Apr 22, 2020)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/dm3ch">Dmitry Chepurovskiy (@dm3ch)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2020/03/22/gitlab-12-9-released/#mvp">12.9 (Mar 22, 2020)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/steve.exley">Steve Exley (@steve.exley)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2020/02/22/gitlab-12-8-released/#mvp">12.8 (Feb 22, 2020)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/bufferoverflow">Roger Meier (@bufferoverflow)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2020/01/22/gitlab-12-7-released/#mvp">12.7 (Jan 22, 2020)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/fh1ch">Fabio Huser (@fh1ch)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2019/12/22/gitlab-12-6-released/#mvp">12.6 (Dec 22, 2019)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/fh1ch">Fabio Huser (@fh1ch)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2019/11/22/gitlab-12-5-released/#mvp">12.5 (Nov 22, 2019)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/gfyoung">gfyoung (@gfyoung)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2019/10/22/gitlab-12-4-released/#mvp">12.4 (Oct 22, 2019)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/tuomoa">Tuomo Ala-Vannesluoma (@tuomoa)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2019/09/22/gitlab-12-3-released/#mvp">12.3 (Sep 22, 2019)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/ctabin">Cédric Tabin (@ctabin)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2019/08/22/gitlab-12-2-released/#mvp">12.2 (Aug 22, 2019)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/fapapa">Fabio Papa (@fapapa)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2019/07/22/gitlab-12-1-released/#mvp">12.1 (Jul 22, 2019)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/g.grossetie">Guillaume Grossetie (@g.grossetie)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2019/06/22/gitlab-12-0-released/#mvp">12.0 (Jun 22, 2019)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/qwolphin">Lumi Akimova (@qwolphin)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2019/05/22/gitlab-11-11-released/#mvp">11.11 (May 22, 2019)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/kiameisomabes">Kia Mei Somabes (@kiameisomabes)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2019/04/22/gitlab-11-10-released/#mvp">11.10 (Apr 22, 2019)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/tnir">Takuya Noguchi (@tnir)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2019/03/22/gitlab-11-9-released/#mvp">11.9 (Mar 22, 2019)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/Ravlen">Marcel Amirault (@Ravlen)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2019/02/22/gitlab-11-8-released/#mvp">11.8 (Feb 22, 2019)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/walkafwalka">Aaron Walker (@walkafwalka)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2019/01/22/gitlab-11-7-released/#mvp">11.7 (Jan 22, 2019)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/mortyccp">Morty Choi (@mortyccp)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2018/12/22/gitlab-11-6-released/#mvp">11.6 (Dec 22, 2018)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/wispfox">Suzanne Hillman (@wispfox)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2018/11/22/gitlab-11-5-released/#mvp">11.5 (Nov 22, 2018)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/tuomoa">Tuomo Ala-Vannesluoma (@tuomoa)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2018/10/22/gitlab-11-4-released/#mvp">11.4 (Oct 22, 2018)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/Qwertie">Luke Picciau (@Qwertie)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2018/09/22/gitlab-11-3-released/#mvp">11.3 (Sep 22, 2018)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/gtsiolis">George Tsiolis (@gtsiolis)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2018/08/22/gitlab-11-2-released/#mvp">11.2 (Aug 22, 2018)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/jxterry">JX Terry (@jxterry)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2018/07/22/gitlab-11-1-released/#mvp">11.1 (Jul 22, 2018)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/jlemaes">Jasper Maes (@jlemaes)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2018/06/22/gitlab-11-0-released/#mvp">11.0 (Jun 22, 2018)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/blackst0ne">Vitaliy Klachkov (@blackst0ne)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2018/05/22/gitlab-10-8-released/#mvp">10.8 (May 22, 2018)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/koffeinfrei">Alexis Reigel (@koffeinfrei)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2018/04/22/gitlab-10-7-released/#mvp">10.7 (Apr 22, 2018)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/rfwatson">Rob Watson (@rfwatson)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2018/03/22/gitlab-10-6-released/#mvp">10.6 (Mar 22, 2018)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/tnir">Takuya Noguchi (@tnir)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2018/02/22/gitlab-10-5-released/#mvp">10.5 (Feb 22, 2018)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/hiroponz">Hiroyuki Sato (@hiroponz)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2018/01/22/gitlab-10-4-released/#mvp">10.4 (Jan 22, 2018)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/gtsiolis">George Tsiolis (@gtsiolis)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2017/12/22/gitlab-10-3-released/#mvp">10.3 (Dec 22, 2017)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/blackst0ne">Vitaliy Klachkov (@blackst0ne)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2017/11/22/gitlab-10-2-released/#mvp">10.2 (Nov 22, 2017)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/travismiller">Travis Miller (@travismiller)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2017/10/22/gitlab-10-1-released/#mvp">10.1 (Oct 22, 2017)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/blackst0ne">Vitaliy Klachkov (@blackst0ne)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2017/09/22/gitlab-10-0-released/#mvp">10.0 (Sep 22, 2017)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/hiroponz">Hiroyuki Sato (@hiroponz)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2017/08/22/gitlab-9-5-released/#mvp">9.5 (Aug 22, 2017)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/koffeinfrei">Alexis Reigel (@koffeinfrei)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2017/07/22/gitlab-9-4-released/#mvp">9.4 (Jul 22, 2017)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/mgresko">Matt Gresko (@mgresko)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2017/06/22/gitlab-9-3-released/#mvp">9.3 (Jun 22, 2017)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/htve">Huang Tao (@htve)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2017/05/22/gitlab-9-2-released/#mvp">9.2 (May 22, 2017)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/dosuken123">Dosuken Shinya (@dosuken123)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2017/04/22/gitlab-9-1-released/#mvp">9.1 (Apr 22, 2017)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/innerwhisper">Maxim Rydkin (@innerwhisper)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2017/03/22/gitlab-9-0-released/#mvp">9.0 (Mar 22, 2017)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/jacopo-beschi">Jacopo Beschi (@jacopo-beschi)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2017/02/22/gitlab-8-17-released/#mvp">8.17 (Feb 22, 2017)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/Sanson">Horacio Sanson (@Sanson)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2017/01/22/gitlab-8-16-released/#mvp">8.16 (Jan 22, 2017)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/toupeira">Markus Koller (@toupeira)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2016/12/22/gitlab-8-15-released/#mvp">8.15 (Dec 22, 2016)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/Munken">Michael Munch (@Munken)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2016/11/22/gitlab-8-14-released/#mvp">8.14 (Nov 22, 2016)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/to1ne">Toon Claes (@to1ne)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2016/10/22/gitlab-8-13-released/#mvp">8.13 (Oct 22, 2016)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/mahcsig">Marc Siegfriedt (@mahcsig)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2016/09/22/gitlab-8-12-released/#mvp">8.12 (Sep 22, 2016)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/munnerz">James Munnelly (@munnerz)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2016/08/22/gitlab-8-11-released/#mvp">8.11 (Aug 22, 2016)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/ClemMakesApps">Clement Ho (@ClemMakesApps)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2016/07/22/gitlab-8-10-released/#mvp">8.10 (Jul 22, 2016)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/winniehell">Winnie (@winniehell)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2016/06/22/gitlab-8-9-released/#mvp">8.9 (Jun 22, 2016)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/ruianderson">Rui Santos (@ruianderson)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2016/05/22/gitlab-8-8-released/#mvp">8.8 (May 22, 2016)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/matt-oakes">Matt Oakes (@matt-oakes)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2016/04/22/gitlab-8-7-released/#mvp">8.7 (Apr 22, 2016)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/connorshea">Connor Shea (@connorshea)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2016/03/22/gitlab-8-6-released/#mvp">8.6 (Mar 22, 2016)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/marcia">Marcia Ramos (@marcia)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2016/02/22/gitlab-8-5-released/#mvp">8.5 (Feb 22, 2016)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/artem-sidorenko">Artem Sidorenko (@artem-sidorenko)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2016/01/22/gitlab-8-4-released/#mvp">8.4 (Jan 22, 2016)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/koreamic">Kyungchul Shin (@koreamic)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2015/12/22/gitlab-8-3-released/#mvp">8.3 (Dec 22, 2015)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/gsmethells">Greg Smethells (@gsmethells)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2015/11/22/gitlab-8-2-released/#mvp">8.2 (Nov 22, 2015)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/cristianbica">Cristian Bica (@cristianbica)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2015/10/22/gitlab-8-1-released/#mvp">8.1 (Oct 22, 2015)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/zj">Zeger-Jan van de Weg (@zj)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2015/09/22/gitlab-8-0-released/#mvp">8.0 (Sep 22, 2015)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/bugagazavr">Kirill Zaitsev (@bugagazavr)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2015/08/22/gitlab-7-14-released/#mvp">7.14 (Aug 22, 2015)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/stanhu">Stan Hu (@stanhu)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2015/07/22/gitlab-7-13-released/#mvp">7.13 (Jul 22, 2015)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/stanhu">Stan Hu (@stanhu)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2015/06/22/gitlab-7-12-released/#mvp">7.12 (Jun 22, 2015)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/cernvcs">Alexandre Lossent (CERN) (@cernvcs)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2015/05/22/gitlab-7-11-released/#mvp">7.11 (May 22, 2015)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/newton">James Newton (@newton)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2015/04/22/gitlab-7-10-released/#mvp">7.10 (Apr 22, 2015)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/stanhu">Stan Hu (@stanhu)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2015/03/22/gitlab-7-9-released/#mvp">7.9 (Mar 22, 2015)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/stanhu">Stan Hu (@stanhu)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2015/02/22/gitlab-7-8-released/#mvp">7.8 (Feb 22, 2015)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/haynes">Hannes Rosenögger (@haynes)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2015/01/22/gitlab-7-7-and-ci-5-4-released/#mvp">7.7 (Jan 22, 2015)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/cirosantilli">Ciro Santilli (@cirosantilli)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2014/12/22/gitlab-7-6-and-ci-5-3-released/#mvp">7.6 (Dec 22, 2014)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/bbodenmiller">Ben Bodenmiller (@bbodenmiller)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2014/11/21/gitlab-7-5-and-ci-5-2-released/#mvp">7.5 (Nov 22, 2014)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/mvb">Martijn van Bemmel (@mvb)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2014/10/22/gitlab-7-4-released/#mvp">7.4 (Oct 22, 2014)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/mr-vinn">Vinnie Okada (@mr-vinn)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2014/09/22/gitlab-7-dot-3-released-with-performance-improvements/#mvp">7.3 (Sep 22, 2014)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/razer6">Robert Schilling (@razer6)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2014/08/22/gitlab-7-dot-2-released-with-better-labels/#mvp">7.2 (Aug 22, 2014)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/razer6">Robert Schilling (@razer6)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2014/07/22/gitlab-7-dot-1-released/#mvp">7.1 (Jul 22, 2014)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/jvanbaarsen">Jeroen van Baarsen (@jvanbaarsen)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2014/06/22/gitlab-7-dot-0-released/#mvp">7.0 (Jun 22, 2014)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+Earle Randolph Bunao and Neil Francis Calabroso
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2014/05/22/gitlab-6-9-ee-and-ce-release/#mvp">6.9 (May 22, 2014)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/skv-headless">Evgeniy Sokovikov (@skv-headless)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2014/04/22/gitlab-6-dot-8-released/#mvp">6.8 (Apr 22, 2014)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/jvanbaarsen">Jeroen van Baarsen (@jvanbaarsen)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2014/03/21/gitlab-6-dot-7-released/#mvp">6.7 (Mar 22, 2014)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/jhworth.developer">Jason Hollingsworth (@jhworth.developer)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2014/02/21/gitlab-6-dot-6-released/#mvp">6.6 (Feb 22, 2014)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/dblessing">Drew Blessing (@dblessing)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2014/01/21/gitlab-ce-6-dot-5-released/#mvp">6.5 (Jan 22, 2014)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/jas.blanchard">Jason Blanchard (@jas.blanchard)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2013/12/21/gitlab-ce-6-dot-4-released/#mvp">6.4 (Dec 22, 2013)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+Steven Thonus and Jason Hollingsworth
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2013/11/21/gitlab-ce-6-dot-3-released/#mvp">6.3 (Nov 22, 2013)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/zzet">Andrew Kumanyaev (@zzet)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2013/10/17/gitlab-ce-6-dot-2-released/#mvp">6.2 (Oct 22, 2013)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/StevenT">Steven Thonus (@StevenT)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2013/09/22/gitlab-community-edition-6-dot-1-released/#mvp">6.1 (Sep 22, 2013)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/smashwilson">Ash Wilson (@smashwilson)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2013/08/20/gitlab-6-dot-0-released/#mvp">6.0 (Aug 22, 2013)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/ialpert">Izaak Alpert (@ialpert)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2013/07/22/gitlab-5-dot-4-released/#mvp">5.4 (Jul 22, 2013)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/jadark">Javier Castro (@jadark)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2013/06/20/gitlab-5-dot-3-released/#mvp">5.3 (Jun 22, 2013)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/karloxyz">Karlo Nicholas T. Soriano (@karloxyz)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2013/05/22/gitlab-5-dot-2-released/#mvp">5.2 (May 22, 2013)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/amacarthur">Angus MacArthur (@amacarthur)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2013/04/22/gitlab-5-dot-1-released/#mvp">5.1 (Apr 22, 2013)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/hiroponz">Hiroyuki Sato (@hiroponz)</a>
+</dd>
+<dt class='col-sm-4 col-xs-12 font-weight-normal'>
+<a href="/releases/2013/03/22/gitlab-5-0-was-released/#mvp">5.0 (Mar 22, 2013)</a>
+</dt>
+<dd class='col-sm-8 col-xs-12'>
+<a href="https://gitlab.com/DanKnox">Dan Knox (@DanKnox)</a>
+</dd>
+</dl>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/community/mvp/index.html.haml" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/community/mvp/index.html.haml" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</body>
+</html>

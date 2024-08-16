@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Direction - Service Desk
+|
+GitLab
+</title>
+<meta content='Connect users and customers of your product to support' name=description />
+<meta content='Connect users and customers of your product to support' name='twitter:description'/>
+<meta content='Connect users and customers of your product to support' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Direction - Service Desk' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/service_management/service_desk/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/service_management/service_desk/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Direction - Service Desk' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/service_management/service_desk/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Direction - Service Desk
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<div class=codeowners-single>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Hillary Benson
+</div>
+<div class=codeowners-handle>
+@hbenson
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/service_management/service_desk/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/service_management/">Product Direction - Service Management</a></li><li>Product Direction - Service Desk</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 id=on-this-page>On this page</h2>
+<ul class=no_toc id=markdown-toc>
+<li><a href="#on-this-page" id=markdown-toc-on-this-page>On this page</a></li>
+<li><a href="#service-desk" id=markdown-toc-service-desk>Service Desk</a> <ul>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a></li>
+<li><a href="#vision" id=markdown-toc-vision>Vision</a></li>
+<li><a href="#mission" id=markdown-toc-mission>Mission</a></li>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and Themes</a> <ul>
+<li><a href="#themes" id=markdown-toc-themes>Themes</a></li>
+<li><a href="#strategy" id=markdown-toc-strategy>Strategy</a> <ul>
+<li><a href="#target-segmentation" id=markdown-toc-target-segmentation>Target Segmentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1-year plan</a> <ul>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is Not Planned Right Now</a></li>
+<li><a href="#top-123-competitive-solutions" id=markdown-toc-top-123-competitive-solutions>Top [1/2/3] Competitive Solutions</a> <ul>
+<li><a href="#atlassian-jira-service-management" id=markdown-toc-atlassian-jira-service-management>Atlassian Jira Service Management</a></li>
+<li><a href="#zendesk" id=markdown-toc-zendesk>Zendesk</a></li>
+<li><a href="#servicenow" id=markdown-toc-servicenow>ServiceNow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#target-personas" id=markdown-toc-target-personas>Target Personas</a></li>
+<li><a href="#pricing-and-packaging" id=markdown-toc-pricing-and-packaging>Pricing and Packaging</a> <ul>
+<li><a href="#free" id=markdown-toc-free>Free</a></li>
+<li><a href="#premium" id=markdown-toc-premium>Premium</a></li>
+<li><a href="#ultimate" id=markdown-toc-ultimate>Ultimate</a></li>
+<li><a href="#other" id=markdown-toc-other>Other</a></li>
+</ul>
+</li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst Landscape</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=service-desk>Service Desk</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/service_management/">Service Management</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">Viable</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2023-06-01</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=overview>Overview</h3>
+<p>Service desk is a point of contact between users and service providers. It captures the demand for incident resolution and service requests.</p>
+<p>We view the service desk as an integral part of GitLab. Developers use GitLab to create, launch, and operate software products. When there is a demand service requests, questions about the software, or other forms of feedback from users of the product, we want the feedback loop to be efficient and seamless. GitLab Service Desk is responsible for bringing these requests directly to the developers all within the same platform.</p>
+<p>Furthermore, beyond shortening the feedback loop for developers, in alignment with <a href="/company/vision/#vision">GitLab's 10-year vision</a>, we want GitLab to be a general service desk for all users of the platform.</p>
+<h3 id=vision>Vision</h3>
+<p>Provide a complete, yet lightweight and customizable customer support solution that seamlessly integrates with the GitLab ecosystem and brings customers, support staff, and developers closer together.</p>
+<h3 id=mission>Mission</h3>
+<ul>
+<li>Make Service Desk useful for professional support teams so they efficiently and effectively work through their support issues.</li>
+<li>Helping organizations build a professional and on-brand customer support workflow that grows with the business.</li>
+<li>Making Service Desk an integral part of the GitLab support workflow by providing the tools our teams need.</li>
+<li>Helping managers and support ops automate repetitive tasks for their support staff.</li>
+<li>Increase awareness of the capabilities of GitLab Service Desk and how it can help our customers handle customer support.</li>
+</ul>
+<h3 id=strategy-and-themes>Strategy and Themes</h3>
+
+<h4 id=themes>Themes</h4>
+<p>Service desk solutions should be able to solve the following problems:</p>
+<ol>
+<li><strong>Intake:</strong> Provide channels for access. Depending on the use case, channels may include forms, phone, service portals, mobile applications, chat, emails, walk-ins, sms, social media, and public and corporate forums. The intake of service requests should assist in capturing the requisite details for resolution.</li>
+<li><strong>Ticket Management:</strong> Service agents need a tool to understand the request, understand the timeline, collaborate with teammates, log the request, consider additional information, and resolve the request.</li>
+<li><strong>Queue Management:</strong> Service agents should have the tools that enable them to work on the next appropriate ticket.</li>
+<li><strong>Trigger and Automation:</strong> Help agents be efficient and enable requesters to self-service.</li>
+<li><strong>Reporting &amp; Analytics:</strong> Provide reporting capability and the ability to analyze trends and outcomes.</li>
+</ol>
+<h4 id=strategy>Strategy</h4>
+<p><a href="https://docs.gitlab.com/ee/user/project/service_desk/">GitLab Service Desk</a> is built on top of existing GitLab capabilities, including <a href="https://docs.gitlab.com/ee/development/work_items.html">work item types</a>, <a href="https://docs.gitlab.com/ee/ci/">CI</a>, <a href="https://docs.gitlab.com/ee/user/project/quick_actions.html">Quick Actions</a>, Analytics Dashboards, and more. We intend to leverage the capabilities built for DevOps use cases and add enhancements to efficiently address the needs of a service desk solution.</p>
+<p>We plan to focus initially to introduce a new <a href="https://gitlab.com/groups/gitlab-org/-/epics/10419">work item "ticket"</a>. This will enable us to differentiate from generic GitLab issues, streamline the UI by removing unnecessary elements, add useful enhancements, and create the corner-stone to build additional capabilities.
+After establishing the new fundamental service desk work unit, we will move on to build out other <a href="https://gitlab.com/groups/gitlab-org/-/epics/8769">essential Service Desk capabilities</a>.</p>
+<h5 id=target-segmentation>Target Segmentation</h5>
+<p>Service desk, in the software context, provides value to software teams large and small. We currently have the following segmentation:</p>
+<ol>
+<li>Enterprise software vendor supporting enterprise software customers. The service desk agent is a full-time support engineer.</li>
+<li>Enterprise software teams have internal customers and need to provide support to the users. The developers play the role of support.</li>
+<li>SMBs or single developers providing support to the users of their product or software project. The developers play the role of support.</li>
+</ol>
+<p>We ultimately plan to offer a delightful service desk experience to all three segments. We hypothesize that as we are building out the missing essential service desk capabilities, GitLab Service Desk is a better fit for SMBs and potential enterprise teams with internal customers. We can begin to target enterprise users once GitLab Service Desk reaches complete maturity.</p>
+<h3 id=1-year-plan>1-year plan</h3>
+<p>Below is our 4-Quarter Rolling Roadmap</p>
+
+<table>
+<thead>
+<tr>
+<th>FY24'Q2 (May-Jul 2023)</th>
+<th>FY24'Q3 (Aug-Oct 2023)</th>
+<th>FY24'Q4 (Nov'23-Jan'24)</th>
+<th>FY25'Q1 (Feb-Apr 2024)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/10419">MVC for Service Desk Work Item</a></td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/10706">Improvements to Service Desk Lists</a></td>
+<td><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/413709">Triggers</a></td>
+<td><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/413710">Automation</a></td>
+</tr>
+<tr>
+<td> </td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/8828">SLA</a></td>
+<td>Real-time collision detection</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/10442">Custom Meta Data</a></td>
+</tr>
+</tbody>
+</table>
+<p>Please note, this table only includes thematic epics or major features. It is not meant to be a precise, or exhaustive list of work we plan to do. For planning details, please reference our <a href="https://gitlab.com/gitlab-org/monitor/respond/-/issues/?sort=closed_at&amp;state=opened&amp;search=Planning%20issue">planning issues</a>.</p>
+<h5 id=what-is-next-for-us>What is next for us</h5>
+
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/monitor/respond/-/issues/208">16.1 (2023-05-22 to 2023-06-22)</a></li>
+<li><a href="https://gitlab.com/gitlab-org/monitor/respond/-/issues/209">16.2 (2023-06-22 to 2023-07-22)</a></li>
+<li><a href="https://gitlab.com/gitlab-org/monitor/respond/-/issues/245">16.3 (2023-07-22 to 2023-08-22)</a></li>
+</ul>
+<p>In addition to various value-adding features, the main focus for us in FY24'Q2 is to establish the Service Desk Work Item. To do this, in 16.1, we are <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/412055">spiking</a> on what it takes to build on the work items framework and how we might iterate towards a production Service Desk ticket. The outcome of this exercise is to create an iteration plan that we will execute on in 16.2 and 16.3.</p>
+<h5 id=what-we-recently-completed>What we recently completed</h5>
+<ul>
+<li>Wrap up previous in-flight work on Incident Management</li>
+<li>Complete <a href="https://gitlab.com/groups/gitlab-org/-/epics/10107">Metrics Deprecation and Removal</a></li>
+<li>Complete <a href="https://gitlab.com/groups/gitlab-org/-/epics/10030">Self-monitoring Deprecation and Removal</a></li>
+<li>Improvements to Service Desk capabilities around variable placeholders and attribution of title and comments to external users</li>
+</ul>
+<h4 id=what-is-not-planned-right-now>What is Not Planned Right Now</h4>
+
+<p>TBD</p>
+<h4 id=top-123-competitive-solutions>Top [1/2/3] Competitive Solutions</h4>
+
+<h5 id=atlassian-jira-service-management><a href="https://www.atlassian.com/software/jira/service-management">Atlassian Jira Service Management</a></h5>
+<p>Atlassian very successfully pivoted Jira project management and issue tracking into Jira Service Management. We view them as the exemplary case of having transitioned from a software planning tool to tackling the much larger market of ITSM. The way Atlassian started was to implement service desk on top of existing Jira capabilities.</p>
+<h5 id=zendesk><a href="https://www.zendesk.com/">Zendesk</a></h5>
+<p>Zendesk is a powerful service desk tool with broad market appeal. It is the feature complete service desk tool that we also use at GitLab for external customer support.</p>
+<h5 id=servicenow><a href="https://www.servicenow.com/">ServiceNow</a></h5>
+<p>ServiceNow is a dominant player in ITSM and offers a comprehensive enterprise solution with service desk, along with other management and workflow tools built in.</p>
+<h3 id=target-personas>Target Personas</h3>
+
+<ol>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#sasha-software-developer">Sasha (Software Developer)</a> - Software developers may be directly responsible to support the software they built, such as for internal tools. This is the persona GitLab Service Desk supports today.</li>
+<li>Support Engineer - These engineers are the customer-facing representatives of the business and want to be able to efficiently resolve problems as they arise. They are frustrated by manual steps which divert their focus from solving real problems for the customers they serve and strive to represent their company in the best way possible. This is the longer-term target persona for GitLab Service Desk.</li>
+</ol>
+<h3 id=pricing-and-packaging>Pricing and Packaging</h3>
+<p>Service Desk is currently available in the free tier.</p>
+<h4 id=free>Free</h4>
+<ul>
+<li>Email intake</li>
+<li>Single external participant</li>
+</ul>
+<h4 id=premium>Premium</h4>
+<ul>
+<li>Multiple external participants</li>
+<li>SLAs</li>
+</ul>
+<h4 id=ultimate>Ultimate</h4>
+<p>TBD</p>
+<h4 id=other>Other</h4>
+<ul>
+<li>CI powered automations</li>
+</ul>
+<h3 id=analyst-landscape>Analyst Landscape</h3>
+<p>TBD</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/service_management/service_desk/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/service_management/service_desk/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

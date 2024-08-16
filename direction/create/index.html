@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Stage Vision - Create
+|
+GitLab
+</title>
+<meta content='Learn more from GitLab, The DevSecOps Platform.' name=description />
+<meta content='Learn more from GitLab, The DevSecOps Platform.' name='twitter:description'/>
+<meta content='Learn more from GitLab, The DevSecOps Platform.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Stage Vision - Create' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/create/template.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/create/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Stage Vision - Create' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/create/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Stage Vision - Create
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/derekferguson'>
+<img
+src='/images/team/derekferguson.jpg'
+class=codeowner-avatar-img
+alt='Derek Ferguson'
+title='Derek Ferguson'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/steve-evangelista'>
+<img
+src='/images/team/steveevangelista.png'
+class=codeowner-avatar-img
+alt='Steve Evangelista'
+title='Steve Evangelista'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/create/template.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Product Stage Vision - Create</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 class=no_toc id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#stage-overview" id=markdown-toc-stage-overview>Stage Overview</a> <ul>
+<li><a href="#groups" id=markdown-toc-groups>Groups</a></li>
+<li><a href="#resourcing-and-investment" id=markdown-toc-resourcing-and-investment>Resourcing and Investment</a></li>
+<li><a href="#fy24-video-walkthrough" id=markdown-toc-fy24-video-walkthrough>FY24 Video Walkthrough</a></li>
+</ul>
+</li>
+<li><a href="#3-year-stage-themes" id=markdown-toc-3-year-stage-themes>3 Year Stage Themes</a> <ul>
+<li><a href="#enterprise-source-code-management" id=markdown-toc-enterprise-source-code-management>Enterprise Source Code Management</a></li>
+<li><a href="#security-built-in-not-bolted-on" id=markdown-toc-security-built-in-not-bolted-on>Security built-in, not bolted on</a></li>
+<li><a href="#the-developer-experience" id=markdown-toc-the-developer-experience>The Developer Experience</a></li>
+</ul>
+</li>
+<li><a href="#3-year-strategy" id=markdown-toc-3-year-strategy>3 Year Strategy</a></li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 Year Plan</a> <ul>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a></li>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#what-we-are-not-doing" id=markdown-toc-what-we-are-not-doing>What we are not doing</a></li>
+</ul>
+</li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a> <ul>
+<li><a href="#today" id=markdown-toc-today>Today</a></li>
+<li><a href="#medium-term-1-2-years" id=markdown-toc-medium-term-1-2-years>Medium Term (1-2 years)</a></li>
+</ul>
+</li>
+<li><a href="#categories-in-create" id=markdown-toc-categories-in-create>Categories in Create</a> <ul>
+<li><a href="#source-code-management" id=markdown-toc-source-code-management>Source Code Management</a></li>
+<li><a href="#code-review-workflow" id=markdown-toc-code-review-workflow>Code Review Workflow</a></li>
+<li><a href="#web-ide" id=markdown-toc-web-ide>Web IDE</a></li>
+<li><a href="#gitlab-cli" id=markdown-toc-gitlab-cli>GitLab CLI</a></li>
+<li><a href="#editor-extensions" id=markdown-toc-editor-extensions>Editor Extensions</a></li>
+<li><a href="#workspaces" id=markdown-toc-workspaces>Workspaces</a></li>
+<li><a href="#code-suggestions" id=markdown-toc-code-suggestions>Code Suggestions</a></li>
+</ul>
+</li>
+<li><a href="#jobs-to-be-done" id=markdown-toc-jobs-to-be-done>Jobs to be Done</a></li>
+<li><a href="#pricing" id=markdown-toc-pricing>Pricing</a> <ul>
+<li><a href="#free" id=markdown-toc-free>Free</a></li>
+<li><a href="#premium" id=markdown-toc-premium>Premium</a></li>
+<li><a href="#ultimate" id=markdown-toc-ultimate>Ultimate</a></li>
+</ul>
+</li>
+<li><a href="#upcoming-releases" id=markdown-toc-upcoming-releases>Upcoming Releases</a> <ul>
+<li><a href="#174-2024-09-19" id=markdown-toc-174-2024-09-19>17.4 (2024-09-19)</a></li>
+<li><a href="#git-247" id=markdown-toc-git-247>Git 2.47</a></li>
+<li><a href="#175-2024-10-17" id=markdown-toc-175-2024-10-17>17.5 (2024-10-17)</a></li>
+<li><a href="#176-2024-11-14" id=markdown-toc-176-2024-11-14>17.6 (2024-11-14)</a></li>
+<li><a href="#1710-2025-03-20" id=markdown-toc-1710-2025-03-20>17.10 (2025-03-20)</a></li>
+<li><a href="#180-2025-05-15" id=markdown-toc-180-2025-05-15>18.0 (2025-05-15)</a></li>
+</ul>
+</li>
+<li><a href="#other-interesting-items" id=markdown-toc-other-interesting-items>Other Interesting Items</a></li>
+</ul>
+<p>Content last reviewed 2023-02-15</p>
+<p>
+<style>.diagramwrapper *{box-sizing:border-box}.diagramwrapper{width:100%;display:flex}.diagramwrapper .box{width:calc(100% - 240px);padding:10px;display:flex;background-color:#fff}.diagramwrapper .box svg{width:100%}.diagramwrapper .circle{width:80px;height:80px;margin-right:20px;border:#999 1px solid;border-radius:50%;display:inline-block;background-color:#fff;padding:0}.diagramwrapper .circle svg{fill:#524684;width:50px;margin:15px}.diagramwrapper .stages{display:flex;width:210px;margin-left:30px;flex-wrap:wrap}.diagramwrapper .stage{width:210px;display:flex;margin:auto 0}.diagramwrapper .stagename{display:inline-block;font-family:Source Sans Pro,sans-serif;font-weight:bold;font-size:24px;line-height:80px}</style><div class=diagramwrapper><div class=box><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1025 500" role=img aria-label="GitLab DevSecOps Lifecycle">
+<style>
+      .text {
+        font-family: Inter,Source Sans Pro,sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        fill: #2b2838;
+        letter-spacing: .02em;
+        dominant-baseline: middle;
+        text-anchor: middle;
+      }
+      .text2 {
+        font-size: 26px;
+        fill: #2b2838;
+      }
+      .devsecops {
+        font-size: 56px;
+        fill: black;
+      }
+      .mix {
+        mix-blend-mode: color-burn;
+      }
+      .line {
+        fill: none;
+        stroke: #2b2838;
+        stroke-width: 2px;
+      }
+      .highlighted {
+        font-size: 22px;
+      }
+      .highlightedline {
+        stroke-width: 3px;
+      }
+      .white_fill {
+        fill: #fff;
+      }
+      .faded {
+        fill: #a09fa4;
+      }
+      .fadestroke {
+        stroke: #a09fa4;
+      }
+      .lightline{
+        stroke: #d3d0d4;
+        stroke-width: 3px;
+      }</style>
+<linearGradient id=linear-gradient x1=18 y1=250 x2=1007 y2=250 gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#e6dcf4"/>
+<stop offset=1 stop-color="#ffd0be"/>
+</linearGradient>
+<linearGradient id=linear-gradient-2 x1="720.88" y1="337.91" x2="370.24" y2="74.18" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#2b2838" stop-opacity=".24"/>
+<stop offset=1 stop-color="#45424d" stop-opacity=0 />
+</linearGradient>
+<linearGradient id=linear-gradient-3 x1="304.12" y1="162.09" x2="654.76" y2="425.82" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#2b2838" stop-opacity=".24"/>
+<stop offset=1 stop-color="#45424d" stop-opacity=0 />
+</linearGradient>
+<path id=background fill="#fff" d="M 0,0 L 1025,0 L 1025,500 L 0,500"/><path id=upper_arc class="line fadestroke" d="M 0,250 a238,238 0 0,1 238,-238 L 787,12 a238,238 0 0,1 238,238"/><path id=lower_arc class="line fadestroke" d="M 0,250 a238,238 0 0,0 238,238 L 787,488 a238,238 0 0,0 238,-238"/><path id=clear_1 fill="#fff" d="M -3,190 L -3,310 L 1028,310 L 1028,190"/>
+<path id=clear_2 fill="#fff" d="M 422,0 L 603,0 L 603,500 L 422,500"/>
+<path id=loop fill="url(#linear-gradient)" d="M 512.5,181.18 L 370.24,74.18 a220,220 0 1,0 0,351.64 L 512.5,318.8 L 654.76,425.82 a220,220 0 1,0 0,-351.64"/>
+<path id=cutout_1 fill="#fff" d="M 421,250 L 304.12,162.09 a110,110 0 1,0 0,175.82"/>
+<path id=cutout_2 fill="#fff" d="M 604,250 L 720.88,162.09 a110,110 0 1,1 0,175.82"/>
+<path id=shadow_1 fill="url(#linear-gradient-2)" class=mix d="M 512.5,181.18 L 421,250 L 304.12,162.09 L 370.24,74.18"/>
+<path id=shadow_2 fill="url(#linear-gradient-3)" class=mix d="M 512.5,318.8 L 604,250 L 720.88,337.91 L 654.76,425.82"/><path id=code_box fill="#2b2838" d="M 87,115 L 167,115 L 167,131 C 167,138 160,145 153,145 L 87,145Z"/><path class=lightline fill=none d="M 421,256 L 304.12,168.09 a104,104 0 1,0 -64.12,185.91 L 225,341"/>
+<path class=lightline fill=none d="M 604,256 L 720.88,168.09 a104,104 0 1,1 64.12,185.91 L 800,341"/>
+<path fill="#fff" class=lightline d="M 357,205 L 668,205 a45,45 0 0,1 0,90 L 357,295 a45,45 0 0,1 0,-90"/>
+<path d="M536.514 419L536.448 418.82L529.663 401.124C529.526 400.778 529.281 400.483 528.965 400.283C528.73 400.131 528.461 400.039 528.184 400.01C527.905 399.981 527.624 400.018 527.363 400.118C527.1 400.216 526.866 400.376 526.676 400.583C526.488 400.789 526.35 401.037 526.274 401.306L521.695 415.326H503.151L498.571 401.306C498.495 401.037 498.357 400.79 498.169 400.584C497.979 400.378 497.745 400.219 497.484 400.119C497.221 400.02 496.941 399.982 496.662 400.011C496.384 400.04 496.116 400.133 495.88 400.283C495.565 400.483 495.32 400.778 495.183 401.124L488.403 418.824L488.331 419C487.355 421.551 487.235 424.35 487.989 426.976C488.743 429.601 490.33 431.911 492.511 433.556L492.536 433.575L492.594 433.62L502.914 441.355L508.034 445.224L511.145 447.575C511.51 447.851 511.955 448 512.411 448C512.869 448 513.314 447.851 513.679 447.575L516.789 445.224L521.909 441.355L532.303 433.575L532.331 433.553C534.513 431.909 536.1 429.6 536.854 426.975C537.609 424.35 537.489 421.551 536.514 419Z" fill="#E24329"/>
+<path d="M536.514 419L536.448 418.82C533.141 419.499 530.028 420.899 527.328 422.923L512.431 434.186L521.916 441.355L532.309 433.575L532.339 433.553C534.517 431.908 536.104 429.599 536.858 426.974C537.61 424.349 537.49 421.55 536.514 419Z" fill="#FC6D26"/>
+<path d="M502.914 441.355L508.034 445.224L511.145 447.575C511.51 447.851 511.954 448 512.411 448C512.869 448 513.314 447.851 513.679 447.575L516.789 445.224L521.909 441.355L512.425 434.186L502.914 441.355Z" fill="#FCA326"/>
+<path d="M497.519 422.923C494.82 420.9 491.706 419.5 488.403 418.824L488.331 419C487.355 421.551 487.235 424.35 487.989 426.976C488.743 429.601 490.33 431.911 492.511 433.556L492.536 433.575L492.594 433.62L502.914 441.355L512.405 434.186L497.519 422.923Z" fill="#FC6D26"/>
+<text x="50%" y=255 class="text devsecops">DevSecOps</text><text x=353 y=131 class="text faded">Plan</text><text x=127 y=131 class="text highlighted white_fill">Code</text><text x=127 y=371 class="text faded">Build</text><text x=353 y=371 class="text faded">Test</text><text x=672 y=131 class="text faded">Release</text><text x=898 y=131 class="text faded">Deploy</text><text x=898 y=371 class="text faded">Operate</text><text x=672 y=371 class="text faded">Monitor</text><text x="50%" y=13 class="text text2 faded">Security</text><text x="50%" y=488 class="text text2 faded">Compliance</text></svg></div><div class=stages><div class=stage><div class=circle><svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M44.76,5.4,40.6,1.24a4.26,4.26,0,0,0-6,0L30.77,5.07,15,20.88a1,1,0,0,0,0,1.41,1,1,0,0,0,.7.3,1,1,0,0,0,.71-.3l15.1-15.1,8,8a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l3.83-3.84A4.24,4.24,0,0,0,44.76,5.4ZM43.34,10l-3.12,3.13L32.89,5.78,36,2.65a2.25,2.25,0,0,1,3.17,0l4.15,4.16A2.23,2.23,0,0,1,43.34,10Z"/><path d="M13,23.84l-.18-.08-.08,0a.34.34,0,0,0-.1,0,.74.74,0,0,0-.21,0,.57.57,0,0,0-.18,0l-.17.07-.17.11s-.06,0-.09.06,0,.05,0,.07a.62.62,0,0,0-.11.17.71.71,0,0,0-.08.18s0,0,0,.08L9.33,35a1,1,0,0,0,1,1.21h.15l11-1.72.1,0,.19-.07a.88.88,0,0,0,.17-.12l.09-.06L36.94,19.21a1,1,0,0,0-1.41-1.41L21.29,32l-8-8L13.19,24Zm.12,2.87,6.05,6L11.59,34Z"/><path d="M40.06,21.38a1,1,0,0,0-1,1v19h-32a3.58,3.58,0,0,0-.9-1.55A3.38,3.38,0,0,0,4.6,39v-32H24a1,1,0,0,0,0-2H3.6a1,1,0,0,0-1,1V39a3.39,3.39,0,0,0-1.54.87,3.6,3.6,0,1,0,6,3.55h33a1,1,0,0,0,1-1v-20A1,1,0,0,0,40.06,21.38ZM4.74,43.53a1.61,1.61,0,1,1,0-2.27,1.63,1.63,0,0,1,.47,1.14A1.59,1.59,0,0,1,4.74,43.53Z"/></svg></div><div class=stagename>Create</div></div></div></div>
+</p>
+<h2 id=stage-overview>Stage Overview</h2>
+<p>The Create stage helps teams accelerate software delivery and reduce cycle times, by improving efficiency and collaboration. Essential to software delivery, is the process of <strong>creating</strong> each improvement. The Create stage delights engineers, designers, and product managers with tools to design, develop, and review these improvements efficiently.</p>
+<h3 id=groups>Groups</h3>
+<p>The Create stage is made up of one DevOps stage, Create, and five groups including:</p>
+<ul>
+<li>Code Creation</li>
+<li>Code Review</li>
+<li>Editor Extensions</li>
+<li>Remote Development</li>
+<li>Source Code</li>
+</ul>
+<h3 id=resourcing-and-investment>Resourcing and Investment</h3>
+<p>The existing team members for the Create stage can be found in the links below:</p>
+<ul>
+<li><a href="/handbook/engineering/development/dev/create/code-creation/">Code Creation</a></li>
+<li><a href="/handbook/engineering/development/dev/create/code-review/">Code Review</a>
+<ul>
+<li><a href="/handbook/engineering/development/dev/create/code-review/backend/">BE</a></li>
+<li><a href="/handbook/engineering/development/dev/create/code-review/frontend/">FE</a></li>
+</ul>
+</li>
+<li><a href="/handbook/engineering/development/dev/create/editor-extensions/">Editor Extensions</a></li>
+<li><a href="/handbook/engineering/development/dev/create/remote-development/">Remote Development</a></li>
+<li>Source Code
+<ul>
+<li><a href="/handbook/engineering/development/dev/create/source-code-be/">BE</a></li>
+<li><a href="/handbook/engineering/development/dev/create/create-source-code-fe">FE</a></li>
+</ul>
+</li>
+</ul>
+<h3 id=fy24-video-walkthrough>FY24 Video Walkthrough</h3>
+<iframe width=560 height=315 src="https://www.youtube.com/embed/Le2QBn21MpA" title="YouTube video player" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+<h2 id=3-year-stage-themes>3 Year Stage Themes</h2>
+<h3 id=enterprise-source-code-management>Enterprise Source Code Management</h3>
+<p><a href="https://about.gitlab.com/stages-devops-lifecycle/source-code-management/">Source code management (SCM)</a> is the foundation of an organization's software development practice. SCM tools provide the interface and controls that teams use to define the rules and workflows their developers operate within to write code and collaboratively produce software. At any size of company, it is critical that the SCM tool be intuitive to aid in productivity, streamline collaboration for reviews across teams and functions, ensure compliance, and enable best development and security practices. However, these challenges become more acute and more difficult to solve at the enterprise level. The larger an organization becomes, the greater their communication and coordination overhead is since there are more numerous, bigger, and broadly distributed teams trying to work together. To address this, the industry is adopting DevSecOps practices to increase velocity and reduce cycle time. Selecting an SCM tool is the first step on that journey.</p>
+<p>As examples, GitLab will provide:</p>
+<ul>
+<li>Enterprise-grade administration for configuring rules and controls across hundreds of teams</li>
+<li>A library of project templates that allow the bulk creation of repositories</li>
+<li>Different merge strategies to enable teams that work linearly and nonlinearly</li>
+<li>Support for git forking workflows for teams that rely on restricting write access to the official codebase</li>
+<li>Support for development in monolithic repositories and binary assets for those working in the digital media space</li>
+<li>Streamlined code review workflows enhanced with automation</li>
+<li>A remote development platform that enables the onboarding of developers in a single day</li>
+</ul>
+<h3 id=security-built-in-not-bolted-on>Security built-in, not bolted on</h3>
+<p>Security is a team sport and organizations benefit the most when the developers have it top of mind. The most successful teams integrate security practices into code reviews and even into the actual writing of code. Source code management platforms typically offer this functionality via integration with multiple other tools, bolted on. This creates context-switching and inefficiencies. SCM tools that offer security testing natively understand how critical a developer’s time and attention span are to producing great software rapidly. By purchasing tools that make the “required tasks” (i.e. approvals, security, compliance) enjoyable and low-effort, companies retain happy development talent while meeting regulations, preventing breaches, and shipping software frequently. <a href="https://about.gitlab.com/direction/secure/#shift-left-no-more-left-than-that">You can read more about shifting left on the Secure stage vision.</a></p>
+<p>As examples, GitLab will provide:</p>
+<ul>
+<li>Security scan results in the merge request</li>
+<li>Real-time feedback in the Web IDE allowing developer to write secure code prior to code review</li>
+<li>Centralized management of libraries &amp; dependencies via Workspaces to secure the software supply chain</li>
+</ul>
+<h3 id=the-developer-experience>The Developer Experience</h3>
+<p>The developer experience is defined by development velocity, safety, and how it enables innovation and iteration. Investing in the Developer Experience therefore drives revenue and reduces risk for organizations. To provide a strong DX, a company must purchase tools that are highly usable &amp; reliable, organized to support the developer journey, reduce context switching, and minimize decision fatigue. Such tools can significantly increase developer productivity by automating the manual repetitive tasks, removing the need for the individual developer to maintain local environments or worry about keeping libraries and dependencies up-to-date, and providing a central internal developer portal for project, process, product, and API documentation with an intuitive and beautiful UI.</p>
+<p>As examples, GitLab will provide:</p>
+<ul>
+<li>Remote development option that enables developers to quickly spin up environments to develop cloud native applications</li>
+<li>A CLI equipped with native tools for the developer, operations, and security personas</li>
+<li>AI assisted suggestions for best practices, performance, &amp; security</li>
+<li>Lightning fast and accurate code search</li>
+<li>Code review workflows that reduce review rounds and that offer intelligent suggestions for appropriate reviewers</li>
+<li>Extensions for GitLab to the tools where developers work</li>
+<li>A robust and easy to use embedded Web IDE</li>
+</ul>
+<h2 id=3-year-strategy>3 Year Strategy</h2>
+<p>In three years the Create stage market will:</p>
+<ul>
+<li>Still be focused on Git as the superior version-control system</li>
+<li>Evolve <a href="https://git-scm.com/">Git</a> to efficiently support monorepos and take market in the movie and video game industry from other version control systems</li>
+<li>Experience enormous performance and accuracy leaps in code search</li>
+<li>Incoporate ML/AI in the writing of code
+<ul>
+<li>AI backed smart recommendation engines, such as Chat GPT by openai.com, will provide in line recommendations to developers as they work</li>
+<li>AI engines will be able to convert human language prompts into simple applications</li>
+</ul>
+</li>
+<li>Embrace cloud-based development environments</li>
+<li>See a <a href="https://www.gartner.com/en/newsroom/press-releases/2021-02-15-gartner-forecasts-worldwide-low-code-development-technologies-market-to-grow-23-percent-in-2021">rise</a> in the <a href="https://www.gartner.com/en/information-technology/glossary/citizen-developer">citizen developer</a> via no code, low code platforms</li>
+</ul>
+<p>As a result, in three years GitLab will:</p>
+<ul>
+<li>Be the market default tool for <a href="https://about.gitlab.com/direction/create/source_code_management/source_code_management/">Source Code management</a> in all industries including Entertainment and other sectors that depend upon binary assets</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/773">Provide strong support for monorepos</a> by extending commands and workflows in git that make working with enourmous repositories fast and efficient</li>
+<li>Provide a <a href="https://about.gitlab.com/direction/create/remote_development/workspaces/">browser-based IDE</a> that provides reliable and secure access to pre-configured development environments</li>
+<li>Offer an optional add-on for developers to use AI assistance while coding to provide recommendatons for more performant and more secure code</li>
+<li>Serve the <a href="https://www.gartner.com/en/information-technology/glossary/citizen-developer">citizen developer</a> via tools that reduce the barrier to entry for developers that have not been formally trained starting with low code options that may eventually include an AI option to convert human language into simple applications</li>
+<li>Integrations with game development platforms</li>
+</ul>
+<h2 id=1-year-plan>1 Year Plan</h2>
+<h3 id=what-we-recently-completed>What we recently completed</h3>
+<p>The Create stage has been actively delivering updates to help your development teams collaborate faster and more effectively. Here are some highlights from recent releases:</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8333">Real-time merge request reviewer updates</a> - You can now view real-time updates on reviewers of a merge request that update when a reviewr is added or removed or when someone has approved.</li>
+<li>The <a href="https://gitlab.com/groups/gitlab-org/-/epics/9165">Web IDE Beta</a> was released in GitLab 15.7, enabled by default for GitLab.com and available behind a feature flag for self-managed instances. The Web IDE Beta will be enabled by default for self-managed instances in GitLab 15.11.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9189">Workspaces was recently release at minimal maturity</a> with the ability to connect to a remote self-hosted server via the Web IDE</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8578">View Source Code rules organized by branch</a> - GitLab offers a number of controls that can be implemented as safeguards. These controls such as protected branches, approval rules, code owners approvals, and many more can be put in place to enforce adherence to policies that ensure quality. A recent SUS study and other feedback suggest that users struggle to find the different controls and struggle to understand which settings interact how. Framework for Source Code Rules aims at making it easier and more intuitive to administer your Source Code management tool.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/7514">GitLab adopted the open source project 'glab' as our CLI</a></li>
+<li>Ability to <a href="https://gitlab.com/groups/gitlab-org/-/epics/10122">define, create, interact</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/9837">secure</a> a Workspace inside GitLab</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8639">Real-time merge widget updates</a> - The merge button widget in the merge request takes inputs from lots of different checks and actions on the page. This effort is improving the real-time state change for the button based on user actions.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/24894">Minimal forking</a> - Only include the default branch when forking a repository.</li>
+</ul>
+<h3 id=what-we-are-currently-working-on>What we are currently working on</h3>
+<ul>
+<li>Source Code Management - <a href="https://gitlab.com/groups/gitlab-org/-/epics/8075">Edit source code rules organized by branch</a> - This is the next iteration of the larger effort to establish a framework for source code rules. Now that rules are co-located, we are working on ebaling the editing of these rules from that interface.</li>
+<li>Code Review Workflow - <a href="https://gitlab.com/groups/gitlab-org/-/epics/10874">Automatically merge MR when checks pass</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/11559">New architecture for diffs</a></li>
+<li>GitLab CLI - <a href="https://gitlab.com/groups/gitlab-org/-/epics/3324">Maturing the GitLab CLI</a> - GitLab recently adopted the open source command line application <a href="https://glab.readthedocs.io/en/latest/">glab</a> which expanded our reach to users who prefer to work in their terminal. We are currently doing <a href="https://gitlab.com/groups/gitlab-org/-/epics/9517">research</a> to understand what parts of developer workflows, such as code review or pipeline authoring, people want to be able to do from the CLI.</li>
+<li>Workspaces - <a href="https://gitlab.com/groups/gitlab-org/-/epics/10372">Workspaces GA</a></li>
+<li>Web IDE - <a href="https://gitlab.com/groups/gitlab-org/-/epics/7685">Install VS Code extensions in the Web IDE</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/9842">pre-install the GitLab Workflow extension</a>, enabling MR discussions and providing insight into pipeline status from an extensible Web IDE.</li>
+<li>AI Integrations in <a href="https://gitlab.com/groups/gitlab-org/-/epics/10218">development</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/10223">code review</a> workflows</li>
+</ul>
+<h3 id=what-is-next-for-us>What is next for us</h3>
+<p>To meet our <a href="https://about.gitlab.com/company/mission/#big-hairy-audacious-goal">big hairy audacious goal</a>, the Create stage will focus on the following this year:</p>
+<ul>
+<li>Source Code Management - The <a href="https://gitlab.com/groups/gitlab-org/-/epics/8075">edit source code rules organized by branch</a> will take multiple quarters</li>
+<li>Code Review Workflow - <a href="https://gitlab.com/groups/gitlab-org/-/epics/9577">Improve the experience for users performing multiple rounds of code reviews on MRs</a> - Code reviews typically involve multiple rounds of review as feedback is given, iterations made, and re-reviews happen. Understanding which merge requests a user needs to act on and the role they're playing in the merge request is an important part of communicating both state and responsiblity. We're looking in to more structured rounds of reviews to better inform users not only of what action is needed, but also when that action is needed.</li>
+<li>GitLab CLI - <a href="https://gitlab.com/groups/gitlab-org/-/epics/9363">OAuth for GitLab CLI</a> - We need to refine the logic for authentication and better document many of the options around the config, flags and environment variables.</li>
+<li>Workspaces - <a href="https://gitlab.com/groups/gitlab-org/-/epics/9896">Connect to a workspace from the Web IDE</a></li>
+<li>Web IDE - <a href="https://gitlab.com/groups/gitlab-org/-/epics/7683">Finish replacing the Web IDE with client-only VS Code</a> - Replace the current Web IDE, which is based on the open sourced Monaco editor, with a client-side instance of VS Code and implement custom extensions for creating commits and interacting with MRs.</li>
+<li>We will continue to experiment with <a href="https://gitlab.com/groups/gitlab-org/-/epics/9997">integrating AI into coding and code review workflows</a></li>
+</ul>
+<h3 id=what-we-are-not-doing>What we are not doing</h3>
+<p>The following will not be a focus over the next 12 months:</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/285">Commit by commit code reviews</a> - Is not the primary code review flow within GitLab that we're currently optimizing for. We understand that some users prefer to review code this way, and there is basic tooling to support this workflow, but we're focused on our primary review process within GitLab.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/720">Branch read access controls</a> - Limiting which branches a user can read in a Git repository is possible in a basic sense, by only advertising a subset of refs, but it is not possible to guarantee that unreachable objects will not be sent to the client. This means that branch read access controls would be very weak, since they could not prevent exfiltration of data they do not have permission to read.</li>
+<li>Editor-agnostic solution for Workspaces - Our initial iterations will focus on support for VS Code. The vast majority of developers are using VS Code and facilitating the connection between a VS Code client and host simplifies the architecture. Support for vim, JetBrains editors, Xcode, or other IDEs will come as the category reaches Complete or Loveable maturity.</li>
+</ul>
+<h2 id=target-audience>Target Audience</h2>
+<p>GitLab identifies who our DevSecOps application is built for utilizing the following categorization. We list our view of who we will support when in priority order.</p>
+<ul>
+<li>🟩 - Targeted with strong support</li>
+<li>🟨 - Targeted but incomplete support</li>
+<li>⬜️ - Not targeted but might find value</li>
+</ul>
+<h3 id=today>Today</h3>
+<ol>
+<li>🟩 <a href="/handbook/product/personas/#sasha-software-developer">Software Developers</a></li>
+<li>🟩 <a href="/handbook/product/personas/#delaney-development-team-lead">Development Team Leads</a></li>
+<li>🟩 <a href="/handbook/product/personas/#simone-software-engineer-in-test">Software Engineer in Test</a></li>
+<li>🟩 <a href="/handbook/product/personas/#devon-devops-engineer">DevOps Engineers</a></li>
+<li>🟨 <a href="/handbook/product/personas/#dakota-application-development-director">Application Development Director</a></li>
+<li>🟨 <a href="/handbook/product/personas/#sidney-systems-administrator">System Administrator</a></li>
+<li>🟨 <a href="/handbook/product/personas/#alex-security-operations-engineer">Security Operations Engineers</a></li>
+<li>⬜️ <a href="/handbook/product/personas/#allison-application-ops">Application Ops</a></li>
+<li>⬜️ <a href="/handbook/product/personas/#priyanka-platform-engineer">Platform Engineer</a></li>
+<li>⬜️ <a href="/handbook/product/personas/#cameron-compliance-manager">Compliance Managers</a></li>
+</ol>
+<h3 id=medium-term-1-2-years>Medium Term (1-2 years)</h3>
+<ol>
+<li>🟩 <a href="/handbook/product/personas/#sasha-software-developer">Software Developers</a></li>
+<li>🟩 <a href="/handbook/product/personas/#delaney-development-team-lead">Development Team Leads</a></li>
+<li>🟩 <a href="/handbook/product/personas/#simone-software-engineer-in-test">Software Engineer in Test</a></li>
+<li>🟩 <a href="/handbook/product/personas/#devon-devops-engineer">DevOps Engineers</a></li>
+<li>🟩 <a href="/handbook/product/personas/#dakota-application-development-director">Application Development Director</a></li>
+<li>🟩 <a href="/handbook/product/personas/#sidney-systems-administrator">System Administrator</a></li>
+<li>🟨 <a href="/handbook/product/personas/#alex-security-operations-engineer">Security Operations Engineers</a></li>
+<li>🟨 <a href="/handbook/product/personas/#allison-application-ops">Application Ops</a></li>
+<li>🟨 <a href="/handbook/product/personas/#priyanka-platform-engineer">Platform Engineer</a></li>
+<li>🟨 <a href="/handbook/product/personas/#cameron-compliance-manager">Compliance Managers</a></li>
+</ol>
+<h2 id=categories-in-create>Categories in Create</h2>
+<h5 id=source-code-management>Source Code Management</h5>
+<p>Source code management enables teams to securely collaborate, coordinate, and share code, allowing them to deliver software faster. This category is at the "viable" level of maturity.</p>
+<p>Priority: high • <a href="/solutions/source-code-management/">Learn more</a> • <a href="https://docs.gitlab.com/ee/user/project/repository/">Documentation</a> • <a href="/direction/create/source_code_management/">Direction</a></p>
+<h5 id=code-review-workflow>Code Review Workflow</h5>
+<p>Review code, discuss changes, share knowledge, and identify defects in code among distributed teams via asynchronous commenting and review. Automate, track and report code reviews, and identify workflow improvements with code review analytics. This category is at the "viable" level of maturity.</p>
+<p>Priority: high • <a href="https://docs.gitlab.com/ee/user/project/merge_requests/">Documentation</a> • <a href="/direction/create/code_review_workflow/">Direction</a></p>
+<h5 id=web-ide>Web IDE</h5>
+<p>Contribute easily right from the browser with everything you need using a full featured Integrated Development Environment (IDE). GitLab Duo, our AI-powered suite of features, is accessible in the Web IDE. This category is at the "viable" level of maturity.</p>
+<p>Priority: medium • <a href="https://docs.gitlab.com/ee/user/project/web_ide/index.html">Documentation</a> • <a href="/direction/create/remote_development/web_ide/">Direction</a></p>
+<h5 id=gitlab-cli>GitLab CLI</h5>
+<p>The GitLab Command Line Interface (CLI) is an unified tool that allows you to manage and interact with GitLab directly from the command line. This category is at the "viable" level of maturity.</p>
+<p>Priority: medium • <a href="https://docs.gitlab.com/ee/integration/glab">Documentation</a> • <a href="/direction/create/gitlab_cli/">Direction</a></p>
+<h5 id=editor-extensions>Editor Extensions</h5>
+<p>Editor extensions and plugins bring GitLab Duo, our AI-powered suite of features, and other GitLab functionality directly into your local developer environment.</p>
+<p>Priority: high • <a href="https://docs.gitlab.com/ee/editor_extensions/">Documentation</a> • <a href="/direction/create/editor_extensions/">Direction</a></p>
+<h5 id=workspaces>Workspaces</h5>
+<p>Accelerate and standardize developer workflows with workspaces – secure, virtual environments with customizable libraries, dependencies, and tools for each project. This category is at the "viable" level of maturity.</p>
+<p><a href="https://docs.gitlab.com/ee/user/project/remote_development/">Documentation</a> • <a href="/direction/create/remote_development/workspaces/">Direction</a></p>
+<h5 id=code-suggestions>Code Suggestions</h5>
+<p>AI Assistant for proactive coding suggestions and autocompletions</p>
+<p><a href="/solutions/code-suggestions/">Learn more</a> • <a href="https://docs.gitlab.com/ee/user/project/repository/code_suggestions/index.html">Documentation</a> • <a href="/direction/create/code_creation/code_suggestions/">Direction</a></p>
+<h2 id=jobs-to-be-done>Jobs to be Done</h2>
+<div>
+<h3 id=code_creation>Code Creation</h3>
+<p>These JTBD relate to the Code Creation group.</p>
+<table style="width: 100%">
+<colgroup>
+<col span=1 style="width: 60%;"/>
+<col span=1 style="width: 20%;"/>
+<col span=1 style="width: 13%;"/>
+<col span=1 style="width: 9%;"/>
+</colgroup>
+<tr>
+<th>Job statements</th>
+<th>Maturity</th>
+<th>Confidence</th>
+<th>Source</th>
+</tr>
+<tr>
+<td>
+When writing code, I want to get reliable help within the IDE, so I can write code more productively.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Not validated
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/gitlab-design/-/issues/2429">Issue</a>
+</td>
+</tr>
+</table>
+<h3 id=code_review>Code Review</h3>
+<p>These JTBD relate to the Code Review group. The statements were drafted for the FY21-Q2 Category Maturity Scorecard and have not been validated yet.</p>
+<table style="width: 100%">
+<colgroup>
+<col span=1 style="width: 60%;"/>
+<col span=1 style="width: 20%;"/>
+<col span=1 style="width: 13%;"/>
+<col span=1 style="width: 9%;"/>
+</colgroup>
+<tr>
+<th>Job statements</th>
+<th>Maturity</th>
+<th>Confidence</th>
+<th>Source</th>
+</tr>
+<tr>
+<td>
+When product improvements are identified, I want to propose changes that address them, so that I can help build a better product.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Not validated
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/941">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When my teammates propose changes, I want to review them before they are accepted, so that I can help increase the quality of changes, minimize the risk of defects, minimize the risk of out-of-scope changes, and grow the team’s expertise.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Not validated
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/941">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When my teammates propose changes, I want to ensure they are reviewed and accepted according to internal guidelines, so that we can increase the quality of changes, minimize the risk of defects, and maximize the reliability of product data.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Not validated
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/941">Issue</a>
+</td>
+</tr>
+</table>
+<h3 id=pages-1>Easily deploy static sites</h3>
+<p>When I am deploying a static site I want to use kubernetes for my cloud native installation so I can leverage auto-devops and other benefits of K8.</p>
+<table style="width: 100%">
+<colgroup>
+<col span=1 style="width: 60%;"/>
+<col span=1 style="width: 20%;"/>
+<col span=1 style="width: 13%;"/>
+<col span=1 style="width: 9%;"/>
+</colgroup>
+<tr>
+<th>Job statements</th>
+<th>Maturity</th>
+<th>Confidence</th>
+<th>Source</th>
+</tr>
+<tr>
+<td>
+When I have a custom domain or multiple domains I want to be able to redirect the other domains to my custom/main domain so I can optimize SEO rankings and ensure traffic from like domains are tracked.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+</td>
+<td>
+<a href="">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When I am setting up a static site I want to be able to set up the site with a wildcard DNS so I can avoid setting up a custom domain.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+</td>
+<td>
+<a href="">Issue</a>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<h3 id=source_code>Source Code Management</h3>
+<p>These JTBD relate to the Source Code Management category. These statements have been drafted for the FY24-Q1 Category Maturity assessment and have not been validated, yet.</p>
+<table style="width: 100%">
+<colgroup>
+<col span=1 style="width: 60%;"/>
+<col span=1 style="width: 20%;"/>
+<col span=1 style="width: 13%;"/>
+<col span=1 style="width: 9%;"/>
+</colgroup>
+<tr>
+<th>Job statements</th>
+<th>Maturity</th>
+<th>Confidence</th>
+<th>Source</th>
+</tr>
+<tr>
+<td>
+When code is meant to be private and restricted to a certain group of contributors, I want to control the access to the source code, so that I can protect the investments in intellectual property and to reduce the risk of source code exploitation.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Not validated
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/2184">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When reviewing past code changes, I want to track changes and manage different revisions of the source code, so that I can identify which changes were made and when, and to reference an earlier revision if necessary.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Not validated
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/2184">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When developing source code with multiple people, I want to set the rules for the collaboration, so that collaborators can explore changes and contribute efficiently.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Not validated
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/2184">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When changing source code, I want to set conditions for applying these changes, so that code quality and compliance is maintained.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Not validated
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/2184">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When working with large binary files, I want to version control these files with the source code, so that I can track and manage changes to the files over time.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Not validated
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/2184">Issue</a>
+</td>
+</tr>
+</table>
+</div>
+<h2 id=pricing>Pricing</h2>
+<p>The Create stage pricing strategy balances the needs of individual contributors, with the needs of enterprises, to create a cycle where individual contributors gladly and rapidly adopt GitLab, and naturally create the business case for upgrading to a suitable tier, typically Premium and above. The core pillar of the Create stage is the merge request based development workflow. This touches Source Code Management, Code Review and the Web IDE, and is heavily influenced by individual developers, and managers who implement access controls for efficiency, security, quality and compliance purposes. Our investment and pricing philosophy is to:</p>
+<ul>
+<li>Invest in the Free tier to drive adoption by individual contributors like developers and designers</li>
+<li>Drive adoption of Premium from the Free tier by providing more control to managers and administrators</li>
+<li>Retain customers which drives expansion of more users and cross-stage efficiency with Ops, Secure and Govern</li>
+</ul>
+<h3 id=free>Free</h3>
+<p>The tier for <strong>individual contributors, personal projects, or small teams trialing GitLab</strong>. Free is important for retaining our core users Developers (SCM, Code Review, Web IDE) and exploring different avenues of expansion in the types of personas who contribute to GitLab and their use cases. Expanding support for different markets and use cases through improved binary file and monolithic repository workflows and more accessible editing tools begins at the individual contributor level, as does supporting new personas like designers and marketers.</p>
+<p>Examples:</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/user/project/web_ide">Web IDE</a></li>
+<li><a href="https://docs.gitlab.com/ee/topics/git">Powerful Branching</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/merge_requests/">Merge requests</a></li>
+</ul>
+<h3 id=premium>Premium</h3>
+<p>The tier for <strong>teams</strong>, Premium is enterprise ready and delivers important access controls and workflow controls needed for multiple teams to collaborate on the same large project. The Premium tier features for Source Code Management and Code Review are already mature, and very valuable to medium and large enterprises. Many feature requests and improvements driven by Premium customers are improvements to the experience of individual developers, which facilitates growth through expansion and standardization on GitLab.</p>
+<p>Examples:</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/user/project/merge_requests/approvals/rules">Approval Rules for Code Review</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/code_owners">CODEOWNERs</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/group/custom_project_templates.html#custom-group-level-project-templates">Custom group-level project templates</a></li>
+</ul>
+<h3 id=ultimate>Ultimate</h3>
+<p>The tier for <strong>Executive buyers with strategic objects for their business</strong>, this tier is primarily supported through Audit and Compliance capabilities that extend project level access control features.</p>
+<p>In the future we intend to establish an Ultimate offering for Create. It will likely include:</p>
+<ul>
+<li>A GitLab-hosted Workspaces offering with included compute</li>
+</ul>
+<h2 id=upcoming-releases>Upcoming Releases</h2>
+<h3 id=174-2024-09-19>17.4 (2024-09-19)</h3>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/444978">Implement merge and rebase for pipeline-less/merge train-less projects</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/355092">[Discussion] Enable extension marketplace in VSCode Web IDE</a></li>
+</ul>
+<h3 id=git-247>Git 2.47</h3>
+<h3 id=175-2024-10-17>17.5 (2024-10-17)</h3>
+<h3 id=176-2024-11-14>17.6 (2024-11-14)</h3>
+<h3 id=1710-2025-03-20>17.10 (2025-03-20)</h3>
+<h3 id=180-2025-05-15>18.0 (2025-05-15)</h3>
+<h2 id=other-interesting-items>Other Interesting Items</h2>
+<p>There are a number of other issues that we've identified as being interesting
+that we are potentially thinking about, but do not currently have planned by
+setting a milestone for delivery. Some are good ideas we want to do, but don't
+yet know when; some we may never get around to, some may be replaced by another
+idea, and some are just waiting for that right spark of inspiration to turn
+them into something special.</p>
+<p>Remember that at GitLab, everyone can contribute! This is one of our
+fundamental values and something we truly believe in, so if you have
+feedback on any of these items you're more than welcome to jump into
+the discussion. Our vision and product are truly something we build
+together!</p>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/14087">Be able to have the result of a MR, before merging it definitely</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/14096">See current HEAD in outdated discussion</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/14121">Distributed code-reviews and issues</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/14240">Generate Changelog from commit messages.</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/24331">Add system notes when a issue/MR is mentioned on Gitter</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/24332">Show Gitter mentions in GitLab todos</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/24579">Block command line pushes if they have the user's private email address</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/328550">Improve experience with batch apply suggestions and help with overlaps/conflicts (X out of Y preventing apply)</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/333802">Provide View of a User's Branches</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/338487">Improve navigation between description / widget / conversation sections on merge requests</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/340399">Replace "allow owners…" with cascading setting framework</a> <kbd>Premium</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/346141">Reorganize MR metadata to emphasize what users value and use the most</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/348633">Create projects from project templates with required settings</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/352039">Review telemetry data for MR tabs</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/352749">Improve Merge Request diffs UI to be usable on small screens</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/356973">Separate Code Owners from the Approval Rules and Allow Layered Permissions in CODEOWNERS File</a> <kbd>Premium</kbd> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/366671">Introduce limit of 255 characters for all approval rule names</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/378410">Add /notes endpoint to personal /snippets</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/388102">Introduce a direct way to require merge request for protected branches</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/403015">Easy transition from viewing a files at a specific position to editing at the same position (line)</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/406681">Allow adjustable maximum hard limits when viewing commits in Merge Requests</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/407791">Set "Prevent approvals by commit author" option per branch</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/411840">Add support for preventing file deletion based on file type</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/412461">Assist with resolution of conflicts in descriptions due to simultaneous edits</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/414560">Lorem ipsum in the sample project template causes confusion</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/423716">Add shortcut to revert-MR in commit Options dropdown, instead of hiding "Revert" option there</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/425040">Expose showSelectiveCodeOwnerRemovals also on group level</a> <kbd>Premium</kbd> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/426284">Feature request : Allow a template in a namespace which is out of the hierarchy of the Group owning the template</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/434522">AI-assisted help to solve merge conflicts in MRs</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/435347">Add source freshness hints and constraints to "Pipelines must succeed"</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/443892">User should be notified when MR is merged if author</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/450453">Explain code changes</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/462310">Create remote workspace for mobile development</a> <kbd>Premium</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/463575">Include visible hints on actions that would trigger a merge with auto-merge/MWCP</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/463876">Troubleshoot support of MS edge tools extension in Remote Workspace VS Code</a> <kbd>Premium</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/14116">Implement cross-server (federated) merge requests</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/1817">In application notifications for code changes</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/499">Approvers based on code Git blame</a> <kbd>Premium</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/15470">Add code comments in file (blob) view</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/895">Rebase and merge with one click</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/1032">Mention when the merge request becomes broken</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/2048">Restrict group approvers to groups that have share access to the project</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/21478">Real-time editing of repo files</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/24523">Create forks of public projects using Git object pool</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/24636">Open unchanged files in merge request</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/27117">Merge MR by updating target branch to point to merge ref HEAD</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/27158">Only maintainers can open merge requests from private forks to public projects</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/28221">Items left to allow merge component in Related Merge Requests</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/32372">Support Merge Request source branches on a different Git server</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/38034">File template picker confuses users when selecting a template</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/208314">Show MR branch's current commit hash in MR's front page</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/211641">Store and track externally imported issue identifier</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/254392">Make it possible to skip CI when generating a new empty branch in the UI</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/280806">In context editing of Snippets</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/325856">Add word-diff option to commits view</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/330179">Word-diff comments</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/332382">Populate Snippets menu in the top navigation with useful content</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/335302">Reflect Deleted Branches and Tags as well as closed MR's in Downstream GitLab Pull Mirror</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/336023">Allow setting squash settings instance wide</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/338328">Review design to consolidate MR actions and info MVC</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/340320">Job/Pipeline logic to correctly handle temporary loss of gitlab runner orchestrator</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/344823">Support for Alternative Workflows when using Monorepo</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/365063">Group-Level Merge &amp; Squash Commit Templates</a> <kbd>Premium</kbd> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/373669">Design mechanism to match versions of VS Code server and WebIDE</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/382594">Preserve unsaved edits while establishing a remote connection in the Web IDE</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/383246">Improve process for adding a project template</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/384000">Define the rules around READMEs for Project Templates</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/384001">Add community members as reviewers of Project Templates</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/384002">Ensure Project Template MRs are counted in throughput stats</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/385010">Pipeline triggerer is shown as the user who created the mirror, instead of user who started the mirror process</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/394876">Create forkSynced subscription</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/407455">Manually install VS Code extensions in the Web IDE Beta</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/408381">Use Jupyter Notebook as the editor in a workspace</a> <kbd>Premium</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/421933">Design for multiple editor support</a> <kbd>Premium</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/432851">Add a "quality report" generated by AI</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/434246">Code Suggestions: Enable more context (open files, all repo files) as opt-in request</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/440302">Merge requests - assurance that code changes are reviewed by second authorized individual [group and project access token]</a></li>
+</ul>
+<p align=center>
+<i><br/>
+Last Reviewed: 2021-03-08<br/>
+Last Updated: 2021-03-08
+</i>
+</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/create/template.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/create/template.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

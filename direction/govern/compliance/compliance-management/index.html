@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Compliance Management
+|
+GitLab
+</title>
+<meta content='The goal of Compliance Management is to change the current paradigm for compliance to create an experience that&#39;s simple and friendly.' name=description />
+<meta content='The goal of Compliance Management is to change the current paradigm for compliance to create an experience that&#39;s simple and friendly.' name='twitter:description'/>
+<meta content='The goal of Compliance Management is to change the current paradigm for compliance to create an experience that&#39;s simple and friendly.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Compliance Management' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/govern/compliance/compliance-management/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/govern/compliance/compliance-management/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Compliance Management' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/govern/compliance/compliance-management/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Compliance Management
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/g.hickman'>
+<img
+src='/images/team/granthickman.png'
+class=codeowner-avatar-img
+alt='Grant Hickman'
+title='Grant Hickman'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/sam.white'>
+<img
+src='/images/team/samuelwhite.png'
+class=codeowner-avatar-img
+alt='Sam White'
+title='Sam White'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/govern/compliance/compliance-management/index.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/govern/">Product Stage Direction - Govern</a></li><li><a href="/direction/govern/compliance/">Group Direction - Compliance</a></li><li>Category Direction - Compliance Management</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#compliance-management" id=markdown-toc-compliance-management>Compliance Management</a> <ul>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#use-cases" id=markdown-toc-use-cases>Use Cases</a></li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a></li>
+<li><a href="#challenges-to-address" id=markdown-toc-challenges-to-address>Challenges to address</a></li>
+</ul>
+</li>
+<li><a href="#the-compliance-toolbox" id=markdown-toc-the-compliance-toolbox>The Compliance Toolbox</a></li>
+<li><a href="#where-we-are-headed" id=markdown-toc-where-we-are-headed>Where we are Headed</a></li>
+</ul>
+</li>
+<li><a href="#whats-next--why" id=markdown-toc-whats-next--why>What's Next &amp; Why</a></li>
+<li><a href="#what-were-not-doing" id=markdown-toc-what-were-not-doing>What We're Not Doing</a> <ul>
+<li><a href="#continued-development-and-support-of-compliance-pipelines" id=markdown-toc-continued-development-and-support-of-compliance-pipelines>Continued development and support of compliance pipelines</a></li>
+<li><a href="#status-checks" id=markdown-toc-status-checks>Status checks</a></li>
+</ul>
+</li>
+<li><a href="#maturity" id=markdown-toc-maturity>Maturity</a> <ul>
+<li><a href="#user-success-metrics" id=markdown-toc-user-success-metrics>User Success Metrics</a></li>
+<li><a href="#market-opportunity" id=markdown-toc-market-opportunity>Market opportunity</a></li>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive landscape</a></li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst landscape</a></li>
+<li><a href="#top-user-issues" id=markdown-toc-top-user-issues>Top user issue(s)</a></li>
+<li><a href="#top-vision-issues" id=markdown-toc-top-vision-issues>Top Vision issue(s)</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=compliance-management>Compliance Management</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Stage</strong></th>
+<th><strong>Maturity</strong></th>
+<th><strong>Content Last Reviewed</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/direction/security/#govern">Govern</a></td>
+<td><a href="/direction/maturity/">Viable</a></td>
+<td><code>2023-09-19</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=overview>Overview</h3>
+<p>Businesses have regulatory standards they must adhere to as well as internal policies. These policies are designed to minimize risk, maximize product quality, and protect end-users. Historically, ensuring that these policies are reflected and followed daily was challenging. Many times compliance teams, development teams, and others all worked separately, which made it difficult to reconcile all the various requirements that these external and internal standards imposed.</p>
+<p>The goal of <strong>Compliance Management</strong> is to help organizations to understand the state of their compliance. Compliance with GitLab should happen within GitLab and in the workflows that teams already are using. Keeping compliance within GitLab, rather than other tools, enables <a href="https://about.gitlab.com/company/mission/#mission">everyone to contribute</a> and allows compliance to be a collaborative, rather than a confrontational, activity. Compliance Management helps ensure everyone can use GitLab to effectively develop, deploy, and manage applications inside of GitLab while still meeting their compliance requirements.</p>
+<p>This category focuses on enabling compliance professionals to identify compliance and busniess requirements, interpet and define them in GitLab, scope which GitLab projects are in scope of compliance, and then gain visibility into their compliance posture through compliance standards reporting.</p>
+<p>Compliance Management works hand in hand with <a href="https://about.gitlab.com/direction/govern/security_policies/security_policy_management/">Security Policy Management</a> as compliance management tools give visibility into the state of your compliance, adherence across common regulatory standards, and identifies gaps that may need to be addressed. Security and compliance policies then allow compliance teams to implement compliance controls that can be enforced across an organization's GitLab instance.</p>
+<h5 id=use-cases>Use Cases</h5>
+<ul>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Cameron (Compliance Manager)</a> needs a single place to view key compliance data (e.g. segregation of duties, pipelines and project security grades) about their GitLab groups and projects to ensure their teams are operating appropriately, so the organization can maintain a good compliance posture with their use of GitLab.</li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Cameron (Compliance Manager)</a> needs to implement separation of duties controls within GitLab to prevent the risk of a single individual having the ability to carry out multiple job functions, so the organization can mitigate risk and meet the compliance controls of a multitude of compliance frameworks. Cameron can leverage Standards Adherence Reporting to identify SOD violations and implement controls via Scan Execution Policies or Compliance Pipelines to address the compliance gap.</li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Cameron (Compliance Manager)</a> needs a way to identify when a project is subject to compliance requirements to ensure appropriate policies and procedures are in place, so they can be managed easily and reported on with minimal effort.</li>
+</ul>
+<h4 id=target-audience>Target Audience</h4>
+<ul>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Cameron (Compliance Manager)</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#amy-application-security-engineer">Amy (Application Security Engineer)</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#isaac-infrastructure-security-engineer">Isaac (Infrastructure Security Engineer)</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#sidney-systems-administrator">Sidney (Systems Administrator)</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#rachel-release-manager">Rachel (Release Manager)</a></li>
+</ul>
+<h4 id=challenges-to-address>Challenges to address</h4>
+<ol>
+<li>Separation of duties is a core concept among all compliance frameworks and is generally a risk management practice for organizations. Within GitLab, there are many areas where separation of duties is required, such as for merge requests, within CI/CD pipelines, or even changing certain project settings. This is a broad area to cover, but it's also one of the most important requirements our customers have. The implementation of separation of duties features will require collaboration across multiple GitLab product groups to ensure we've covered all of our customers' needs.
+<ol>
+<li>What success looks like: GitLab should have features and experiences in place that allow compliance-minded organizations to configure and enforce separation of duties within GitLab. Customers should be able to require more than a single individual be involved with certain actions, such as merge requests or within CI/CD pipelines, to manage risk for their organization and meet their compliance requirements. This can manifest as <a href="https://gitlab.com/groups/gitlab-org/-/epics/3839">two-person approvals</a>, a specific <a href="https://docs.gitlab.com/ee/ci/environments/protected_environments.html#deployment-only-access-to-protected-environments">deployer role</a>, and bringing merge request approvals to the <a href="https://gitlab.com/groups/gitlab-org/-/epics/4367">group level</a> to prevent maintainers from modifying these settings.</li>
+</ol>
+</li>
+<li>Enterprises operating in regulated environments need to ensure the technology they use complies with their internal company policies and procedures, which are largely based on the requirements of a particular legal or regulatory framework (e.g. GDPR, SOC 2, ISO, PCI-DSS, SOX, COBIT, HIPAA, FISMA, NIST, FedRAMP) governing their industry. Customers need features that enable them to comply with these frameworks beginning with defining the rules, or controls, for their GitLab environment.
+<ol>
+<li>What success looks like: Using <a href="https://docs.gitlab.com/ee/user/project/settings/#compliance-framework">compliance frameworks</a>, administrators and group owners should be able to clearly label their GitLab projects. These labels should be <a href="https://gitlab.com/groups/gitlab-org/-/epics/4082">customizable and more versatile</a> to support many aspects of a project's configuration. When a compliance framework is applied to a project, it should automatically apply sensible default settings to a project, based on control mappings, and provide enforcement capabilities for these settings. These labels should also help users in a GitLab namespace know when a project has special requirements for compliance and give <a href="https://about.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Cameron (Compliance Manager)</a> peace of mind knowing these projects have enforcement capabilities to prevent unauthorized changes. These labels should evolve to be tied to certain compliance controls for auditing and reporting purposes.</li>
+</ol>
+</li>
+<li>Compliance-minded organizations are data-informed and need visibility into all of their business operations to make the best decisions. Currently, GitLab does not aggregate the specific information organizations need to make these compliance decisions or monitor compliance status for their groups and projects. The information exists in many cases, but is simply not consolidated and presented in a way that makes compliance a simple, friendly task. Organizations have to dig for information in many disparate areas of the GitLab application and then need to build custom API-driven solutions to extract the data they need for internal compliance management or for reporting to auditors.
+<ol>
+<li>What success looks like: GitLab provides a native, in-app experience for data and insights centered around compliance for organizations. This could manifest as a group-level dashboard to track the compliance progress and status of projects, <a href="https://gitlab.com/groups/gitlab-org/-/epics/4802">changes (MRs)</a>, commits, etc. in the context of a specific compliance framework or program. These insights should be derived by measuring activities in GitLab against specific compliance controls, such as separation of duties, access controls, SDLC policy, and more.</li>
+</ol>
+</li>
+<li>Managing large numbers of users with expansive group and project footprints can be difficult to do without the proper insight and tooling. In many cases, customers are building custom scripts or services to enforce things like credential rotation. Credential management is an important element of compliance because the number of people who have access, the systems they have access to, their type of access, and the layered controls in place to mitigate risk of breaches or credential misuse can have far-reaching affects on an organization in the event of a security incident.
+<ol>
+<li>What success looks like: GitLab provides a built-in experience that can be used to monitor, revoke, and ensure rotation of the credentials used to access GitLab. We currently have the <a href="https://docs.gitlab.com/ee/administration/credentials_inventory.html">Credential Inventory</a> to provide some of this information on self-managed GitLab and will continue to enhance it to provide more information and to work for customers on SaaS.</li>
+</ol>
+</li>
+<li>In organizations with complex systems and approval structures, there is sometimes a need to bypass an approval flow for emergencies or to override a process that may be particularly burdensome in the moment. These bypasses are normally infrequent, but important. For example, an organization that needs to deploy an emergency fix to their production environment because their website or application is down, and the workflows they've built around deploying that change may require much more time than is available to them.</li>
+<li>When organizations adopt GitLab, they are incorporating it into a complex and comprehensive set of systems that are already in operation. These complex systems cover a broad range of functions and exist to support business functions outside of GitLab. Those systems, however, are critical to an organizations' use of GitLab because it could be anything from ITSM to internal reporting systems that generate outputs necessary for the GitLab users to meet company requirements. These systems are involved in the decision process for changes made within GitLab to a production environment. Connecting those systems to GitLab is time consuming, complicated, and comes with inherent challenges since they're not natively supported in GitLab.
+<ol>
+<li>What success looks like: GitLab provides a way to interface and interact with these external systems. We are starting on this with <a href="https://gitlab.com/groups/gitlab-org/-/epics/3869">external status checks</a>,
+which allows users to contact external systems as part of a merge request to either create a record in those systems, get back an approval, or any action that may need to be triggered in those
+external systems.</li>
+</ol>
+</li>
+</ol>
+<h3 id=the-compliance-toolbox>The Compliance Toolbox</h3>
+<p>GitLab frequently gets asked for an "easy button" for compliance. Users want to be able to flip a switch an be compliant with SOX, GDPR, and other standards immediately. Unfortunately, this is not possible for any vendor to provide. Meeting a compliance standard depends on the unique characteristics of a business and what the business's auditors want to see. For example, an eCommerce site will have different auditing needs and required controls than a financial institution, even if both are working on meeting a similar compliance standard.</p>
+<p>GitLab recognizes that each of our users have these unique needs and so Compliance Management provides a collection of controls, settings, and workflow enforcements that we dub the "Compliance Toolbox." While no one control is enough to pass a specific audit, using the different individual capabilities in GitLab, an organization can compose and build the controls and workflows they need to meet their own unique requirements to pass an audit. This approach is also beneficial because it allows organizations to opt-in to more and more controls over time, rather than having to immediately enable every control at once.</p>
+<h3 id=where-we-are-headed>Where we are Headed</h3>
+<p>Compliance is focused on addressing adherence, visibility, and observability through reporting and data sources. We understand that customers gain value by having multiple means of understanding their compliance posture and where to take action.</p>
+<p>With this in mind, we're extending our compliance capabilities through a number of themes:</p>
+<ol>
+<li>Expansion of our Audit Events (Hierarchically) – This entails extending support across instance, group, and project layers for each type of audit event capability.</li>
+<li>Expansion of our Audit Events – This entails extending support across instance, group, and project layers for each type of audit event capability.</li>
+<li>Expansion of our Streaming Audit Events – This effort encompasses adding support for new audit log destinations through 3rd party partners, including GCP, AWS, Azure, and others.</li>
+<li>Supporting the Unification of Compliance Pipelines and Security Policies – As new capabilities are extended into security policies to support custom yaml in scan execution policies, as well as the support of linking policies to compliance frameworks, the Compliance group will support in this effort and aide in the transtion between the two implementations. This collaboration will contribute to the Compliance team's ability to double down on Compliance Standards Adherence and move more quickly, while Security Policy Management addresses implementation of compliance controls and checks.</li>
+<li>Compliance Standards Adherence – While we may start humbly with a few common compliance adherence checks, we'll be focusing deeply and building rapidly to support the most common regulatory standards and compliance frameworks that challenge our customers today. Such frameworks could include SLSA, PCI-DSS, HIPAA, FISMA, NIST, FedRAMP, CIS Benchmarks, OpenSSF, among others. Through this effort, our Standards Adherence report will grow to address two facets: proactive compliance through adherence checks and violation reports to detect non-compliance reactively.</li>
+</ol>
+<h2 id=whats-next--why>What's Next &amp; Why</h2>
+<p>In 16.10, we're extending capabilities within the compliance center for compliance managers to define, edit, and manage compliance frameworks by adding the ability to view security policies that are linked to a given framework. When utilizing the currently experimental security policy scoping feature, you can scope a policy granularly to enforce only on projects containing a particular compliance framework label, or define a specific set of projects to enforce.</p>
+<p>For policies scoped to a compliance framework label, we'll surface the policies within the framework view, giving clearer visibility and line of sight into the controls that are built directly into GitLab to enforce compliance and security requirements - especially those relevant to DevSecOps.</p>
+<p>Additionally, we'll be building a workflow to aide users of compliance pipelines in migrating and leveraging the new experimental feature "pipeline execution action" within scan execution policies. This new policy feature will enable enforcement of custom CI yaml across development projects, while also providing more tools and logic for ensuring compliance and global enforcement, without the extra hassle. This will be a logical step and improvement of our capabilities for compliance pipelines, while also better organizing our compliance vs policy features for separation of concerns:</p>
+<ul>
+<li>Our compliance features are focusing on improving visibility, observability, and tools for providing evidence of compliance to auditors.</li>
+<li>Our policies features are enabling controls that can be instantiated in GitLab to override, enforce, prevent, and block behaviors that are idenfied as a risk, ensuring our DevSecOps lifecyle is bullet-proof for security and compliance.</li>
+</ul>
+<p>These features work hand in hand to close the loop on security and compliance.</p>
+<h2 id=what-were-not-doing>What We're Not Doing</h2>
+<h4 id=continued-development-and-support-of-compliance-pipelines>Continued development and support of compliance pipelines</h4>
+<p>To evolve the overall Govern vision, we'll be unifying the capabilities of Compliance Frameworks, Compliance Pipelines, and Security Policies. This enhancement will bring unique advantages offered separately today into a singular implementation via scan execution policies:</p>
+<ul>
+<li>Scan execution security policies will enable support of custom yaml</li>
+<li>These policies will allow for granular definition and enforcement of custom jobs, scripts, and automations</li>
+<li>Policies will soon support scoping of projects through compliance framework labels, easing the ability to organize and manage policies within a framework</li>
+</ul>
+<p>For future use cases and development enhancements related to enforcing security and compliance controls, as they may have previously been handled through compliance pipelines, will continue through the <code>Govern::Security Policies</code> group. Learn more:</p>
+<ul>
+<li><a href="https://about.gitlab.com/direction/govern/security_policies/security_policy_management/">GitLab Security Policies Direction</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5510">Epic: Linking/scoping security policies to Compliance Frameworks</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/7312">Epic: Add custom yaml support to scan execution policies</a></li>
+</ul>
+<h4 id=status-checks>Status checks</h4>
+<p>We'll be working with Security Policies to transfer ownership of this capability. Status checks operate similarly to existing Scan Result Policies (aka Merge Request Approval Policies). Status checks are able to block merge requests based on a status update via a middleware API (owned/maintained by the customer). They receive responses from a source and allow for implementation of external compliance checks.</p>
+<h2 id=maturity>Maturity</h2>
+<p>Compliance Management is currently in the <strong>viable</strong> state. You can read more about GitLab's <a href="https://about.gitlab.com/direction/maturity/">maturity framework here</a>, including an approximate timeline.</p>
+<p>Achieving a <strong>complete</strong> level of maturity will involve collecting customer feedback and evolving the <a href="https://gitlab.com/groups/gitlab-org/-/epics/2537">Compliance Dashboard</a> further and ensuring a more complete coverage of group-level and instance-level compliance controls that enable you to confidently and effectively manage the compliance posture of your GitLab environment. Assuming we're on the right track, we'll continue to focus on these areas:</p>
+<ul>
+<li>Increase the number of settings and features you can affect by assigning a framework to a group or project.</li>
+<li>Increase the comprehensiveness of "out-of-the-box" Compliance Management to incorporate evidence collection, reporting, and automation of auditing tasks.</li>
+<li>Improve the visibility and consolidation of compliance-relevant data points in the Compliance Dashboard.</li>
+<li>Simplify repeatable workflows, such as evidence collection, audit project management, and project creation in a regulated context.</li>
+</ul>
+<p>Finally, once we've achieved a rule set that's sufficiently flexible and powerful for enterprises, it's not enough to be able to define these rules - we should be able to measure and confirm that they're being adhered to. Achieving <strong>Lovable</strong> maturity likely means further expansion of the two dimensions above, plus visualizing/reporting on the state of Compliance Management across the instance.</p>
+<h3 id=user-success-metrics>User Success Metrics</h3>
+<p>We'll know we're on the right track with <strong>Compliance Management</strong> based on the following metrics:</p>
+<ul>
+<li>An increase in the <a href="https://about.gitlab.com/handbook/product/performance-indicators/">total number of projects with a compliance framework</a> taken by users</li>
+<li>An increase in the amount of time spent viewing the <a href="https://docs.gitlab.com/ee/user/compliance/compliance_report/">Compliance Dashboard</a></li>
+<li>An increase in the number <a href="https://docs.gitlab.com/ee/user/project/settings/#compliance-framework">compliance framework labels</a> with an associated compliance pipeline.</li>
+</ul>
+<h3 id=market-opportunity>Market opportunity</h3>
+<p>According to the <a href="https://www.idc.com/getdoc.jsp?containerId=US45856620">Worldwide Governance, Risk, and Compliance Software Forecast, 2020–2024</a>, the worldwide GRC software market is expected to grow by an average of <strong>4.2%</strong> over the next five years to <strong>$12.8 Bn</strong> in 2024 (Source: <a href="https://www.idc.com/">IDC</a> DOC #US45856620, SEP 3, 2020). While GitLab does not fit perfectly into the GRC software market, the <a href="https://about.gitlab.com/handbook/product/categories/#compliance-group">Compliance group</a> at GitLab aims to build out the features and experiences necessary to provide the same value as these companies and services. Extending the functionality of GitLab to simplify GRC related activities will allow our customers to save time and effort on defining policies, capturing relevant audit data, reporting on the compliance status of their systems and resources, and automating SDLC compliance tasks.</p>
+<p>Further strengthening GitLab's position for this opportunity is our inherent design for both a public SaaS option as well as an on-premise/self-managed solution. Providing both options allows us to capture more of this market share, particularly within organizations where public SaaS is not an option due to stricter requirements around air-gapped networks or multi-tenant SaaS solutions.</p>
+<p>Even by conservative estimations, if GitLab can capture even 1% of this market, that is $128 MM in revenue that could be captured by building first-class experiences for governance, risk and compliance. By focusing on the themes discussed on this direction page, we believe it's possible to capture portions of this market while ensuring our customers benefit from the time and cost savings of having native GRC capabilities within the GitLab application.</p>
+<h3 id=competitive-landscape>Competitive landscape</h3>
+<p><a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager?view=o365-worldwide">Microsoft Compliance Manager</a> is the most direct competition with this category and our vision for the future. The <a href="https://gitlab.com/groups/gitlab-org/-/epics/2537">Compliance Dashboard</a> is moving in this direction, but there are some key differences in each. Microsoft's Compliance Manager provides pre-built assessments for various compliance frameworks or certifications, introduces workflows to complete those assessments or risk assessments, offers "improvement actions" to improve an organization's compliance posture, and generates a compliance score.</p>
+<p>After review, our impressions are:</p>
+<ul>
+<li>It's unclear what programmatic actions are being taken to automate compliance tasks</li>
+<li>It appears to require <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-score-calculation?view=o365-worldwide#initial-score-based-on-microsoft-365-data-protection-baseline">manual effort</a> to manage the assessments beyond Microsoft's baseline capabilities</li>
+<li>The scoring mechanism is a gamification of the compliance program, which can help provide a sense of compliance posture for that program</li>
+<li>Creating custom assessment templates seems to require creating a spreadsheet that's formatted in a <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager-templates?view=o365-worldwide#formatting-your-template-data-with-excel">specific way</a> to import into the compliance manager, which then renders that data in the UI</li>
+<li>There's no obvious clarification about whether a score can reach 100%, which could imply an attestation of compliance</li>
+<li>Ultimately, it seems this is a much broader Governance, Risk, and Compliance (GRC) tool that helps a Microsoft customer track their compliance programs within the Microsoft 365 ecosystem</li>
+<li>The documentation mentions a baseline compliance score based on a <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-score-calculation?view=o365-worldwide#initial-score-based-on-microsoft-365-data-protection-baseline">"default Data Protection Baseline assessment provided to all organizations"</a>, but does not provide specifics about this</li>
+</ul>
+<p>There's an interesting, and valuable, feature that shows <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/compliance-manager?view=o365-worldwide#controls">Microsoft-managed controls</a> versus customer-owned and shared controls. This would be helpful for identifying where Microsoft needs to take ownership to deliver the controls a customer inherently needs in their service provider.</p>
+<p>Microsoft seems focused on building out a comprehensive, natively connected <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/microsoft-365-compliance-center?view=o365-worldwide">compliance center</a> which is a massive undertaking and commits to a full-on GRC application within Microsoft 365. There doesn't seem to be a specific focus on DevOps, which suggests there's an opportunity for GitLab to provide this focus and supplement other GRC tools that seem to follow a similar pattern.</p>
+<h3 id=analyst-landscape>Analyst landscape</h3>
+<p>The feedback we've received about this category has been supportive of our direction to save compliance professionals time and make compliance tasks easier. While there are companies and applications that exist as holistic GRC solutions, GitLab is well-positioned to make a lot of the compliance process easier and automated by enabling customers to leverage the data they're already generating in their usage of GitLab.</p>
+<p>We spoken with some analysts about the <code>Compliance Management</code> direction and here's what they said:</p>
+<ul>
+<li>Automating traceability, and the retrieval of that data, will be valuable because it saves a lot of time</li>
+<li>We should provide a "glue" mechanism to tie our customers' various systems together in a way that
+lets us streamline and automate reporting</li>
+<li>We should endeavor to build generic integrations and not specific ones to allow maximum flexibility
+to customers connecting their external compliance systems</li>
+<li>Realize we're solving for more than employee dissatisfaction; we're helping customers save money and avoid downtime too</li>
+<li>Save time from checking and double-checking audit data; that time can be reallocated for other value-adding tasks</li>
+<li>We should build an experience that connects to the <a href="https://about.gitlab.com/direction/plan/value_stream_management/">Value Stream Management</a>
+direction with compliance data</li>
+<li>We should be focusing our messaging and efforts on automation and ensuring our users understand that value</li>
+<li>Leverage the concept of "Continuous Compliance" and help organizations break away from their waterfall methods</li>
+<li>Partnering with auditors on the <a href="https://gitlab.com/groups/gitlab-org/-/epics/2537">Compliance Dashboard</a> should help build credibility and drive adoption</li>
+<li>C-level executives will take an interest in the dashboard particularly if it helps them mitigate the risk of monetary fines from non-compliance with regulatory requirements</li>
+</ul>
+<p><strong>What this means for our direction:</strong> The analysts feedback we received is closely aligned with our current direction. The biggest deviation is the emphasis, from analysts, on incorporating compliance data into <a href="https://about.gitlab.com/direction/plan/value_stream_management/">Value Stream Management</a>. This is not something we're actively pursuing and will re-evaluate. We are currently pursuing some issues, such as a <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/12424">Change Management</a> that will provide some of this data to our customers in the interim.</p>
+<p>We've validated most of this feedback directly with customers through our day-to-day work on existing issues and we do not anticipate a significant deviation of our direction for the <code>Compliance Management</code> category. We will continue to invest in the issues that allow our customers to automate their auditing and compliance requirements, connect their proprietary systems to GitLab, and find the right data in the right places for <a href="https://about.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Cameron (Compliance Manager)</a>.</p>
+<h3 id=top-user-issues>Top user issue(s)</h3>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/18488">Configure Protected Branches at the Group and Instance Level</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/4367">Group-level merge request approval rules</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5957">Group-level merge request approval settings</a></li>
+</ul>
+<h3 id=top-vision-issues>Top Vision issue(s)</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2537">Compliance Dashboard</a></li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/govern/compliance/compliance-management/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/govern/compliance/compliance-management/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

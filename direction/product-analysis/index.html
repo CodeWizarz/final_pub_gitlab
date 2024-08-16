@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Direction - Product Data Insights
+|
+GitLab
+</title>
+<meta content='Learn more from GitLab, The DevSecOps Platform.' name=description />
+<meta content='Learn more from GitLab, The DevSecOps Platform.' name='twitter:description'/>
+<meta content='Learn more from GitLab, The DevSecOps Platform.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Direction - Product Data Insights' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/product-analysis/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/product-analysis/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Direction - Product Data Insights' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/product-analysis/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Direction - Product Data Insights
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/cbraza'>
+<img
+src='/images/team/carolynbraza.jpg'
+class=codeowner-avatar-img
+alt='Carolyn Braza'
+title='Carolyn Braza'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/product-analysis/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Product Direction - Product Data Insights</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 class=no_toc id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#vision" id=markdown-toc-vision>Vision</a></li>
+<li><a href="#working-with-us" id=markdown-toc-working-with-us>Working with Us</a> <ul>
+<li><a href="#product-division-support" id=markdown-toc-product-division-support>Product division support</a></li>
+<li><a href="#data-program-collaboration" id=markdown-toc-data-program-collaboration>Data program collaboration</a></li>
+</ul>
+</li>
+<li><a href="#helpful-resources--links" id=markdown-toc-helpful-resources--links>Helpful resources &amp; links</a></li>
+</ul>
+<h2 class=no_toc id=product-data-insights-overview>Product Data Insights overview</h2>
+<p>The Product Data Insights team (formerly known as "Product Analysis") was created in October
+2020 to provide dedicated, specialized analytics resources for the GitLab Product division
+and to support product data-related analysis. The team consists of product analysts, and reports
+to the Senior Director, Product Monetization &amp; Operations. The team's primary customers are
+Product Managers across all sections, stages, and groups.</p>
+<p>In addition to working with the Product organization, Product Data Insights is part of the
+<a href="/handbook/business-technology/data-team/#analytics-engineering-team">Research &amp; Development (R&amp;D) Data Fusion Team</a>,
+enabling collaboration between the product analysts and analytics engineers on the central
+<a href="/handbook/business-technology/data-team/">Data team</a>. Product Data Insights is also a member
+of the <a href="/handbook/business-technology/data-team/functional-analytics-center-of-excellence/">Functional Analytics Center of Excellence (FACE)</a>,
+a group of functional analytics teams across GitLab.</p>
+<h2 id=vision>Vision</h2>
+<p>Simply put, the Product Data Insights team is charged with supporting product-related data needs
+across GitLab. While the scope is quite broad, the team is organized to maximize support of the
+Product division, while protecting time for cross-functional initiatives. The Product Data Insights
+team delivers actionable insights that help the Product division make responsible, data-driven
+decisions in feature development, prioritization, and improving the user experience. Part of
+Product Data Insights' role is also to enable greater self-service of product-related data and
+follow GitLab's <a href="/company/culture/all-remote/handbook-first-documentation/">handbook-first approach</a>
+to build a strong remote culture.</p>
+<h2 id=working-with-us>Working with Us</h2>
+<p>You can read about the Product Data Insights team's issue intake, prioritization, and team
+processes on their <a href="/handbook/product/product-analysis/">handbook page</a>.</p>
+<h3 id=product-division-support>Product division support</h3>
+<p>To maximize the team's ability to support a large product organization, Product Data Insights
+is structured so that a single analyst supports a <a href="/handbook/product/categories/#devops-stages">section (or sections)</a>.
+This gives analysts the opportunity to build subject matter expertise in an area of the product
+and the data associated with it. In addition, it provides both analysts and PMs with a consistent
+counterpart for their data-related needs. The analyst is intended to be an embedded member of
+the Product team to encourage closer collaboration and increase the impact of analysis on the
+product.</p>
+<h3 id=data-program-collaboration>Data program collaboration</h3>
+<p>As a functional analytics team, Product Data Insights is reliant on other teams within the Data
+Program to provide high-quality, easily-accessible data. As such, the team collaborates
+closely with the central <a href="/handbook/business-technology/data-team/">Data team</a> and
+<a href="/handbook/product/analytics-instrumentation-guide/">Analytics Instrumentation group</a>.
+Here is a quick summary of the responsibilities of each of these 3 teams:</p>
+<table>
+<thead>
+<tr>
+<th>Team Name</th>
+<th>DRI</th>
+<th>Goal</th>
+<th>Example Tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Data Insights</td>
+<td>Carolyn Braza: Senior Manager, Product Data Insights</td>
+<td>Perform analysis to unlock product insights and champion data-driven product decisions</td>
+<td>Perform ad hoc product analysis; create and maintain standardized Product metric dashboards; consult on data collection, instrumentation, and modeling</td>
+</tr>
+<tr>
+<td>Analytics Instrumentation</td>
+<td>Sam Kerr: Group Manager, Product Analytics</td>
+<td>Define and improve capabilities of product data set</td>
+<td>Build reliable and scalable tooling for product data instrumentation and collection; ensure our product data collection adheres to our <a href="/handbook/product/analytics-instrumentation-guide/service-usage-data-commitment/">commitment to user privacy</a>; empower team members to create new instrumentation, charts, and dashboards in a self-service fashion</td>
+</tr>
+<tr>
+<td>Data Team</td>
+<td>Israel Weeks: Senior Manager, Data</td>
+<td>Build and maintain product data models and infrastructure to support data analysis</td>
+<td>Create repeatable and reliable product data sets, models, related data pipelines/processes; adhere to Trusted Data standards</td>
+</tr>
+</tbody>
+</table>
+<h4 class=no_toc id=high-level-collaboration-workflow-between-the-three-teams>High level collaboration workflow between the three teams</h4>
+<ol>
+<li>A data question needs to be answered with product data, the requester <a href="https://gitlab.com/gitlab-data/product-analytics/-/issues/new?issuable_template=Ad%20Hoc%20Request">opens a Product Data Insights
+issue</a></li>
+<li>Product analyst triages issue and determines if the required data is available and accessible
+<ol>
+<li>If the required data is not currently collected (or there is an issue with the collection),
+work with Analytics Instrumentation and/or Product teams to start collecting it</li>
+<li>If the required data is collected but not exposed (ex: it is in the PREP database), work
+with the central Data team to surface and/or model the data</li>
+</ol>
+</li>
+<li>Product analyst performs the analysis, creates a dashboard, etc</li>
+<li>Product analyst determines if the analysis needs to be repeatable or there is an opportunity
+to improve data modeling
+<ol>
+<li>If applicable, work with the central Data team to create a trusted data model to enable
+future analysis</li>
+</ol>
+</li>
+</ol>
+<h2 id=helpful-resources--links>Helpful resources &amp; links</h2>
+<ol>
+<li><a href="/handbook/product/product-analysis/">Product Data Insights handbook</a></li>
+<li><a href="https://gitlab.com/gitlab-data/product-analytics">Product Data Insights project</a></li>
+<li><a href="/handbook/business-technology/data-team/data-catalog/">Data Catalog</a></li>
+<li><a href="/handbook/business-technology/data-team/programs/data-for-product-managers/">Data for product managers</a></li>
+<li><a href="/handbook/business-technology/data-team/">Data team handbook</a></li>
+<li><a href="/handbook/business-technology/data-team/functional-analytics-center-of-excellence/">Functional Analytics Center of Excellence (FACE)</a></li>
+</ol>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/product-analysis/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/product-analysis/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

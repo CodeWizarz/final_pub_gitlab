@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Deployment Management
+|
+GitLab
+</title>
+<meta content='Learn more from GitLab, The DevSecOps Platform.' name=description />
+<meta content='Learn more from GitLab, The DevSecOps Platform.' name='twitter:description'/>
+<meta content='Learn more from GitLab, The DevSecOps Platform.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Deployment Management' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/delivery/deployment_management/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/delivery/deployment_management/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Deployment Management' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/delivery/deployment_management/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Deployment Management
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/nagyv-gitlab'>
+<div class=codeowners-single>
+<img
+src='/images/team/viktornagy.jpg'
+class=codeowner-avatar-img
+alt='Viktor Nagy'
+title='Viktor Nagy'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Viktor Nagy
+</div>
+<div class=codeowners-handle>
+@nagyv-gitlab
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/delivery/deployment_management/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/delivery/">Delivery Direction</a></li><li>Category Direction - Deployment Management</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#deployment-management" id=markdown-toc-deployment-management>Deployment Management</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a></li>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and Themes</a></li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a> <ul>
+<li><a href="#integrating-flux-with-the-gitlab-agent-for-kubernetes" id=markdown-toc-integrating-flux-with-the-gitlab-agent-for-kubernetes>Integrating Flux with the GitLab agent for Kubernetes</a></li>
+<li><a href="#be-ready-to-remove-the-certificate-based-integration" id=markdown-toc-be-ready-to-remove-the-certificate-based-integration>Be ready to remove the certificate-based integration</a></li>
+<li><a href="#shipping-a-kubernetes-dashboard-integrated-into-gitlab" id=markdown-toc-shipping-a-kubernetes-dashboard-integrated-into-gitlab>Shipping a Kubernetes Dashboard integrated into GitLab</a></li>
+<li><a href="#the-gitlab-deployment-project-template-and-the-gitlab-delivery-framework" id=markdown-toc-the-gitlab-deployment-project-template-and-the-gitlab-delivery-framework>The GitLab deployment project template and the GitLab delivery framework</a> <ul>
+<li><a href="#gitlab-deployment-project" id=markdown-toc-gitlab-deployment-project>GitLab Deployment project</a></li>
+<li><a href="#gitlab-delivery-framework" id=markdown-toc-gitlab-delivery-framework>GitLab Delivery framework</a></li>
+</ul>
+</li>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is Not Planned Right Now</a></li>
+</ul>
+</li>
+<li><a href="#best-in-class-landscape" id=markdown-toc-best-in-class-landscape>Best in Class Landscape</a> <ul>
+<li><a href="#key-capabilities" id=markdown-toc-key-capabilities>Key Capabilities</a></li>
+<li><a href="#roadmap" id=markdown-toc-roadmap>Roadmap</a></li>
+<li><a href="#top-123-competitive-solutions" id=markdown-toc-top-123-competitive-solutions>Top [1/2/3] Competitive Solutions</a></li>
+</ul>
+</li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a></li>
+<li><a href="#pricing-and-packaging" id=markdown-toc-pricing-and-packaging>Pricing and Packaging</a> <ul>
+<li><a href="#free" id=markdown-toc-free>Free</a></li>
+<li><a href="#premium" id=markdown-toc-premium>Premium</a></li>
+<li><a href="#ultimate" id=markdown-toc-ultimate>Ultimate</a></li>
+</ul>
+</li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst Landscape</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=deployment-management>Deployment Management</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/delivery/">Deploy</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">viable</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2023-04-04</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+
+<p>Welcome to the direction page of the Deployment Management product category of GitLab. This page is part of the bigger <a href="/direction/delivery">Delivery direction</a>. It is owned by the Environments group and is maintained by Viktor Nagy (<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#118;&#110;&#097;&#103;&#121;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">Email</a>).</p>
+<p>Your feedback helps us building a world-class deployment management offering in GitLab. We welcome your feedback in <a href="https://gitlab.com/groups/gitlab-org/-/issues/?sort=updated_desc&amp;state=opened&amp;label_name%5B%5D=Category%3ADeployment%20Management&amp;first_page_size=20">issues</a>, <a href="https://gitlab.com/groups/gitlab-org/-/epics?state=opened&amp;page=1&amp;sort=start_date_desc&amp;label_name[]=Category:Deployment+Management">epics</a> and are always open to user interviews to learn more about your use cases or share more details about our roadmap. You can register a call with us through your GitLab account manager or customer support.</p>
+<p>–&gt;</p>
+<h3 id=overview>Overview</h3>
+
+<p>The scope of the Deployment Management category is everything related to deploying your code to its target infrastructure. It includes every possible target infrastructure from mainframes to mobiles store, serverless providers, VMs or Kubernetes.</p>
+<p>At GitLab we call the target infrastructure that a deployment targets an Environment. As Environments are a central part of <a href="/direction/delivery">Delivery</a> that include both Deployment and Release functionalities, we have a <a href="/direction/delivery/environment_management">dedicated direction to improve the environments</a> offering.</p>
+<p>Deployment management includes every aspect of deployments. Without aiming for a full list of the scope, it includes:</p>
+<ul>
+<li>cloud-native deployments,</li>
+<li>non cloud-native deployments,</li>
+<li>mobile deployments,</li>
+<li>deployments across multiple projects and groups,</li>
+<li>compliance requirements for deployments,</li>
+<li>etc.</li>
+</ul>
+<h3 id=strategy-and-themes>Strategy and Themes</h3>
+
+<p>Managing an organization's deployments is a major challenge. Particularly in larger organizations, with the proliferation of services, technologies, dependencies on one side, and compliance and security requirements on the other side, many teams find themselves struggling to deploy frequently and consistently in a repeatable manner.</p>
+<p>Platform teams want to help development teams become more efficient; so that they can meet compliance and security requirements and deploy to environments they can't (and probably shouldn't) access directly, without slowing down their ability to implement changes to their applications.</p>
+<p>We envision a fully declarative, scalable, modular, testable approach to deployment management that supports any major target infrastructure from bare metal servers to container orchestrators to edge devices and mobile app stores.</p>
+<p>Declarative operations is to the devops pipeline what serverless is to infrastructure. It shifts the responsibility of operating the underlying systems from the developer to provider, and enables the user to focus on their business instead. The provider of these functionalities is often a platform team. We want to simplify the life of a platform team by supporting them with tools and frameworks.</p>
+<p>The biggest difficulty with every automation tool is that it is code. As a result it requires developers to write it, a runtime environment to run it and a lot of investment into learning the tool chain. Compare this to the declarative nature of Kubernetes. With Kubernetes everyday developers realised that operations are complex, but operations were complex even before Kubernetes. Kubernetes, with its declarative, everything as data approach made this complexity approachable for every developer.</p>
+<p>At the same time, Kubernetes made it clear that higher-level abstractions are required for developers without compromising the core flexibility of the container orchestrator. This is a learning we want to build on and provide a framework and conventions that allow for a platform out of the box.</p>
+<p>We envision our solution to have several layers in terms of user value and complexity.</p>
+<p><img src="/direction/delivery/deployment_management/gitlab-delivery_ease-of-use.png" alt="Ease of use"/></p>
+<p>Today, we focus our efforts on the Gitlab Agent for Kubernetes. The agent provides great flexibility, but does not offer any out of the box, white-glove experiences for less experienced users. We want to add higher layers of abstractions on top of the agent.</p>
+<p>The second layer, what we call GitLab Delivery on the previous image, includes various integations, and a framework that supports platform teams to build out their own solutions, potentially replacing parts of the tool chain we integrate with. This layer should integrate well with other GitLab stages, especially around Package, Release and Secrets management.</p>
+<p>The third layer, that is closest to the current Auto Deploy offering, provides a conventions based, fully-managed solution for our users. It can be approached from two different angles. First, from the software developers' point of view, it's a black box that should "just work" and provides a full delivery process from ephemeral environments to production. Second, from the platform engineers' point of view, it's a customized version of the GitLab Delivery layer. It allows minor modifications and customizations that as long as the conventions are followed provide a GitLab supported platform.</p>
+<p><img src="/direction/delivery/deployment_management/gitlab-delivery_managed-integrations.png" alt=Complexity /></p>
+<p>As we increase the value managed by GitLab, we need to increase the complexity owned by GitLab. At the agent level, we are responsible for the core cluster connection only. To best understand the agent, one should think of it as not providing any user-level features. It is responsible for maintaining a bi-directional communication channel between a cluster and GitLab. At this level, we try avoid 3rd party integrations as much as possible to minimize our maintenance costs and build an extremely reliable foundation for higher-level features. We add various features on top of the core connection, like the Flux integration, push-based deployments, security scanning, direct access of cluster resources from the GitLab UI, etc.</p>
+<p>At the GitLab Delivery level, we need to pick at least a few tools and integrate those into our offering. The set of tools likely includes an ingress, a secrets management solution, a certificate management solution, support for advanced deployment strategies and integrations with GitLab Observability. At this level, we need to build out integrations and conventions that simplify the work of a platform engineer and can serve all our users.</p>
+<p>On top of GitLab Delivery, Auto DevOps requires even more integrations. At this stage the vision is that the end user provides us a Dockerfile or a container and we return them a URL where they can check out their application. On top of the integrations mentioned under GitLab Delivery, we would likely want to add integrations with even more specific tools, like Knative and a Service Mesh. As the Auto DevOps codifies an opinionated process, we should aim to serve 80% of our users out of the box, and allowing the remaining 20% to be served by the GitLab Delivery framework.</p>
+<p>Finally, expanding the scope of Auto Deploy to other deployment targets, mobile for example, likely requires a totally new set of integrations. At the same time, we should want to build a generic Delivery framework that works with any target infrastructure.</p>
+<h3 id=1-year-plan>1 year plan</h3>
+
+<p>Our plan for the following year includes three major directions:</p>
+<ol>
+<li>Integrating Flux with the GitLab agent for Kubernetes</li>
+<li>Be ready to remove the certificate-based integration</li>
+<li>Shipping a Kubernetes Dashboard integrated into GitLab</li>
+<li>Delivering the first version of the GitLab deployment project template and the GitLab delivery framework</li>
+</ol>
+<h4 id=integrating-flux-with-the-gitlab-agent-for-kubernetes>Integrating Flux with the GitLab agent for Kubernetes</h4>
+<p><a href="https://about.gitlab.com/blog/2023/02/08/why-did-we-choose-to-integrate-fluxcd-with-gitlab/">We decided in January 2023 to use Flux as the recommended approach for doing GitOps with GitLab</a>. While <a href="https://fluxcd.io/">Flux</a> is a mature CNCF project, we see plenty of ways to improve the user experience around it by integrating it with GitLab. Primarily, we plan to:</p>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/389393">simplify and centralize Flux to GitLab access management</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/392852">simplify setting up Flux triggers</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/405007">trigger and track Flux reconciliation from CI</a></li>
+</ul>
+<p>Besides the above concrete plans, we are researching the best approach</p>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/388460">to install and manage the agent and Flux together</a></li>
+</ul>
+<h4 id=be-ready-to-remove-the-certificate-based-integration>Be ready to remove the certificate-based integration</h4>
+<p>We compiled <a href="https://gitlab.com/gitlab-org/configure/general/-/issues/199">a list of issues</a> that block the final removal of the certificate-based cluster integration functionality, deprecated in GitLab 14.7. We plan to ship a solution to these issues to unblock the removal. If we manage to follow our plan, we would like to remove the certificate-based cluster integration in GitLab 18.0.</p>
+<p>Some users are unable to transition to the agent for Kubernetes, because their <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/350943">clusters can not access their GitLab instance</a>. With the certificate-based integration, GitLab reached out to the cluster to carry out its tasks. While the agent-based setup supports both directions to send a message, the initial connection today is set up starting from the cluster. We want to lift this requirement to unblock all our users in their journey with the agent for Kubernetes.</p>
+<p>Another important theme in this area is the replacement of <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/297004">GitLab managed clusters</a>. GitLab managed clusters allow automatic namespace and service account creation and have conventions from review/ephemeral environments to production. This functionality is not supported yet with the agent infrastructure. We are looking into approaches how to provide a similar experience.</p>
+<h4 id=shipping-a-kubernetes-dashboard-integrated-into-gitlab>Shipping a Kubernetes Dashboard integrated into GitLab</h4>
+<p>Besides providing basic cluster insights as part of the environments. We want to provide a complete <a href="https://gitlab.com/groups/gitlab-org/-/epics/2493">Kubernetes dashboard as part of GitLab</a>. This should allow users to simplify and secure their operations as engineers won't need direct access to clusters for troubleshooting.</p>
+<p>The dashboard will provide insights about all the resources available in the cluster with related events, log tailing and - when appropriate - pod terminal functionality.</p>
+<h4 id=the-gitlab-deployment-project-template-and-the-gitlab-delivery-framework>The GitLab deployment project template and the GitLab delivery framework</h4>
+<h5 id=gitlab-deployment-project>GitLab Deployment project</h5>
+<p>This theme is currently being researched and architected. We plan to provide a Deployment management project built-into GitLab.</p>
+<p>A core building block of Deployment management is a GitLab project to store the declarative deployment definitions in a structure following GitLab-defined conventions and using the GitLab agent for Kubernetes, to consume the content stored in a GitLab Deployment management project. A Deployment management project is supported by GitLab as long as it follows the GitLab conventions.</p>
+<p>A note to help understand the management project: This approach we imagine is similar to various frontend tools, like "Create React App", "Expo" (React Native). These tools provide a simplified experience out of the box for 80% of the use cases. If the user needs more flexibility, they can <a href="https://create-react-app.dev/docs/available-scripts#npm-run-eject">eject</a>. Thus, the user owns their project, but a lot of complexity remains hidden from them to support them focusing on their business problem. This is aligned with <a href="https://about.gitlab.com/handbook/product/product-principles/#convention-over-configuration">the convention over configuration product principle</a> of GitLab.</p>
+<p>The Deployment management project should describe:</p>
+<ul>
+<li>a list of environments</li>
+<li>agents for Kubernetes managing the deployments</li>
+<li>manifests, Helm charts for all the managed environments</li>
+<li>the deployment process, including how deployments might be promoted between environments</li>
+<li>notification sinks on various deployment related events</li>
+</ul>
+<p>The Deployment management project might include:</p>
+<ul>
+<li>secrets in encrypted form (e.g. with SOPS or Sealed Secrets)</li>
+<li>metrics descriptions</li>
+<li>release automation, optionally connected with metrics</li>
+</ul>
+<p>The features from this area closely related to <a href="/direction/environment_management">our Environment management direction</a>.</p>
+<h5 id=gitlab-delivery-framework>GitLab Delivery framework</h5>
+<p>This section shares our plans towards simplifying the Delivery experience for our users . This direction is currently being researched and architected. It will very likely change.</p>
+<p>The GitLab Delivery framework is an opinionated selection of tools to support platform teams in providing white-glove delivery experiences to software developers.</p>
+<table>
+<thead>
+<tr>
+<th>Ease of use</th>
+<th>Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="/direction/delivery/deployment_management/gitlab-delivery_ease-of-use.png" alt="Ease of use"/></td>
+<td><img src="/direction/delivery/deployment_management/gitlab-delivery_managed-integrations.png" alt=Complexity /></td>
+</tr>
+</tbody>
+</table>
+<p>The more user friendly GitLab makes a solution, the more complexity we become responsible for. Increasing complexity means increasing maintenance costs and higher customer value.</p>
+<p>The agent for Kubernetes is the core building block of the GitLab Delivery framework on Kubernetes. With its Flux integration, it provides a reliable, production ready tool for cluster connection and declarative deployment management of Kubernetes clusters.
+The GitLab Delivery framework extends our product offering on top of the agent for Kubernetes.</p>
+<p>The GitLab Delivery framework plans to offer a customizable selection of shared cluster tools from ingress to observability integrated across GitLab.
+We need to pick at least a few tools and integrate those into our offering. The set of tools likely includes an ingress, a secrets management solution, a certificate management solution, support for advanced deployment strategies and integrations with GitLab Observability.
+The framework should integrate well with other GitLab offering, especially around packages, secrets management and security.</p>
+<p>The GitLab Delivery framework will be integrated with the Deployment management project. The two working together should support</p>
+<ul>
+<li>a customizable framework to implement company-specific processes and policies for the platfrom engineers,</li>
+<li>fully automated and integrated delivery pipelines for the software engineering teams.</li>
+</ul>
+<h4 id=what-is-next-for-us>What is next for us</h4>
+
+<p>We are working towards <a href="https://gitlab.com/groups/gitlab-org/-/epics/11048">introducing services</a> into GitLab and the design of <a href="https://gitlab.com/gitlab-org/ci-cd/deploy-stage/environments-group/general/-/wikis/ideas/Delivery-framework-requirements">the delivery framework</a>.</p>
+<h4 id=what-we-are-currently-working-on>What we are currently working on</h4>
+
+<p>We are working on <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/389393">improving the Flux - GitLab integration</a>, making <a href="https://gitlab.com/groups/gitlab-org/-/epics/10866">Flux reconciliation to show up in a pipeline</a> and providing a <a href="https://gitlab.com/groups/gitlab-org/-/epics/11112">full-featured Kubernetes dashboard built into GitLab</a>.</p>
+<h4 id=what-we-recently-completed>What we recently completed</h4>
+
+<p>We worked mostly on the Flux and cluster UI integrations. As a result, we provide users with</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/user/clusters/agent/gitops.html">extensive guidance on using Flux with GitLab</a></li>
+<li><a href="https://docs.gitlab.com/ee/ci/environments/kubernetes_dashboard.html">cluster insights as part of GitLab environments pages including Flux reconciliation status</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/clusters/agent/gitops.html#immediate-git-repository-reconciliation">removed the need for Flux notification configuration when Flux reconciles an agent configuration project</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/clusters/agent/user_access.html#access-a-cluster-with-the-kubernetes-api">local access to their clusters with their GitLab identity</a></li>
+</ul>
+<h4 id=what-is-not-planned-right-now>What is Not Planned Right Now</h4>
+
+<p>In the deployment management scope, we don't plan to</p>
+<ul>
+<li>Improve our deployment capabilities unrelated to Kubernetes. Note that we believe some features mentioned above will be useful for other deployment targets, and we don't want to limit such usage.</li>
+<li>Improve the current advanced deployment capabilities (blue-green and canary deployments) of GitLab.</li>
+<li>Improve Kubernetes integrations features not related to deployments. Note that other teams might work on related features in their areas.</li>
+</ul>
+<p>A separate single-engineering group works on <a href="/handbook/engineering/development/incubation/mobile-devops/">mobile DevOps</a>, including deployments to mobile stores.</p>
+<h3 id=best-in-class-landscape>Best in Class Landscape</h3>
+
+<p>BIC (Best In Class) is an indicator of forecasted near-term market performance based on a combination of factors, including analyst views, market news, and feedback from the sales and product teams. It is critical that we understand where GitLab appears in the BIC landscape.</p>
+<h4 id=key-capabilities>Key Capabilities</h4>
+
+<p>A BIC deployment management solution should provide a fully declarative, scalable, modular, testable approach to deployment management with an easy to understand GUI that describes the current status of a deployment process.</p>
+<h4 id=roadmap>Roadmap</h4>
+
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10866">External CI jobs</a> to improve pipeline integration with any 3rd party tool, including Flux</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/389393">Simplify Flux token management</a></li>
+<li><a href="https://gitlab.com/gitlab-org/configure/general/-/issues/199">Remove the cert-based integration</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11112">Ship a dashboard for Kubernetes</a></li>
+<li><a href="https://gitlab.com/gitlab-org/ci-cd/deploy-stage/environments-group/general/-/wikis/ideas/Delivery-framework-requirements">Ship the deliver framework</a></li>
+</ul>
+<h4 id=top-123-competitive-solutions>Top [1/2/3] Competitive Solutions</h4>
+
+<ol>
+<li><a href="https://argoproj.github.io/">Argo project with Argo Rollouts</a></li>
+<li><a href="https://harness.io/">Harness</a></li>
+<li><a href="https://spinnaker.io/">Spinnaker</a></li>
+</ol>
+<h3 id=target-audience>Target Audience</h3>
+
+<p>The primary persona is <a href="/handbook/product/personas/#priyanka-platform-engineer">the Platform Engineer</a>. Their job is to support all the development teams with standardised and compliant pipelines.</p>
+<p>The secondary personas are <a href="/handbook/product/personas/#allison-application-ops">the Application Operator</a> and <a href="/handbook/product/personas/#cameron-compliance-manager">the Compliance Manager</a>. The Application Operator is responsible for deploying and operating the business applications, while the compliance manager assures that all the processes follow internal policies.</p>
+<p>Deployments don't live in a vacuum, but are part of a companies delivery process. They are preceded and followed by CI jobs, are surrounded by security checks and guardrails, are integrated with monitoring and work in coordination with release management. We created <a href="https://app.mural.co/t/gitlab2474/m/gitlab2474/1642001078399/2dfb4a6a7307e42f2a2e42f0e10f49dc83bdfbae?wid=0-1647471145120">a user story map</a> to highlight and discuss these cross-stage and intra-group jobs and integration requirements.</p>
+<h3 id=pricing-and-packaging>Pricing and Packaging</h3>
+
+<p>This section establishes the pricing alignment scaffolding for this category based on GitLab's <a href="https://about.gitlab.com/company/pricing/#buyer-based-tiering-clarification">buyer-based tiering</a>.</p>
+<h5 id=free>Free</h5>
+<p>Managing deployments using existing CI/CD features, such as using <code>include</code> will continue to be free. For a large number of GitLab users, from individual developers to small companies, this is sufficient.</p>
+<p>Most GitOps and agent for Kubernetes features are available under Free as long as using the agent's in-cluster Service Account is used.</p>
+<h5 id=premium>Premium</h5>
+<p>Features that require special permissions will fall under the Premium tier. This includes deployment approvals or cluster access impersonating a GitLab user's identity.</p>
+<p>Features targeting a dedicated platform team fall under the Premium tier. While platform engineers are individual contributors, they do not contribute directly to the business. Their contribution is indirect, through increased developer productivity, security and reliability. Thus a platform teams assumes a non-IC decision maker who expects a level of standardization across several teams.</p>
+<h5 id=ultimate>Ultimate</h5>
+<p>Helping organizations with a standards-based and compliant deployment pipeline is critically important that gets the attention of CIOs. Dashboards that summarize compliance and empower leaders with a birds-eye-view of their entire organization's change management solves a fundamental problem for GitLab's largest customers.</p>
+<p>Security guardrails and policy attestation support and reporting fall under this category.</p>
+<p>Strong collaboration requirements with partially locked release artifacts fall under the Ultimate tier.</p>
+<h3 id=analyst-landscape>Analyst Landscape</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/1FljgIPROwmt47e2ziG4_Qw3rXwyGKb0E/view">Gartner: Innovation Insight for Continuous Infrastructure Automation</a> (internal)</li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/delivery/deployment_management/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/delivery/deployment_management/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

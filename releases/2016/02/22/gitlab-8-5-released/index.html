@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab's fastest release ever: 8.5, with Todos and Geo
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab&#39;s fastest release ever: 8.5, with Todos and Geo for GitLab Community Edition (CE) and Enterprise Edition (EE)' name=description />
+<meta content='Learn more about GitLab&#39;s fastest release ever: 8.5, with Todos and Geo for GitLab Community Edition (CE) and Enterprise Edition (EE)' name='twitter:description'/>
+<meta content='Learn more about GitLab&#39;s fastest release ever: 8.5, with Todos and Geo for GitLab Community Edition (CE) and Enterprise Edition (EE)' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab&#39;s fastest release ever: 8.5, with Todos and Geo' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2016-02-22-gitlab-8-5-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2016/02/22/gitlab-8-5-released/' property='og:url'/>
+<meta content=2016-02-22 property='article:published_time'/>
+<meta content='https://about.gitlab.com/about' property='article:author'/>
+<meta content="https://about.gitlab.com/images/8_5/header.jpg" property="og:image">
+<meta content="https://about.gitlab.com/images/8_5/header.jpg" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab&#39;s fastest release ever: 8.5, with Todos and Geo' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2016/02/22/gitlab-8-5-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Feb 22, 2016
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#Jobvo">Job van der Voort</a>
+<a href="https://twitter.com/Jobvo"><span>&nbsp;</span>
+<span class=author-twitter>
+<i class='fab fa-twitter'></i>
+</span>
+</a></span>
+<h1>
+GitLab's fastest release ever: 8.5, with Todos and Geo
+</h1>
+<p class=description>
+Learn more about GitLab's fastest release ever: 8.5, with Todos and Geo for GitLab Community Edition (CE) and Enterprise Edition (EE)
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/8_5/header.jpg);'></div>
+<div class=content>
+<p>If there is one GitLab release that you'll want to upgrade to as soon as
+possible, it's this one.</p>
+<p>GitLab 8.5 is faster. <em>A lot faster</em>. Not only have we increased performance
+for everyone, getting to what is important is now super quick with Todos (yes,
+<em>all</em> important things for those of you that speak Spanish or Portuguese).</p>
+<p>With GitLab 8.5 Enterprise Edition, we're also introducing the alpha of
+GitLab Geo, which allows you to have a remote replicate of your entire
+GitLab instance.</p>
+<p>Once again, we received some amazing contributions this release.
+One of these is the support for <a href="http://doc.gitlab.com/omnibus/settings/configuration.html#configuring-a-relative-url-for-gitlab">relative URLs in Omnibus installations</a>,
+which was one of the many contributions we received from Artem Sidorenko.</p>
+<p>Thanks Artem Sidorenko and congratulations on being
+<a href="/community/mvp/">this month's MVP</a>!</p>
+<h2 id=performance-for-scale>Performance for Scale</h2>
+<p>At GitLab, making sure everything runs smoothly with thousands of projects
+has always been a priority. But with GitLab 8.5, we've raised the bar for
+ourselves.</p>
+<p>Average mean performance is up at least 1.4 times, up to 1.6 times for 99th
+percentile response times. For slower pages, the response time has been improved
+way beyond this.</p>
+<p>For instance, displaying individual issues is now up to 3.5 times faster
+for very large issues. The graph below shows you the slowest 95th percentile
+response times for loading issues on GitLab.com before and after we deployed
+the first release candidate of 8.5:</p>
+<p><img src="/images/8_5/issue_timings.png" alt="Response times for single issues in GitLab 8.5"/></p>
+<p>And here's a graph showing the overall response timings (per 30 minutes) from
+10 to 12 February. The vertical arrow indicates the 8.5.0 RC1 deploy on
+GitLab.com.</p>
+<p><img src="/images/8_5/gitlab_timings.png" alt="Overall Response times in GitLab 8.5"/></p>
+<p>There are many performance improvements that you will notice with 8.5.
+Especially if you're running a very large server, this release will make
+all your users happy.</p>
+<p>Some notable performance notes are:</p>
+<ul>
+<li>Broadcast messages are cached, reducing the impact they have on page loading
+times <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/2633">!2633</a></li>
+<li>Performance of <code>Repository#empty?</code> and <code>Repository#has_visible_content?</code> has
+been improved and their output is cached, reducing project specific page
+(issues, project dashboard, etc) loading times by about 3 to 3.5 times. This
+was changed in <a href="https://gitlab.com/gitlab-org/gitlab_git/merge_requests/62">gitlab_git!62</a>
+followed by <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/2752">!2752</a></li>
+<li>Caches for branch commit ahead/behind statistics are only flushed when needed.
+For example, when pushing to a non default branch only the statistics for
+said branch are flushed, whereas previously the statistics for all branches
+would be flushed. This was changed in <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/2769">!2769</a></li>
+<li>Performance of retrieving the issues that should be closed by a merge request
+has been improved in <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/2625">!2625</a></li>
+<li>Performance of Atom feeds has been greatly improved in
+<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/2613">!2613</a>,
+leading to a reduction of up to roughly 10 seconds per page load
+(depending on the amount of events involved)</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/2859">!2859</a> changes
+the way the Git <code>core.autocrlf</code> option is set. Previously this would be
+written (regardless of whether it was already set) on every request. As of
+now, this is only set by the web editor/API before creating/updating files
+(as this is the only case where it's actually needed).</li>
+<li>'Raw' file contents from Git repositories are served by gitlab-workhorse now,
+which prevents timeouts.</li>
+<li>GitLab no longer loads large Git blobs (e.g. binary files) into memory when
+browsing a Git repository. This prevents timeouts and memory leaks.</li>
+</ul>
+<h2 id=todos>Todos</h2>
+<p>GitLab is where you do your work, so being able to get started quickly is
+very important. Therefore, we're now introducing Todos.</p>
+<p>Todos is a chronological list of to-dos that are waiting for your input.
+Whenever you're assigned to an issue or merge request
+or have someone mention you, a new to-do is created automatically.</p>
+<p>Then when you've made a change, like replying to a comment or updating an issue,
+the to-do is automatically set to <strong>Done</strong>. You can also manually mark to-dos
+as done.</p>
+<p><img src="/images/8_5/todos.png" alt="Todos in GitLab 8.5"/></p>
+<p>Todos has been designed to be as actionable as possible, so that you can focus
+on what is important. Having a personal space to work from has been a long-time
+request and we're looking forward to your feedback after having given it a go.</p>
+<h2 id=gitlab-geo-alpha-ee>GitLab Geo Alpha (EE)</h2>
+<p>If you have two or more teams geographically spread out,
+but your GitLab instance is in a single location,
+fetching large repositories can take a long time.</p>
+<p>With GitLab Geo, you can have a secondary GitLab instance that mirrors your
+main GitLab instance. Your Geo instance can be used for cloning and fetching
+projects, in addition to reading any data. This will make working with large
+repositories over large distances much faster.</p>
+<p><img src="/images/8_5/geo.png" alt="GitLab Geo available as Alpha in GitLab 8.5 EE"/></p>
+<p>With GitLab 8.5, we're offering GitLab Geo as an Alpha to all our Enterprise
+Edition customers. Once GitLab Geo has left Alpha / Beta state, a special
+license will be required to use it.</p>
+<h2 id=gitlab-pages-now-support-custom-domains-and-custom-tls-certificates-ee>GitLab Pages now support custom domains and custom TLS certificates (EE)</h2>
+<p>GitLab Pages was first introduced in GitLab EE 8.3, giving you the ability to
+host your own static website in GitLab under a separate domain name.
+<a href="https://dzaporozhets.gitlab.io/">Dmitriy's blog</a> is hosted with it,
+for example!</p>
+<p>With GitLab 8.5 EE we're adding support for custom domains and TLS certificates.
+You can even point multiple domains to GitLab and easily upload your own TLS
+certificates.</p>
+<p>To make it easier to set this all up, GitLab Pages now has its own
+settings page in your projects at <strong>Settings &gt; Pages</strong>.</p>
+<p><img src="/images/8_5/pages_new_area.png" alt="Pages new area"/></p>
+<p>You can add custom domains and certificates if this
+functionality is enabled by your GitLab administrator:</p>
+<p><img src="/images/8_5/pages_domain_list.png" alt="Pages domain list"/></p>
+<p>The new functionality of GitLab Pages was made possible with the help of a new
+HTTP server written in Go. We call
+it the <a href="https://gitlab.com/gitlab-org/gitlab-pages">GitLab Pages daemon</a> and it supports dynamic certificates
+through SNI and exposes pages using HTTP2 by default.</p>
+<p>The upgrade path from GitLab 8.3 to 8.5 has changed quite a bit and we added
+new comprehensive documentation how GitLab Pages work and the multiple ways to
+set them up.</p>
+<p>For GitLab.com users: Pages with CNAME and TLS support are fully live and
+ready to use!</p>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ee/pages/README.html">Learn how to set up your own page in our Gitlab Pages user documentation</a></p>
+</blockquote>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ee/pages/administration.html">GitLab Pages administration documentation</a></p>
+</blockquote>
+<h2 id=revert-any-commit>Revert any Commit</h2>
+<p>If your motto is "Move fast and break things", you must be familiar with the
+usage of <code>git revert</code>. In GitLab it's now much easier to use revert:
+just press the button on any commit to create a merge request that reverts
+it:</p>
+<p><img src="/images/8_5/revert.png" alt="Revert any commit in GitLab 8.5"/></p>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ce/workflow/revert_changes.html">Read about reverting changes in our documentation</a></p>
+</blockquote>
+<h2 id=updated-issue-sidebar>Updated Issue Sidebar</h2>
+<p>We created the issue sidebar so we could free up the most important content
+from other interface elements. With GitLab 8.5 we're doing this in a
+smarter, prettier, and more accessible way:</p>
+<p><img src="/images/8_5/sidebar1.png" alt="Updated Issue Sidebar in GitLab 8.5"/></p>
+<p>To focus on your content, fold it in:</p>
+<p><img src="/images/8_5/sidebar2.png" alt="Updated Issue Sidebar in its folded state in GitLab 8.5"/></p>
+<p>Besides the sidebar, we've updated many things, big and small, in the interface.
+Expect more improvements over the coming releases.</p>
+<h2 id=labels-in-milestone-view>Labels in Milestone View</h2>
+<p>We want to make GitLab the best place to manage your projects,
+whether they are
+<a href="/blog/2016/01/15/making-gitlab-better-for-large-open-source-projects/">open source</a> or not.</p>
+<p>To get a better overview of a milestone, we're now showing labels in the
+milestone view:</p>
+<p><img src="/images/8_5/milestone.png" alt="See labels in Milestones in GitLab 8.5"/></p>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ee/workflow/milestones.html">Read about milestones in our documentation</a></p>
+</blockquote>
+<h2 id=render-svgs-in-diffs>Render SVGs in Diffs</h2>
+<p>As big fans of SVGs ourselves, we made it possible to view rendered SVGs
+in diffs:</p>
+<p><img src="/images/8_5/svg.png" alt="Rendered SVG in GitLab 8.5"/></p>
+<h2 id=markdown-in-broadcast-messages>Markdown in Broadcast messages</h2>
+<p>When broadcasting important messages to all users on your instance,
+it can be useful to include formatting or links. That's possible now
+with Markdown support for broadcast messages.</p>
+<p><img src="/images/8_5/broadcast_md.gif" alt="Broadcast messages with markdown in GitLab 8.5"/></p>
+<h2 id=highlighted-file-renames>Highlighted File Renames</h2>
+<p>Small changes can be great too!
+We now highlight file renames in diffs:</p>
+<p><img src="/images/8_5/filenames.png" alt="See differences on file renames in Gitlab 8.5"/></p>
+<h2 id=sort-by-votes>Sort by Votes</h2>
+<p>You can now easily sort issues by votes!
+This should make it easier to find popular or important issues.</p>
+<p><img src="/images/8_5/votes.png" alt="Sort by votes in GitLab 8.5"/></p>
+<h2 id=erase-build-content-in-ci>Erase Build Content in CI</h2>
+<p>Accidentally exposed some information in your build logs or in a
+faulty build artifact in CI? You can now delete artifacts
+and build traces from CI.</p>
+<p><img src="/images/8_5/erase_builds.png" alt="Erase builds in GitLab 8.5"/></p>
+<h2 id=new-ci-features-in-api>New CI features in API</h2>
+<p>Every month we strive to expose more and more CI features to our API. With
+GitLab 8.5 here's what's new:</p>
+<ul>
+<li><a href="http://doc.gitlab.com/ce/api/runners.html">runners</a> - enable, disable, edit
+and see the details of a runner</li>
+<li><a href="http://doc.gitlab.com/ce/api/builds.html#get-build-artifacts">builds artifacts</a> -
+download the artifacts</li>
+</ul>
+<hr/>
+<h2 id=other-changes>Other changes</h2>
+<p>This release has more improvements, including security fixes. Please check out <a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CHANGELOG.md">the Changelog</a> to see all the named changes.</p>
+<h3 id=updates-in-the-omnibus-gitlab-package>Updates in the omnibus-gitlab package</h3>
+<p>As GitLab gets improved every release, so does the omnibus-gitlab package.
+You can see the changes that package receives for every release in the
+<a href="https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/CHANGELOG.md">omnibus-gitlab CHANGELOG</a>.</p>
+<p>In this release there are some major changes in the bundled software:</p>
+<ul>
+<li>Nginx is updated from version 1.7.12 to 1.9.10</li>
+<li>Nginx spdy protocol was replaced with http2</li>
+<li>OpenSSL is updated from version 1.0.1r to 1.0.2f</li>
+</ul>
+<h3 id=mattermost-20>Mattermost 2.0</h3>
+<p><a href="http://www.mattermost.org/open-source-localizable-slack-alternative-mattermost-2-0/">Mattermost 2.0</a>
+ships with GitLab 8.5 and includes localization support,
+Spanish-language translation, and API support for GitLab single-sign-on in iOS
+and Android apps.</p>
+<p>Mattermost can now also skip 1 major build version. This means GitLab Mattermost
+upgrades from GitLab 8.3 to 8.5 without needing to upgrade to 8.4.
+The new 2.0 iOS app for Mattermost with GitLab SSO requires Mattermost server
+2.0 and higher due to a breaking change in mobile API incompatible with
+Mattermost 1.x.</p>
+<hr/>
+<h2 id=upgrade-barometer>Upgrade barometer</h2>
+<p>A migration affecting projects having a path ending in '.atom' has been added,
+as they are no longer supported. This migration updates both the database and
+the filesystem and previous versions of this migration have proven to be fragile.</p>
+<p>If you have no projects with paths ending in '.atom' in your database (most likely, you don't)
+you can perform this upgrade online. If you do have them, we recommend to take downtime.
+You can find the current number of affected database records with the following command:</p>
+<div class=highlight><pre class="highlight plaintext"><code>sudo gitlab-rails runner "puts Project.where(%q{path LIKE '%.atom'}).count"
+</code></pre></div>
+<p><em>Note</em> If you are upgrading from a GitLab version prior to 8.0 <em>and</em> you have CI enabled, you have to upgrade to GitLab 8.0 <a href="/releases/2015/09/22/gitlab-8-0-released/">first</a>.</p>
+<p>Please be aware that by default the Omnibus packages will stop, run migrations,
+and start again, no matter how “big” or “small” the upgrade is. This behavior
+can be changed by adding a <a href="http://doc.gitlab.com/omnibus/update/README.html"><code>/etc/gitlab/skip-auto-migrations</code>
+file</a>.</p>
+<p><em>Note to early adopters: the 8.5.0 release candidates recommended using Ruby 2.2
+but we have found
+<a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/13514">some issues</a>.
+We recommend everybody to keep using Ruby 2.1 for now.</em></p>
+<hr/>
+<h2 id=installation>Installation</h2>
+<p>If you are setting up a new GitLab installation please see the
+<a href="/install/">download GitLab page</a>.</p>
+<h2 id=updating>Updating</h2>
+<p>Check out our <a href="/update/">update page</a>.</p>
+<h2 id=enterprise-edition>Enterprise Edition</h2>
+<p>The mentioned EE only features and things like LDAP group support can be found in GitLab Enterprise Edition.
+For a complete overview please have a look at the <a href="/features/#enterprise">feature list of GitLab EE</a>.</p>
+<p>Access to GitLab Enterprise Edition is included with a
+<a href="/pricing/">subscription</a>.
+No time to upgrade GitLab yourself?
+A subscription also entitles you to our upgrade and installation services.</p>
+<hr/>
+<h2 id=join-us-for-a-live-demo-and-qa>Join us for a live demo and Q+A</h2>
+<p><a href="http://page.gitlab.com/Feb252016Webcast_LandingPage.html">Sign up to our webcast</a>.
+<a href="https://twitter.com/Jobvo/">Job</a> will give a live walkthrough for GitLab 8.5
+and he'll talk about GitLab Flow.
+It's on Thursday, February 25th, 5pm (17:00) UTC; 12pm EST; 9am PST.
+Can't make that time?
+<a href="http://page.gitlab.com/Feb252016Webcast_LandingPage.html">Register</a> anyway,
+and we'll send you the recording.</p>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab%27s+fastest+release+ever%3A+8.5%2C+with+Todos+and+Geo+via+%40Jobvo&amp;url=https://about.gitlab.com/releases/2016/02/22/gitlab-8-5-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab's fastest release ever: 8.5, with Todos and Geo
+via @Jobvo
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2016/02/22/gitlab-8-5-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2016/02/22/gitlab-8-5-released/&amp;text=GitLab&#39;s fastest release ever: 8.5, with Todos and Geo' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2016/02/22/gitlab-8-5-released/&amp;title=GitLab&#39;s fastest release ever: 8.5, with Todos and Geo&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2016/02/22/gitlab-8-5-released/&amp;t=GitLab&#39;s fastest release ever: 8.5, with Todos and Geo' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2016/02/10/gitlab-8-dot-4-dot-4-released/" title="GitLab 8.4.4 Released"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.4.4 Released
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2016/02/24/gitlab-8-dot-5-dot-1-released/" title="GitLab 8.5.1 Released"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.5.1 Released
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2016-02-22-gitlab-8-5-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2016-02-22-gitlab-8-5-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

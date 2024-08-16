@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Direction - Analytics Instrumentation
+|
+GitLab
+</title>
+<meta content='Analytics Instrumentation manages a variety of technologies that are important for GitLab&#39;s understanding of how our users use our products. Learn more here!' name=description />
+<meta content='Analytics Instrumentation manages a variety of technologies that are important for GitLab&#39;s understanding of how our users use our products. Learn more here!' name='twitter:description'/>
+<meta content='Analytics Instrumentation manages a variety of technologies that are important for GitLab&#39;s understanding of how our users use our products. Learn more here!' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Direction - Analytics Instrumentation' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/monitor/analytics-instrumentation/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/monitor/analytics-instrumentation/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Direction - Analytics Instrumentation' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/monitor/analytics-instrumentation/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Direction - Analytics Instrumentation
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/justinfarris'>
+<img
+src='/images/team/justinfarris.jpg'
+class=codeowner-avatar-img
+alt='Justin Farris'
+title='Justin Farris'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/stkerr'>
+<img
+src='/images/team/samkerr.jpeg'
+class=codeowner-avatar-img
+alt='Sam Kerr'
+title='Sam Kerr'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/tjayaramaraju'>
+<img
+src='/images/team/tjayaramaraju.png'
+class=codeowner-avatar-img
+alt='Tanuja Jayarama Raju'
+title='Tanuja Jayarama Raju'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/monitor/analytics-instrumentation/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/monitor/">Stage Direction - Monitor</a></li><li>Product Direction - Analytics Instrumentation</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 class=no_toc id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#vision" id=markdown-toc-vision>Vision</a></li>
+<li><a href="#guiding-principles" id=markdown-toc-guiding-principles>Guiding Principles</a> <ul>
+<li><a href="#our-opinion-on-automated-tracking" id=markdown-toc-our-opinion-on-automated-tracking>Our opinion on automated tracking</a></li>
+</ul>
+</li>
+<li><a href="#personas-that-we-work-with" id=markdown-toc-personas-that-we-work-with>Personas that we work with</a> <ul>
+<li><a href="#product-groups-within-gitlab" id=markdown-toc-product-groups-within-gitlab>Product groups within GitLab</a> <ul>
+<li><a href="#product-manager-personas" id=markdown-toc-product-manager-personas>Product Manager personas</a></li>
+<li><a href="#engineer-personas" id=markdown-toc-engineer-personas>Engineer personas</a></li>
+</ul>
+</li>
+<li><a href="#gitlab-data-program" id=markdown-toc-gitlab-data-program>GitLab Data program</a></li>
+<li><a href="#customer-success" id=markdown-toc-customer-success>Customer success</a></li>
+<li><a href="#external-gitlab-users" id=markdown-toc-external-gitlab-users>External GitLab users</a></li>
+</ul>
+</li>
+<li><a href="#challenges-we-face-in-analytics-instrumentation" id=markdown-toc-challenges-we-face-in-analytics-instrumentation>Challenges we face in Analytics Instrumentation</a></li>
+<li><a href="#short-term-roadmap-as-of-2024-07-09" id=markdown-toc-short-term-roadmap-as-of-2024-07-09>Short-term roadmap (As of 2024-07-09)</a> <ul>
+<li><a href="#scaling-the-instrumentation-system-to-cater-to-new-use-cases" id=markdown-toc-scaling-the-instrumentation-system-to-cater-to-new-use-cases>Scaling the instrumentation system to cater to new use cases</a></li>
+<li><a href="#improving-feature-instrumentation-coverage-across-teams" id=markdown-toc-improving-feature-instrumentation-coverage-across-teams>Improving feature instrumentation coverage across teams</a></li>
+<li><a href="#improve-ease-of-use-and-efficiency-of-internal-events" id=markdown-toc-improve-ease-of-use-and-efficiency-of-internal-events>Improve ease of use and efficiency of internal events</a></li>
+<li><a href="#support-product-analytics" id=markdown-toc-support-product-analytics>Support Product Analytics</a></li>
+<li><a href="#revamp-product-usage-data-architecture" id=markdown-toc-revamp-product-usage-data-architecture>Revamp product usage data architecture</a></li>
+<li><a href="#resolve-service-ping-errors" id=markdown-toc-resolve-service-ping-errors>Resolve service ping errors</a></li>
+<li><a href="#supporting-the-needs-of-the-business" id=markdown-toc-supporting-the-needs-of-the-business>Supporting the needs of the business</a></li>
+</ul>
+</li>
+<li><a href="#mid-term-roadmap" id=markdown-toc-mid-term-roadmap>Mid-term roadmap</a> <ul>
+<li><a href="#cross-stage-data-vision" id=markdown-toc-cross-stage-data-vision>Cross stage data vision</a></li>
+<li><a href="#enable-and-simplify-customer-access-to-gitlab-analytics-data" id=markdown-toc-enable-and-simplify-customer-access-to-gitlab-analytics-data>Enable and simplify customer access to GitLab analytics data</a></li>
+</ul>
+</li>
+<li><a href="#how-we-work" id=markdown-toc-how-we-work>How We Work</a></li>
+<li><a href="#working-groups-and-cross-functional-initiatives" id=markdown-toc-working-groups-and-cross-functional-initiatives>Working Groups and Cross-Functional Initiatives</a></li>
+<li><a href="#quick-links" id=markdown-toc-quick-links>Quick Links</a></li>
+</ul>
+<h2 id=vision>Vision</h2>
+<p>As part of our overall <a href="https://about.gitlab.com/company/strategy/#three-year-strategy">3 year Strategy</a>, GitLab is focused on <a href="https://about.gitlab.com/company/strategy/#1-customer-results">customer results</a>. In order to empower our customers to achieve their goals and to enable GitLab to ship a world class DevOps product, we must provide the necessary instrumentation interfaces so teams can identify opportunities, mitigate risks, and make the right decisions. This helps our users and us achieve our goals by enabling us to make data-driven decisions.</p>
+<p>To accomplish this, we aim to leverage our deep expertise, tied with investments in a strong technical foundation, to enable our users and all teams within GitLab to instrument their applications so that they can then analyze and report on the data those applications create. Like many top SaaS software companies, we are moving to be a product-led and data-driven organization. Through a partnership with our Data Team and collaboration with Product and Engineering we are cultivating a strong data focused culture within GitLab and for our users.</p>
+<p>In addition to using data to drive decisions within GitLab, ensuring customer results means we will provide the platform and tools for them to gather data about their own apps. This means they can also make data-driven decisions to improve their products and achieve their business goals.</p>
+<h2 id=guiding-principles>Guiding Principles</h2>
+<p>The key thesis of our group is that providing more visibility into how GitLab is used allows us to make better decisions which lead to better business outcomes for ourselves and our users. In order to build the best DevOps product we can and provide the most value for our customers, we need to collect and analyze usage data across the entire platform to investigate trends, patterns, and opportunities. Insights generated from our Analytics Instrumentation program enable GitLab to identify the best place to invest time and resources, which categories to push to maturity faster, where our UI experience can be improved, and how product changes effect the business.</p>
+<p>We understand that usage tracking is a sensitive subject, and we respect and acknowledge our customers' concerns around what we track, how we track it, and what we use it for. We will always be transparent about what we track and how we track it. In line with our company's value of <a href="https://about.gitlab.com/handbook/values/#transparency">transparency</a>, and our <a href="https://about.gitlab.com/handbook/product/analytics-instrumentation-guide/service-usage-data-commitment/">commitment to individual user privacy</a>, our tracking source code and documentation will always be public.</p>
+<p>As we build solutions for GitLab and our users to instrument their apps, aspects we will focus on are:</p>
+<ul>
+<li>Usability: We will ensure that it is straightforward to add instrumentation to relevant parts of the app across a wide range of use cases. If it is hard to add instrumentation, users will give up and not do it.</li>
+<li>Scalability: We will ensure the systems we build and provide are robust and suitable for production-grade loads. If users cannot trust the systems we provide to be usable and reliable, they will look for alternatives.</li>
+<li>Manageability: We will ensure that it is possible to easily understand what parts of the app are instrumented and what sort of data will be produced. If it is not clear what is already instrumented, people may not be aware of what their current data options are, re-implement the same event multiple times, or remove an event that someone else is using.</li>
+<li>Adaptability: GitLab's code base is ever evolving. Instrumentation code needs to adapt to changes in where or how a feature is triggered, to keep resulting events consistent as well as not get into the way of feature changes.</li>
+</ul>
+<h3 id=our-opinion-on-automated-tracking>Our opinion on automated tracking</h3>
+<p>It is a valid question to ask why analytics instrumentation can not be automated to a high extent by automatically tracking API hits based on the URL or button clicks in the UI.
+While this would be the most usable solution, as it does not require any manual instrumentation, it is neither scalable nor manageable or adaptable:</p>
+<ul>
+<li>It would multiply the amount of events we receive, which would affect the effort needed for event processing. Querying the useful events will become slower and/or more costly due to the high amount of unneeded events. This can impact the reliability of the system as well.</li>
+<li>It increases the likelihood of personal data unintentionally leaking into event collection as API request parameters or button texts are collected.</li>
+<li>It is not clear which events are useful and which are not since there is no intent behind tracking a specific event. The same user interaction could be tracked through multiple automated events, like a UI click or an API hit.</li>
+<li>It does not obviate the need for instrumentation, since not all events can be automatically tracked, such as the results of an asynchronous computation.</li>
+<li>It creates a dependency between feature code and analytics code since automatic tracking by definition depends on implementation details such as the URI of an API call or the CSS selector of a button. This can lead to a resistance to feature changes since they could break tracking. Analytics instrumentation aims to benefit future feature development not hinder it.</li>
+</ul>
+<p>Instrumentation should be easy as possible while still clearly documenting the intent to track a specific behavior and getting out of the way of feature changes.</p>
+<h2 id=personas-that-we-work-with>Personas that we work with</h2>
+<p>A key aspect of aligning on our direction is understanding who we are building for. This allows us to best understand the problems they may have and the context that they will be approaching our offerings with.</p>
+<h3 id=product-groups-within-gitlab>Product groups within GitLab</h3>
+<p>Product <a href="https://about.gitlab.com/handbook/product/categories/">groups</a> within GitLab consist of a Product Manager, Engineering Manager, engineers, and other stable counterparts. These groups implement new features in GitLab and want to understand how users interact with those features.
+These teams have understanding of how the GitLab code base works as it relates to their features, but not necessarily how the instrumentation APIs and architecture work. They are not necessarily aware of the end-to-end story about how information flows from when a user clicks a button to a result being shown in Sisense or a report.</p>
+<p>These product groups are our primary customer that we are serving and developing solutions for.</p>
+<h4 id=product-manager-personas>Product Manager personas</h4>
+<p>Consider reading more about <a href="https://about.gitlab.com/handbook/product/personas/#parker-product-manager">Parker</a>, our Product Manager persona.</p>
+<p>Product Managers within these groups will have an understanding of how their group's features work from a user perspective, the problem those features solve, and what sorts of actions result in a user "succeeding" at the <a href="https://about.gitlab.com/handbook/product/ux/jobs-to-be-done/">job to be done</a>, and have growth and usage goals for that feature. They will be able to describe a user journey and key points that should be instrumented along that journey to measure success or need for improvement. They will not necessarily understand what the underlying code for the feature looks like or how all the technology pieces fit together. They need to be able to easily understand which kinds of tracking are available and how they are differentiated to be able to understand the resulting data.
+If they find it difficult to add the instrumentation they want, they will instead rely solely on qualitiative analysis, such as direct user conversations, rather than a blend of both qualititative and quantitative analysis.</p>
+<h4 id=engineer-personas>Engineer personas</h4>
+<p>Consider reading more about <a href="https://about.gitlab.com/handbook/product/personas/#sasha-software-developer">Sasha</a>, our Software Developer persona.</p>
+<p>Engineers within these groups will have an understanding of how GitLab is built and run but likely are not familiar with the product instrumentation architecture nor APIs. They heavily rely on documentation, examples, and previous MRs to add instrumentation that their PM requests. When they are unable to self-serve, they will ask the Analytics Instrumentation group for help or give up.</p>
+<p>This persona relies on what we provide to them, which means it is critical for us to keep examples up to date and have clear guidance around deprecated APIs so that engineers use our newer, preferred APIs instead of older ones.</p>
+<h3 id=gitlab-data-program>GitLab Data program</h3>
+<p>The GitLab <a href="https://about.gitlab.com/handbook/business-technology/data-team/#data-program-teams">data program</a> is responsible for surfacing data and data-driven insights to the business. They have expertise in building data pipelines, models, and managing data once collected.
+They are not necessarily familiar with the GitLab code base and rely on product groups to add instrumentation for new metrics or update existing ones.
+They rely on Analytics Instrumentation to effectively collect and send data to Snowflake, which is their main interface with the data.</p>
+<h3 id=customer-success>Customer success</h3>
+<h3 id=external-gitlab-users>External GitLab users</h3>
+<p>External GitLab users are a broad category of individuals with different needs and who have different skill sets. These users may be interested in reading about what data we collect and how to interact with it. In the future, external users will use the application instrumentation SDKs our group provides to be able to instrument their own apps.</p>
+<p>External users rely on our handbook pages and sites like <a href="https://metrics.gitlab.com/">metrics.gitlab.com</a> to understand what data is collected from their GitLab use, how to view it, and how to interact with it. If they are unable to get clear answers to their questions, they become frustrated. In that case, they may reach out to their account manager to help them, post on a forum, or stop using GitLab.</p>
+<p>External users will use the application instrumentation SDKs we provide to instrument their apps. These teams will be similar to our own product groups within GitLab. That is, PMs will understand user journeys about their features, developers will understand how their own app is built, but neither will be familiar with our instrumentation SDKs. They will rely heavily on our documentation and examples or else they will give up and do something else.</p>
+<h2 id=challenges-we-face-in-analytics-instrumentation>Challenges we face in Analytics Instrumentation</h2>
+<ul>
+<li>GitLab's <a href="/handbook/product/single-application/">single application approach to DevOps</a> creates a product that is both wide and deep, encompassing a large collection of features used by many teams within an organization, which are composed of different types of users.</li>
+<li>That depth/breadth makes it exceedingly complex to properly map out and understand how our diverse customer set is using the product and gaining value.</li>
+<li>We currently are unable to provide GitLab the required data to identify opportunities and make the right decisions against them.</li>
+<li>GitLab's MVC approach to product development introduces frequent changes to the product stages and what data is available, making historical trend analysis difficult.</li>
+<li>There are more and more supplementary applications outside of the GitLab instance, such as the <a href="https://gitlab.com/gitlab-org/modelops/applied-ml/code-suggestions/ai-assist">AI gateway</a>, that need their own instrumentation setup to get a full picture of product usage.</li>
+</ul>
+<h2 id=short-term-roadmap-as-of-2024-07-09>Short-term roadmap (As of 2024-07-09)</h2>
+<p>The roadmap for the group includes multiple initiatives that also tie-in to the stage <a href="https://about.gitlab.com/direction/analytics/#1-year-plan">roadmap</a>.</p>
+<p>Our one-year strategy involves prioritizing the following key areas:</p>
+<h3 id=scaling-the-instrumentation-system-to-cater-to-new-use-cases>Scaling the instrumentation system to cater to new use cases</h3>
+<p>As the group responsible for providing instrumentation interfaces for teams within GitLab, our foremost objective is guaranteeing that teams are equipped with the instrumentation interfaces essential irrespective of the use case. In the upcoming year, a key focus will be placed on <a href="https://gitlab.com/groups/gitlab-org/-/epics/13223">expanding product data usage tracking beyond the GitLab instance to cater to GitLab Duo use cases</a></p>
+<h3 id=improving-feature-instrumentation-coverage-across-teams>Improving feature instrumentation coverage across teams</h3>
+<p>While our interfaces support feature instrumentation, our primary goal remains advancing data-driven decision-making at GitLab. Additional instrumentation within the product is crucial for understanding user interactions, setting the stage to equip teams with actionable insights.</p>
+<p>We'll collaborate with teams across GitLab to amplify feature instrumentation coverage, leveraging the expertise of our Program Managers to bolster this initiative. We'll also establish a tracking system for feature instrumentation, ensuring stakeholders have a dependable resource for aligning features with metrics.</p>
+<p>In the immediate term of FY25, <a href="https://gitlab.com/groups/gitlab-org/analytics-section/analytics-instrumentation/-/epics/6">our focus</a> is on increasing the utilization rates of our instrumentation interfaces and fostering collaboration to enhance feature instrumentation. Looking ahead, our vision includes supporting "Product Adoption" experiments to assist users in embracing valuable capabilities. As we progress, we'll assess our needs and identify stable counterparts to further drive progress in Product Adoption.</p>
+<h3 id=improve-ease-of-use-and-efficiency-of-internal-events>Improve ease of use and efficiency of internal events</h3>
+<p><a href="https://docs.gitlab.com/ee/development/internal_analytics/">Internal Event Tracking</a> replaces the existing Snowplow/Redis(HLL) based approaches and provides a single unified way of instrumenting features while abstracting the underlying details from the user. In the upcoming year, our focus remains on tackling pain points identified through feedback from internal events. Our ultimate objective is to streamline instrumentation for our engineers and product managers, eliminating the necessity for resorting to alternative tracking methods beyond internal events.</p>
+<p>In the coming months, we will also explore aligning our architecture with solutions for other analytic use-cases at GitLab in a <a href="https://gitlab.com/gitlab-com/content-sites/internal-handbook/-/merge_requests/4370">working group</a>.</p>
+<h3 id=support-product-analytics>Support Product Analytics</h3>
+<p><a href="https://about.gitlab.com/direction/analytics/product-analytics/">Product Analytics</a> is aimed at helping both our internal and external customers understand which parts of their apps are most heavily used and how users interact with those apps. This facilitates self-service access to product usage data, empowering data-driven decision-making processes. A critical step in this is instrumenting the app and collecting the data. The Analytics Instrumentation group currently provides <a href="https://gitlab.com/groups/gitlab-org/-/epics/10535">five language SDKs</a> ( Browser, Node.js, Ruby, Python and .Net) for instrumenation. In addition it also provides the system to generate, collect and store events. This year we worked on <a href="https://gitlab.com/groups/gitlab-org/-/epics/12021">scaling data collection</a> in this system for bigger volumes and concurrent projects as product analytics onboards more customers. With Snowplow moving away from open source licensing, we will evaluate and migrate our data collection to an <a href="https://gitlab.com/gitlab-com/gitlab-OKRs/-/work_items/7409">open-source platform.</a></p>
+<h3 id=revamp-product-usage-data-architecture>Revamp product usage data architecture</h3>
+<p>This year, we will contribute towards the goals of the <a href="https://internal.gitlab.com/handbook/company/internal-working-groups/product-usage-data-architecture/">Product Usage Data Architecture Working Group</a> focused on achieving a streamlined and integrated architecture to enhance our data landscape.</p>
+<h3 id=resolve-service-ping-errors>Resolve service ping errors</h3>
+<p>Customer Success agents are now able to get better insights into Service Ping errors for high-revenue customers through this <a href="https://gitlab.com/gitlab-data/product-analytics/-/issues/1788">report</a>. However, the errors are not fully actionable without active involvement from Customer Success and the customers. In the coming year, we will work towards building <a href="https://gitlab.com/groups/gitlab-org/-/epics/14059">solutions</a> to help Customer Success quickly and more efficiently resolve these errors at the earliest. Our eventual goal is to reduce Service Ping errors as a percentage of our ARR.</p>
+<h3 id=supporting-the-needs-of-the-business>Supporting the needs of the business</h3>
+<p>Different parts of the business have different needs related to data. Examples could include needing new sources of data
+added to Service Ping, updating existing metrics, fixing bugs in existing systems, or other projects.</p>
+<p>We expect these types of requests to continue, so we will support requests from different stakeholders as they arise.</p>
+<h2 id=mid-term-roadmap>Mid-term roadmap</h2>
+<p>In the subsequent years our key areas of focus will be:</p>
+<h3 id=cross-stage-data-vision>Cross stage data vision</h3>
+<p>The <a href="https://about.gitlab.com/direction/monitor/cross-stage-vision.html">cross stage data vision</a> aims to have a single way of tracking, storing and reporting on usage data. Internal Event Tracking will eventually be able to leverage the instrumentation SDKs that are described above so that GitLab uses Product Analytics for its usage reporting, rather than external tools like Tableau or one-off spreadsheets. This plays into the cross-stage vision for data. This unified interface will eventually become the single way that data is recorded about how the Gitlab application is used. It will be the single-source of truth for all data that is collected and that reporting is done on.</p>
+<h3 id=enable-and-simplify-customer-access-to-gitlab-analytics-data>Enable and simplify customer access to GitLab analytics data</h3>
+<p>We've noted numerous instances where customers have expressed a necessity to access their GitLab usage data, be it for monitoring purposes, validating expenditures on GitLab, or tracking feature-specific usage to enhance adoption within their teams. In version 16.9, we introduced accessibility to <a href="https://about.gitlab.com/releases/2024/02/15/gitlab-16-9-released/#access-gitlab-usage-data-through-the-rest-api">Service Ping via REST API connection for our self-managed customers</a>, enabling them to conveniently access service ping data. Moving forward, our focus will be to <a href="https://gitlab.com/groups/gitlab-org/-/epics/12645">enable GitLab.com customers to access and derive insights from usage data</a>.</p>
+<h2 id=how-we-work>How We Work</h2>
+<p>For more information on Analytics Instrumentation, you can checkout our <a href="https://about.gitlab.com/handbook/product/analytics-instrumentation-guide/">Analytics Instrumentation Guide</a> which details a <a href="https://about.gitlab.com/handbook/product/analytics-instrumentation-guide/#analytics-instrumentation-overview">high-level overview of how we make data usable</a>, the <a href="https://about.gitlab.com/handbook/product/analytics-instrumentation-guide/#collection-framework">Collection Frameworks</a> we leverage, our <a href="https://about.gitlab.com/handbook/product/analytics-instrumentation-guide/#metrics-dictionary">Metrics Dictionary</a>, and much more!</p>
+<h2 id=working-groups-and-cross-functional-initiatives>Working Groups and Cross-Functional Initiatives</h2>
+<p>Analytics Instrumentation provides the necessary frameworks, tooling, and expertise to help us build a better GitLab. Naturally we sit in the middle of many projects, initiatives and OKRs at GitLab. In order to provide clarity and realistic expectations to our stakeholders and customers we practice relentless prioritization (<a href="https://about.gitlab.com/handbook/product/product-principles/">per Product Principle #6</a>), identifying what is above the line, what is below, and what is unfunded and not possible for us to action on in a given timeline.</p>
+<p>This table lists recurring activities that are part of <a href="https://about.gitlab.com/company/team/structure/working-groups/">working groups and cross-functional initiatives</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Cadence</th>
+<th>Type</th>
+<th>Teams Involved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.google.com/document/d/1riUXq1GdavnSWJklrebBeZnzcAl6XATyLod9tR6-AlQ/edit">GTM Product Usage Data Working Group</a></td>
+<td>Weekly</td>
+<td>Sync</td>
+<td>Fulfillment PMs, Analytics Instrumentation, Data, Customer Success, Sales</td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/document/d/1CRIGdNATvRAuBsYnhpEfOJ6C64B7j8hPAI0g5C8EdlU/edit">Data &amp; Analytics Program for R&amp;D Teams</a></td>
+<td>Every 2 Weeks</td>
+<td>Sync</td>
+<td>Fulfillment PMs, Analytics Instrumentation, Growth, Data</td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/document/d/1TxcJqOPWo4pP1S48OSMBnb4rysky8dRrRWJFflQkmlM/edit">Product ARR Drivers Sync</a></td>
+<td>Monthly</td>
+<td>Sync</td>
+<td>Customer Success, Sales, Product Leadership</td>
+</tr>
+<tr>
+<td><a href="https://about.gitlab.com/company/team/structure/working-groups/clickhouse-datastore/">ClickHouse Datastore</a></td>
+<td>Weekly</td>
+<td>Sync</td>
+<td>Multiple</td>
+</tr>
+</tbody>
+</table>
+<h2 id=quick-links>Quick Links</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.gitlab.com/ee/development/internal_analytics/">Internal Analytics Docs</a></td>
+<td>An implementation guide for Usage Ping</td>
+</tr>
+<tr>
+<td><a href="/handbook/product/analytics-instrumentation-guide#metrics-dictionary">Metrics Dictionary</a></td>
+<td>A SSoT for all collected metrics from Usage Ping</td>
+</tr>
+<tr>
+<td><a href="/privacy/">Privacy Policy</a></td>
+<td>Our privacy policy outlining what data we collect and how we handle it</td>
+</tr>
+<tr>
+<td><a href="/handbook/product/analytics-instrumentation-guide#implementing-product-performance-indicators">Implementing Product Performance Indicators</a></td>
+<td>The workflow for putting product performance indicators in place</td>
+</tr>
+<tr>
+<td><a href="/handbook/engineering/development/analytics/analytics-instrumentation/">Analytics Instrumentation Development Process</a></td>
+<td>The development process for the Analytics Instrumentation groups</td>
+</tr>
+<tr>
+<td><a href="/handbook/engineering/development/analytics/analytics-instrumentation/#responsibilities">Project resposibilities</a></td>
+<td>List of several projects that our group is the DRI for</td>
+</tr>
+<tr>
+<td><a href="/handbook/engineering/development/analytics/analytics-instrumentation/#incidents">Incident Reporting</a></td>
+<td>Analytics instrumentation specific incident reporting process</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/monitor/analytics-instrumentation/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/monitor/analytics-instrumentation/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

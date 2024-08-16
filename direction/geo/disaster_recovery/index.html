@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Strategy - Disaster Recovery
+|
+GitLab
+</title>
+<meta content='GitLab wants disaster recovery to be robust and easy to use for systems administrators - especially in a potentially stressful recovery situation. Learn more!' name=description />
+<meta content='GitLab wants disaster recovery to be robust and easy to use for systems administrators - especially in a potentially stressful recovery situation. Learn more!' name='twitter:description'/>
+<meta content='GitLab wants disaster recovery to be robust and easy to use for systems administrators - especially in a potentially stressful recovery situation. Learn more!' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Strategy - Disaster Recovery' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/geo/disaster_recovery/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/geo/disaster_recovery/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Strategy - Disaster Recovery' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/geo/disaster_recovery/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Strategy - Disaster Recovery
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/joshlambert'>
+<img
+src='/images/team/joshua.png'
+class=codeowner-avatar-img
+alt='Joshua Lambert'
+title='Joshua Lambert'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/sranasinghe'>
+<img
+src='/images/team/sampathranasinghe.jpg'
+class=codeowner-avatar-img
+alt='Sampath Ranasinghe'
+title='Sampath Ranasinghe'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/geo/disaster_recovery/index.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/geo/">Product Direction - Geo</a></li><li>Category Strategy - Disaster Recovery</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#-disaster-recovery" id=markdown-toc--disaster-recovery>🚨 Disaster Recovery</a> <ul>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#how-you-can-help" id=markdown-toc-how-you-can-help>How you can help</a></li>
+<li><a href="#useful-resources" id=markdown-toc-useful-resources>Useful resources</a></li>
+</ul>
+</li>
+<li><a href="#vision" id=markdown-toc-vision>Vision</a></li>
+<li><a href="#target-audience-and-experience" id=markdown-toc-target-audience-and-experience>Target audience and experience</a> <ul>
+<li><a href="#sidney---systems-administrator" id=markdown-toc-sidney---systems-administrator>Sidney - (Systems Administrator)</a></li>
+</ul>
+</li>
+<li><a href="#in-a-year" id=markdown-toc-in-a-year>In a year</a> <ul>
+<li><a href="#simplifying-promotion-of-secondary-sites" id=markdown-toc-simplifying-promotion-of-secondary-sites>Simplifying Promotion of Secondary Sites</a></li>
+<li><a href="#simplify-demotion-of-primary-sites" id=markdown-toc-simplify-demotion-of-primary-sites>Simplify Demotion of Primary Sites</a></li>
+<li><a href="#improve-observability" id=markdown-toc-improve-observability>Improve observability</a></li>
+<li><a href="#enable-geo-on-gitlabcom-for-disaster-recovery" id=markdown-toc-enable-geo-on-gitlabcom-for-disaster-recovery>Enable Geo on GitLab.com for Disaster Recovery</a></li>
+</ul>
+</li>
+<li><a href="#whats-next--why" id=markdown-toc-whats-next--why>What's Next &amp; Why</a> <ul>
+<li><a href="#publish-metrics-dashboard" id=markdown-toc-publish-metrics-dashboard>Publish metrics dashboard</a></li>
+</ul>
+</li>
+<li><a href="#support-decomposed-databases" id=markdown-toc-support-decomposed-databases>Support decomposed databases</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is not planned right now</a></li>
+<li><a href="#maturity-plan" id=markdown-toc-maturity-plan>Maturity plan</a></li>
+<li><a href="#metrics" id=markdown-toc-metrics>Metrics</a></li>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive landscape</a></li>
+<li><a href="#top-customer-successsales-issues" id=markdown-toc-top-customer-successsales-issues>Top customer success/sales issue(s)</a></li>
+<li><a href="#top-user-issues" id=markdown-toc-top-user-issues>Top user issues</a></li>
+<li><a href="#top-internal-customer-issuesepics" id=markdown-toc-top-internal-customer-issuesepics>Top internal customer issues/epics</a></li>
+<li><a href="#top-strategy-items" id=markdown-toc-top-strategy-items>Top strategy item(s)</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=-disaster-recovery>🚨 Disaster Recovery</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Group</th>
+<th>Maturity</th>
+<th>Last updated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://about.gitlab.com/direction/enablement/">Enablement</a></td>
+<td><a href="https://about.gitlab.com/direction/geo/">Geo</a></td>
+<td><a href="/direction/maturity/">Viable</a></td>
+<td>2024-07-02</td>
+</tr>
+</tbody>
+</table>
+<p>Thanks for visiting this category strategy page for GitLab Geo Disaster Recovery. This page belongs to the <a href="https://about.gitlab.com/handbook/product/categories/#geo-group">Geo group</a>.</p>
+<h3 id=overview>Overview</h3>
+<p>GitLab is part of the business critical infrastructure for many of our customers. As such, it is important our customers are able to rapidly and safely recover their GitLab instance from a disaster. We built Geo Disaster Recovery for exactly this purpose.</p>
+<p>Geo Disaster Recovery (DR) helps our customers fulfill their business continuity plans by creating processes that allow the recovery of a GitLab instance following a natural or human-created disaster.</p>
+<p>It all starts with a well-designed, well-tested, and well-practiced DR plan that will minimize the business impact of a catastrophic event. Two key metrics for disaster recovery are Recovery Time Objective (RTO) and Recovery Point Objective (RPO). These two metrics determine the maximum acceptable time your application can be offline and the maximum length of time data might be lost from your application respectively. Companies strive for both of these metrics to be small as possible. Geo Disaster Recovery was built to help customers minimize both of these metrics by providing an easily configurable warm standby (Geo site) in an additional region, which can quickly take over in the event the services at the primary site are interrupted.</p>
+<p>It is important that customers can recover all of their core GitLab data in the event of a disaster. Therefore, Geo replication and verification support for GitLab-generated data is part of the <a href="https://docs.gitlab.com/ee/development/contributing/merge_request_workflow.html#definition-of-done">definition of done</a>. This ensures that new features ship with Geo support and our customers are not exposed to data loss. Today Geo replicates and verifies 100% GitLab core data.</p>
+<p>You can read more about how we started this journey in our blog post, <a href="https://about.gitlab.com/blog/2018/09/14/how-we-built-gitlab-geo/">How we built GitLab Geo</a></p>
+<p>The Geo team will be splitting our time between DR and backup restore feature development during calendar year 2025. While we will be working on new DR features, we will be operating at lower capacity during this period.</p>
+<h4 id=how-you-can-help>How you can help</h4>
+<p>Please reach out to Sampath Ranasinghe, Product Manager for the Geo group (<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#114;&#097;&#110;&#097;&#115;&#105;&#110;&#103;&#104;&#101;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">Email</a>) if you'd like to provide feedback or ask any questions related to this product category.</p>
+<p>This strategy is a work in progress, and everyone can contribute. Please comment and contribute in the linked <a href="https://gitlab.com/groups/gitlab-org/-/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=group%3A%3Ageo&amp;label_name[]=Category%3ADisaster%20Recovery">issues</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=group%3A%3Ageo&amp;label_name[]=Category%3ADisaster%20Recovery">epics</a> on this page. Sharing your feedback directly on GitLab.com is the best way to contribute to our strategy and vision.</p>
+<h4 id=useful-resources>Useful resources</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/roadmap?state=all&amp;sort=start_date_asc&amp;layout=MONTHS&amp;timeframe_range_type=CURRENT_YEAR&amp;label_name%5B%5D=group%3A%3Ageo&amp;label_name%5B%5D=Category%3ADisaster+Recovery&amp;progress=COUNT&amp;show_progress=true&amp;show_milestones=false&amp;milestones_type=ALL">Roadmap for Disaster Recovery</a></li>
+<li><a href="/direction/maturity/">Maturity: Competitive</a></li>
+<li><a href="https://docs.gitlab.com/ee/administration/geo/disaster_recovery/">Documentation</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/4988">Lovable Maturity epic</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=group%3A%3Ageo&amp;label_name[]=Category%3ADisaster%20Recovery">All Epics</a></li>
+</ul>
+<h3 id=vision>Vision</h3>
+<p>We envision a disaster recovery solution that our customers can rely on to restore the full operational capability of GitLab in the event of a catastrophe and one that they can repeatedly exercise without fear of losing their data. A solution that makes the actual experience of failing over to warm standby sites seamless and uneventful both for the systems administrator and the end users.</p>
+<p>A robust disaster recovery plan needs to be regularly tested and adjusted as necessary. Testing both the process and the infrastructure is essential to ensuring a successful recovery in the event of a disaster. Regular testing will expose weaknesses that can be addressed under controlled circumstances. Geo Disaster Recovery will allow customers to perform routine controlled failovers without data loss.</p>
+<p>The solution will perform an autonomous failover to a designated secondary site under limited circumstances, relying on specific trigger events that indicate a problem with the primary site. The failover will be seamless and transparent to the end users. CI runners will automatically register with the new primary and restore a fully operational GitLab instance. This will reduce the monitoring burden on the system administrators by allowing the GitLab solution to self-heal.</p>
+<p>System administrators will be notified of irregularities in the replication and verification processes asynchronously via push notifications such as email and Slack messages alerting them to potential data loss if a failover were to happen. System administrators can follow the information in the notifications to investigate and remediate the issues.</p>
+<p>The solution will support all current and future GitLab <a href="https://docs.gitlab.com/ee/administration/reference_architectures/">reference architectures</a>.</p>
+<p>GitLab customers will be able to scale and tailor the Geo Disaster Recovery solution to best fit their business continuity plans. They will be able to configure the disaster recovery solution to meet a defined RTO and RPO.</p>
+<p>All GitLab SaaS services such as GitLab Dedicated and GitLab.com will be protected by Geo Disaster Recovery to ensure that all best practices are followed and that we dogfood our own solutions.</p>
+<h3 id=target-audience-and-experience>Target audience and experience</h3>
+<h4 id=sidney---systems-administrator><a href="https://about.gitlab.com/handbook/product/personas/#sidney-systems-administrator">Sidney - (Systems Administrator)</a></h4>
+<ul>
+<li>🙂 <strong>Minimal</strong> - Sidney can manually configure a DR solution using Geo sites.
+More complex configurations, such as HA, are supported but are highly manual
+to set up. Some data may not be replicated. Failovers are manual.</li>
+<li>😊 <strong>Viable</strong> - Sidney can follow a set of clearly defined procedures for
+planned failovers. DR is available for all reference architectures; some data
+may not be replicated yet.</li>
+<li>😁 <strong>Complete</strong> - All Git and File data is replicated and verified. A dashboard informs users
+of the current data replication and verification status. A recovery process is less than &lt;10 steps.</li>
+<li>😍 <strong>Lovable</strong> - Automatic failovers are supported and it's possible to initiate a planned failover using the UI.</li>
+</ul>
+<p>For more information on how we use personas and roles at GitLab, please
+<a href="https://about.gitlab.com/handbook/product/personas/">click here</a>.</p>
+<h3 id=in-a-year>In a year</h3>
+<h4 id=simplifying-promotion-of-secondary-sites>Simplifying Promotion of Secondary Sites</h4>
+<p>It is possible to promote a secondary site to a primary site, either during a planned failover or in a genuine disaster recovery situation. Geo supports promotion for a single node installation and for a high-availability (HA) configuration. The current promotion process consists of a large number of manual preflight checks, followed by the actual promotion. The promotion is only possible in the command line; no UI flow is possible and for high-availability configurations modifications to the <code>gitlab.rb</code> file are required on almost all nodes. Given the critical nature of this process, Geo should make it <a href="https://gitlab.com/groups/gitlab-org/-/epics/3131">simple to promote a secondary</a>, especially for more complex high-availability configurations.</p>
+<h4 id=simplify-demotion-of-primary-sites>Simplify Demotion of Primary Sites</h4>
+<p>After a failover, an administrator may want to re-attach the demoted primary site back as a secondary site in order to failback to the original primary at some point. This is currently possible. However, the process is highly manual and not well-documented. After we have simplified the promotion process, we want to <a href="https://gitlab.com/groups/gitlab-org/-/epics/2153">simplify demoting a secondary site</a> site of any size by reducing the steps required and making the process easily automatable.</p>
+<h4 id=improve-observability>Improve observability</h4>
+<p><a href="https://gitlab.com/groups/gitlab-org/-/epics/8240">Improving observability</a> of replication and verification operations will allow systems administrators to monitor the health of the warm standby secondary sites. It will help identify any fault conditions in the replication and verification process and aid in the remediation of these faults. By surfacing the underlying errors in the UI, it will provide easy access to this information and speed up recovery actions needed on the part of the systems administrators.</p>
+<h4 id=enable-geo-on-gitlabcom-for-disaster-recovery>Enable Geo on GitLab.com for Disaster Recovery</h4>
+<p>GitLab.com is by far the largest GitLab instance and is used by GitLab to <a href="https://about.gitlab.com/handbook/engineering/index.html#dogfooding">dogfood GitLab itself</a>. GitLab.com does not use GitLab Geo for DR purposes. This has many disadvantages and the Geo Team is <a href="https://about.gitlab.com/company/team/structure/working-groups/disaster-recovery/">working with Infrastructure to enable Geo on GitLab.com</a>.</p>
+<h3 id=whats-next--why>What's Next &amp; Why</h3>
+<h4 id=publish-metrics-dashboard>Publish metrics dashboard</h4>
+<p>The Geo admin dashboard provides a basic overview of the status of the Geo sites. This is helpful when setting up Geo and for confirming Geo status at a glance. However, it does not show long term trends and historical statistics. A <a href="https://docs.gitlab.com/ee/administration/monitoring/performance/grafana_configuration.html">Grafana</a> dashboard together with <a href="https://docs.gitlab.com/ee/administration/monitoring/prometheus/">Prometheus</a> metrics serves this purpose well.</p>
+<p>Geo publishes an extensive list of <a href="https://docs.gitlab.com/ee/administration/monitoring/prometheus/gitlab_metrics.html">prometheus metrics</a>. <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/197147">Publishing a Grafana dashboard</a> would make these metrics more accessible and useful for systems administrators.</p>
+<h3 id=support-decomposed-databases>Support decomposed databases</h3>
+<p>GitLab is planning to roll out decomposed databases to self-managed customers with GitLab release 18.0. This involves splitting the main rails database into two databases <code>main</code> and <code>ci</code> improving scabality and performance. More details can be found in the blog post, <a href="https://about.gitlab.com/blog/2022/08/04/path-to-decomposing-gitlab-database-part1/">Decomposing the GitLab backend database</a>.
+To ensure that Geo customers can benefit from the scalability and performance benefits this brings whilst being protected against data loss, we will be adding support for decomposed databases.</p>
+<h3 id=what-is-not-planned-right-now>What is not planned right now</h3>
+<p>We currently don't plan to replace PostgreSQL with a different database e.g. CockroachDB.</p>
+<p>We currently don't plan to support an Active/Active configuration.</p>
+<h3 id=maturity-plan>Maturity plan</h3>
+<p>This category is currently at the competitive
+maturity level, and our next maturity target is lovable (see our <a href="/direction/maturity/">definitions of maturity levels</a>).</p>
+<p>In order to move this category from competitive
+to lovable we are working on all items in the <a href="https://gitlab.com/groups/gitlab-org/-/epics/4988">lovable maturity epic</a>.</p>
+<h3 id=metrics>Metrics</h3>
+<p>We currently track:</p>
+<ul>
+<li><a href="https://app.periscopedata.com/app/gitlab/500159/Enablement::Geo-Metrics?widget=10278011&amp;udv=0">The total number of replication events(Internal link)</a>, which scales with the overall amount of data and our ability to replicate more data types.</li>
+</ul>
+<h3 id=competitive-landscape>Competitive landscape</h3>
+<p>GitHub Enterprise Server 2.22 supports a <a href="https://docs.github.com/en/enterprise-server@2.22/admin/enterprise-management/configuring-high-availability-replication-for-a-cluster">passive replica server</a> that can be used for disaster recovery purposes.</p>
+<h3 id=top-customer-successsales-issues>Top customer success/sales issue(s)</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/3341">Geo: Create a single command that can be run on any node to promote a secondary to primary</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab-environment-toolkit/-/issues/133">GitLab Environment Toolkit: Add ability to perform Geo failover for Hybrid architectures</a></li>
+</ul>
+<h3 id=top-user-issues>Top user issues</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=group%3A%3Ageo&amp;label_name[]=Category%3ADisaster%20Recovery">Category issues listed by popularity</a></li>
+</ul>
+<h3 id=top-internal-customer-issuesepics>Top internal customer issues/epics</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-com/gl-infra/-/epics/12">Geo for DR on GitLab.com</a></li>
+</ul>
+<h3 id=top-strategy-items>Top strategy item(s)</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5285">Verify all blob replicators</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/3131">Geo: Promoting a secondary should be simple</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2153">Geo: Simplify the demotion process</a></li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/geo/disaster_recovery/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/geo/disaster_recovery/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab upcoming releases
+|
+GitLab
+</title>
+<meta content='Find out about Gitlab future releases and their important features. View more here!' name=description />
+<meta content='Find out about Gitlab future releases and their important features. View more here!' name='twitter:description'/>
+<meta content='Find out about Gitlab future releases and their important features. View more here!' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab upcoming releases' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='upcoming-releases/template.html.md.erb' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/upcoming-releases/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab upcoming releases' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/upcoming-releases/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+</head>
+<body class='upcoming-releases upcoming-releases_index ' data-offset=90 data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<img src="/images/devops-tools/gitlab-logo.svg" class=hero-image-small alt="GitLab logo icon svg"/>
+<h1>
+GitLab upcoming releases
+</h1>
+</div>
+</div>
+<div class='sdlc-container-alt position-relative'>
+<div class=table-container>
+<table class=sdlc-table>
+<tr>
+<td class=stage-container>
+<a href='/stages-devops-lifecycle/plan/'>
+<svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M45,35.19H34.28a3.48,3.48,0,0,0-6.68,0H16.5a2.87,2.87,0,0,1,0-5.74H29.07a4.87,4.87,0,1,0,0-9.73L18,19.67a3.47,3.47,0,0,0-6.67,0H5.22V12.08a2,2,0,0,1,2-2H10.5v2.5a1,1,0,0,0,1,1h3.82a1,1,0,0,0,1-1v-2.5H31v2.5a1,1,0,0,0,1,1h3.82a1,1,0,0,0,1-1v-2.5h2.49a2,2,0,0,1,2,2V31.19a1,1,0,1,0,2,0V12.08a4,4,0,0,0-4-4H36.83V5.58a1,1,0,0,0-1-1H32a1,1,0,0,0-1,1v2.5H16.32V5.58a1,1,0,0,0-1-1H11.5a1,1,0,0,0-1,1v2.5H7.22a4,4,0,0,0-4,4v7.58H1a1,1,0,0,0,0,2H11.3a3.48,3.48,0,0,0,6.67,0l11.1,0a2.87,2.87,0,1,1,0,5.73H16.5a4.87,4.87,0,0,0,0,9.74H27.6a3.48,3.48,0,0,0,6.68,0h7V42a2,2,0,0,1-2,2H7.22a2,2,0,0,1-2-2V25.72a1,1,0,0,0-2,0V42a4,4,0,0,0,4,4h32.1a4,4,0,0,0,4-4V37.19H45a1,1,0,0,0,0-2ZM33,6.58h1.82v2.5h0v2.49H33Zm-20.51,0h1.82v5H12.5Zm2.13,15.58a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,14.63,22.16ZM30.94,37.69a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,30.94,37.69Z"/></svg>
+</a>
+<a href='/stages-devops-lifecycle/plan/'>
+<p>Plan</p>
+</a>
+</td>
+<td class=stage-container>
+<a href='/stages-devops-lifecycle/create/'>
+<svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M44.76,5.4,40.6,1.24a4.26,4.26,0,0,0-6,0L30.77,5.07,15,20.88a1,1,0,0,0,0,1.41,1,1,0,0,0,.7.3,1,1,0,0,0,.71-.3l15.1-15.1,8,8a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l3.83-3.84A4.24,4.24,0,0,0,44.76,5.4ZM43.34,10l-3.12,3.13L32.89,5.78,36,2.65a2.25,2.25,0,0,1,3.17,0l4.15,4.16A2.23,2.23,0,0,1,43.34,10Z"/><path d="M13,23.84l-.18-.08-.08,0a.34.34,0,0,0-.1,0,.74.74,0,0,0-.21,0,.57.57,0,0,0-.18,0l-.17.07-.17.11s-.06,0-.09.06,0,.05,0,.07a.62.62,0,0,0-.11.17.71.71,0,0,0-.08.18s0,0,0,.08L9.33,35a1,1,0,0,0,1,1.21h.15l11-1.72.1,0,.19-.07a.88.88,0,0,0,.17-.12l.09-.06L36.94,19.21a1,1,0,0,0-1.41-1.41L21.29,32l-8-8L13.19,24Zm.12,2.87,6.05,6L11.59,34Z"/><path d="M40.06,21.38a1,1,0,0,0-1,1v19h-32a3.58,3.58,0,0,0-.9-1.55A3.38,3.38,0,0,0,4.6,39v-32H24a1,1,0,0,0,0-2H3.6a1,1,0,0,0-1,1V39a3.39,3.39,0,0,0-1.54.87,3.6,3.6,0,1,0,6,3.55h33a1,1,0,0,0,1-1v-20A1,1,0,0,0,40.06,21.38ZM4.74,43.53a1.61,1.61,0,1,1,0-2.27,1.63,1.63,0,0,1,.47,1.14A1.59,1.59,0,0,1,4.74,43.53Z"/></svg>
+</a>
+<a href='/stages-devops-lifecycle/create/'>
+<p>Create</p>
+</a>
+</td>
+<td class=stage-container>
+<a href='/stages-devops-lifecycle/verify/'>
+<svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M10.92,17.32a3.67,3.67,0,0,0-2.39-3.43,14.76,14.76,0,0,1,27.89-3.28,1,1,0,1,0,1.81-.83,16.75,16.75,0,0,0-31.7,3.94,3.66,3.66,0,0,0-2.79,2.6H1a1,1,0,0,0,0,2H3.74a3.66,3.66,0,0,0,7.18-1ZM7.25,19a1.67,1.67,0,1,1,1.67-1.67A1.67,1.67,0,0,1,7.25,19Z"/><path d="M45,16.32H42.26a3.66,3.66,0,1,0-5,4.32,14.68,14.68,0,0,1-5.43,8,.94.94,0,0,0-.19.14,14.76,14.76,0,0,1-21.36-4.59,1,1,0,0,0-1.73,1A16.78,16.78,0,0,0,31.32,31.3v12L23.48,39a1,1,0,0,0-1,0L14.68,43.3V34.44a1,1,0,0,0-2,0V45a1,1,0,0,0,1.49.88L23,41l8.83,4.89a1.07,1.07,0,0,0,.49.12,1.06,1.06,0,0,0,.51-.14,1,1,0,0,0,.49-.86V30a16.7,16.7,0,0,0,5.89-9,3.64,3.64,0,0,0,3-2.62H45a1,1,0,0,0,0-2ZM38.75,19a1.67,1.67,0,1,1,1.67-1.67A1.67,1.67,0,0,1,38.75,19Z"/><path d="M26.57,13.6l-5.31,5.31-1.83-1.82A1,1,0,0,0,18,18.5L20.55,21A1,1,0,0,0,22,21l6-6a1,1,0,0,0-1.41-1.41Z"/></svg>
+</a>
+<a href='/stages-devops-lifecycle/verify/'>
+<p>Verify</p>
+</a>
+</td>
+<td class=stage-container>
+<a href='/stages-devops-lifecycle/package/'>
+<svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M46,25.7A3.5,3.5,0,1,0,41.5,29V44H4.5V31.82a1,1,0,0,0-2,0V45a1,1,0,0,0,1,1h39a1,1,0,0,0,1-1V29A3.5,3.5,0,0,0,46,25.7Zm-3.5,1.5A1.5,1.5,0,1,1,44,25.7,1.5,1.5,0,0,1,42.5,27.2Z"/><path d="M7,24.32A3.5,3.5,0,0,0,4.5,21V6h37V18.19a1,1,0,0,0,2,0V5a1,1,0,0,0-1-1H3.5a1,1,0,0,0-1,1V21A3.49,3.49,0,1,0,7,24.32Zm-5,0a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,2,24.32Z"/><path d="M28.47,29.82a1,1,0,0,0,1.42,0l4.1-4.1a1,1,0,0,0,0-1.42l-4.1-4.1a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l3.4,3.4-3.4,3.4A1,1,0,0,0,28.47,29.82Z"/><path d="M17.53,20.2a1,1,0,0,0-1.42,0L12,24.3a1,1,0,0,0,0,1.42l4.1,4.1a1,1,0,0,0,.71.29,1,1,0,0,0,.71-1.7L14.13,25l3.4-3.4A1,1,0,0,0,17.53,20.2Z"/><path d="M24.37,18,19.73,31.39a1,1,0,0,0,.62,1.28,1.26,1.26,0,0,0,.33,0,1,1,0,0,0,.94-.67l4.65-13.42a1,1,0,0,0-1.9-.66Z"/></svg>
+</a>
+<a href='/stages-devops-lifecycle/package/'>
+<p>Package</p>
+</a>
+</td>
+<td class=stage-container>
+<a href='/stages-devops-lifecycle/secure/'>
+<svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M45,31.6H26.34a3.48,3.48,0,0,0-6.68,0H6.42V21.2H39.58v6.4a1,1,0,1,0,2,0V20.2a1,1,0,0,0-1-1H37V14A14,14,0,0,0,9,14v5.2H5.42a1,1,0,0,0-1,1V31.6H1a1,1,0,0,0,0,2H19.66a3.48,3.48,0,0,0,6.68,0H39.58V44H6.42V37.6a1,1,0,0,0-2,0V45a1,1,0,0,0,1,1H40.58a1,1,0,0,0,1-1V33.6H45a1,1,0,0,0,0-2ZM11,14a12,12,0,0,1,24,0v5.2H11ZM23,34.1a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,23,34.1Z"/></svg>
+</a>
+<a href='/stages-devops-lifecycle/secure/'>
+<p>Secure</p>
+</a>
+</td>
+<td class=stage-container>
+<a href='/stages-devops-lifecycle/deploy/'>
+<svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M33,16.92H22.33a3.47,3.47,0,0,0-6.67,0H13a1,1,0,0,0,0,2h2.64a3.47,3.47,0,0,0,6.67,0H33a1,1,0,0,0,0-2Zm-14,2.5a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,19,19.42Z"/><path d="M33,27.08H30.34a3.47,3.47,0,0,0-6.67,0H13a1,1,0,1,0,0,2H23.67a3.47,3.47,0,0,0,6.67,0H33a1,1,0,0,0,0-2Zm-6,2.5a1.5,1.5,0,1,1,1.5-1.5A1.51,1.51,0,0,1,27,29.58Z"/><path d="M1,24a1,1,0,0,0,1-1,21.63,21.63,0,0,1,.17-2.67L6.6,18.71a1,1,0,0,0,.62-.64,16.31,16.31,0,0,1,1.14-2.73,1,1,0,0,0,0-.89l-2-4.28a21.25,21.25,0,0,1,3.79-3.79l4.28,2a1,1,0,0,0,.89,0,16.67,16.67,0,0,1,2.73-1.14,1,1,0,0,0,.64-.62l1.62-4.43a20.75,20.75,0,0,1,5.34,0L27.29,6.6a1,1,0,0,0,.64.62,16.67,16.67,0,0,1,2.73,1.14,1,1,0,0,0,.89,0l4.28-2a21.25,21.25,0,0,1,3.79,3.79l-2,4.28a1,1,0,0,0,0,.89,16.31,16.31,0,0,1,1.14,2.73,1,1,0,0,0,.62.64l5,1.82a1,1,0,1,0,.69-1.88L40.54,17a18.86,18.86,0,0,0-.9-2.15l2-4.38a1,1,0,0,0-.1-1,22.73,22.73,0,0,0-5-5,1,1,0,0,0-1-.1l-4.38,2A19.65,19.65,0,0,0,29,5.46L27.35.92a1,1,0,0,0-.79-.64,23,23,0,0,0-7.12,0,1,1,0,0,0-.79.64L17,5.46a19.65,19.65,0,0,0-2.15.9l-4.38-2a1,1,0,0,0-1,.1,22.73,22.73,0,0,0-5,5,1,1,0,0,0-.1,1l2,4.38A18.86,18.86,0,0,0,5.46,17L.92,18.65a1,1,0,0,0-.64.79A22.29,22.29,0,0,0,0,23,1,1,0,0,0,1,24Z"/><path d="M45,22a1,1,0,0,0-1,1,21.63,21.63,0,0,1-.17,2.67L39.4,27.29a1,1,0,0,0-.62.64,16.31,16.31,0,0,1-1.14,2.73,1,1,0,0,0,0,.89l2,4.28a21.25,21.25,0,0,1-3.79,3.79l-4.28-2a1,1,0,0,0-.89,0,16.67,16.67,0,0,1-2.73,1.14,1,1,0,0,0-.64.62l-1.62,4.43a20.75,20.75,0,0,1-5.34,0L18.71,39.4a1,1,0,0,0-.64-.62,16.67,16.67,0,0,1-2.73-1.14,1,1,0,0,0-.89,0l-4.28,2a21.25,21.25,0,0,1-3.79-3.79l2-4.28a1,1,0,0,0,0-.89,16.31,16.31,0,0,1-1.14-2.73,1,1,0,0,0-.62-.65l-5-1.81a1,1,0,1,0-.69,1.88L5.46,29a18.86,18.86,0,0,0,.9,2.15l-2,4.38a1,1,0,0,0,.1,1,22.73,22.73,0,0,0,5,5,1,1,0,0,0,1,.1l4.38-2a19.65,19.65,0,0,0,2.15.9l1.65,4.54a1,1,0,0,0,.79.64,22.77,22.77,0,0,0,7.12,0,1,1,0,0,0,.79-.64L29,40.54a19.65,19.65,0,0,0,2.15-.9l4.38,2a1,1,0,0,0,1-.1,22.73,22.73,0,0,0,5-5,1,1,0,0,0,.1-1l-2-4.38a19.65,19.65,0,0,0,.9-2.15l4.54-1.65a1,1,0,0,0,.64-.79A22.29,22.29,0,0,0,46,23,1,1,0,0,0,45,22Z"/></svg>
+</a>
+<a href='/stages-devops-lifecycle/deploy/'>
+<p>Deploy</p>
+</a>
+</td>
+<td class=stage-container>
+<a href='/stages-devops-lifecycle/govern/'>
+<svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M21,27.52a1,1,0,0,0,.7-.29l7.05-7a1,1,0,0,0-1.41-1.41L21,25.11,18.7,22.86a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.41l3,3A1,1,0,0,0,21,27.52Z"/><path d="M39.9,29.58a1,1,0,0,0-1.3.55A24.84,24.84,0,0,1,23,44C14.4,41.22,7.84,34.33,6.26,26.33a1,1,0,0,0,0-.1,3.52,3.52,0,1,0-1.92.21.88.88,0,0,0,0,.28C6,35.52,13.26,43.07,22.71,46a1.07,1.07,0,0,0,.58,0c7.88-2.41,14.29-8,17.16-15.08A1,1,0,0,0,39.9,29.58ZM3.37,23a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,3.37,23Z"/><path d="M42.13,19.66v-13a1,1,0,0,0-1.34-.93,14.54,14.54,0,0,1-17-5.26,1,1,0,0,0-1.62,0,14.54,14.54,0,0,1-17,5.26,1,1,0,0,0-1.34.93v8.64a1,1,0,0,0,2,0V8A16.46,16.46,0,0,0,23,2.63,16.46,16.46,0,0,0,40.13,8V19.66a3.5,3.5,0,1,0,2,0Zm-1,4.84a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,41.13,24.5Z"/></svg>
+</a>
+<a href='/stages-devops-lifecycle/govern/'>
+<p>Govern</p>
+</a>
+</td>
+<td class=stage-container>
+<a href='/stages-devops-lifecycle/monitor/'>
+<svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M41.75,33.26a1,1,0,0,0-1,1V42a2,2,0,0,1-2,2H7.25a2,2,0,0,1-2-2V34.26a1,1,0,0,0-2,0V42a4,4,0,0,0,4,4h31.5a4,4,0,0,0,4-4V34.26A1,1,0,0,0,41.75,33.26Z"/><path d="M4.25,16.32h37.5a1,1,0,0,0,1-1V10.5a4,4,0,0,0-4-4H7.25a4,4,0,0,0-4,4v4.82A1,1,0,0,0,4.25,16.32Zm1-5.82a2,2,0,0,1,2-2h31.5a2,2,0,0,1,2,2v3.82H5.25Z"/><path d="M45,28.25H42.75V20.32a1,1,0,0,0-2,0v7.93H36.58a3.48,3.48,0,0,0-3.33-2.5,3.66,3.66,0,0,0-1.33.26l-4.73-5.87a1,1,0,0,0-1.7.25l-6.2,15.39-3.66-4.55a3.45,3.45,0,0,0,.62-2,3.49,3.49,0,0,0-6.83-1H5.25V20.32a1,1,0,0,0-2,0v7.93H1a1,1,0,0,0,0,2H9.42a3.48,3.48,0,0,0,4.66,2.24l4.73,5.87a1,1,0,0,0,.77.38h.15a1,1,0,0,0,.78-.62l6.2-15.39,3.66,4.55a3.49,3.49,0,1,0,6.21,3H45a1,1,0,0,0,0-2Zm-33.75,1a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,11.25,29.25Zm22,1.5a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,33.25,30.75Z"/></svg>
+</a>
+<a href='/stages-devops-lifecycle/monitor/'>
+<p>Monitor</p>
+</a>
+</td>
+<td class=stage-container>
+<a href='/stages-devops-lifecycle/modelops/'>
+<?xml version="1.0" encoding=UTF-8?><svg id=icons xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><g id=values-96px><g><g><path d="m42.71,73.57c-16.78,6.02-31.37,5.6-35.85-2.07-4.48-7.67,2.44-20.38,16.09-31.74" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><path d="m31.64,33.34c1.84-1.21,3.76-2.39,5.74-3.52,22.72-12.98,45.89-15.36,51.76-5.31s-7.81,28.71-30.53,41.69c-1.97,1.13-3.94,2.17-5.91,3.13" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /></g><g><path d="m42.97,69.16c-1.86-.92-3.72-1.91-5.58-2.98C14.66,53.21,1,34.54,6.86,24.5c2.62-4.49,8.7-6.5,16.65-6.19" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><path d="m73.05,39.76c13.65,11.36,20.57,24.06,16.09,31.74-4.53,7.77-19.42,8.11-36.44,1.86" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><path d="m37.39,20.71c6.74,1.93,14.01,4.98,21.23,9.1,2.01,1.15,3.95,2.34,5.81,3.57" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /></g><g><path d="m69.04,41.72c.12,2.06.19,4.15.19,6.28,0,1.19-.02,2.37-.06,3.54" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><path d="m28.25,30.71C31.37,13.31,39.03,1,48,1s16.78,12.55,19.83,30.22" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><path d="m67.21,68c-3.39,15.96-10.72,27-19.21,27-11.72,0-21.23-21.04-21.23-47,0-2.13.06-4.23.19-6.28" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /></g></g></g><circle cx="27.07" cy="36.22" r=5 fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><circle cx="47.71" cy="71.66" r=5 fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><circle cx="47.71" cy="49.38" r=5 fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><circle cx="68.93" cy="36.22" r=5 fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /></svg>
+</a>
+<a href='/stages-devops-lifecycle/modelops/'>
+<p>ModelOps</p>
+</a>
+</td>
+<td class=stage-container>
+<a href='/stages-devops-lifecycle/ai-powered/'>
+<?xml version="1.0" encoding=UTF-8?><svg id=icons xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><g id=values-96px><g><g><path d="m42.71,73.57c-16.78,6.02-31.37,5.6-35.85-2.07-4.48-7.67,2.44-20.38,16.09-31.74" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><path d="m31.64,33.34c1.84-1.21,3.76-2.39,5.74-3.52,22.72-12.98,45.89-15.36,51.76-5.31s-7.81,28.71-30.53,41.69c-1.97,1.13-3.94,2.17-5.91,3.13" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /></g><g><path d="m42.97,69.16c-1.86-.92-3.72-1.91-5.58-2.98C14.66,53.21,1,34.54,6.86,24.5c2.62-4.49,8.7-6.5,16.65-6.19" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><path d="m73.05,39.76c13.65,11.36,20.57,24.06,16.09,31.74-4.53,7.77-19.42,8.11-36.44,1.86" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><path d="m37.39,20.71c6.74,1.93,14.01,4.98,21.23,9.1,2.01,1.15,3.95,2.34,5.81,3.57" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /></g><g><path d="m69.04,41.72c.12,2.06.19,4.15.19,6.28,0,1.19-.02,2.37-.06,3.54" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><path d="m28.25,30.71C31.37,13.31,39.03,1,48,1s16.78,12.55,19.83,30.22" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><path d="m67.21,68c-3.39,15.96-10.72,27-19.21,27-11.72,0-21.23-21.04-21.23-47,0-2.13.06-4.23.19-6.28" fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /></g></g></g><circle cx="27.07" cy="36.22" r=5 fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><circle cx="47.71" cy="71.66" r=5 fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><circle cx="47.71" cy="49.38" r=5 fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /><circle cx="68.93" cy="36.22" r=5 fill=none stroke="#171321" stroke-miterlimit=10 stroke-width=2 /></svg>
+</a>
+<a href='/stages-devops-lifecycle/ai-powered/'>
+<p>AI-powered</p>
+</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class=gitlab-content-container>
+<div class=grid-layout>
+<p><em>Note: This page contains information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.</em></p>
+<p>GitLab releases a new version
+<a href="https://about.gitlab.com/handbook/marketing/blog/release-posts/#release-posts">every single month</a>.</p>
+<p>The list is an outline of <strong>tentpole features</strong> – the most important features
+of upcoming releases – and doesn't include most contributions from volunteers
+outside the company. This is not an authoritative list of upcoming releases - it
+only reflects current <a href="https://gitlab.com/groups/gitlab-org/-/milestones">milestones</a>.</p>
+<p>Note that we often move things around, do things that are not listed, and cancel
+things that <em>are</em> listed. Some of the things listed here might not ever be in
+GitLab. New Starter, Premium, and Ultimate features are indicated with labels.
+This is our best estimate of where new features will land, but is in no way
+definitive. You can also view <a href="/direction/paid_tiers/">upcoming features by product tier</a>.</p>
+<p>Past releases can be found on our <a href="/releases/">releases page</a>.</p>
+<h3 id=174-2024-09-19>17.4 (2024-09-19)</h3>
+<h4 id=foundations>Foundations</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/387890">Webhook Development Guide</a></li>
+</ul>
+<h4 id=plan>Plan</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/428690">Work Items - Create/edit flows: Integrate description template selection into the editor</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/14243">Redirect from GitLab pages URL to custom domain when one exists</a></li>
+</ul>
+<h4 id=create>Create</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/444978">Implement merge and rebase for pipeline-less/merge train-less projects</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/355092">[Discussion] Enable extension marketplace in VSCode Web IDE</a></li>
+</ul>
+<h4 id=verify>Verify</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/479285">GraphQL: Refactor <code>PipelineAnalytics</code> and <code>PipelineAnalyticsPeriod</code> types</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/464339">Present an option to retry jobs in a merge train pipeline while its still running</a> <kbd>Premium</kbd> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/461667">Allow users to provide feedback on the response generated from the RCA feature</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/455063">Improve the toggle behaviour for runners 'Allow runner registration token' at group level</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/454312">GraphQL: Add pipeline duration histogram support to PipelineAnalytics</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/454311">GraphQL: Add filtering support to Resolvers::ProjectPipelineStatisticsResolver</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/454310">GraphQL: Add support to compute mean duration of pipelines in PipelineAnalytics</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/443246">Track the number of job retries for a project's pipeline</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/432883">Upgrade the Nvidia drivers on the saas-linux-medium-amd64-gpu runners</a> <kbd>Premium</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/365695">GitLab SaaS Runners on macOS (Apple silicon) - General Availability</a> <kbd>Premium</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/323101">Track the failure rate for a project's pipeline</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/29674">Frontend (Variable drawer): Add "Masked and hidden" option to "Visibility" options</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab-runner/-/issues/29223">GitLab Runner Fleeting plugin for Azure Virtual Machines - (GA)</a></li>
+</ul>
+<h4 id=package>Package</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/293739">Research: Show additional download information about packages</a> <kbd>Premium</kbd></li>
+</ul>
+<h4 id=deploy>Deploy</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/434248">Trigger a Flux reconciliation from the cluster UI</a></li>
+</ul>
+<h4 id=monitor>Monitor</h4>
+<h4 id=secure>Secure</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8841">Composition Analysis Vision</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2340">GitLab Container Registry: Continuous Vulnerability Scanning</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/464279">Set "gradlew –debug" when SECURE_LOG_LEVEL is set</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/229817">Report vulnerable dependency paths for Gradle</a> <kbd>Ultimate</kbd></li>
+</ul>
+<h4 id=govern>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/14171">Compliance UX improvement/bugs track</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13997">Manage scheduled scan execution pipeline concurrency</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13909">Give compliance users a 'single pane of glass' to view aggregate information with respect to their checks and violations</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13617">Merge request approval policy accuracy</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13559">Make Compliance Center available to project/sub-groups</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13294">Multiple compliance frameworks labels</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13225">Govern: Security Policies - 17.x - Technical Debt and Planned Quality Improvements</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13071">(Size: XXL) Cells 1.0 - Compliance database tables work</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12661">Add compliance adherence requirement for each security scanner</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12264">Permissions: Viable to Competitive Maturity Plan</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12191">Policy Violations Bot Comment</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11930">Compliance Center Improvements</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11274">Compliance frameworks improvements</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11185">Display security policy violation details to users</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10048">Add support for the Vulnerability Report and Dependency List at the Organization Level</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9971">Use database read model for merge request approval policies</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/461901">Adjust the max expiration date of access tokens</a> <kbd>Premium</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/451480">Require a comment when changing the status of vulnerabilities on the Vulnerability Page</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/439655">Improve error messaging for CI_JOB_TOKEN</a></li>
+</ul>
+<h4 id=ai-powered>Ai-powered</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/464587">Support Merge Requests as context for Duo Chat responses</a></li>
+</ul>
+<h4 id=core_platform>Core_platform</h4>
+<h4 id=modelops>Modelops</h4>
+<h3 id=git-247>Git 2.47</h3>
+<h4 id=foundations-1>Foundations</h4>
+<h4 id=plan-1>Plan</h4>
+<h4 id=create-1>Create</h4>
+<h4 id=verify-1>Verify</h4>
+<h4 id=package-1>Package</h4>
+<h4 id=deploy-1>Deploy</h4>
+<h4 id=monitor-1>Monitor</h4>
+<h4 id=secure-1>Secure</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8841">Composition Analysis Vision</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2340">GitLab Container Registry: Continuous Vulnerability Scanning</a> <kbd>Ultimate</kbd></li>
+</ul>
+<h4 id=govern-1>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/14171">Compliance UX improvement/bugs track</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13997">Manage scheduled scan execution pipeline concurrency</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13909">Give compliance users a 'single pane of glass' to view aggregate information with respect to their checks and violations</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13617">Merge request approval policy accuracy</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13559">Make Compliance Center available to project/sub-groups</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13294">Multiple compliance frameworks labels</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13266">Pipeline Execution Policy Type</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13225">Govern: Security Policies - 17.x - Technical Debt and Planned Quality Improvements</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13071">(Size: XXL) Cells 1.0 - Compliance database tables work</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12661">Add compliance adherence requirement for each security scanner</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12264">Permissions: Viable to Competitive Maturity Plan</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12191">Policy Violations Bot Comment</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11930">Compliance Center Improvements</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11274">Compliance frameworks improvements</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11185">Display security policy violation details to users</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10756">Use bot users to trigger scan execution policies pipelines</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10048">Add support for the Vulnerability Report and Dependency List at the Organization Level</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9971">Use database read model for merge request approval policies</a></li>
+</ul>
+<h4 id=ai-powered-1>Ai-powered</h4>
+<h4 id=core_platform-1>Core_platform</h4>
+<h4 id=modelops-1>Modelops</h4>
+<h3 id=175-2024-10-17>17.5 (2024-10-17)</h3>
+<h4 id=foundations-2>Foundations</h4>
+<h4 id=plan-2>Plan</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/238446">Display epic assignees within the epic list</a></li>
+</ul>
+<h4 id=create-2>Create</h4>
+<h4 id=verify-2>Verify</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab-runner/-/issues/37495">Step Runner BETA</a></li>
+</ul>
+<h4 id=package-2>Package</h4>
+<h4 id=deploy-2>Deploy</h4>
+<h4 id=monitor-2>Monitor</h4>
+<h4 id=secure-2>Secure</h4>
+<h4 id=govern-2>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13295">Custom Adherence configuration</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13004">Third party connector to Snowflake</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12602">Test Streaming Audit Events configuration and surface connection issues</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9705">Prevent branch modification when a policy disables the setting for the given branches</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6980">Allow filtering of streamed audit events</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/3869">Introduce capability to check external APIs for status in Merge Requests</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/736">Comprehensive audit log</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/440697">Add instance setting to toggle enforcement of CI_JOB_TOKEN scope for all projects</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/360592">Allow users to customize their JWT sub claim (MVC)</a> <kbd>Premium</kbd></li>
+</ul>
+<h4 id=ai-powered-2>Ai-powered</h4>
+<h4 id=core_platform-2>Core_platform</h4>
+<h4 id=modelops-2>Modelops</h4>
+<h3 id=176-2024-11-14>17.6 (2024-11-14)</h3>
+<h4 id=foundations-3>Foundations</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/430789">Re-import chosen relation between between source and destination project when migrating by direct transfer</a></li>
+</ul>
+<h4 id=plan-3>Plan</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/31840">Provide Project Level Epics</a></li>
+</ul>
+<h4 id=create-3>Create</h4>
+<h4 id=verify-3>Verify</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/444468">Capstone issue: Improve Project CI/CD Analytics page</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/438540">API: Filter most active runners by ci job tags</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/438539">API: Filter ci job queuing time percentiles by job tags</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/438538">Store ci job tags in ClickHouse</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/438537">PoC for storing ci job tags in ClickHouse</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/424797">Show runner failure rates in Fleet Dashboard - Groups</a> <kbd>Ultimate</kbd></li>
+</ul>
+<h4 id=package-3>Package</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/435030">New API endpoint: GET a list of registry tags in a group</a></li>
+</ul>
+<h4 id=deploy-3>Deploy</h4>
+<h4 id=monitor-3>Monitor</h4>
+<h4 id=secure-3>Secure</h4>
+<h4 id=govern-3>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12339">Consolidation of tables for streaming audit events to various external destinations</a></li>
+</ul>
+<h4 id=ai-powered-3>Ai-powered</h4>
+<h4 id=core_platform-3>Core_platform</h4>
+<h4 id=modelops-3>Modelops</h4>
+<h3 id=177-2024-12-19>17.7 (2024-12-19)</h3>
+<h4 id=foundations-4>Foundations</h4>
+<h4 id=plan-4>Plan</h4>
+<h4 id=create-4>Create</h4>
+<h4 id=verify-4>Verify</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/438418">Select a time period when exporting compute minutes CSV</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/438408">Filter Fleet dashboard metrics by runner tags - Admin View</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/421372">Capstone issue: Show runner failure rates in Fleet Dashboard - Admin View</a> <kbd>Ultimate</kbd></li>
+</ul>
+<h4 id=package-4>Package</h4>
+<h4 id=deploy-4>Deploy</h4>
+<h4 id=monitor-4>Monitor</h4>
+<h4 id=secure-4>Secure</h4>
+<h4 id=govern-4>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/391928">Allow the Issuer claim to be customizable for our Cloud Service Provider OIDC JWT tokens</a> <kbd>Ultimate</kbd></li>
+</ul>
+<h4 id=ai-powered-4>Ai-powered</h4>
+<h4 id=core_platform-4>Core_platform</h4>
+<h4 id=modelops-4>Modelops</h4>
+<h3 id=178-2025-01-16>17.8 (2025-01-16)</h3>
+<h4 id=foundations-5>Foundations</h4>
+<h4 id=plan-5>Plan</h4>
+<h4 id=create-5>Create</h4>
+<h4 id=verify-5>Verify</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/467825">Filter Fleet dashboard metrics by runner tags for Groups</a> <kbd>Ultimate</kbd></li>
+</ul>
+<h4 id=package-5>Package</h4>
+<h4 id=deploy-5>Deploy</h4>
+<h4 id=monitor-5>Monitor</h4>
+<h4 id=secure-5>Secure</h4>
+<h4 id=govern-5>Govern</h4>
+<h4 id=ai-powered-5>Ai-powered</h4>
+<h4 id=core_platform-5>Core_platform</h4>
+<h4 id=modelops-5>Modelops</h4>
+<h3 id=1710-2025-03-20>17.10 (2025-03-20)</h3>
+<h4 id=foundations-6>Foundations</h4>
+<h4 id=plan-6>Plan</h4>
+<h4 id=create-6>Create</h4>
+<h4 id=verify-6>Verify</h4>
+<h4 id=package-6>Package</h4>
+<h4 id=deploy-6>Deploy</h4>
+<h4 id=monitor-6>Monitor</h4>
+<h4 id=secure-6>Secure</h4>
+<h4 id=govern-6>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12264">Permissions: Viable to Competitive Maturity Plan</a></li>
+</ul>
+<h4 id=ai-powered-6>Ai-powered</h4>
+<h4 id=core_platform-6>Core_platform</h4>
+<h4 id=modelops-6>Modelops</h4>
+<h3 id=180-2025-05-15>18.0 (2025-05-15)</h3>
+<h4 id=foundations-7>Foundations</h4>
+<h4 id=plan-7>Plan</h4>
+<h4 id=create-7>Create</h4>
+<h4 id=verify-7>Verify</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/432740">Runner Fleet Dashboard: GA</a></li>
+</ul>
+<h4 id=package-7>Package</h4>
+<h4 id=deploy-7>Deploy</h4>
+<h4 id=monitor-7>Monitor</h4>
+<h4 id=secure-7>Secure</h4>
+<h4 id=govern-7>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11275">Compliance Pipeline to Security Policy Migration</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10391">Improved Admin and Group-level branch protection settings</a> <kbd>Premium</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8084">Refine Policy Application Limits</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/383084">Remove limit CI_JOB_TOKEN access scope</a></li>
+</ul>
+<h4 id=ai-powered-7>Ai-powered</h4>
+<h4 id=core_platform-7>Core_platform</h4>
+<h4 id=modelops-7>Modelops</h4>
+<hr/>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/upcoming-releases/template.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/upcoming-releases/template.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</body>
+</html>

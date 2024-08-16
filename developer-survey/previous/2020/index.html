@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Mapping the DevSecOps Landscape
+|
+GitLab
+</title>
+<meta content='This year, over 3,650 respondents from 21 countries spoke about their DevOps successes, challenges, and ongoing struggles.' name=description />
+<meta content='This year, over 3,650 respondents from 21 countries spoke about their DevOps successes, challenges, and ongoing struggles.' name='twitter:description'/>
+<meta content='This year, over 3,650 respondents from 21 countries spoke about their DevOps successes, challenges, and ongoing struggles.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Mapping the DevSecOps Landscape' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='developer-survey/previous/2020/index.html.haml' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/developer-survey/previous/2020/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/devsecops-survey-results-2020.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/devsecops-survey-results-2020.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Mapping the DevSecOps Landscape' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/developer-survey/previous/2020/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/devsecops-survey.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+</head>
+<body class=blank-body>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<script src='/javascripts/devsecops-survey.js'></script>
+<main class=hero id=hero>
+<section class=container>
+<div class=title-wrapper>
+<div class=row>
+<div class='col-md-5 u-margin-top-xl'>
+<img src="/images/logos/wm_web_text_white.svg" style="height: 40px; margin-bottom: 20px;" alt=""/>
+<h3>Mapping the</h3>
+<h1 style='color: #49F2BA; line-height: 1;'>DevSecOps</h1>
+<h1 style='color: #49F2BA; display: inline-block; line-height: 1; margin-bottom: 20px; vertical-align: baseline;'>Landscape</h1>
+<div style='display: inline-block; vertical-align: baseline;'>
+<h6 style='color: #49F2BA;'>2020</h6>
+<h6 style='color: #49F2BA;'>Survey Results</h6>
+</div>
+<h4 style='margin-bottom: 20px;'>This year, over 3,650 respondents from 21 countries spoke about their DevOps successes, challenges, and ongoing struggles.</h4>
+<p>Three facts stood out: DevOps speeds up release times and improves code quality, but it has also dramatically changed the roles and responsibilities of developers, operations pros, security team members, and testers.</p>
+<p style='margin-bottom: 40px;'>
+<strong>Here's what you need to know.</strong>
+</p>
+<p id=hero-download>
+<a class='btn cta-btn button-white' href='https://learn.gitlab.com/c/2020-devsecops-report?x=G2Poyl'>
+Get the full report
+</a>
+</p>
+</div>
+<div class=col-md-7>
+<img src="/images/dev-survey-2020/gitlab-devsecops-header-bg.svg" style="transform: translate(100px, -50px);" alt=""/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<header class=navbar id=main-nav role=navigation>
+<div class=navbar-inner-wrap>
+<div class=navbar-left>
+<a href="/" class="navbar-brand animated"><img src="/images/logos/wm_web_notext.svg" alt=""/>
+</a></div>
+<div class=navbar-center>
+<div class=navbar-tabs>
+<a class=development href='#development'>Development</a>
+<a class=security href='#security'>Security</a>
+<a class=operations href='#operations'>Operations</a>
+<a class=test href='#test'>Test</a>
+</div>
+</div>
+<div class=navbar-right>
+<a class='btn btn-nav-cta btn-nav-link-cta' href='https://learn.gitlab.com/c/2020-devsecops-report?x=G2Poyl'>
+Get the full report
+<span class=cta-icon>
+<img src="/images/dev-survey-2020/cta-full-report.svg" alt=""/>
+</span>
+</a>
+</div>
+</div>
+</header>
+<main id=generic>
+<section class='container u-margin-top-xl u-margin-bottom-xl'>
+<style>
+  /*<![CDATA[*/
+    #generic {
+      --color-component-highlight: #49F2BA;
+    }
+  /*]]>*/
+</style>
+<div class='row u-margin-top-xl'>
+<div class=col-md-4>
+<div class=empty></div>
+</div>
+<div class='col-md-1 blob-abstract'>
+<img src="/images/dev-survey-2020/gitlab-devsecops-section-mega-blob-generic.svg" alt=""/>
+</div>
+<div class='col-md-2 col-md-offset-1 u-margin-top-xl numeric-highlight' style='text-align: right; position: relative;'>
+<h1>59</h1>
+</div>
+<div class='col-md-4 u-margin-top-xl u-margin-bottom-xl statistic-container'>
+<div class='unit color-component-highlight'>
+<span class=mobile-numeric-highlight>59</span>
+<span>%</span>
+</div>
+<h4>of companies deploy multiple times a day, once a day, or once every few days.</h4>
+<p>That’s up from 45% last year. In other words, DevOps brings truly continuous deployment.</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md u-margin-bottom-md'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_coming-of-age.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Coming of age</h4>
+<p>
+<strong>Over 25% of companies</strong>
+are in the DevOps “sweet spot” of three to five years of practice. And another 37% are well on their way, with between one and three years under their belts.
+</p>
+</div>
+<div class='col-md-1 col-md-offset-1'>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_code-quality.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Want better code quality?</h4>
+<p>
+<strong>It's DevOps FTW</strong>
+The majority of respondents said code quality was the biggest benefit of choosing DevOps.
+</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_work-in-progress.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Still works in progress</h4>
+<p>
+<strong>The majority of respondents</strong>
+aren’t using Kubernetes and microservices yet, but they are investigating them.
+</p>
+</div>
+<div class='col-md-1 col-md-offset-1'>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_testing-is-hard.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Test is still hard</h4>
+<p>
+<strong>Today 47% of companies</strong>
+say testing is the number one reason for delays. That’s down slightly from last year’s survey.
+</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md u-margin-bottom-md'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_job-satisfaction.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Job satisfaction</h4>
+<p>
+<strong>66% of respondents</strong>
+say their organization’s processes and tools allow them to succeed and innovate.
+</p>
+</div>
+</div>
+<div class='row testimonial-section'>
+<blockquote class=testimonial>
+<span class='quotemark color-component-highlight'>&ldquo;</span>
+Pre-deployment tests have provided more confidence that the product is ready to be released; also delivery frequency has increased.
+<span class='quotemark color-component-highlight'>&rdquo;</span>
+</blockquote>
+<div class=testimonial-source>2020 survey participant</div>
+</div>
+</section>
+</main>
+<main id=development>
+<span class=bgblob>
+<img src="/images/dev-survey-2020/gitlab-devsecops-bgblob-development.svg" alt=""/>
+</span>
+<section class='container u-margin-top-xl u-margin-bottom-xl'>
+<style>
+  /*<![CDATA[*/
+    #development {
+      --color-component-highlight: #DE3BED;
+    }
+  /*]]>*/
+</style>
+<div class=row>
+<div class='col-md-6 u-margin-bottom-xl'>
+<h1>Development</h1>
+<h4 class=u-margin-bottom-lg>Development today is more than just writing code. Devs report they’ve taken on traditional operations roles like creating and maintaining infrastructures.</h4>
+</div>
+</div>
+<div class='row u-margin-top-xl'>
+<div class=col-md-4>
+<div class=empty></div>
+</div>
+<div class='col-md-1 blob-abstract'>
+<img src="/images/dev-survey-2020/gitlab-devsecops-section-mega-blob-development.svg" alt=""/>
+</div>
+<div class='col-md-2 col-md-offset-1 u-margin-top-xl numeric-highlight' style='text-align: right; position: relative;'>
+<h1>82</h1>
+</div>
+<div class='col-md-4 u-margin-top-xl u-margin-bottom-xl statistic-container'>
+<div class='unit color-component-highlight'>
+<span class=mobile-numeric-highlight>82</span>
+<span>%</span>
+</div>
+<h4>of developers report they’re releasing code more quickly.</h4>
+<p>Most report two to five times increases although one developer said his team was “light years ahead.”</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_investing-in-the-future.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Investing in the future</h4>
+<p>
+<strong>Last year, respondents told us they wanted to invest in their DevOps processes.</strong>
+And they did. The top three areas for investment this year: CI, SCM, and test automation.
+</p>
+</div>
+<div class='col-md-1 col-md-offset-1'>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_more-testing-stat.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>More testing STAT</h4>
+<p>
+<strong>Devs are nearly unanimous</strong>
+in the need for their organizations to do more testing. Apparently, you can’t have too much testing.
+</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_who-owns-security.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Who owns security?</h4>
+<p>
+<strong>It depends on who you ask.</strong>
+But, more than 25% of developers feel
+<strong>solely responsible</strong>
+for security, indicating that shifting security left has begun in earnest.
+</p>
+</div>
+<div class='col-md-1 col-md-offset-1'>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_code-review.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Code review</h4>
+<p>
+<strong>Love it or hate it, they’re doing it, a lot.</strong>
+Most do code reviews weekly, but many said their organizations are moving to a daily cadence.
+</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md u-margin-bottom-xl'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_hands-off-automation.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Hands off</h4>
+<p>
+<strong>Thanks to DevOps automation improvements,</strong>
+developers are happy to report they no longer have to deal with annoying “manual” tasks like testing and deployments.
+</p>
+</div>
+</div>
+<div class='row u-margin-bottom-md'>
+<div class='col-md-4 col-md-offset-1'>
+<div class=chart>
+<h3 class=chart-title>What changes have you made to your software development process?</h3>
+<ol class=chart-list>
+<li>
+<b>21%</b>
+<span>Continuous integration</span>
+<div class=bar>
+<span style='width: 21%;'></span>
+</div>
+</li>
+<li>
+<b>15%</b>
+<span>Source code management</span>
+<div class=bar>
+<span style='width: 15%;'></span>
+</div>
+</li>
+<li>
+<b>15%</b>
+<span>Automated testing</span>
+<div class=bar>
+<span style='width: 15%;'></span>
+</div>
+</li>
+<li>
+<b>15%</b>
+<span>Continuous delivery</span>
+<div class=bar>
+<span style='width: 15%;'></span>
+</div>
+</li>
+</ol>
+<p class=chart-caption>Respondents were asked to rate their organization’s DevOps processes based on organization, repeatability, and scalability.</p>
+</div>
+</div>
+<div class='col-md-4 col-md-offset-2'>
+<div class=chart>
+<h3 class=chart-title>What traditional “ops” roles are devs taking on?</h3>
+<ol class=chart-list>
+<li>
+<b>35%</b>
+<span>Continuous integration</span>
+<div class=bar>
+<span style='width: 35%;'></span>
+</div>
+</li>
+<li>
+<b>18%</b>
+<span>Source code management</span>
+<div class=bar>
+<span style='width: 18%;'></span>
+</div>
+</li>
+<li>
+<b>14%</b>
+<span>Automated testing</span>
+<div class=bar>
+<span style='width: 14%;'></span>
+</div>
+</li>
+<li>
+<b>12%</b>
+<span>Continuous delivery</span>
+<div class=bar>
+<span style='width: 12%;'></span>
+</div>
+</li>
+</ol>
+<p class=chart-caption>Respondents were asked to rate their organization’s DevOps processes based on organization, repeatability, and scalability.</p>
+</div>
+</div>
+</div>
+<div class='row testimonial-section'>
+<blockquote class=testimonial>
+<span class='quotemark color-component-highlight'>&ldquo;</span>
+We reduced our CI build queue time by 75%, which allowed developers to have test results faster and allows QA to have build artifacts to test faster.
+<span class='quotemark color-component-highlight'>&rdquo;</span>
+</blockquote>
+<div class=testimonial-source>2020 survey participant</div>
+</div>
+</section>
+</main>
+<main id=security>
+<span class=bgblob>
+<img src="/images/dev-survey-2020/gitlab-devsecops-bgblob-security.svg" alt=""/>
+</span>
+<section class='container u-margin-top-xl u-margin-bottom-xl'>
+<style>
+  /*<![CDATA[*/
+    #security {
+      --color-component-highlight: #18A3FF;
+    }
+  /*]]>*/
+</style>
+<div class=row>
+<div class='col-md-6 u-margin-bottom-xl'>
+<h1>Security</h1>
+<h4 class=u-margin-bottom-lg>No longer outsiders looking in, security team members say they’re now part of cross-functional teams working more closely with developers than ever before.</h4>
+</div>
+</div>
+<div class='row u-margin-top-xl'>
+<div class=col-md-4>
+<div class=empty></div>
+</div>
+<div class='col-md-1 blob-abstract'>
+<img src="/images/dev-survey-2020/gitlab-devsecops-section-mega-blob-security.svg" alt=""/>
+</div>
+<div class='col-md-2 col-md-offset-1 u-margin-top-xl numeric-highlight' style='text-align: right; position: relative;'>
+<h1>13</h1>
+</div>
+<div class='col-md-4 u-margin-top-xl u-margin-bottom-xl statistic-container'>
+<div class='unit color-component-highlight'>
+<span class=mobile-numeric-highlight>13</span>
+<span>%</span>
+</div>
+<h4>of companies give developers access to the results of dynamic application security tests.</h4>
+<p>If you want to enable developers to find and fix vulnerabilities, you have to give them the scan results in their pipelines or native workflows.</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_org-shift-left.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>You call that a shift left?</h4>
+<p>
+<strong>Sec pros report that their orgs are shifting security left,</strong>
+but they really aren’t doing the scans to support that claim.
+</p>
+</div>
+<div class='col-md-1 col-md-offset-1'>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_bug-friends.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Why can’t we be friends?</h4>
+<p>
+<strong>Just like in last year’s survey,</strong>
+security pros think devs don’t find enough of the bugs at the earliest stages and are slow to prioritize fixing them.
+</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_clound-native.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Cutting edge is left out</h4>
+<p>
+<strong>Most sec teams don’t have security processes in place</strong>
+for microservices/containers/APIs/cloud native or serverless.
+</p>
+</div>
+<div class='col-md-1 col-md-offset-1'>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_who-owns-it.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Who owns it?</h4>
+<p>
+<strong>Almost 33% of security respondents</strong>
+said they were responsible for security. But nearly as many, 29%, said
+<strong>everyone</strong>
+was responsible for security. Clarity is needed.
+</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md u-margin-bottom-xl'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_testing-traction.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Testing traction</h4>
+<p>
+<strong>Over 42% said testing happens too late in the lifecycle,</strong>
+36% reported it was hard to understand, process, and fix any discovered vulnerabilities, and 31% found prioritizing vulnerability remediation an uphill battle.
+</p>
+</div>
+</div>
+<div class='row u-margin-bottom-md'>
+<div class='col-md-4 col-md-offset-1'>
+<div class=chart>
+<h3 class=chart-title>In your experience how is the security role changing?</h3>
+<ol class=chart-list>
+<li>
+<b>28%</b>
+<span>I am increasingly part of a cross-functional team focused on security</span>
+<div class=bar>
+<span style='width: 28%;'></span>
+</div>
+</li>
+<li>
+<b>27%</b>
+<span>I am more involved in the day to day/more hands on</span>
+<div class=bar>
+<span style='width: 27%;'></span>
+</div>
+</li>
+<li>
+<b>23%</b>
+<span>I am more compliance-focused</span>
+<div class=bar>
+<span style='width: 23%;'></span>
+</div>
+</li>
+<li>
+<b>19%</b>
+<span>My role is not changing</span>
+<div class=bar>
+<span style='width: 19%;'></span>
+</div>
+</li>
+</ol>
+<p class=chart-caption>Respondents were asked to rate their organization’s DevOps processes based on organization, repeatability, and scalability.</p>
+</div>
+</div>
+<div class='col-md-4 col-md-offset-2'>
+<div class=chart>
+<h3 class=chart-title>In your organization, which group is primarily responsible for security?</h3>
+<ol class=chart-list>
+<li>
+<b>33%</b>
+<span>Security</span>
+<div class=bar>
+<span style='width: 33%;'></span>
+</div>
+</li>
+<li>
+<b>29%</b>
+<span>Everybody</span>
+<div class=bar>
+<span style='width: 29%;'></span>
+</div>
+</li>
+<li>
+<b>21%</b>
+<span>Developers</span>
+<div class=bar>
+<span style='width: 21%;'></span>
+</div>
+</li>
+<li>
+<b>12%</b>
+<span>Operations</span>
+<div class=bar>
+<span style='width: 12%;'></span>
+</div>
+</li>
+</ol>
+<p class=chart-caption>We’re excited, but it’s important to note that 60% of survey respondents are GitLab users.</p>
+</div>
+</div>
+</div>
+<div class='row testimonial-section'>
+<blockquote class=testimonial>
+<span class='quotemark color-component-highlight'>&ldquo;</span>
+(Security) is becoming less focused into silo positions and more of a Jack of all trades role.
+<span class='quotemark color-component-highlight'>&rdquo;</span>
+</blockquote>
+<div class=testimonial-source>2020 survey participant</div>
+</div>
+</section>
+</main>
+<main id=operations>
+<span class=bgblob>
+<img src="/images/dev-survey-2020/gitlab-devsecops-bgblob-operations.svg" alt=""/>
+</span>
+<section class='container u-margin-top-xl u-margin-bottom-xl'>
+<style>
+  /*<![CDATA[*/
+    #operations {
+      --color-component-highlight: #FFDE75;
+    }
+  /*]]>*/
+</style>
+<div class=row>
+<div class='col-md-6 u-margin-bottom-xl'>
+<h1>Operations</h1>
+<h4 class=u-margin-bottom-lg>Perhaps nowhere more than in operations can the sweeping changes wrought by DevOps be seen. Ops is the place where process changes, tech changes, and cultural changes all seem to collide.</h4>
+</div>
+</div>
+<div class='row u-margin-top-xl'>
+<div class=col-md-4>
+<div class=empty></div>
+</div>
+<div class='col-md-1 blob-abstract'>
+<img src="/images/dev-survey-2020/gitlab-devsecops-section-mega-blob-operations.svg" alt=""/>
+</div>
+<div class='col-md-2 col-md-offset-1 u-margin-top-xl numeric-highlight' style='text-align: right; position: relative;'>
+<h1>52</h1>
+</div>
+<div class='col-md-4 u-margin-top-xl u-margin-bottom-xl statistic-container'>
+<div class='unit color-component-highlight'>
+<span class=mobile-numeric-highlight>52</span>
+<span>%</span>
+</div>
+<h4>of operations team members say their first priority today is managing cloud services.</h4>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_changing-roles.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Changing roles</h4>
+<p>
+<strong>Over 60%</strong>
+report new and different responsibilities because of DevOps.
+</p>
+</div>
+<div class='col-md-1 col-md-offset-1'>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_automation-on-the-move.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Automation is on the move</h4>
+<p>
+<strong>Almost 40% of operations team members</strong>
+said their development lifecycle is “mostly” automated.
+</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md u-margin-bottom-xl'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_blending-dev.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Blending in with dev</h4>
+<p>
+<strong>Almost 70% of ops pros</strong>
+report that devs can provision their own environments, a sure sign of shifting responsibilities brought on by new processes and changing technologies.
+</p>
+</div>
+<div class='col-md-1 col-md-offset-1'>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_staying-secure.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Staying secure</h4>
+<p>
+<strong>Over 21% of ops pros</strong>
+say they feel solely responsible for security in their organizations.
+</p>
+</div>
+</div>
+<div class='row u-margin-bottom-md'>
+<div class='col-md-4 col-md-offset-1'>
+<div class=chart>
+<h3 class=chart-title>How automated is your development lifecycle?</h3>
+<ol class=chart-list>
+<li>
+<b>38%</b>
+<span>Mostly</span>
+<div class=bar>
+<span style='width: 38%;'></span>
+</div>
+</li>
+<li>
+<b>35%</b>
+<span>Partially</span>
+<div class=bar>
+<span style='width: 35%;'></span>
+</div>
+</li>
+<li>
+<b>16%</b>
+<span>Just beginning</span>
+<div class=bar>
+<span style='width: 16%;'></span>
+</div>
+</li>
+<li>
+<b>3%</b>
+<span>No automation at all</span>
+<div class=bar>
+<span style='width: 3%;'></span>
+</div>
+</li>
+</ol>
+<p class=chart-caption>Respondents were asked to rate their organization’s DevOps processes based on organization, repeatability, and scalability.</p>
+</div>
+</div>
+<div class='col-md-4 col-md-offset-2'>
+<div class=chart>
+<h3 class=chart-title>How many monitoring tools do you use?</h3>
+<ol class=chart-list>
+<li>
+<b>65%</b>
+<span>Between two and five</span>
+<div class=bar>
+<span style='width: 65%;'></span>
+</div>
+</li>
+<li>
+<b>18%</b>
+<span>One</span>
+<div class=bar>
+<span style='width: 18%;'></span>
+</div>
+</li>
+<li>
+<b>12%</b>
+<span>None</span>
+<div class=bar>
+<span style='width: 12%;'></span>
+</div>
+</li>
+</ol>
+<p class=chart-caption>We’re excited, but it’s important to note that 60% of survey respondents are GitLab users.</p>
+</div>
+</div>
+</div>
+<div class='row testimonial-section'>
+<blockquote class=testimonial>
+<span class='quotemark color-component-highlight'>&ldquo;</span>
+[Operations today] is 60% new project work and 40% operations/fire-fighting/developer support.
+<span class='quotemark color-component-highlight'>&rdquo;</span>
+</blockquote>
+<div class=testimonial-source>2020 survey participant</div>
+</div>
+</section>
+</main>
+<main id=test>
+<span class=bgblob>
+<img src="/images/dev-survey-2020/gitlab-devsecops-bgblob-test.svg" alt=""/>
+</span>
+<section class='container u-margin-top-xl u-margin-bottom-xl'>
+<style>
+  /*<![CDATA[*/
+    #test {
+      --color-component-highlight: #FF7575;
+    }
+  /*]]>*/
+</style>
+<div class=row>
+<div class='col-md-6 u-margin-bottom-xl'>
+<h1>Test</h1>
+<h4 class=u-margin-bottom-lg>Testing is hard, and there’s never enough of it. But one bright spot: Almost 35% of testers surveyed said their organizations were more than halfway to full test automation.</h4>
+</div>
+</div>
+<div class='row u-margin-top-xl'>
+<div class=col-md-4>
+<div class=empty></div>
+</div>
+<div class='col-md-1 blob-abstract'>
+<img src="/images/dev-survey-2020/gitlab-devsecops-section-mega-blob-test.svg" alt=""/>
+</div>
+<div class='col-md-2 col-md-offset-1 u-margin-top-xl numeric-highlight' style='text-align: right; position: relative;'>
+<h1>59</h1>
+</div>
+<div class='col-md-4 u-margin-top-xl u-margin-bottom-xl statistic-container'>
+<div class='unit color-component-highlight'>
+<span class=mobile-numeric-highlight>47</span>
+<span>%</span>
+</div>
+<h4>of testers report their QA departments aren’t shrinking</h4>
+<p>despite advances in automation their teams are the same size they were last year.</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_closer-collabs.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>DevSecOps = closer collabs</h4>
+<p>
+<strong>About 33% of testers</strong>
+report closer (and presumably happier) collaboration with developers than ever before.
+</p>
+</div>
+<div class='col-md-1 col-md-offset-1'>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_automation.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Automation is happening, slowly</h4>
+<p>
+<strong>Just 12%</strong>
+claim to have full test automation.
+</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_org-shift-left.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Some shift left</h4>
+<p>
+<strong>Almost 75%</strong>
+of testers say their orgs have shifted testing left (meaning closer to development).
+</p>
+</div>
+<div class='col-md-1 col-md-offset-1'>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_qa-dept.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>QA departments aren’t shrinking</h4>
+<p>
+<strong>Almost 60%</strong>
+said their teams are the same size they were last year, despite advances in automation.
+</p>
+</div>
+</div>
+<div class='row icon-list-columns u-margin-top-md u-margin-bottom-xl'>
+<div class=col-md-1>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_bots.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>The bots have it</h4>
+<p>
+<strong>A small but intriguing percentage</strong>
+of test teams (16%) either use “bots” to review their code or have an AI/ML tool in place for testing.
+</p>
+</div>
+<div class='col-md-1 col-md-offset-1'>
+<img src="/images/dev-survey-2020/icons/devsecops-survey-iconography_securing-security.svg" alt=""/>
+</div>
+<div class=col-md-4>
+<h4 class=color-component-highlight>Securing security</h4>
+<p>
+<strong>23% of testers</strong>
+think they’re solely responsible for security in their organizations.
+</p>
+</div>
+</div>
+<div class='row u-margin-bottom-md'>
+<div class='col-md-4 col-md-offset-1'>
+<div class=chart>
+<h3 class=chart-title>How have your daily responsibilities changed because of DevOps?</h3>
+<ol class=chart-list>
+<li>
+<b>30%</b>
+<span>I’m working more closely with developers</span>
+<div class=bar>
+<span style='width: 30%;'></span>
+</div>
+</li>
+<li>
+<b>26%</b>
+<span>There is more test automation</span>
+<div class=bar>
+<span style='width: 26%;'></span>
+</div>
+</li>
+<li>
+<b>16%</b>
+<span>I feel like I have a more visible seat at the table</span>
+<div class=bar>
+<span style='width: 16%;'></span>
+</div>
+</li>
+<li>
+<b>11%</b>
+<span>Things haven’t changed</span>
+<div class=bar>
+<span style='width: 11%;'></span>
+</div>
+</li>
+</ol>
+<p class=chart-caption>Respondents were asked to rate their organization’s DevOps processes based on organization, repeatability, and scalability.</p>
+</div>
+</div>
+<div class='col-md-4 col-md-offset-2'>
+<div class=chart>
+<h3 class=chart-title>Where is test located in your organization?</h3>
+<ol class=chart-list>
+<li>
+<b>56%</b>
+<span>Embedded with developers</span>
+<div class=bar>
+<span style='width: 56%;'></span>
+</div>
+</li>
+<li>
+<b>22%</b>
+<span>Are a separate organization</span>
+<div class=bar>
+<span style='width: 22%;'></span>
+</div>
+</li>
+<li>
+<b>15%</b>
+<span>Are part of operations</span>
+<div class=bar>
+<span style='width: 15%;'></span>
+</div>
+</li>
+</ol>
+<p class=chart-caption>We’re excited, but it’s important to note that 60% of survey respondents are GitLab users.</p>
+</div>
+</div>
+</div>
+<div class='row testimonial-section'>
+<blockquote class=testimonial>
+<span class='quotemark color-component-highlight'>&ldquo;</span>
+We do TDD. QA and dev act as a team. We have automated tests running parallel with developing code.
+<span class='quotemark color-component-highlight'>&rdquo;</span>
+</blockquote>
+<div class=testimonial-source>2020 survey participant</div>
+</div>
+</section>
+</main>
+<main class=download id=download>
+<section class='container u-margin-top-xl' style='text-align: center;'>
+<div class=row>
+<div class='col-md-8 col-md-offset-2'>
+<h2 style='color: #49F2BA;'>Explore the new DevOps landscape</h2>
+<p>Chart your course in a rapidly changing technological landscape to move your teams towards greater collaboration and velocity.</p>
+<div class=form-to-resource-outer-wrapper>
+<div class=form-to-resource-content>
+<div class=form-to-resource-content-section>
+<div class=form-container>
+<h3 class=margin-top0></h3>
+<div class=form>
+<script src='//page.gitlab.com/js/forms2/js/forms2.min.js'></script>
+<form id=mktoForm_1002></form>
+<script>
+var gatedFormAfterSuccessDo = function()
+{
+  if($('.f2r-cta-subtitle').length){
+    $('.f2r-cta-subtitle').hide();
+  };
+  $('.confirmform').attr('style', 'visibility: visible');
+  $('.confirmform').attr('style', 'height: initial');
+  if ($('.webcast-video-container').length)
+  {
+    $('.webcast-video-container').css('display', 'block');
+  }
+  $('html, body').animate({scrollTop: parseInt($('#confirmform').offset().top-100)}, 500);
+  if(typeof callbackMktoFormOnSuccess !== "undefined")
+  {
+    callbackMktoFormOnSuccess();
+  };
+};
+</script>
+<script>
+  //<![CDATA[
+    var consoleLogsEnable = new Boolean(false);
+    var formNumber = 1002;
+    MktoForms2.setOptions(
+    {
+      formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+    });
+    MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1002, function(form)
+    {
+      var destinationUrlId = $('#destination-url');
+      const oldDestinationUrl = destinationUrlId.attr('href');
+      var emailInput = $('.mktoForm .mktoEmailField');
+      if(typeof(Demandbase) === "object")
+      {
+        Demandbase.utils.loadFormModule();
+      };
+      emailInput.change(function()
+      {
+        var emailValue = emailInput.val();
+        if(oldDestinationUrl !== undefined)
+        {
+          var newDestinationUrl = oldDestinationUrl.replace('lb_email=', 'lb_email='+emailValue);
+          destinationUrlId.attr('href', newDestinationUrl);
+        }
+      });
+      //
+      var classnamesFromForValues;
+      var mktoFormLabels = document.getElementsByClassName('mktoLabel');
+      for ( var count = 0; count < mktoFormLabels.length; count++ ) 
+      {
+        if (mktoFormLabels[count].htmlFor != '') 
+        {
+          var labelValue = mktoFormLabels[count].htmlFor.toLowerCase();
+          mktoFormLabels[count].closest('.mktoFormRow').classList.add(labelValue);
+        };
+      };
+      //
+      form.onSuccess(function()
+      {
+        dataLayer.push(
+        {
+          'event' : 'resources', 
+          'mktoFormId' : form.getId(),
+          'eventCallback' : function()
+          {
+            if(consoleLogsEnable == true)
+            {
+              console.log(form.getId());
+            };
+            form.getFormElem().hide();
+            gatedFormAfterSuccessDo();
+          }, 'eventTimeout' : 3000
+        });
+        return false;
+      });
+    });
+  //]]>
+</script>
+<div class=confirmform id=confirmform style='visibility:hidden;height:0;'>
+<div class=centered-form-info>
+<h3>
+<a class=destination-url href='/resources/downloads/2020-devsecops-report.pdf' id=destination-url target=_blank>Click here to view the ebook</a>
+</h3>
+<p>You will also receive a link to the report to your inbox shortly.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class=u-margin-top-lg>
+<a class=previous href='/developer-survey/previous/'>Previous years survey results</a>
+</p>
+</div>
+</div>
+</section>
+</main>
+<img src="/images/dev-survey-2020/gitlab-devsecops-footer-separator-blob.svg" style="background: #ffffff; height: 150px; width: 100%;" alt=""/>
+<main class='end-ctas u-padding-top-xl u-padding-bottom-md lightbg' style='text-align: center;'>
+<section class=container>
+<div class=row>
+<div class='col-md-8 col-md-offset-2 u-margin-bottom-sm'>
+<img src="/images/logos/footer_logo.svg" class=u-margin-bottom-xs style="width: 80px;" alt=""/>
+<h2 class=text-purple>GitLab is committed to <em>better</em> DevOps</h2>
+<p class='text-purple u-margin-bottom-sm'>Your thoughts in this survey shape how we build products to help teams strengthen collaboration, iteration, and delivery.</p>
+<p>
+<img src="/images/dev-survey-2020/gitlab-devsecops-icon-button-decoration-left.svg" class=footer-decoration style="display: inline-block; margin-right: 20px; width: 80px;" alt=""/>
+<a class='btn cta-btn orange' href='/'>
+Learn more about GitLab and DevOps
+<span class=cta-icon>
+<img src="/images/dev-survey-2020/cta-arrow.svg" alt=""/>
+</span>
+</a>
+<img src="/images/dev-survey-2020/gitlab-devsecops-icon-button-decoration-right.svg" class=footer-decoration style="display: inline-block; margin-left: 20px; width: 80px;" alt=""/>
+</p>
+<ul class='text-center footer-social'>
+<li>
+<a href="https://twitter.com/gitlab"><i class='fab fa-twitter'></i>
+<span class=sr-only>Twitter</span>
+</a></li>
+<li>
+<a href="https://www.facebook.com/gitlab"><i class='fab fa-facebook'></i>
+<span class=sr-only>Facebook</span>
+</a></li>
+<li>
+<a href="https://www.youtube.com/channel/UCnMGQ8QHMAnVIsI3xJrihhg"><i class='fab fa-youtube'></i>
+<span class=sr-only>YouTube</span>
+</a></li>
+<li>
+<a href="https://www.linkedin.com/company/gitlab-com"><i class='fab fa-linkedin'></i>
+<span class=sr-only>LinkedIn</span>
+</a></li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<footer class=footer>
+<a href='/'>
+<svg width=65 height=60 viewBox="0 0 210 194" class=footer-logo>
+<path d="M105.0614,193.655 L105.0614,193.655 L143.7014,74.734 L66.4214,74.734 L105.0614,193.655 L105.0614,193.655 Z" fill="#E24329" class="logo-svg-shape logo-dark-orange-shape"/>
+<path d="M105.0614,193.6548 L66.4214,74.7338 L12.2684,74.7338 L105.0614,193.6548 Z" fill="#FC6D26" class="logo-svg-shape logo-orange-shape"/>
+<path d="M12.2685,74.7341 L12.2685,74.7341 L0.5265,110.8731 C-0.5445,114.1691 0.6285,117.7801 3.4325,119.8171 L105.0615,193.6551 L12.2685,74.7341 Z" fill="#FCA326" class="logo-svg-shape logo-light-orange-shape"/>
+<path d="M12.2685,74.7342 L66.4215,74.7342 L43.1485,3.1092 C41.9515,-0.5768 36.7375,-0.5758 35.5405,3.1092 L12.2685,74.7342 Z" fill="#E24329" class="logo-svg-shape logo-dark-orange-shape"/>
+<path d="M105.0614,193.6548 L143.7014,74.7338 L197.8544,74.7338 L105.0614,193.6548 Z" fill="#FC6D26" class="logo-svg-shape logo-orange-shape"/>
+<path d="M197.8544,74.7341 L197.8544,74.7341 L209.5964,110.8731 C210.6674,114.1691 209.4944,117.7801 206.6904,119.8171 L105.0614,193.6551 L197.8544,74.7341 Z" fill="#FCA326" class="logo-svg-shape logo-light-orange-shape"/>
+<path d="M197.8544,74.7342 L143.7014,74.7342 L166.9744,3.1092 C168.1714,-0.5768 173.3854,-0.5758 174.5824,3.1092 L197.8544,74.7342 Z" fill="#E24329" class="logo-svg-shape logo-dark-orange-shape"/>
+</svg>
+</a>
+<div class='animated container'>
+<ul class='text-center footer-social'>
+<li>
+<a href="https://twitter.com/gitlab"><i class='fab fa-twitter'></i>
+<span class=sr-only>Twitter</span>
+</a></li>
+<li>
+<a href="https://www.facebook.com/gitlab"><i class='fab fa-facebook'></i>
+<span class=sr-only>Facebook</span>
+</a></li>
+<li>
+<a href="https://www.youtube.com/channel/UCnMGQ8QHMAnVIsI3xJrihhg"><i class='fab fa-youtube'></i>
+<span class=sr-only>YouTube</span>
+</a></li>
+<li>
+<a href="https://www.linkedin.com/company/gitlab-com"><i class='fab fa-linkedin'></i>
+<span class=sr-only>LinkedIn</span>
+</a></li>
+</ul>
+</div>
+</footer>
+<span class=footer-after-outer-wrapper>
+<span class=footer-after-inner-wrapper>
+<span class=footer-after-0></span>
+<span class=footer-after-1></span>
+<span class=footer-after-2></span>
+<span class=footer-after-3></span>
+<span class=footer-after-4></span>
+<span class=footer-after-5></span>
+<span class=footer-after-6></span>
+<span class=footer-after-7></span>
+<span class=footer-after-8></span>
+<span class=footer-after-9></span>
+</span>
+</span>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+</body>
+</html>
+<script defer=true src='/javascripts/cbextras.js'></script>

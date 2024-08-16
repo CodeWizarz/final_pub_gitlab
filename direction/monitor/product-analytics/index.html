@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Group Direction - Product Analytics
+|
+GitLab
+</title>
+<meta content='The Product Direction for GitLab&#39;s Product Analytics Group.' name=description />
+<meta content='The Product Direction for GitLab&#39;s Product Analytics Group.' name='twitter:description'/>
+<meta content='The Product Direction for GitLab&#39;s Product Analytics Group.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Group Direction - Product Analytics' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/monitor/product-analytics/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/monitor/product-analytics/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Group Direction - Product Analytics' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/monitor/product-analytics/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Group Direction - Product Analytics
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/justinfarris'>
+<img
+src='/images/team/justinfarris.jpg'
+class=codeowner-avatar-img
+alt='Justin Farris'
+title='Justin Farris'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/stkerr'>
+<img
+src='/images/team/samkerr.jpeg'
+class=codeowner-avatar-img
+alt='Sam Kerr'
+title='Sam Kerr'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/monitor/product-analytics/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/monitor/">Stage Direction - Monitor</a></li><li>Group Direction - Product Analytics</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#overview-and-vision" id=markdown-toc-overview-and-vision>Overview and Vision</a> <ul>
+<li><a href="#what-is-product-analytics" id=markdown-toc-what-is-product-analytics>What is Product Analytics?</a></li>
+<li><a href="#how-can-you-use-product-analytics-data-in-your-devsecops-lifecycle" id=markdown-toc-how-can-you-use-product-analytics-data-in-your-devsecops-lifecycle>How can you use Product Analytics data in your DevSecOps lifecycle?</a></li>
+<li><a href="#our-unique-opportunity" id=markdown-toc-our-unique-opportunity>Our unique opportunity</a></li>
+<li><a href="#use-cases" id=markdown-toc-use-cases>Use Cases</a> <ul>
+<li><a href="#starting-criteria" id=markdown-toc-starting-criteria>Starting Criteria</a></li>
+<li><a href="#our-ideal-first-customer" id=markdown-toc-our-ideal-first-customer>Our ideal first customer</a> <ul>
+<li><a href="#use-cases-under-exploration" id=markdown-toc-use-cases-under-exploration>Use Cases under exploration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#strategy-and-product-categories" id=markdown-toc-strategy-and-product-categories>Strategy and Product Categories</a> <ul>
+<li><a href="#current-categories" id=markdown-toc-current-categories>Current Categories</a> <ul>
+<li><a href="#additional-categories-of-the-outer-loop" id=markdown-toc-additional-categories-of-the-outer-loop>Additional Categories of the outer loop</a></li>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a> <ul>
+<li><a href="#expanding-our-data-query-and-visualization-experiences" id=markdown-toc-expanding-our-data-query-and-visualization-experiences>Expanding our data query and visualization experiences</a></li>
+</ul>
+</li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a> <ul>
+<li><a href="#general-availability-of-product-analytics" id=markdown-toc-general-availability-of-product-analytics>General availability of Product Analytics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#competitor-pricing" id=markdown-toc-competitor-pricing>Competitor Pricing</a></li>
+</ul>
+</li>
+<li><a href="#how-we-do-it" id=markdown-toc-how-we-do-it>How we do it</a> <ul>
+<li><a href="#performance-indicators" id=markdown-toc-performance-indicators>Performance Indicators</a></li>
+<li><a href="#jobs-to-be-done" id=markdown-toc-jobs-to-be-done>Jobs to Be Done</a></li>
+<li><a href="#personas" id=markdown-toc-personas>Personas</a></li>
+</ul>
+</li>
+<li><a href="#competitors" id=markdown-toc-competitors>Competitors</a></li>
+</ul>
+<p>Welcome to the GitLab Product Analytics group direction.</p>
+<h1 id=overview-and-vision>Overview and Vision</h1>
+<p>The Product Analytics group vision is in alignment and contributes to the <a href="/direction/monitor/#vision">Monitor Stage vision</a> and simply stated is ". . to continue to extend DevOps across its most painful gap - measuring user value." Giving teams the tools they need to stay user-focused can have positive impact on their performance, job satisfaction and productivity as noted in the <a href="https://cloud.google.com/blog/products/devops-sre/announcing-the-2023-state-of-devops-report">Accelerate State of DevOps 2023</a>.</p>
+<h2 id=what-is-product-analytics>What is Product Analytics?</h2>
+<p>GitLab's Product Analytics feature empowers businesses building applications to make data-driven decisions, optimize user experiences, drive growth, and stay competitive by focusing on customer value. Product Analytics provides key information about who your users are, how they behave, their common adoption patterns and workflows, and any friction points in key business critical funnels through your application. By keeping this information close to your development teams, they can quickly see how their code translates to user outcomes.</p>
+<h2 id=how-can-you-use-product-analytics-data-in-your-devsecops-lifecycle>How can you use Product Analytics data in your DevSecOps lifecycle?</h2>
+<ul>
+<li><strong>Understand user behavior</strong>: Product analytics provides insights into how users interact with an application. It tracks user actions, such as clicks, navigation paths, and feature usage, helping businesses understand user behavior patterns. This understanding is invaluable for optimizing user experience, identifying pain points, and making data-driven decisions to enhance the product.</li>
+<li><strong>Identify friction points in the UX</strong>: By analyzing user behavior, businesses can identify areas where users may encounter difficulties or frustrations within the application. With this information, UX designers and developers can make informed changes to improve the user interface, streamline processes, and enhance overall usability.</li>
+<li><strong>Feature Prioritization</strong>: By helping GitLab customers focus on the features and workflows that deliver the most value to their users, businesses can allocate resources effectively and drive product innovation.</li>
+<li><strong>Measuring Product Performance</strong>: Product analytics provides quantitative data on key performance indicators (KPIs) such as user engagement, retention rates, conversion rates, and churn rates. By monitoring these metrics, businesses can evaluate the success of their application and track progress over time.</li>
+<li><strong>Optimizing Conversion Funnel</strong>: For applications with conversion goals (such as sign-ups, purchases, or subscriptions), product analytics helps optimize the conversion funnel. By analyzing user behavior at each stage of the funnel, businesses can identify barriers to conversion and implement targeted strategies to improve conversion rates.</li>
+<li><strong>Iterative Improvement</strong>: Product analytics supports an iterative approach to product development by providing continuous feedback on user interactions and outcomes. Businesses can use this feedback loop to test hypotheses, iterate on features, and validate product enhancements, leading to a more responsive and customer-centric development process.</li>
+</ul>
+<h2 id=our-unique-opportunity>Our unique opportunity</h2>
+<p>Combining Product Analytics with the comprehensive suite of tools offered by GitLab’s One Platform yields a multitude of benefits for teams and organizations. By leveraging Product Analytics alongside GitLab's robust version control, issue tracking, CI/CD pipelines, and collaboration features, teams gain unprecedented visibility into the entire secure software development lifecycle. They can seamlessly track user behavior, gather valuable adoption insights, and make data-driven decisions right from within their development environment. This integration empowers teams to iterate rapidly, prioritize features effectively, and optimize user experiences based on real-time feedback. Additionally, by centralizing data within GitLab, teams can streamline communication, foster collaboration, and ensure alignment across departments, ultimately driving greater efficiency and innovation throughout the development process.</p>
+<p>Product managers can track an issue all the way from identification to release, and now go a step further to validate that the bug resolution or new feature has the expected customer impact, all without leaving the GitLab platform. The same goes for the development team, who now no longer need access to a separate tool to ensure that the code they are writing has the desired effect on the user outcomes.</p>
+<p>With our GA release of Product Analytics, we also aim to simplify the instrumentation process that is a common pain point for customers. We are collaborating with the <a href="https://about.gitlab.com/direction/monitor/analytics-instrumentation">Analytics Instrumentation Group</a> who are providing interfaces to developers to enable the gathering of insights. And, by storing dashboard configuration-as-code (CaC), we can follow developer best practices for iterative development and version control of their custom visualizations.
+In addition to the benefits mentioned previously, our ability to store the user's application code presents a significant longer-term opportunity. By leveraging this contextual information, we can offer more comprehensive analytics solutions than any other product. For instance, we could explore the possibility of suggesting or automatically adding analytics instrumentation code to different parts of the app. While this requires extensive research, one potential outcome could be direct suggestions within merge requests (MRs) along with code snippets to automatically instrument newly added sections of code.</p>
+<p>Finally, GitLab's unique capabilities with respect to AI provide opportunities that will be difficult for other companies to replicate. GitLab Duo and other AI features will give us the ability to help address pain points we've identified as well as helping improve user workflows. Some ideas around this relate to offering automatic code for instrumentation, automated suggestions for reporting and charting of collected data, and providing a question-and-answer interface for engaging with the data. Since AI is so new, we are actively exploring this area and tracking it in this <a href="https://gitlab.com/groups/gitlab-org/-/epics/11932">epic</a>.</p>
+<h2 id=use-cases>Use Cases</h2>
+<p>There are many use cases for Product Analytics. One way you can think about these is to segment them by the type of digital product analyzes and the subsequent questions those who create it would seek to be answer.</p>
+<h3 id=starting-criteria>Starting Criteria</h3>
+<p>Our initial use case is focused on our ability to <a href="/handbook/values/#dogfooding">dogfood</a> GitLab’s own applications. Our initial starting criteria for a customer profile is that they:</p>
+<ul>
+<li>Develop applications, this can be internal or external facing</li>
+<li>Have a particular interest in views, customer behavior partners, usage funnels, and conversion pain points</li>
+</ul>
+<h3 id=our-ideal-first-customer>Our ideal first customer</h3>
+<p>The ideal customers for Product Analytics are customers already invested in the GitLab Ultimate DevSecOps platform. Customers may be exploring GitLab's Product Analytics offering for various reasons. They may be on the journey of tool consolidation and see the vision of how the GitLab One Platform can streamline their workflows. Other customers may already have invested in a solution like MixPanel or Amplitude, but feel like it is a siloed tool (meaning that only a PM or product leadership reviews the data) and are looking to reevaluate the way they integrate this data into their day to day analysis. Finally, they may have no product analytics tracking today, leaving them with a blindspot around customer behavior and adoption trends that are critical to building a data-driven roadmap for their applications. Any of these use cases make them an ideal candidate for evaluating Product Analytics.</p>
+<h4 id=use-cases-under-exploration>Use Cases under exploration</h4>
+<p>Understanding the relationship between how your system operates and how your customers perceive the value of that system is critical to maintaining an optimized environment. Because GitLab is uniquely positioned to collect, store, and visualize data from multiple sources, we can provide an end-to-end solution for monitoring that complete story.</p>
+<ul>
+<li>Marketing analytics for marketing and sales organizations
+<ul>
+<li>This might include capabilities such as page clicks or traffic trends over time and how they relate to the effectiveness of a marketing campaign or lead generation strategy.</li>
+<li>Example companies in this space: <a href="https://analytics.google.com/analytics/web">Google Analytics</a></li>
+</ul>
+</li>
+<li>Application performance monitoring for software reliability engineering organizations
+<ul>
+<li>This includes capabilities such as crash debugging, error tracking analytics, meshed with product health measures, uptime measurements, and reliability metrics.</li>
+<li>Example companies in this space: <a href="https://sentry.io/welcome/">Sentry</a>, <a href="https://firebase.google.com/products/crashlytics">Firebase Crashlytics</a>, <a href="https://raygun.com/">Raygun</a>, and <a href="https://rollbar.com/">Rollbar</a></li>
+<li>The <a href="/direction/monitor/observability">Observability Group</a> will build core experiences to address the use cases that we can, then consolidate into robust dashboard visualizations that include Product Analytics data as well.</li>
+</ul>
+</li>
+<li>GitLab Usage Analytics
+<ul>
+<li>This includes data like DORA metrics or Value Stream Analytics, which are use cases for <a href="/direction/value_stream_management">Value Stream management</a>.</li>
+</ul>
+</li>
+<li>Drop-in replacements for 3rd party APIs
+<ul>
+<li>Our instrumentation APIs should be easy to use and built on open-source tools, such as <a href="https://github.com/snowplow">Snowplow</a>, but we are not targeting explicit API compatibility with other offerings.</li>
+</ul>
+</li>
+</ul>
+<p>Note that while the above use cases and personas were not the initial focus of Product Analytics, we see the unique opportunity GitLab platform has to provide a unified visualization experience that combines system health and customer value.</p>
+<h1 id=strategy-and-product-categories>Strategy and Product Categories</h1>
+<p>Our Strategy to achieve this vision is to start by helping users store, query and visualize quantitative data to measure user value. We will collaborate with the Analytics Instrumentation team to give users the tools they need to instrument and collect data from deployed applications.</p>
+<h2 id=current-categories>Current Categories</h2>
+<p>Given our focus on developers, the software delivery value stream, and DevOps - we will compose our new DevOps stage, Analyze, based on the set of categories we commonly see in User Engagement <a href="#competitors">competitors</a>.</p>
+<p>Currently the Product Analytics group includes two categories.</p>
+<ul>
+<li>Product Analytics Visualizations - This category is focused on helping customers understand and gain insights from usage patterns in their software.</li>
+<li>Product Analytics Data Management - This category is focused on the Bring Your Own Cluster capabilities to support the Self Managed customers implementing Product Analytics.</li>
+</ul>
+<p>In the future we envision more categories as we broaden our scope to cover additional personas and user cases. Those new categories include:</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8445">Experiments</a> - Crafting hypothesis driven tests to determine product improvement success</li>
+<li>In-App Messaging - Engage users from directly within your product and shifting to qualitative data collection</li>
+<li>Customer Surveys - Conduct polls and other inquiries to determine customer preference, reaction and satisfaction continuing down the path of qualitative data</li>
+<li>Session Recording - Understanding and analyzing detailed individual usage patterns</li>
+</ul>
+<h3 id=additional-categories-of-the-outer-loop>Additional Categories of the outer loop</h3>
+<p>There are a number of existing (or considered) product categories in GitLab that could be considered part of the outer loop that the Analytics section will partner closely with to ensure we provide a cohesive experience. Those include:</p>
+<ul>
+<li><a href="/direction/monitor/observability/error_tracking/">Error Tracking</a> - For user experienced errors</li>
+<li><a href="/direction/delivery/feature_flags/">Feature Flags</a> - For experiments and A/B testing</li>
+<li><a href="/direction/service_management/service_desk/">Service Desk</a> - For Customer Surveys and feedback</li>
+<li>Real User Monitoring - For Error Tracking and Session Recording</li>
+</ul>
+<p>We plan to collaborate and build with these categories where possible, rather than re-inventing new solutions for these related use cases.</p>
+<h3 id=what-we-are-currently-working-on>What we are currently working on</h3>
+<h4 id=expanding-our-data-query-and-visualization-experiences>Expanding our data query and visualization experiences</h4>
+<p>The Product Analytics team is now focused on expanding the data visualization capabilities to handle more complex, <a href="https://gitlab.com/groups/gitlab-org/-/epics/13798">cross-stage use cases</a> that include Observability and Value Stream data sources. We are working to add <a href="https://gitlab.com/groups/gitlab-org/-/epics/13801">table stakes dashboard features</a> that empower our customers to query data from multiple sources in a unified manner, thus unlocking the ability to tell an end-to-end, system health-to-customer value story in one space.</p>
+<p>Additionally, the team is evaluating our deployment options, architecture, and infrastructure options to ensure that customers have a seamless experience when onboarding both Observability and Product Analytics.</p>
+<p>Some of these features to improve the overall experience are:</p>
+<ul>
+<li>Improved data querying using the <a href="https://gitlab.com/groups/gitlab-org/-/epics/13685">filter bar in the Visualization designer</a></li>
+<li>First MVC for <a href="https://gitlab.com/groups/gitlab-org/-/epics/9016">funnel analysis</a></li>
+<li>Ability to <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/461079">duplicate a dashboard</a> to unlock the ability for GitLab to deliver pre-built dashboards that users can use as a starting point for their own custom dashboards</li>
+<li>Support for a <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/465840">markdown tile visualization</a> on dashboards</li>
+<li>Experiments at enriching results with data from other GitLab features, like release annotations or feature flags</li>
+<li>Improved overall performance</li>
+<li>Investigation of <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/467662">Cloud Connector</a> as a deployment option to align with Observability</li>
+</ul>
+<p>We will respond to feedback to ensure we maintain a focus on building a "Lovable" product.</p>
+<h3 id=what-we-recently-completed>What we recently completed</h3>
+<h4 id=general-availability-of-product-analytics>General availability of Product Analytics</h4>
+<p>With release <a href="https://about.gitlab.com/releases/2024/04/18/gitlab-16-11-released/#understand-your-users-better-with-product-analytics*">16.11</a>, Product Analytics capabilities became generally available for all users to take advantage of, just like any other capability within GitLab Ultimate.
+Our minimal feature set for GA includes:</p>
+<ul>
+<li>Adding schema-driven dashboards as a way to visualize and consume information from Analytics. Our first iterations delivered two prebuilt, hardcoded, dashboards to evaluate common audience and behavior patterns in your data.</li>
+<li>Custom visualization designer that allows users to query their Product Analytics data and create visualization configurations that are stored as code.</li>
+<li>Multiple visualization options for dashboards to present data for users in the way most valuable to them.</li>
+<li>Enabling users to bring their own Product Analytics cluster.</li>
+</ul>
+<p>Our first iterations were focused on an internal preview of Product Analytics that we can <a href="https://about.gitlab.com/handbook/product/product-processes/#dogfood-everything">dogfood</a>, and we will continue to pursue this model throughout the company. This let us work through the technical questions of how to best develop Product Analytics, how to host and maintain relevant infrastructure, as well as how to use it like an end-user would. This culminated with us adding Product Analytics to the internal handbook, Pajamas, Metrics Dictionary, docs, and VersionApp for dogfooding purposes.
+You can also see our <a href="https://www.youtube.com/watch?v=Sab59A0X_ck&amp;list=PL05JrBw4t0Kqfb4oLOFKkXxNrBJzDQ3sL&amp;index=3">end-to-end walkthrough video</a> or check out the <a href="https://www.linkedin.com/events/7191139444916146176/comments/">16.11 LinkedIn Live event</a> for a demo!</p>
+<h2 id=competitor-pricing>Competitor Pricing</h2>
+<p>Due to the heavy emphasis on SaaS and the high data volumes - most pricing in this market is consumption-based.</p>
+<ul>
+<li><a href="https://mixpanel.com/pricing/">MixPanel</a> - SaaS - Pay by the Monthly Tracked User</li>
+<li><a href="https://heap.io/pricing">Heap</a> - SaaS - Single Fee sessions/year limits</li>
+<li><a href="https://www.pendo.io/pricing/">Pendo</a> - SaaS - Unlimited Seats - tiered by sophistication of capabilities (Roadmapping, feedback in higher tiers)</li>
+<li><a href="https://logrocket.com/pricing">LogRocket</a> - SaaS - Seats + Session Limits for lower tiers - features in higher tiers.</li>
+<li><a href="https://posthog.com/pricing">PostHog</a> - Self-Managed - By Event Volume</li>
+</ul>
+<h1 id=how-we-do-it>How we do it</h1>
+<h2 id=performance-indicators>Performance Indicators</h2>
+<p>Our Performance Indicator is Weekly Active Users defined as users viewing a dashboard and is being tracked in <a href="https://app.periscopedata.com/app/gitlab/1140634/Analyze-Product-Analytics?widget=16722272">Sisense</a> (internal link).</p>
+<h2 id=jobs-to-be-done>Jobs to Be Done</h2>
+<p>We are <a href="https://gitlab.com/gitlab-com/Product/-/issues/4274">conducting research on critical jobs to be done</a> for the Analytics section.</p>
+<h2 id=personas>Personas</h2>
+<p>The existing personas we serve are below, in priority order. We will likely <a href="https://gitlab.com/gitlab-com/Product/-/issues/4273">need additional personas</a> in the future.</p>
+<ol>
+<li><a href="/handbook/product/personas/#sasha-software-developer">Sasha - Software Developer</a></li>
+<li><a href="/handbook/product/personas/#parker-product-manager">Parker - Product Manager</a></li>
+</ol>
+<p>Some nuance can be added to our personas and how we approach them. Nearly all analytics questions, workflows, funnels, or any metrics gathering will require technical work to add instrumentation, test, and deploy it. This is the reason we are focusing on Sasha as our primary persona before Parker. We are addressing Sasha in the context that they are supporting Analytics efforts for their team. This means they are interested in how to do tasks related to adding instrumentation code, deploying it, and debugging it in support of analytics-related questions and projects. This is a more focused version of the Sasha overall persona.</p>
+<p>As part of considering these personas, consider what personas we are <em>not</em> including in this initial list. Specifically, we are not targeting executive personas or Directors with the initial offering. Sasha and Parker are individual contributors and have unique needs different than Directors or executives. They are focused mainly on specific applications and the analytics related to them, whereas executives and Directors will be concerned about multiple, or a "fleet", of applications. We intend to go after these personas eventually and will not intentionally create capabilities that exclude them, but they are not our primary focus at this point.</p>
+<h1 id=competitors>Competitors</h1>
+<p>The market is divided between big tech entrants building on top of complete Marketing Automation platforms marketed towards enterprise marketing orgs and stand-alone tools user engagement tools that are marketed towards Product (and occasionally Development) teams.</p>
+<ul>
+<li><strong>Enterprise Marketing Automation</strong> - Some examples of these are Adobe’s <a href="https://business.adobe.com/products/real-time-customer-data-platform/RTCDP.html">RT CDP</a>, Oracle’s <a href="https://www.oracle.com/cx/customer-data-platform/">Unity</a>, Twilio’s <a href="https://segment.com/">Segment</a> and Microsofts <a href="https://dynamics.microsoft.com/en-us/customer-data-platform/">Dynamic 365 CDP</a>. This class of products all focus on customer data collection for the purposes of marketing automation with limited direct customer engagement tools. The primary buyer for this class of tools is a CMO. Interestingly, <strong>many of these tools focus their attention on developer-enabled data management</strong> as that is a critical stepping stone to enabling Marketing and Product teams (<a href="https://www.mparticle.com/?">mParticle</a>).</li>
+<li><strong>User Engagement</strong> - Another class of products is targeting smaller organizations and Product and Development teams directly. These include <a href="https://www.pendo.io/">Pendo</a>, <a href="https://amplitude.com/">Amplitude</a>, <a href="https://posthog.com/">PostHog</a>, <a href="https://logrocket.com/">LogRocket</a>, <a href="https://www.glassbox.com/?utm_source=ppc&amp;utm_medium=google&amp;utm_campaign=brand&amp;lsd=OA-PPC-Adwords&amp;gclid=CjwKCAiA9aKQBhBREiwAyGP5lSLyGJZUQIIli9pacrvj18QYa4SXm2XPSZnI9twyNEjD-WulIgN1qBoC1a4QAvD_BwE">GlassBox</a> and Google’s <a href="https://firebase.google.com/products-engage">Firebase Engage</a>. The primary buyer of this class of tools is a CTO/CPO. Interestingly, <strong>few of these products offer both a SaaS and Self-Managed option</strong>.</li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/monitor/product-analytics/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/monitor/product-analytics/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

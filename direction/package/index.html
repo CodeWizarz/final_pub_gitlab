@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Stage Direction - Package
+|
+GitLab
+</title>
+<meta content='The Package stage is your single source of truth for packages and container images.' name=description />
+<meta content='The Package stage is your single source of truth for packages and container images.' name='twitter:description'/>
+<meta content='The Package stage is your single source of truth for packages and container images.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Stage Direction - Package' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/package/template.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/package/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Stage Direction - Package' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/package/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Stage Direction - Package
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/trizzi'>
+<div class=codeowners-single>
+<img
+src='/images/team/timrizzi.jpg'
+class=codeowner-avatar-img
+alt='Tim Rizzi'
+title='Tim Rizzi'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Tim Rizzi
+</div>
+<div class=codeowners-handle>
+@trizzi
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/package/template.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Stage Direction - Package</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#package" id=markdown-toc-package>Package</a> <ul>
+<li><a href="#what-is-package" id=markdown-toc-what-is-package>What is Package</a></li>
+<li><a href="#package-vision" id=markdown-toc-package-vision>Package vision</a></li>
+<li><a href="#whats-next-and-why" id=markdown-toc-whats-next-and-why>What's next and why</a></li>
+<li><a href="#what-we-arent-working-on-and-why" id=markdown-toc-what-we-arent-working-on-and-why>What we aren't working on and why</a></li>
+<li><a href="#helpful-links" id=markdown-toc-helpful-links>Helpful links</a></li>
+<li><a href="#goal" id=markdown-toc-goal>Goal</a></li>
+<li><a href="#do-customers-want-this" id=markdown-toc-do-customers-want-this>Do customers want this?</a> <ul>
+<li><a href="#non-enterprise-organizations" id=markdown-toc-non-enterprise-organizations>Non-enterprise organizations</a></li>
+<li><a href="#enterprise-organizations" id=markdown-toc-enterprise-organizations>Enterprise organizations</a></li>
+</ul>
+</li>
+<li><a href="#categories" id=markdown-toc-categories>Categories</a> <ul>
+<li><a href="#container-registry" id=markdown-toc-container-registry>Container Registry</a> <ul>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive Landscape</a></li>
+</ul>
+</li>
+<li><a href="#package-registry" id=markdown-toc-package-registry>Package Registry</a> <ul>
+<li><a href="#supported-formats" id=markdown-toc-supported-formats>Supported formats</a></li>
+<li><a href="#competitive-landscape-1" id=markdown-toc-competitive-landscape-1>Competitive Landscape</a></li>
+<li><a href="#universal-package-management-tools" id=markdown-toc-universal-package-management-tools>Universal package management tools</a></li>
+<li><a href="#cloud-providers" id=markdown-toc-cloud-providers>Cloud providers</a></li>
+<li><a href="#devops-platforms" id=markdown-toc-devops-platforms>DevOps Platforms</a></li>
+</ul>
+</li>
+<li><a href="#virtual-registries" id=markdown-toc-virtual-registries>Virtual registries</a> <ul>
+<li><a href="#usecases-listed" id=markdown-toc-usecases-listed>Usecases listed</a></li>
+<li><a href="#user-flow" id=markdown-toc-user-flow>User flow</a></li>
+<li><a href="#competitive-landscape-2" id=markdown-toc-competitive-landscape-2>Competitive landscape</a></li>
+</ul>
+</li>
+<li><a href="#dependency-firewall" id=markdown-toc-dependency-firewall>Dependency Firewall</a> <ul>
+<li><a href="#proposed-mvc-needs-validation" id=markdown-toc-proposed-mvc-needs-validation>Proposed MVC (needs validation)</a></li>
+<li><a href="#beyond-the-mvc" id=markdown-toc-beyond-the-mvc>Beyond the MVC</a></li>
+<li><a href="#competitive-landscape-3" id=markdown-toc-competitive-landscape-3>Competitive landscape</a></li>
+</ul>
+</li>
+<li><a href="#helm-chart-repository" id=markdown-toc-helm-chart-repository>Helm Chart repository</a> <ul>
+<li><a href="#usecases-listed-1" id=markdown-toc-usecases-listed-1>Usecases listed</a></li>
+<li><a href="#competitive-landscape-4" id=markdown-toc-competitive-landscape-4>Competitive Landscape</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id=package>Package</h2>
+<h3 id=what-is-package>What is Package</h3>
+<p>The Package stage is responsible for executing on the market needs for artifact management.</p>
+<p>Artifact management involves storing, versioning, and tracking binary files, libraries, and dependencies used in software development. It's crucial for ensuring consistency, reproducibility, and efficient collaboration in development projects. Artifact management systems help manage the software artifacts' lifecycle, from creation to deployment, facilitating easy access, sharing among team members, and integration with build and deployment tools. They support version control, which is essential for tracking changes and managing different versions of software components. This process enhances productivity and contributes to the reliability and quality of software projects.</p>
+<h3 id=package-vision>Package vision</h3>
+<p>The vision for the Package stage is to provide a single source of truth for storing and distributing packages and container images across the entire DevOps lifecycle. We aim to offer a comprehensive and user-friendly experience for managing artifacts, enabling seamless collaboration, and ensuring consistency and reliability throughout the development process.</p>
+<p>By consolidating package and image management within GitLab, teams can streamline their workflows, reduce operational overhead, and benefit from the tight integration with other GitLab features such as source code management, CI/CD pipelines, and security scanning. Our goal is to empower developers and organizations to focus on building great software while we handle the complexities of artifact management.</p>
+<p>We will execute this vision by:</p>
+<ol>
+<li><strong>Virtual registries for managing upstream repositories</strong>: By providing virtual registries, we will create an abstraction layer over upstream repositories. This allows developers to access and manage external and internal repositories from a single point, streamlining dependency management and ensuring consistency across environments.</li>
+<li><strong>Dependency firewall to prevent supply chain attacks</strong>: Integrating a firewall specifically designed to protect against supply chain attacks is a proactive security measure. It can inspect and filter incoming artifacts, dependencies, and packages based on security policies, vulnerability databases, and other criteria, preventing malicious code from entering the development pipeline.</li>
+<li><strong>Centralized artifact management</strong>: Offering a centralized platform for viewing and accessing all types of artifacts (e.g., binary files, libraries, containers) enhances visibility and control. This centralization supports better governance, auditability, and collaboration among teams, making it easier to manage the lifecycle of artifacts from development to deployment.</li>
+<li><strong>Usage analytics</strong>: By collecting and analyzing usage data on how artifacts are being utilized within the organization, we can provide valuable insights into dependency health, license compliance, popular versus unused artifacts, and potential optimization areas. This dcan inform decision-making, improve resource allocation, and enhance your artifact security posture.</li>
+<li><strong>Scalability and Performance</strong>: The system is designed to handle the demands of large-scale enterprises, supporting a high number of simultaneous users and transactions without compromising performance.</li>
+<li><strong>Education and best practices</strong>: We will provide resources, documentation, and training on best practices for artifact management, security, and compliance to help educate your teams users on how to effectively use GitLab Package.</li>
+</ol>
+<h3 id=whats-next-and-why>What's next and why</h3>
+<p>For the container registry, we are working to move the next-generation container registry, which supports online garbage collection and offers improved performance and reliability, from <code>Beta</code> to <code>GA</code>. If you are interested in learning more, please checkout the <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/423459">feedback issue</a>.</p>
+<p>For the package registry, we are working on the addition of a <a href="https://gitlab.com/groups/gitlab-org/-/epics/3610">Maven virtual registry</a>, which will allow users to set an external remote, such as Artifactory, and seamlessly pull packages from external remotes into their GitLab project.</p>
+<p>For the dependency firewall, we are working to validate a proposed first set of features with customers. We are hoping to begin development in the second half of 2024.</p>
+<h3 id=what-we-arent-working-on-and-why>What we aren't working on and why</h3>
+<ul>
+<li>We are not adding support for new package manager formats. Right now we are focused on improving the formats that are generally available, npm, Maven, NuGet, PyPI, Terraform, and generic packages.</li>
+</ul>
+<h3 id=helpful-links>Helpful links</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2972">Maturity plan</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=group%3A%3Apackage">Issue list</a></li>
+<li><a href="https://about.gitlab.com/direction/ops/#package">Overall vision</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/boards/1397751?scope=all&amp;utf8=%E2%9C%93&amp;label_name[]=group%3A%3Apackage">Research issues</a></li>
+</ul>
+<h3 id=goal>Goal</h3>
+<p>The goal of the <a href="https://about.gitlab.com/handbook/engineering/development/ops/package/">Package Group</a> is to build a product, that within three years, is our customer's single source of truth for storing and distributing images and packages.</p>
+<h3 id=do-customers-want-this>Do customers want this?</h3>
+<p>Yes. As the PM for the Package stage, I hear regularly from customers and prospects that would like to migrate off of JFrog's Artifactory. Their reasons for wanting to consolidate on GitLab are:</p>
+<ol>
+<li>Convenience (authentication, management, improved UX)</li>
+<li>Cost</li>
+<li>Lack of support (getting to meet with GitLab PMs is a big + for these folks)</li>
+</ol>
+<p>Typically the needs of these customers can be predictably segmented by the size of their organization. For the sake of simplicity, let's classify their needs as <code>enterprise</code> and <code>non-enterprise</code>.</p>
+<h4 id=non-enterprise-organizations>Non-enterprise organizations</h4>
+<p>Typically they’d like to know if we support format <code>x</code> and if not when will we support it. The formats that we don’t support that we hear most often are:</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/3200">RubyGems</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/5835">Debian</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5128">RPM</a></li>
+</ul>
+<p><em>(All of the above will be useful for ~Dogfooding as well)</em></p>
+<p>If we support their requested format, these customers are often able to consolidate.</p>
+<p>They are typically blocked by issues and bugs that are fairly straightforward to address.</p>
+<h4 id=enterprise-organizations>Enterprise organizations</h4>
+<p>We often hear from large, enterprise organizations that they'd like to consolidate on GitLab and move away from their existing vendor. But, our advice to these organizations is that they wait until the GitLab Package product matures. When comparing GitLab to Artifactory or Sonatype, there are several key missing features that must be considered.</p>
+<ul>
+<li>Virtual registries, which allow you to publish, proxy, and cache multiple package repositories behind a single, logical URL. Without supporting this, no large organization will be able to migrate from Artifactory to GitLab.</li>
+<li>A <a href="/direction/package/#dependency-firewall">Dependency Firewall</a>, which will help to prevent any unknown or unverified providers from introducing potential security vulnerabilities.</li>
+<li>Improved discoverability and visibility into how dependencies are being used and by whom/which projects.</li>
+</ul>
+<h3 id=categories>Categories</h3>
+<p>If you'd like to learn more, the below information contains a summary, competitive info, and other helpful content for each product category associated with the Package stage.</p>
+<h4 id=container-registry>Container Registry</h4>
+<p>The GitLab container registry is a secure and private registry for OCI artifacts, such as Docker container images. Use GitLab CI/CD to create and publish branch/release specific images. Use the GitLab API to manage the registry across groups and projects. Use the user interface to discover and manage your team's images. GitLab will provide a Lovable container registry experience by being the single location for the entire DevOps Lifecycle, not just a portion of it. We will provide many of the features expected of a container registry, but without the weight and complexity of a single-point solution.</p>
+<h5 id=competitive-landscape>Competitive Landscape</h5>
+<p>Open source container registries such as <a href="https://hub.docker.com/">Docker Hub</a> and Red Hat's <a href="https://quay.io/">Quay</a> offer users a single location to build, analyze, and distribute their container images. Docker Hub recently introduced rate limits for pulls from Docker Hub.</p>
+<p>The primary reason people don’t use DockerHub is that they need a private registry and one that lives alongside their source code and pipelines. They like to be able to use pre-defined environment variables for cataloging and discovering images. Often DockerHub is used as a base image for a test, but if you are building an app, you will likely customize an image to fit your application and save it GitLab's private registry alongside your source code.</p>
+<p><a href="https://jfrog.com/artifactory/">Artifactory</a> and <a href="https://www.sonatype.com/nexus-repository-sonatype">Nexus</a> both offer support for building and deploying Docker images.</p>
+<p>Artifactory integrates with several different <a href="https://www.jfrog.com/confluence/display/RTF/Build+Integration">CI servers through dedicated plug-ins</a>, including Jenkins and Azure DevOps, but does not yet support GitLab. However, you can still connect to your Artifactory repository from GitLab CI. Here is an example of how to <a href="https://docs.gitlab.com/ee/ci/examples/README.md#contributed-examples">deploy Maven projects to Artifactory with GitLab CI/CD</a>.</p>
+<p>GitHub offers a <a href="https://docs.github.com/en/packages/managing-container-images-with-github-container-registry">container registry</a> that supports Docker image formats.Their user interface includes helpful metadata, such as how often it's downloaded and a readme. One concern worth raising is that we don't see a way to programmatically delete images. Given the cost of storing images, this could be a concern for organizations that heavily use GitHub's registry. Another limitation is that they only support authentication using your Personal Access Token. This is not ideal for organizations that would like to avoid using individual-level credentials. With the GitLab container registry, you may use a PAT, Deploy, or Job token to authenticate to the registry.</p>
+<p>Amazon, Google Cloud, and Azure all offer fully-featured container registries.</p>
+<p>JetBrains offers a <a href="https://www.jetbrains.com/help/space/container-registry.html">container registry</a> that allows you to add a project repository and publish images and tags using the Docker client or your JetBrains project. Although they do not currently have any documentation for administrative features, such as cleanup policies or garbage collection.</p>
+<p><a href="https://www.digitalocean.com/docs/container-registry/">Digital Ocean offers a container registry</a> that allows you store and configure private Docker images. In addition, they support global load balancing and caching in multiple regions. One potential drawback is that each Digital Ocean account is limited to 1 registry, whereas with GitLab each Project can have its own registry.</p>
+<h4 id=package-registry>Package Registry</h4>
+<p>Our goal is for you to rely on GitLab as a universal package manager, so that you can reduce costs and drive operational efficiencies. The backbone of this category is your ability to easily publish and install packages, no matter where they are hosted.</p>
+<p>You can view the list of supported and planned formats in our documentation <a href="https://docs.gitlab.com/ee/user/packages/package_registry/index.html#supported-package-managers">here</a>.</p>
+<h5 id=supported-formats>Supported formats</h5>
+<p>The below table lists our supported and most frequently requested package manager formats. Artifactory and Nexus both support a longer list of formats, but we have not heard many requests from our customers for these formats. If you'd like to suggest we consider a new format, please open an issue <a href="https://gitlab.com/gitlab-org/gitlab/-/issues">here</a>.</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>GitLab</th>
+<th>Artifactory</th>
+<th>Nexus</th>
+<th>GitHub</th>
+<th>Azure Artifacts</th>
+<th>AWS CodeArtifact</th>
+<th>Google Artifact Registry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Composer</td>
+<td>☑️</td>
+<td>✔️</td>
+<td>✔️️️️</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Conan</td>
+<td>☑️</td>
+<td>✔️</td>
+<td>☑️</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Debian</td>
+<td>☑️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Gradle</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>️✔️ ️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Helm</td>
+<td>☑️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>️☑️ ️</td>
+<td>☑️</td>
+<td>☑️</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>Maven</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>️✔️ ️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>npm</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>NuGet</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>PyPI</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>-</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>-</td>
+</tr>
+<tr>
+<td>RPM</td>
+<td>-</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Ruby gems</td>
+<td>☑️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>☑️ <em>indicates support is through community plugin or beta feature</em></p>
+<p>Interested in contributing a new format? Please check out our <a href="https://docs.gitlab.com/ee/user/packages/#suggested-contributions">suggested contributions</a>.</p>
+<h5 id=competitive-landscape-1>Competitive Landscape</h5>
+<h5 id=universal-package-management-tools>Universal package management tools</h5>
+<p>Artifactory and Nexus are the two leading universal package manager applications on the market. They both offer products that support the most common formats and additional security and compliance features. A critical gap between those two products and GitLab's Package offering is the ability to easily connect to and group external, remote registries. To date, GitLab has been focused on delivering Project and Group-level private package registries for the most commonly used formats. We plan on bridging this gap by expanding the virtual registries category to support Maven, npm, NuGet, PyPI, and Terraform.</p>
+<h5 id=cloud-providers>Cloud providers</h5>
+<p>Azure and AWS both offer support for hosted and remote registries for a limited amount of formats. Google has a product called Artifact Registry that supports multiple formats and virtual registries for Java and node. All of the cloud providers charge for Cloud storage and network egress.</p>
+<h5 id=devops-platforms>DevOps Platforms</h5>
+<p>GitHub offers a package management solution as well. They offer project-level package registries for a variety of formats. However, looking at <a href="https://github.com/github/roadmap/projects/1">GitHub's roadmap</a>, they've deprioritized many features</p>
+<ul>
+<li>They have implementations with Composer and PyPI planned but not scheduled.</li>
+<li>They have a roadmap item for supporting generic packages. But, it's not yet scheduled.</li>
+</ul>
+<p>GitHub charges for storage and network transfers. GitHub does a nice job with search and reporting usage data on how many times a given package has been downloaded. They do not have anything on their roadmap about supporting remote and virtual registries, which would allow them to group registries behind a single URL and allow them to act as a universal package manager, like Artifactory or Nexus or GitLab.</p>
+<p><a href="https://blog.jetbrains.com/platform/">JetBrains</a> offers a Package Registry with support for npm and more planned formats.</p>
+<h4 id=virtual-registries>Virtual registries</h4>
+<p>Many projects depend on a growing number of packages that must be fetched from external sources with each build. This slows down build times and introduces availability issues into the supply chain. ​​For organizations, this presents a critical problem. By providing a mechanism for storing and accessing external packages, we enable more reliable builds.</p>
+<p>Our vision for virtual registries is to provide a product that will provide fast, reliable access to all of your dependencies, whether they are hosted on GitLab or any other vendor. In addition, virtual registries will work hand-in-hand with the planned <a href="/direction/package/#dependency-firewall">Dependency Firewall</a>, which will help to prevent any unknown or unverified providers from introducing potential security vulnerabilities.</p>
+<p>Currently the virtual registry for container images allows you to proxy and cache images from DockerHub. This can help you to speed up your pipelines and reduce your external dependencies. However this is only the first step. In the coming milestones, we will expand the feature from a single, hardcoded endpoint, to the place where you can setup and manage all of your registries (both packages and images) in one place.</p>
+<p>There are a few important terms that are worth sharing:</p>
+<ul>
+<li><strong>Hosted registry:</strong> A registry that is hosted on GitLab.</li>
+<li><strong>Remote registry:</strong> A proxy to a registry located on a remote server</li>
+<li><strong>Virtual registry:</strong> collection of hosted and remote registries accessed through a single logical URL. This hides the access details of the underlying repositories letting users work with a single, well-known URL.</li>
+</ul>
+<h5 id=usecases-listed>Usecases listed</h5>
+<ol>
+<li>Provide a single method of reaching upstream package management utilities, in the event they are not otherwise reachable.</li>
+<li>Cache images and packages for improved reliability.</li>
+<li>Track which dependencies are utilized by which projects when pulled through the proxy.</li>
+<li>Audit logs in order to find out exactly what happened and with what code.</li>
+<li>Operate when fully cut off from the internet with local dependencies.</li>
+</ol>
+<h5 id=user-flow>User flow</h5>
+<p>The below diagram demonstrates how you can use the virtual registries to look for and fetch dependencies from your hosted and remote registries. This will allow you to download all of your dependencies with a single URL, instead of having to remember which packages are hosted where.</p>
+<p><a href="https://mermaid-js.github.io/docs/mermaid-live-editor-beta/#/edit/eyJjb2RlIjoiZmxvd2NoYXJ0IExSXG5cdEFbR2l0TGFiIEhvc3RlZCByZWdpc3RyeV1cbiAgQltQcm9qZWN0IGNvZGVdXG4gIENbVmlydHVhbCByZWdpc3RyeV1cbiAgRFtQaXBlbGluZV1cbiAgRVtSZWxlYXNlXVxuICBGW1JlbW90ZSByZWdpc3RyaWVzXVxuICBHW0RlcGVuZGVuY3kgRmlyZXdhbGxdXG5cbiAgQSA8LS0-IENcbiAgQiAtLT4gRFxuICBEIC0tPiBFXG4gIEYgLS0-IEdcbiAgRyAtLT4gQ1xuICBDIDwtLT4gRCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9"><img src="https://mermaid.ink/img/eyJjb2RlIjoiZmxvd2NoYXJ0IExSXG5cdEFbR2l0TGFiIEhvc3RlZCByZWdpc3RyeV1cbiAgQltQcm9qZWN0IGNvZGVdXG4gIENbVmlydHVhbCByZWdpc3RyeV1cbiAgRFtQaXBlbGluZV1cbiAgRVtSZWxlYXNlXVxuICBGW1JlbW90ZSByZWdpc3RyaWVzXVxuICBHW0RlcGVuZGVuY3kgRmlyZXdhbGxdXG5cbiAgQSA8LS0-IENcbiAgQiAtLT4gRFxuICBEIC0tPiBFXG4gIEYgLS0-IEdcbiAgRyAtLT4gQ1xuICBDIDwtLT4gRCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9" alt=Diagram /></a>
+<strong>Note:</strong> <em>The above diagram shows all of your dependencies being resolved through the use of a virtual registry. Usage of this feature is not required. You can easily use your hosted and remote registries without grouping them in a virtual registry.</em></p>
+<h5 id=competitive-landscape-2>Competitive landscape</h5>
+<ul>
+<li><a href="https://www.jfrog.com/confluence/display/RTF/Docker+Registry#DockerRegistry-RemoteDockerRepositories">Artifactory</a></li>
+<li><a href="https://help.sonatype.com/repomanager2/configuration/managing-repository-groups">Nexus</a></li>
+</ul>
+<p>Artifactory is the leader in this category. They offer 'remote repositories' which serve as a caching repository for various package manager integrations. Utilizing the command line, API or a user interface, a user may create policies and control caching and proxying behavior. A Docker image or package may be requested from a remote repository on demand and if no content is available it will be fetched and cached according to the user's policies. In addition, they offer support for many of major packaging formats in use today. For storage optimization, they offer check-sum based storage, deduplication, copying, moving and deletion of files.</p>
+<p>The below tables outline our current capabilities compared to JFrog's Artifactory and Sonatype's Nexus.</p>
+<table>
+<thead>
+<tr>
+<th>Container registry</th>
+<th>GitLab</th>
+<th>Artifactory</th>
+<th>Nexus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local registries</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Remote registries</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/6061">Partial*</a></td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Virtual registries</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/6061">Coming soon</a></td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+</tbody>
+</table>
+<p><em>*The virtual registry category currently supports one hardcoded remote registry, which allows you to <a href="https://docs.gitlab.com/ee/user/packages/dependency_proxy/#using-the-docker-dependency-proxy">proxy and cache container images hosted on DockerHub</a>.</em></p>
+<table>
+<thead>
+<tr>
+<th>Package registry</th>
+<th>GitLab</th>
+<th>Artifactory</th>
+<th>Nexus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local registries</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Remote registries</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/2920">Partial*</a></td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Virtual registries</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/2920">Coming soon</a></td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+</tbody>
+</table>
+<p>**By default, when an npm or PyPI package is not found in the GitLab registry, the request will be forwarded to the public registry, either <a href="https://www.npmjs.com/">npmjs.com</a> or <a href="https://pypi.org/">PyPI.org</a> respectively. Check out this <a href="https://youtu.be/Do-5bmgvHOU">speed-run</a> to see how it works.</p>
+<h4 id=dependency-firewall>Dependency Firewall</h4>
+<p>Many projects depend on packages that may come from unknown or unverified providers, introducing potential security vulnerabilities. GitLab already provides <a href="https://docs.gitlab.com/ee/user/application_security/dependency_scanning/#supported-languages-and-package-managers">dependency scanning</a> across a variety of languages to alert users of any known security vulnerabilities, but we currently do not allow organizations to prevent those vulnerabilities from being downloaded to begin with.</p>
+<p>The goal of this category will be to leverage <a href="https://about.gitlab.com/direction/package/#virtual-registries">virtual registries</a>, which proxies and caches dependencies, to give more control and visibility to security and compliance teams.</p>
+<p>By preventing the introduction of security vulnerabilities further upstream, organizations can let their development teams work faster and more efficiently.</p>
+<h5 id=proposed-mvc-needs-validation>Proposed MVC (needs validation)</h5>
+<ul>
+<li>Create a new security policy called <code>dependency firewall policy</code>.</li>
+<li>Create conditional rules based on the severity level of known vulnerabilities in the GitLab Advisory Database.</li>
+<li>Choose an action for each rule. (For the MVC we will focus on <code>warn</code> only)</li>
+<li>Create a <code>warn</code> policy that alerts users that a package that's being downloaded from upstream is in violation of the firewall policy.</li>
+<li>Ensure that any warnings are surfaced on the Security Dashboard.</li>
+</ul>
+<h5 id=beyond-the-mvc>Beyond the MVC</h5>
+<ul>
+<li>Add support for a deny list of packages that are not allowed to be downloaded.</li>
+<li>Create a <code>fail</code> policy that prevents users from downloading packages that are in violation of the firewall policy.</li>
+<li>Rules to quarantine packages when rules are met.</li>
+<li>The ability to CRUD the quarantine.</li>
+<li>Add more complex rules, like warnings when a package is missing an author name or email.</li>
+</ul>
+<h5 id=competitive-landscape-3>Competitive landscape</h5>
+<ul>
+<li><a href="https://jfrog.com/xray/">JFrog X-Ray</a></li>
+<li><a href="https://www.sonatype.com/nexus-firewall">Nexus</a></li>
+<li><a href="https://github.com/features/package-registry">GitHub Package Registry</a></li>
+</ul>
+<p>JFrog utilizes a combination of their Bintray and XRay products, to proxy, cache and screen dependencies. They also provide dependency graphs across multiple languages and centralized dashboards for the review and remediation of vulnerabilities. It is a mature product, that is generally well received by users. JFrog recently acquired Vdoo to and plans to update XRay to to include Vdoo’s extensive data and improved scanning across multiple dimensions, including configuration and applicability scanning.</p>
+<p>GitHub's new package registry does a really nice job of creating visibility into the dependency graph for a given package, but they do not give users the ability to control which packages are used in a given group/project.</p>
+<h4 id=helm-chart-repository>Helm Chart repository</h4>
+<p>Users or organizations that deploy complex pieces of software towards Kubernetes managed environments depend on a standardized way to automate provisioning those external environments. Helm is the package manager for Kubernetes and helps users define, manage, install, upgrade, and rollback even the most complex Kubernetes application. Helm uses a package format called Charts to describe a set of Kubernetes resources.</p>
+<p>Helm charts are easy to create, version, share and publish right within GitLab.</p>
+<h5 id=usecases-listed-1>Usecases listed</h5>
+<ol>
+<li>Public and private repositories for Helm charts</li>
+<li>Fine-grained access control</li>
+<li>Standardized workflow to version control and publish charts making use of GitLab's other services</li>
+</ol>
+<h5 id=competitive-landscape-4>Competitive Landscape</h5>
+<p>An important distinction between competitive products is that Helm 3 now officially supports using an OCI container registry as a Helm repository.</p>
+<ul>
+<li><a href="https://hub.helm.sh/">Helm Hub</a></li>
+<li><a href="https://www.jfrog.com/confluence/display/RTF/Helm+Chart+Repositories">Artifactory</a></li>
+<li><a href="https://chartmuseum.com/">Chart museum</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/container-registry/container-registry-helm-repos">Azure DevOps</a></li>
+<li><a href="https://cloud.google.com/artifact-registry/docs/helm/manage-charts">Google Cloud</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/push-oci-artifact.html">AWS</a></li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/package/template.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/package/template.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

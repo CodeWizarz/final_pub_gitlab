@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Cell
+|
+GitLab
+</title>
+<meta content='' name=description />
+<meta content='' name='twitter:description'/>
+<meta content='' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Cell' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/core_platform/tenant-scale/cell/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/core_platform/tenant-scale/cell/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Cell' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/core_platform/tenant-scale/cell/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Cell
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/joshlambert'>
+<img
+src='/images/team/joshua.png'
+class=codeowner-avatar-img
+alt='Joshua Lambert'
+title='Joshua Lambert'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/lohrc'>
+<img
+src='/images/team/ChristinaLohr.jpg'
+class=codeowner-avatar-img
+alt='Christina Lohr'
+title='Christina Lohr'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/core_platform/tenant-scale/cell/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/core_platform/">Product Section Direction - Core Platform</a></li><li><a href="/direction/core_platform/tenant-scale/">Group Direction - Tenant Scale</a></li><li>Category Direction - Cell</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#cell" id=markdown-toc-cell>Cell</a></li>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#goals" id=markdown-toc-goals>Goals</a></li>
+<li><a href="#challenges" id=markdown-toc-challenges>Challenges</a></li>
+</ul>
+</li>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and Themes</a></li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a> <ul>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is Not Planned Right Now</a></li>
+</ul>
+</li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a></li>
+<li><a href="#maturity-plan" id=markdown-toc-maturity-plan>Maturity Plan</a></li>
+</ul>
+<h2 id=cell>Cell</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/core_platform/">Data Stores</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">Not Applicable</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2023-11-13</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id=introduction-and-how-you-can-help>Introduction and how you can help</h2>
+<p>Thanks for visiting this category direction page on Cells at GitLab. The Cell category is part of the <a href="https://about.gitlab.com/handbook/product/categories/#tenant-scale-group">Tenant Scale group</a> within the <a href="https://about.gitlab.com/direction/core_platform/">Core Platform</a> section and is maintained by <a href="https://about.gitlab.com/company/team/#lohrc">Christina Lohr</a>.</p>
+<p>This vision and direction is constantly evolving and everyone can contribute:</p>
+<ul>
+<li>Please comment in the linked <a href="https://gitlab.com/groups/gitlab-org/-/issues/?sort=updated_desc&amp;state=opened&amp;label_name%5B%5D=group%3A%3Atenant%20scale&amp;label_name%5B%5D=Category%3ACell&amp;first_page_size=100">issues</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics?state=opened&amp;page=1&amp;sort=start_date_desc&amp;label_name[]=group::tenant+scale&amp;label_name[]=Category:Cell">epics</a>. Sharing your feedback directly on GitLab.com or submitting a merge request to this page are the best ways to contribute to our strategy.</li>
+<li>Please share feedback directly via <a href="https://gitlab.com/lohrc">email</a>, or <a href="https://calendly.com/christinalohr/30min">schedule a video call</a>.</li>
+<li>Please open an issue using the ~"Category:Cell" label, or reach out to us internally in the #g_tenant-scale Slack channel.</li>
+</ul>
+<h2 id=overview>Overview</h2>
+<p>The Cell category focuses on delivering a long-term horizontal scalability solution for GitLab. A <a href="https://docs.gitlab.com/ee/architecture/blueprints/cells/index.html">Cells</a> architecture creates many mostly isolated GitLab instances, called Cells, that include all required services (database, web, Redis, Gitaly, Runners, Sidekiq etc.). The number of Cells can grow alongside the growth of the business.</p>
+<h3 id=goals>Goals</h3>
+<p>By introducing Cells we aim to address the following problems:</p>
+<ol>
+<li>Scalability: GitLab.com is currently largely monolithic and will face architectural limitations even when database partitioning and decomposition are taken into account. A new shared-infrastructure architecture will provide additional scalability for our SaaS Platform.</li>
+<li>Increased availability: Cells provide isolation at the Cell level. A group of Organizations is fully isolated from other Organizations located on a different Cell. This minimizes noisy neighbor effects while still benefiting from the cost efficiency of a shared infrastructure.</li>
+<li>Regions: GitLab.com is only hosted within the United States of America. Organizations located in other regions have voiced demand for local SaaS offerings. Cells provide a path towards <a href="https://gitlab.com/groups/gitlab-org/-/epics/6037">GitLab Regions</a> because Cells may be deployed within different geographies.</li>
+<li>Market segment: Cells provide a solution for organizations in the small to medium business (up to 100 users) and the mid-market segment (up to 2000 users). (See <a href="https://about.gitlab.com/handbook/sales/field-operations/gtm-resources/#segmentation">segmentation definitions</a>.) Larger organizations may benefit substantially from <a href="https://docs.gitlab.com/ee/subscriptions/gitlab_dedicated/index.html">GitLab Dedicated</a>.</li>
+</ol>
+<h3 id=challenges>Challenges</h3>
+<p>At this moment, GitLab.com has “social-network”-like capabilities that may not fit well into a more isolated Organization model. Removing those features, however, creates some challenges:</p>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/418228">How can <code>gitlab-org</code> contributors continue to contribute to the namespace?</a>)</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/418228">How will open source projects remain discoverable?</a>)</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/418225">How do we move existing top-level groups into the new model?</a>)</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/411931">How are User Profiles impacted?</a></li>
+</ul>
+<h2 id=strategy-and-themes>Strategy and Themes</h2>
+<h2 id=1-year-plan>1 year plan</h2>
+<p>Over the coming year, the Tenant Scale group will focus on delivering some key work streams that are required by the project.</p>
+<h3 id=what-is-next-for-us>What is next for us</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10998">Cells Iteration 4</a>
+<ul>
+<li>User can create an Organization on a second Cell</li>
+</ul>
+</li>
+</ul>
+<h3 id=what-we-are-currently-working-on>What we are currently working on</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10997">Cells Iteration 3</a>
+<ul>
+<li>User can create a project on a second Cell</li>
+</ul>
+</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11002">Cells - Routing: Technology</a></li>
+</ul>
+<h3 id=what-we-recently-completed>What we recently completed</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9667">Cells Iteration 1</a>
+<ul>
+<li>Initial Admin Area settings are shared across cluster</li>
+<li>Allow to share cluster-wide data with database-level data access layer</li>
+</ul>
+</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9813">Cells Iteration 2</a>
+<ul>
+<li>User accounts are shared across cluster</li>
+<li>User can create a group</li>
+</ul>
+</li>
+</ul>
+<h3 id=what-is-not-planned-right-now>What is Not Planned Right Now</h3>
+<p>We currently don't plan to implement any scalability solutions for GitLab.com that would negatively impact our self-managed customers. We want all customers to benefit from further scalability.</p>
+<p>We do plan to support a Cells architecture for self-managed deployments, which could address a narrow set of self-managed use cases which previously required independent instances, like data residency.</p>
+<h2 id=target-audience>Target Audience</h2>
+<h2 id=maturity-plan>Maturity Plan</h2>
+<p>Cell is a non-marketable category, and is therefore not assigned a maturity level.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/core_platform/tenant-scale/cell/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/core_platform/tenant-scale/cell/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

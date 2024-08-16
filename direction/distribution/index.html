@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Direction - Distribution
+|
+GitLab
+</title>
+<meta content='The Distribution group&#39;s mission is to set companies up for success by making it easy to deploy, maintain, and update a self-managed GitLab instance' name=description />
+<meta content='The Distribution group&#39;s mission is to set companies up for success by making it easy to deploy, maintain, and update a self-managed GitLab instance' name='twitter:description'/>
+<meta content='The Distribution group&#39;s mission is to set companies up for success by making it easy to deploy, maintain, and update a self-managed GitLab instance' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Direction - Distribution' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/distribution/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/distribution/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Direction - Distribution' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/distribution/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Direction - Distribution
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/joshlambert'>
+<img
+src='/images/team/joshua.png'
+class=codeowner-avatar-img
+alt='Joshua Lambert'
+title='Joshua Lambert'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/dorrino'>
+<img
+src='/images/team/dorrino.png'
+class=codeowner-avatar-img
+alt='Dilan Orrino'
+title='Dilan Orrino'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/distribution/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Product Direction - Distribution</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#whats-next-and-why" id=markdown-toc-whats-next-and-why>What's Next and Why</a></li>
+<li><a href="#long-term-direction" id=markdown-toc-long-term-direction>Long-term direction</a> <ul>
+<li><a href="#cloud-native-gitlab-alignment" id=markdown-toc-cloud-native-gitlab-alignment>Cloud Native GitLab alignment</a></li>
+<li><a href="#gitlab-upgrade-improvements" id=markdown-toc-gitlab-upgrade-improvements>GitLab Upgrade improvements</a></li>
+<li><a href="#efficiency-improvements" id=markdown-toc-efficiency-improvements>Efficiency improvements</a></li>
+</ul>
+</li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a></li>
+<li><a href="#distribution-deploy" id=markdown-toc-distribution-deploy>Distribution Deploy</a></li>
+<li><a href="#distribution-build" id=markdown-toc-distribution-build>Distribution Build</a></li>
+</ul>
+</li>
+<li><a href="#category" id=markdown-toc-category>Category</a> <ul>
+<li><a href="#omnibus" id=markdown-toc-omnibus>Omnibus</a></li>
+<li><a href="#cloud-native-installation" id=markdown-toc-cloud-native-installation>Cloud-native installation</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=overview>Overview</h2>
+<p>GitLab is the engine that powers many software businesses. In a world where success requires developers to move quickly, it is
+important to ensure that end users can accomplish their work as quickly as possible, with minimal interruptions, and they have access to the latest and greatest that GitLab has to offer. The Distribution group's mission is to set companies up for success by making it easy to deploy, maintain, and update a self-managed GitLab instance and ensure it is highly available for their users.</p>
+<p>The distribution team is comprised of two groups, Distribution Build and Distribution Deploy.</p>
+<h3 id=whats-next-and-why>What's Next and Why</h3>
+<p>We are looking to FY25 Q1 for what's next, this includes GitLab milestones 16.9, 16.10 and 16.11.</p>
+<h3 id=long-term-direction>Long-term direction</h3>
+<p>In support of our goals in Distribution related to the best user experience for deploying, maintaining and updating a GitLab instance, we have a few long term projects we have identified to work towards over the next few years. These projects are hypothetical and will be refined with customer feedback and industry need.</p>
+<h4 id=cloud-native-gitlab-alignment>Cloud Native GitLab alignment</h4>
+<p>The Distribution team has identified the industry is moving towards a cloud first mindset. In the next few years, more and more companies will be making the migration to cloud native infrastructure. This means we want to expand our tools and features related to cloud native infrastructure and when possible migrate complex VM based installations to cloud native GitLab. This also means researching the possibility of offering Omnibus for single node installs only. There are many features and tools made possible with cloud-native infrastructure.</p>
+<h4 id=gitlab-upgrade-improvements>GitLab Upgrade improvements</h4>
+<p>It is very important that our self-managed users are able to effectively upgrade their instances. At the moment this is largely left to the administrators to manage but in the future we would like to improve the tools for admins and expand the possible functionality. The long-term vision for upgrades is users having the ability to <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/15993">automatically upgrade their self-managed instance</a> on a regular monthly cadence. This forward-looking project pairs with cloud-native alignment because cloud-native instances will be able to more easily upgrade with the Operator, but we should extend this functionality to Omnibus when possible. This could mean out-of-the-box upgrade scripts for VMs for admins, or an Operator-like feature for Omnibus. Upgrades are important because it means users running self-managed instances can more quickly take advantage of features we release, and stay up to date on security.</p>
+<p>We should not seek to make upgrading multiple versions of GitLab easier and extend support for older versions. Upgrading one minor version at a time, regularly, is a better industry practice than less frequent upgrades skipping multiple minor versions at a time due to several reasons, such as backup, restore, feature functionality, and more.</p>
+<p>Other initiatives that support these upgrade improvements include our improvements to the backup and restore process and our ability to run in fully cloud-native architectures.</p>
+<h4 id=efficiency-improvements>Efficiency improvements</h4>
+<p>It will always be on our radar to stay on top of our tech debt and efficiency work. As GitLab, both the application and company, scales, it will create additional maintenance requirements, so we need to ensure efficiency remains at the core of everything we do.</p>
+<h3 id=1-year-plan>1 year plan</h3>
+<p>The Distribution team has a number of projects we hope to complete and make progress on within the year.</p>
+<ul>
+<li>Image cleanup</li>
+</ul>
+<p>Within the year we want to progress on cleaning up the images that we provide for users. This is planned to be done in two ways, working towards smaller images, and reducing the total amount of images. Hosting and maintaining these images is costly in infrastructure and engineering time, so any optimizations we make here will be twofold beneficial. This project supports our initiative for continued efficiency and an optimized framework.</p>
+<ul>
+<li>Zero-downtime improvements</li>
+</ul>
+<p>This project directly relates to maturing the GitLab Operator and our cloud native deployments. Improving our feature set in zero-downtime will give users the confidence to upgrade more easily and frequently. Also, users who feel effective in their ability to manage GitLab will feel empowered to manage larger user sets, meaning current customers can grow their users with confidence. This project will impact our upgrade improvement plan and cloud native alignment.</p>
+<ul>
+<li>Helm to Operator</li>
+</ul>
+<p>Within a year, we would like to see the Operator be the preferred method for cloud native deployments. This will ideally not cause any disruption or need for a migration from our current Helm method, but will give users many more intuitive and interesting features that the Operator framework enables. An Operator brings and "always on" idea, where as Helm performs strictly as a package manager and installation tooling. The Operator will allow users and admins to continually monitor the health of their instance, automatically scaling to demand, and automatic upgrades in the future. Speaking of upgrades, this directly translates to progressively improving our upgrades in cloud native deployments.</p>
+<ul>
+<li>Compliance</li>
+</ul>
+<p>The Distribution team is a large stakeholder in planned compliance work related to security requirements. We will prioritize the completion of this work in the near term and any required maintenance. The relates to cross-portfolio goals for GitLab as a whole. There is some crossover work with the container image cleanup work.</p>
+<h3 id=distribution-deploy>Distribution Deploy</h3>
+<p>The focus for the Deploy group of the Distribution team surrounds configuration, deployment, and operation of GitLab as a whole product. The goal is to deliver an intuitive, clear, and frictionless installation experience, followed by smooth, seamless upgrade and maintenance processes for deployments of any scale. We strive to deliver ongoing operational behaviors for scaling, little to zero downtime upgrades, and highly reliable experiences for not only instance administrators but their users.</p>
+<p>The Deploy group will move towards an Operator first investment. The <a href="https://docs.gitlab.com/operator/">GitLab Operator</a> is where the Deploy group is investing much of its development effort, because of the many benefits the Operator will bring in features for running GitLab instances. Near-zero downtime upgrades, advanced metrics and alerting, and deployment auto-pilot essentially are all on the roadmap for Distribution Deploy. We will not deprecate the Helm chart entirely until we have a simple migration experience in place, from Helm to the Operator, and have provided ample notice of the shift.</p>
+<h3 id=distribution-build>Distribution Build</h3>
+<p>The focus for the Build group of the Distribution team is to ensure the components that make up GitLab are tested, up-to-date, license compliant, and available for our users’ platforms and architectures. This segment manages the build pipelines, researches support for new services, platforms, and architectures, as well as maintains existing ones. We strive to respond efficiently to build failures, security results, and dependency changes in order to ensure a safe reliable product for our users.</p>
+<p>The Build group will continue to build for diverse Omnibus deployments but will work to bring our cloud native builds forward in features and functionality. We will move our cloud native build away from the helm chart, and invest heavily in the GitLab Operator in 2022. The Build group will work on foundation changes to allow for the success of the GitLab Operator implementation. Additional projects for the Build group will include package improvements such as how components are built and work together in the Omnibus project and then paralleling those change in the charts, and repo signing key management via keyring packages.</p>
+<p>Both groups work on the two categories of distribution below.</p>
+<h2 id=category>Category</h2>
+<h3 id=omnibus>Omnibus</h3>
+<p>Today we have a mature and easy to use Omnibus based build system, which is the
+most common method for deploying a self-managed instance of GitLab. It includes everything a
+customer needs to run GitLab all in a single package, and is great for
+installing on virtual machines or real hardware. We are committed to making our
+package easier to work with, providing a first-class solution for database fault tolerance, and improving the <a href="https://docs.gitlab.com/omnibus/update/#zero-downtime-updates">zero-downtime upgrade</a> experience.</p>
+<p><a href="/direction/distribution/omnibus/">Category Vision</a> · <a href="https://docs.gitlab.com/omnibus/">Documentation</a></p>
+<h3 id=cloud-native-installation>Cloud-native installation</h3>
+<p>We also want GitLab to be the best cloud native development tool, and offering a
+great cloud native deployment is a key part of that. We are focused on offering
+a flexible and scalable container based deployment on Kubernetes and OpenShift.</p>
+<p>The Helm charts are currently considered to be at the <a href="https://about.gitlab.com/direction/maturity/">Complete maturity level</a>. We hope to achieve lovable maturity of our cloud-native installation in FY2023 and recommend in on par with our Omnibus package. We also have developed the <a href="https://docs.gitlab.com/operator/">GitLab Operator</a>, which will continue to mature and help our cloud-native installation mature. These epics will be used to define what it will take to get to the next maturity levels and track the work to be done:</p>
+<p><a href="https://gitlab.com/groups/gitlab-org/-/epics/2260">Viable to Complete</a></p>
+<p><a href="https://gitlab.com/groups/gitlab-org/-/epics/5796">Complete to Lovable</a></p>
+<p><a href="/direction/distribution/cloud_native_installation/">Category Vision</a> · <a href="https://docs.gitlab.com/charts/">Documentation</a></p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/distribution/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/distribution/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

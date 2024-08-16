@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab Meetup Checklist
+|
+GitLab
+</title>
+<meta content='This guide is intended to help Meetup organizers run events that their community will love.' name=description />
+<meta content='This guide is intended to help Meetup organizers run events that their community will love.' name='twitter:description'/>
+<meta content='This guide is intended to help Meetup organizers run events that their community will love.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab Meetup Checklist' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='community/meetups/checklist/index.html.md.erb' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/community/meetups/checklist/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab Meetup Checklist' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/handbook/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/handbook/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/handbook/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/handbook/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/handbook/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/handbook/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/community/meetups/checklist/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/highlight-tooltip.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+GitLab Meetup Checklist
+</h1>
+</div>
+</div>
+<div id=highlight-tooltip role=tooltip>
+<a class="highlight-tooltip-link highlight-tooltip-link-tweet" href="#" target=_blank>
+<i class="fab fa-twitter"></i>
+<span class=sr-only>Share on Twitter</span>
+</a>
+<a class="highlight-tooltip-link highlight-tooltip-link-edit" href="#" target=_blank>
+<i class="fab fa-gitlab"></i>
+<span class=sr-only>Edit this page</span>
+</a>
+<a class="highlight-tooltip-link highlight-tooltip-link-web-ide" href="#" target=_blank>
+<i class="fas fa-pen"></i>
+<span class=sr-only>Open Web IDE</span>
+</a>
+<div id=highlight-tooltip-arrow data-popper-arrow></div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/esalvadorp'>
+<img
+src='/images/team/esalvador.png'
+class=codeowner-avatar-img
+alt='Emilio Salvador'
+title='Emilio Salvador'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/johncoghlan'>
+<img
+src='/images/team/johncoghlan.jpg'
+class=codeowner-avatar-img
+alt='John Coghlan'
+title='John Coghlan'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/community/meetups/checklist/index.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li class=meta-signage-header>You are here:</li>
+<li><a href="/community/meetups/">GitLab Meetups</a></li><li>GitLab Meetup Checklist</li>
+</ol>
+<input class=st-handbook id=search-handbook placeholder='Search through the handbook...'/>
+<div class='hidden-md hidden-lg'>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/esalvadorp'>
+<img
+src='/images/team/esalvador.png'
+class=codeowner-avatar-img
+alt='Emilio Salvador'
+title='Emilio Salvador'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/johncoghlan'>
+<img
+src='/images/team/johncoghlan.jpg'
+class=codeowner-avatar-img
+alt='John Coghlan'
+title='John Coghlan'
+>
+</a>
+</div>
+</div>
+</div>
+<h2 class=no_toc id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#gitlab-meetups-checklist" id=markdown-toc-gitlab-meetups-checklist>GitLab Meetups Checklist</a> <ul>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a></li>
+<li><a href="#who-can-contribute" id=markdown-toc-who-can-contribute>Who can contribute</a></li>
+<li><a href="#why-should-you-get-involved" id=markdown-toc-why-should-you-get-involved>Why should you get involved</a></li>
+<li><a href="#how-gitlab-can-help" id=markdown-toc-how-gitlab-can-help>How GitLab can help</a></li>
+</ul>
+</li>
+<li><a href="#planning-an-in-person-meetup" id=markdown-toc-planning-an-in-person-meetup>Planning an in-person meetup</a> <ul>
+<li><a href="#getting-started" id=markdown-toc-getting-started>Getting started</a></li>
+<li><a href="#what-to-do-asap" id=markdown-toc-what-to-do-asap>What to do ASAP</a></li>
+<li><a href="#what-to-do-one-week-before-your-event" id=markdown-toc-what-to-do-one-week-before-your-event>What to do one week before your event</a></li>
+<li><a href="#what-to-do-the-day-of-your-event" id=markdown-toc-what-to-do-the-day-of-your-event>What to do the day of your event</a></li>
+<li><a href="#what-to-do-the-day-after-your-event" id=markdown-toc-what-to-do-the-day-after-your-event>What to do the day after your event</a></li>
+<li><a href="#simple-tips-to-take-your-meetup-to-the-next-level" id=markdown-toc-simple-tips-to-take-your-meetup-to-the-next-level>Simple tips to take your meetup to the next level</a></li>
+</ul>
+</li>
+<li><a href="#planning-a-virtual-meetup" id=markdown-toc-planning-a-virtual-meetup>Planning a virtual meetup</a> <ul>
+<li><a href="#getting-started-1" id=markdown-toc-getting-started-1>Getting started</a></li>
+<li><a href="#what-to-do-asap-1" id=markdown-toc-what-to-do-asap-1>What to do ASAP</a></li>
+<li><a href="#what-to-do-one-week-before-your-event-1" id=markdown-toc-what-to-do-one-week-before-your-event-1>What to do one week before your event</a></li>
+<li><a href="#what-to-do-the-day-of-your-event-1" id=markdown-toc-what-to-do-the-day-of-your-event-1>What to do the day of your event</a></li>
+<li><a href="#what-to-do-the-day-after-your-event-1" id=markdown-toc-what-to-do-the-day-after-your-event-1>What to do the day after your event</a></li>
+<li><a href="#simple-tips-to-take-your-virtual-meetup-to-the-next-level" id=markdown-toc-simple-tips-to-take-your-virtual-meetup-to-the-next-level>Simple tips to take your virtual meetup to the next level</a></li>
+</ul>
+</li>
+<li><a href="#resources" id=markdown-toc-resources>Resources</a> <ul>
+<li><a href="#virtual-events-best-practices" id=markdown-toc-virtual-events-best-practices>Virtual events best practices</a></li>
+<li><a href="#recording-meetups" id=markdown-toc-recording-meetups>Recording meetups</a> <ul>
+<li><a href="#hardware-and-software-to-record-meetups" id=markdown-toc-hardware-and-software-to-record-meetups>Hardware and software to record meetups</a></li>
+</ul>
+</li>
+<li><a href="#virtual-meetup-platforms" id=markdown-toc-virtual-meetup-platforms>Virtual meetup platforms</a></li>
+<li><a href="#preventing-and-responding-to-disruptive-behavior" id=markdown-toc-preventing-and-responding-to-disruptive-behavior>Preventing and responding to disruptive behavior</a></li>
+<li><a href="#logos" id=markdown-toc-logos>Logos</a></li>
+<li><a href="#templates" id=markdown-toc-templates>Templates</a></li>
+<li><a href="#signs-for-your-meetup" id=markdown-toc-signs-for-your-meetup>Signs for your meetup</a></li>
+<li><a href="#feedback-form" id=markdown-toc-feedback-form>Feedback form</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=gitlab-meetups-checklist>GitLab Meetups Checklist</h2>
+<p>This guide is intended to help Meetup organizers run events that their community will love. Our aim is to be as comprehensive as possible to enable everyone to become an organizer, regardless of experience. Happy planning!</p>
+<h3 id=overview>Overview</h3>
+<p>GitLab supports community leaders who want to organize meetups and tech events in their cities and hometowns. As the first single application for the entire DevOps lifecycle, all events that discuss and educate on the software development lifecycle and developer experience are eligible for <a href="#how-gitlab-can-help">GitLab support</a>.</p>
+<p>Our goal in supporting these events is to increase awareness of GitLab and Concurrent DevOps, and to better educate the technology community about the power of our application.</p>
+<h3 id=who-can-contribute>Who can contribute</h3>
+<p>At GitLab, we believe everyone can contribute. We support people who are interested in organizing events or growing existing communities. If you have experience organizing tech events or meetup groups, that is great - but it is not required. We're happy to work with first-time organizers, too.</p>
+<p>The only requirements for organizers are a passion for GitLab and a belief in our <a href="https://about.gitlab.com/company/mission/#mission">mission</a>.</p>
+<h3 id=why-should-you-get-involved>Why should you get involved</h3>
+<p>GitLab published a <a href="/blog/2020/03/05/get-involved-with-gitlab-meetups/">blog post</a> to highlight the many reasons and ways to get involved in Meetups. The reasons for getting involved in a meetup community include:</p>
+<ul>
+<li>Connecting with your community - Meetups tend to bring together folks with similar interests and values.</li>
+<li>Expanding your skillset - Whether you're new to tech or looking to develop new skills, meetups are an opportunity to develop core skills needed for success - particularly communication and collaboration.</li>
+<li>Pursuing your passion - If you're passionate about a technology or programming language, meetups are a way to grow the interest in those topics, increase your influence in their community, and help advocate and champion them</li>
+</ul>
+<h3 id=how-gitlab-can-help>How GitLab can help</h3>
+<p>GitLab supports organizers of in-person and virtual meetups with planning and logistics support, connections to speakers. In some cases, GitLab can also provide swag and/or financial support for food and beverages for your events. Note that swag or financial support require pre-approval from GitLab.</p>
+<h2 id=planning-an-in-person-meetup>Planning an in-person meetup</h2>
+<h3 id=getting-started>Getting started</h3>
+<ul>
+<li>When you're ready to begin planning an in-person meetup, please contact our <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#118;&#097;&#110;&#103;&#101;&#108;&#105;&#115;&#116;&#115;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">team</a>.</li>
+<li>If you would like to review this guide and discuss your plans with a GitLab team member, please <a href="https://calendly.com/jcoghlan">schedule a Zoom call</a> with our team.</li>
+</ul>
+<h3 id=what-to-do-asap>What to do ASAP</h3>
+<ul>
+<li>Find speakers. Need help? Use the GitLab <a href="https://about.gitlab.com/speakers/">Find a Speaker</a> page.</li>
+<li>Find a venue. Cafes, community centers, coworking spaces, and local tech companies are common venues for meetups.</li>
+<li>Set the date. This requires confirming availability of both venue and speaker.</li>
+<li>Set up an event page. We are happy to connect your group with our <a href="https://www.meetup.com/pro/gitlab">Meetup Pro network</a>.</li>
+<li>Apply a Code of Conduct to your group to ensure the safety and comfort of all participants. <a href="https://about.gitlab.com/community/contribute/code-of-conduct/">GitLab's Code of Conduct</a> is a good option.</li>
+<li>Promote the event to your target audience. We have a list of <a href="/handbook/marketing/developer-relations/evangelist-program/#meetup-promotion">recommended steps for promotion</a> in our handbook.</li>
+<li>For GitLab team members only: follow <a href="/handbook/marketing/events/#how-to-add-events-to-aboutgitlabcomevents">the steps in our marketing handbook</a> to add your event to <a href="/events">about.gitlab.com/events</a>. You can assign the merge request to <code>@johncoghlan</code> to merge.</li>
+</ul>
+<h3 id=what-to-do-one-week-before-your-event>What to do one week before your event</h3>
+<ul>
+<li>Confirm plans for the event with your speaker(s) and venue. This is a good time to discuss how the speakers plan to present. Will they be using their laptop? What type of ports does their laptop have? Will they need an adapter? Do these match what is available at the venue?</li>
+<li>Recruit volunteers from your network or community to help you on the day of the event.</li>
+<li>Send a reminder to your guests about the event and encourage them to help you promote it. Include a simple ask of "share this with your colleagues, friends, and on social media".</li>
+</ul>
+<h3 id=what-to-do-the-day-of-your-event>What to do the day of your event</h3>
+<ul>
+<li>Send reminder to your guests before 1200 local time. Include directions, an agenda, and any other important information: is the entrance tucked away? will they need an ID or code to enter the building? are folks welcome to arrive early or is there a set time that doors will open?</li>
+<li>Print and hang signs directing attendees to the room where the event will be held and the restrooms.</li>
+<li>Request volunteers arrive 30 min before the start time so you can brief them on their responsibilities and answer any questions.</li>
+<li>Test the AV in the room to ensure everything is in working order before guests begin to arrive. This will allow time to troubleshoot should any issues arise. It never hurts to have extra cables, adapters, batteries, etc.</li>
+<li>We recommend <a href="/community/meetups/checklist/#recording-meetups">recording meetups</a> to help market your group and increase the reach of your speaker's presentation.</li>
+<li>Set up food, drinks, swag, and any other materials you have for the event.</li>
+<li>Welcome your guests, share important updates with the group, review agenda, thank your host, and introduce your speakers.</li>
+<li>After the event, make sure you leave the venue clean and return any loaned AV equipment.</li>
+<li>Send a thank you to attendees and include a form for feedback and a reminder to RSVP for your next meetup (if one has been scheduled).</li>
+</ul>
+<h3 id=what-to-do-the-day-after-your-event>What to do the day after your event</h3>
+<ul>
+<li>Send thank you notes to the venue hosts, your co-organizers and volunteers, the speakers, and anyone else who helped you with the meetup.</li>
+</ul>
+<h3 id=simple-tips-to-take-your-meetup-to-the-next-level>Simple tips to take your meetup to the next level</h3>
+<ul>
+<li>Signs, signs, everywhere signs: When setting up for your meetup, signs can be a big help to make sure your guests feel comfortable. Post a 'Welcome' sign near the door so folks know they are in the right place upon arrival and hang directional signs pointing your guests to the presentation space, refreshments, and restrooms. It also helps to post the wifi password and an agenda somewhere in the room (on paper, a whiteboard, or a welcome slide on the screen) so everyone knows the plan for the evening.</li>
+<li>Set the mood: the atmosphere at a meetup tends to be set by the first guests to arrive. If they grab seats and jump on their phones, later arrivals tend to follow that lead. If you want a more lively meetup, make yourself available for conversation as guests begin to arrive and introduce guests to each other to keep the conversations going. Some background music playing at a low-volume can also help to prevent the library vibe.</li>
+<li>Speaker swag: when possible, it's always great to send your speakers home with some swag as a token of your appreciation. A special sticker just for speakers at your meetup (for example: your group's logo in a different color scheme) can go a long way.</li>
+</ul>
+<h2 id=planning-a-virtual-meetup>Planning a virtual meetup</h2>
+<h3 id=getting-started-1>Getting started</h3>
+<ul>
+<li>When you're ready to begin planning a virtual meetup, please contact our <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#118;&#097;&#110;&#103;&#101;&#108;&#105;&#115;&#116;&#115;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">team</a>.</li>
+<li>If you would like to review this checklist and discuss your plans with a GitLab team member, please <a href="https://calendly.com/jcoghlan">schedule a Zoom call</a>.</li>
+</ul>
+<h3 id=what-to-do-asap-1>What to do ASAP</h3>
+<ul>
+<li>Set the format. While in-person meetups tend to follow a familiar format, we encourage you to think differently when planning a virtual event. Discussion groups, workshops, presentations, and more can all be conducted virtually. Think about the goal for the event and plan for that goal.</li>
+<li>Pick your platform. When selecting a <a href="/community/meetups/checklist/#virtual-meetup-platforms">platform for your virtual meetup</a>, things to consider are whether the platform allows for recording, livestreaming, and breakout groups. You should also consider a platform's limits on number of attendees and length of meetings.</li>
+<li>Set the date.</li>
+<li>Set up an event page. If you intend to use Meetup.com, you can follow <a href="https://www.meetup.com/blog/how-to-host-an-online-event-on-meetup/">these steps</a> to create an online event for your Meetup group. We are happy to connect your group with our <a href="https://www.meetup.com/pro/gitlab">Meetup Pro network</a>.</li>
+<li>Apply a Code of Conduct to your group to ensure the safety and comfort of all participants. <a href="https://about.gitlab.com/community/contribute/code-of-conduct/">GitLab's Code of Conduct</a> is a good option.</li>
+<li>Promote the event to your target audience. We recommend sharing on Reddit, Twitter, LinkedIn, Facebook, and other social channels to reach your audience. Use appropriate hashtags to reach people outside your network of followers. You may also want to promote the event on tech mailing lists or websites that focus on your area.</li>
+<li>For GitLab team members only: follow <a href="/handbook/marketing/events/#how-to-add-events-to-aboutgitlabcomevents">the steps in our marketing handbook</a> to add your event to <a href="/events">about.gitlab.com/events</a>. You can assign the merge request to <code>@johncoghlan</code> to merge.</li>
+</ul>
+<h3 id=what-to-do-one-week-before-your-event-1>What to do one week before your event</h3>
+<ul>
+<li>Confirm plans for the event with any speaker(s). This is a good time to discuss how the speakers plan to present and confirm they have solid internet connection, have installed the meeting software and familiarized themselves with how to use it.</li>
+<li>Send a reminder to your guests about the event and encourage them to help you promote it. Include a simple ask of "share this with your colleagues, friends, and on social media".</li>
+</ul>
+<h3 id=what-to-do-the-day-of-your-event-1>What to do the day of your event</h3>
+<ul>
+<li>Send reminder to your guests before 1200 local time. Include an agenda and any other important information.</li>
+<li>Have any speakers join the call 30 min before the start time so you can brief them on their responsibilities, ensure all presenters' have their AV setups and internet connections working properly, and answer any questions.</li>
+<li>We recommend <a href="/community/meetups/checklist/#recording-meetups">recording meetups</a> to help market your group and increase the reach of your speaker's presentation.</li>
+<li>At the start of the meetup, organizers should:
+<ul>
+<li>Remind the audience about the Code of Conduct</li>
+<li>Introduce yourself</li>
+<li>Welcome and thank the attendees</li>
+<li>Ask people to turn on their cameras to create a better sense of community</li>
+<li>Share important updates with the group</li>
+<li>Review agenda</li>
+<li>Introduce your speaker(s)</li>
+</ul>
+</li>
+<li>For virtual meetups, it is important for organizers to take additional steps to help familiarize your attendees with the video conference platform you choose. We recommend spending time during your introduction to provide an overview of the features you would like attendees to use. This may include:
+<ul>
+<li><strong>Breakout rooms</strong>: The Zoom breakout room functionality is described in detail here: <a href="https://support.zoom.us/hc/en-us/articles/206476313-Managing-Video-Breakout-Rooms">Managing Video Breakout Rooms</a>. The host can assign attendees to specific rooms but there is no way to allow attendees to select a room. One workaround could be to ask folks to type their selection into the chat and then the host can assign them to their choice. For meetups in Zoom that use the breakout room feature, the host should explain the flow so folks that are new to this feature understand how to follow the prompts they will see on the screen. For example:
+<ul>
+<li>"Breakout rooms are small group conversations intended for casual conversation and building community. We hope everyone will participate. In order to get the conversation started, please start by sharing your name, location, what attracted you to the meetup, and your interests outside of GitLab."</li>
+<li>"When we do the breakout rooms, you will see a prompt asking you to join a room, click "Join breakout room" button to join your assigned room."</li>
+<li>"After the allotted time, I will be close the rooms. You will see a 60-second countdown, that is the time to end conversations and return to the main room for closing remarks."</li>
+</ul>
+</li>
+<li><strong>Chat</strong>: Encouraging folks to use the chat can help the attendees feel more engaged. It is helpful to newcomers if the host explains the chat functionality and provides guidance on how attendees should leverage this during the event (ex: ask folks to share their location, put questions in the chat, etc.)</li>
+<li><strong>Raise hand</strong>: If you intend to use this feature, make sure you explain to attendees how to raise hand and ensure the presenter is prepared for questions during their talk.</li>
+</ul>
+</li>
+<li>Speakers or organizers should be prepared to share a link to resource materials at the beginning of their talks. This may be a link to a repo for a demo, a link to slides for a presentation, or a link to a shared doc for questions and notes for an AMA conversation.</li>
+<li>To have some fun, we recommend the attendees unmute their microphones and give a round of applause to presenters upon completion of their talk.</li>
+<li>After the event, send a thank you to attendees and include a form for feedback and a reminder to RSVP for your next meetup (if one has been scheduled).</li>
+</ul>
+<h3 id=what-to-do-the-day-after-your-event-1>What to do the day after your event</h3>
+<ul>
+<li>Send thank you notes to your co-organizers, the speakers, and anyone else who helped you with the meetup.</li>
+</ul>
+<h3 id=simple-tips-to-take-your-virtual-meetup-to-the-next-level>Simple tips to take your virtual meetup to the next level</h3>
+<ul>
+<li>Welcome early arrivals: Many folks will join your meetup early. It's a good idea to have a welcome slide on display or join early yourself and engage the early arrivals in conversation.</li>
+<li>Record your meetup: It can often be easier to record meetups when using video conferencing applications as many contain a feature that allows for recording meetings. We highly recommend recording your meetups and publishing the recordings to share with your community.</li>
+<li>Keep it real: To have some fun, you can ask attendees unmute their microphones and give a round of applause to presenters upon completion of their talk.</li>
+<li>Speaker swag: when possible, it's always great to send your speakers home with some swag as a token of your appreciation. A special sticker just for speakers at your meetup (for example: your group's logo in a different color scheme) can go a long way.</li>
+</ul>
+<h2 id=resources>Resources</h2>
+<h3 id=virtual-events-best-practices>Virtual events best practices</h3>
+<p>GitLab's <a href="/handbook/marketing/virtual-events/#best-practices">virtual events best practices</a> contains additional suggestions on how to make your virtual event a success. You may also want to review the <a href="/handbook/communication/video-playbook/">GitLab Video Playbook</a>, which offers guidance on creating engaging video content, much of which also applies to virtual events.</p>
+<h3 id=recording-meetups>Recording meetups</h3>
+<ul>
+<li>We recommend all Meetup organizers record their events, when possible.</li>
+<li>Tips for in-person events:
+<ul>
+<li>Use software to simultaneously conduct screen recording and audio recording.</li>
+<li>Use a webcam with a microphone to record the presenter.</li>
+<li>Insert the slides as images into the video recording later your preferred video editing software.</li>
+</ul>
+</li>
+<li>Tips for virtual events:
+<ul>
+<li>For virtual events many meeting platforms allow recording of meetings.</li>
+</ul>
+</li>
+<li>For both in-person and virtual events, you may want to consider livestreaming your event via a platform that will produce a recording of the streamed event.</li>
+<li>We love to collect photos and video clips from our meetups to highlight on our website, in company calls, and other materials. Send photos and video clips to evangelists@gitlab.com.</li>
+<li>When recording video clips of meetups, please follow these guidelines:
+<ul>
+<li>Provide a recording of the presentation(s) or three short video clips of the event</li>
+<li>Each short video clip should be at least 90 seconds long each</li>
+<li>Shoot video in landscape mode</li>
+<li>Please do not use filters on submitted videos</li>
+<li>Make sure everyone in the video is aware of how the video will be used and that they will be featured in a GitLab video</li>
+</ul>
+</li>
+</ul>
+<h4 id=hardware-and-software-to-record-meetups>Hardware and software to record meetups</h4>
+<p><em>This is a non-exhaustive list of options to help you get started. GitLab does not endorse or recommend any particular vendor or product.</em></p>
+<ul>
+<li>Live streaming/recording software:
+<ul>
+<li><a href="https://obsproject.com/">Open Broadcasting Software</a></li>
+<li>Apple Quicktime</li>
+</ul>
+</li>
+<li>Video editing:
+<ul>
+<li><a href="https://www.lwks.com/">Lightworks</a></li>
+<li>Apple iMovie</li>
+<li><a href="https://www.shotcutapp.com/">Shotcut</a></li>
+</ul>
+</li>
+<li>Live streaming/recording hardware:
+<ul>
+<li><a href="https://www.amazon.com/Logitech-C922x-Pro-Stream-Webcam/dp/B01LXCDPPK/ref=sr_1_2?crid=13ZBFCYG30ULV&amp;keywords=logitech+webcam&amp;qid=1552336114&amp;s=gateway&amp;sprefix=logitech+%2Caps%2C142&amp;sr=8-2">Logitech C922x</a></li>
+</ul>
+</li>
+</ul>
+<h3 id=virtual-meetup-platforms>Virtual meetup platforms</h3>
+<p><em>GitLab does not endorse or recommend any particular vendor or product.</em></p>
+<p>At GitLab, we use Zoom for our virtual meetings but we encourage you to find a tool that best fits your needs. If you elect to use Zoom, we recommend you review the <a href="/handbook/tools-and-tips/#a-note-on-privacy-and-security">note on Zoom privacy and security</a> in the GitLab Handbook. Other platforms to consider are <a href="https://jitsi.org/jitsi-meet/">Jitsi Meet</a> and <a href="https://meet.google.com/?authuser=1">Google Meet</a> (requires a G-Suite account). For more options, Wired has compiled a <a href="https://www.wired.co.uk/article/best-video-conference-apps">list of the best video conference apps</a>.</p>
+<h3 id=preventing-and-responding-to-disruptive-behavior>Preventing and responding to disruptive behavior</h3>
+<p>With virtual events, unwanted guests sometimes make their way into your events. This is often referred to as Zoombombing. We recommend the following security steps when using Zoom and recommend similar precautions on other platforms.</p>
+<p><strong>Important: Never post a direct link to the meeting room on social media. When promoting your event, limit the sharing of the meeting URL to registered attendess. For example, by limiting visibility to those who RSVP yes to your event on Meetup.</strong></p>
+<p>When scheduling your meeting in Zoom:</p>
+<ul>
+<li>In the <strong>Security</strong> section, check the boxes to require a passcode and enable "Waiting Room".</li>
+<li>In the <strong>Meeting Options</strong> section, check box to "Mute participants upon entry".</li>
+<li>If your license allows, we recommend you check the box for "Only authenticated users can join" and add others in your organization with a speaking role as hosts by entering their email in the "Alternative Hosts" field.</li>
+</ul>
+<p>At the start of a meeting:</p>
+<ul>
+<li>Toggle open the <strong>Security</strong> options at the bottom of the Zoom window and uncheck "Share Screen" and "Rename Themselves".</li>
+</ul>
+<p><img src="/images/community/meetups/toggle-security.png" alt="Toggle security" title="Toggle security and uncheck Share Screen and Rename Themselves"/></p>
+<p>When a presenter begins sharing their screen:</p>
+<ul>
+<li>Instruct them to "Disable Attendee Annotation", this can be found by clicking the "More" box that appears in the screen share icon menu.</li>
+</ul>
+<p><img src="/images/community/meetups/disable-annotation.png" alt="Disable annotation" title="Disable Attendee Annotation"/></p>
+<p>Should folks be disruptive (aka Zoombomb) during a meeting, we recommend the following actions:</p>
+<ul>
+<li>If the bad behavior is happening in the chat:
+<ul>
+<li>Toggle open the <strong>Security</strong> options at the bottom of the Zoom window and uncheck "Chat" to lock the chat functionality.</li>
+<li>Toggle open the <strong>Participants</strong> side bar and remove any bad actor by clicking the "More" dropdown that appears when clicking on their name and selecting "Remove" or "Report" from the dropdown options.</li>
+</ul>
+</li>
+<li>If the bad behavior is happening by an attendee who is sharing screen or speaking:
+<ul>
+<li>Toggle open the <strong>Participants</strong> side bar and remove any bad actor by clicking the "More" dropdown that appears when clicking on their name and selecting "Remove" or "Report" from the dropdown options.</li>
+<li>If you cannot immediately identify the bad actor:
+<ul>
+<li>Toggle open the <strong>Particpants</strong> side bar and select "Mute All" at the bottom of the side bar.</li>
+<li>Uncheck the box "Allow participants to unmute themselves" in the pop up window.</li>
+<li>Click "Continue".</li>
+<li>Manually Unmute anyone who will be speaking during the event by hovering over their name and clicking the "Unmute" button.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/community/meetups/mute-all.png" alt="Mute all" title="Mute all"/></p>
+<ul>
+<li>With "Chat" disabled and "Mute all" enabled, there should be little room for bad behavior, but you may also choose to "Lock meeting" which will prevent anyone else from joining the meeting.</li>
+</ul>
+<h3 id=logos>Logos</h3>
+<p>GitLab logos can be found in our <a href="https://about.gitlab.com/press/press-kit/#logos">press kit</a>.</p>
+<h3 id=templates>Templates</h3>
+<p>These <a href="https://drive.google.com/drive/folders/1xglxuxFcxATpQ0ZajYvYu5aIyEK7TvTK?usp=sharing">communication templates</a> can help you get a head start on your communications with your community. Templates include sample agendas, reminder and thank you emails, and boilerplate language about GitLab for your group or event descriptions.</p>
+<h3 id=signs-for-your-meetup>Signs for your meetup</h3>
+<p>Use <a href="https://drive.google.com/open?id=1jO-MbZI21sXbzZYQ0u4ClghmNJFzsT7X">these signs</a> to help your members find what they need and free up your own time for deeper conversations then directing your guests to the bathroom or pizza.</p>
+<h3 id=feedback-form>Feedback form</h3>
+<p>Feedback is critical. A simple <a href="https://docs.google.com/forms/d/167QK2Oudqrdu_hpRCK45G7WDW65IDV63XWgjKa6Srrw/edit">three question survey</a> can help you improve your group and gives your members a chance to offer feedback.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/community/meetups/checklist/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/community/meetups/checklist/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/popperjs.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/highlight-tooltip.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

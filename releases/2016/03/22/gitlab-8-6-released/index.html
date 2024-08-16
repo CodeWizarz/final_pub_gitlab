@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab 8.6 released with Deploy to Kubernetes and Subscribe to Label
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab Release 8.6 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name=description />
+<meta content='Learn more about GitLab Release 8.6 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name='twitter:description'/>
+<meta content='Learn more about GitLab Release 8.6 for GitLab Community Edition (CE) and Enterprise Edition (EE)' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab 8.6 released with Deploy to Kubernetes and Subscribe to Label' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2016-03-22-gitlab-8-6-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2016/03/22/gitlab-8-6-released/' property='og:url'/>
+<meta content=2016-03-22 property='article:published_time'/>
+<meta content='https://about.gitlab.com/about' property='article:author'/>
+<meta content="https://about.gitlab.com/images/8_6/head.jpg" property="og:image">
+<meta content="https://about.gitlab.com/images/8_6/head.jpg" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab 8.6 released with Deploy to Kubernetes and Subscribe to Label' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2016/03/22/gitlab-8-6-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Mar 22, 2016
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#Jobvo">Job van der Voort</a>
+<a href="https://twitter.com/Jobvo"><span>&nbsp;</span>
+<span class=author-twitter>
+<i class='fab fa-twitter'></i>
+</span>
+</a></span>
+<h1>
+GitLab 8.6 released with Deploy to Kubernetes and Subscribe to Label
+</h1>
+<p class=description>
+Learn more about GitLab Release 8.6 for GitLab Community Edition (CE) and Enterprise Edition (EE)
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/8_6/head.jpg);'></div>
+<div class=content>
+<p>Never have there been more people contributing to GitLab. And you can see it.</p>
+<p>Whether you're leading a large open source project, managing thousands of
+private, interlinked projects, or even just use GitLab by yourself,
+with GitLab 8.6 your life is going to get a whole lot easier.</p>
+<p>Not only can you now effortlessly deploy to Kubernetes,
+it's now <em>so much</em> easier to only get the messages you need with
+the ability to subscribe to labels. On top of that,
+we made <em>many</em> things faster and better looking.</p>
+<p>This month's Most Valuable Person (<a href="/community/mvp/">MVP</a>) is
+Marcia Ramos for helping us <a href="https://gitlab.com/gitlab-org/gitlab-ee/merge_requests/212">improving GitLab Pages documentation</a>
+and being a great contributor to the GitLab community. Being an MVP doesn't
+necessarily mean contributing code to GitLab!</p>
+<p>Thanks Marcia!</p>
+<h2 id=deploy-straight-from-gitlab-ci-to-kubernetes>Deploy straight from GitLab CI to Kubernetes</h2>
+<p>GitLab has always been the place where your projects start their life,
+where you collaborate in issues and diffs and even test your code.
+Now, GitLab is also the place where you ship your code quickly and easily
+to Kubernetes.</p>
+<p>We want to make easy to deploy straight from GitLab CI in one step,
+without any custom scripts.</p>
+<p>Redspread is a company in the current Y Combinator batch (Winter 2016).
+They noticed an incredible increase in Kubernetes usage among early stage
+startups. Many startups in this YC batch and recent alumni are evaluating
+or already using Kubernetes in production.</p>
+<p>Redspread’s open source command line tool,
+<a href="https://github.com/redspread/spread">Spread</a>,
+allows command line deployments to
+Kubernetes. It uses the current <code>kubectl</code> context to read
+a project directory and
+automatically create or update any Kubernetes objects. It made sense to
+integrate Spread with GitLab CI, since GitLab CI focuses on automating
+deployment.</p>
+<p>To use Spread with GitLab CI:</p>
+<ol>
+<li>Add the correct image to .gitlab-ci.yml:</li>
+</ol>
+<div class=highlight><pre class="highlight plaintext"><code>deploy:
+  stage: deploy
+  image: redspreadapps/gitlabci
+  script:
+  - null-script
+</code></pre></div>
+<ol>
+<li>Set the environment variables to what makes sense. <a href="https://github.com/ethernetdan/spread/blob/gitlab-ci/images/gitlabci/README.md">See the documentation of the environment variables</a>.</li>
+</ol>
+<p>_Note: to use Spread with GitLab CI Variables, you will need <a href="/releases/2016/03/29/gitlab-runner-1-1-released/">GitLab Runner 1.1</a>.</p>
+<h2 id=subscribe-to-a-label>Subscribe to a Label</h2>
+<p>If you don't want to miss issues that are important to you, simply
+subscribe to a label! You'll get notified whenever the label gets added to
+an issue, making sure you don't miss a thing.</p>
+<p><img src="/images/8_6/subscribe-to-label.png" alt="Subscribe to a label in GitLab 8.6"/></p>
+<p>If you work on a large or popular project, try subscribing only to the labels
+that are relevant to you. You'll notice it'll be much easier to focus on what's
+important.</p>
+<h2 id=confidential-issues>Confidential Issues</h2>
+<p>At GitLab <a href="/blog/2015/08/03/almost-everything-we-do-is-now-open/">we're all about being open</a>, but you can't share everything.
+For sensitive subjects, you can now make a confidential issue in a project.
+This issue will only be visible to the members of the project and the creator of
+the issue, even if the project is public or internal.</p>
+<p>This means people can now safely report security issues to your open source
+projects. You can communicate with them right there and then, without having
+to rely on external applications.</p>
+<p><img src="/images/8_6/confidential-issue.png" alt="Use confidential issue for sensitive matters in GitLab 8.6"/></p>
+<h2 id=external-users>External Users</h2>
+<p>Internal projects allow you to practice <a href="/blog/2014/09/05/innersourcing-using-the-open-source-workflow-to-improve-collaboration-within-an-organization/">innersourcing</a>,
+sharing projects internally as if they're open source, but protecting them
+as if they are private.</p>
+<p>This is something we see more and more organisations adopt, but especially
+larger organisations often have external parties working together with them.
+These people also need access to GitLab, but not to the internal projects.</p>
+<p>To prevent certain users from accessing internal projects, you can now mark
+them as <em>External</em>. It's a simple check in the users' page that can be set
+by any administrator.</p>
+<p>In a future release, we'll be adding the ability to have this set automatically
+based on LDAP membership.</p>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ce/permissions/permissions.html#external-users">Read about external users in our documentation</a></p>
+</blockquote>
+<h2 id=better-dropdowns>Better Dropdowns</h2>
+<p>This seems like a minor update, but just try them!
+The dropdowns all over GitLab have been improved. Especially the filters
+for lists are now much more functional and easier to use.</p>
+<p>You can quickly add multiple labels and even make new labels on the go.
+This release contains hundreds of improvements to the interface, big and small,
+we hope you appreciate them!</p>
+<p><img src="/images/8_6/create-label-from-dropdown.gif" alt="Awesome dropdowns in GitLab 8.6"/></p>
+<p><em>Another improvement? Try Todos today!</em></p>
+<p><img src="/images/8_6/fast-todos.gif" alt="Better Todos with GitLab 8.6"/></p>
+<h2 id=delete-issues>Delete Issues</h2>
+<p>Sometimes, simply closing an issue or merge request is not sufficient.
+For those times, we are now making it possible to delete issues and merge
+requests.</p>
+<p>Only <code>owners</code> can delete issues by editing the issue or merge request and
+clicking, you guessed it, <code>Delete</code>.</p>
+<h2 id=move-issues-to-other-projects>Move Issues to other Projects</h2>
+<p>If your product consists of multiple GitLab projects,
+issues can easily end up in the wrong place.
+You can now easily move issues between projects!</p>
+<p><img src="/images/8_6/move-issue.png" alt="Move issues between projects in GitLab 8.6"/></p>
+<p>The original issue will be copied, closed and referenced,
+making sure nothing or no one will be confused with the move.</p>
+<h2 id=commit-messages-in-jira>Commit Messages in JIRA</h2>
+<p>If you mention a JIRA issue in a commit,
+GitLab will now not only reference the commit with a link,
+but now also add the commit message in a comment in the JIRA issue.</p>
+<p>We know many people are using JIRA and we're looking forward to more feedback
+on how we can improve GitLab's integration with JIRA.</p>
+<blockquote>
+<p><a href="https://docs.gitlab.com/ee/integration/jira/">Read about GitLab's JIRA integration</a></p>
+</blockquote>
+<h2 id=group-visibility-level>Group Visibility Level</h2>
+<p>You can now set the visibility level of groups, just like you could always
+do with projects. Groups now have a visibility level icon to show this.</p>
+<p>The global restriction for visibility levels, which you can set as an administrator,
+also applies to groups. That means that if you set it to <code>internal</code>,
+the explore page will be empty for anonymous users.</p>
+<p>The group level visibility solves
+<a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/12658">this popular issue</a>.</p>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ce/public_access/public_access.html#visibility-of-groups">Read about the group visibility level</a></p>
+</blockquote>
+<h2 id=gitlab-mattermost-21>GitLab Mattermost 2.1</h2>
+<p><a href="http://www.mattermost.org/mattermost-2-1-android-windows-linux-and-mac-apps-plus-portuguese/">Mattermost 2.1</a>
+ships in GitLab 8.6 with new Android, Windows, Linux and Mac apps with full
+GitLab SSO support, plus Brazilian Portuguese translation and more.</p>
+<p>Mattermost 2.1 contains a <a href="http://docs.mattermost.com/administration/changelog.html#security-update">security update</a>
+and earlier deployments should <a href="http://doc.gitlab.com/omnibus/gitlab-mattermost/">upgrade to this version</a>.</p>
+<h2 id=other-changes>Other changes</h2>
+<p>This release has been so full, we didn't have the space to highlight all!
+We still want you to know about them, so here are some of them, in short:</p>
+<ul>
+<li>New keyboard shortcut: You can now press <code>e</code> to edit any issue / MR.</li>
+<li>YAML frontmatter is now rendered nicely in markdown files.</li>
+<li>No more default password! Set your password on first sign in. <a href="http://doc.gitlab.com/ce/install/installation.html#initial-login">Read more in the docs</a>.</li>
+<li>We now show test coverage in the builds view.</li>
+<li>Support for Golang subpackage fetching, straight from GitLab.</li>
+<li>Issues and Merge Requests now look better on mobile. Finally!</li>
+<li>Quickly create a new branch from an issue, with a dedicated button.</li>
+<li><a href="http://doc.gitlab.com/ee/integration/saml.html#customization">SAML customization</a>.</li>
+<li>Easily (un)mark merge requests as WIP using a link. No more editing necessary!</li>
+<li>Better table of contents in Wikis!</li>
+<li><a href="http://doc.gitlab.com/ee/gitlab-geo/README.html">GitLab Geo</a> now syncs even
+more things! We urge you to upgrade to 8.6 if you're interested in Geo.</li>
+</ul>
+<h3 id=performance-improvements>Performance improvements</h3>
+<p>When <a href="/blog/2016/02/25/making-gitlab-faster/">we said</a> that <a href="/releases/2016/02/22/gitlab-8-5-released/">making GitLab faster</a>
+was a priority, we weren't kidding.
+Here is some of the work we've done to make GitLab 8.6 faster:</p>
+<ul>
+<li>Search performance has been greatly improved for users using PostgreSQL
+<em>without</em> using ElasticSearch. This requires the <code>pg_trgm</code> extension (see
+barometer).</li>
+<li>Performance of listing commits has been improved.</li>
+<li>Counting of tags and branches on the commits/branches/tags pages is now a bit
+faster and is cached.</li>
+<li>Performance of retrieving CI services of a project has been improved.</li>
+<li>Project avatars stored in Git repositories are now cached, cutting down request.
+timings for <em>all</em> project pages for projects that don't use an avatar uploaded
+via the web UI. (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/3272">!3272</a>)</li>
+<li>Diffs that are larger than 100 KB are no longer displayed, instead a "This
+diff is too large" message is displayed. This prevents Unicorn timeouts when
+viewing large diffs. (<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/3185">!3185</a>)</li>
+<li>The branch commit ahead/behind statistics are no longer pre-cached on every
+push. For projects with lots of branches (e.g. thousands) this can have a huge
+impact on the time it takes for the pre-caching process to complete.
+(<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/3274">!3274</a>)</li>
+<li>Indexes were added for <code>ci_runners.token</code>
+(<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/3249">!3249</a>) and
+<code>git_hooks.project_id</code>. (<a href="https://gitlab.com/gitlab-org/gitlab-ee/merge_requests/271">!271</a>)</li>
+<li>Performance of viewing individual issues is improved by caching certain Git operations.</li>
+<li>We enabled HTTP caching for requests that fetch the raw contents on a single
+file in a Git repository. Cache times range from 1 minute (for 'mutable'
+resources like <code>https://gitlab.com/gitlab-org/gitlab-ce/raw/master/VERSION</code>
+which use a branch name) to 1 hour (for immutable resources like
+<code>https://gitlab.com/gitlab-org/gitlab-ce/raw/17de30f412b5eddaa080006b6dd2aae2bd2d5647/VERSION</code>
+that use a commit SHA). In addition to this we configured NGINX in the Omnibus
+packages to use up to 1 GB of disk space for proxy caching. These two changes
+combined reduce the load on GitLab servers that get many requests of HTTP
+clients polling a single file in a public repo.</li>
+<li>In GitLab 8.4 we added a 'housekeeping button' to the project settings page.
+This button triggers a
+<a href="https://www.kernel.org/pub/software/scm/git/docs/git-gc.html">git gc</a> run on
+the project. In GitLab 8.6 we have automated this button: every 10 pushes, but
+no more than once per hour, GitLab will run <code>git gc</code> on repositories. This
+should (slightly) improve Git disk use and performance.</li>
+<li>We split <code>LDAPSyncworker</code> and <code>LDAPGroupSync</code> worker. Performance will be
+greatly improved for large installations. LDAPSyncworker runs once per hour.
+In our benchmark runs, for 20,000 users and 10,000 groups, the sync takes 15
+minutes. This is in contrast to hours or, in extreme cases, 1-2 days for the
+old <code>LDAPSyncWorker</code> (which synced groups, too).</li>
+</ul>
+<h3 id=updates-in-the-omnibus-gitlab-package>Updates in the omnibus-gitlab package</h3>
+<p>As GitLab gets improved every release, so does the omnibus-gitlab package.
+You can see the changes that package receives for every release in the
+<a href="https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/CHANGELOG.md">omnibus-gitlab CHANGELOG</a>.</p>
+<p>In this release there are some important changes in the bundled software:</p>
+<ul>
+<li>Redis is updated to version 2.8.24</li>
+<li>PostgreSQL is updated to version 9.2.15</li>
+<li>Nginx proxy caching is enabled</li>
+<li>pg_trgm extension is automatically enabled</li>
+<li>Default Nginx http2 support can be disabled if necessary</li>
+</ul>
+<hr/>
+<p>This release has more improvements, including security fixes. Please check out <a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CHANGELOG.md">the changelog</a> to see all the named changes.</p>
+<h2 id=upgrade-barometer>Upgrade barometer</h2>
+<p>This release includes migrations that require downtime.</p>
+<p>Especially for very large instances running PostgreSQL, this upgrade can
+take some time. In our instance (with almost a million projects), the PostgreSQL
+migrations took more than half an hour, which caused a TCP connection to be dropped.
+Connecting using a Unix socket or using TCP keepalive should prevent this.
+<a href="https://gitlab.com/gitlab-com/operations/issues/135#note_4303804">This is what we did</a>.</p>
+<p>Smaller instances or those running MySQL should have no such issues, but still
+require some downtime for migrations.</p>
+<h3 id=elasticsearch-requirements>Elasticsearch Requirements</h3>
+<p>We have added a requirement for the Elasticsearch integration with GitLab 8.6.
+You now need to have the <a href="https://www.elastic.co/guide/en/elasticsearch/plugins/2.0/plugins-delete-by-query.html">Delete By Query Plugin</a>
+installed, in addition to Elasticsearch 2.0+.</p>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ee/integration/elasticsearch.html">Read about the Elasticsearch integration in our documentation</a></p>
+</blockquote>
+<h3 id=changes-for-source-installations-with-postgresql>Changes for Source installations with PostgreSQL</h3>
+<p>Starting with GitLab 8.6 PostgreSQL users are required to enable the "pg_trgm"
+extension. On certain Linux distributions this will require the installation of
+an extra package. Ubuntu, Fedora, and Debian all ship this extension in the
+"postgresql-contrib" package. Once installed the extension must be enabled, this
+must be done before upgrading to GitLab 8.6 to ensure that all database
+migrations succeed. This extension can be enabled by running the following as a
+PostgreSQL super user for every GitLab database:</p>
+<div class=highlight><pre class="highlight plaintext"><code>CREATE EXTENSION IF NOT EXISTS pg_trgm;
+</code></pre></div>
+<p>Users using GitLab's Omnibus packages do <em>not</em> have to manually enable this
+extension as this is done automatically.</p>
+<p>To check if the extension is enabled you can run the following query:</p>
+<div class=highlight><pre class="highlight plaintext"><code>SELECT true AS enabled
+FROM pg_available_extensions
+WHERE name = 'pg_trgm'
+AND installed_version IS NOT NULL;
+</code></pre></div>
+<p>If the extension is enabled this will produce the following output:</p>
+<div class=highlight><pre class="highlight plaintext"><code> enabled
+---------
+ t
+(1 row)
+</code></pre></div>
+<p>MySQL users do not need to take any extra steps.</p>
+<p>This release also includes a migration that will create a number of indexes that
+rely on the above extension. Creating these indexes may take up to 30 minutes to
+complete depending on the amount of data stored in your database. Users are
+advised to ensure that any PostgreSQL connections stay active long enough for
+this process to complete.</p>
+<p>In the unlikely event of this migration failing (or completing partially) users
+can run the following SQL commands in their database:</p>
+<div class=highlight><pre class="highlight plaintext"><code>CREATE INDEX CONCURRENTLY IF NOT EXISTS index_ci_runners_on_token_trigram ON ci_runners USING gin(token gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_ci_runners_on_description_trigram ON ci_runners USING gin(description gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_issues_on_title_trigram ON issues USING gin(title gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_issues_on_description_trigram ON issues USING gin(description gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_merge_requests_on_title_trigram ON merge_requests USING gin(title gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_merge_requests_on_description_trigram ON merge_requests USING gin(description gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_milestones_on_title_trigram ON milestones USING gin(title gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_milestones_on_description_trigram ON milestones USING gin(description gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_namespaces_on_name_trigram ON namespaces USING gin(name gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_namespaces_on_path_trigram ON namespaces USING gin(path gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_notes_on_note_trigram ON notes USING gin(note gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_projects_on_name_trigram ON projects USING gin(name gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_projects_on_path_trigram ON projects USING gin(path gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_projects_on_description_trigram ON projects USING gin(description gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_snippets_on_title_trigram ON snippets USING gin(title gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_snippets_on_file_name_trigram ON snippets USING gin(file_name gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_users_on_username_trigram ON users USING gin(username gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_users_on_name_trigram ON users USING gin(name gin_trgm_ops);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS index_users_on_email_trigram ON users USING gin(email gin_trgm_ops);
+INSERT INTO schema_migrations VALUES ('20160226114608');
+</code></pre></div>
+<p>These commands ensure all indexes are in place and mark the migration as having
+finished successfully (so Rails doesn't end up trying to run it again).</p>
+<h3 id=deprecation-of-download_url-in-builds-api>Deprecation of download_url in Builds API</h3>
+<p>We removed <code>download_url</code> from the <a href="http://doc.gitlab.com/ce/api/builds.html">Builds API</a>.
+Instead we provide <a href="http://doc.gitlab.com/ce/api/builds.html#get-build-artifacts">an API for downloading artifacts of builds</a>.</p>
+<hr/>
+<p><em>Note</em>: We assume you are upgrading from the latest version. If not, then also consult the upgrade barometers of any intermediate versions you are skipping.
+If you are upgrading from a GitLab version prior to 8.0 <em>and</em> you have CI enabled, you have to upgrade to GitLab 8.0 <a href="/releases/2015/09/22/gitlab-8-0-released/">first</a>.</p>
+<p>Please be aware that by default the Omnibus packages will stop, run migrations,
+and start again, no matter how “big” or “small” the upgrade is. This behavior
+can be changed by adding a <a href="http://doc.gitlab.com/omnibus/update/README.html"><code>/etc/gitlab/skip-auto-migrations</code>
+file</a>.</p>
+<hr/>
+<h2 id=installation>Installation</h2>
+<p>If you are setting up a new GitLab installation please see the
+<a href="/install/">download GitLab page</a>.</p>
+<h2 id=updating>Updating</h2>
+<p>Check out our <a href="/update/">update page</a>.</p>
+<h2 id=enterprise-edition>Enterprise Edition</h2>
+<p>EE only features and features such as LDAP group support can be found in GitLab Enterprise Edition.
+For a complete overview please have a look at the <a href="/features/#enterprise">feature list of GitLab EE</a>.</p>
+<p>Access to GitLab Enterprise Edition is included with a
+<a href="/pricing/">subscription</a>.
+No time to upgrade GitLab yourself?
+A subscription also entitles you to our upgrade and installation services.</p>
+<hr/>
+<h2 id=join-our-webcast-about-86>Join our webcast about 8.6!</h2>
+<p>In our next webcast on Thursday, March 24th, we'll take a look at the new features in GitLab 8.6.
+Our special guest is Douwe Maan, Development Lead here at GitLab.</p>
+<ul>
+<li>Date: Thursday, March 24, 2016</li>
+<li>Time: 5pm (17:00) UTC; 12pm EST; 9am PST</li>
+<li><a href="http://page.gitlab.com/mar242016-release-webcast.html">Register here</a></li>
+</ul>
+<p>Can't make it? Register anyway, and we'll send you a link to watch later.</p>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+8.6+released+with+Deploy+to+Kubernetes+and+Subscribe+to+Label+via+%40Jobvo&amp;url=https://about.gitlab.com/releases/2016/03/22/gitlab-8-6-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab 8.6 released with Deploy to Kubernetes and Subscribe to Label
+via @Jobvo
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2016/03/22/gitlab-8-6-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2016/03/22/gitlab-8-6-released/&amp;text=GitLab 8.6 released with Deploy to Kubernetes and Subscribe to Label' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2016/03/22/gitlab-8-6-released/&amp;title=GitLab 8.6 released with Deploy to Kubernetes and Subscribe to Label&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2016/03/22/gitlab-8-6-released/&amp;t=GitLab 8.6 released with Deploy to Kubernetes and Subscribe to Label' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2016/03/21/gitlab-8-dot-5-dot-8-released/" title="GitLab 8.5.8, 8.4.6, 8.3.5, and 8.2.4 Released"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.5.8, 8.4.6, 8.3.5, and 8.2.4 Released
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2016/03/23/gitlab-8-dot-6-dot-1-released/" title="GitLab 8.6.1 Released"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.6.1 Released
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2016-03-22-gitlab-8-6-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2016-03-22-gitlab-8-6-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Fulfillment Infrastructure
+|
+GitLab
+</title>
+<meta content='The Fulfillment Infrastructure strategy page belongs to the Fulfillment Platform group of the Fulfillment section.' name=description />
+<meta content='The Fulfillment Infrastructure strategy page belongs to the Fulfillment Platform group of the Fulfillment section.' name='twitter:description'/>
+<meta content='The Fulfillment Infrastructure strategy page belongs to the Fulfillment Platform group of the Fulfillment section.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Fulfillment Infrastructure' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/fulfillment/fulfillment-infrastructure/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/fulfillment/fulfillment-infrastructure/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Fulfillment Infrastructure' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/fulfillment/fulfillment-infrastructure/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Fulfillment Infrastructure
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/ppalanikumar'>
+<div class=codeowners-single>
+<img
+src='/images/team/../gitlab-logo-extra-whitespace.png'
+class=codeowner-avatar-img
+alt='Priyanka Palanikumar'
+title='Priyanka Palanikumar'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Priyanka Palanikumar
+</div>
+<div class=codeowners-handle>
+@ppalanikumar
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/fulfillment/fulfillment-infrastructure/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/fulfillment/">Product Section Direction - Fulfillment</a></li><li>Category Direction - Fulfillment Infrastructure</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 class="no_toc hidden-md hidden-lg" id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#mission" id=markdown-toc-mission>Mission</a></li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a></li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1-year plan</a></li>
+<li><a href="#future-opportunities" id=markdown-toc-future-opportunities>Future opportunities</a></li>
+<li><a href="#key-links" id=markdown-toc-key-links>Key Links</a></li>
+</ul>
+<link rel=stylesheet href="/stylesheets/biztech.css"/>
+<p><strong>Last updated</strong>: 2024-03-25</p>
+<h2 id=mission>Mission</h2>
+<blockquote>
+<p>Within the Fulfillment Infrastructure category we want to enable other fulfillment groups and contributors to ship with confidence, speed and efficiency, while ensuring that GitLab's fulfillment systems remain robust, performant and resilient.</p>
+</blockquote>
+<h2 id=overview>Overview</h2>
+<p>As one of our key areas spans developer productivity we work on performance, scalability, and observability efforts with help from the <a href="https://about.gitlab.com/handbook/engineering/infrastructure/">Infrastructure department</a>.</p>
+<p>In order to enable other groups, contributors, and stakeholders, we are focusing on 2 key areas of the Fulfillment infrastructure:</p>
+<table>
+<thead>
+<tr>
+<th>Key area</th>
+<th>Principle</th>
+<th>How</th>
+<th>Performance Indicator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>System reliability</td>
+<td>Provide fulfillment infrastructure with best in class reliability and availability.</td>
+<td><a href="https://gitlab.com/gitlab-org/customers-gitlab-com/">CustomersDot</a> has a <code>99.95%</code> target <a href="https://dashboards.gitlab.net/d/stage-groups-detail-fulfillment_platform/stage-groups-fulfillment-platform-group-error-budget-detail?orgId=1">availability and must stay within allowed error budgets</a>.</td>
+<td><a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/fulfillment-section/#fulfillment-platform---general-availability-through-slis-and-error-budgets">General availability</a> and <a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/fulfillment-section/#fulfillment-platform---customer-journey-error-rates">Customer Journey Error Rate(s)</a></td>
+</tr>
+<tr>
+<td>Developer productivity</td>
+<td>Provide a great experience for every developer that contributes to fulfillment solutions.</td>
+<td>Make code contribution easier by maintaining the underlying architecture, keeping it performant, observable and decrease complexity through abstractions at the platform level.</td>
+<td><a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/fulfillment-section/#fulfillment-platform---mean-time-to-recovery-mttr">Mean time to recovery</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Roadmap:</strong></p>
+<p>For a full list of our upcoming and ongoing projects related to Fulfillment Infrastructure, check out our <a href="https://gitlab.com/groups/gitlab-org/-/roadmap?state=opened&amp;sort=end_date_asc&amp;layout=QUARTERS&amp;timeframe_range_type=THREE_YEARS&amp;label_name[]=Fulfillment+Roadmap&amp;label_name[]=group::fulfillment+platform&amp;label_name[]=Category:Fulfillment+Infrastructure&amp;progress=COUNT&amp;show_progress=true&amp;show_milestones=false&amp;milestones_type=GROUP&amp;show_labels=false">Roadmap</a>.</p>
+<h2 id=1-year-plan>1-year plan</h2>
+<p>Within the next 12 months we want to increase the <a href="https://about.gitlab.com/handbook/engineering/infrastructure/service-maturity-model/#customersdot-detail">level maturity of CustomersDot</a> and continue improving our availability and observability through the following projects:</p>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Why</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/9731">Decouple subscription update API into multiple end points</a></td>
+<td>Reduce the determination complexity of the intended subscription update</td>
+<td>Current focus</td>
+</tr>
+<tr>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/9278">Iteratively migrate CustomersDot to a HA environment</a></td>
+<td>Move CustomersDot services/components to high availability in order to improve reliability</td>
+<td>Later (6-12 milestones)</td>
+</tr>
+<tr>
+<td><a href="https://gitlab.com/gitlab-org/customersdot-ansible/-/issues/156">Implement auto-rollback on error</a></td>
+<td>Minimize disruption if an outage occurs after a deployment</td>
+<td>Later (6-12 milestones)</td>
+</tr>
+<tr>
+<td>Alerting of failed jobs for critical <a href="https://gitlab.com/groups/gitlab-com/gl-infra/-/epics/808">SaaS</a> and <a href="https://gitlab.com/groups/gitlab-com/gl-infra/-/epics/809">SM</a> metrics</td>
+<td>Move away from noisy Sentry alerts to critical alerts for accurate SaaS and SM billing</td>
+<td>Later (6-12 milestones)</td>
+</tr>
+<tr>
+<td><a href="https://gitlab.com/gitlab-org/customers-gitlab-com/-/issues/4145">Alerting over a threshold of payment failures</a></td>
+<td>Encounter payment problems as they occur</td>
+<td>Later (6-12 milestones)</td>
+</tr>
+</tbody>
+</table>
+<h2 id=future-opportunities>Future opportunities</h2>
+<p>As we progress with our current key projects to build foundational strength and enable internal teams to be more efficient, we will identify new areas of opportunity. The future opportunities will have a continued focus on system reliability, developer productivity and fulfilment process efficiency.</p>
+<h2 id=key-links>Key Links</h2>
+<p>For more details into future oportunities of other categories within the Fulfillment Platform group, please refer to the sections in the dedicated category pages:</p>
+<ul>
+<li><a href="/direction/fulfillment/fulfillment-admin-tooling/">Fulfillment Admin Tooling</a></li>
+<li><a href="/direction/fulfillment/customers-dot-application/">CustomersDot Application</a></li>
+<li><a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/fulfillment-section/#fulfillment-platform---general-availability-through-slis-and-error-budgets">Performance indicators</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/roadmap?state=opened&amp;sort=start_date_asc&amp;layout=QUARTERS&amp;timeframe_range_type=THREE_YEARS&amp;label_name[]=Fulfillment+Roadmap&amp;label_name[]=group::fulfillment+platform&amp;progress=COUNT&amp;show_progress=true&amp;show_milestones=false&amp;milestones_type=GROUP&amp;show_labels=false">Fulfillment Platform group roadmap</a></li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/fulfillment/fulfillment-infrastructure/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/fulfillment/fulfillment-infrastructure/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

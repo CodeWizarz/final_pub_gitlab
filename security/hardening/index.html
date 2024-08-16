@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Security - Hardening Your GitLab Instance
+|
+GitLab
+</title>
+<meta content='We designed this Hardening page to serve as a starting point for those interested in hardening a GitLab instance to help improve security.' name=description />
+<meta content='We designed this Hardening page to serve as a starting point for those interested in hardening a GitLab instance to help improve security.' name='twitter:description'/>
+<meta content='We designed this Hardening page to serve as a starting point for those interested in hardening a GitLab instance to help improve security.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Security - Hardening Your GitLab Instance' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='security/hardening/index.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/security/hardening/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Security - Hardening Your GitLab Instance' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/security/hardening/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Security - Hardening Your GitLab Instance
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar></aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li>Security - Hardening Your GitLab Instance</li>
+</ol>
+<h2 class="no_toc hidden-md hidden-lg" id=on-this-page>On this page</h2>
+<ul class="hidden-md hidden-lg" id=markdown-toc>
+<li><a href="#gitlab-self-managed-hardening" id=markdown-toc-gitlab-self-managed-hardening>GitLab Self-Managed Hardening</a> <ul>
+<li><a href="#enable-multi-factor-authentication" id=markdown-toc-enable-multi-factor-authentication>Enable multi-factor authentication</a></li>
+<li><a href="#enforce-additional-sign-up-checks" id=markdown-toc-enforce-additional-sign-up-checks>Enforce additional sign-up checks</a></li>
+<li><a href="#limit-public-visibility-of-your-groups-and-projects" id=markdown-toc-limit-public-visibility-of-your-groups-and-projects>Limit public visibility of your groups and projects</a></li>
+<li><a href="#harden-your-ssh-settings" id=markdown-toc-harden-your-ssh-settings>Harden your SSH settings</a></li>
+<li><a href="#review-the-account-and-limit-settings" id=markdown-toc-review-the-account-and-limit-settings>Review the account and limit settings</a></li>
+<li><a href="#secure-your-ci-secrets" id=markdown-toc-secure-your-ci-secrets>Secure your CI secrets</a></li>
+<li><a href="#protect-your-pipelines-for-all-branches" id=markdown-toc-protect-your-pipelines-for-all-branches>Protect your pipelines for all branches</a></li>
+</ul>
+</li>
+<li><a href="#gitlabcom-hardening-ultimate-tier" id=markdown-toc-gitlabcom-hardening-ultimate-tier>GitLab.com Hardening (Ultimate Tier)</a> <ul>
+<li><a href="#group-settings" id=markdown-toc-group-settings>Group settings</a> <ul>
+<li><a href="#general-settings" id=markdown-toc-general-settings>General settings</a> <ul>
+<li><a href="#make-the-group-visibility-level-private" id=markdown-toc-make-the-group-visibility-level-private>Make the group visibility level private</a></li>
+<li><a href="#permissions-and-group-features" id=markdown-toc-permissions-and-group-features>Permissions and group features</a></li>
+<li><a href="#merge-request-approvals" id=markdown-toc-merge-request-approvals>Merge request approvals</a></li>
+</ul>
+</li>
+<li><a href="#saml-sso" id=markdown-toc-saml-sso>SAML SSO</a> <ul>
+<li><a href="#to-configure-saml-sso" id=markdown-toc-to-configure-saml-sso>To configure SAML SSO:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#group-auditing-and-compliance" id=markdown-toc-group-auditing-and-compliance>Group auditing and compliance</a></li>
+<li><a href="#group-level-push-rules" id=markdown-toc-group-level-push-rules>Group-level push rules</a></li>
+<li><a href="#cicd" id=markdown-toc-cicd>CI/CD</a></li>
+<li><a href="#project-settings" id=markdown-toc-project-settings>Project settings</a> <ul>
+<li><a href="#repository" id=markdown-toc-repository>Repository</a></li>
+<li><a href="#cicd-1" id=markdown-toc-cicd-1>CI/CD</a> <ul>
+<li><a href="#general" id=markdown-toc-general>General</a></li>
+</ul>
+</li>
+<li><a href="#protected-environments" id=markdown-toc-protected-environments>Protected environments</a> <ul>
+<li><a href="#token-access" id=markdown-toc-token-access>Token access</a></li>
+<li><a href="#secure-files" id=markdown-toc-secure-files>Secure files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#project-level-security-testing-and-compliance" id=markdown-toc-project-level-security-testing-and-compliance>Project-level security testing and compliance</a> <ul>
+<li><a href="#configuration" id=markdown-toc-configuration>Configuration</a> <ul>
+<li><a href="#security-testing" id=markdown-toc-security-testing>Security testing</a></li>
+<li><a href="#policies" id=markdown-toc-policies>Policies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#additional-resources" id=markdown-toc-additional-resources>Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+<p>Every customers' deployment and configuration of GitLab is unique. The security settings that you configure will vary greatly depending on your use case, risk assessment, and your environment.</p>
+<p>How does one get started? GitLab has you covered! We have a lot of <a href="https://docs.gitlab.com/ee/security/">information on security settings</a> for both GitLab SaaS and GitLab Self-Managed instances in our Docs pages. Our Docs pages also offer a wealth of <a href="https://docs.gitlab.com/ee/security/hardening.html">hardening recommendations</a> for self-managed instances, and many of these settings apply to GitLab SaaS instances as well.</p>
+<p>Looking for a consolidated list of hardening recommendations? Use the links below to view our quick-access hardening guides for GitLab Self-Managed and GitLab SaaS instances.</p>
+<ul>
+<li><a href="#gitlab-self-managed-hardening">GitLab Self-Managed</a></li>
+<li><a href="#gitlabcom-hardening-ultimate-tier">GitLab.com</a></li>
+</ul>
+<hr/>
+<h2 id=gitlab-self-managed-hardening>GitLab Self-Managed Hardening</h2>
+<p><br/></p>
+<h3 id=enable-multi-factor-authentication>Enable multi-factor authentication</h3>
+<p><strong>Admin &gt; Settings &gt; General &gt; Sign-in restrictions</strong></p>
+<ul>
+<li>Ensure that the checkbox next to Two-factor authentication (2FA) is checked. The default setting for Two-factor grace period is 48 hours. Adjust it to a lower value, such as 8 hours.</li>
+<li>Ensure the checkbox next to Enable admin mode is checked so that Admin Mode is active. Users with Admin access will have to use additional authentication to perform administrative tasks. With 2FA enabled, this will require additional 2FA authentication by the user.</li>
+<li>For more detailed information, refer to the documentation on <a href="https://docs.gitlab.com/ee/administration/settings/sign_in_restrictions.html">sign-in restrictions</a>.</li>
+</ul>
+<h3 id=enforce-additional-sign-up-checks>Enforce additional sign-up checks</h3>
+<p><strong>Admin &gt; Settings &gt; General &gt; Sign-up restrictions</strong></p>
+<ul>
+<li>Next to Sign-up enabled ensure the checkbox is unchecked.</li>
+<li>Under Email confirmation settings ensure that Hard is selected. This will require the user to verify their email address during the sign-up process before their account is allowed access.</li>
+<li>The Minimum password length (number of characters) default setting of 12 characters is fine if additional authentication techniques are enforced. Options available for password complexity include Require numbers, Require uppercase letters, Require lowercase letters, and Require symbols. Check these boxes depending on your internal password standard (also check out <a href="https://pages.nist.gov/800-63-3/sp800-63b.html">NIST SP 800-63B</a>).</li>
+<li>If all users' email addresses are under a single domain (e.g., example.com), consider adding it to the Allowed domains for sign-ups. This will prevent those with email addresses associated with other domains from signing up. For more detailed information, refer to the documentation on <a href="https://docs.gitlab.com/ee/administration/settings/sign_up_restrictions.html">sign-up restrictions</a>.</li>
+</ul>
+<h3 id=limit-public-visibility-of-your-groups-and-projects>Limit public visibility of your groups and projects</h3>
+<p><strong>Admin &gt; Settings &gt; General &gt; Visibility and access control</strong></p>
+<ul>
+<li>The Default project visibility and Default group visibility for any newly created project or group should be set to Private by default. Only users that are granted specific access to a project or group will be able to access these resources. This can be adjusted later if necessary or when creating a new project or group. This ensures the default mode is secure to prevent accidental disclosure of information.</li>
+<li>For more details on Visibility and access control <a href="https://docs.gitlab.com/ee/administration/settings/visibility_and_access_controls.html">refer to the documentation</a>.</li>
+</ul>
+<h3 id=harden-your-ssh-settings>Harden your SSH settings</h3>
+<p><strong>Admin &gt; Settings &gt; General &gt; Visibility and access control</strong></p>
+<ul>
+<li>
+<p>Typically, under Enabled Git access protocols it will be set to Both SSH and HTTP(S). If one of the Git protocols is not in use by your users, set it to either Only SSH or Only HTTP(S) accordingly. This will reduce the attack surface by limiting possibilities of compromise through an unused protocol. For SSH key types, the most recommended algorithms to use are, in order:</p>
+<ol>
+<li>ED25519</li>
+<li>RSA</li>
+<li>ECDSA</li>
+</ol>
+</li>
+<li>When configuring default types and lengths for SSH keys, keep in mind the list above.</li>
+<li>Specific details on SSH settings can be found <a href="https://docs.gitlab.com/ee/security/ssh_keys_restrictions.html">here</a> and <a href="https://docs.gitlab.com/ee/administration/settings/visibility_and_access_controls.html#configure-enabled-git-access-protocols">here</a> for Git Access protocols.</li>
+</ul>
+<h3 id=review-the-account-and-limit-settings>Review the account and limit settings</h3>
+<p><strong>Admin &gt; Settings &gt; General &gt; Account and limit settings</strong></p>
+<ul>
+<li>This section allows you to limit the size of attachments, pushes, exports, imports, or repositories. As the specific size (in MB) will be tailored to your needs, review these settings and set limits in line with your internal policies. Session duration for users (in minutes) and lifetime of SSH keys and all access tokens (in days) can also be configured. Ensure the durations are in accordance with your internal policies and security best practices.</li>
+<li>Review the <a href="https://docs.gitlab.com/ee/administration/settings/account_and_limit_settings.html">documentation</a> and apply changes that enforce your own policies.</li>
+</ul>
+<h3 id=secure-your-ci-secrets>Secure your CI secrets</h3>
+<p><strong>Admin &gt; Settings &gt; CI</strong></p>
+<ul>
+<li>Passwords, tokens, keys, and other secrets that require any level of protection should never be stored in plaintext. Instead, some type of encrypted container technology (Secrets Manager) should be implemented, such as GCP's Secret Manager, AWS Key Management Service (KMS), or HashiCorp Vault. For self-managed and standalone instances, HashiCorp Vault is recommended, and many GitLab features can take advantage of Vault and are well described in the <a href="https://docs.gitlab.com/search/?query=vault">documentation</a>.</li>
+<li>For external communications, ensure any connectivity with external hosts in your CI/CD process is using encrypted channels. The use of TLS 1.2 or above is highly recommended and where possible mutual TLS will help things considerably. For details on the use of external secrets for your CI/CD pipeline, check <a href="https://docs.gitlab.com/ee/ci/secrets/">here</a>for actual examples and configuration guides.</li>
+</ul>
+<h3 id=protect-your-pipelines-for-all-branches>Protect your pipelines for all branches</h3>
+<p><strong>Admin &gt; Settings &gt; CI</strong></p>
+<ul>
+<li>Pipelines are a part of jobs that execute steps in stages to automate tasks on behalf of the users of a project. They are a central component of CI/CD. By default, only the default branch gets a protected pipeline. Configure your other branches with the same level of security by following <a href="https://docs.gitlab.com/ee/user/project/protected_branches.html#configure-a-protected-branch">these simple steps</a>. This considerably hardens your pipelines.</li>
+<li>The security features enabled by default on protected pipelines are listed in our <a href="https://docs.gitlab.com/ee/ci/pipelines/#pipeline-security-on-protected-branches">documentation</a>.</li>
+<li>Once the pipeline has run, the code will be deployed in an environment. To limit interactions with that environment and to protect it from unauthorized users, you can set your key environments as protected.</li>
+<li>Prerequisites and full process are available in the <a href="https://docs.gitlab.com/ee/ci/environments/protected_environments.html">documentation</a>.</li>
+</ul>
+<h2 id=gitlabcom-hardening-ultimate-tier>GitLab.com Hardening (Ultimate Tier)</h2>
+<h3 id=group-settings>Group settings</h3>
+<p>Many security-related settings can be set on the top-level group and will cascade down into all subgroups and projects. They are the easiest and most important in securing your GitLab.com instance.</p>
+<h4 id=general-settings>General settings</h4>
+<p>In the top-level group, the following settings should be applied to provide the best security for the code within that group:</p>
+<h5 id=make-the-group-visibility-level-private>Make the group visibility level private</h5>
+<p>This is likely the most important setting among general settings. By marking the group “private", anyone who is not explicitly a member of the group will not be able to access it. Additionally, by making the top-level group private, all subgroups and projects will also be private and cannot be exposed.</p>
+<h5 id=permissions-and-group-features>Permissions and group features</h5>
+<p>Under permissions:</p>
+<ul>
+<li>Set “Prevent members from sending invitations to outside groups”. This will prevent accidentally adding people who should not belong to the group.</li>
+<li>Set “Prevent sharing a project with other groups”. This prevents accidental or malicious exfiltration of code by sharing or moving a project to another group outside the control of the top-level group owner.</li>
+<li>Allow project and group access token creation. Project and group access tokens are much like <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html">personal access tokens</a> with the following improvements:
+<ul>
+<li>They are visible to and manageable by group owners and maintainers, which means they can be revoked and have expiration dates set by an administrator to limit the opportunity for abuse.</li>
+<li>They create a virtual “bot” user that does not count against your license count.</li>
+</ul>
+</li>
+<li>Enable <a href="https://about.gitlab.com/blog/2023/04/03/delayed-deletion/">delayed project deletion</a>. This will give you a seven-day grace period to catch and prevent accidental or malicious removal of a repo. GitLab.com, like self-managed GitLab, does not have the ability to restore an individual project without significant expense for professional services.</li>
+<li>Allowlist the Classless Inter-Domain Routing (CIDR) or supernetting from which users should be accessing the code.</li>
+<li>Restrict membership to only those email domains belonging to your organization and contractors.</li>
+<li>Restrict creation of subgroups to Owners. This will help keep the structure of the top-level group within your policies and make <a href="https://docs.gitlab.com/ee/user/group/saml_sso/group_sync.html">SAML Group Sync</a> for membership easier to manage.</li>
+<li>Block forking projects outside of this group hierarchy. This will help prevent code exfiltration.</li>
+<li>Require <a href="https://docs.gitlab.com/ee/user/profile/account/two_factor_authentication.html">two-factor authentication</a>. This disables the ability to use password authentication with Git over HTTPS.</li>
+<li>Disallow adding new members to projects within this group. All members must be inherited from the group.</li>
+</ul>
+<h5 id=merge-request-approvals>Merge request approvals</h5>
+<p><a href="https://docs.gitlab.com/ee/user/project/merge_requests/approvals/">Merge request approvals</a> help prevent injection of malicious code into the repository by having people other than the author review them. Enable merge request approvals for all projects in your group to:</p>
+<ul>
+<li>Prevent approval by authors.</li>
+<li>Prevent approvals by users who add commits.</li>
+<li>Prevent editing approval rules in projects and on individual merge requests.</li>
+</ul>
+<h4 id=saml-sso>SAML SSO</h4>
+<p>To more tightly control who can access your code in GitLab.com, set up <a href="https://docs.gitlab.com/ee/user/group/saml_sso/">SAML SSO</a>. This will ensure that everyone who accesses it is approved by someone in authority.</p>
+<h5 id=to-configure-saml-sso>To configure SAML SSO:</h5>
+<ul>
+<li>Enable SAML authentication for this group.</li>
+<li>Enforce SSO-only authentication for web activity for this group.</li>
+<li>Enforce SSO-only authentication for Git and Dependency Proxy activity for this group.</li>
+<li>Set the Default membership role to Minimal Access. Roles can be increased as needed in subgroups or individual projects, minimal access prevents any visibility to projects or subgroups where the user is not explicitly granted another role.</li>
+<li>Tightly control access to the Maintainer and Owner roles; every developer does not need to have a Maintainer role.</li>
+</ul>
+<h3 id=group-auditing-and-compliance>Group auditing and compliance</h3>
+<p>Regularly and periodically review the <a href="https://docs.gitlab.com/ee/user/compliance/compliance_report/">compliance reports</a> to verify who is approving merge requests and what MRs are getting approved.</p>
+<p>Set up streaming group audit events to your corporate security information and event management (SIEM) system and monitor them for unusual activity. This needs to be repeated for each group and project in the hierarchy to get the maximum number of audit events.</p>
+<h3 id=group-level-push-rules>Group-level push rules</h3>
+<p>Setting restrictive push rules at the group level will help ensure malicious code is not injected into the repository:</p>
+<ul>
+<li>Require committers be verified.</li>
+<li>Reject unsigned commits.</li>
+<li>Ensure the commit author is a GitLab user.</li>
+<li>Prevent pushing secret files.</li>
+<li>Require commit author’s email to be from your email domain.</li>
+</ul>
+<h3 id=cicd>CI/CD</h3>
+<p>The following settings can help insure the integrity of <a href="https://about.gitlab.com/topics/ci-cd/">CI/CD</a> pipelines and reduce the opportunities for abuse and malice:</p>
+<ul>
+<li>Register runners at the lowest practical level to reduce the blast radius of any malicious use.</li>
+<li>Require tags to use all runners to reduce the opportunity for abuse.</li>
+<li>Define CI/CD variables – especially if they contain secrets – at the lowest practical level to reduce the blast radius of any malicious use.</li>
+<li>Use protected runners with protected variables and protected branches to significantly limit who can deploy into production environments or misuse cloud resources.</li>
+<li>Access to change the .gitlab-ci.yml pipeline definition file should be tightly controlled in all repos through the CODEOWNERS file to prevent malicious use of the CI/CD system.</li>
+</ul>
+<h3 id=project-settings>Project settings</h3>
+<p>Some settings do not cascade down from the group or are not available at the group level and must be set on individual projects instead. These include some repo-specific settings.</p>
+<h4 id=repository>Repository</h4>
+<p>Set up protected branches and protected tags to go along with the protected runners and protected variables defined above.</p>
+<h4 id=cicd-1>CI/CD</h4>
+<h5 id=general>General</h5>
+<ul>
+<li>Disable public pipelines.</li>
+<li>Use separate caches for protected branches.</li>
+</ul>
+<h4 id=protected-environments>Protected environments</h4>
+<p>Use protected environments and tightly limit who can deploy and require approvals for deploying.</p>
+<h5 id=token-access>Token access</h5>
+<p>Restrict access to this project’s CI_JOB_TOKEN to only individual projects to ensure malicious projects to not retrieve the token and use it to access the API.</p>
+<h5 id=secure-files>Secure files</h5>
+<p>Store keystores, provisioning profiles and signing certificates in the Secure Files storage rather than the repository.</p>
+<h3 id=project-level-security-testing-and-compliance>Project-level security testing and compliance</h3>
+<h4 id=configuration>Configuration</h4>
+<h5 id=security-testing>Security testing</h5>
+<ul>
+<li>Enable static application security testing <a href="https://docs.gitlab.com/ee/user/application_security/sast/">SAST</a> to help prevent insertion of malicious code into the application.</li>
+<li>Enable dependency scanning and regularly review the dependency list or software, or software bill of materials <a href="https://about.gitlab.com/blog/2022/10/25/the-ultimate-guide-to-sboms/">(SBOM)</a>, generated by dependency scanning for vulnerabilities and malicious components.</li>
+<li>Enable <a href="https://docs.gitlab.com/ee/user/application_security/container_scanning/">container scanning</a> and cluster image scanning.</li>
+</ul>
+<h5 id=policies>Policies</h5>
+<p>As an alternative to the security testing section above, you may choose to enable scan execution policies. Enable <a href="https://docs.gitlab.com/ee/user/application_security/policies/scan-result-policies.html">test scan result policies</a> to prevent merging code with critical vulnerabilities.</p>
+<p>Following these best practices will help ensure that your code hosted on GitLab.com is safe from tampering and <a href="https://www.engadget.com/okta-stolen-source-code-205601214.html">public exposure</a> and that your software supply chain is secure and only authorized users are accessing your software assets.</p>
+<h3 id=additional-resources>Additional Resources</h3>
+<ul>
+<li>If you want to learn more about how we do security <strong>at GitLab</strong>, review the <a href="https://about.gitlab.com/handbook/security/">security section</a> of the handbook.</li>
+<li><a href="https://docs.gitlab.com/ee/user/group/">Group level settings documentation</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/project/settings/">Project level settings documentation</a></li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/security/hardening/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/security/hardening/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

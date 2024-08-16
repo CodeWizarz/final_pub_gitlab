@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab 8.3 released with Auto-merge and GitLab Pages
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab Release 8.3 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name=description />
+<meta content='Learn more about GitLab Release 8.3 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name='twitter:description'/>
+<meta content='Learn more about GitLab Release 8.3 for GitLab Community Edition (CE) and Enterprise Edition (EE)' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab 8.3 released with Auto-merge and GitLab Pages' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2015-12-22-gitlab-8-3-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2015/12/22/gitlab-8-3-released/' property='og:url'/>
+<meta content=2015-12-22 property='article:published_time'/>
+<meta content='https://about.gitlab.com/about' property='article:author'/>
+<meta content="https://about.gitlab.com/images/unsplash/building.jpg" property="og:image">
+<meta content="https://about.gitlab.com/images/unsplash/building.jpg" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab 8.3 released with Auto-merge and GitLab Pages' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2015/12/22/gitlab-8-3-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Dec 22, 2015
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#jobvo">Job van der Voort</a>
+<a href="https://twitter.com/jobvo"><span>&nbsp;</span>
+<span class=author-twitter>
+<i class='fab fa-twitter'></i>
+</span>
+</a></span>
+<h1>
+GitLab 8.3 released with Auto-merge and GitLab Pages
+</h1>
+<p class=description>
+Learn more about GitLab Release 8.3 for GitLab Community Edition (CE) and Enterprise Edition (EE)
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/unsplash/building.jpg);'></div>
+<div class=content>
+<p>We're closing this fantastic year for GitLab with its 49th consecutive monthly
+release, GitLab 8.3.</p>
+<p>We're very grateful for all the people that have contributed to this release.
+You can now merge automatically after a build has passed, we're introducing
+GitLab Pages for Enterprise Edition, and issues have new powers in both CE and
+EE!</p>
+<p>Once again we've received some amazing contributions from our volunteers. This
+month's Most Valuable Person (<a href="/community/mvp/">MVP</a>) is Greg
+Smethells. Greg made the proposal for and <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/1991">subsequently implemented</a>
+the new references in issues and merge requests. He communicated his every move
+and worked together closely with many other people from the community.</p>
+<p>Thanks, Greg!</p>
+<h2 id=gitlab-pages-ee-only>GitLab Pages (EE only)</h2>
+<p>GitLab Pages allows you to host a static website on your GitLab instance,
+that is automatically deployed and updated, all from a normal GitLab project.</p>
+<p>With <a href="/releases/2015/11/22/gitlab-8-2-released/">the last release of GitLab</a>
+we shipped Build Artifacts for CI.
+This means that your builds can have some sort of output.
+We leveraged this to build GitLab Pages.</p>
+<p>So if you have an open source project that you want to give a proper website,
+you can now do it straight from your repository.</p>
+<p>Have documentation that you want to feature nicely? Use pages to create a
+clean experience for your users.</p>
+<p>As GitLab.com runs GitLab Enterprise Edition, you can now use that for your
+static sites for free. Your projects will be served on <code>namespace.gitlab.io/project_name</code>.</p>
+<p>We plan to add CNAME and SSL support
+<a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/134">in an upcoming GitLab release</a>.
+Right now, if you want to use SSL, you need a wildcard certificate for your
+domain.</p>
+<p><a href="http://doc.gitlab.com/ee/pages/README.html">See the documentation for GitLab Pages</a></p>
+<p>If you encounter any problems or have any feature proposals, please open an
+issue in the <a href="https://gitlab.com/gitlab-org/gitlab-ee/issues">EE issue tracker</a>.</p>
+<h2 id=auto-merge-on-build-success>Auto-merge on Build Success</h2>
+<p>If you've reviewed a merge request, but the CI builds are still running,
+it can be annoying to have to wait for them to finish.</p>
+<p><img src="/images/8_3/merge_on_pass.jpg" alt="Merge on Build Success in GitLab 8.3"/></p>
+<p>By default, we will now show you a button that will merge the MR when
+the build succeeds. Less waiting, more reviewing!</p>
+<p>Thanks to <a href="https://twitter.com/zjvandeweg">Zeger-Jan van de Weg</a> for
+<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/1729">his contribution</a>!</p>
+<ul>
+<li><a href="http://doc.gitlab.com/ee/user/project/merge_requests/auto_merge.html">See the documentation on Auto-merge</a></li>
+</ul>
+<h2 id=contribution-analytics-ee-only>Contribution Analytics (EE only)</h2>
+<p>In order to make it easy to see how and where are active in your projects,
+we're building contribution analytics for Enterprise Edition.</p>
+<p>In GitLab 8.3, you can now quickly get an overview of activity of a group
+by going to <strong>Group -&gt; Contribution Analytics</strong> at <code>groups/groupname/analytics</code>.</p>
+<p><img src="/images/8_3/stats.jpg" alt="Get contribution analytics in GitLab 8.3 EE"/></p>
+<p>We intend to expand contribution analytics in future
+releases of GitLab. We're curious to hear your thoughts and feature proposals.</p>
+<h2 id=merge-request-references-in-issues>Merge Request References in Issues</h2>
+<p>An issue is often followed by one or multiple merge requests.
+Thanks to the great contribution of Greg, you are now able to quickly
+see all referenced merge requests with their status (Open / Closed / Merged)
+and even their build status (Success / Running / Failed) in an issue!</p>
+<p><img src="/images/8_3/references.jpg" alt="See referenced merge requests in issues in GitLab 8.3"/></p>
+<p>This makes it much easier to see the current status of an issue and find all related
+code, reviews and commits.</p>
+<h2 id=issue-weight-ee-only>Issue Weight (EE only)</h2>
+<p>When you have a lot of issues, it can be hard to get an overview.
+By adding a weight to each issue, you can get a better idea of how much time,
+value, or complexity a given issue has or will cost.</p>
+<p>To set the weight of issue, simply change the value in the dropdown menu.
+You can set it to a numeric value from 1 to 9.</p>
+<p><img src="/images/8_3/weights1.jpg" alt="Issue Weights in GitLab EE 8.3"/></p>
+<p>This value will appear in the issues list and on issues themselves, and you can
+see the total sum of all issues on the milestone page.</p>
+<h2 id=quickly-create-a-new-mr-from-the-web-editor>Quickly create a new MR from the web editor</h2>
+<p>You know you should create a merge request, but it's so appealing to quickly
+fix something in GitLab's editor and push it to the master branch.</p>
+<p>To prevent you from being naughty these holidays and onward, we've added
+a quick option to create a merge request from your changes in the editor.</p>
+<p><img src="/images/8_3/new_mr.jpg" alt="Quickly create a new MR from the web editor in GitLab 8.3"/></p>
+<p>Get your commit reviewed and let your CI run before you push to master!</p>
+<h2 id=builds-in-merge-requests>Builds in Merge Requests</h2>
+<p>As your merge requests trigger builds to run in CI, you now have quick
+access to them in the <strong>Builds</strong> tab.</p>
+<p><img src="/images/8_3/builds.jpg" alt="See your CI Builds in MRs in GitLab 8.3"/></p>
+<p>This makes it much easier to see what is failing, making it even easier to work
+with CI in code review.</p>
+<p>As this is another step into integrating CI in GitLab, we're
+working hard on bringing more of these improvements. Have any ideas?
+Share them by submitting a feature proposal or a merge request!</p>
+<h2 id=automatic-references>Automatic References</h2>
+<p>You might know that you can reference anything from anywhere in GitLab,
+using the simple syntax of <code>group/projectREF</code>, for instance to reference
+issue 1 in the GitLab CE repo you can do <code>gitlab-org/gitlab#1</code>.</p>
+<p>We now automatically generate those references for you when posting a URL from
+within your GitLab instance. So:
+<code>https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/1991</code> becomes
+<code>gitlab-org/gitlab-ce!1991</code>. This makes reading issues much cleaner.</p>
+<h2 id=jira-support-in-gitlab-ce>JIRA support in GitLab CE</h2>
+<p>Full JIRA integration was previously exclusive to GitLab Enterprise Edition.
+With GitLab 8.3 forward, everyone has access to advanced JIRA integration in GitLab.</p>
+<p>You can now connect GitLab with JIRA, making it possible to close JIRA tickets
+with commit messages and reference JIRA tickets from within GitLab.</p>
+<p>Our JIRA integration automatically provides context and links back to
+GitLab issues, merge requests, users, and commits whenever you reference
+a JIRA ticket.</p>
+<p>If you're currently using JIRA, we're curious to hear how we can improve
+further integration.</p>
+<p>Configure the new settings for JIRA support in your projects under
+<strong>Settings -&gt; Services -&gt; JIRA</strong>.</p>
+<h2 id=ci-improvements>CI Improvements</h2>
+<p>With merging GitLab CI into GitLab <a href="/releases/2015/09/22/gitlab-8-0-released/">with GitLab 8.0</a>
+we set out on a path of integrating two separate codebases.</p>
+<p>With GitLab 8.3, we conclude this path, as all CI code has been fully integrated
+in GitLab and refactored and cleaned where necessary.</p>
+<p>This should make it easier to contribute to the development of GitLab CI and
+makes way for further integration those crucial CI tools in GitLab.</p>
+<h2 id=other-changes>Other changes</h2>
+<p>This release has more improvements, including security fixes. Please check out <a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CHANGELOG">the Changelog</a> to see the all named changes.</p>
+<h3 id=decoupling-gitlab-from-nginx>Decoupling GitLab from NGINX</h3>
+<p>In GitLab 8.3 we are making a major behind the scenes change in how
+GitLab works: all HTTP requests are now proxied through
+gitlab-workhorse. We have moved most if not all GitLab-specific
+configuration from the NGINX configuration files into gitlab-workhorse.</p>
+<p>This change will make it easier for GitLab developers to add features
+and improve GitLab using gitlab-workhorse because they no longer have
+to work in three places: the Rails application, gitlab-workhorse, and
+NGINX. This change is also making it simpler to deploy GitLab from
+source, and simpler to use GitLab with Apache or HAproxy when so
+desired, because the contact surface between GitLab and its reverse
+proxy is now much smaller.</p>
+<p>We are still recommending to run GitLab with NGINX because it offers
+request/response buffering (not yet implemented in gitlab-workhorse)
+and SSL termination (not planned for gitlab-workhorse).</p>
+<p>If you are using our Omnibus packages and its built-in NGINX service
+then no action is needed when upgrading. If you installed GitLab from
+source or if you are using your own reverse proxy then you will have
+to check your init script (gitlab-workhorse got some new settings) and
+reverse proxy configuration. The <a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/update/8.2-to-8.3.md">8.3 update
+guide</a>
+has more details.</p>
+<p>Those of you who run GitLab at a "relative URL" (example.com/gitlab)
+will be pleased to hear that gitlab-workhorse now supports relative
+URLs.</p>
+<h3 id=mattermost-13>Mattermost 1.3</h3>
+<p>We're shipping Mattermost 1.3 with GitLab 8.3.
+See the <a href="http://www.mattermost.org/mattermost-a-top-10-open-source-project-of-2015/">release post for Mattermost 1.3</a>
+for details.</p>
+<h2 id=upgrade-barometer>Upgrade barometer</h2>
+<p>If you are upgrading from GitLab 8.2 and none of your users are using GitLab CI
+then you can perform the upgrade to 8.3 without downtime.</p>
+<p>Be advised that if you are not using the Omnibus packages and its built-in NGINX
+settings, you will have to update your Nginx/Apache settings when upgrading to 8.3.</p>
+<p>Please be aware that by default the Omnibus packages will stop, run migrations,
+and start again, no matter how “big” or “small” the upgrade is. This behavior
+can be changed by adding a <a href="http://doc.gitlab.com/omnibus/update/README.html"><code>/etc/gitlab/skip-auto-migrations</code>
+file</a>.</p>
+<h3 id=if-you-are-using-ci>If you are using CI</h3>
+<p>If you are using CI, there are migrations that will have to be performed offline.</p>
+<p>As noted above, we're migrating almost all database models of CI.
+The migration of the CI services are somewhat lossy:
+Slack and HipChat notifications will only migrate if they are <strong>enabled</strong>
+before the migration.</p>
+<p>These migrations took 280 seconds on GitLab.com on PostgreSQL (~500k projects).
+We expect this to be a little longer for MySQL databases.</p>
+<h3 id=jenkins-integration-changes-ee-only>Jenkins Integration Changes (EE only)</h3>
+<p>Jenkins integration using the
+<a href="https://wiki.jenkins-ci.org/display/JENKINS/GitLab+Hook+Plugin">GitLab Hook Plugin</a>
+was deprecated in favor of the
+<a href="https://wiki.jenkins-ci.org/display/JENKINS/GitLab+Plugin">GitLab Plugin</a>.
+This plugin enables closer integration between Jenkins and GitLab, including the display of build status on each commit and on the project home page. Previously, build status was only available in a merge request.
+The deprecated integration has been renamed to 'Jenkins CI (Deprecated)' and will continue to work for existing users. We may remove this in a future release and recommend
+using the new 'Jenkins CI' project service instead. See <a href="https://docs.gitlab.com/ee/integration/jenkins.html">GitLab Jenkins documentation</a> for more details.</p>
+<h3 id=notes-on-upgrading-from-before-80>Notes on upgrading from before 8.0</h3>
+<p><em>Note</em> If you are upgrading from a GitLab version prior to 8.0 <em>and</em> you have CI enabled, you have to upgrade to GitLab 8.0 <a href="/releases/2015/09/22/gitlab-8-0-released/">first</a>.</p>
+<hr/>
+<h2 id=installation>Installation</h2>
+<p>If you are setting up a new GitLab installation please see the
+<a href="/install/">download GitLab page</a>.</p>
+<h2 id=updating>Updating</h2>
+<p>Check out our <a href="/update/">update page</a>.</p>
+<h2 id=enterprise-edition>Enterprise Edition</h2>
+<p>The mentioned EE-only features and things like LDAP group support can be found in GitLab Enterprise Edition.
+For a complete overview please have a look at the <a href="http://www.gitlab.com/gitlab-ee/">feature list of GitLab EE</a>.</p>
+<p>Access to GitLab Enterprise Edition is included with a <a href="http://www.gitlab.com/pricing/">subscription</a>.
+No time to upgrade GitLab yourself?
+A subscription also entitles you to our upgrade and installation services.</p>
+<hr/>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+8.3+released+with+Auto-merge+and+GitLab+Pages+via+%40jobvo&amp;url=https://about.gitlab.com/releases/2015/12/22/gitlab-8-3-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab 8.3 released with Auto-merge and GitLab Pages
+via @jobvo
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2015/12/22/gitlab-8-3-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2015/12/22/gitlab-8-3-released/&amp;text=GitLab 8.3 released with Auto-merge and GitLab Pages' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2015/12/22/gitlab-8-3-released/&amp;title=GitLab 8.3 released with Auto-merge and GitLab Pages&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2015/12/22/gitlab-8-3-released/&amp;t=GitLab 8.3 released with Auto-merge and GitLab Pages' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2015/12/10/gitlab-8-dot-2-dot-3-released/" title="GitLab 8.2.3 Released"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.2.3 Released
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2015/12/28/gitlab-8-dot-3-dot-1-released/" title="GitLab 8.3.1 Released"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.3.1 Released
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2015-12-22-gitlab-8-3-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2015-12-22-gitlab-8-3-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

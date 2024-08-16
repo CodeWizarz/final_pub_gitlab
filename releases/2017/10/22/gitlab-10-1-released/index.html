@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab 10.1 released with Image Discussions and Rejection of Unsigned Commits
+|
+GitLab
+</title>
+<meta content='GitLab 10.1 Released with LDAP Group Sync Filters, GPG Subkeys Support, and a Moderation Lock of Issues and Merge Requests.' name=description />
+<meta content='GitLab 10.1 Released with LDAP Group Sync Filters, GPG Subkeys Support, and a Moderation Lock of Issues and Merge Requests.' name='twitter:description'/>
+<meta content='GitLab 10.1 Released with LDAP Group Sync Filters, GPG Subkeys Support, and a Moderation Lock of Issues and Merge Requests.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab 10.1 released with Image Discussions and Rejection of Unsigned Commits' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2017-10-22-gitlab-10-1-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2017/10/22/gitlab-10-1-released/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/tweets/gitlab-10-1-released.png" property="og:image">
+<meta content="https://about.gitlab.com/images/tweets/gitlab-10-1-released.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab 10.1 released with Image Discussions and Rejection of Unsigned Commits' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2017/10/22/gitlab-10-1-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+<link href='/stylesheets/release-posts.css' rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+
+<div class='blog article release-post-refresh'>
+<div class=cover style='background-image: url(/images/release-layout-gradient.png);'>
+<div class=overlay-dark>
+<div class='wrapper header'>
+<div class='release-number release-number-dark'>
+10.1
+</div>
+</div>
+</div>
+</div>
+
+<div class='wrapper body'>
+<div class=content>
+<div class=release-header>
+<div class=release-post-section>
+<div class=release-meta-info>
+<span class=date>
+Oct 22, 2017
+</span>
+<span>-</span>
+<span class='author '>
+<a href="/company/team/#axil">Achilleas Pipinellis</a>
+<a href="https://gitlab.com/axil"><span>&nbsp;</span>
+<span class=sr-only>
+Achilleas Pipinellis
+</span>
+<span class='author-gitlab '>
+<i class='fab fa-gitlab'></i>
+</span>
+</a></span>
+</div>
+<h1>
+GitLab 10.1 Release
+</h1>
+<h2 class=slp-text-heading2-bold>
+GitLab 10.1 released with Image Discussions and Rejection of Unsigned Commits
+</h2>
+<p class=description>
+GitLab 10.1 Released with LDAP Group Sync Filters, GPG Subkeys Support, and a Moderation Lock of Issues and Merge Requests.
+</p>
+</div>
+</div>
+
+<section class=release-post-section id=intro-section>
+<div id=intro>
+<p>Καλημέρα! (Good morning!) This month we're coming to you live from GitLab all
+hands in Heraklion, Greece, to release GitLab 10.1. 🚀</p>
+<p>Since GitLab's inception, we envisioned a world where
+<a href="/direction/#vision">everyone can contribute</a>, and with each release we're one
+step closer. With GitLab 10.1, we bring more tools for better collaboration,
+enhanced security and authentication, as well as improved performance and UX.</p>
+<p>For far too long a group of folks have been left out of the discussion and we
+think it's time that got fixed. With GitLab 10.1 we're changing how you should
+think about version control and discussion.
+Commenting on lines of code works great when the discussion centers around text,
+but what about images? After all, if the code being written has an app UI, web
+page, or generates a printed asset then it makes sense that you'd want to be
+able to talk about text and images in the same way. With
+<a href="#image-discussions">Image Discussions</a> we're opening up a whole new way to
+collaborate. Extending on collaboration, you can now
+<a href="#merge-requests-across-forks">create merge requests across forks</a> of a
+canonical repository.</p>
+<p>Being able to work under a secure environment is very important, and with each
+release we are constantly improving the security and authentication mechanisms.
+This time, we have added <a href="#ldap-group-sync-filters">LDAP group sync filters</a>,
+as well as the ability to <a href="#reject-unsigned-commits">reject unsigned commits</a>.
+The <a href="#improved-admin-audit-log">admin audit log</a> has been improved to also
+include more metrics and <a href="#signing-commits-with-gpg-subkeys">GPG subkeys support</a> has
+been added.</p>
+<p>An open source project can attract a lot of visitors and contributors. Although
+one would expect civilized discussions to take place, that's not always
+the case. With GitLab 10.1, a moderation tool is in place and you are able to
+<a href="#lock-discussions">lock discussions on issues and merge requests</a>
+to avoid unnecessary friction among your community.</p>
+<p>Going strong with our <a href="/blog/2017/10/11/from-dev-to-devops/">DevOps vision</a>, we've
+made it really easy to <a href="#easy-creation-of-kubernetes-clusters-on-google-container-engine-(beta)">create clusters on Google Kubernetes Engine from within
+GitLab</a>.
+The <a href="#online-view-of-html-artifacts">online view of HTML artifacts</a>
+is also another great addition that will make it even easier to view your test
+reports right from your web browser.</p>
+<p>Dedicated to our open source stewardship, the
+<a href="#semi-linear-history-and-fast-forward-merge-requests-in-ce">fast-forward option in merge requests</a>
+previously on Enterprise Edition Starter is now brought to Community Edition.</p>
+<p>In the UX side of things, GitLab now comes with an <a href="#improved-new-project-page">improved new project page</a>
+so that it's easier to decide the kind of project you want to create. Whether
+you want to start from scratch, use a template or import from another provider,
+you can now achieve it easier than before.</p>
+<p>We're dedicated to making GitLab perform better and faster under heavy load,
+and GitLab 10.1 is no exception. This release comes with many
+<a href="#performance-improvements">performance improvements</a> including faster viewing
+of merge requests and general initial page load improvements.</p>
+</div>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+10.1+released+with+Image+Discussions+and+Rejection+of+Unsigned+Commits+via+%40_axil&amp;url=https://about.gitlab.com/releases/2017/10/22/gitlab-10-1-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab 10.1 released with Image Discussions and Rejection of Unsigned Commits
+via @_axil
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</section>
+
+
+
+<section class='mvp gray-section' id=mvp>
+<div class=release-post-section>
+<img src="/images/mvp_badge.png" alt="GitLab MVP badge"/>
+<h2 class=refresh-h3 id=mvp>
+<a class=header-link href='#mvp'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+MVP
+</span>
+</a>
+This month's Most Valuable Person (<a href='/community/mvp/'>MVP</a>) is awarded to
+<a href="https://gitlab.com/blackst0ne">Vitaliy Klachkov</a>
+</h2>
+<p>With an amazing <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests?scope=all&amp;utf8=%E2%9C%93&amp;state=merged&amp;label_name[]=Community%20Contribution&amp;milestone_title=10.1&amp;author_username=blackst0ne">23 contributions</a>
+for GitLab 10.1, Vitaliy Klachkov is the MVP for this release! He’s been
+contributing to GitLab for quite some time now and is a member of the
+<a href="/community/core-team/">core team</a>. From API and UI additions to improving our test
+suite (18 merge requests!), Vitaliy has rightfully earned a place to the
+monthly MVP stand.</p>
+<p>Thank you Vitaliy for your contributions!</p>
+</div>
+</section>
+
+<section class='top-feature release-post-section refresh-purple-background' id=top-feature>
+<div class=release-post-section>
+<h2 class=features-released id=key-features-released>
+<a class=header-link href='#key-features'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+10.1
+</span>
+</a>
+Key improvements released in GitLab 10.1
+</h2>
+</div>
+<h2 class=refresh-h3 id=image-discussions>
+<a class=header-link href='#image-discussions'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Image Discussions</p>
+</span>
+</a>
+<p>Image Discussions</p>
+</h2>
+<div class=badge-with-tiers>
+</div>
+<p>Everyone can contribute to GitLab, and with this release, we are helping
+interaction designers, visual designers, digital designers, graphic artists,
+frontend developers, or just anyone who works with images collaborate better.</p>
+<p>With discussions, you can now click a specific location
+of an image (within a commit or a merge request), and start a discussion with
+respect to that place in the image. You can even have multiple discussions
+specifying different areas of an image.</p>
+<p>Resolvability in the merge request
+diff view works the same as before, so once a discussion is settled, simply
+resolve it!</p>
+<p><img src="/images/10_1/image_discussions.png" alt="Image discussions" class=shadow /></p>
+<div class=column>
+</div>
+<div class='row reference-buttons'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-sm product-icon' href='https://docs.gitlab.com/ee/user/discussions/#image-discussions' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-sm product-icon' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/18608' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</section>
+
+<section class='release-post-section refresh-purple-background' id=primary-features>
+<div class=subtitle-row>
+<h2 class=refresh-h3 id=lock-discussions>
+<a class=header-link href='#lock-discussions'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Lock Discussions</p>
+</span>
+</a>
+<p>Lock Discussions</p>
+</h2>
+</div>
+<div class=release-row>
+<div class=column>
+<div class=badge-with-tiers>
+</div>
+<p>In this release, we are introducing a moderation feature to lock down
+continued discussion in an issue or merge request. This is useful when
+there is abuse or spam or you simply want to direct users to a different
+place in GitLab (another issue, for example) for continued feedback and
+collaboration. A project member with master access (or higher) has
+permissions to lock and unlock them. When an issue or merge request is locked,
+only project members can create new comments or edit existing ones.</p>
+<div class='row reference-buttons'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-sm product-icon' href='https://docs.gitlab.com/ee/user/discussions/#lock-discussions' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-sm product-icon' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/18608' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<div class=column>
+<img src="/images/10_1/lock_discussion.png" class=shadow alt="Lock Discussions" loading=lazy />
+</div>
+</div>
+<div class=subtitle-row>
+<h2 id=merge-requests-across-forks>
+<a class=header-link href='#merge-requests-across-forks'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Merge Requests Across Forks</p>
+</span>
+</a>
+<p>Merge Requests Across Forks</p>
+</h2>
+</div>
+<div class='release-row image-left'>
+<div class='column text-column'>
+<div class=badge-with-tiers>
+</div>
+<p>Forks and merge requests are a great alternative to branch-based workflows as they
+enable any developer to create an alternative copy of the repository rather than committing
+changes directly against the primary codebase.</p>
+<p>However, this means that it can make it harder for multiple people to work on the same
+code at the same time as the forks are isolated.</p>
+<p>With GitLab 10.1, you can now create merge requests between forks of a canonical repository.</p>
+<p>This makes working together on forks now much simpler, allowing multiple developers to easily review and merge
+across forks, bringing the code together before sending a merge request back to the canonical
+repository.</p>
+<div class='row reference-buttons'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-sm product-icon' href='https://docs.gitlab.com/ee/user/project/merge_requests/' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-sm product-icon' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/20097' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<div class='column image-column'>
+<img src="/images/10_1/create-merge-request-across-forks.png" class=shadow alt="Merge Requests Across Forks"/>
+</div>
+</div>
+<div class=subtitle-row>
+<h2 class=refresh-h3 id=ldap-group-sync-filters>
+<a class=header-link href='#ldap-group-sync-filters'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>LDAP Group Sync Filters</p>
+</span>
+</a>
+<p>LDAP Group Sync Filters</p>
+</h2>
+</div>
+<div class=release-row>
+<div class=column>
+<div class=badge-with-tiers>
+</div>
+<p>As part of our growing Enterprise authentication capabilities, GitLab 10.1
+supports the ability to synchronize LDAP groups to GitLab based on filters,
+including <em>user attributes</em>.</p>
+<p>For larger and more complex LDAP implementations there may be additional metadata
+in LDAP to infer permissions, roles, or types of users. By leveraging group filters, GitLab makes it easier
+to perform more user management capabilities directly from LDAP.</p>
+<p>GitLab EES already allows basic synchronization of LDAP groups to GitLab groups. This is great functionality for basic
+LDAP integration, but means that your LDAP structure needs to effectively mirror GitLab’s group structure.</p>
+<p>The introduction of LDAP Group Sync Filters in GitLab EEP means that your existing LDAP structures
+and attributes can be utilized in a more powerful way to manage your GitLab permissions.</p>
+<div class='row reference-buttons'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-sm product-icon' href='https://docs.gitlab.com/ee/administration/auth/ldap/index.html#group-sync' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-sm product-icon' href='https://gitlab.com/gitlab-org/gitlab-ee/issues/3188' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<div class=column>
+<img src="/images/10_1/ldap_filters.png" class=shadow alt="LDAP Group Sync Filters" loading=lazy />
+</div>
+</div>
+<div class=subtitle-row>
+<h2 id=reject-unsigned-commits>
+<a class=header-link href='#reject-unsigned-commits'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Reject Unsigned Commits</p>
+</span>
+</a>
+<p>Reject Unsigned Commits</p>
+</h2>
+</div>
+<div class='release-row image-left'>
+<div class='column text-column'>
+<div class=badge-with-tiers>
+</div>
+<p>Controlling and verifying identities are a key component to GitLab’s Enterprise
+authentication features. GitLab 10.1 introduces two new mechanisms to enforce
+user identity management whilst committing code.</p>
+<p>Authors may be verified through <a href="https://docs.gitlab.com/ee/user/project/repository/signed_commits/gpg.html">GPG</a> integration <a href="/releases/2017/08/22/gitlab-9-5-released/">introduced in GitLab 9.5</a>.
+With GitLab Enterprise Edition Premium it is now possible to enforce verification and reject
+any commits that are unsigned using push rules.</p>
+<div class='row reference-buttons'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-sm product-icon' href='https://docs.gitlab.com/ee/push_rules/push_rules.html#enabling-push-rules' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-sm product-icon' href='https://gitlab.com/gitlab-org/gitlab-ee/issues/3285' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<div class='column image-column'>
+<img src="/images/10_1/reject_unsigned_commits.png" class=shadow alt="Reject Unsigned Commits"/>
+</div>
+</div>
+<div class=subtitle-row>
+<h2 class=refresh-h3 id=easily-create-kubernetes-clusters-on-gke-beta>
+<a class=header-link href='#easily-create-kubernetes-clusters-on-gke-beta'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Easily Create Kubernetes Clusters on GKE (Beta)</p>
+</span>
+</a>
+<p>Easily Create Kubernetes Clusters on GKE (Beta)</p>
+</h2>
+</div>
+<div class=release-row>
+<div class=column>
+<div class=badge-with-tiers>
+</div>
+<p>Every application needs a home and in case of web apps or microservices, it can be a
+<a href="https://kubernetes.io/">Kubernetes cluster</a> that can also deploy
+<a href="https://docs.gitlab.com/ee/ci/review_apps/">Review Apps</a> during the development cycle.
+But setting up a cluster properly is not an easy task, and developers should focus on
+writing the code, rather than setting up the infrastructure.</p>
+<p>That’s why, in GitLab 10.1, we add the ability to connect your Google Account to your projects and to
+create a brand new Kubernetes cluster on <a href="https://cloud.google.com/container-engine/">Google Container Engine (GKE)</a>
+just by enabling the services for your account and specifying a few parameters.
+The cluster is immediately ready to use and can be leveraged, among others, by
+<a href="https://docs.gitlab.com/ee/topics/autodevops/">Auto DevOps</a> to have your apps live.</p>
+<div class='row reference-buttons'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-sm product-icon' href='https://docs.gitlab.com/ee/user/project/clusters/index.html' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-sm product-icon' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/35954' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<div class=column>
+<img src="/images/10_1/kubernetes_cluster_creation.png" class=shadow alt="Easily Create Kubernetes Clusters on GKE (Beta)" loading=lazy />
+</div>
+</div>
+<div class=subtitle-row>
+<h2 id=online-view-of-html-artifacts>
+<a class=header-link href='#online-view-of-html-artifacts'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Online View of HTML Artifacts</p>
+</span>
+</a>
+<p>Online View of HTML Artifacts</p>
+</h2>
+</div>
+<div class='release-row image-left'>
+<div class='column text-column'>
+<div class=badge-with-tiers>
+</div>
+<p>As many projects rely on GitLab for automated testing, developers also need to access the test results
+in order to fully benefit of the feedback. This is just an example of how important it is to render HTML reports
+and make them accessible in an easy way.</p>
+<p>With GitLab 10.1, we introduce the online visualization of HTML files created by pipelines for public projects,
+just one click away from the artifacts browser view.
+Your test reports, code quality and coverage information are now very simple
+to access directly from your browser, with no need to download them locally.</p>
+<div class='row reference-buttons'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-sm product-icon' href='https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html#browsing-job-artifacts' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-sm product-icon' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/34102' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<div class='column image-column'>
+<img src="/images/10_1/html_artifacts_browser.png" class=shadow alt="Online View of HTML Artifacts"/>
+</div>
+</div>
+</section>
+
+<section class=release-post-section id=secondary-features>
+<div class='release-post-section text-center zero-bottom-margin'>
+<div class=title-with-stage>
+<h2 class='refresh-h2 features-released' id=other-improvements-in-gitlab>
+<a class=header-link href='#other-improvements-in-gitlab'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+10.1
+</span>
+</a>
+Other improvements in GitLab 10.1
+</h2>
+</div>
+</div>
+<div class='release-row align-top divider'>
+<div class=secondary-release-column>
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=signing-commits-with-gpg-subkeys>
+<a class=header-link href='#signing-commits-with-gpg-subkeys'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Signing Commits with GPG Subkeys</p>
+</span>
+</a>
+<p>Signing Commits with GPG Subkeys</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>GPG integration was <a href="https://about.gitlab.com/releases/2017/08/22/gitlab-9-5-released/#gpg-commit-verification">introduced in GitLab 9.5</a>.
+allowing you to sign commits to verify your identity. Many people use verified subkeys to sign
+commits, and this is now supported and displayed as verified in GitLab 10.1.</p>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/ee/user/project/repository/signed_commits/gpg.html' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/36829' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=manage-milestones-with-developer-permissions>
+<a class=header-link href='#manage-milestones-with-developer-permissions'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Manage Milestones with Developer Permissions</p>
+</span>
+</a>
+<p>Manage Milestones with Developer Permissions</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>The developer role can now create, edit, and delete both project milestones
+and group milestones. Managing milestones is a software delivery team activity,
+so we wanted to extend that flexibility and responsibility to the users with Developer
+access in GitLab.</p>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/ee/user/permissions.html' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/32215' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=improved-admin-audit-log>
+<a class=header-link href='#improved-admin-audit-log'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Improved Admin Audit Log</p>
+</span>
+</a>
+<p>Improved Admin Audit Log</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>Knowing what happens inside your GitLab instance is an important aspect of many auditing
+requirements.</p>
+<p>GitLab EES (Enterprise Edition Starter) has basic Audit Event capability where each group or repository has
+a simple log of events that have taken place.</p>
+<p>The Admin Audit Log was <a href="https://about.gitlab.com/releases/2017/06/22/gitlab-9-3-released/#centralized-audit-log">introduced in GitLab 9.3</a>,
+allowing administrators to access a centralized log of events from
+Groups, Projects, and user actions. New user actions have been added to
+the central audit log in GitLab 10.1:</p>
+<ul>
+<li>Add or remove email addresses</li>
+<li>Password change and forgotten password</li>
+<li>Login failure</li>
+<li>Adding SSH keys and granting oAuth access</li>
+</ul>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/ee/administration/audit_events.html#audit-log-admin-only' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://gitlab.com/gitlab-org/gitlab-ee/issues/1370' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=name-of-gitlab-users-in-slack-notifications>
+<a class=header-link href='#name-of-gitlab-users-in-slack-notifications'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Name of GitLab Users in Slack Notifications</p>
+</span>
+</a>
+<p>Name of GitLab Users in Slack Notifications</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>Prior to GitLab 10.1, Slack notifications included only the GitLab username.
+In this release, the full name is displayed as well. The new format is
+<code>First Last (username)</code>.</p>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/ee/user/project/integrations/slack.html' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/38865' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=secondary-email-confirmation>
+<a class=header-link href='#secondary-email-confirmation'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Secondary Email Confirmation</p>
+</span>
+</a>
+<p>Secondary Email Confirmation</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>For improved security, GitLab is able to enforce email confirmation on sign up.</p>
+<p>This functionality is now extended to additional emails that are added to the user
+account, ensuring that all email addresses added to user profiles are confirmed.</p>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/ee/security/user_email_confirmation.html' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/37385' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=gitlab-mattermost-42>
+<a class=header-link href='#gitlab-mattermost-42'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>GitLab Mattermost 4.2</p>
+</span>
+</a>
+<p>GitLab Mattermost 4.2</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>GitLab 10.1 includes <a href="https://about.mattermost.com/blog/mattermost-4-2/">Mattermost 4.2</a>, an open source Slack-alternative whose 4.2 release includes interactive message buttons to simplify complex workflows, plus much more. This version includes security updates and an upgrade is recommended.</p>
+<p>Mattermost 4.2 was also included in GitLab 10.0. Anyone on GitLab 10.0 or later should have the patch already.</p>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/omnibus/gitlab-mattermost/' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+</div>
+</div>
+</div>
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=performance-improvements>
+<a class=header-link href='#performance-improvements'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Performance Improvements</p>
+</span>
+</a>
+<p>Performance Improvements</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>Performance is an important part of GitLab, allowing GitLab to scale to hundreds of
+thousands of users.</p>
+<p>GitLab 10.1 includes 20 performance improvements, including faster viewing of merge
+requests, faster importing from GitHub and general initial page load improvements.
+The Container Registry page is now paginated, making it much faster. Project search from the
+toolbar has been optimized as has viewing projects and issues. The Rebase button
+is now also significantly faster.</p>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://gitlab.com/groups/gitlab-org/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=closed&amp;label_name[]=performance&amp;milestone_title=10.1' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+<a class='btn btn-default btn-xs product-icon-xm' data-placement=auto data-toggle=tooltip href='https://gitlab.com/groups/gitlab-org/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=closed&amp;label_name[]=performance&amp;milestone_title=10.1' target=_blank title='See all the performance improvements in GitLab 10.1'>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3.161 8.425l-2.016.063a.3.3 0 0 1-.222-.512l2.415-2.414a.3.3 0 0 1 .145-.08l2.139-.492c-.072.097-.146.196-.221.3-.36.491-1.734 2.433-1.973 2.765l-.267.37zm7.82 1.922l-.492 2.14a.3.3 0 0 1-.08.146l-2.415 2.414a.3.3 0 0 1-.511-.221l.063-2.017.356-.258c.364-.261 2.295-1.628 2.778-1.982l.301-.222zm-3.13-6.47c1.445-1.445 3.306-1.892 5.584-1.341.54 2.288.093 4.15-1.342 5.584-1.19 1.19-3.234 2.47-5.729 4.315-.127.094-.366.32-.716.68a1 1 0 0 1-1.423.01l-1.379-1.38a1 1 0 0 1 .01-1.423c.359-.35.585-.588.68-.715C5.373 7.12 6.652 5.076 7.85 3.877zm1.341 2.901a1 1 0 1 0 1.415-1.414 1 1 0 0 0-1.415 1.414z"/></svg>
+Performance improvements
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class=secondary-release-column>
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=improved-new-project-page>
+<a class=header-link href='#improved-new-project-page'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Improved New Project Page</p>
+</span>
+</a>
+<p>Improved New Project Page</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>Creating a <a href="https://docs.gitlab.com/ee/user/project/#project-39-s-features">project</a>
+is the first step when getting started with GitLab,
+and we’ve improved the <em>New Project</em> page to make this simpler. Now it’s
+easier to take advantage of Project Templates (<a href="https://about.gitlab.com/releases/2017/08/22/gitlab-9-5-released/#project-templates">introduced in GitLab 9.5</a>) to create
+a project with a working example code and pre-configured CI,
+create a blank project, or import an existing project from elsewhere.</p>
+<img src="/images/10_1/new_project.png" class=shadow alt="Improved New Project Page" loading=lazy />
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/ee/user/project/working_with_projects.html#create-a-project' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/37399' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<hr class=hidden-lg />
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=improved-internationalization>
+<a class=header-link href='#improved-internationalization'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Improved Internationalization</p>
+</span>
+</a>
+<p>Improved Internationalization</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>As part of our ongoing effort to internationalize GitLab, we have now externalised
+strings in the Branches, Group and Wiki pages allowing our translation community to add
+more languages and strings to GitLab.</p>
+<p>If you are interested in contributing to GitLab’s Internationalization efforts, we welcome
+you to join our <a href="https://docs.gitlab.com/ee/development/i18n/index.html">translation community</a>.</p>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/ee/development/i18n/index.html' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/4012' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<hr class=hidden-lg />
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=semi-linear-history-and-fast-forward-merge-requests-in-ce>
+<a class=header-link href='#semi-linear-history-and-fast-forward-merge-requests-in-ce'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Semi-linear History and Fast-forward Merge Requests in CE</p>
+</span>
+</a>
+<p>Semi-linear History and Fast-forward Merge Requests in CE</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>While engaging with the GitLab community, lots of folks have told us that even
+in small teams, they want flexibility when choosing a merge method. With
+this release, we are taking
+<a href="https://docs.gitlab.com/ee/user/project/merge_requests/#semi-linear-history-merge-requests">semi-linear history</a>
+and <a href="https://docs.gitlab.com/ee/user/project/merge_requests/#fast-forward-merge-requests">fast-forward merge requests</a>
+from GitLab Enterprise Editions into GitLab Community Edition (CE),
+so that all users can enjoy them.</p>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/ee/user/project/merge_requests/' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/20076' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<hr class=hidden-lg />
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=new-keyword-for-automatically-closing-issues>
+<a class=header-link href='#new-keyword-for-automatically-closing-issues'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>New keyword for Automatically Closing Issues</p>
+</span>
+</a>
+<p>New keyword for Automatically Closing Issues</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>You can now use a new keyword, <code>implements</code> (and its variants), in a commit message
+or merge request description to signal automatically closing an issue. This joins the existing
+keywords such as <code>closes</code>, <code>fixes</code>, and <code>resolves</code> (and their variants).</p>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://gitlab.com/gitlab-org/gitlab-ce/issues/38424' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M10.892 3.072l1.048.185a3 3 0 0 1 2.433 3.476l-.868 4.924a3 3 0 0 1-3.12 2.474A3.98 3.98 0 0 0 11 12.03a.999.999 0 0 0 .535-.72l.869-4.924a1 1 0 0 0-.811-1.158L11 5.122V4c0-.32-.037-.63-.108-.928zM4 1h3a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/></svg>
+Issue
+</a>
+</div>
+</div>
+</div>
+<hr class=hidden-lg />
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=omnibus-improvements>
+<a class=header-link href='#omnibus-improvements'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Omnibus Improvements</p>
+</span>
+</a>
+<p>Omnibus Improvements</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<ul>
+<li>Postgres has been updated to 9.6.5.</li>
+<li>Prometheus has been updated to 1.7.2, along with Postgres exporter 0.2.3 and Redis exporter 0.12.2.</li>
+<li>Additional Postgres settings are now configurable within <code>gitlab.rb</code>: <code>effective_io_concurrency</code>, <code>max_worker_processes</code>, <code>max_parallel_workers_per_gather</code>, <code>log_lock_waits</code>, <code>track_io_timing</code>, and <code>deadlock_timeout</code>.</li>
+<li><a href="https://docs.gitlab.com/omnibus/roles/">Roles have been added</a> to streamline configuration of GitLab in highly available installations.</li>
+</ul>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/omnibus/' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+</div>
+</div>
+</div>
+<hr class=hidden-lg />
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=gitlab-geo-improvements>
+<a class=header-link href='#gitlab-geo-improvements'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>GitLab Geo Improvements</p>
+</span>
+</a>
+<p>GitLab Geo Improvements</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>Notable changes shipped with GitLab 10.1:</p>
+<ul>
+<li>Improved repository sync performance supports larger GitLab instances (<a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/3453">#3453</a>)</li>
+<li>Improved handling of repository sync failures to prevent the queue
+from becoming clogged with permanently failing tasks (<a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/3259">#3259</a>)</li>
+<li>Added migration path to hash-based storage format introduced in GitLab 10.0 (<a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/3118">#3118</a>)</li>
+<li>Attachments on personal snippets are now synced (<a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/3644">#3644</a>)</li>
+<li>After upgrading to 10.1, <a href="https://docs.gitlab.com/ee/administration/geo/replication/updating_the_geo_nodes.html">attachments will be re-synced</a> due to a bug</li>
+</ul>
+<p>See the <a href="https://gitlab.com/gitlab-org/gitlab-ee/merge_requests?scope=all&amp;utf8=%E2%9C%93&amp;state=merged&amp;label_name[]=Geo&amp;milestone_title=10.1">full list of changes</a>.</p>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/ee/administration/geo/' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+</div>
+</div>
+</div>
+<hr class=hidden-lg />
+<div class=secondary-column-feature>
+<h3 class=refresh-h4 id=gitlab-runner-101>
+<a class=header-link href='#gitlab-runner-101'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>GitLab Runner 10.1</p>
+</span>
+</a>
+<p>GitLab Runner 10.1</p>
+</h3>
+<div class=badge-with-tiers>
+</div>
+<p>We’re also releasing GitLab Runner 10.1 today! GitLab Runner is the open source project
+that is used to run your CI/CD jobs and send the results back to GitLab.</p>
+<h4 id=most-interesting-changes>Most interesting changes:</h4>
+<ul>
+<li>EmptyDir support for kubernetes volumes (<a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/660">merge request</a>)</li>
+<li>Construct git remote URL based on configuration (<a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/698">merge request</a>)</li>
+<li>Set git SSL information only for GitLab host (<a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/687">merge request</a>)</li>
+</ul>
+<p>List of all changes can be found in GitLab Runner’s <a href="https://gitlab.com/gitlab-org/gitlab-runner/blob/v10.1.0/CHANGELOG.md">CHANGELOG</a>.</p>
+<div class='row reference-buttons ref-buttons-second-features'>
+<div class='col-md-12 col-sm-12'>
+<a class='btn btn-default btn-xs product-icon-xm' href='https://docs.gitlab.com/runner' target=_blank>
+<svg width=16 height=16 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 1h4.244a2 2 0 0 1 1.434.606l2.756 2.834A2 2 0 0 1 14 5.835V12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V5.835L9.244 3H5zm1.5 7h3a.5.5 0 1 1 0 1h-3a.5.5 0 1 1 0-1zm0-2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zM8 2l3 1.995L13 7H9a1 1 0 0 1-1-1V2z"/></svg>
+Documentation
+</a>
+</div>
+</div>
+</div>
+<hr class=hidden-lg />
+</div>
+</div>
+</section>
+
+
+
+
+<section class=release-post-section id=deprecations>
+<h2 class=refresh-h2 id=release-deprecations>
+<a class=header-link href='#release-deprecations'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+Deprecations
+</span>
+</a>
+Deprecations
+</h2>
+<h3 id=the-codegitlabcode-helm-chart>
+<a class=header-link href='#the-codegitlabcode-helm-chart'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>The <code>gitlab</code> Helm chart</p>
+</span>
+</a>
+<p>The <code>gitlab</code> Helm chart</p>
+</h3>
+<p>The <a href="https://docs.gitlab.com/charts/"><code>gitlab</code> Helm chart</a>
+is deprecated, and will be replaced by the new
+<a href="https://gitlab.com/gitlab-org/omnibus-gitlab/issues/2420">cloud native GitLab chart</a>.
+We are planning for an initial beta release of this new chart in 10.3.</p>
+<p>A migration will be required to move from the current deprecated chart,
+to the new cloud native GitLab chart.</p>
+<p>
+Planned removal date:
+<strong>Dec 22nd, 2017.</strong>
+</p>
+<h3 id=mattermost-configuration-changes>
+<a class=header-link href='#mattermost-configuration-changes'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+<p>Mattermost Configuration Changes</p>
+</span>
+</a>
+<p>Mattermost Configuration Changes</p>
+</h3>
+<p>With the release of GitLab 11.0, the number of Mattermost configuration options supported within
+<code>gitlab.rb</code> will be reduced. We will continue to support the
+<a href="http://docs.gitlab.com/omnibus/gitlab-mattermost/#upgrading-gitlab-mattermost-from-versions-prior-to-11-0">core configuration settings</a>
+necessary to run Mattermost, and set up the integration with GitLab. Going forward, other
+configuration settings should be set
+directly within the Mattermost console, or <a href="http://docs.gitlab.com/omnibus/gitlab-mattermost/#upgrading-gitlab-mattermost-from-versions-prior-to-11-0">passed as environment variables</a>.</p>
+<p>Presently with two applications attempting to write to the same config file, changes can be lost.</p>
+<p>
+Planned removal date:
+<strong>GitLab 11.0</strong>
+</p>
+</section>
+
+<section class=release-post-section id=removals>
+<h2 class=refresh-h2 id=release-removals>
+<a class=header-link href='#release-removals'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+Removals and breaking changes
+</span>
+</a>
+Removals and breaking changes
+</h2>
+<p>
+<p>The complete list of all removed features can be viewed in the <a href="https://docs.gitlab.com/ee/update/deprecations.html">GitLab documentation</a>. To be notified of upcoming breaking changes, <a href="https://about.gitlab.com/breaking-changes.xml">subscribe to our Breaking Changes RSS feed</a>.</p>
+</p>
+</section>
+
+
+
+<section class=release-post-section id=upgrade-barometer>
+<h2 class=text-center id=barometer>
+<a class=header-link href='#barometer'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+Upgrade barometer
+</span>
+</a>
+Upgrade barometer
+</h2>
+<p>To upgrade to GitLab 10.1 from the latest 10.0 version, no downtime is required.</p>
+<p>To upgrade without downtime, please consult the
+<a href="https://docs.gitlab.com/ee/update/#upgrading-without-downtime">documentation on downtimeless upgrades</a>.</p>
+<p>You can check the status of background migrations by running this command
+from the Rails console: <code>Sidekiq::Queue.new('background_migration').size</code>.</p>
+</section>
+
+<section class=gray-section id=about-gitlab>
+<div class='release-row align-top'>
+<div class=column>
+<h3 class='refresh-h3 refresh-h3--secondary' id=changelog>
+<a class=header-link href='#changelog'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+Changelog
+</span>
+</a>
+Changelog
+</h3>
+<p>
+Please check out the changelog to see all the named changes:
+<ul>
+<li>
+<a href='https://gitlab.com/gitlab-org/gitlab-foss/blob/master/CHANGELOG.md' target=_blank title=GitLab>GitLab</a>
+</li>
+<li>
+<a href='https://gitlab.com/gitlab-org/gitlab-runner/blob/main/CHANGELOG.md' target=_blank title='GitLab Runner'>GitLab Runner</a>
+</li>
+<li>
+<a href='https://gitlab.com/gitlab-org/gitlab-vscode-extension/-/blob/main/CHANGELOG.md' target=_blank title='GitLab Workflow for VS Code'>GitLab Workflow for VS Code</a>
+</li>
+<li>
+<a href='https://gitlab.com/gitlab-org/cli/-/releases' target=_blank title='GitLab CLI'>GitLab CLI</a>
+</li>
+</ul>
+</p>
+<h3 class='refresh-h3 refresh-h3--secondary' id=installing>
+<a class=header-link href='#installing'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+Installing
+</span>
+</a>
+Installing
+</h3>
+<p>
+If you are setting up a new GitLab installation please see the
+<a href='/install/'>download GitLab page.</a>
+</p>
+<h3 class='refresh-h3 refresh-h3--secondary' id=updating>
+<a class=header-link href='#updating'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+Updating
+</span>
+</a>
+Updating
+</h3>
+<p>
+Check out our
+<a href='/update/'>update page.</a>
+</p>
+<h3 class='refresh-h3 refresh-h3--secondary' id=questions>
+<a class=header-link href='#questions'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+Questions?
+</span>
+</a>
+Questions?
+</h3>
+<p>
+We'd love to hear your thoughts! Visit the
+<a href='https://forum.gitlab.com/' target=_blank title='GitLab Forum'>GitLab Forum</a>
+and let us know if you have questions about the release.
+</p>
+</div>
+<div class='column refresh-plans'>
+<h3 class='refresh-h3 refresh-h3--secondary' id=gitlab-products>
+<a class=header-link href='#gitlab-products'>
+<i class='fas fa-link'></i>
+<span class=sr-only>
+GitLab Subscription Plans
+</span>
+</a>
+GitLab Subscription Plans
+</h3>
+<ul>
+<li>
+<a data-ga-location='release post footer' data-ga-name='Try GitLab for free' href='https://about.gitlab.com/pricing/' target=_blank title='GitLab Pricing'>Free</a>
+<p>Free-forever features for individual users</p>
+</li>
+<li>
+<a data-ga-location='release post footer' data-ga-name='GitLab Premium' href='https://about.gitlab.com/pricing/premium/' target=_blank title='GitLab Premium'>Premium</a>
+<p>Enhance team productivity and coordination</p>
+</li>
+<li>
+<a data-ga-location='release post footer' data-ga-name='GitLab Ultimate' href='https://about.gitlab.com/pricing/ultimate/' target=_blank title='GitLab Ultimate'>Ultimate</a>
+<p>Organization wide security, compliance, and planning</p>
+</li>
+</ul>
+<p>
+Try all GitLab features -
+<a href='https://about.gitlab.com/free-trial/' title='GitLab Free Trial'>free for 30 days</a>
+</p>
+</div>
+</div>
+</section>
+
+<section class=release-post-section id=cover-img>
+<p class='note text-center'>
+<a href='https://unsplash.com/photos/z1L6VcqLZgc' rel='noindex, nofollow' target=_blank>Cover image</a>
+licensed under
+<a href="https://unsplash.com/license">Unsplash free license</a>
+</p>
+</section>
+</div>
+
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2017/10/22/gitlab-10-1-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2017/10/22/gitlab-10-1-released/&amp;text=GitLab 10.1 released with Image Discussions and Rejection of Unsigned Commits' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2017/10/22/gitlab-10-1-released/&amp;title=GitLab 10.1 released with Image Discussions and Rejection of Unsigned Commits&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2017/10/22/gitlab-10-1-released/&amp;t=GitLab 10.1 released with Image Discussions and Rejection of Unsigned Commits' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2017/10/17/gitlab-10-dot-0-dot-4-security-release/" title="GitLab 10.0.4, 9.5.9, and 9.4.7 released"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 10.0.4, 9.5.9, and 9.4.7 released
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2017/11/01/gitlab-10-dot-1-dot-1-released/" title="GitLab Patch Release: 10.1.1"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab Patch Release: 10.1.1
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=refresh-gradient>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2017-10-22-gitlab-10-1-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2017-10-22-gitlab-10-1-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+
+<script async='' src='/javascripts/bootstrap-tooltip.js'></script>
+</body>
+</html>

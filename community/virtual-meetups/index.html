@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab Virtual Meetups
+|
+GitLab
+</title>
+<meta content='Find upcoming virtual meetups and learn to organize your own.' name=description />
+<meta content='Find upcoming virtual meetups and learn to organize your own.' name='twitter:description'/>
+<meta content='Find upcoming virtual meetups and learn to organize your own.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab Virtual Meetups' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='community/virtual-meetups/index.html.haml' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/community/virtual-meetups/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab Virtual Meetups' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/community/virtual-meetups/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/meetups.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/community.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/bl-modal.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/video-carousel.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body class='community community_virtual-meetups community_virtual-meetups_index ' data-offset=90 data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>GitLab Virtual Meetups</h1>
+<p>Connect with the GitLab community through our global GitLab virtual meetups.</p>
+<div class='row text-center'>
+<div class='btn-group u-padding-right-sm'></div>
+<a href="https://www.meetup.com/gitlab-virtual-meetups/" class="btn cta-btn orange margin-top20">Join our virtual meetup group</a>
+<a href="/community/meetups/" class="btn cta-btn orange margin-top20">Learn about in-person meetups</a>
+</div>
+</div>
+</div>
+<div class='wrapper wrapper--large-fonts'>
+<div class='devops-content u-margin-top-lg' id=content>
+<div class='wrapper container js-in-page-nav-group' role=main>
+<div class='row u-margin-top-xl js-in-page-nav-section' id=attend-a-virtual-meetup>
+<div class='col-md-10 col-md-offset-1'>
+<h2 class=u-text-brand>Why we love virtual meetups</h2>
+<p>Virtual meetups help community members connect with and learn from other members of our global community. They can also help local communities remain connected when in-person events are not possible.</p>
+<p>Our goals in supporting these events are to grow our community, better engage with and increase connections within the GitLab community, increase awareness of GitLab, and better educate the technology community about the power of our platform.</p>
+<p>
+Virtual meetups have many advantages over in-person events.
+</p>
+<ul>
+<li>They can be more diverse and inclusive. Anyone with an internet connection is able to contribute.</li>
+<li>They can be more efficient. No travel is required and the events are more structured by necessity.</li>
+<li>They can deliver better results. They can attract much larger audiences than in-person events and some of the forcing functions increase participation.</li>
+<li>They can be more collaborative. Most attendees will have a personal computer in front of them so hands-on exercises and demos can be more robust and easier to follow.</li>
+</ul>
+</div>
+</div>
+<div class='row u-margin-top-xl js-in-page-nav-section' id=organize-a-virtual-meetup>
+<div class='col-md-10 col-md-offset-1'>
+<h2 class=u-text-brand>Organize a virtual meetup</h2>
+<p>
+We maintain a
+<a href="/community/meetups/checklist#planning-a-virtual-meetup">comprehensive checklist</a>
+to help organizers plan virtual meetups.
+</p>
+<p>
+If you are ready to begin planning a virtual meetup with support from GitLab, please open an issue using our
+<a href="https://gitlab.com/gitlab-com/marketing/community-relations/evangelist-program/general/issues/new?issuable_template=meetup-organizer">meetup issue template.</a>
+The only requirements for organizers are a passion for GitLab and a belief in our
+<a href="https://about.gitlab.com/company/mission/#mission">mission.</a>
+If you would like to help getting started or have questions about virtual meetups, you are invited to
+<a href="https://calendly.com/jcoghlan">schedule a Zoom call</a>
+with GitLab's Evangelist Program Manager.
+</p>
+</div>
+</div>
+<div class='row u-margin-top-xl js-in-page-nav-section' id=resources>
+<div class='col-md-10 col-md-offset-1'>
+<h2 class=u-text-brand>Resources for organizers</h2>
+<p>Here’s a list of resources on Meetups that we curated to help you get started.</p>
+<div class='resource-block resource-block--resources u-margin-top-md'>
+<ul class='resource-list list-unstyled'>
+<li class=resource-list-item>
+<h4 class=resource-title>
+<a href="/community/meetups/checklist#planning-a-virtual-meetup">Virtual Meetup Planning Checklist</a>
+</h4>
+<span class=resource-author>Start here.</span>
+</li>
+<li class=resource-list-item>
+<h4 class=resource-title>
+<a href="https://about.gitlab.com/press/press-kit/#logos">GitLab Logos</a>
+</h4>
+<span class=resource-author>All the tanukis.</span>
+</li>
+<li class=resource-list-item>
+<h4 class=resource-title>
+<a href="https://drive.google.com/open?id=1xglxuxFcxATpQ0ZajYvYu5aIyEK7TvTK">Communication Templates</a>
+</h4>
+<span class=resource-author>Get a head start on your communications.</span>
+</li>
+<li class=resource-list-item>
+<h4 class=resource-title>
+<a href="https://docs.google.com/forms/d/167QK2Oudqrdu_hpRCK45G7WDW65IDV63XWgjKa6Srrw/edit">Feedback Form</a>
+</h4>
+<span class=resource-author>A three-question survey to help you and your community.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class='row u-margin-top-xl js-in-page-nav-section' id=upcoming-events>
+<div class='col-md-10 col-md-offset-1'>
+<h2 class=u-text-brand>Upcoming virtual meetups</h2>
+<p>
+We welcome everyone from the GitLab community to participte in our virtual meetups. Attending a virtual meetup is typically as simple as joining a video call.
+</p>
+<p>
+You can find upcoming GitLab virtual meetups listed below and on our
+<a href="/events">Events page.</a>
+Many local communities publish their upcoming events (both virtual and in-person) on Meetup.com. You can find those events on
+<a href="https://www.meetup.com/pro/gitlab">GitLab's Meetup Pro page.</a>
+</p>
+<hr class='u-margin-top-md u-margin-bottom-md'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='wrapper container'>
+<div class='row u-margin-top-xl js-in-page-nav-section' id=resources>
+<div class='col-md-10 col-md-offset-1'>
+<div class=wrapper>
+<h2 class='u-margin-bottom-sm text-center'>
+Everyone can contribute
+</h2>
+<div class=video-slider>
+<div class=video-item data-target='#videoCarouselModal' data-toggle=modal data-video-image='/images/video-carousels/community/vid-thumb-why-we-love-virtual-meetups.jpg' data-video-link='https://www.youtube-nocookie.com/embed/lvWxMfiL_T8?enablejsapi=1&amp;origin=https://about.gitlab.com' data-video-title='Why we love virtual meetups'>
+<img src="/images/video-carousels/community/vid-thumb-why-we-love-virtual-meetups.jpg" class=video-photo alt="Gitlab video photo jpg" loading=lazy />
+<div class=play-btn>
+<i class='fas fa-play play-icon'></i>
+</div>
+<h4>Why we love virtual meetups</h4>
+</div>
+<div class=video-item data-target='#videoCarouselModal' data-toggle=modal data-video-image='/images/video-carousels/community/vid-thumb-virtual-meetup-michael-friedrich.jpg' data-video-link='https://www.youtube-nocookie.com/embed/l5705U8s_nQ?enablejsapi=1&amp;origin=https://about.gitlab.com' data-video-title='Intro to GitLab CI'>
+<img src="/images/video-carousels/community/vid-thumb-virtual-meetup-michael-friedrich.jpg" class=video-photo alt="Gitlab video photo jpg" loading=lazy />
+<div class=play-btn>
+<i class='fas fa-play play-icon'></i>
+</div>
+<h4>Intro to GitLab CI</h4>
+</div>
+<div class=video-item data-target='#videoCarouselModal' data-toggle=modal data-video-image='/images/video-carousels/community/vid-thumb-virtual-meetup-introduccion-a-git.jpg' data-video-link='https://www.youtube-nocookie.com/embed/n4-Fzl6lDDo?enablejsapi=1&amp;origin=https://about.gitlab.com' data-video-title='Introducción a Git y GitLab'>
+<img src="/images/video-carousels/community/vid-thumb-virtual-meetup-introduccion-a-git.jpg" class=video-photo alt="Gitlab video photo jpg" loading=lazy />
+<div class=play-btn>
+<i class='fas fa-play play-icon'></i>
+</div>
+<h4>Introducción a Git y GitLab</h4>
+</div>
+<div class=video-item data-target='#videoCarouselModal' data-toggle=modal data-video-image='/images/video-carousels/community/vid-thumb-4-2-2020-gitlab-virtual-meetup.jpg' data-video-link='https://www.youtube-nocookie.com/embed/xrafPU10HRc?enablejsapi=1&amp;origin=https://about.gitlab.com' data-video-title='Tips &amp; tricks for project planning'>
+<img src="/images/video-carousels/community/vid-thumb-4-2-2020-gitlab-virtual-meetup.jpg" class=video-photo alt="Gitlab video photo jpg" loading=lazy />
+<div class=play-btn>
+<i class='fas fa-play play-icon'></i>
+</div>
+<h4>Tips & tricks for project planning</h4>
+</div>
+<div class=video-item data-target='#videoCarouselModal' data-toggle=modal data-video-image='/images/video-carousels/community/vid-thumb-gitlab-virtual-meetup-education.jpg' data-video-link='https://www.youtube-nocookie.com/embed/r5axFWHj0SU?enablejsapi=1&amp;origin=https://about.gitlab.com' data-video-title='GitLab for Education'>
+<img src="/images/video-carousels/community/vid-thumb-gitlab-virtual-meetup-education.jpg" class=video-photo alt="Gitlab video photo jpg" loading=lazy />
+<div class=play-btn>
+<i class='fas fa-play play-icon'></i>
+</div>
+<h4>GitLab for Education</h4>
+</div>
+<div class=video-item data-target='#videoCarouselModal' data-toggle=modal data-video-image='/images/video-carousels/community/vid-thumb-gitlab-virtual-meetup-everyone-can-contribute.jpg' data-video-link='https://www.youtube-nocookie.com/embed/AAtBKFvGqi0?enablejsapi=1&amp;origin=https://about.gitlab.com' data-video-title='Everyone can contribute'>
+<img src="/images/video-carousels/community/vid-thumb-gitlab-virtual-meetup-everyone-can-contribute.jpg" class=video-photo alt="Gitlab video photo jpg" loading=lazy />
+<div class=play-btn>
+<i class='fas fa-play play-icon'></i>
+</div>
+<h4>Everyone can contribute</h4>
+</div>
+<div class=video-item data-target='#videoCarouselModal' data-toggle=modal data-video-image='/images/video-carousels/community/vid-thumb-gitlab-enhance-kubernetes-ci-cd.jpg' data-video-link='https://www.youtube-nocookie.com/embed/Z4HVqhQcR9U?enablejsapi=1&amp;origin=https://about.gitlab.com' data-video-title='Enhance Your Kubernetes CI/CD Pipelines'>
+<img src="/images/video-carousels/community/vid-thumb-gitlab-enhance-kubernetes-ci-cd.jpg" class=video-photo alt="Gitlab video photo jpg" loading=lazy />
+<div class=play-btn>
+<i class='fas fa-play play-icon'></i>
+</div>
+<h4>Enhance Your Kubernetes CI/CD Pipelines</h4>
+</div>
+</div>
+</div>
+<div aria-hidden=true aria-labelledby=videoCarouselModalLabel class='modal fade' id=videoCarouselModal role=dialog tabindex=-1>
+<div class=modal-dialog role=document>
+<div class=modal-content>
+<div class=modal-body id=videoPlayer>
+<iframe allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' class=carousel-modal-iframe frameborder=0 height=333 loading=lazy src='https://www.youtube-nocookie.com/embed/lvWxMfiL_T8?enablejsapi=1&amp;origin=https://about.gitlab.com' srcdoc='' width=1109></iframe>
+</div>
+<div class=modal-footer>
+<button class='btn btn-secondary btn-close-modal' data-dismiss=modal type=button>Close</button>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden=true aria-labelledby=videoCarouselModalLabel class='modal fade' id=videoCarouselModal role=dialog tabindex=-1>
+<div class=modal-dialog role=document>
+<div class=modal-content>
+<div class=modal-body id=videoPlayer>
+<iframe allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' class=carousel-modal-iframe frameborder=0 height=333 loading=lazy src='https://www.youtube-nocookie.com/embed/l5705U8s_nQ?enablejsapi=1&amp;origin=https://about.gitlab.com' srcdoc='' width=1109></iframe>
+</div>
+<div class=modal-footer>
+<button class='btn btn-secondary btn-close-modal' data-dismiss=modal type=button>Close</button>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden=true aria-labelledby=videoCarouselModalLabel class='modal fade' id=videoCarouselModal role=dialog tabindex=-1>
+<div class=modal-dialog role=document>
+<div class=modal-content>
+<div class=modal-body id=videoPlayer>
+<iframe allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' class=carousel-modal-iframe frameborder=0 height=333 loading=lazy src='https://www.youtube-nocookie.com/embed/n4-Fzl6lDDo?enablejsapi=1&amp;origin=https://about.gitlab.com' srcdoc='' width=1109></iframe>
+</div>
+<div class=modal-footer>
+<button class='btn btn-secondary btn-close-modal' data-dismiss=modal type=button>Close</button>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden=true aria-labelledby=videoCarouselModalLabel class='modal fade' id=videoCarouselModal role=dialog tabindex=-1>
+<div class=modal-dialog role=document>
+<div class=modal-content>
+<div class=modal-body id=videoPlayer>
+<iframe allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' class=carousel-modal-iframe frameborder=0 height=333 loading=lazy src='https://www.youtube-nocookie.com/embed/xrafPU10HRc?enablejsapi=1&amp;origin=https://about.gitlab.com' srcdoc='' width=1109></iframe>
+</div>
+<div class=modal-footer>
+<button class='btn btn-secondary btn-close-modal' data-dismiss=modal type=button>Close</button>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden=true aria-labelledby=videoCarouselModalLabel class='modal fade' id=videoCarouselModal role=dialog tabindex=-1>
+<div class=modal-dialog role=document>
+<div class=modal-content>
+<div class=modal-body id=videoPlayer>
+<iframe allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' class=carousel-modal-iframe frameborder=0 height=333 loading=lazy src='https://www.youtube-nocookie.com/embed/r5axFWHj0SU?enablejsapi=1&amp;origin=https://about.gitlab.com' srcdoc='' width=1109></iframe>
+</div>
+<div class=modal-footer>
+<button class='btn btn-secondary btn-close-modal' data-dismiss=modal type=button>Close</button>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden=true aria-labelledby=videoCarouselModalLabel class='modal fade' id=videoCarouselModal role=dialog tabindex=-1>
+<div class=modal-dialog role=document>
+<div class=modal-content>
+<div class=modal-body id=videoPlayer>
+<iframe allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' class=carousel-modal-iframe frameborder=0 height=333 loading=lazy src='https://www.youtube-nocookie.com/embed/AAtBKFvGqi0?enablejsapi=1&amp;origin=https://about.gitlab.com' srcdoc='' width=1109></iframe>
+</div>
+<div class=modal-footer>
+<button class='btn btn-secondary btn-close-modal' data-dismiss=modal type=button>Close</button>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden=true aria-labelledby=videoCarouselModalLabel class='modal fade' id=videoCarouselModal role=dialog tabindex=-1>
+<div class=modal-dialog role=document>
+<div class=modal-content>
+<div class=modal-body id=videoPlayer>
+<iframe allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' class=carousel-modal-iframe frameborder=0 height=333 loading=lazy src='https://www.youtube-nocookie.com/embed/Z4HVqhQcR9U?enablejsapi=1&amp;origin=https://about.gitlab.com' srcdoc='' width=1109></iframe>
+</div>
+<div class=modal-footer>
+<button class='btn btn-secondary btn-close-modal' data-dismiss=modal type=button>Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/community/virtual-meetups/index.html.haml" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/community/virtual-meetups/index.html.haml" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/on-scroll.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/in-page-nav.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/all-clickable.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/slick.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/video-carousel.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</body>
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab 8.14 Released with Time Tracking Beta and Chat Commands
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab Release 8.14 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name=description />
+<meta content='Learn more about GitLab Release 8.14 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name='twitter:description'/>
+<meta content='Learn more about GitLab Release 8.14 for GitLab Community Edition (CE) and Enterprise Edition (EE)' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab 8.14 Released with Time Tracking Beta and Chat Commands' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2016-11-22-gitlab-8-14-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2016/11/22/gitlab-8-14-released/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/8_14/pic.jpg" property="og:image">
+<meta content="https://about.gitlab.com/images/8_14/pic.jpg" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab 8.14 Released with Time Tracking Beta and Chat Commands' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2016/11/22/gitlab-8-14-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Nov 22, 2016
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#Jobvo">Job van der Voort</a>
+<a href="https://twitter.com/Jobvo"><span>&nbsp;</span>
+<span class=author-twitter>
+<i class='fab fa-twitter'></i>
+</span>
+</a></span>
+<h1>
+GitLab 8.14 Released with Time Tracking Beta and Chat Commands
+</h1>
+<p class=description>
+Learn more about GitLab Release 8.14 for GitLab Community Edition (CE) and Enterprise Edition (EE)
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/8_14/pic.jpg);'></div>
+<div class=content>
+<p>You're doing code review of a new feature and wonder how it'll actually
+feel, look and work when it's live. Yesterday, you had to sacrifice your
+local development environment's state, checkout the remote branch, run
+migrations, and then spin up the entire development environment.
+Today, you can just go to GitLab and click the link in
+the merge request to play with a fully functional, live environment.</p>
+<p>Maybe you have some feedback on what you saw and start talking with your
+colleague on chat. Rather than having to communicate on who moves the result to
+issues, you just create an issue directly from chat.
+You can immediately add a time estimate to the issue
+and anyone peeking at the cycle analytics will see the new issue come by and
+over time, move to production, giving you feedback on where things might get
+stuck.</p>
+<p>You can do all of the above and much more with GitLab 8.14, today. Time
+tracking, Review Apps, Chat commands, Cycle Analytics improvements and much
+more.</p>
+<p>This month's Most Valuable Person (<a href="/community/mvp/">MVP</a>) is Toon Claes. Toon contributed the button to delete all merged branches,
+a great addition to GitLab.
+Thanks Toon Claes!</p>
+<p class="alert alert-webcast"><i class="fab fa-gitlab" style="color:rgb(107,79,187); font-size:.85em" aria-hidden=true></i>
+Tune in on Nov. 30 for our 8.14 release webcast with a live demo of Review Apps and Time Tracking for EE! <a href="https://page.gitlab.com/20161124_ReviewAppsWebcast_LandingPage.html">Register here</a>!
+<i class="fab fa-gitlab" style="color:rgb(107,79,187); font-size:.85em" aria-hidden=true></i></p>
+<h2 id=time-tracking-beta-ee>Time Tracking Beta (EE)</h2>
+<p>Whether you're a contractor that needs to keep track of their time,
+or you're managing time spent on issues and projects,
+time tracking has traditionally been a painful experience: You have various
+systems to keep track or log your time and these never seem to fit in your
+day-to-day workflow.</p>
+<p>You can now track your time right where you're working, with Time Tracking
+in GitLab.</p>
+<p>With Time Tracking, you're able to set estimates for how much time is necessary
+for a particular issue. All you have to do is use a new slash command,
+which can be entered in the issue description or a comment:</p>
+<div class=highlight><pre class="highlight plaintext"><code>/estimate 6h
+</code></pre></div>
+<p>You can adjust this at any time with the same command. Once you've spent time
+on an issue, you can log this simply with:</p>
+<div class=highlight><pre class="highlight plaintext"><code>/spend 3h
+</code></pre></div>
+<p>You'll see this reflected in the interface.</p>
+<p><img src="/images/8_14/time.gif" alt="Time Tracking Beta in GitLab 8.14" class=shadow /></p>
+<p>Time Tracking is made available as trial to all our Enterprise Edition
+customers during the beta period,
+<a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/1264">after which it becomes available as a paid Product</a>.</p>
+<p>We're interested in hearing how we can improve time tracking to fit your
+workflow. Let us know by <a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/new">creating an issue</a> or below in the comments.</p>
+<p>Some things we're thinking about: <a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/1271">reporting</a>, <a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/1228">an API</a>,
+<a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/1265">Time Tracking in Issue Boards</a> and <a href="https://gitlab.com/gitlab-org/gitlab-ee/issues?label_name%5B%5D=time+tracking">others</a>.</p>
+<blockquote>
+<p><a href="https://docs.gitlab.com/ee/user/project/time_tracking.html">Read the docs on how to use Time Tracking in GitLab</a></p>
+</blockquote>
+<h2 id=chat-commands-experimental>Chat Commands (experimental)</h2>
+<p>It seems like communication has moved from the conference room to the online
+chatroom in the last few years. In particular, collaboration and idea generation
+seem to happen here, and that's an important part of the
+<a href="/blog/2016/09/13/gitlab-master-plan/#the-master-plan">idea-to-production vision</a>
+that we aim to capture with GitLab. With Chat Commands you can now bridge the
+gap between chat and GitLab's repositories, issue tracker, and CI/CD pipelines
+quickly and easily.</p>
+<p><img src="/images/8_14/chat1.gif" alt="Chat Commands in GitLab 8.14 with Mattermost" class=shadow /></p>
+<p>With this first iteration, you can quickly create or view an issue, for
+instance, using this to make an issue with the title and description already filled in:</p>
+<div class=highlight><pre class="highlight plaintext"><code>/gitlab issue create Even Better Issue Boards
+Let's make Issue boards _even_ better!
+</code></pre></div>
+<p>You can also embrace ChatOps and trigger deploys to production (using the
+proper identity and permissions of the user):</p>
+<div class=highlight><pre class="highlight plaintext"><code>/gitlab deploy staging to production
+</code></pre></div>
+<p>This iteration supports Mattermost, which ships with GitLab Omnibus. Slack
+support is <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/22182">coming soon</a>.
+The command set is limited, but we're <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/24768">looking to add
+more</a> soon and would love
+your feedback.</p>
+<blockquote>
+<p><a href="https://docs.gitlab.com/ee/user/project/integrations/mattermost_slash_commands.html">Read the documentation on Mattermost Slash Commands</a></p>
+</blockquote>
+<h2 id=review-apps>Review Apps</h2>
+<p>Review Apps are the future of reviewing work. Rather than just looking at code,
+Review Apps will serve you with a fully functioning environment in which your
+app is running, ready for any kind of testing, trying or poking.</p>
+<p>We initially offered experimental support for Review Apps in GitLab 8.12, and
+improved it in the 8.13, but today we're shipping the last bit to call it
+"complete".</p>
+<p>Now with Review Apps properly set up, an app will spin up automatically
+for each branch and be destroyed automatically when the branch is removed from
+GitLab. We're <a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/.gitlab-ci.yml#L33-71">using it with this blog</a>, and it's awesome. This feature is so exciting, there's a whole other blog
+post about it.</p>
+<blockquote>
+<p><a href="/blog/2016/11/22/introducing-review-apps/">Read the blog post introducing review apps</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://docs.gitlab.com/ee/ci/review_apps/">Read the documentation on Review Apps</a></p>
+</blockquote>
+<h2 id=cycle-analytics-events>Cycle Analytics Events</h2>
+<p>With Cycle Analytics you get actionable feedback on how fast your ideas are moving to product and where they might be getting stuck. This can seem a little abstract, so to make it more obvious what is happening, we'll now show you the latest events in each stage.</p>
+<p><img src="/images/8_14/cycle_events.png" alt="Improved Cycle Analytics in GitLab 8.14"/></p>
+<p>This should make it easier to get an overview of what is happening in each
+stage, but also to quickly jump in and see if you can move things forward
+faster.</p>
+<blockquote>
+<p><a href="https://docs.gitlab.com/ee/user/analytics/value_stream_analytics.html">Read the documentation on Cycle Analytics</a></p>
+</blockquote>
+<h2 id=prevent-merge-until-review-is-done>Prevent merge until Review is done</h2>
+<p>You shouldn't merge code before all tests have passed and review is done.
+The first was enforceable for a while in GitLab, but the second not yet.</p>
+<p>With GitLab 8.14, you can now prevent merges until all discussions on a merge
+request have been resolved. This makes it impossible to miss those last
+comments on the bottom of the page (even if we didn't have that handy widget on
+top) and make sure only code that has been checked and verified makes it to
+production.</p>
+<p><img src="/images/8_14/dis1.png" alt="Prevent merge until review is done in GitLab 8.14" class=shadow /></p>
+<p>Enable this option in the project settings.</p>
+<p><img src="/images/8_14/dis2.png" alt="Prevent merge until review is done in GitLab 8.14"/></p>
+<p>Thanks to Rodolfo Arruda for contributing this awesome feature!</p>
+<blockquote>
+<p><a href="https://docs.gitlab.com/ee/user/discussions/index.html">Read the documentation on merge request discussions</a></p>
+</blockquote>
+<h2 id=delete-all-merged-branches>Delete all Merged Branches</h2>
+<p>Toon Claes contributed an amazingly obvious, yet dubiously missing feature: a
+single button to quickly delete all merged branches in GitLab.</p>
+<p>We'll make sure to confirm your choice and then quickly set off a process to do
+as requested. Find the button under your project's <strong>Repository ➔ Branches</strong>.</p>
+<p><img src="/images/8_14/delete_mr.png" alt="Quickly delete all merged branches in GitLab 8.14" class=shadow /></p>
+<p>Deleting all merged branches will not delete any of your
+protected branches.</p>
+<p>Thanks Toon Claes!</p>
+<h2 id=subscribe-to-group-labels>Subscribe to Group Labels</h2>
+<p>We've introduced the convenient Group Labels in GitLab 8.13.
+You can now finally subscribe to them, so you get notified on things that
+matter to you, across entire groups. For instance, get notified whenever
+a new issue is made with the <code>customer</code> label, so you'll get a good overview
+of customer issues across all projects in a group.</p>
+<h2 id=better-pipeline-emails>Better Pipeline emails</h2>
+<p>Now when a pipeline fails, we'll email you what went wrong, so you know whether
+to simply retry a build, or call for all-hands-on-deck, without having to dive
+into the logs immediately.</p>
+<p><img src="/images/8_14/emails.png" alt="Better pipeline notifications in GitLab 8.14"/></p>
+<h2 id=jira-integration-improvements>JIRA integration improvements</h2>
+<p>We know many of you use JIRA intensively. We're working very hard on
+improving GitLab's integration with it. Below are some of the improvements
+we've made this release. We're interested in hearing what else.</p>
+<blockquote>
+<p><a href="https://docs.gitlab.com/ee/integration/jira/">Read the revamped documentation on JIRA integration</a></p>
+</blockquote>
+<h3 id=remote-issue-links-to-jira>Remote issue links to JIRA</h3>
+<p>To make it super easy how a JIRA ticket relates to commits in GitLab, now
+whenever you mention a JIRA ticket in a commit or merge request,
+we'll add it to the remote issue links in the ticket. You can write
+that it <code>Fixes</code> a JIRA ticket or just mention it and we'll make sure
+it appears correctly.</p>
+<p><img src="/images/8_14/jira.png" alt="Remote Issue Links to JIRA with GitLab 8.14" class=shadow /></p>
+<p>Related MR: <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/7413">https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/7413</a></p>
+<h3 id=a-more-silent-gitlab-in-jira>A more silent GitLab in JIRA</h3>
+<p>When you set up the JIRA service within GitLab, by default, every commit and
+merge request in GitLab that referenced a JIRA issue created a comment in this
+issue in JIRA. Some people like having the complete details of what's going on,
+others prefer this to be more silent.</p>
+<p>With GitLab 8.14, you can now disable the creation of comments when referencing
+a JIRA issue in a commit or in a merge request.</p>
+<h2 id=improved-looks>Improved Looks!</h2>
+<p>GitLab also got prettier and easier to use with 8.14, some highlights below:</p>
+<p>You can now <em>see</em> who you are mentioning:</p>
+<p><img src="/images/8_14/mention.png" alt="" class=shadow /></p>
+<p>Pipelines and the meta information are looking even better than they did:</p>
+<p><img src="/images/8_14/pipes.png" alt="" class=shadow /></p>
+<p>We now show you environment information on the build page:</p>
+<p><img src="/images/8_14/env_info.png" alt="" class=shadow /></p>
+<p>Pipelines will now show whether specific builds are skipped:</p>
+<p><img src="/images/8_14/pipes2.png" alt="" class=shadow /></p>
+<p>And we made it easier to see what is left in the current pipeline:</p>
+<p><img src="/images/8_14/pipes3.png" alt="" class=shadow /></p>
+<h2 id=improved-accessibility>Improved Accessibility</h2>
+<p>Our amazing UX and frontend teams have been working hard on improving
+the accessibility of GitLab. We've made a few changes worth highlighting this month:</p>
+<ul>
+<li>We've added a 'Skip to Content' button when tabbing, This allows you
+to reach the content faster and skip navigation items.</li>
+<li>All dropdowns, buttons and anchors now have focus states</li>
+<li>We've increased the contrast between background and anchors</li>
+</ul>
+<p>We're always interested in hearing how we can improve GitLab's accessibility
+further.</p>
+<h2 id=gitlab-mattermost-35>GitLab Mattermost 3.5</h2>
+<p>GitLab 8.14 includes <a href="https://about.mattermost.com/mattermost-3-5/">Mattermost 3.5</a>,
+an <a href="https://about.mattermost.com">open source Slack-alternative</a> whose newest
+release offers improved performance on mobile and web through reduced loading
+times, mobile UI improvements and faster server-side processing, Minio as a
+self-hosted S3-alternative to local file storage, Russian language translation,
+favorite channels and much more.</p>
+<p>This version also includes <a href="http://about.mattermost.com/security-updates/">security updates</a>
+and upgrade from earlier versions is recommended.</p>
+<h2 id=gitlab-runner-18>GitLab Runner 1.8</h2>
+<p>We are also releasing GitLab Runner 1.8 today. Most interesting changes:</p>
+<ul>
+<li>Add initial Prometheus metrics server to runner manager <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/358">!358</a></li>
+<li>Add support for docker registries on non standard ports <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/376">!376</a></li>
+<li>Use correct constant for kubernetes resource limits. <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/367">!367</a></li>
+<li>Add PullPolicy config option for kubernetes <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/335">!335</a></li>
+<li>Fix/unplug stalled endpoints <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/390">!390</a></li>
+<li>Fix {Bash,Cmd,Ps}Writer.IfCmd to escape its arguments <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/364">!364</a></li>
+</ul>
+<h2 id=support-for-private-container-registries-in-gitlab-ci-builds>Support for private container registries in GitLab CI builds</h2>
+<p>In GitLab 8.14 and GitLab Runner 1.8 we've improved support for private docker images.</p>
+<p>From now on you can use private/protected images stored in GitLab's Container
+Registry automatically, without any changes. GitLab will send registry
+credentials with build data, and Runner will use them to authorize docker pull
+requests.</p>
+<p>You can also use <code>DOCKER_AUTH_CONFIG</code> Secure Variable to add credentials
+for other private registries. Thanks to this you can use any image from any registry - public or private - which is accessible from build's host, to be a base of your build or a service used by it.</p>
+<p>Runner 1.8 fixes also the mechanism that is generating aliases from service
+name, when registry is available on non standard port.</p>
+<p>You can read more about private container registries support in <a href="https://docs.gitlab.com/runner/configuration/advanced-configuration.html#using-a-private-container-registry">GitLab Runner's configuration</a> documentation.</p>
+<h2 id=performance-improvements>Performance Improvements</h2>
+<ul>
+<li>Commits that are pushed are now processed in a separate Sidekiq worker: <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/6802">!6802</a></li>
+<li>The authorised projects for a user are now stored in a dedicated database table. This list is updated whenever you are granted access to a new project, project access has been removed, etc: <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/6839">!6839</a></li>
+<li>Defer saving of project services to reduce database queries: <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/6958">!6958</a></li>
+<li>Getting the merge requests that close an issue now uses a cache: <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/6996">!6996</a></li>
+<li>Queries to get events have been optimised by removing the default ORDER BY where possible: <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/7130">!7130</a></li>
+<li>GitLab can now limit the amount of Sidekiq workers per queue to a certain percentage: <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/7292">!7292</a></li>
+<li>An index has been added for <code>project_import_data.project_id</code> to improve finding project import data: <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/7316">!7316</a></li>
+<li>Certain database associations are now eager loaded on the merge requests and issues index pages: <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/7564">!7564</a></li>
+<li>Refreshing of caches upon a push has been improved. Previously GitLab would refresh all caches, starting with 8.14 it will only refresh the caches of data that has been changed: <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/7360">!7360</a></li>
+</ul>
+<h2 id=omnibus-gitlab-package-changes>Omnibus GitLab package changes</h2>
+<h3 id=redis-in-ha-configuration>Redis in HA configuration</h3>
+<p>In GitLab 8.11 <a href="/releases/2016/08/22/gitlab-8-11-released/#redis-sentinel-support">we've announced</a>
+experimental Redis Sentinel support.
+We've improved this further and also introduced ways of configuring Redis HA, all within the package.</p>
+<p>With Omnibus GitLab 8.14 Enterprise Edition package, you can fully configure
+Redis in Highly Available configuration which also includes configuring
+Redis Sentinel. This is a step forward in the direction of having a
+<a href="https://gitlab.com/gitlab-org/gitlab-ee/issues/77">fully HA ready Enterprise Edition package</a>.</p>
+<p>When using the Community Edition package, Redis Sentinel needs to be
+installed and configured manually separately.</p>
+<blockquote>
+<p><a href="https://docs.gitlab.com/ee/administration/redis/index.html">Read more about Redis HA setup in our docs</a></p>
+</blockquote>
+<h3 id=omnibus-gitlab-packages-on-opensuse>Omnibus GitLab packages on OpenSUSE</h3>
+<p>With GitLab 8.14 we are introducing omnibus-gitlab packages for OpenSUSE 13.2 and 42.1.
+The packages are served through zypper repositories from our package server.</p>
+<p>Go to <a href="/install/">our download page</a> for installation
+details.</p>
+<h3 id=package-repositories-for-oracle-linux-and-scientific-linux>Package repositories for Oracle Linux and Scientific Linux</h3>
+<p>Omnibus GitLab packages for Oracle Linux and Scientific Linux have been supported
+for a long time however, they required a manual change in the yum repo list.
+Starting with GitLab 8.14, this is no longer necessary and you can use the directions
+from <a href="/install/">our download page</a> without any alterations.</p>
+<h3 id=further-omnibus-package-changes>Further Omnibus Package changes</h3>
+<ul>
+<li>Packaged NGINX is upgraded to 1.10.2</li>
+<li>Packaged Redis is upgraded to 3.2.5</li>
+<li>Multiple configuration options got introduced in the <a href="https://gitlab.com/gitlab-org/omnibus-gitlab/compare/8-13-stable...8-14-stable#diff-25">gitlab.rb</a> file</li>
+<li>See omnibus-gitlab <a href="https://gitlab.com/gitlab-org/omnibus-gitlab/blob/8-14-stable/CHANGELOG.md">Changelog</a> for more details</li>
+</ul>
+<h2 id=other-changes>Other changes</h2>
+<p>This release has more improvements, including security fixes. Please check out
+<a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CHANGELOG.md">the changelog</a> to see all the named changes.</p>
+<h2 id=upgrade-barometer>Upgrade barometer</h2>
+<p>To upgrade to GitLab 8.14, about 15 to 30 minutes downtime is required depending
+on the size of your instance. See below for details.</p>
+<ul>
+<li>The column <code>application_settings.repository_storage</code> has been renamed, this requires downtime but takes very little time</li>
+<li>Some indexes with stricter constraints are being added and they require corresponding code changes to be deployed, this requires downtime</li>
+<li>The subscriptions data is being migrated in a way that can't be done online, this process may take a few minutes</li>
+<li>Project records with invalid visibility level are fixed, this can take a few minutes and requires downtime</li>
+</ul>
+<h3 id=note>Note</h3>
+<p>We assume you are upgrading from the latest version. If not, then also consult the upgrade barometers of any intermediate versions you are skipping.
+If you are upgrading from a GitLab version prior to 8.0 <em>and</em> you have CI enabled, you have to upgrade to GitLab 8.0 <a href="/releases/2015/09/22/gitlab-8-0-released/">first</a>.</p>
+<p>Please be aware that by default the Omnibus packages will stop, run migrations,
+and start again, no matter how “big” or “small” the upgrade is. This behavior
+can be changed by adding a <a href="http://doc.gitlab.com/omnibus/update/README.html"><code>/etc/gitlab/skip-auto-migrations</code>
+file</a>.</p>
+<hr/>
+<h2 id=installation>Installation</h2>
+<p>If you are setting up a new GitLab installation please see the
+<a href="/install/">download GitLab page</a>.</p>
+<h2 id=updating>Updating</h2>
+<p>Check out our <a href="/update/">update page</a>.</p>
+<h2 id=enterprise-edition>Enterprise Edition</h2>
+<p>The mentioned EE only features and things like LDAP group support can be found in GitLab Enterprise Edition.
+For a complete overview please have a look at the <a href="/features/#enterprise">feature list of GitLab EE</a>.</p>
+<p>Access to GitLab Enterprise Edition is included with a
+<a href="/pricing/">subscription</a>.
+No time to upgrade GitLab yourself?
+A subscription also entitles you to our upgrade and installation services.</p>
+<hr/>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+8.14+Released+with+Time+Tracking+Beta+and+Chat+Commands+via+%40Jobvo&amp;url=https://about.gitlab.com/releases/2016/11/22/gitlab-8-14-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab 8.14 Released with Time Tracking Beta and Chat Commands
+via @Jobvo
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2016/11/22/gitlab-8-14-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2016/11/22/gitlab-8-14-released/&amp;text=GitLab 8.14 Released with Time Tracking Beta and Chat Commands' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2016/11/22/gitlab-8-14-released/&amp;title=GitLab 8.14 Released with Time Tracking Beta and Chat Commands&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2016/11/22/gitlab-8-14-released/&amp;t=GitLab 8.14 Released with Time Tracking Beta and Chat Commands' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2016/11/17/gitlab-8-dot-13-dot-6-released/" title="GitLab 8.13.6 released"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.13.6 released
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2016/11/28/gitlab-8-14-1-released/" title="GitLab 8.14.1, 8.13.7 and 8.12.10 Released"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.14.1, 8.13.7 and 8.12.10 Released
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2016-11-22-gitlab-8-14-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2016-11-22-gitlab-8-14-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

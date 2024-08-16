@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Issue Bash
+|
+GitLab
+</title>
+<meta content='Every quarter we held a Community Event called an Issue bash from 2016 through 2019 to promote collaboration within our Community and introduce new contributors to GitLab.' name=description />
+<meta content='Every quarter we held a Community Event called an Issue bash from 2016 through 2019 to promote collaboration within our Community and introduce new contributors to GitLab.' name='twitter:description'/>
+<meta content='Every quarter we held a Community Event called an Issue bash from 2016 through 2019 to promote collaboration within our Community and introduce new contributors to GitLab.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Issue Bash' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='community/issue-bash/index.html.haml' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/community/issue-bash/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/tweets/issue-bash-twitter-card.png" property="og:image">
+<meta content="https://about.gitlab.com/images/tweets/issue-bash-twitter-card.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Issue Bash' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/community/issue-bash/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/styles-2018.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/issue_bash.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/faq.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body class='community community_issue-bash community_issue-bash_index ' data-offset=90 data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=wrapper>
+<div class='simple-hero blank-header'>
+<div class=container>
+<div class=row>
+<div class='col-md-8 col-md-offset-2 hero-image'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 970 118" enable-background="new 0 0 970 118"><g fill="#413270"><path d="m247.89 34.706h13.857v13.882h-13.857z"/><path d="m212.48 69.41h13.857v13.882h-13.857z"/><path d="m283.3 69.41h13.857v13.882h-13.857z"/><path d="m35.413 69.41h13.857v13.882h-13.857z"/><path d="m35.413 86.77h13.857v13.882h-13.857z"/><path d="m35.413 52.06h13.857v13.882h-13.857z"/><path d="m35.413 17.353h13.857v13.882h-13.857z"/><path d="m35.413 34.706h13.857v13.882h-13.857z"/><path d="m159.36 52.06h13.857v13.882h-13.857z"/><path d="m141.65 52.06h13.857v13.882h-13.857z"/><path d="m141.65 86.77h13.857v13.882h-13.857z"/><path d="m159.36 86.77h13.857v13.882h-13.857z"/><path d="m141.65 17.353h13.857v13.882h-13.857z"/><path d="m159.36 17.353h13.857v13.882h-13.857z"/><path d="m141.65 34.706h13.857v13.882h-13.857z"/><path d="m407.25 86.77h13.857v13.882h-13.857z"/><path d="m407.25 17.353h13.857v13.882h-13.857z"/><path d="m407.25 52.06h13.857v13.882h-13.857z"/><path d="m478.07 52.06h13.857v13.882h-13.857z"/><path d="m495.78 52.06h13.857v13.882h-13.857z"/><path d="m478.07 17.353h13.857v13.882h-13.857z"/><path d="m460.37 52.06h13.857v13.882h-13.857z"/><path d="m460.37 69.41h13.857v13.882h-13.857z"/><path d="m495.78 69.41h13.857v13.882h-13.857z"/><path d="m495.78 86.77h13.857v13.882h-13.857z"/><path d="m460.37 34.706h13.857v13.882h-13.857z"/><path d="m495.78 17.353h13.857v13.882h-13.857z"/><path d="m495.78 34.706h13.857v13.882h-13.857z"/><path d="m566.6 52.06h13.857v13.882h-13.857z"/><path d="m106.24 17.353h13.857v13.882h-13.857z"/><path d="m88.53 17.353h13.857v13.882h-13.857z"/><path d="m70.825 52.06h13.857v13.882h-13.857z"/><path d="m88.53 52.06h13.857v13.882h-13.857z"/><path d="m106.24 52.06h13.857v13.882h-13.857z"/><path d="m70.825 34.706h13.857v13.882h-13.857z"/><path d="m70.825 17.353h13.857v13.882h-13.857z"/><path d="m106.24 69.41h13.857v13.882h-13.857z"/><path d="m70.825 86.77h13.857v13.882h-13.857z"/><path d="m88.53 86.77h13.857v13.882h-13.857z"/><path d="m106.24 86.77h13.857v13.882h-13.857z"/><path d="m123.94 0h13.857v13.882h-13.857z"/><path d="m194.77 0h13.857v13.882h-13.857z"/><path d="m336.42 0h13.857v13.882h-13.857z"/><path d="m371.83 0h13.857v13.882h-13.857z"/><path d="m442.66 0h13.857v13.882h-13.857z"/><path d="m531.19 0h13.857v13.882h-13.857z"/><path d="m548.9 0h13.857v13.882h-13.857z"/><path d="m584.31 0h13.857v13.882h-13.857z"/><path d="m637.43 0h13.857v13.882h-13.857z"/><path d="m655.13 0h13.857v13.882h-13.857z"/><path d="m725.96 0h13.857v13.882h-13.857z"/><path d="m761.37 0h13.857v13.882h-13.857z"/><path d="m779.08 0h13.857v13.882h-13.857z"/><path d="m796.79 0h13.857v13.882h-13.857z"/><path d="m832.2 0h13.857v13.882h-13.857z"/><path d="m920.73 0h13.857v13.882h-13.857z"/><path d="m53.12 17.353h13.857v13.882h-13.857z"/><path d="m265.6 17.353h13.857v13.882h-13.857z"/><path d="m336.42 17.353h13.857v13.882h-13.857z"/><path d="m584.31 17.353h13.857v13.882h-13.857z"/><path d="m814.49 17.353h13.857v13.882h-13.857z"/><path d="m832.2 17.353h13.857v13.882h-13.857z"/><path d="m920.73 17.353h13.857v13.882h-13.857z"/><path d="m159.36 34.706h13.857v13.882h-13.857z"/><path d="m301.01 34.706h13.857v13.882h-13.857z"/><path d="m371.83 34.706h13.857v13.882h-13.857z"/><path d="m708.25 34.706h13.857v13.882h-13.857z"/><path d="m725.96 34.706h13.857v13.882h-13.857z"/><path d="m832.2 34.706h13.857v13.882h-13.857z"/><path d="m885.32 34.706h13.857v13.882h-13.857z"/><path d="m53.12 52.06h13.857v13.882h-13.857z"/><path d="m584.31 52.06h13.857v13.882h-13.857z"/><path d="m725.96 52.06h13.857v13.882h-13.857z"/><path d="m849.9 52.06h13.857v13.882h-13.857z"/><path d="m867.61 52.06h13.857v13.882h-13.857z"/><path d="m956.14 52.06h13.857v13.882h-13.857z"/><path d="m123.94 69.41h13.857v13.882h-13.857z"/><path d="m159.36 69.41h13.857v13.882h-13.857z"/><path d="m371.83 69.41h13.857v13.882h-13.857z"/><path d="m442.66 69.41h13.857v13.882h-13.857z"/><path d="m548.9 69.41h13.857v13.882h-13.857z"/><path d="m690.55 69.41h13.857v13.882h-13.857z"/><path d="m832.2 69.41h13.857v13.882h-13.857z"/><path d="m903.02 69.41h13.857v13.882h-13.857z"/><path d="m53.12 86.77h13.857v13.882h-13.857z"/><path d="m123.94 86.77h13.857v13.882h-13.857z"/><path d="m194.77 86.77h13.857v13.882h-13.857z"/><path d="m478.07 86.77h13.857v13.882h-13.857z"/><path d="m619.72 86.77h13.857v13.882h-13.857z"/><path d="m832.2 86.77h13.857v13.882h-13.857z"/><path d="m849.9 86.77h13.857v13.882h-13.857z"/><path d="m123.94 104.12h13.857v13.882h-13.857z"/><path d="m177.06 104.12h13.857v13.882h-13.857z"/><path d="m212.48 104.12h13.857v13.882h-13.857z"/><path d="m230.18 104.12h13.857v13.882h-13.857z"/><path d="m265.6 104.12h13.857v13.882h-13.857z"/><path d="m336.42 104.12h13.857v13.882h-13.857z"/><path d="m442.66 104.12h13.857v13.882h-13.857z"/><path d="m460.37 104.12h13.857v13.882h-13.857z"/><path d="m478.07 104.12h13.857v13.882h-13.857z"/><path d="m495.78 104.12h13.857v13.882h-13.857z"/><path d="m17.706 0h13.857v13.882h-13.857z"/><path d="m35.413 0h13.857v13.882h-13.857z"/><path d="m53.12 0h13.857v13.882h-13.857z"/><path d="m354.13 0h13.857v13.882h-13.857z"/><path d="m389.54 0h13.857v13.882h-13.857z"/><path d="m407.25 0h13.857v13.882h-13.857z"/><path d="m424.95 0h13.857v13.882h-13.857z"/><path d="m495.78 0h13.857v13.882h-13.857z"/><path d="m513.48 0h13.857v13.882h-13.857z"/><path d="m566.6 0h13.857v13.882h-13.857z"/><path d="m602.02 0h13.857v13.882h-13.857z"/><path d="m619.72 0h13.857v13.882h-13.857z"/><path d="m690.55 0h13.857v13.882h-13.857z"/><path d="m743.67 0h13.857v13.882h-13.857z"/><path d="m814.49 0h13.857v13.882h-13.857z"/><path d="m849.9 0h13.857v13.882h-13.857z"/><path d="m867.61 0h13.857v13.882h-13.857z"/><path d="m885.32 0h13.857v13.882h-13.857z"/><path d="m123.94 17.353h13.857v13.882h-13.857z"/><path d="m194.77 17.353h13.857v13.882h-13.857z"/><path d="m194.77 34.706h13.857v13.882h-13.857z"/><path d="m230.18 34.706h13.857v13.882h-13.857z"/><path d="m318.71 34.706h13.857v13.882h-13.857z"/><path d="m336.42 34.706h13.857v13.882h-13.857z"/><path d="m655.13 34.706h13.857v13.882h-13.857z"/><path d="m761.37 34.706h13.857v13.882h-13.857z"/><path d="m796.79 34.706h13.857v13.882h-13.857z"/><path d="m849.9 34.706h13.857v13.882h-13.857z"/><path d="m867.61 34.706h13.857v13.882h-13.857z"/><path d="m920.73 34.706h13.857v13.882h-13.857z"/><path d="m938.44 34.706h13.857v13.882h-13.857z"/><path d="m123.94 52.06h13.857v13.882h-13.857z"/><path d="m336.42 52.06h13.857v13.882h-13.857z"/><path d="m141.65 69.41h13.857v13.882h-13.857z"/><path d="m230.18 69.41h13.857v13.882h-13.857z"/><path d="m265.6 69.41h13.857v13.882h-13.857z"/><path d="m301.01 69.41h13.857v13.882h-13.857z"/><path d="m407.25 69.41h13.857v13.882h-13.857z"/><path d="m478.07 69.41h13.857v13.882h-13.857z"/><path d="m584.31 69.41h13.857v13.882h-13.857z"/><path d="m920.73 69.41h13.857v13.882h-13.857z"/><path d="m938.44 69.41h13.857v13.882h-13.857z"/><path d="m956.14 69.41h13.857v13.882h-13.857z"/><path d="m265.6 86.77h13.857v13.882h-13.857z"/><path d="m584.31 86.77h13.857v13.882h-13.857z"/><path d="m814.49 86.77h13.857v13.882h-13.857z"/><path d="m867.61 86.77h13.857v13.882h-13.857z"/><path d="m885.32 86.77h13.857v13.882h-13.857z"/><path d="m903.02 86.77h13.857v13.882h-13.857z"/><path d="m920.73 86.77h13.857v13.882h-13.857z"/><path d="m938.44 86.77h13.857v13.882h-13.857z"/><path d="m35.413 104.12h13.857v13.882h-13.857z"/><path d="m53.12 104.12h13.857v13.882h-13.857z"/><path d="m70.825 104.12h13.857v13.882h-13.857z"/><path d="m88.53 104.12h13.857v13.882h-13.857z"/><path d="m513.48 104.12h13.857v13.882h-13.857z"/><path d="m531.19 104.12h13.857v13.882h-13.857z"/><path d="m548.9 104.12h13.857v13.882h-13.857z"/><path d="m566.6 104.12h13.857v13.882h-13.857z"/><path d="m584.31 104.12h13.857v13.882h-13.857z"/><path d="m637.43 104.12h13.857v13.882h-13.857z"/><path d="m690.55 104.12h13.857v13.882h-13.857z"/><path d="m708.25 104.12h13.857v13.882h-13.857z"/><path d="m761.37 104.12h13.857v13.882h-13.857z"/><path d="m159.36 0h13.857v13.882h-13.857z"/><path d="m177.06 0h13.857v13.882h-13.857z"/><path d="m708.25 0h13.857v13.882h-13.857z"/><path d="m903.02 0h13.857v13.882h-13.857z"/><path d="m17.706 17.353h13.857v13.882h-13.857z"/><path d="m885.32 17.353h13.857v13.882h-13.857z"/><path d="m903.02 17.353h13.857v13.882h-13.857z"/><path d="m53.12 34.706h13.857v13.882h-13.857z"/><path d="m88.53 34.706h13.857v13.882h-13.857z"/><path d="m106.24 34.706h13.857v13.882h-13.857z"/><path d="m123.94 34.706h13.857v13.882h-13.857z"/><path d="m478.07 34.706h13.857v13.882h-13.857z"/><path d="m548.9 34.706h13.857v13.882h-13.857z"/><path d="m584.31 34.706h13.857v13.882h-13.857z"/><path d="m690.55 34.706h13.857v13.882h-13.857z"/><path d="m903.02 34.706h13.857v13.882h-13.857z"/><path d="m956.14 34.706h13.857v13.882h-13.857z"/><path d="m513.48 52.06h13.857v13.882h-13.857z"/><path d="m920.73 52.06h13.857v13.882h-13.857z"/><path d="m194.77 69.41h13.857v13.882h-13.857z"/><path d="m513.48 69.41h13.857v13.882h-13.857z"/><path d="m619.72 69.41h13.857v13.882h-13.857z"/><path d="m725.96 69.41h13.857v13.882h-13.857z"/><path d="m0 86.77h13.857v13.882h-13.857z"/><path d="m513.48 86.77h13.857v13.882h-13.857z"/><path d="m655.13 86.77h13.857v13.882h-13.857z"/><path d="m725.96 86.77h13.857v13.882h-13.857z"/><path d="m796.79 86.77h13.857v13.882h-13.857z"/><path d="M 0,104.118 H13.857 V118 H0 z"/><path d="m354.13 104.12h13.857v13.882h-13.857z"/><path d="m371.83 104.12h13.857v13.882h-13.857z"/><path d="m814.49 104.12h13.857v13.882h-13.857z"/><path d="m832.2 104.12h13.857v13.882h-13.857z"/><path d="m849.9 104.12h13.857v13.882h-13.857z"/><path d="m70.825 0h13.857v13.882h-13.857z"/><path d="m318.71 0h13.857v13.882h-13.857z"/><path d="m460.37 0h13.857v13.882h-13.857z"/><path d="m478.07 0h13.857v13.882h-13.857z"/><path d="m672.84 0h13.857v13.882h-13.857z"/><path d="m371.83 17.353h13.857v13.882h-13.857z"/><path d="m761.37 17.353h13.857v13.882h-13.857z"/><path d="m796.79 17.353h13.857v13.882h-13.857z"/><path d="m849.9 17.353h13.857v13.882h-13.857z"/><path d="m867.61 17.353h13.857v13.882h-13.857z"/><path d="m619.72 34.706h13.857v13.882h-13.857z"/><path d="m17.706 52.06h13.857v13.882h-13.857z"/><path d="m194.77 52.06h13.857v13.882h-13.857z"/><path d="m265.6 52.06h13.857v13.882h-13.857z"/><path d="m832.2 52.06h13.857v13.882h-13.857z"/><path d="m53.12 69.41h13.857v13.882h-13.857z"/><path d="m70.825 69.41h13.857v13.882h-13.857z"/><path d="m88.53 69.41h13.857v13.882h-13.857z"/><path d="m655.13 69.41h13.857v13.882h-13.857z"/><path d="m672.84 69.41h13.857v13.882h-13.857z"/><path d="m814.49 69.41h13.857v13.882h-13.857z"/><path d="m849.9 69.41h13.857v13.882h-13.857z"/><path d="m761.37 86.77h13.857v13.882h-13.857z"/><path d="m17.706 104.12h13.857v13.882h-13.857z"/><path d="m141.65 104.12h13.857v13.882h-13.857z"/><path d="m159.36 104.12h13.857v13.882h-13.857z"/><path d="m194.77 104.12h13.857v13.882h-13.857z"/><path d="m247.89 104.12h13.857v13.882h-13.857z"/><path d="m301.01 104.12h13.857v13.882h-13.857z"/><path d="m318.71 104.12h13.857v13.882h-13.857z"/><path d="m424.95 104.12h13.857v13.882h-13.857z"/><path d="m743.67 104.12h13.857v13.882h-13.857z"/><path d="m885.32 104.12h13.857v13.882h-13.857z"/><path d="m903.02 104.12h13.857v13.882h-13.857z"/><path d="m920.73 104.12h13.857v13.882h-13.857z"/><path d="m88.53 0h13.857v13.882h-13.857z"/><path d="m106.24 0h13.857v13.882h-13.857z"/><path d="m141.65 0h13.857v13.882h-13.857z"/><path d="m212.48 0h13.857v13.882h-13.857z"/><path d="m230.18 0h13.857v13.882h-13.857z"/><path d="m247.89 0h13.857v13.882h-13.857z"/><path d="m265.6 0h13.857v13.882h-13.857z"/><path d="m283.3 0h13.857v13.882h-13.857z"/><path d="m301.01 0h13.857v13.882h-13.857z"/><path d="m938.44 0h13.857v13.882h-13.857z"/><path d="m956.14 0h13.857v13.882h-13.857z"/><path d="m513.48 17.353h13.857v13.882h-13.857z"/><path d="m655.13 17.353h13.857v13.882h-13.857z"/><path d="m725.96 17.353h13.857v13.882h-13.857z"/><path d="m938.44 17.353h13.857v13.882h-13.857z"/><path d="m956.14 17.353h13.857v13.882h-13.857z"/><path d="m17.706 34.706h13.857v13.882h-13.857z"/><path d="m265.6 34.706h13.857v13.882h-13.857z"/><path d="m407.25 34.706h13.857v13.882h-13.857z"/><path d="m442.66 34.706h13.857v13.882h-13.857z"/><path d="m513.48 34.706h13.857v13.882h-13.857z"/><path d="m814.49 34.706h13.857v13.882h-13.857z"/><path d="m0 52.06h13.857v13.882h-13.857z"/><path d="m371.83 52.06h13.857v13.882h-13.857z"/><path d="m655.13 52.06h13.857v13.882h-13.857z"/><path d="m796.79 52.06h13.857v13.882h-13.857z"/><path d="m814.49 52.06h13.857v13.882h-13.857z"/><path d="m885.32 52.06h13.857v13.882h-13.857z"/><path d="m903.02 52.06h13.857v13.882h-13.857z"/><path d="m938.44 52.06h13.857v13.882h-13.857z"/><path d="m0 69.41h13.857v13.882h-13.857z"/><path d="m17.706 69.41h13.857v13.882h-13.857z"/><path d="m336.42 69.41h13.857v13.882h-13.857z"/><path d="m761.37 69.41h13.857v13.882h-13.857z"/><path d="m796.79 69.41h13.857v13.882h-13.857z"/><path d="m867.61 69.41h13.857v13.882h-13.857z"/><path d="m885.32 69.41h13.857v13.882h-13.857z"/><path d="m17.706 86.77h13.857v13.882h-13.857z"/><path d="m336.42 86.77h13.857v13.882h-13.857z"/><path d="m106.24 104.12h13.857v13.882h-13.857z"/><path d="m283.3 104.12h13.857v13.882h-13.857z"/><path d="m389.54 104.12h13.857v13.882h-13.857z"/><path d="m407.25 104.12h13.857v13.882h-13.857z"/><path d="m602.02 104.12h13.857v13.882h-13.857z"/><path d="m619.72 104.12h13.857v13.882h-13.857z"/><path d="m655.13 104.12h13.857v13.882h-13.857z"/><path d="m672.84 104.12h13.857v13.882h-13.857z"/><path d="m725.96 104.12h13.857v13.882h-13.857z"/><path d="m779.08 104.12h13.857v13.882h-13.857z"/><path d="m796.79 104.12h13.857v13.882h-13.857z"/><path d="m867.61 104.12h13.857v13.882h-13.857z"/><path d="m938.44 104.12h13.857v13.882h-13.857z"/></g><g fill="#ece7f2"><path d="m761.37 52.06h13.857v13.882h-13.857z"/><path d="m779.08 69.41h13.857v13.882h-13.857z"/><path d="m743.67 86.77h13.857v13.882h-13.857z"/><path d="m779.08 86.77h13.857v13.882h-13.857z"/><path d="m743.67 17.353h13.857v13.882h-13.857z"/><path d="m779.08 17.353h13.857v13.882h-13.857z"/><path d="m743.67 34.706h13.857v13.882h-13.857z"/><path d="m779.08 34.706h13.857v13.882h-13.857z"/><path d="m743.67 52.06h13.857v13.882h-13.857z"/><path d="m779.08 52.06h13.857v13.882h-13.857z"/><path d="m743.67 69.41h13.857v13.882h-13.857z"/><path d="m354.13 17.353h13.857v13.882h-13.857z"/><path d="m354.13 34.706h13.857v13.882h-13.857z"/><path d="m389.54 52.06h13.857v13.882h-13.857z"/><path d="m354.13 86.77h13.857v13.882h-13.857z"/><path d="m389.54 34.706h13.857v13.882h-13.857z"/><path d="m389.54 69.41h13.857v13.882h-13.857z"/><path d="m354.13 69.41h13.857v13.882h-13.857z"/><path d="m371.83 86.77h13.857v13.882h-13.857z"/><path d="m389.54 86.77h13.857v13.882h-13.857z"/><path d="m389.54 17.353h13.857v13.882h-13.857z"/><path d="m354.13 52.06h13.857v13.882h-13.857z"/><path d="m424.95 34.706h13.857v13.882h-13.857z"/><path d="m424.95 86.77h13.857v13.882h-13.857z"/><path d="m424.95 69.41h13.857v13.882h-13.857z"/><path d="m424.95 17.353h13.857v13.882h-13.857z"/><path d="m442.66 17.353h13.857v13.882h-13.857z"/><path d="m460.37 17.353h13.857v13.882h-13.857z"/><path d="m424.95 52.06h13.857v13.882h-13.857z"/><path d="m442.66 52.06h13.857v13.882h-13.857z"/><path d="m442.66 86.77h13.857v13.882h-13.857z"/><path d="m460.37 86.77h13.857v13.882h-13.857z"/><path d="m177.06 69.41h13.857v13.882h-13.857z"/><path d="m177.06 86.77h13.857v13.882h-13.857z"/><path d="m177.06 52.06h13.857v13.882h-13.857z"/><path d="m177.06 17.353h13.857v13.882h-13.857z"/><path d="m177.06 34.706h13.857v13.882h-13.857z"/><path d="m301.01 52.06h13.857v13.882h-13.857z"/><path d="m318.71 52.06h13.857v13.882h-13.857z"/><path d="m283.3 52.06h13.857v13.882h-13.857z"/><path d="m283.3 86.77h13.857v13.882h-13.857z"/><path d="m301.01 86.77h13.857v13.882h-13.857z"/><path d="m318.71 86.77h13.857v13.882h-13.857z"/><path d="m318.71 17.353h13.857v13.882h-13.857z"/><path d="m318.71 69.41h13.857v13.882h-13.857z"/><path d="m283.3 17.353h13.857v13.882h-13.857z"/><path d="m301.01 17.353h13.857v13.882h-13.857z"/><path d="m283.3 34.706h13.857v13.882h-13.857z"/><path d="m531.19 17.353h13.857v13.882h-13.857z"/><path d="m531.19 52.06h13.857v13.882h-13.857z"/><path d="m531.19 69.41h13.857v13.882h-13.857z"/><path d="m566.6 69.41h13.857v13.882h-13.857z"/><path d="m548.9 86.77h13.857v13.882h-13.857z"/><path d="m566.6 86.77h13.857v13.882h-13.857z"/><path d="m548.9 17.353h13.857v13.882h-13.857z"/><path d="m566.6 17.353h13.857v13.882h-13.857z"/><path d="m548.9 52.06h13.857v13.882h-13.857z"/><path d="m531.19 86.77h13.857v13.882h-13.857z"/><path d="m531.19 34.706h13.857v13.882h-13.857z"/><path d="m566.6 34.706h13.857v13.882h-13.857z"/><path d="m619.72 52.06h13.857v13.882h-13.857z"/><path d="m637.43 52.06h13.857v13.882h-13.857z"/><path d="m602.02 17.353h13.857v13.882h-13.857z"/><path d="m619.72 17.353h13.857v13.882h-13.857z"/><path d="m602.02 52.06h13.857v13.882h-13.857z"/><path d="m602.02 69.41h13.857v13.882h-13.857z"/><path d="m637.43 69.41h13.857v13.882h-13.857z"/><path d="m637.43 86.77h13.857v13.882h-13.857z"/><path d="m602.02 34.706h13.857v13.882h-13.857z"/><path d="m602.02 86.77h13.857v13.882h-13.857z"/><path d="m637.43 17.353h13.857v13.882h-13.857z"/><path d="m637.43 34.706h13.857v13.882h-13.857z"/><path d="m708.25 52.06h13.857v13.882h-13.857z"/><path d="m708.25 69.41h13.857v13.882h-13.857z"/><path d="m708.25 86.77h13.857v13.882h-13.857z"/><path d="m690.55 17.353h13.857v13.882h-13.857z"/><path d="m672.84 52.06h13.857v13.882h-13.857z"/><path d="m690.55 52.06h13.857v13.882h-13.857z"/><path d="m672.84 86.77h13.857v13.882h-13.857z"/><path d="m690.55 86.77h13.857v13.882h-13.857z"/><path d="m672.84 17.353h13.857v13.882h-13.857z"/><path d="m708.25 17.353h13.857v13.882h-13.857z"/><path d="m672.84 34.706h13.857v13.882h-13.857z"/><path d="m247.89 17.353h13.857v13.882h-13.857z"/><path d="m230.18 17.353h13.857v13.882h-13.857z"/><path d="m212.48 52.06h13.857v13.882h-13.857z"/><path d="m230.18 52.06h13.857v13.882h-13.857z"/><path d="m247.89 52.06h13.857v13.882h-13.857z"/><path d="m212.48 34.706h13.857v13.882h-13.857z"/><path d="m212.48 17.353h13.857v13.882h-13.857z"/><path d="m247.89 69.41h13.857v13.882h-13.857z"/><path d="m212.48 86.77h13.857v13.882h-13.857z"/><path d="m230.18 86.77h13.857v13.882h-13.857z"/><path d="m247.89 86.77h13.857v13.882h-13.857z"/></g></svg>
+</div>
+</div>
+<div class=row>
+<h1>Community Issue Bash</h1>
+</div>
+<div class=row>
+<div class='col-md-6 col-md-offset-3'>
+<p>Every quarter, from 2016 through 2019 we held a community event called an Issue bash. These events aimed to promote collaboration within our community and introduce new contributors to GitLab.</p>
+<p>
+Since 2018 we are holding
+<a href="/community/hackathon">our online quarterly Hackathon events</a>
+.
+Join the upcoming Hackathon event if you want to contribute to GitLab in the future.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class=content-container>
+<div class='wrapper container' role=main>
+<div class=row>
+<div class='col-md-8 col-md-offset-2'>
+<div class=content-section>
+<p>We try to make the event accessible to contributors of all levels by collaborating on a range of tasks:</p>
+<ul>
+<li>Finding issues in the tracker that can be easily closed</li>
+<li>Categorizing existing issues that are lacking labels</li>
+<li>Fixing known bugs and pain points</li>
+<li>Shipping of existing feature proposals</li>
+</ul>
+<p>There is no shortage of tasks that contributors can try their hand at. Whether this is writing their first merge request to contribute a bug fix or a feature proposal or collaborating with the core team to track down and close some duplicate issues and streamline the issue tracker.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='content-container animated' id=bash-q-a>
+<div class=container>
+<h2 class='faq-title light text-center'>
+Frequently Asked Questions
+</h2>
+<div class='faq-holder clearfix'>
+<ol class='faq-container list-unstyled'>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+Where can I find out about upcoming issue bashes?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p></p>
+Issue bashes are announced on the blog and on Twitter. You can find a list of the bashes that we have planned and the dates in the
+<a href='#bash-events'>section below</a>
+</div>
+</div>
+</li>
+<li class=faq-item id=comms-channels>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+Where can I ask questions and look for Issue Bash help?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>You can mention contacts for the Issue bash in issues or you can use one of our public communication channels to collaborate:</p>
+<ul>
+<li>
+<a href='https://gitter.im/gitlabhq/gitlabhq'>Gitter</a>
+</li>
+<li>
+<a href='https://webchat.freenode.net/?channels=gitlab'>IRC</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+Where can I learn how the prize winners are calculated?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<a href='https://gitlab.com/gitlab-org/issue-bash/prize-winner-calculator'>GitLab Issue Bash / Prize Winner Calculator</a>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+I want to help close issues. Where do I get started?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<div id=issue-closing>
+<h4>
+<strong>Steps</strong>
+</h4>
+<ul>
+<li>Identifying duplicates issues and mentioning a member of the team</li>
+<ul>
+<li>Team member will triage and possibly close as a duplicate</li>
+<li>(Non technical) Will need to be able to search through issues and identify duplicates</li>
+</ul>
+<li>Attempting to reproduce labelled bugs in a test project on GitLab.com and mention a team member with the results of their investigation (suggesting labels, suggesting closure, etc)</li>
+<ul>
+<li>Team member will triage and close if the bug is no longer reproducible</li>
+<li>(Both Technical and Non technical) Some bugs are harder to reproduce than others, but the majority should be reproducible using a test project created on GitLab.com</li>
+<li>
+Please refrain from testing issues with the
+<span class=label>security</span>
+label on GitLab.com
+</li>
+</ul>
+</ul>
+<h4>
+<strong>Best place to start</strong>
+</h4>
+<ul>
+<li>Not really a suggestion for finding duplicates. Duplicates could exist for any issue and we don't have any particular view that makes finding them easier.</li>
+<li>
+<a href='https://gitlab.com/gitlab-org/gitlab-ce/issues?scope=all&amp;state=opened&amp;label_name[]=type::bug'>Existing bugs view</a>
+will help for determining if old bugs should be closed as non-reproducible or kept open
+</li>
+</ul>
+<h4>
+<strong>Best way to help out</strong>
+</h4>
+<p>Comment on issues about what you have found out and your suggestions for issues, whether to close or keep open and if you've found a duplicate, mention the issue ID. Mention a key contact so that the correct course of action can be taken.</p>
+</div>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+How do I know which labels are right to apply?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>
+We have
+<a href='https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CONTRIBUTING.md#workflow-labels'>a guide for labels in the Contributing guide.</a>
+</p>
+</div>
+</div>
+</li>
+</ol>
+<ol class='faq-container list-unstyled'>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+Who can participate?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>Anyone and everyone! We aim to make the Issue Bash as accessible as possible and offer things to do for contributors with no experience or plenty of experience. We also hope that contributors of all technical abilities can find stuff to work on.</p>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+Where can I give feedback about the event itself?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>We'd love to hear what you think about the event and whether you have any suggestion for changes that we can make.</p>
+<p>
+Please raise an issue on the
+<a href='https://gitlab.com/gitlab-issue-bash/feedback/issues'>Feedback tracker</a>
+or raise an issue by
+<a href='mailto:incoming+gitlab-issue-bash/feedback@gitlab.com'>sending an email.</a>
+</p>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+I want to help categorise issues. Where do I get started?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<div id=issue-categorising>
+<h4>
+<strong>Steps</strong>
+</h4>
+<ul>
+<li>Investigate unlabelled issues with the aim of providing a suitable label and mentioning a team member</li>
+<ul>
+<li>Team member will apply suggested label</li>
+<li>(Non technical) Unlabelled issues can be located and investigated by contributors of all technical abilities</li>
+</ul>
+</ul>
+<h4>
+<strong>Best place to start</strong>
+</h4>
+<ul>
+<li>
+<a href='https://gitlab.com/gitlab-org/gitlab-ce/issues?label_name%5B%5D=No+Label&amp;scope=all&amp;sort=created_asc&amp;state=opened'>Unlabelled issues</a>
+</li>
+<li>These issues are all unlabelled and open, they haven't been triaged as of yet</li>
+<li>These issues are listed in order of first raised, so some may no longer be valid, some will be old</li>
+<li>These issues may contain interesting feature proposals or bugs that haven't yet been categorised</li>
+</ul>
+<h4>
+<strong>Best way to help out</strong>
+</h4>
+<p>Write a comment on the issue mentioning a key contact and the labels suggested using the label syntax ~label</p>
+</div>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+I want to help fix issues. Where do I get started?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<div id=issue-fixing>
+<h4>
+<strong>Steps</strong>
+</h4>
+<p>Fixing known bugs and pain points or shipping existing feature proposals</p>
+<ul>
+<li>
+Look into the issues labelled as
+<span class=label>bug</span>
+, attempt to reproduce and provide a merge request to fix
+</li>
+<ul>
+<li>Team member will label the issues and merge requests as needed and mention other team members that can help progress the original issue to closure</li>
+<li>
+Some issues may just be filed under
+<span class=label>Documentation</span>
+</li>
+<li>(Technical and Non technical) Some bugs are easier to fix and may only require changes to documentation which can be done via the Web Interface, some are much more difficult to fix</li>
+</ul>
+<li>
+Look into the issues labelled as
+<span class=label>Seeking community contributions</span>
+<span class=label>feature</span>
+, understand the use case and create a merge request to provide the new functionality
+</li>
+<ul>
+<li>Team member will label the issues and merge requests as needed and mention other team members that can help progress the original issue to closure</li>
+<li>(Technical and Non technical) Some feature proposals are easier to write and may only require changes to documentation which can be done via the Web Interface, some are much more difficult to satisfy</li>
+</ul>
+</ul>
+<h4>
+<strong>Best place to start</strong>
+</h4>
+<ul>
+<li>
+<a href='https://gitlab.com/gitlab-org/gitlab-ce/issues?label_name[]=type::bug&amp;scope=all&amp;sort=created_asc&amp;state=opened&amp;assignee_id=0'>Existing bugs</a>
+</li>
+<ul>
+<li>These issues have all been categorised as bugs at one time or another</li>
+<li>These issues are ordered by oldest updated first</li>
+<li>These bugs may have been fixed and therefore the issues are no longer reproducible and should be closed</li>
+<li>These bugs may still stand and a contributor could pick up the issue and provide a fix in a merge request</li>
+<li>These bugs will touch on all sorts of categories from Documentation to style fixes to frontend and backend fixes. There's plenty for everyone</li>
+</ul>
+<li>
+<a href='https://gitlab.com/gitlab-org/gitlab/-/issues?sort=created_asc&amp;state=opened&amp;label_name[]=Seeking+community+contributions&amp;label_name[]=type::bug&amp;assignee_id=None'>Seeking community contributions - bugs</a>
+</li>
+<ul>
+<li>
+These issues have been identified as suitable for a
+<span class=label>Community Contribution</span>
+</li>
+<li>These issues have been categorised as a bug</li>
+<li>These issues are listed in order of first raised</li>
+</ul>
+<li>
+<a href='https://gitlab.com/gitlab-org/gitlab/-/issues?sort=created_asc&amp;state=opened&amp;label_name[]=Seeking+community+contributions&amp;label_name[]=feature&amp;assignee_id=None'>Seeking community contributions - feature proposals</a>
+</li>
+<ul>
+<li>
+These issues have identified as suitable for a
+<span class=label>Community Contribution</span>
+</li>
+<li>These issues have been categorised as a feature proposal</li>
+<li>These issues are listed in order of first raised</li>
+</ul>
+<li>
+<a href='https://gitlab.com/gitlab-org/gitlab/-/issues?sort=created_asc&amp;state=opened&amp;label_name[]=Seeking+community+contributions&amp;weight=1&amp;assignee_id=None'>Ideal First Time Contribution issues</a>
+</li>
+<ul>
+<li>Ideal for new contributors!</li>
+</ul>
+</ul>
+<h4>
+<strong>Best way to help out</strong>
+</h4>
+<p>Submit a merge request with a potential fix for the issue and mention a key contact so that proper labels can be assigned. The normal review process for Community Contributions will then commence.</p>
+</div>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+How do I get started making my first contribution?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>
+We have
+<a href='https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CONTRIBUTING.md'>a guide for contributing to GitLab</a>
+, please take a look there or ask questions in the
+<a class=comm-channels-link href='#comms-channels'>Communication channels</a>
+</p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class=content-container id=bash-events>
+<h2 class='faq-title light text-center'>
+Events
+</h2>
+<div class='bash-event content-section'>
+<div class=bash-event-headers>
+<h3 class=section-heading>
+2016 GitLab Issue Bash
+</h3>
+<div class=bash-event-dates>
+<p>2016-12-03 to 2016-12-04</p>
+</div>
+</div>
+<div class=bash-contacts>
+<h4>Contacts:</h4>
+<ul>
+<a href='https://gitlab.com/markglenfletcher'>@markglenfletcher</a>
+<a href='https://gitlab.com/haynes'>@haynes</a>
+<a href='https://gitlab.com/ClemMakesApps'>@ClemMakesApps</a>
+</ul>
+</div>
+<div>
+<p class=event-description>
+<a href='https://gitlab.com/gitlab-org/gitlab-ce/issues/17815'>Issue Bash Proposal</a>
+</p>
+<div class=clearfix></div>
+</div>
+</div>
+<div class='bash-event content-section'>
+<div class=bash-event-headers>
+<h3 class=section-heading>
+GitLab Issue Bash Q1 2017
+</h3>
+<div class=bash-event-dates>
+<p>2017-03-04 to 2017-03-05</p>
+</div>
+</div>
+<div class=bash-contacts>
+<h4>Contacts:</h4>
+<ul>
+<a href='https://gitlab.com/markglenfletcher'>@markglenfletcher</a>
+<a href='https://gitlab.com/haynes'>@haynes</a>
+<a href='https://gitlab.com/ClemMakesApps'>@ClemMakesApps</a>
+</ul>
+</div>
+<div>
+<p class=event-description>
+<a href='https://gitlab.com/gitlab-org/gitlab-ce/issues/27272'>Issue Bash Proposal</a>
+</p>
+<div class=clearfix></div>
+</div>
+</div>
+<div class='bash-event content-section'>
+<div class=bash-event-headers>
+<h3 class=section-heading>
+GitLab Issue Bash Q2 2017
+</h3>
+<div class=bash-event-dates>
+<p>2017-06-03 to 2017-06-04</p>
+</div>
+</div>
+<div class=bash-contacts>
+<h4>Contacts:</h4>
+<ul>
+<a href='https://gitlab.com/markglenfletcher'>@markglenfletcher</a>
+<a href='https://gitlab.com/haynes'>@haynes</a>
+<a href='https://gitlab.com/blackst0ne'>@blackst0ne</a>
+</ul>
+</div>
+<div class=bash-winners>
+<h4>Winners:</h4>
+<ul>
+<a href='https://gitlab.com/sfrost'>@sfrost</a>
+<a href='https://gitlab.com/spacecowboy'>@spacecowboy</a>
+<a href='https://gitlab.com/Tetya'>@Tetya</a>
+<a href='https://gitlab.com/monsdar'>@monsdar</a>
+<a href='https://gitlab.com/mass10'>@mass10</a>
+<a href='https://gitlab.com/Pingmin'>@Pingmin</a>
+<a href='https://gitlab.com/gernberg'>@gernberg</a>
+<a href='https://gitlab.com/sidewinder12s'>@sidewinder12s</a>
+<a href='https://gitlab.com/egeorget'>@egeorget</a>
+<a href='https://gitlab.com/chez14'>@chez14</a>
+<a href='https://gitlab.com/deckar01'>@deckar01</a>
+</ul>
+</div>
+<div>
+<p class=event-description>
+<a href='https://gitlab.com/gitlab-org/gitlab-ce/issues/29256'>Issue Bash Proposal</a>
+</p>
+<div class=clearfix></div>
+</div>
+</div>
+<div class='bash-event content-section'>
+<div class=bash-event-headers>
+<h3 class=section-heading>
+GitLab Issue Bash Q3 2017
+</h3>
+<div class=bash-event-dates>
+<p>2017-09-02 to 2017-09-03</p>
+</div>
+</div>
+<div class=bash-contacts>
+<h4>Contacts:</h4>
+<ul>
+<a href='https://gitlab.com/markglenfletcher'>@markglenfletcher</a>
+<a href='https://gitlab.com/blackst0ne'>@blackst0ne</a>
+</ul>
+</div>
+<div class=bash-winners>
+<h4>Winners:</h4>
+<ul>
+<a href='https://gitlab.com/mwrouse'>@mwrouse</a>
+<a href='https://gitlab.com/aleksandrs-ledovskis'>@aleksandrs-ledovskis</a>
+<a href='https://gitlab.com/m0llux'>@m0llux</a>
+<a href='https://gitlab.com/terrakok'>@terrakok</a>
+<a href='https://gitlab.com/squido75'>@squido75</a>
+<a href='https://gitlab.com/tczzjin'>@tczzjin</a>
+<a href='https://gitlab.com/drmoose'>@drmoose</a>
+<a href='https://gitlab.com/bbcorp'>@bbcorp</a>
+<a href='https://gitlab.com/egmanoj'>@egmanoj</a>
+<a href='https://gitlab.com/coopercm'>@coopercm</a>
+<a href='https://gitlab.com/innerwhisper'>@innerwhisper</a>
+<a href='https://gitlab.com/arbitrix'>@arbitrix</a>
+<a href='https://gitlab.com/travismiller'>@travismiller</a>
+</ul>
+</div>
+<div>
+<div class=clearfix></div>
+</div>
+</div>
+<div class='bash-event content-section'>
+<div class=bash-event-headers>
+<h3 class=section-heading>
+GitLab Issue Bash Q4 2017
+</h3>
+<div class=bash-event-dates>
+<p>2017-12-16 to 2017-12-17</p>
+</div>
+</div>
+<div class=bash-contacts>
+<h4>Contacts:</h4>
+<ul>
+<a href='https://gitlab.com/markglenfletcher'>@markglenfletcher</a>
+<a href='https://gitlab.com/tnir'>@tnir</a>
+<a href='https://gitlab.com/blackst0ne'>@blackst0ne</a>
+</ul>
+</div>
+<div class=bash-winners>
+<h4>Winners:</h4>
+<ul>
+<a href='https://gitlab.com/mlncn'>@mlncn</a>
+<a href='https://gitlab.com/mkoertgen'>@mkoertgen</a>
+<a href='https://gitlab.com/geoandri'>@geoandri</a>
+<a href='https://gitlab.com/christiaan.vandenpoel'>@christiaan.vandenpoel</a>
+<a href='https://gitlab.com/henry.hsiao'>@henry.hsiao</a>
+<a href='https://gitlab.com/demisxbar'>@demisxbar</a>
+<a href='https://gitlab.com/sashk'>@sashk</a>
+<a href='https://gitlab.com/dco'>@dco</a>
+<a href='https://gitlab.com/jmsche'>@jmsche</a>
+<a href='https://gitlab.com/JonathanMM'>@JonathanMM</a>
+<a href='https://gitlab.com/SimSonic'>@SimSonic</a>
+<a href='https://gitlab.com/mfriedenhagen'>@mfriedenhagen</a>
+<a href='https://gitlab.com/LordMike'>@LordMike</a>
+<a href='https://gitlab.com/anton-akhmerov'>@anton-akhmerov</a>
+<a href='https://gitlab.com/charafs'>@charafs</a>
+</ul>
+</div>
+<div>
+<div class=clearfix></div>
+</div>
+</div>
+<div class='bash-event content-section'>
+<div class=bash-event-headers>
+<h3 class=section-heading>
+GitLab Issue Bash Q1 2018
+</h3>
+<div class=bash-event-dates>
+<p>2018-03-03 to 2018-03-04</p>
+</div>
+</div>
+<div class=bash-contacts>
+<h4>Contacts:</h4>
+<ul>
+<a href='https://gitlab.com/markglenfletcher'>@markglenfletcher</a>
+<a href='https://gitlab.com/tnir'>@tnir</a>
+</ul>
+</div>
+<div class=bash-winners>
+<h4>Winners:</h4>
+<ul>
+<a href='https://gitlab.com/ajoy39'>@ajoy39</a>
+<a href='https://gitlab.com/Salamek'>@Salamek</a>
+<a href='https://gitlab.com/augi'>@augi</a>
+<a href='https://gitlab.com/andi-'>@andi-</a>
+<a href='https://gitlab.com/artofhuman'>@artofhuman</a>
+<a href='https://gitlab.com/ablu'>@ablu</a>
+<a href='https://gitlab.com/breyed'>@breyed</a>
+<a href='https://gitlab.com/larsblumberg'>@larsblumberg</a>
+<a href='https://gitlab.com/lgm5'>@lgm5</a>
+<a href='https://gitlab.com/paebbels'>@paebbels</a>
+<a href='https://gitlab.com/rpadovani'>@rpadovani</a>
+<a href='https://gitlab.com/ladymarketeer'>@ladymarketeer</a>
+<a href='https://gitlab.com/pedrolab'>@pedrolab</a>
+<a href='https://gitlab.com/paxtonb'>@paxtonb</a>
+<a href='https://gitlab.com/sashk'>@sashk</a>
+</ul>
+</div>
+<div>
+<div class=clearfix></div>
+</div>
+</div>
+<div class='bash-event content-section'>
+<div class=bash-event-headers>
+<h3 class=section-heading>
+GitLab Issue Bash Q2 2018
+</h3>
+<div class=bash-event-dates>
+<p>2018-06-02 to 2018-06-03</p>
+</div>
+</div>
+<div class=bash-contacts>
+<h4>Contacts:</h4>
+<ul>
+<a href='https://gitlab.com/markglenfletcher'>@markglenfletcher</a>
+<a href='https://gitlab.com/tnir'>@tnir</a>
+</ul>
+</div>
+<div>
+<div class=clearfix></div>
+</div>
+</div>
+<div class='bash-event content-section'>
+<div class=bash-event-headers>
+<h3 class=section-heading>
+GitLab Issue Bash Q3 2018 (postponed)
+</h3>
+<div class=bash-event-dates>
+<p>2018-09-29 to 2018-09-30</p>
+</div>
+</div>
+<div class=bash-contacts>
+<h4>Contacts:</h4>
+<ul>
+<a href='https://gitlab.com/markglenfletcher'>@markglenfletcher</a>
+<a href='https://gitlab.com/tnir'>@tnir</a>
+</ul>
+</div>
+<div>
+<div class=clearfix></div>
+</div>
+</div>
+<div class='bash-event content-section'>
+<div class=bash-event-headers>
+<h3 class=section-heading>
+GitLab Issue Bash Q4 2018
+</h3>
+<div class=bash-event-dates>
+<p>2018-12-01 to 2018-12-02</p>
+</div>
+</div>
+<div class=bash-contacts>
+<h4>Contacts:</h4>
+<ul>
+<a href='https://gitlab.com/markglenfletcher'>@markglenfletcher</a>
+</ul>
+</div>
+<div>
+<div class=clearfix></div>
+</div>
+</div>
+<div class='bash-event content-section'>
+<div class=bash-event-headers>
+<h3 class=section-heading>
+GitLab Issue Bash Q1 2019
+</h3>
+<div class=bash-event-dates>
+<p>2019-03-02 to 2019-03-03</p>
+</div>
+</div>
+<div class=bash-contacts>
+<h4>Contacts:</h4>
+<ul>
+<a href='https://gitlab.com/markglenfletcher'>@markglenfletcher</a>
+</ul>
+</div>
+<div>
+<div class=clearfix></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/community/issue-bash/index.html.haml" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/community/issue-bash/index.html.haml" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/issue_bash.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</body>
+</html>

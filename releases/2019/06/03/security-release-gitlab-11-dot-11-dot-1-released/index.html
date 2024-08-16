@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name=description />
+<meta content='Learn more about GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name='twitter:description'/>
+<meta content='Learn more about GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12 for GitLab Community Edition (CE) and Enterprise Edition (EE)' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2019-06-03-security-release-gitlab-11-dot-11-dot-1-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/blogimages/security-cover-new.png" property="og:image">
+<meta content="https://about.gitlab.com/images/blogimages/security-cover-new.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'tags': ["security", "security releases"]});
+</script>
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Jun 3, 2019
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#jbroullon">Juan Broullon</a>
+<a href="https://gitlab.com/jbroullon"><span>&nbsp;</span>
+<span class=author-gitlab>
+<i class='fab fa-gitlab'></i>
+</span>
+</a></span>
+<h1>
+GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12
+</h1>
+<p class=description>
+Learn more about GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12 for GitLab Community Edition (CE) and Enterprise Edition (EE)
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/blogimages/security-cover-new.png);'></div>
+<div class=content>
+<p>Today we are releasing versions 11.11.1, 11.10.5, and 11.9.12 for GitLab Community Edition (CE) and Enterprise Edition (EE).</p>
+<p>These versions contain important security fixes, and we strongly recommend that all GitLab installations be upgraded to one of these versions immediately.</p>
+<p>The vulnerability details will be made public on our <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=security">issue tracker</a> in approximately 30 days.</p>
+<p>Please read on for more information regarding this release.</p>
+<h2 id=remote-command-execution-vulnerability-on-repository-download-feature>Remote Command Execution Vulnerability on Repository Download Feature</h2>
+<p>A specially crafted payload would allow an authenticated malicious user to execute commands remotely through the repository download feature. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12430">CVE-2019-12430</a>.</p>
+<p>Thanks to @nyangawa of Chaitin Tech for responsibly reporting this vulnerability to us.</p>
+<h3 id=versions-affected>Versions Affected</h3>
+<p>Affects GitLab CE/EE 11.11.</p>
+<h3 id=remediation>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<h2 id=confidential-issue-titles-revealed-to-restricted-users-on-unsubscribe>Confidential Issue Titles Revealed to Restricted Users on Unsubscribe</h2>
+<p>Non-member users who subscribed to issue notifications could access the title of confidential issues through the unsubscription page. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12432">CVE-2019-12432</a>.</p>
+<p>Thanks to <a href="https://hackerone.com/skavans">@skavans</a> for responsibly reporting this vulnerability to us.</p>
+<h3 id=versions-affected-1>Versions Affected</h3>
+<p>Affects GitLab CE/EE 8.13 and later.</p>
+<h3 id=remediation-1>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<h2 id=disclosure-of-milestone-metadata-through-the-search-api>Disclosure of Milestone Metadata through the Search API</h2>
+<p>Restricted users could access the metadata of private milestones through the Search API. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12431">CVE-2019-12431</a>.</p>
+<p>Thanks to <a href="https://hackerone.com/xanbanx">@xanbanx</a> for responsibly reporting this vulnerability to us.</p>
+<h3 id=versions-affected-2>Versions Affected</h3>
+<p>Affects GitLab CE/EE 8.13 and later.</p>
+<h3 id=remediation-2>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<h2 id=private-project-discovery-via-comment-links>Private Project Discovery via Comment Links</h2>
+<p>Users could guess the URL slug of private projects through the contrast of the destination URLs of issues linked in comments. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12434">CVE-2019-12434</a>.</p>
+<p>Thanks to <a href="https://hackerone.com/ashish_r_padelkar">@ashish_r_padelkar</a> for responsibly reporting this vulnerability to us.</p>
+<h3 id=versions-affected-3>Versions Affected</h3>
+<p>Affects GitLab CE/EE 10.6 and later.</p>
+<h3 id=remediation-3>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<h2 id=metadata-of-confidential-issues-disclosed-to-restricted-users>Metadata of Confidential Issues Disclosed to Restricted Users</h2>
+<p>Unprivileged users were able to access labels, status and merge request counts of confidential issues via the milestone details page. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12429">CVE-2019-12429</a>.</p>
+<p>Thanks to <a href="https://hackerone.com/ashish_r_padelkar">@ashish_r_padelkar</a> for responsibly reporting this vulnerability to us.</p>
+<h3 id=versions-affected-4>Versions Affected</h3>
+<p>Affects GitLab CE/EE 11.9 and later.</p>
+<h3 id=remediation-4>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<h2 id=mandatory-external-authentication-provider-sign-in-restrictions-bypass>Mandatory External Authentication Provider Sign-In Restrictions Bypass</h2>
+<p>Users could bypass the mandatory external authentication provider sign-in restrictions by sending a specially crafted request. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12428">CVE-2019-12428</a>.</p>
+<p>Thanks to <a href="https://hackerone.com/ngalog">@ngalog</a> for responsibly reporting this vulnerability to us.</p>
+<h3 id=versions-affected-5>Versions Affected</h3>
+<p>Affects GitLab CE/EE 6.8 and later.</p>
+<h3 id=remediation-5>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<h2 id=internal-projects-allowed-to-be-created-on-in-private-groups>Internal Projects Allowed to Be Created on in Private Groups</h2>
+<p>Restricted visibility settings allow creating internal projects in private groups, leading to multiple permission issues. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12433">CVE-2019-12433</a>.</p>
+<p>Thanks to <a href="https://gitlab.com/petermarko">Peter Marko</a> for contributing with a fix for this issue.</p>
+<h3 id=versions-affected-6>Versions Affected</h3>
+<p>Affects GitLab CE/EE 11.7 and later.</p>
+<h3 id=remediation-6>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<h2 id=server-side-request-forgery-through-dns-rebinding>Server-Side Request Forgery Through DNS Rebinding</h2>
+<p>Multiple features contained Server-Side Request Forgery (SSRF) vulnerabilities caused by an insufficient validation to prevent DNS rebinding attacks. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12443">CVE-2019-12443</a>.</p>
+<p>Thanks to @nyangawa of Chaitin Tech for responsibly reporting this vulnerability to us.</p>
+<h3 id=versions-affected-7>Versions Affected</h3>
+<p>Affects GitLab CE/EE 10.2 and later.</p>
+<h3 id=remediation-7>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<p><strong>Note:</strong> The protection against DNS rebinding attacks can be disabled by unmarking the "Enforce DNS rebinding attack protection" checkbox under <em>Admin Area &gt; Settings &gt; Network &gt; Outbound requests</em></p>
+<h2 id=stored-cross-site-scripting-on-wiki-pages>Stored Cross-Site Scripting on Wiki Pages</h2>
+<p>Wiki Pages contained a lack of input validation which resulted in a persistent XSS vulnerability. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12444">CVE-2019-12444</a>.</p>
+<p>Thanks to <a href="https://hackerone.com/ryhmnlfj">@ryhmnlfj</a> for responsibly reporting this vulnerability to us.</p>
+<h3 id=versions-affected-8>Versions Affected</h3>
+<p>Affects GitLab CE/EE 8.9 and later.</p>
+<h3 id=remediation-8>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<h2 id=stored-cross-site-scripting-on-notes>Stored Cross-Site Scripting on Notes</h2>
+<p>A malicious user could execute JavaScript code on notes by importing a specially crafted project file. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12445">CVE-2019-12445</a>.</p>
+<p>Thanks to @nyangawa of Chaitin Tech for responsibly reporting this vulnerability to us.</p>
+<h3 id=versions-affected-9>Versions Affected</h3>
+<p>Affects GitLab CE/EE 8.4 and later.</p>
+<h3 id=remediation-9>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<h2 id=repository-password-disclosed-on-import-error-page>Repository Password Disclosed on Import Error Page</h2>
+<p>A failure while importing a repository by URL would render an error page containing the plaintext password of the repository to import. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12446">CVE-2019-12446</a>.</p>
+<p>Thanks to <a href="https://gitlab.com/vandebrj">@vandebrj</a> for responsibly reporting this vulnerability to us.</p>
+<h3 id=versions-affected-10>Versions Affected</h3>
+<p>Affects GitLab CE/EE 8.3 and later.</p>
+<h3 id=remediation-10>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<h2 id=protected-branches-restriction-rules-bypass>Protected Branches Restriction Rules Bypass</h2>
+<p>The protected branches feature contained a access control issue which resulted in a bypass of the protected branches restriction rules. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12441">CVE-2019-12441</a>.</p>
+<p>Thanks to @nyangawa of Chaitin Tech for responsibly reporting this vulnerability to us.</p>
+<h3 id=versions-affected-11>Versions Affected</h3>
+<p>Affects GitLab CE/EE 8.4 and later.</p>
+<h3 id=remediation-11>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<h2 id=stored-cross-site-scripting-vulnerability-on-child-epics>Stored Cross-Site Scripting Vulnerability on Child Epics</h2>
+<p>The epic details page contained a lack of input validation and output encoding issue which resulted in a persistent XSS vulnerability on child epics. The issue is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12442">CVE-2019-12442</a>.</p>
+<p>Thanks to @near_ for responsibly reporting this vulnerability to us.</p>
+<h3 id=versions-affected-12>Versions Affected</h3>
+<p>Affects GitLab EE 11.7 and later.</p>
+<h3 id=remediation-12>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are upgraded to the latest version as soon as possible.</p>
+<h2 id=upgrade-to-knative-05>Upgrade to Knative 0.5</h2>
+<p>Knative was upgraded to version 0.5 for the GitLab 11.11, 11.10 and 11.9 packages. This Knative release contains several security fixes.</p>
+<h2 id=updating>Updating</h2>
+<p>To update GitLab, see the <a href="/update/">update page</a>.</p>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+Security+Release%3A+11.11.1%2C+11.10.5%2C+and+11.9.12&amp;url=https://about.gitlab.com/releases/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<ul class='tag-list list-unstyled'>
+<li class=tag>
+<a href="/releases/tags.html#security">security</a>
+</li>
+<li class=tag>
+<a href="/releases/tags.html#security-releases">security releases</a>
+</li>
+</ul>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/&amp;text=GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/&amp;title=GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/&amp;t=GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2019/05/22/gitlab-11-11-released/" title="GitLab 11.11 released with Multi-Assignment for MRs and container enhancements"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 11.11 released with Multi-Assignment for MRs and
+...
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2019/06/05/gitlab-11-10-6-released/" title="GitLab Patch Release: 11.10.6"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab Patch Release: 11.10.6
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2019-06-03-security-release-gitlab-11-dot-11-dot-1-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2019-06-03-security-release-gitlab-11-dot-11-dot-1-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

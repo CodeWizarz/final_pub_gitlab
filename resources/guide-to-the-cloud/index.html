@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Guide to the cloud - How to navigate the multi-cloud future
+|
+GitLab
+</title>
+<meta content='Download our ebook “Guide to the cloud - How to navigate the multi-cloud future” for insights on how we’re helping teams harness the power of the cloud.' name=description />
+<meta content='Download our ebook “Guide to the cloud - How to navigate the multi-cloud future” for insights on how we’re helping teams harness the power of the cloud.' name='twitter:description'/>
+<meta content='Download our ebook “Guide to the cloud - How to navigate the multi-cloud future” for insights on how we’re helping teams harness the power of the cloud.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Guide to the cloud - How to navigate the multi-cloud future' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='resources/guide-to-the-cloud/index.html.haml' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/resources/guide-to-the-cloud/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/tweets/guide-to-the-cloud-social-promo-twitter-1200x675.png" property="og:image">
+<meta content="https://about.gitlab.com/images/tweets/guide-to-the-cloud-social-promo-twitter-1200x675.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Guide to the cloud - How to navigate the multi-cloud future' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/resources/guide-to-the-cloud/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/guide-to-the-cloud.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/starry-bg.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/form-2column.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+</head>
+<body class=blank-body>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<header class='navbar navbar-header-transparent' id=main-nav role=navigation>
+<div class=navbar-left>
+<a href="/" class="navbar-brand animated"><svg height=36 viewBox="0 0 1231 342" xmlns="http://www.w3.org/2000/svg" class=nav-logo>
+<g fill=none fill-rule=evenodd>
+<g fill="#8C929D" class=wordmark>
+<path d="M764.367 94.13h-20.803l.066 154.74h84.155v-19.136h-63.352l-.066-135.603zM907.917 221.7c-5.2 5.434-13.946 10.87-25.766 10.87-15.838 0-22.22-7.797-22.22-17.957 0-15.354 10.637-22.678 33.332-22.678 4.255 0 11.11.472 14.655 1.18v28.586zm-21.51-93.787c-16.8 0-32.208 5.952-44.23 15.858l7.352 12.73c8.51-4.962 18.91-9.924 33.802-9.924 17.02 0 24.585 8.742 24.585 23.39v7.56c-3.31-.71-10.164-1.184-14.42-1.184-36.404 0-54.842 12.757-54.842 39.454 0 23.86 14.656 35.908 36.876 35.908 14.97 0 29.314-6.852 34.278-17.954l3.782 15.118h14.657v-79.14c0-25.04-10.874-41.815-41.84-41.815zM995.368 233.277c-7.802 0-14.657-.945-19.858-3.308v-71.58c7.093-5.908 15.84-10.16 26.95-10.16 20.092 0 27.893 14.174 27.893 37.09 0 32.6-12.53 47.957-34.985 47.957m8.742-105.364c-18.592 0-28.6 12.64-28.6 12.64V120.59l-.066-26.458H955.116l.066 150.957c10.164 4.25 24.11 6.613 39.24 6.613 38.768 0 57.442-24.804 57.442-67.564 0-33.783-17.26-56.227-47.754-56.227M538.238 110.904c18.438 0 30.258 6.142 38.06 12.285l8.938-15.477c-12.184-10.678-28.573-16.417-46.053-16.417-44.204 0-75.17 26.932-75.17 81.267 0 56.935 33.407 79.14 71.624 79.14 19.148 0 35.46-4.488 46.096-8.976l-.435-60.832V162.76h-56.734v19.135h36.167l.437 46.184c-4.727 2.362-13 4.252-24.11 4.252-30.73 0-51.297-19.32-51.297-60.006 0-41.34 21.275-61.422 52.478-61.422M684.534 94.13h-20.33l.066 25.988v89.771c0 25.04 10.874 41.814 41.84 41.814 4.28 0 8.465-.39 12.53-1.126v-18.245c-2.943.45-6.083.707-9.455.707-17.02 0-24.585-8.74-24.585-23.387v-61.895h34.04v-17.01H684.6l-.066-36.617zM612.62 248.87h20.33V130.747h-20.33v118.12zM612.62 114.448h20.33V94.13h-20.33v20.318z"/>
+</g>
+<path d="M185.398 341.13l68.013-209.322H117.39L185.4 341.13z" fill="#E24329" class="logo-svg-shape logo-dark-orange-shape"/>
+<path d="M185.398 341.13l-68.013-209.322h-95.32L185.4 341.128z" fill="#FC6D26" class="logo-svg-shape logo-orange-shape"/>
+<path d="M22.066 131.808l-20.67 63.61c-1.884 5.803.18 12.16 5.117 15.744L185.398 341.13 22.066 131.807z" fill="#FCA326" class="logo-svg-shape logo-light-orange-shape"/>
+<path d="M22.066 131.808h95.32L76.42 5.735c-2.107-6.487-11.284-6.487-13.39 0L22.065 131.808z" fill="#E24329" class="logo-svg-shape logo-dark-orange-shape"/>
+<path d="M185.398 341.13l68.013-209.322h95.32L185.4 341.128z" fill="#FC6D26" class="logo-svg-shape logo-orange-shape"/>
+<path d="M348.73 131.808l20.67 63.61c1.884 5.803-.18 12.16-5.117 15.744L185.398 341.13 348.73 131.807z" fill="#FCA326" class="logo-svg-shape logo-light-orange-shape"/>
+<path d="M348.73 131.808h-95.32L294.376 5.735c2.108-6.487 11.285-6.487 13.392 0l40.963 126.073z" fill="#E24329" class="logo-svg-shape logo-dark-orange-shape"/>
+</g>
+</svg>
+</a></div>
+<script src='/javascripts/libs/tweenmax.min.js'></script>
+</header>
+<main>
+<section class='hero container'>
+<div class=futureofcloudtitlewrapper>
+<svg class=futureofcloudtitle1 viewBox='0 0 230 40'>
+<defs>
+<linearGradient gradientUnits=userSpaceOnUse id=textGradientFill x1=0 x2=0 y1=0 y2='100%'>
+<stop offset='33%' stop-color='#ffffff'></stop>
+<stop offset='100%' stop-color='#8a819b'></stop>
+</linearGradient>
+</defs>
+<text fill='url(#textGradientFill)'>
+<tspan fill='url(#textGradientFill)' font-size=30 x=0 y=30>
+The future of
+</tspan>
+</text>
+</svg>
+<svg class=futureofcloudtitle2 viewBox='0 0 230 40'>
+<defs>
+<linearGradient gradientUnits=userSpaceOnUse id=textGradientFill x1=0 x2=0 y1=0 y2='100%'>
+<stop offset='33%' stop-color='#ffffff'></stop>
+<stop offset='100%' stop-color='#8a819b'></stop>
+</linearGradient>
+</defs>
+<text fill='url(#textGradientFill)'>
+<tspan fill='url(#textGradientFill)' font-size=30 x=0 y=30>
+cloud computing
+</tspan>
+</text>
+</svg>
+<h3>As teams move to faster release cycles, they're looking to cloud-based architectures and cloud services to help them scale and automate.</h3>
+<a class='btn cta-btn btn-dev-2019' href='#pdf' style='background-color: #a6009c; float: right;'>
+<span style='color: #ffffff;'>Download our ebook</span>
+</a>
+</div>
+</section>
+<section class='introduction container'>
+<div class='row u-margin-bottom-lg'>
+<div class='col-md-5 col-md-offset-1'>
+<p>Increasing development speed is often limited by the boundaries of infrastructure. Enterprises large and small have adopted cloud computing to help them be more efficient in their growth journey. Whether it's managing infrastructure, data storage and recovery, cloud-native application development, or software on-demand – cloud computing is changing the way we deliver software.</p>
+</div>
+<div class=col-md-5>
+<div class='animation-wrapper wrapper-cloudcity1'>
+<?xml version="1.0" encoding=utf-8?>
+
+<svg version="1.1" id=Layer_1 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x=0px y=0px
+viewBox="0 0 80 41" enable-background="new 0 0 80 41" xml:space=preserve>
+<g>
+<linearGradient id=cloudcity1_SVGID_1_ gradientUnits=userSpaceOnUse x1="30.5796" y1="17.8784" x2="30.4675" y2="2.2896">
+<stop offset=0 style="stop-color:#1D083F"/>
+<stop offset="0.3198" style="stop-color:#331C67"/>
+<stop offset="0.7758" style="stop-color:#51379B"/>
+<stop offset="0.9995" style="stop-color:#5C41AF"/>
+</linearGradient>
+<path opacity="0.8" id=cc1-cloud-top-left fill="url(#cloudcity1_SVGID_1_)" d="M47.7,9.3c-0.2,0-0.4,0-0.5,0c-0.3-0.6-1.2-1-2.3-1c-1,0-1.8,0.3-2.2,0.8
+c-0.5,0-1,0.1-1.4,0.2c-0.2-1.2-1.2-2.1-2.5-2.1c-0.4,0-0.9,0.1-1.2,0.3c-0.1-0.4-0.3-0.8-0.5-1.2c0.3-0.5,0.5-1.1,0.5-1.8
+c0-2-1.8-3.6-4-3.6c-1.7,0-3.2,1-3.8,2.3c-0.5-0.1-1-0.2-1.5-0.2c-2.6,0-4.8,1.7-4.8,3.8c0,0.2,0,0.4,0.1,0.6
+c-0.3-0.2-0.7-0.3-1.1-0.3c-1.3,0-2.4,1-2.5,2.3c-0.8-0.3-1.6-0.4-2.6-0.5c-0.4-0.5-1.2-0.8-2.1-0.8C14,8.3,13,9,13,9.8
+c0,0,0,0.1,0,0.1c-0.1,0-0.2,0-0.4,0c-2.4,0-4.3,1.9-4.3,4.3c0,2.4,1.9,4.3,4.3,4.3c1.8,0,3.4-1.2,4-2.8c0.4,0.3,0.9,0.5,1.4,0.5
+c0.6,0,1.2-0.2,1.6-0.6c0.4,1.5,1.7,2.6,3.4,2.6c1.8,0,3.3-1.4,3.4-3.2c1.1,0.5,2.6,0.8,4.3,0.8c2.2,0,4.2-0.5,5.1-1.3
+c0.4,1.3,2.1,2.3,4.1,2.3c1.7,0,3.1-0.7,3.8-1.7c0.9,0.7,2.3,1.2,3.8,1.2c2.8,0,5.1-1.5,5.1-3.4C52.8,10.9,50.5,9.3,47.7,9.3z"/>
+<linearGradient id=cloudcity1_SVGID_2_ gradientUnits=userSpaceOnUse x1="27.3674" y1="33.8785" x2="27.3674" y2="14.433">
+<stop offset=0 style="stop-color:#1D083F"/>
+<stop offset="0.3198" style="stop-color:#331C67"/>
+<stop offset="0.7758" style="stop-color:#51379B"/>
+<stop offset="0.9995" style="stop-color:#5C41AF"/>
+</linearGradient>
+<path opacity="0.8" id=cc1-cloud-mid-left fill="url(#cloudcity1_SVGID_2_)" d="M52.4,25.4c0-1.1-0.9-2-2-2c-0.2,0-0.4,0-0.6,0.1c-0.4-0.7-1.4-1.3-2.9-1.6
+c-0.3-0.8-1.5-1.4-2.9-1.4c-1.2,0-2.2,0.4-2.7,1c-0.6,0.1-1.2,0.1-1.7,0.2c-0.3-1.4-1.5-2.5-3-2.5c-0.5,0-1.1,0.1-1.5,0.4
+c-0.4-2-2.3-3.7-4.9-4.5c0,0-1.2-0.6-3.5-0.6c-2.6,0-3.7,0.6-3.7,0.6c-2.6,0.8-4.5,2.5-4.9,4.5c-0.4-0.3-1-0.4-1.5-0.4
+c-1.6,0-2.9,1.3-3,2.8c-0.9-0.3-2-0.5-3.1-0.6c-0.5-0.6-1.4-1-2.5-1c-1.6,0-2.8,0.8-2.8,1.8c0,0,0,0.1,0,0.1
+c-1.8,0.8-2.9,2-2.9,3.4c0,0,0,0,0,0.1c0,0,0,0,0,0.1c0,1.1,0.4,5.5,8.3,5c1.2-0.1,2.2-0.4,2.7-1c0.6-0.1,1.2-0.1,1.7-0.2
+c0.3,1.4,1.5,2.5,3,2.5c0.5,0,1.1-0.1,1.5-0.4c0.4,2,3.2,2.4,5.1,2c2.7-0.5,3.1-2.6,3.1-2.6c0.4,0.3,17.9-0.3,19-0.3
+c1.6,0,2.8-0.8,2.8-1.8c0,0,0-0.1,0-0.1c1.8-0.8,2.9-2,2.9-3.4C52.4,25.5,52.4,25.4,52.4,25.4C52.4,25.4,52.4,25.4,52.4,25.4z"/>
+<path fill=none d="M59.6,13.3c0,0.1,0.1,0.2,0.2,0.3c0-0.6,0-1.2,0.1-1.8C59.5,12.4,59.4,12.9,59.6,13.3z"/>
+<path fill=none d="M41.2,18.6c0.1,1.1,0.2,2.1,0.3,3.2c1.4,0.5,2.7,1.5,3.6,2.4c0.1-0.9,0.3-2,0.5-3.1c-0.7-0.4-1.5-0.9-2.3-1.3
+C42.6,19.4,41.8,19,41.2,18.6z"/>
+<path fill=none d="M38.9,16c-0.1,0.4,0.3,0.7,0.6,1c0,0,0,0,0,0c0.3-0.2,0.6-0.4,0.8-0.5c0-0.5,0-0.9,0.1-1.3
+C39.5,15.4,39,15.7,38.9,16z"/>
+<path fill=none d="M42.5,14.4c-0.1-0.4-0.6-0.7-1.5-0.9c0,0.8,0.1,1.6,0.1,2.5c0.3-0.2,0.6-0.5,0.9-0.7
+C42.4,15,42.6,14.7,42.5,14.4z"/>
+<path fill=none d="M34.6,20.5c0,1.2,0.1,2.3,0.1,3.4c0.2,0.1,0.4,0.2,0.6,0.4v-4.4c-0.1,0-0.1,0.1-0.2,0.1
+C35,20.2,34.8,20.3,34.6,20.5z"/>
+<path fill=none d="M40.3,17.6c0-0.3,0-0.5,0-0.8c-0.2,0.1-0.4,0.2-0.6,0.4C39.9,17.4,40.1,17.5,40.3,17.6z"/>
+<path fill=none d="M66.3,14.1C66.3,14.1,66.3,14.1,66.3,14.1l-0.1,0.7c0-0.1,0.1-0.2,0.1-0.3C66.4,14.3,66.4,14.2,66.3,14.1z"/>
+<path fill=none d="M66.2,13.3c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2,0-0.2c0,0-0.1,0-0.1,0V13.3z"/>
+<path fill=none d="M65.4,15.4v-0.2C65.4,15.2,65.3,15.3,65.4,15.4C65.3,15.4,65.4,15.4,65.4,15.4z"/>
+<path fill=none d="M70.6,22.5c0,0,0.1,0,0.2,0v-0.1c-0.1,0-0.1,0-0.2,0C70.6,22.5,70.6,22.5,70.6,22.5z"/>
+<path fill=none d="M70.4,23.1c0.1,0,0.2,0,0.3,0v-0.5c-0.1,0-0.2,0-0.2,0C70.5,22.8,70.5,23,70.4,23.1z"/>
+<path fill=none d="M65.2,14.6c0,0,0.1,0,0.2,0v-0.9C65.1,14.2,65.1,14.5,65.2,14.6z"/>
+<g>
+<path fill="#7DCAFA" d="M65.6,10.5v-0.1V9.1c0,0,0-0.1-0.1-0.1c0,0-0.1,0-0.1,0.1v1.4c0,0,0,0,0,0v0
+C65.5,10.5,65.5,10.5,65.6,10.5L65.6,10.5z"/>
+<path fill="#DB3B21" d="M65.9,10.5L65.9,10.5V8.4c0,0,0-0.1-0.1-0.1c0,0-0.1,0-0.1,0.1v2.1c0,0,0,0,0,0v0
+C65.8,10.5,65.8,10.5,65.9,10.5C65.8,10.5,65.9,10.5,65.9,10.5L65.9,10.5z"/>
+</g>
+<linearGradient id=cloudcity1_SVGID_3_ gradientUnits=userSpaceOnUse x1="66.3073" y1="13.0303" x2="66.3073" y2="11.4443">
+<stop offset=0 style="stop-color:#1D083F"/>
+<stop offset="0.3198" style="stop-color:#331C67"/>
+<stop offset="0.7758" style="stop-color:#51379B"/>
+<stop offset="0.9995" style="stop-color:#5C41AF"/>
+</linearGradient>
+<path opacity="0.44" fill="url(#cloudcity1_SVGID_3_)" d="M66.3,12.6C66.3,12.6,66.3,12.6,66.3,12.6l-0.1,0.2c0,0,0.1,0,0.1,0
+C66.4,12.7,66.4,12.7,66.3,12.6z"/>
+<linearGradient id=cloudcity1_SVGID_4_ gradientUnits=userSpaceOnUse x1="64.3672" y1="13.0303" x2="64.3672" y2="11.4443">
+<stop offset=0 style="stop-color:#1D083F"/>
+<stop offset="0.3198" style="stop-color:#331C67"/>
+<stop offset="0.7758" style="stop-color:#51379B"/>
+<stop offset="0.9995" style="stop-color:#5C41AF"/>
+</linearGradient>
+<path opacity="0.44" fill="url(#cloudcity1_SVGID_4_)" d="M64.9,10.6c-0.5,0.1-0.8,0.4-1,0.7C64,11,64.4,10.7,64.9,10.6z"/>
+<linearGradient id=cloudcity1_SVGID_5_ gradientUnits=userSpaceOnUse x1="67.3046" y1="13.0303" x2="67.3046" y2="11.4443">
+<stop offset=0 style="stop-color:#1D083F"/>
+<stop offset="0.3198" style="stop-color:#331C67"/>
+<stop offset="0.7758" style="stop-color:#51379B"/>
+<stop offset="0.9995" style="stop-color:#5C41AF"/>
+</linearGradient>
+<path opacity="0.44" fill="url(#cloudcity1_SVGID_5_)" d="M67.7,11.2c-0.2-0.2-0.5-0.4-0.8-0.6C67.3,10.8,67.6,11,67.7,11.2z"/>
+<linearGradient id=cloudcity1_SVGID_6_ gradientUnits=userSpaceOnUse x1="52.7932" y1="33.3657" x2="52.7932" y2="11.2843">
+<stop offset=0 style="stop-color:#1D083F"/>
+<stop offset="0.3198" style="stop-color:#331C67"/>
+<stop offset="0.7758" style="stop-color:#51379B"/>
+<stop offset="0.9995" style="stop-color:#5C41AF"/>
+</linearGradient>
+<path fill="url(#cloudcity1_SVGID_6_)" d="M73.9,24.2c-0.1,0-0.2,0-0.3,0v-0.3c0.2,0,0.2,0,0.2,0s0,0-0.2,0v-0.1c0.2,0,0.2,0,0.2,0
+c0,0,0,0-0.2,0v0c0,0,0-0.1-0.1-0.1c0,0-0.1,0-0.1,0.1v0c-0.2,0-0.2,0-0.2,0c0,0,0,0,0.2,0v0.1c-0.2,0-0.2,0-0.2,0s0,0,0.2,0v0.4
+c-0.1,0-0.2,0.1-0.4,0.1c0,0,0,0,0,0c0,0,0,0,0,0v-5c0-0.3-0.2-0.5-0.5-0.5c-0.3,0-0.5,0.2-0.5,0.5v4.6c-0.1-0.1-0.2-0.2-0.4-0.3
+c0,0,0,0,0,0c-0.1,0-0.1-0.1-0.2-0.1c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0c-0.2-0.1-0.3-0.2-0.5-0.2v-0.5c0.3,0,0.3-0.1,0.3-0.1
+c0,0,0-0.1-0.3-0.1v-0.1c0.3,0,0.3-0.1,0.3-0.1c0,0,0-0.1-0.3-0.1v0c0,0,0-0.1-0.1-0.1s-0.1,0-0.1,0.1v0c-0.1,0-0.1,0-0.2,0
+c0.2-1.8-0.7-3.7-1.9-4.9c-0.4-0.4-0.9-0.8-1.4-1.1c-0.3-0.2-0.7-0.4-1.1-0.6V15c0.1-0.2,0.1-0.3,0.2-0.5c0.1-0.2,0-0.4-0.1-0.5
+c0,0-0.1,0-0.1,0v-0.6c0.1-0.2,0.1-0.3,0.2-0.5c0-0.1,0-0.2,0-0.3c0-0.1,0-0.2-0.1-0.2c0,0-0.1,0-0.1,0V12h1.5h0.5c0,0,0,0,0,0
+v-0.5c0,0,0,0,0,0h-0.5c0,0,0-0.1-0.1-0.1c0,0,0,0,0,0c0,0,0,0,0-0.1c-0.2-0.2-0.5-0.4-0.8-0.6c0,0,0,0,0,0c0,0-0.1,0-0.1,0
+c0,0-0.1,0-0.1,0c0,0,0,0-0.1,0c-0.1,0-0.2,0-0.3-0.1c0,0-0.1,0-0.1,0c-0.1,0-0.2,0-0.3,0c-0.1,0-0.1,0-0.2,0c-0.3,0-0.5,0-0.8,0.1
+c0,0,0,0,0,0c0,0-0.1,0-0.1,0c-0.5,0.1-0.8,0.4-1,0.7c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0.1-0.1,0.1h-0.5c0,0,0,0,0,0v0.5c0,0,0,0,0,0
+h0.5h1.5v0.8v0.7c0,0,0,0,0,0c-0.2,0.5-0.4,1-0.2,1.1c0,0,0,0,0.1,0c0,0,0.1,0,0.1,0V15c0,0,0,0,0,0c0,0.1-0.1,0.2-0.1,0.3
+c-1.2-0.5-2.5-0.8-3.7-1.1c-0.2-0.1-0.5-0.1-0.7-0.2l-0.1,0c-0.1,0-0.2-0.1-0.3-0.1c0-1.3-0.1-2.5-0.1-3.3c0-0.6-0.1-1-0.1-1.2
+c0,0,0.1-0.1,0.1-0.1c0.5-1.1,1.8-1.1,2.8-1.2c0.6,0,1.1,0,1.1-0.3c0-0.3-0.2-0.5-0.6-0.7V6.3c0-0.1-0.1-0.2-0.2-0.2
+c-0.1,0-0.1,0-0.2,0.1V6c0-0.1-0.1-0.2-0.2-0.2c-0.1,0-0.1,0-0.2,0.1V5.4c0-0.1-0.1-0.2-0.2-0.2c-0.1,0-0.2,0.1-0.2,0.2v1.3
+c-0.6-0.1-1.3-0.2-2-0.2c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1c0,0,0,0,0,0c0,0,0-0.1,0-0.1c0,0,0,0,0,0c0,0,0-0.1,0-0.1c0,0,0,0,0,0
+c0,0,0,0,0-0.1c0,0,0,0,0,0c0,0,0,0,0-0.1c0,0,0,0,0-0.1c0,0,0,0-0.1-0.1c0,0,0,0,0,0c0,0,0,0-0.1,0c0,0,0,0,0,0c0,0-0.1,0-0.1-0.1
+c0,0,0,0,0,0c0,0,0,0,0,0c-0.1,0-0.1-0.1-0.2-0.1V5.3c0.1,0,0.1,0,0.1,0c0,0,0,0-0.1,0c0,0,0,0,0,0c0,0,0,0-0.1,0c0,0,0,0,0,0
+c0,0,0,0,0,0c-0.1,0-0.1,0-0.1,0c0,0,0,0,0,0c-0.1,0-0.1,0-0.1,0c0,0,0,0,0.1,0v0.1c0,0-0.1,0-0.1,0c-0.5,0-0.9,0.4-0.9,0.9
+c0,0.1,0,0.1,0,0.2c-0.2,0-0.4,0.1-0.6,0.1c0-1.2,0-0.6-0.1-1.9c-0.1-3.3-0.2-3.3-0.3-3.3c-0.1,0-0.2,0-0.3,3.3
+c0,1.4-0.1,0.8-0.1,2.1C57.1,6.9,57,7,56.8,7V6c0-0.1-0.1-0.2-0.2-0.2c-0.1,0-0.2,0.1-0.2,0.2v1.2C56.1,7.4,56,7.6,56,7.8
+c0,0.3,0.5,0.3,1.1,0.3c1,0,2.3,0.1,2.8,1.2c0,0,0,0.1,0.1,0.1c0,0.2,0,0.6-0.1,1.2c0,0.3,0,0.7,0,1.1c0,0,0,0,0,0l0,0
+c-0.2,0.3-0.4,0.7-0.5,1.1c-0.1,0.5,0.1,0.8,0.4,1.1v8.2c-0.1,0-0.1,0-0.1,0.1c0,0,0,0,0.1,0.1v0.1c-0.2,0-0.2,0.1-0.2,0.1
+s0,0.1,0.2,0.1V23c-0.1,0-0.2,0-0.3,0c-0.7,0-1.4,0.3-1.8,0.8v-3.6c0.9-2.3,1.1-3.6,0.6-4c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0
+c0,0,0,0,0,0c0,0-0.1,0-0.2,0c-1.1-0.2-2.2,0-3.2,0.6v-4.1c0.2-0.1,0.4-0.2,0.6-0.3c0,0,0,0,0,0c0,0,0.1-0.1,0.1-0.1
+c0-0.1,0.1-0.1,0.1-0.2c0-0.1,0.1-0.1,0.1-0.2c0-0.1,0-0.1,0.1-0.2c0,0,0,0,0-0.1c0-0.1,0-0.2,0-0.3c0-0.4-0.2-0.8-0.4-1
+c0,0,0,0,0,0c-0.1-0.1-0.1-0.1-0.2-0.2C55.1,10,55,10,54.8,9.9V8.8c0-0.2-0.2-0.4-0.4-0.4c-0.2,0-0.4,0.2-0.4,0.4v1.1
+C54,10,53.9,10,53.8,10c-0.3,0.1-0.5,0.4-0.6,0.7c0,0,0,0,0,0c0,0,0,0.1-0.1,0.1c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1
+c0,0.1,0,0.1,0,0.2c0,0.2,0.1,0.5,0.2,0.7c0,0,0,0.1,0.1,0.1c0.1,0.1,0.2,0.2,0.3,0.3c0,0,0.1,0,0.1,0.1c0.1,0,0.1,0.1,0.2,0.1
+c0.1,0,0.1,0.1,0.2,0.1v4.6c-0.9,0.6-1.8,1.4-2.6,2.3v-1.2v-0.4v-0.6v-0.4v-1h0.2c0.5,0,0.9-0.4,0.9-0.9c0-0.5-0.4-0.9-0.9-0.9
+h-0.2v-3c0-0.8-0.6-1.4-1.4-1.4s-1.4,0.6-1.4,1.4V11h-0.2c-0.5,0-0.9,0.4-0.9,0.9s0.4,0.9,0.9,0.9h0.2v6c-0.4-1.2-0.7-1.9-1.1-2.1
+c-0.1-0.1-0.3-0.1-0.4,0c-0.7,0.3-1.2,2-1.6,3.9c-0.3-0.2-0.6-0.3-0.9-0.5c-0.5-0.3-1-0.5-1.3-0.7c-0.3-0.2-0.7-0.4-1.1-0.6
+c-0.4-0.2-0.8-0.5-1.2-0.7c0-0.6-0.1-1.2-0.1-1.8c0.7-0.4,1.2-0.8,1.5-1.2c0.3-0.4,0.3-0.7,0.2-1c-0.3-0.7-1.7-0.8-1.8-0.8
+c0,0,0,0,0,0c-0.1-2.4-0.1-4.3-0.1-4.8c0,0,0.1,0,0.1-0.1l0.3-0.3c0.1-0.1,0.1-0.1,0.1-0.2V7.9c0.7,0,1.2,0,1.2-0.1
+c0,0-0.5-0.1-1.2-0.1V7.4c0-0.2,0.1-0.5,0.2-0.7c0.9,0,1.6,0,1.6-0.1c0,0-0.6-0.1-1.5-0.1c0.1-0.2,0.3-0.4,0.6-0.4h0.9
+c0.3,0,0.6-0.3,0.6-0.6V5.3c0-0.1-0.1-0.2-0.2-0.2h-0.1V4.8c0-0.1-0.1-0.1-0.1-0.1H43c0,0,0,0,0,0V3.9c0-0.1-0.1-0.1-0.1-0.1h-0.2
+c-0.1,0-0.1,0.1-0.1,0.1v1.3h-0.1V4.8c0-0.1-0.1-0.1-0.1-0.1H42c-0.1,0-0.1,0.1-0.1,0.1v0.3h-0.5V4.8c0-0.1-0.1-0.1-0.1-0.1h-0.4
+c0,0,0,0,0,0V3.9c0-0.1-0.1-0.1-0.1-0.1h-0.2c-0.1,0-0.1,0.1-0.1,0.1v1.3h-0.1V4.8c0-0.1-0.1-0.1-0.1-0.1H40
+c-0.1,0-0.1,0.1-0.1,0.1v0.3h-0.7c0-0.3-0.2-0.5-0.4-0.5c-0.1,0-0.1,0-0.2,0.1c-0.1-0.2-0.2-0.3-0.3-0.3c-0.2,0-0.4,0.3-0.4,0.6
+c-0.1,0-0.2,0.1-0.2,0.2v0.2c0,0.3,0.3,0.6,0.6,0.6h0.9c0.2,0,0.4,0.2,0.6,0.4c-0.9,0-1.5,0-1.5,0.1c0,0,0.6,0.1,1.6,0.1
+C40,6.9,40,7.1,40,7.4v0.4c-0.7,0-1.2,0-1.2,0.1c0,0,0.5,0.1,1.2,0.1V8c0,0.1,0,0.2,0.1,0.2l0.3,0.3c0,0,0.1,0.1,0.1,0.1
+c0,0.6,0,3.3-0.1,6.5c-0.2,0-1.5,0.2-1.8,0.8c-0.1,0.3-0.1,0.6,0.2,1c0.1,0.1,0.2,0.2,0.3,0.3c-0.4,0.2-0.8,0.5-1.1,0.7
+c-0.3,0.2-0.7,0.4-1.1,0.7v-1.4c0-0.4-0.4-0.8-0.8-0.8c-0.4,0-0.8,0.4-0.8,0.8v2.4c-0.2,0.1-0.5,0.3-0.7,0.4
+c-0.1-1.8-0.1-3.6-0.2-5.1c-0.3-5.1-0.5-5.1-0.6-5.1c0,0-0.1,0-0.1,0.1c-0.4,0.9-1,6.3-1.4,12c-0.1,0.1-0.1,0.3-0.1,0.4
+c0,0.2,0,0.3,0.1,0.5c0,0.5-0.1,1-0.1,1.4c-0.1-1.3-0.3-2.5-0.6-2.7c0,0,0,0,0,0c0,0,0,0-0.1,0c-0.4,0-1.2,2.7-1.4,4.6c0,0,0,0,0,0
+c0,0,0,0,0,0h0.6h1h0.4h0.2h0.5h1.2h0.7c0,0,0,0,0,0c0,0,0,0,0,0c0-0.3,0-0.7,0-1c0.2,0.1,0.4,0.2,0.6,0.3v0.7c0,0,0,0,0,0h1.5
+c0,0,0,0,0,0c0,0,0,0,0,0H39c0,0,0,0,0,0c0,0,0,0,0,0c0,0-0.2-0.1-0.5-0.2v-3.6c0-0.4-0.4-0.8-0.8-0.8c-0.3,0-0.6,0.2-0.7,0.5v-1.4
+v-0.2v-0.4v-0.2v-0.9c0.4-0.2,0.8-0.4,1.2-0.7c0.4-0.2,0.9-0.5,1.3-0.7c0.2,0.2,0.5,0.4,0.9,0.6c-0.1,1.2-0.2,2.3-0.3,3.5
+c-0.1,0-0.2,0-0.2,0c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0c0,0,0,0,0,0c0,0,0,0,0,0c-0.1,0.2,0,0.7,0.3,1.2c-0.1,1.2-0.3,2.4-0.5,3.4
+c0,0,0,0,0,0c0,0,0,0,0,0h1.5h1.2h2.3c0,0,0,0,0,0h0.4H45h0.7h1h0.1h2h0.5h0.8h1.3h0.1h1.6h3.5h1.1H68c0,0,0,0,0.1,0h2.1h2.4
+c0,0,0,0,0,0h1.3h1.4c0,0,0,0,0,0c0-0.1,0.1-0.3,0.1-0.4C75.4,24.9,74.7,24.2,73.9,24.2z M35.3,24.3c-0.2-0.1-0.4-0.2-0.6-0.4
+c0-1.1-0.1-2.3-0.1-3.4c0.2-0.1,0.3-0.3,0.5-0.4c0.1,0,0.1-0.1,0.2-0.1V24.3z M40.3,17.6c-0.2-0.1-0.4-0.3-0.6-0.4
+c0.2-0.1,0.4-0.2,0.6-0.4C40.3,17.1,40.3,17.4,40.3,17.6z M40.4,16.5c-0.3,0.2-0.6,0.4-0.8,0.5c0,0,0,0,0,0c-0.3-0.2-0.6-0.6-0.6-1
+c0.1-0.4,0.6-0.7,1.5-0.9C40.4,15.6,40.4,16.1,40.4,16.5z M41,13.5c0.9,0.2,1.5,0.5,1.5,0.9c0.1,0.3-0.1,0.6-0.6,1
+c-0.3,0.2-0.6,0.5-0.9,0.7C41,15.2,41,14.3,41,13.5z M45.1,24.2c-0.9-0.9-2.2-1.9-3.6-2.4c-0.1-1-0.2-2.1-0.3-3.2
+c0.6,0.4,1.4,0.8,2.1,1.2c0.8,0.4,1.5,0.9,2.3,1.3C45.4,22.1,45.2,23.2,45.1,24.2z M59.8,13.6c-0.1-0.1-0.2-0.2-0.2-0.3
+c-0.2-0.4-0.1-0.9,0.3-1.4C59.8,12.4,59.8,13,59.8,13.6z M65.4,15.4C65.4,15.4,65.3,15.4,65.4,15.4c-0.1-0.1,0-0.1,0-0.2V15.4z
+M65.4,14.6c-0.1,0.1-0.1,0.1-0.2,0c-0.1-0.1-0.1-0.4,0.2-0.9V14.6z M66.3,14.1c0.1,0,0.1,0.2,0,0.4c0,0.1-0.1,0.2-0.1,0.3
+L66.3,14.1C66.3,14.1,66.3,14.1,66.3,14.1z M66.2,12.6C66.3,12.6,66.3,12.6,66.2,12.6c0.1,0,0.1,0.1,0.1,0.1c0,0.1,0,0.1,0,0.2
+c0,0.1-0.1,0.2-0.1,0.3v-0.5V12.6z M70.7,23.2c-0.1,0-0.2,0-0.3,0c0-0.2,0.1-0.3,0.1-0.5c0,0,0.1,0,0.2,0V23.2z M70.7,22.5
+c-0.1,0-0.1,0-0.2,0c0,0,0-0.1,0-0.1C70.6,22.4,70.7,22.4,70.7,22.5L70.7,22.5z"/>
+<ellipse fill="#DB3B21" cx="40.7" cy="6.6" rx="2.5" ry="0.1"/>
+<ellipse fill="#7DCAFA" cx="40.7" cy="7.9" rx="1.9" ry="0.1"/>
+<linearGradient id=cloudcity1_SVGID_7_ gradientUnits=userSpaceOnUse x1="56.9867" y1="33.001" x2="56.9867" y2="17.3058">
+<stop offset=0 style="stop-color:#1D083F"/>
+<stop offset="0.3198" style="stop-color:#331C67"/>
+<stop offset="0.7758" style="stop-color:#51379B"/>
+<stop offset="0.9995" style="stop-color:#5C41AF"/>
+</linearGradient>
+<path opacity="0.8" id=cc1-cloud-mid-right fill="url(#cloudcity1_SVGID_7_)" d="M73.3,25.5c-0.4,0-0.7,0-1.1,0.1c-0.4-1.6-1.8-2.8-3.6-2.8c-0.6,0-1.2,0.2-1.8,0.5
+c-0.4-3.4-3-6-6.1-6c-3.1,0-5.7,2.6-6.1,5.9c-1.2-0.5-2.7-0.8-4.4-0.8c-3.7,0-6.7,1.5-6.9,3.5C39,27.5,35.9,30.1,35,33h43.5
+c0.3-0.7,0.5-1.4,0.5-2.2C79,27.9,76.5,25.5,73.3,25.5z"/>
+<linearGradient id=cloudcity1_SVGID_8_ gradientUnits=userSpaceOnUse x1="30.5478" y1="39.8128" x2="30.5478" y2="21.661">
+<stop offset=0 style="stop-color:#1D083F"/>
+<stop offset="0.3198" style="stop-color:#331C67"/>
+<stop offset="0.7758" style="stop-color:#51379B"/>
+<stop offset="0.9995" style="stop-color:#5C41AF"/>
+</linearGradient>
+<path id=cc1-cloud-bottom-left fill="url(#cloudcity1_SVGID_8_)" d="M58,36.5c-0.2,0-0.4,0-0.7,0.1c-0.4-0.8-1.7-1.5-3.4-2c-0.3-1-1.7-1.7-3.4-1.7
+c-1.4,0-2.6,0.5-3.2,1.2c-0.7,0.1-1.4,0.2-2,0.3c-0.3-1.7-1.8-3-3.6-3c-0.6,0-1.2,0.2-1.7,0.4c0.4-0.6,0.6-1.4,0.6-2.2
+c0-2.3-1.9-4.2-4.2-4.2c-1,0-1.8,0.3-2.5,0.9c-0.1-2.6-2.2-4.7-4.9-4.7c-2.7,0-4.9,2.2-4.9,4.9c-0.4-0.1-0.8-0.2-1.2-0.2
+c-2.1,0-3.8,1.7-3.8,3.8c0,0.6,0.2,1.2,0.4,1.8c-0.5-0.3-1.1-0.5-1.8-0.5c-1.9,0-3.5,1.5-3.6,3.4c-1.1-0.4-2.4-0.6-3.7-0.7
+c-0.5-0.7-1.7-1.2-3-1.2c-1.9,0-3.4,0.9-3.4,2.1c0,0.1,0,0.1,0,0.2c-2.1,1-3.5,2.4-3.5,4.1c0,0.2,0,0.3,0,0.5h36.4h7.2h9.5h1.8h4.5
+c0.1-0.3,0.2-0.6,0.2-0.9C60.4,37.6,59.3,36.5,58,36.5z"/>
+</g>
+</svg>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-5 col-md-offset-1'>
+<div class='animation-wrapper wrapper-cloudcity2'>
+<svg enable-background="new 0 0 280 150" viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id=a><stop offset=0 stop-color="#1d083f"/><stop offset=".3198" stop-color="#331c67"/><stop offset=".7758" stop-color="#51379b"/><stop offset=".9995" stop-color="#5c41af"/></linearGradient><linearGradient id=b gradientUnits=userSpaceOnUse x1="85.0935" x2="85.0935" xlink:href="#a" y1="76.0089" y2="26.9061"/><linearGradient id=c gradientUnits=userSpaceOnUse x1="137.9585" x2="137.9585" xlink:href="#a" y1="107.3127" y2="44.7051"/><linearGradient id=d gradientUnits=userSpaceOnUse x1="172.9917" x2="172.9917" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=e gradientUnits=userSpaceOnUse x1="173.3584" x2="173.3584" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=f gradientUnits=userSpaceOnUse x1="170.7789" x2="170.7789" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=g gradientUnits=userSpaceOnUse x1="166.6966" x2="166.6966" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=h gradientUnits=userSpaceOnUse x1="178.9476" x2="178.9476" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=i gradientUnits=userSpaceOnUse x1="174.6108" x2="174.6108" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=j gradientUnits=userSpaceOnUse x1="168.998" x2="168.998" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=k gradientUnits=userSpaceOnUse x1="174.3793" x2="174.3793" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=l gradientUnits=userSpaceOnUse x1="169.0878" x2="169.0878" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=m gradientUnits=userSpaceOnUse x1="225.772" x2="225.772" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=n gradientUnits=userSpaceOnUse x1="230.72" x2="230.72" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=o gradientUnits=userSpaceOnUse x1="235.3994" x2="235.3994" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=p gradientUnits=userSpaceOnUse x1="224.0496" x2="224.0496" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=q gradientUnits=userSpaceOnUse x1="227.8119" x2="227.8119" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=r gradientUnits=userSpaceOnUse x1="231.1377" x2="231.1377" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=s gradientUnits=userSpaceOnUse x1="234.7651" x2="234.7651" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=t gradientUnits=userSpaceOnUse x1="225.1687" x2="225.1687" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=u gradientUnits=userSpaceOnUse x1="229.3497" x2="229.3497" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=v gradientUnits=userSpaceOnUse x1="232.2849" x2="232.2849" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=w gradientUnits=userSpaceOnUse x1="234.888" x2="234.888" xlink:href="#a" y1="83.5529" y2="19.0037"/><linearGradient id=x gradientUnits=userSpaceOnUse x1="205.9867" x2="205.9867" xlink:href="#a" y1="114.6025" y2="64.0693"/><linearGradient id=y gradientUnits=userSpaceOnUse x1="118.7507" x2="118.31" xlink:href="#a" y1="145.1036" y2="83.8421"/><path id=cc2-cloud-top-left d="m159.3 67c-.6 0-1.2.1-1.8.2-1.2-2.2-4.6-4.1-9.3-5.3-.9-2.6-4.7-4.6-9.3-4.6-3.8 0-7 1.3-8.6 3.2-1.9.2-3.8.4-5.5.8-.8-4.6-4.8-8.1-9.7-8.1-1.7 0-3.3.4-4.7 1.2 1.1-1.7 1.7-3.7 1.7-5.9 0-6.2-5-11.2-11.2-11.2-2.6 0-5 .9-6.9 2.3-.2-7.1-6.1-12.8-13.2-12.8-7.3 0-13.2 5.9-13.3 13.2-1-.3-2.1-.5-3.2-.5-5.6 0-10.2 4.5-10.2 10.2 0 1.7.4 3.3 1.2 4.7-1.4-.8-3-1.2-4.7-1.2-5.2 0-9.4 4-9.8 9.1-3-1-6.4-1.6-10.1-1.8-1.5-1.9-4.6-3.2-8.1-3.2-5 0-9.1 2.6-9.1 5.7v.4c-5.5 2.8-9.2 6.8-9.2 11.3 0 .5 0 .9.1 1.4h98.4 19.6 25.8 4.9 12.2c.3-.7.5-1.6.5-2.4 0-3.7-2.9-6.7-6.5-6.7z" fill="url(#b)"/><path id=cc2-cloud-mid-left d="m218.7 79.9c0-3.6-2.9-6.6-6.6-6.6-.6 0-1.2.1-1.8.2-1.2-2.2-4.6-4.1-9.3-5.3-.9-2.6-4.7-4.6-9.3-4.6-3.8 0-7 1.3-8.6 3.2-1.9.2-3.8.4-5.5.8-.8-4.6-4.8-8.1-9.7-8.1-1.8 0-3.4.5-4.8 1.3-1.4-6.4-7.5-11.8-15.8-14.4 0 0-3.9-1.8-11.4-1.8-8.5 0-11.8 1.8-11.8 1.8-8.3 2.6-14.4 8-15.8 14.4-1.4-.8-3.1-1.3-4.8-1.3-5.2 0-9.4 4-9.8 9.1-3-1-6.4-1.6-10.1-1.8-1.5-1.9-4.6-3.2-8.1-3.2-5 0-9.1 2.6-9.1 5.7v.4c-5.7 2.6-9.3 6.6-9.3 11.1v.2.2c0 3.6 1.1 17.5 26.9 16.2 3.8-.2 7-1.3 8.6-3.2 1.9-.2 3.8-.4 5.5-.8.8 4.6 4.8 8.1 9.7 8.1 1.8 0 3.4-.5 4.8-1.3 1.4 6.4 10.2 7.8 16.4 6.5 8.6-1.7 10.1-8.4 10.1-8.4 1.4.8 57.6-.9 61.1-.9 5 0 9.1-2.6 9.1-5.7 0-.1 0-.3 0-.4 5.7-2.6 9.3-6.6 9.3-11.1 0-.1 0-.2 0-.2.1 0 .1-.1.1-.1z" fill="url(#c)" opacity=".8"/><path d="m157.3 29.8 5.9 2.1h.1.2c.1 0 .2-.1.2-.3l.1-.3h.1.1c.1 0 .1-.1.2-.2l.1-.2c.1-.4.3-.7.6-.8.2-.1.5-.1.9 0s.7-.3.8-.5.1-.4.1-.5-.1-.2-.3-.3c0 0-.9-.3-1.5-.5l.1-.2c.1-.3 0-.5-.3-.6l-.5-.2c-.1 0-.3 0-.4 0-.1.1-.2.2-.2.3-.2-.1-.4-.2-.6-.3-1.6-.6-3.4-.3-4.5.6-.5.1-.9.3-1.1.8v.1.1.1l-.1.3c-.3.1-.2.3 0 .5z" fill="#db3b21"/><path d="m245.3 91.7c-.3 0-.6 0-.8.1v-1.1c.7 0 .8-.1.8-.2 0 0 0-.1-.8-.2v-.2c.6 0 .6-.1.6-.2 0 0 0-.1-.6-.2v-.1c0-.1-.1-.2-.2-.2s-.2.1-.2.2v.1c-.6 0-.6.1-.6.2 0 0 0 .1.6.2v.2c-.7 0-.8.1-.8.2 0 0 0 .1.8.2v1.2c-.4.1-.8.2-1.2.4v-16.3c0-.9-.8-1.7-1.7-1.7s-1.7.8-1.7 1.7v14.8c-.4-.4-.8-.7-1.2-1 0 0-.1 0-.1-.1-.2-.1-.3-.2-.5-.3-.1 0-.1-.1-.2-.1h-.1c-.5-.3-1.1-.5-1.7-.6v-1.7c1.1 0 1.1-.2 1.1-.2 0-.1 0-.2-1.1-.2v-.2c.8 0 .8-.2.8-.2s0-.2-.8-.2v-.1c0-.1-.1-.3-.2-.3s-.3.1-.3.3v.1c-.2 0-.4 0-.5 0 .5-6-2.2-12.1-6.2-16-1.3-1.3-2.9-2.5-4.5-3.5-1.1-.7-2.3-1.3-3.5-1.8v-2.7c.6-1.4.9-2.7.4-3-.1-.1-.2-.1-.4 0v-1.8c.6-1.4.9-2.7.4-3-.1-.1-.2-.1-.4 0v-1.9h6.7c.1 0 .1 0 .1-.1v-1.5c0-.1 0-.1-.1-.1h-1.5c-.6-1.8-3.2-3.1-6.3-3.2v-6.8c0-.1-.1-.3-.3-.3-.1 0-.3.1-.3.3v6.8c-.2 0-.4 0-.5 0v-4.6c0-.1-.1-.3-.3-.3s-.3.1-.3.3v4.6c-2.6.3-4.7 1.5-5.3 3.1h-1.5c-.1 0-.1 0-.1.1v1.5c0 .1 0 .1.1.1h6.7v5.1c-.8 1.5-1.3 3.2-.7 3.6.1 0 .2.1.2.1.1 0 .3-.1.5-.1v1.3c-.2.3-.3.6-.4.9-3.9-1.5-8-2.5-12-3.5-.8-.2-1.6-.4-2.4-.6l-.4-.1c-.3-.1-.6-.2-.9-.3-.1-4.2-.2-8-.4-10.8 0-.3 0-.5 0-.8 1.5-3.3 5.4-6.3 8.5-8.7 2.4-1.8 4.2-3.3 4.2-4.3 0-.6-.4-1.2-1.1-1.8.7-.7 1.1-1.2 1.1-1.7 0-.9-.7-1.7-2-2.3v-2.6c0-.4-.3-.7-.7-.7-.2 0-.4.1-.5.2v-.4c0-.4-.3-.7-.7-.7-.2 0-.4.1-.5.2v-1.6c0-.4-.3-.7-.7-.7s-.7.3-.7.7v4.3c-1.6-.4-3.4-.6-5.4-.7.5-1.3.9-2.5 1.2-3.7.7-3 .5-5-.5-5.6-1.8-1-5.7 2.1-9.6 7.8-.1-3.5-.1-7.6-.3-11.2-.3-10.5-.6-10.5-.8-10.5s-.5 0-.8 10.5c-.1 4.5-.3 9.8-.3 13.8-.5.2-1 .3-1.4.5v-3.1c0-.4-.3-.7-.7-.7s-.7.3-.7.7v3.9c-.8.6-1.3 1.2-1.3 1.9 0 .5.4 1 1.1 1.7-.7.5-1.1 1.1-1.1 1.8 0 .4.3.9.8 1.4-1.6 4.4-1.7 7.5-.3 8.3.2.1.5.2.8.2 1.3 0 3.3-1.4 5.4-3.6 1 .8 2.1 1.7 3 2.7 0 0 0 .1.1.1 1.2 1.3 2.3 2.6 2.9 4v.7c-.1 1.1-.1 2.3-.2 3.6 0 0 0 0-.1 0l-.1.1c-.7 1.1-1.3 2.2-1.5 3.5-.2 1.6.4 2.7 1.4 3.4v26.7c-.4.1-.4.2-.4.2s0 .1.4.2v.3c-.7 0-.7.2-.7.2 0 .1 0 .2.7.2v1.7c-.3 0-.6 0-.8 0-2.4 0-4.5 1-6 2.6v-11.6c2.3-5.9 3.8-11.5 2-13 0 0 0 0-.1 0s0-.1-.1-.1h-.1c-.2-.1-.3-.1-.5-.1-3.4-.8-7 .1-10.5 2v-13.4c.1 0 .1 0 .2-.1.6-.2 1.2-.6 1.7-1 .9-.8 1.4-2 1.4-3.3 0-2.1-1.4-3.8-3.3-4.4v-3.6c0-.7-.6-1.3-1.3-1.3s-1.3.6-1.3 1.3v3.6c-1.9.5-3.3 2.3-3.3 4.4 0 1 .3 2 .9 2.8s1.4 1.3 2.3 1.6v14.8c-3 2-5.8 4.6-8.4 7.3v-4-1.4-2.1-1.4-3.2h.6c1.6 0 3-1.3 3-3s-1.3-3-3-3h-.6v-9.7c0-2.5-2-4.4-4.4-4.4-2.5 0-4.4 2-4.4 4.4v.5h-.5c-1.6 0-3 1.3-3 3s1.3 3 3 3h.5v19.6c-1.1-3.8-2.3-6-3.4-6.7-.4-.2-.8-.3-1.2-.1-2.2.8-3.9 6.4-5.2 12.5-1-.5-2-1-2.9-1.5-1.7-.9-3.2-1.6-4.2-2.2-1.1-.7-2.3-1.3-3.4-2-1.3-.8-2.7-1.5-4-2.3-.1-1.9-.2-3.9-.3-5.7 2.3-1.5 4-2.7 4.8-3.7.9-1.2 1.1-2.3.7-3.2-1-2.3-5.6-2.7-5.8-2.7-.1-2.2-.1-4.2-.1-6.1.3-.4.6-.9.9-1.4 1.3-2.2 2.1-4.8 1.2-5.3-.5-.3-1.3.2-2.2 1.3 0-2 0-3.5 0-4.2.1-.1.3-.1.4-.2l1-1c.2-.2.3-.5.3-.7v-.5c2.3 0 3.9-.1 3.9-.2s-1.6-.2-3.9-.2v-1.4c0-.7.2-1.5.6-2.3 3 0 5.1-.1 5.1-.2s-2-.2-4.8-.2c.5-.7 1.1-1.3 1.8-1.3h2.9c1.1 0 2-.9 2-2v-.6c0-.3-.3-.6-.6-.6h-.3v-1.1c0-.3-.2-.5-.5-.5h-1.4v-2.6c0-.3-.2-.5-.5-.5h-.5c-.3 0-.5.2-.5.5v4.2h-.2v-1c0-.3-.2-.5-.5-.5h-.8c-.3 0-.5.2-.5.5v1h-1.5c-1.4-1.6-2-7.4-2.3-10.7.2-.2.5-.4.7-.5.1.3.2.7.4 1.1v.1c0 .1.1.3.3.3s.3-.1.3-.3c0-.1-.1-.3-.3-.3-.2-.4-.3-.7-.4-1.1.5-.2 1-.3 1.3-.3s0 .1.1.1c.1.1.3.1.4 0s.1-.3 0-.4-.3-.1-.4 0v.1c-.5 0-1-.2-1.3-.4.1-.8.7-1.4.9-1.7h.1c.1 0 .3-.1.3-.3 0-.1-.1-.3-.3-.3s-.3.1-.3.3v.1c-.6.5-1.2.8-1.9.8 0 0 0-.1-.1-.1-.3-.6-.4-1.1-.5-1.4.1-.1.1-.3 0-.4s-.3-.1-.4 0-.1.3 0 .4c0 0 0 0 .1.1 0 .5 0 1-.1 1.4-.1 0-.1 0-.2 0-.6-.2-1.1-.5-1.3-.7 0-.1-.1-.3-.3-.3s-.3.1-.3.3c0 .1.1.3.3.3h.1c.7.6 1.1 1.2 1.3 1.6-.1.2-.2.3-.3.4-.1 0-.2 0-.3.1s-.1.3 0 .4.3.1.4 0 .1-.2.1-.2c.1-.1.2-.2.3-.3.1.3.2.6.2.7-.1 0-.2.1-.2.2s.1.3.3.3c.1 0 .3-.1.3-.3 0-.1-.1-.2-.1-.2 0-.2 0-.5-.2-1 .1-.2.2-.5.3-.9.1 0 .3 0 .4.1 0 .3 0 1.3-.2 2.7-.2.3-.3.6-.4.9 0 0-.1 0-.1.1-.1.1-.1.3 0 .4s.3.1.4 0c0 0 0-.1.1-.1-.3 3.3-.9 7.7-2.2 9.1h-2.2c-.2-.9-.6-1.5-1.2-1.5-.2 0-.5.1-.7.3-.2-.5-.6-.8-1-.8-.7 0-1.2.9-1.3 2.1-.3 0-.5.3-.5.6v.6c0 1.1.9 2 2 2h2.9c.7 0 1.3.5 1.8 1.3-2.8 0-4.8.1-4.8.2s2.1.2 5.1.2c.4.7.6 1.6.6 2.3v1.4c-2.3 0-3.9.1-3.9.2s1.6.2 3.9.2v.3c0 .3.1.5.3.7l1 1c.1.1.2.2.4.2v5.6c-.2.3-.4.6-.6 1-.7 1.2-1.2 2.4-1.4 3.3-.3 1-.2 1.7.2 1.9.1.1.2.1.3.1.4 0 .9-.3 1.4-.8-.1 3-.2 6.3-.3 9.9-.7.1-4.7.6-5.7 2.7-.4.9-.2 2 .7 3.2.2.3.6.7 1 1.1-1.2.7-2.4 1.5-3.7 2.2-1 .6-2.3 1.4-3.5 2.2v-4.5c0-1.5-1.2-2.6-2.6-2.6-1.5 0-2.6 1.2-2.6 2.6v7.6c-2.6 1.6-4.9 3.1-6.7 4.5v-17.7c0-2.3-1.8-4.1-4-4.3v-7.6-6.7c.4-.1.7-.5.7-1s-.3-.8-.7-1v-6.6c.4-.1.7-.5.7-1 0-.1 0-.2 0-.2.2-.4.3-.8.5-1.2.3-.9.7-2 1.1-2.1 1.8-.6 3.3-1.9 4.2-3.5h.1c2.5-.2 6.8-.7 6.8-1.6 0-.3-.4-.6-1.2-.8v-2.1c0-.4-.3-.7-.7-.7-.2 0-.4.1-.5.2v-.4c0-.4-.3-.7-.7-.7-.2 0-.4.1-.5.2v-1.6c0-.4-.3-.7-.7-.7s-.7.3-.7.7v4.4c-.3 0-.5-.1-.8-.1 0-.3 0-.5 0-.8 0-4.2-3.3-7.6-7.5-7.8v-9.4c0-.2-.1-.3-.3-.3s-.7.1-.7.3v9.6c-.7 0-1.3.1-2 .3v-5.1c0-.2-.1-.3-.3-.3s-.3.1-.3.3v5.3c-2.9 1.2-4.9 4-4.9 7.2v.8c-3.4.3-5.9.8-5.9 1.6 0 1 4.3 1.4 6.8 1.6h.1.1c.9 1.6 2.5 2.9 4.4 3.5.3.1.7 1.2 1 2.1.1.4.3.8.4 1.1 0 .1-.1.2-.1.3 0 .5.3.8.7 1v6.6c-.4.1-.7.5-.7 1s.3.8.7 1v6.7 7.6c-2.2.2-4 2-4 4.3v34.5c0 .1 0 .1.1.1h2.4 1.2 1.2 1.2 2.4c.1 0 .1 0 .1-.1v-6.8c.8.7 1.7 1.4 2.8 2.1-.1.7-.1 1.4-.1 2.2-.2-1.5-.4-1.6-.5-1.6 0 0-.1 0-.2.1-.4.4-.9 2.4-1.1 4v.1h.1.5.8.3.2.5 1.1.6.1s0 0 0-.1c0-1.2-.1-2.3-.1-3.4.6.4 1.2.7 1.8 1v2.3c0 .1 0 .1.1.1h4.8.1 6.8c.1 0 .1 0 .1-.1 0 0 0-.1-.1-.1 0 0-.6-.3-1.5-.7v-11.7c0-1.5-1.2-2.6-2.6-2.6-1.1 0-2 .7-2.4 1.6v-4.7-.8-1.3-.8-3c1.3-.7 2.5-1.4 3.8-2.1 1.4-.8 2.8-1.5 4.1-2.3.8.6 1.8 1.3 2.9 2-.2 3.8-.5 7.6-.9 11.3-.2 0-.5 0-.7 0-.1 0-.2 0-.3 0-.1 0-.2 0-.3.1s-.1 0-.1.1c-.5.5.1 2.1 1.1 4-.5 3.9-1.1 7.7-1.8 10.9v.1h.1 5 4 7.6 1.4.4 2.3 3.1.3 6.5 1.7 2.7 4.3.3 5.1 11.2 3.5 23.9 9.8c.1 0 .2 0 .2-.1h7 7.7.1 4.2 4.6.1c.1-.5.2-1 .2-1.4-.4-2.8-2.7-5.1-5.5-5.1zm-24.8-37.4h.3c.3.2.2 1.1-.3 2.3zm0 4.9h.3c.3.2.2 1.1-.3 2.3zm-84-41.8c-.2-.3-.4-.6-.7-1 .3.1.6.2.9.3-.1.3-.2.6-.2.7zm.4-.8c0-.2.1-.4.1-.7.1.2.2.5.3.7-.1.1-.3.1-.4 0zm.2 4.1c0-.1 0-.1-.1-.1 0-.1.1-.3.1-.4zm-16.8 71.4c-.7-.4-1.3-.8-2-1.2-.2-4.5-.4-6-.5-6.5 0-.1 0-.2-.1-.2h-.1c-.1.1-.4.7-.8 4.4 0 .3-.1.7-.1 1.1-1.9-1.4-3.1-2.7-3.1-3.8 0-2.1 3.1-5.2 6.7-8zm16.1-21.5c-.7-.4-1.3-.9-1.9-1.3.7-.4 1.4-.8 2-1.2 0 .8 0 1.6-.1 2.5zm.2-3.6c-.9.6-1.8 1.2-2.7 1.7-.1 0-.1-.1-.2-.1-1-.8-2.1-2-1.8-3.2s1.9-2.1 4.9-2.8c0 1.4-.1 2.9-.2 4.4zm.5-14.9s-.1.1-.1.1c-.7.6-1.2.9-1.5.7s-.3-.8-.1-1.7c.2-1 .7-2.1 1.4-3.3.1-.2.3-.4.4-.7 0 1.6 0 3.2-.1 4.9zm2.1-33.8c-.2 0-.4.1-.6.2 0-.1 0-.3 0-.4.2 0 .4.1.6.2zm-.3-1.8c-.2.3-.4.7-.5 1.2-.3-.2-.6-.5-.8-.8.5 0 .9-.1 1.3-.4zm-1.4.6c.2.3.5.6.9.8v.6c-.2.1-.5.3-.7.5-.1-.9-.1-1.6-.2-1.9zm.8 28.7c.9-1.1 1.7-1.6 2.1-1.4.6.3.2 2.4-1.3 5-.2.4-.5.8-.8 1.2.1-1.8 0-3.4 0-4.8zm.3 11.4c3 .6 4.7 1.6 5 2.8s-.8 2.4-1.8 3.2c-.9.7-1.9 1.5-2.9 2.2-.2-2.8-.3-5.6-.3-8.2zm13.3 34.5c-3-3-7.1-6.2-11.7-7.7-.4-3.4-.6-6.9-.9-10.3 2.1 1.2 4.4 2.5 6.8 3.8 2.5 1.4 5 2.8 7.4 4.2-.6 3.5-1.2 7.1-1.6 10zm47.8-34.3c-.3-.3-.5-.6-.7-1-.5-1.2-.2-2.8.9-4.7-.1 1.8-.2 3.7-.2 5.7zm-11.7-13.9c-1.3-.7-1.1-3.7.3-7.9.8.8 1.9 1.7 3.2 2.7.7.6 1.5 1.2 2.3 1.8-2.4 2.7-4.6 4.1-5.8 3.4zm13-19.4c-.1-.1-.2-.3-.3-.4 0 0 0 0-.1-.1s-.3-.2-.4-.3h-.1c-.1-.1-.2-.1-.2-.2-.2-.1-.4-.2-.6-.2v-.6c.4 0 .4-.1.4-.2s0-.1-.2-.1c.1 0 .1-.1.1-.1 0-.1 0-.1-.3-.2 0-.1-.1-.1-.2-.1s-.1.1-.2.1c-.3 0-.3.1-.3.2s0 .1.1.1c-.2 0-.2.1-.2.1 0 .1 0 .1.4.2v.5c-.1 0-.3 0-.4 0-1.7 0-3 1.4-3 3 0 .2 0 .5.1.7-.6.1-1.2.2-1.8.3 0-.5 0-1.1 0-1.7 3.8-5.6 7.7-8.9 9.5-7.9 1 .6 1.1 2.5.4 5.3-.3 1.1-.7 2.4-1.2 3.7-.3 0-.6 0-.9 0 0-.1 0-.2 0-.4s0-.4-.1-.5v-.1c0-.2-.1-.3-.1-.5-.2-.3-.3-.4-.4-.6zm16.8 39.1c-.1 0-.2-.1-.3-.1.1-.2.2-.4.3-.6zm0-2.7c-.3.2-.5.2-.6.2-.3-.2-.2-1.4.6-2.9zm17.4 28c-.3-.1-.7-.1-1-.1.1-.5.2-1 .3-1.6h.7zm0-2.1c-.3 0-.5 0-.6 0 0-.1 0-.2 0-.3.1 0 .3 0 .6.1z" fill="url(#d)"/><path d="m236.4 36.3c0 .1.1.1.2.1h.1l.7-.3c.2.1.3.3.6.3.1 0 .2 0 .3.1h.3c.2 0 .4 0 .6-.1.1.1.1.5 0 1 0 .1 0 .2.1.2h.1.1l1.4-.9c.3-.2.5-.5.5-.8l.1-.8c.5-.3 1.1-.6 1.6-.9.6-.4 1.2-.7 1.8-1.1l1.1-.6c1.5-.9 2.9-1.8 3.5-3.4 0-.1.1-.2.1-.3l.2-.3c.1-.1 0-.3 0-.4-.1-.1-.2-.2-.3-.2h-.3c-.1-.1-.3-.1-.6-.1-1.7-.2-3.1.6-4.6 1.6-1 .6-1.9 1.3-2.9 1.9-.5.3-1 .6-1.4 1l-.7-.3c-.3-.1-.7-.1-1 .1l-1.4.9c-.1 0-.1.1-.1.2s.1.2.2.2c.5.1.9.3.9.4-.1.1-.2.2-.3.3-.2.4-.3.8-.3 1.1 0 .1.1.2.1.3l-.6.4c-.2.2-.2.3-.1.4z" fill="#db3b21"/><path d="m172.6 34.9 1.4.5s.1 0 .1-.1 0-.1-.1-.1l-1.4-.5c-.1 0-.1 0-.1.1.1 0 .1.1.1.1z" fill="url(#e)"/><path d="m169.3 33.6c0 .1 0 .1.1.1l2.7.9s.1 0 .1-.1 0-.1-.1-.1l-2.7-.9c0 .1 0 .1-.1.1z" fill="url(#f)"/><path d="m165.4 32.1c-.1 0-.1 0-.1.1s0 .1.1.1l2.6.9s.1 0 .1-.1 0-.1-.1-.1z" fill="url(#g)"/><path d="m177.7 35.7 2.4.9s.1 0 .1-.1 0-.1-.1-.1l-2.4-.9c-.1 0-.1 0-.1.1 0 0 0 .1.1.1z" fill="url(#h)"/><path d="m173.9 34.1c-.1 0-.1 0-.1.1s0 .1.1.1l1.5.5s.1 0 .1-.1 0-.1-.1-.1z" fill="url(#i)"/><path d="m166.2 31.5c0 .1 0 .1.1.1l5.3 1.9s.1 0 .1-.1 0-.1-.1-.1l-5.3-1.9s0 .1-.1.1z" fill="url(#j)"/><path d="m173 32.8 2.7.9s.1 0 .1-.1 0-.1-.1-.1l-2.7-.9c-.1 0-.1 0-.1.1 0 0 0 .1.1.1z" fill="url(#k)"/><path d="m167.1 30.7 4 1.4s.1 0 .1-.1 0-.1-.1-.1l-4-1.4c-.1 0-.1 0-.1.1 0 0 0 .1.1.1z" fill="url(#l)"/><path d="m226.7 43.6-1.9 1.1c-.1 0-.1.1 0 .1 0 0 .1.1.1.1h.1l1.9-1.1c.1 0 .1-.1 0-.1-.1-.2-.2-.2-.2-.1z" fill="url(#m)"/><path d="m232.3 40.4-3.3 1.9c-.1 0-.1.1 0 .1 0 0 .1.1.1.1h.1l3.3-1.9c.1 0 .1-.1 0-.1s-.1-.2-.2-.1z" fill="url(#n)"/><path d="m237.3 37.5-4 2.3c-.1 0-.1.1 0 .1 0 0 .1.1.1.1h.1l4-2.3c.1 0 .1-.1 0-.1 0-.1-.1-.1-.2-.1z" fill="url(#o)"/><path d="m222.7 44c.1 0 .1 0 0 0l2.7-1.5c.1 0 .1-.1 0-.1 0-.1-.1-.1-.1 0l-2.6 1.5c-.1-.1-.1 0 0 .1z" fill="url(#p)"/><path d="m229 40.4c0-.1-.1-.1-.1 0l-2.1 1.2c-.1 0-.1.1 0 .1 0 0 .1.1.1.1h.1l2.1-1.2c-.1-.1-.1-.2-.1-.2z" fill="url(#q)"/><path d="m232.7 38.2c0-.1-.1-.1-.1 0l-3 1.7c-.1 0-.1.1 0 .1 0 0 .1.1.1.1h.1l3-1.7c0-.1 0-.1-.1-.2z" fill="url(#r)"/><path d="m234.2 37.5s.1 0 0 0l1.1-.6c.1 0 .1-.1 0-.1 0-.1-.1-.1-.1 0l-1.1.6c0-.1 0 0 .1.1-.1 0 0 0 0 0z" fill="url(#s)"/><path d="m223.5 41.5c.1 0 .1 0 0 0l3.3-1.9c.1 0 .1-.1 0-.1 0-.1-.1-.1-.1 0l-3.3 1.8s0 .1.1.2z" fill="url(#t)"/><path d="m228.6 38.6 1.5-.9c.1 0 .1-.1 0-.1 0-.1-.1-.1-.1 0l-1.5.8s0 .1.1.2c-.1 0 0 0 0 0z" fill="url(#u)"/><path d="m230.7 37.5 3.3-1.9c.1 0 .1-.1 0-.1 0-.1-.1-.1-.1 0l-3.3 1.8c-.1 0-.1 0 .1.2-.1-.1-.1 0 0 0z" fill="url(#v)"/><path d="m234.5 35.3.9-.5c.1 0 .1-.1 0-.1s-.1-.1-.1 0l-.8.5c-.1-.1-.2 0 0 .1-.1 0-.1 0 0 0z" fill="url(#w)"/><path id=cc2-cloud-mid-right d="m258.7 90.5c-1.2 0-2.4.1-3.6.3-1.2-5.2-5.9-9-11.5-9-2.1 0-4 .5-5.7 1.5-1.4-10.9-9.8-19.2-19.8-19.2s-18.2 8.2-19.7 19c-3.8-1.7-8.8-2.7-14.1-2.7-11.9 0-21.6 4.9-22.3 11.1-14 5.5-23.9 13.7-27 23.1h140c1.1-2.2 1.7-4.6 1.7-7.2.2-9.3-8-16.9-18-16.9z" fill="url(#x)" opacity=".8"/><path id=cc2-cloud-bottom-left d="m186.1 111.6c-.7 0-1.4 0-2.1.1-1.2-2.4-4.8-4.1-9.1-4.1-3.8 0-7 1.3-8.6 3.2-1.9.2-3.8.4-5.5.8-.8-4.6-4.8-8.1-9.7-8.1-1.8 0-3.4.5-4.8 1.3-.4-1.7-1.1-3.3-2-4.8 1.3-2 2.1-4.4 2.1-6.9 0-7.8-7.1-14.1-15.9-14.1-6.8 0-12.6 3.8-14.9 9.2-1.9-.5-3.9-.8-6-.8-10.3 0-18.7 6.7-18.7 15 0 .8.1 1.5.2 2.2-1.3-.7-2.8-1.1-4.4-1.1-5.2 0-9.4 4-9.8 9.1-3-1-6.4-1.6-10.1-1.8-1.5-1.9-4.6-3.2-8.1-3.2-5 0-9.1 2.6-9.1 5.7v.3c-.5 0-.9-.1-1.4-.1-9.4 0-16.9 7.6-16.9 16.9 0 9.4 7.6 16.9 16.9 16.9 7.3 0 13.4-4.6 15.9-11 1.6 1.1 3.5 1.8 5.7 1.8 2.5 0 4.8-.9 6.5-2.5 1.5 5.9 6.8 10.3 13.2 10.3 7.2 0 13.1-5.6 13.6-12.8 4.2 1.9 10.1 3.1 16.8 3.1 8.8 0 16.3-2.1 20.2-5.1 1.6 5.2 8.2 9.2 16.1 9.2 6.6 0 12.3-2.7 15-6.7 3.7 2.9 9.1 4.7 15.1 4.7 11 0 19.9-6 19.9-13.4-.2-7.3-9.1-13.3-20.1-13.3z" fill="url(#y)" opacity=".8"/><path d="m109.3 25.3c-6.7 0-13.9.7-13.9 1.9 0 1 4.3 1.5 6.9 1.6h.1c1.6-.7 4.3-1.5 6.9-1.5 2.8 0 5.5.9 6.9 1.5 2.6-.2 6.9-.7 6.9-1.6.1-1.3-7.1-1.9-13.8-1.9z" fill="#7dcafa"/></svg>
+</div>
+</div>
+<div class=col-md-5>
+<p>It's not enough to just adopt cloud computing. Organizations need cohesion for their cloud-first vision, and a multi-cloud approach allows teams the flexibility to deploy anywhere with workflow portability. DevOps applications that support multi-cloud will help organizations prepare for the multi-cloud future.</p>
+</div>
+</div>
+</section>
+<section class='learn container'>
+<div class='row u-margin-top-xl'>
+<div class='col-md-10 col-md-offset-1'>
+<h2>In our ebook, <em>Guide to the cloud: How to navigate the multi-cloud future</em>, you’ll learn:</h2>
+<ul>
+<li>Why cloud deployment and service models benefit from microservices</li>
+<li>Common cloud challenges and the benefits of cloud-agnostic DevOps</li>
+<li>How a multi-cloud strategy enables growth and flexibility</li>
+</ul>
+</div>
+</div>
+</section>
+<section class='tomorrow container'>
+<div class='row u-margin-top-xs'>
+<div class='col-md-10 col-md-offset-1'>
+<h2>The cloud of tomorrow</h2>
+<ul>
+<li>Organizations of the future are embracing multi-cloud, supported by solutions that are truly cloud-agnostic and offer all of the flexibility and visibility they need to move seamlessly between services.</li>
+<li>IT infrastructure is elastic and scales up or down automatically; teams can build and test applications for web, mobile and API without worrying about their architecture.</li>
+<li>Data is secure, accessible across any network, and optimized for machine learning and artificial intelligence.</li>
+<li>Teams can deploy to any environment in any cloud with a single deployment workflow.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class=pdf id=pdf>
+<h1>The future is multi-cloud</h1>
+<h2>Download our ebook for insights on how we’re helping teams harness the power of the cloud.</h2>
+<div class=form-to-resource-outer-wrapper>
+<div class=form-to-resource-content>
+<div class=form-to-resource-content-section>
+<div class=form-container>
+<h3 class=margin-top0></h3>
+<div class=form>
+<script src='//page.gitlab.com/js/forms2/js/forms2.min.js'></script>
+<form id=mktoForm_1002></form>
+<script>
+var gatedFormAfterSuccessDo = function()
+{
+  if($('.f2r-cta-subtitle').length){
+    $('.f2r-cta-subtitle').hide();
+  };
+  $('.confirmform').attr('style', 'visibility: visible');
+  $('.confirmform').attr('style', 'height: initial');
+  if ($('.webcast-video-container').length)
+  {
+    $('.webcast-video-container').css('display', 'block');
+  }
+  $('html, body').animate({scrollTop: parseInt($('#confirmform').offset().top-100)}, 500);
+  if(typeof callbackMktoFormOnSuccess !== "undefined")
+  {
+    callbackMktoFormOnSuccess();
+  };
+};
+</script>
+<script>
+  //<![CDATA[
+    var consoleLogsEnable = new Boolean(false);
+    var formNumber = 1002;
+    MktoForms2.setOptions(
+    {
+      formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+    });
+    MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1002, function(form)
+    {
+      var destinationUrlId = $('#destination-url');
+      const oldDestinationUrl = destinationUrlId.attr('href');
+      var emailInput = $('.mktoForm .mktoEmailField');
+      if(typeof(Demandbase) === "object")
+      {
+        Demandbase.utils.loadFormModule();
+      };
+      emailInput.change(function()
+      {
+        var emailValue = emailInput.val();
+        if(oldDestinationUrl !== undefined)
+        {
+          var newDestinationUrl = oldDestinationUrl.replace('lb_email=', 'lb_email='+emailValue);
+          destinationUrlId.attr('href', newDestinationUrl);
+        }
+      });
+      //
+      var classnamesFromForValues;
+      var mktoFormLabels = document.getElementsByClassName('mktoLabel');
+      for ( var count = 0; count < mktoFormLabels.length; count++ ) 
+      {
+        if (mktoFormLabels[count].htmlFor != '') 
+        {
+          var labelValue = mktoFormLabels[count].htmlFor.toLowerCase();
+          mktoFormLabels[count].closest('.mktoFormRow').classList.add(labelValue);
+        };
+      };
+      //
+      form.onSuccess(function()
+      {
+        dataLayer.push(
+        {
+          'event' : 'resources', 
+          'mktoFormId' : form.getId(),
+          'eventCallback' : function()
+          {
+            if(consoleLogsEnable == true)
+            {
+              console.log(form.getId());
+            };
+            form.getFormElem().hide();
+            gatedFormAfterSuccessDo();
+          }, 'eventTimeout' : 3000
+        });
+        return false;
+      });
+    });
+  //]]>
+</script>
+<div class=confirmform id=confirmform style='visibility:hidden;height:0;'>
+<div class=centered-form-info>
+<h3>
+<a class=destination-url href='https://learn.gitlab.com/cloud-native/guide-to-the-cloud?lb_email=' id=destination-url target=_blank>Click here to view the ebook</a>
+</h3>
+<p>You will also receive a link to the report to your inbox shortly.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div class=galaxy></div>
+<footer class=footer>
+<a href='/'>
+<svg width=65 height=60 viewBox="0 0 210 194" class=footer-logo>
+<path d="M105.0614,193.655 L105.0614,193.655 L143.7014,74.734 L66.4214,74.734 L105.0614,193.655 L105.0614,193.655 Z" fill="#E24329" class="logo-svg-shape logo-dark-orange-shape"/>
+<path d="M105.0614,193.6548 L66.4214,74.7338 L12.2684,74.7338 L105.0614,193.6548 Z" fill="#FC6D26" class="logo-svg-shape logo-orange-shape"/>
+<path d="M12.2685,74.7341 L12.2685,74.7341 L0.5265,110.8731 C-0.5445,114.1691 0.6285,117.7801 3.4325,119.8171 L105.0615,193.6551 L12.2685,74.7341 Z" fill="#FCA326" class="logo-svg-shape logo-light-orange-shape"/>
+<path d="M12.2685,74.7342 L66.4215,74.7342 L43.1485,3.1092 C41.9515,-0.5768 36.7375,-0.5758 35.5405,3.1092 L12.2685,74.7342 Z" fill="#E24329" class="logo-svg-shape logo-dark-orange-shape"/>
+<path d="M105.0614,193.6548 L143.7014,74.7338 L197.8544,74.7338 L105.0614,193.6548 Z" fill="#FC6D26" class="logo-svg-shape logo-orange-shape"/>
+<path d="M197.8544,74.7341 L197.8544,74.7341 L209.5964,110.8731 C210.6674,114.1691 209.4944,117.7801 206.6904,119.8171 L105.0614,193.6551 L197.8544,74.7341 Z" fill="#FCA326" class="logo-svg-shape logo-light-orange-shape"/>
+<path d="M197.8544,74.7342 L143.7014,74.7342 L166.9744,3.1092 C168.1714,-0.5768 173.3854,-0.5758 174.5824,3.1092 L197.8544,74.7342 Z" fill="#E24329" class="logo-svg-shape logo-dark-orange-shape"/>
+</svg>
+</a>
+<div class='animated container'>
+<ul class='text-center footer-social'>
+<li>
+<a href="https://twitter.com/gitlab"><i class='fab fa-twitter'></i>
+<span class=sr-only>Twitter</span>
+</a></li>
+<li>
+<a href="https://www.facebook.com/gitlab"><i class='fab fa-facebook'></i>
+<span class=sr-only>Facebook</span>
+</a></li>
+<li>
+<a href="https://www.youtube.com/channel/UCnMGQ8QHMAnVIsI3xJrihhg"><i class='fab fa-youtube'></i>
+<span class=sr-only>YouTube</span>
+</a></li>
+<li>
+<a href="https://www.linkedin.com/company/gitlab-com"><i class='fab fa-linkedin'></i>
+<span class=sr-only>LinkedIn</span>
+</a></li>
+</ul>
+</div>
+</footer>
+<span class=footer-after-outer-wrapper>
+<span class=footer-after-inner-wrapper>
+<span class=footer-after-0></span>
+<span class=footer-after-1></span>
+<span class=footer-after-2></span>
+<span class=footer-after-3></span>
+<span class=footer-after-4></span>
+<span class=footer-after-5></span>
+<span class=footer-after-6></span>
+<span class=footer-after-7></span>
+<span class=footer-after-8></span>
+<span class=footer-after-9></span>
+</span>
+</span>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/starry-bg.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/guide-to-the-cloud.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+</body>
+</html>
+<script defer=true src='/javascripts/cbextras.js'></script>

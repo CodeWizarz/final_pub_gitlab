@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Tactical Priorities - Compliance
+|
+GitLab
+</title>
+<meta content='Learn more from GitLab, The DevSecOps Platform.' name=description />
+<meta content='Learn more from GitLab, The DevSecOps Platform.' name='twitter:description'/>
+<meta content='Learn more from GitLab, The DevSecOps Platform.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Tactical Priorities - Compliance' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/govern/compliance/tactical-priorities.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/govern/compliance/tactical-priorities.html' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Tactical Priorities - Compliance' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/govern/compliance/tactical-priorities.html' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Tactical Priorities - Compliance
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/g.hickman'>
+<img
+src='/images/team/granthickman.png'
+class=codeowner-avatar-img
+alt='Grant Hickman'
+title='Grant Hickman'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/sam.white'>
+<img
+src='/images/team/samuelwhite.png'
+class=codeowner-avatar-img
+alt='Sam White'
+title='Sam White'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/govern/compliance/tactical-priorities.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/govern/">Product Stage Direction - Govern</a></li><li><a href="/direction/govern/compliance/">Group Direction - Compliance</a></li><li>Tactical Priorities - Compliance</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<p>Last edited: 2023-07-21</p>
+<p>This page captures our priorities at a finer-grained level than the <a href="/direction/govern/compliance/#where-were-headed">what's next</a> section does. It shows major topics and projects that we are working on and prioritizing. It is stack ranked, which means that items at the top of the list are higher priority than items lower on the list.</p>
+<p>This list highlights major initiatives but is not comprehensive. For specific work being done in an inidividual milestone, please refer to the
+appropriate <a href="https://gitlab.com/groups/gitlab-org/govern/compliance/-/epics/2">milestone planning issues</a>.</p>
+<h2 id=priorities>Priorities</h2>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Name</th>
+<th>DRI</th>
+<th>Target release</th>
+<th>Division</th>
+<th>Roadmap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13295">Custom Adherence configuration</a></td>
+<td><code>huzaifaiftikhar1, nradina</code></td>
+<td><code>17.6</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::now</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13294">Multiple compliance frameworks labels</a></td>
+<td><code>nradina</code></td>
+<td><code>17.4</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::now</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/12661">Add compliance adherence requirement for each security scanner</a></td>
+<td><code>hraghuvanshi</code></td>
+<td><code>17.7</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::now</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13004">Third party connector to Snowflake</a></td>
+<td><code>sam.figueroa</code></td>
+<td><code>17.10</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::now</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/11275">Compliance Pipeline to Security Policy Migration</a></td>
+<td><code>sam.figueroa</code></td>
+<td><code>17.4</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::now</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13071">(Size: XXL) Cells 1.0 - Compliance database tables work</a></td>
+<td><code>harsimarsandhu</code></td>
+<td><code>17.4</code></td>
+<td><code>division::Engineering</code></td>
+<td><code>roadmap::now</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/12339">Consolidation of tables for streaming audit events to various external destinations</a></td>
+<td><code>hraghuvanshi</code></td>
+<td><code>17.4</code></td>
+<td><code>division::Engineering</code></td>
+<td><code>roadmap::now</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/736">Comprehensive audit log</a></td>
+<td><code>nrosandich</code></td>
+<td><code>18.0</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::ongoing</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13559">Make Compliance Center available to project/sub-groups</a></td>
+<td><code>xanf</code></td>
+<td><code>17.4</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::now</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13658">External customisable standard adherence checks</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::next</code></td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13909">Give compliance users a 'single pane of glass' to view aggregate information with respect to their checks and violations</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::later</code></td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/10241">Migrate Audit Events to ClickHouse Cloud</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Engineering</code></td>
+<td><code>roadmap::next</code></td>
+</tr>
+<tr>
+<td>13</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/12148">Show compliance progress for SOC2 based on the starting seven criteria</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::next</code></td>
+</tr>
+<tr>
+<td>14</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/6805">Enforce project settings with compliance frameworks</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::uncategorised</code></td>
+</tr>
+<tr>
+<td>15</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13823">Add CIS Benchmark as a Compliance Standard</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::next</code></td>
+</tr>
+<tr>
+<td>16</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13799">Improved discoverability and findability for compliance management and security features</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::uncategorised</code></td>
+</tr>
+<tr>
+<td>17</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/14171">Compliance UX improvement/bugs track</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::ongoing</code></td>
+</tr>
+<tr>
+<td>18</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/11200">Increase test coverage for Govern:Compliance</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Engineering</code></td>
+<td><code>roadmap::next</code></td>
+</tr>
+<tr>
+<td>19</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/418">Expand audit event report usability</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::uncategorised</code></td>
+</tr>
+<tr>
+<td>20</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/11259">Add a version field to the audit event schema</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::uncategorised</code></td>
+</tr>
+<tr>
+<td>21</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/12602">Test Streaming Audit Events configuration and surface connection issues</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::later</code></td>
+</tr>
+<tr>
+<td>22</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/12774">Link to compliance violation report</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::later</code></td>
+</tr>
+<tr>
+<td>23</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13065">Repository configuration checks</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::uncategorised</code></td>
+</tr>
+<tr>
+<td>24</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13396">ISO 27001 compliance checks</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::later</code></td>
+</tr>
+<tr>
+<td>25</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/14024">Internal custom checks</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::later</code></td>
+</tr>
+<tr>
+<td>26</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/14142">Govern:Compliance group engineering and product metrics</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Engineering</code></td>
+<td><code>roadmap::next</code></td>
+</tr>
+<tr>
+<td>27</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/10391">Improved Admin and Group-level branch protection settings</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::ongoing</code></td>
+</tr>
+<tr>
+<td>28</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/6980">Allow filtering of streamed audit events</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::next</code></td>
+</tr>
+<tr>
+<td>29</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/7792">Integrate with 3rd-party storage systems</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::next</code></td>
+</tr>
+<tr>
+<td>30</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/8057">Add event type information for all streaming audit events</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::later</code></td>
+</tr>
+<tr>
+<td>31</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/11053">Standards Adherence Report Improvements</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::later</code></td>
+</tr>
+<tr>
+<td>32</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/10796">Compliance Violations Report improvements</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::uncategorised</code></td>
+</tr>
+<tr>
+<td>33</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/11274">Compliance frameworks improvements</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::later</code></td>
+</tr>
+<tr>
+<td>34</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/11482">Compliance Framework report add change history</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::later</code></td>
+</tr>
+<tr>
+<td>35</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/7917">Audit Event data retention settings</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::uncategorised</code></td>
+</tr>
+<tr>
+<td>36</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/11930">Compliance Center Improvements</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::later</code></td>
+</tr>
+<tr>
+<td>37</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/12087">Add availability level to audit events</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::uncategorised</code></td>
+</tr>
+<tr>
+<td>38</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/11108">Support for OCSF</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::uncategorised</code></td>
+</tr>
+<tr>
+<td>39</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/11361">New policy type: overwrite group/project general settings</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::uncategorised</code></td>
+</tr>
+<tr>
+<td>40</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/13821">Chain of Custody report</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::uncategorised</code></td>
+</tr>
+<tr>
+<td>41</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/14064">Metrics Dashboard for Continuous Compliance Monitoring</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::uncategorised</code></td>
+</tr>
+<tr>
+<td>42</td>
+<td><a href="https://gitlab.com/groups/gitlab-org/-/epics/14280">Organization Level Compliance Management</a></td>
+<td><code>TBD</code></td>
+<td><code>TBD</code></td>
+<td><code>division::Product</code></td>
+<td><code>roadmap::later</code></td>
+</tr>
+</tbody>
+</table>
+<p>*This page may contain information related to upcoming products, features and functionality.</p>
+<p>It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes.</p>
+<p>Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features, or functionality remain at the sole discretion of GitLab Inc.*</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/govern/compliance/tactical-priorities.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/govern/compliance/tactical-priorities.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

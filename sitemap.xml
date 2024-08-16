@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://about.gitlab.com/sitemaps/sitemap_all_others.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://about.gitlab.com/sitemaps/sitemap_company.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://about.gitlab.com/sitemaps/sitemap_proxy_resource.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://about.gitlab.com/sitemaps/sitemap_release_blog.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://about.gitlab.com/blog/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://about.gitlab.com/buyer-experience/sitemap.xml</loc>
+  </sitemap>
+</sitemapindex>

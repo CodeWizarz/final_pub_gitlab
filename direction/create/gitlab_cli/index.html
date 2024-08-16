@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - GitLab CLI
+|
+GitLab
+</title>
+<meta content='Learn more from GitLab, The DevSecOps Platform.' name=description />
+<meta content='Learn more from GitLab, The DevSecOps Platform.' name='twitter:description'/>
+<meta content='Learn more from GitLab, The DevSecOps Platform.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - GitLab CLI' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/create/gitlab_cli/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/create/gitlab_cli/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - GitLab CLI' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/create/gitlab_cli/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - GitLab CLI
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/phikai'>
+<img
+src='/images/team/kaiarmstrong.png'
+class=codeowner-avatar-img
+alt='Kai Armstrong'
+title='Kai Armstrong'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/derekferguson'>
+<img
+src='/images/team/derekferguson.jpg'
+class=codeowner-avatar-img
+alt='Derek Ferguson'
+title='Derek Ferguson'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/create/gitlab_cli/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/create/">Product Stage Vision - Create</a></li><li>Category Direction - GitLab CLI</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#gitlab-cli" id=markdown-toc-gitlab-cli>GitLab CLI</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and Themes</a></li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a> <ul>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is Not Planned Right Now</a></li>
+</ul>
+</li>
+<li><a href="#best-in-class-landscape" id=markdown-toc-best-in-class-landscape>Best in Class Landscape</a> <ul>
+<li><a href="#top-123-competitive-solutions" id=markdown-toc-top-123-competitive-solutions>Top [1/2/3] Competitive Solutions</a></li>
+</ul>
+</li>
+<li><a href="#maturity-plan" id=markdown-toc-maturity-plan>Maturity Plan</a></li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=gitlab-cli>GitLab CLI</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/dev/#create">Create</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">Viable</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-01-05</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+<p>Thanks for visiting this direction page on the GitLab CLI. This page belongs to the <a href="/handbook/product/categories/#code-review-group">Code Review</a> group of the Create stage and is maintained by Kai Armstrong (<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#107;&#097;&#114;&#109;&#115;&#116;&#114;&#111;&#110;&#103;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">E-Mail</a>).</p>
+<p>This direction is constantly evolving and everyone can contribute:</p>
+<ul>
+<li>Please comment and contribute in the linked <a href="https://gitlab.com/gitlab-org/cli/-/issues">issues</a> and epics on this page. Sharing your feedback directly on GitLab.com or submitting a Merge Request to this page are the best ways to contribute to our strategy.</li>
+<li>Please share feedback directly via email, Twitter, or <a href="https://calendly.com/gitlabkai">schedule a video call</a>. If you're a GitLab user and have direct knowledge of your needs for the GitLab CLI, we'd especially love to hear from you.</li>
+</ul>
+<h3 id=strategy-and-themes>Strategy and Themes</h3>
+
+<p>The command line is one of the most important tools in a software engineer's toolkit and the majority of their process and work revolve around tools available there. They customize their CLI with styles and extend it through applications to ensure maximum efficiency while performing tasks. The CLI is the backbone of scripts and workflows developers depend on to complete their work.</p>
+<p>Engineers working on contributions often collaborate with product managers, designers and other engineers to complete their work. Initially this collaboration takes place in issues where engineers can ask clarifying questions, review designs and discuss solutions. When engineers begin to work on these contributions, issues serve as the reference document and requirements to complete their task.</p>
+<p>Once those contributions have been worked engineers contribute those via a Merge Request. Merge Requests are a collaborative process that involves getting feedback on the work completed and then responding to that feedback through additional revisions and comments.</p>
+<p>Configuration files are also common to software development and the tools of the DevOps life cycle. In GitLab there are files like <code>.gitlab-ci.yml</code> and <code>CODEOWNERS</code> which have specific syntaxes and parameters to properly configure. Making changes to these files often involves having documentation available and then validating content through commits or tools outside the editor.</p>
+<p>GitLab supports teams collaborating and building software together, however that collaboration is only available inside the GitLab application.</p>
+<p>Developers, on the other hand, spend the majority of their time working locally implementing work outlined in issues, responding to merge request feedback and testing/debugging their applications. These tasks are the core of the developer experience, and GitLab should support developers closer to where they're doing their meaningful work to enable them to be more efficient in the delivery of that work.</p>
+<p><strong>Configuration</strong>
+Users who configure projects or GitLab need tools to help them be efficient at this process. The GitLab CLI provides methods to create and then manage project configurations which can be important for instance management. Once your project is up and running you can easily manage and test your GitLab CI/CD configuration to ensure it is setup correctly.</p>
+<p><strong>Contribution</strong>
+Engineering personas who work on contributing directly to the code in projects need to action feedback from the review process. The GitLab CLI makes it easy to view the contents of an issue you're working on, check the status of merge requests, get feedback and output from running pipelines, and much more.</p>
+<p><strong>Automation</strong>
+Automating tasks is an important part of engineering process. The GitLab CLI supports users in both interactive and non-interactive workflows to script repetitive tasks for information during the development process, automate interactions in GitLab CI or produce reporting for external systems.</p>
+<p><strong>Flexibility</strong>
+Flexibility in tooling is valuable to support a variety of different workflows and use cases. The GitLab CLI provides an opinionated set of commands for interacting with issues, merge request, and pipelines. However, we also provide a flexible tool that allows you to alias any API interaction to your own commands for your workflow.</p>
+<h3 id=1-year-plan>1 year plan</h3>
+
+<figure class=video_container>
+<iframe src="https://www.youtube.com/embed/9_EtQ2f0TCk" frameborder=0 allowfullscreen=true> </iframe>
+</figure>
+<p><strong>In Progress:</strong> <a href="https://gitlab.com/groups/gitlab-org/-/epics/12025">Stacked diffs via the GitLab CLI</a> - we'll be exploring stacked diff workflows following up on our improvements to dependency management. We're initially looking at how to provide support via the CLI as an MVC.</p>
+<h4 id=what-is-next-for-us>What is next for us</h4>
+
+<p><strong>Later:</strong> Expand AI capabilities of <code>glab ask</code></p>
+<p>The GitLab CLI currently supports asking questions about how to accomplish some tasks with the usage of <code>git</code>. We'll look for more ways to expand this and potentially leverage GitLab Duo Chat in the future.</p>
+<h4 id=what-we-are-currently-working-on>What we are currently working on</h4>
+
+<p>Current inflight work can be tracked via the <a href="https://gitlab.com/gitlab-org/cli/-/merge_requests?scope=all&amp;state=opened">open merge request list</a>. This includes community contributions and other improvements to the GitLab CLI.</p>
+<h4 id=what-we-recently-completed>What we recently completed</h4>
+
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9586">Incident Management in the CLI</a></li>
+<li>Improvements to working with CI Jobs</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11455">Integrate GitLab Agent for K8s</a></li>
+</ul>
+<p>Other completed work can be seen by looking at the <a href="https://gitlab.com/gitlab-org/cli/-/merge_requests?scope=all&amp;state=merged">merged</a> items for the project.</p>
+<h4 id=what-is-not-planned-right-now>What is Not Planned Right Now</h4>
+
+<p>We're currently only focused on the GitLab CLI and continuing to expand the experience for those users.</p>
+<h3 id=best-in-class-landscape>Best in Class Landscape</h3>
+
+<p>BIC (Best In Class) is an indicator of forecasted near-term market performance based on a combination of factors, including analyst views, market news, and feedback from the sales and product teams. It is critical that we understand where GitLab appears in the BIC landscape.</p>
+
+
+
+
+<h4 id=top-123-competitive-solutions>Top [1/2/3] Competitive Solutions</h4>
+
+<ul>
+<li><a href="https://cli.github.com/">GitHub CLI</a></li>
+</ul>
+<h3 id=maturity-plan>Maturity Plan</h3>
+
+<p>This category is currently at the Viable maturity level, and our next maturity target is Complete (see our <a href="https://about.gitlab.com/direction/maturity/">definitions of maturity levels</a>). We're continuing to evaluate required components to move to that level.</p>
+<h3 id=target-audience>Target Audience</h3>
+
+<p>The software development process involves many people working across various parts of configuration, contribution and review. All of these users work together to advance software projects in their organization.</p>
+<p>Engineering personas who are contributing to development, configuring or interacting with continuous integration and reviewing contributions from other team members. Users performing these tasks need tools that allow them to deeply understand the changes and provide meaningful feedback of both comments and code suggestions. These are specifically addressed by the following GitLab Personas:</p>
+<ul>
+<li><a href="/handbook/product/personas/#sasha-software-developer">Sasha (Software Developer)</a></li>
+<li><a href="/handbook/product/personas/#devon-devops-engineer">Devon (DevOps Engineer)</a></li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/create/gitlab_cli/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/create/gitlab_cli/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

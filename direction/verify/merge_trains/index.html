@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Merge Trains
+|
+GitLab
+</title>
+<meta content='Learn more from GitLab, The DevSecOps Platform.' name=description />
+<meta content='Learn more from GitLab, The DevSecOps Platform.' name='twitter:description'/>
+<meta content='Learn more from GitLab, The DevSecOps Platform.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Merge Trains' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/verify/merge_trains/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/verify/merge_trains/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Merge Trains' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/verify/merge_trains/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Merge Trains
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/jreporter'>
+<div class=codeowners-single>
+<img
+src='/images/team/jackiemeshell.png'
+class=codeowner-avatar-img
+alt='Jackie Porter'
+title='Jackie Porter'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Jackie Porter
+</div>
+<div class=codeowners-handle>
+@jreporter
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/verify/merge_trains/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/verify/">Verify Stage Direction</a></li><li>Category Direction - Merge Trains</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#merge-trains" id=markdown-toc-merge-trains>Merge Trains</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a></li>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and Themes</a></li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a> <ul>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+</ul>
+</li>
+<li><a href="#best-in-class-landscape" id=markdown-toc-best-in-class-landscape>Best in Class Landscape</a> <ul>
+<li><a href="#key-capabilities" id=markdown-toc-key-capabilities>Key Capabilities</a></li>
+<li><a href="#roadmap" id=markdown-toc-roadmap>Roadmap</a></li>
+<li><a href="#top-competitive-solutions" id=markdown-toc-top-competitive-solutions>Top Competitive Solutions</a></li>
+</ul>
+</li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a></li>
+<li><a href="#top-internal-customer-issues" id=markdown-toc-top-internal-customer-issues>Top Internal Customer Issue(s)</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=merge-trains>Merge Trains</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/verify/">Verify</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">Viable</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td>2024-06-17</td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+<p>Thanks for visiting this category direction page on Merge Trains in GitLab. This page belongs to the <a href="/handbook/product/categories/#pipeline-execution-group">Pipeline Execution</a> group of the Verify stage and is maintained by Rutvik Shah (<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#060;&#114;&#117;&#116;&#115;&#104;&#097;&#104;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;&#062;">E-Mail</a>).</p>
+<p>This direction page is a work in progress, and everyone can contribute:</p>
+<ul>
+<li>Please comment and contribute in the linked <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/?sort=updated_desc&amp;state=opened&amp;label_name%5B%5D=Category%3AMerge%20Trains&amp;first_page_size=50">issues</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics?state=opened&amp;page=1&amp;sort=start_date_desc&amp;label_name[]=Category:Merge+Trains">epics</a> on this page. Sharing your feedback directly on GitLab.com is the best way to contribute to our strategy and vision.</li>
+<li>Please share feedback directly via email, Twitter, or on a video call. If you're a GitLab user and want to discuss how GitLab can improve Review Apps, we'd especially love to hear from you.</li>
+</ul>
+<h3 id=overview>Overview</h3>
+<p>We aim to help you balance speed with reliability, keeping your pipelines green. This ultimately supports the stability of collaboration across branches and GitLab has introduced Merge Trains as the mechanism to accomplish this. When merge trains are used, each merge request joins as the last item in that train. Each merge request is processed in order and is added to the merge result of the last successful merge request. The merge request adds its changes, and starts the pipeline immediately under the assumption that everything is going to pass. If the merge request fails, it is kicked out of the train and the next merge request continues the pipeline of the last successful merge result.</p>
+<ul>
+<li><a href="#maturity-plan">Maturity Plan</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=Category%3AMerge%20Trains">Issue List</a></li>
+<li><a href="/direction/ops/">Overall Vision</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/594">UX Research</a></li>
+<li><a href="https://docs.gitlab.com/ee/ci/pipelines/merge_trains.html">Documentation</a></li>
+</ul>
+<h3 id=strategy-and-themes>Strategy and Themes</h3>
+<p>For an overview of our plans for Merge Trains, see epic <a href="https://gitlab.com/groups/gitlab-org/-/epics/5122">Merge Trains Vision</a> and check out this overview video:</p>
+
+<figure class=video_container>
+<iframe width=560 height=315 src="https://www.youtube.com/embed/H2KPKDBW6Tw" frameborder=0 allowfullscreen=""></iframe>
+</figure>
+
+<h3 id=1-year-plan>1 year plan</h3>
+<p>Our top vision item is <a href="https://gitlab.com/groups/gitlab-org/-/epics/5122">to improve Merge Train usability</a> by providing users better visibility into system status, therefore, increasing their confidence in the workflow.
+Beyond that we want to provide Developers and DevOps Engineers a better way to <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/277391">visualize and administer the merge train</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/5864">extend our command line and API support for Merge Trains</a>.</p>
+<h4 id=what-is-next-for-us>What is next for us</h4>
+
+<p>In FY25Q2 (May-July 2024), we plan to <a href="https://gitlab.com/groups/gitlab-org/-/epics/11673">provide visibility into Merge Train activities</a> and make <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/442453">usability improvements</a></p>
+<h4 id=what-we-are-currently-working-on>What we are currently working on</h4>
+<p>We are currently working on the foundational work necessary to deliver our first iteration of the MVC that will allow users to view a list of queued and merged MR's.
+Please see <a href="https://gitlab.com/groups/gitlab-org/-/epics/13705">MVC for Merge Train Visualization</a> for the work planned in FY25Q2 (May-July 2024)</p>
+<h4 id=what-we-recently-completed>What we recently completed</h4>
+
+<p>We recently finished <a href="https://gitlab.com/gitlab-org/ux-research/-/issues/2764">designing our MVC for Merge Train Visualization</a></p>
+<h3 id=best-in-class-landscape>Best in Class Landscape</h3>
+
+<p>BIC (Best In Class) is an indicator of forecasted near-term market performance based on a combination of factors, including analyst views, market news, and feedback from the sales and product teams. It is critical that we understand where GitLab appears in the BIC landscape.</p>
+<h4 id=key-capabilities>Key Capabilities</h4>
+<ul>
+<li>Queue merge requests and verify their changes work together before they are merged to the target branch</li>
+<li>Leverage merged results pipelines</li>
+<li>Support fast-forward and semi-linear merge requests</li>
+<li>Provide marge train visualisation and administration capabilities</li>
+</ul>
+<h4 id=roadmap>Roadmap</h4>
+<p>This category is currently at the "Viable" maturity level, and our next maturity target is "Complete" (<a href="https://about.gitlab.com/direction/maturity/">see our definitions of maturity levels</a>). We currently have basic capabilities and want to continue and extend these in future milestones.</p>
+<p>Key deliverables to achieve this are:</p>
+<ul>
+<li>Completed - <a href="https://gitlab.com/groups/gitlab-org/-/epics/6687">Simplify merge strategies with Auto-merge</a></li>
+<li>Completed - <a href="https://gitlab.com/groups/gitlab-org/-/epics/4911">Merge Trains should support fast forward merge</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5864">API support for merge trains</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues?sort=milestone_due_desc&amp;state=opened&amp;label_name[]=Category:Merge+Trains&amp;label_name[]=type::bug&amp;not[label_name][]=severity::3&amp;not[label_name][]=severity::4">Resolving Severity 1 and 2 bugs</a></li>
+</ul>
+<h4 id=top-competitive-solutions>Top Competitive Solutions</h4>
+<p>It looks like GitLab is the first to provide this functionality, although GitHub has annouced a <a href="https://github.blog/changelog/2023-02-08-pull-request-merge-queue-public-beta/">public beta</a> for Merge Queue which includes fast-forward merge train support and visualizations of the queue.</p>
+<p><a href="https://www.aviator.co/">Aviator</a> is the most comparable offering against Merge Trains, promising to "keep builds green forever", much like how we <a href="https://about.gitlab.com/blog/2020/01/30/all-aboard-merge-trains/">positioned Merge Trains in 2020</a> during their release. Today, Merge Queues seem to support parity of Merge Trains for GitHub repositories.</p>
+<p><a href="https://github.com/smarkets/marge-bot">marge-bot</a> is a popular open source program that works with GitLab to manage merge requests.</p>
+<p><a href="https://mergify.com/features/merge-queue">Mergify</a> is another offering that integrates with GitHub repositories and multiple CI providers to supporty queued pull requests.</p>
+<h3 id=target-audience>Target Audience</h3>
+<p>Check out our <a href="/direction/ops/#who-is-it-for">Ops Section Direction "Who's is it for?"</a> for an in depth look at the our target personas across Ops. For Merge Trains, our "What's Next &amp; Why" are targeting the following personas, as ranked by priority for support:</p>
+<ol>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#sasha-software-developer">Sasha - Software Developer</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#priyanka-platform-engineer">Priyanka - Platform Engineer</a></li>
+</ol>
+
+<h3 id=top-internal-customer-issues>Top Internal Customer Issue(s)</h3>
+<p>In an effort to dogfood our own features, we are actively working on using <a href="https://gitlab.com/gitlab-org/quality/engineering-productivity/team/-/issues/516">merge trains internally on gitlab-org</a>. A piece of functionality our internal team has requested after working with Merge Trains for a while is API support for merge trains to auto-merge, <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/32665">gitlab#32655</a>.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/verify/merge_trains/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/verify/merge_trains/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

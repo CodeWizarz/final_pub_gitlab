@@ -1,0 +1,1 @@
+(()=>{var o=function(){$(".footer-after-2").animate({top:"-3000"},8e3)};window.animateBlastoff=o,window.callbackMktoFormOnSuccess=function(){o()}})();

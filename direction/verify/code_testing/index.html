@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Code Testing and Coverage
+|
+GitLab
+</title>
+<meta content='The GitLab Code Testing and Coverage direction page.' name=description />
+<meta content='The GitLab Code Testing and Coverage direction page.' name='twitter:description'/>
+<meta content='The GitLab Code Testing and Coverage direction page.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Code Testing and Coverage' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/verify/code_testing/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/verify/code_testing/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Code Testing and Coverage' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/verify/code_testing/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Code Testing and Coverage
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/jocelynjane'>
+<img
+src='/images/team/jocelyneillis.png'
+class=codeowner-avatar-img
+alt='Jocelyn Eillis'
+title='Jocelyn Eillis'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/jreporter'>
+<img
+src='/images/team/jackiemeshell.png'
+class=codeowner-avatar-img
+alt='Jackie Porter'
+title='Jackie Porter'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/verify/code_testing/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/verify/">Verify Stage Direction</a></li><li>Category Direction - Code Testing and Coverage</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#code-testing-and-coverage" id=markdown-toc-code-testing-and-coverage>Code Testing and Coverage</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a></li>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and Themes</a></li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a> <ul>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is Not Planned Right Now</a></li>
+</ul>
+</li>
+<li><a href="#best-in-class-landscape" id=markdown-toc-best-in-class-landscape>Best in Class Landscape</a> <ul>
+<li><a href="#key-capabilities" id=markdown-toc-key-capabilities>Key Capabilities</a></li>
+<li><a href="#top-competitive-solutions" id=markdown-toc-top-competitive-solutions>Top Competitive Solutions</a></li>
+</ul>
+</li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a></li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst Landscape</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=code-testing-and-coverage>Code Testing and Coverage</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/verify/">Verify</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">Viable</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-06-15</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+<p>Thanks for visiting this category direction page on Code Testing and Coverage in GitLab. This page belongs to the <a href="/handbook/product/categories/#pipeline-execution-group">Pipeline Execution</a> group of the Verify stage and is maintained by Rutvik Shah (<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#060;&#114;&#117;&#116;&#115;&#104;&#097;&#104;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;&#062;">E-Mail</a>).</p>
+<p>This direction page is a work in progress, and everyone can contribute:</p>
+<ul>
+<li>Please comment and contribute in the linked <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/?sort=updated_desc&amp;state=opened&amp;label_name%5B%5D=Category%3ACode%20Testing%20and%20Coverage&amp;first_page_size=20">issues</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics?state=opened&amp;page=1&amp;sort=start_date_desc&amp;label_name[]=Category:Code+Testing+and+Coverage">epics</a> on this page. Sharing your feedback directly on GitLab.com is the best way to contribute to our strategy and vision.</li>
+<li>Please share feedback directly via email, Twitter, or on a video call. If you're a GitLab user and want to discuss how GitLab can better support your testing needs, we'd especially love to hear from you.</li>
+</ul>
+<h3 id=overview>Overview</h3>
+<p>We utilize <a href="https://gitlab.com/groups/gitlab-org/-/epics/9638">intelligence in testing</a> to ensure that individual components built within a pipeline perform as expected and as efficiently as possible. We also aim to make testing accessible by making it easier to setup and start testing to drive quality early in the development process.</p>
+<p>Our long term vision is to optimizing pipelines to quickly deliver quality code with a high degree of confidence. We will do this by automate testing; reducing the amount of time between development and test cycles; broading test scope and coverage (e.g. unit, functional, end-to-end); and dashboards to provide an aggregate view of test quality and observable trends to monitor product health.</p>
+<h3 id=strategy-and-themes>Strategy and Themes</h3>
+<p>Our offerings in the area of Testing are limited compared to our competitors; in particular, we do not offer test case management features. We are working with the Certify group to build an integrated test case management feature, providing traceability across product requirements and test cases/plans as part of <a href="https://gitlab.com/groups/gitlab-org/-/epics/9640">gitlab&amp;9640</a>. Our long-term vision provides not only traceability, but also <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/388359">group-level dashboards</a> for various stakeholders to view both rolled up and individual project completion status. Quality remains an important driver for improving our users ability to confidently track deployments with GitLab and as noted above we are starting on that vision in the <a href="https://gitlab.com/groups/gitlab-org/-/epics/5430">Project Quality Summary epic</a>.</p>
+<p>Pipeline efficiency has become an increasingly important to developers, CI/CD leaders, and executives. As part of achieving our long-term goal of "smarter testing", we are evaluating opportunitites to use <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/388531">ML/AI to optimize pipelines</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/9643">additional opportunities to expand</a> our current offering for <a href="https://docs.gitlab.com/ee/ci/testing/fail_fast_testing.html">Fail Fast Testing</a>. We are also evaulating mechanisms enabling users to <a href="https://gitlab.com/groups/gitlab-org/-/epics/9651">select which tests they want to execute or quarantine</a>.</p>
+<p>In all features we build, we strive to continuously improve our user experience, including <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/366347">ease of use</a> and automation where possible. We also know users want more insights from their CI/CD pipelines and especially from their tests. We are evaluating <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/210250">gitlab#210250</a> as a way to provide those insights and further encourage users to upload test report artifacts within their CI/CD pipelines.</p>
+<h3 id=1-year-plan>1 year plan</h3>
+<p>There are no new planned features in Code Testing and Coverage for 2024. Pipeline Execution will support high priority bug fixes in this category as they arise.</p>
+<h4 id=what-is-next-for-us>What is next for us</h4>
+
+
+
+<p>We will be supporting <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/227345">test coverage visualization for JaCoCo</a></p>
+
+
+<h4 id=what-is-not-planned-right-now>What is Not Planned Right Now</h4>
+
+<p>Although we do not have any plans to release new features in the coming year, we welcome <a href="https://about.gitlab.com/community/contribute/">community contributions</a> that align with our intellgence testing vision.</p>
+<h3 id=best-in-class-landscape>Best in Class Landscape</h3>
+
+<p>BIC (Best In Class) is an indicator of forecasted near-term market performance based on a combination of factors, including analyst views, market news, and feedback from the sales and product teams. It is critical that we understand where GitLab appears in the BIC landscape.</p>
+<h4 id=key-capabilities>Key Capabilities</h4>
+<p>In the <a href="https://www.forrester.com/report/The+Forrester+Tech+Tide+Continuous+Software+Delivery+Q1+2021/-/E-RES161669">2021 Continuous Software Delivery Forrester Tech Tide</a>, Testing was cited as the number one key to unlock continuous delivery for organizations. Top areas for investment are a) API test automation, b) continuous functional test suites, c) shift-left performance testing. Industry leaders are seeking integrated suites over best in breed tools for testing and CD. Additionally, API testing is being marketed as a silver bullet that is cheaper, effective and efficient to modernize the toolchain for enterprises. Sample vendors include: API Fortress, Broadcom, Eggplant, and others. We are exploring how we expand our market share in this area via <a href="https://gitlab.com/gitlab-com/Product/-/issues/2516">product#2516</a> and adding a new category in this <a href="https://gitlab.com/gitlab-com/www-gitlab-com/-/merge_requests/80183">merge request</a>.</p>
+
+
+<h4 id=top-competitive-solutions>Top Competitive Solutions</h4>
+<p>Many other CI solutions can also consume standard JUnit test output or other formats to display insights natively like <a href="https://circleci.com/docs/2.0/collect-test-data/">CircleCI</a> or through a plugin like <a href="https://plugins.jenkins.io/junit">Jenkins</a>. <a href="https://demo.qameta.io/allure/">Allure</a> is a popular reporting tool for review of test executions and recently DataDog introduced <a href="https://docs.datadoghq.com/continuous_integration/">CI Visibility</a> as part of their SaaS offering including <a href="https://docs.datadoghq.com/continuous_integration/guides/flaky_test_management/">Flaky Test Management</a>.</p>
+<p>There are new entrants in the code testing space which uses ML/AI with the focus on:</p>
+<p>Optimizing Test Execution - Predictive Test Selection uses code change log and test execution history as an input and applies machine learning to determine which tests are more likely to fail for a given pull request.<a href="https://launchableinc.com/solution/">Launchable</a> and <a href="https://gradle.com/gradle-enterprise-solutions/predictive-test-selection/">Develocity by Gradle</a>] are two examples of this.</p>
+<p>Writing Test Cases - <a href="https://www.diffblue.com/">Diffblue</a> generates unit regression tests.</p>
+<p>In order to stay remain ahead of these competitors we will continue to push forward to make unit test data visible and actionable in the context of the Merge Request for developers with <a href="https://docs.gitlab.com/ee/ci/unit_test_reports.html#viewing-unit-test-reports-on-gitlab">unit test reports</a> and historical insights to identify flaky tests with epics like <a href="https://gitlab.com/groups/gitlab-org/-/epics/3129">gitlab&amp;3129</a></p>
+<h3 id=target-audience>Target Audience</h3>
+<p>Check out our <a href="/direction/ops/#who-is-it-for">Ops Section Direction "Who's is it for?"</a> for an in-depth look at our target personas across Ops. For Code Testing and Coverage, our "What's Next &amp; Why" are targeting the following personas, as ranked by priority for support:</p>
+<ol>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#sasha-software-developer">Sasha - Software Developer</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#simone-software-engineer-in-test">Simone - Software Engineer in Test</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#devon-devops-engineer">Devon - DevOps Engineer</a></li>
+</ol>
+
+
+<h3 id=analyst-landscape>Analyst Landscape</h3>
+<p>In 2020, Gartner has released the Artificial Intelligence Use Case Prism for Development and Testing on their <a href="https://www.gartner.com/en/documents/3994888/infographic-artificial-intelligence-use-case-prism-for-d">research website</a>. Directionally, several of the use cases are generation of unit tests from analyzing code patterns, using business logic to create API test scenarios, and using machine learning to fabricate test data as well as correlating testing results back to business metrics to convey meaningful connections like release success or quality.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/verify/code_testing/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/verify/code_testing/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

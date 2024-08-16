@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Component Catalog
+|
+GitLab
+</title>
+<meta content='Reusable pipeline configuration and definitions' name=description />
+<meta content='Reusable pipeline configuration and definitions' name='twitter:description'/>
+<meta content='Reusable pipeline configuration and definitions' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Component Catalog' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/verify/component_catalog/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/verify/component_catalog/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Component Catalog' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/verify/component_catalog/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Component Catalog
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/jreporter'>
+<div class=codeowners-single>
+<img
+src='/images/team/jackiemeshell.png'
+class=codeowner-avatar-img
+alt='Jackie Porter'
+title='Jackie Porter'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Jackie Porter
+</div>
+<div class=codeowners-handle>
+@jreporter
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/verify/component_catalog/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/verify/">Verify Stage Direction</a></li><li>Category Direction - Component Catalog</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#component-catalog" id=markdown-toc-component-catalog>Component Catalog</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+</ul>
+</li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and Themes</a></li>
+<li><a href="#whats-next-for-us" id=markdown-toc-whats-next-for-us>What's next for us</a></li>
+<li><a href="#long-term-vision" id=markdown-toc-long-term-vision>Long term vision</a> <ul>
+<li><a href="#support-self-manage-customers" id=markdown-toc-support-self-manage-customers>Support Self manage customers</a></li>
+<li><a href="#ci-step-as-first-class-object" id=markdown-toc-ci-step-as-first-class-object>CI Step as first class object</a></li>
+<li><a href="#analytics" id=markdown-toc-analytics>Analytics</a></li>
+<li><a href="#inputs-improvments" id=markdown-toc-inputs-improvments>Inputs improvments</a></li>
+<li><a href="#verified-component-creators" id=markdown-toc-verified-component-creators>Verified component creators</a></li>
+<li><a href="#expanding-catalog-resource-types" id=markdown-toc-expanding-catalog-resource-types>Expanding catalog resource types</a></li>
+<li><a href="#service-catalog" id=markdown-toc-service-catalog>Service catalog</a></li>
+<li><a href="#ai-improvements" id=markdown-toc-ai-improvements>AI improvements</a></li>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#analyst-discussion" id=markdown-toc-analyst-discussion>Analyst Discussion</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+</ul>
+</li>
+<li><a href="#best-in-class-landscape" id=markdown-toc-best-in-class-landscape>Best in Class Landscape</a> <ul>
+<li><a href="#key-capabilities" id=markdown-toc-key-capabilities>Key Capabilities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#dogfooding" id=markdown-toc-dogfooding>Dogfooding</a></li>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive Landscape</a></li>
+<li><a href="#glossary" id=markdown-toc-glossary>Glossary</a></li>
+</ul>
+<h2 id=component-catalog>Component Catalog</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/verify/">verify</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">Minimal</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-07-25</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+<p>Thanks for visiting this direction page on the Components catalog category at GitLab. This page belongs to the <a href="https://about.gitlab.com/handbook/engineering/development/ops/verify/pipeline-authoring/">Pipeline Authoring Group</a> in the Verify Stage and is maintained by Dov Hershkovitch. You can submit your feature requests using <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/new">GitLab issue tracker</a>.</p>
+<h2 id=overview>Overview</h2>
+<p>We aim to foster a collaborative community of developers who can easily share, build, and maintain high-quality CI/CD configurations. By providing a platform that serves as a centralized hub for managing all DevOps-related assets within an organization, we aim to empower developers to focus on true innovation and unlock the full potential of the open-source ecosystem. Through our commitment to inclusivity, transparency, and accessibility, we strive to create a continuous learning and improvement culture where every community member can contribute.</p>
+<h3 id=strategy-and-themes>Strategy and Themes</h3>
+<p>DevOps is all about speed, it delivers value faster by shortening the software development life cycle. Organizations that want to accelerate their DevOps adoption need to set up a working pipeline so other teams can use it to automate their workflow. During the development of a pipeline configuration, engineers frequently encounter the following challenges:</p>
+<ol>
+<li><em>"Where can I find it?"</em> - Whenever engineers embark on setting up a new pipeline, they often search for existing pipelines in their organization or externally. This is because someone, at some point, has likely attempted to configure a similar pipeline.</li>
+<li><em>"How do I use it?"</em> - After engineers locate a suitable pipeline to work with, they require clear instructions on effectively using it. This guidance is crucial for understanding the pipeline's functionalities and ensuring its proper usage.</li>
+<li><em>"Does it always work as expected?"</em> - Engineers often question whether the pipeline is consistently reliable and delivers the expected results. They also evaluate its reusability and whether it can be shared effectively with other teams within the organization. These aspects are vital for determining the pipeline's suitability for wider adoption and collaboration.</li>
+</ol>
+<p>While it is possible to solve each problem separately, GitLab believes that we need to solve those problems holistically by building a framework that contains tools that add functionality and improve your CI/CD workflow. We aspire to provide the best-in-class experience for building and maintaining CI/CD pipelines.</p>
+<p>Our strategy is to provide an opinionated framework that:</p>
+<ol>
+<li>Is the SSoT for users to browse and search for the desired pipeline components.</li>
+<li>Contains shareable and reusable package components that could be attached to any CI/CD configuration.</li>
+<li>Has an easy way to document the usage of each component.</li>
+<li>Fosters a collaborative methodology by allowing users to contribute to the catalog by developing and publishing their own components.</li>
+</ol>
+<p>We should adopt a bottom-up approach to construct this solution, starting with the smallest building blocks and gradually progressing upwards. By starting from the foundational elements and gradually building on them, we can create a robust and cohesive solution.</p>
+<h3 id=whats-next-for-us>What's next for us</h3>
+<p>Now that we've moved the CI/CD catalog to GA our focus is the following</p>
+<ul>
+<li>We aim to enhance the security workflows around the CI/CD catalog from various perspectives. This begins with the central administrators team, who manage component creation, usage, and publication within their organizational catalog, and extends to individual developers who need assurance that the components in the catalog include all necessary security and vulnerability information before use. More information can be found in <a href="https://gitlab.com/groups/gitlab-org/-/epics/12713">this epic</a>.</li>
+<li>We want to allow administrators to restrict who can publish a component to the Catalog by allowing platform admin to define global policies that will enforce this behavior</li>
+<li>We want to allow administrators to restrict component domain usage to block users from using unofficial components</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12788">Enhancing the Release Process</a> - A crucial step in reaching our goal is refining the release process for adaptability. This adjustment will enable us to efficiently and effectively release any resource to the catalog.</li>
+</ul>
+<p>As we progress, these objectives highlight our commitment to delivering an upgraded catalog experience, surpassing user expectations and establishing a robust foundation for a thriving ecosystem</p>
+<p>If you are interested in improving the Catalog, please checkout the <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/407556">feedback issue</a>.</p>
+<h3 id=long-term-vision>Long term vision</h3>
+<p>We aim to enhance our CI/CD catalog by introducing paid features tailored for enterprise customers, thereby delivering additional value to their operations.</p>
+<h4 id=support-self-manage-customers>Support Self manage customers</h4>
+<p>In our effort to support all customer segments we would like to help our Self manage customers and customers in an air-gapped environment to easily consume components that exist today in our <a href="https://gitlab.com/explore/catalog">.com catalog</a>. This approach aligns with our overarching goal of driving use case adoption, where every customer, regardless of their setup, can readily explore and implement additional functionalities from our platform.</p>
+<h4 id=ci-step-as-first-class-object>CI Step as first class object</h4>
+<p>A CI step is a minimum executable unit that the user configures; CI step runs in the context of a job, which enables the composability of jobs in your CI pipelines. A step is a type of component, which means it needs to be a first-class citizen of the Catalog, this translates to the fact that all the overarching features in the Catalog (Search, release, publish, inputs) need to be applied on CI step
+The CI Steps epic can be found <a href="https://gitlab.com/groups/gitlab-org/-/epics/11535">here</a>.</p>
+<h4 id=analytics>Analytics</h4>
+<p>Our goal is to empower users with seamless control over component management across pipelines, ensuring optimal version control and project alignment. This addresses the challenge of users currently lacking visibility into component usage across various project pipelines. Our objective is to provide users with the capability to swiftly identify outdated versions and take prompt corrective actions as needed. This enhancement will foster an environment where users can efficiently manage and update components, promoting both version control precision and project alignment. More information can be found in <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/393326">this issue</a>.</p>
+<h4 id=inputs-improvments>Inputs improvments</h4>
+<p>Inputs are the recommended way to pass any parameter to a component. It has multiple benefits over the usage of variables, and since its launch in 15.11, it has been widely adopted by our users and customers. This is why we decided to continue our investment in inputs and increase its scope and flexibility. More information can be found in <a href="https://gitlab.com/groups/gitlab-org/-/epics/10603">this epic</a>.</p>
+<h4 id=verified-component-creators>Verified component creators</h4>
+<p>To increase customer confidence in components and the catalog, we aim to implement the following component designations:</p>
+<ul>
+<li>GitLab-maintained - Components that are created and maintained by GitLab (for now only the one in gitlab.com/components)</li>
+<li>Partner - Created and maintained by GitLab technolgy partners</li>
+<li>Verified creator - The namespace that published the component was verified</li>
+</ul>
+<h4 id=expanding-catalog-resource-types>Expanding catalog resource types</h4>
+<p>Expanding the GitLab CI/CD catalog to accommodate multiple resource types will broaden its scope, enhance its utility, and cater to a wider range of development and deployment needs:</p>
+<ul>
+<li>Project Templates: Introduce project templates to encapsulate entire project structures, including source code, configuration files, and predefined CI/CD configurations. This streamlines project initiation with standardized setups, reducing setup time and ensuring consistency across projects.</li>
+<li>Container Registry Integration: Integrate the catalog with the container registry to host and manage container images. This empowers teams to store, version, and share container images directly through the catalog. Users can discover and deploy container images to various environments, enhancing application deployment consistency and reliability.</li>
+<li>Integration with 3rd-Party Apps: Integrate the catalog with third-party applications to incorporate external tools and services into the development workflow seamlessly.</li>
+</ul>
+<h4 id=service-catalog>Service catalog</h4>
+<p>Introduce a service catalog to provide a centralized repository for all services within the organization. This service catalog will store key attributes, enabling engineers to:</p>
+<ul>
+<li>Swiftly troubleshoot outages</li>
+<li>Automate configurations accurately</li>
+<li>Expedite onboarding for new developers
+Additionally, automated fulfillment of these requirements will be ensured upon the creation of new services, enhancing operational efficiency and collaboration across teams.</li>
+</ul>
+<h4 id=ai-improvements>AI improvements</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/412663">Intelligent search powered by generative AI</a> - Unlike traditional keyword-based searches, Intelligent Search understands the intent behind user queries, enabling it to provide more accurate and relevant results. In addition, we can leverage AI to prompt for more information about specific inputs required by the user, which will result in configured and fine-tuned components with the relevant inputs. This could enhance the user experience and streamline the process of selecting, configuring, and using components from the catalog.</li>
+</ul>
+<h4 id=what-is-next-for-us>What is next for us</h4>
+<p>We aim to empower central administrators to manage component creation, usage, and publication within their organizational catalog. We are committed to ensuring the publishing process seamlessly integrates with the organization's standards and existing workflows. Additionally, we want to enable platform administrators with the capabilities to secure and govern the catalog and component workflows. More information can be found in <a href="https://gitlab.com/groups/gitlab-org/-/epics/14060">this issue</a>.</p>
+<h4 id=analyst-discussion>Analyst Discussion</h4>
+<ul>
+<li><a href="https://docs.google.com/document/d/1ZOEl7ycibtxN6dDGfsQlfoc-09p7GXEqDUgCCrocUFQ/edit">Notes</a> from Gartner discussion (internal)</li>
+<li>Related articles
+<ul>
+<li><a href="https://www.infoq.com/articles/devex-metrics-framework/">DevEx, a New Metrics Framework from the Authors of SPACE</a></li>
+<li><a href="https://queue.acm.org/detail.cfm?id=3595878">DevEx: What Actually Drives Productivity</a></li>
+</ul>
+</li>
+</ul>
+<h4 id=what-we-recently-completed>What we recently completed</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12153">Moving CI/CD Catalog, Inputs and Components from Beta to GA</a> - This involves upgrading the fundamental building blocks of the catalog to GA status. This shift is crucial for boosting user adoption and solidifying the catalog as a go-to resource.</li>
+</ul>
+<h3 id=best-in-class-landscape>Best in Class Landscape</h3>
+
+<p>BIC (Best In Class) is an indicator of forecasted near-term market performance based on a combination of factors, including analyst views, market news, and feedback from the sales and product teams. It is critical that we understand where GitLab appears in the BIC landscape.</p>
+<h4 id=key-capabilities>Key Capabilities</h4>
+<ol>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12153">Centralized Component Catalog:</a> Create a centralized component catalog that serves as a single source of truth for users to browse and search for pipeline components. The catalog should be easily accessible and provide comprehensive information about each component, including its purpose, usage, and documentation.</li>
+<li>Shareable and Reusable Components: Enable users to develop and publish their pipeline components to the catalog. Components should be designed to be shareable and reusable, allowing developers to easily attach them to their CI/CD configurations. This promotes collaboration and reduces duplication of effort within the organization.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/427286">Versioning: Implement versioning for components</a> to ensure users can pin their pipelines to a specific component revision. This helps in maintaining stability and allows for controlled updates.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12464">Component Abstraction and Encapsulation:</a> Encourage the development of components that abstract away complex pipeline configuration units. Components should encapsulate implementation details and provide a clear interface, enabling users to use them without needing to know the underlying details.</li>
+<li>Documentation: Provide a mechanism for users to document the usage of each component. This should include clear guidelines, examples, and best practices to help users understand how to use the components effectively.</li>
+<li>Collaborative Contribution: Foster a collaborative community where developers can contribute to the component catalog by developing and publishing their own components. Implement mechanisms for peer review, feedback, and contribution management to ensure the quality and reliability of the catalog assets.</li>
+<li>Accessibility: Design the platform to be inclusive and accessible to all community members. Provide intuitive interfaces, clear navigation, and comprehensive search capabilities, making it easy for users to find the components they need.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/407556">Continuous Improvement and Learning:</a> Establish a culture of continuous learning and improvement within the community. Encourage feedback from users, collect analytics on component usage, and iterate on the catalog based on user needs and preferences. Regularly update and enhance the catalog with new components, improved documentation, and additional features based on community contributions.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12713">Securing users workflow:</a> - we are committed to providing our users with means to ensure the security and reliability of their workflows and underlying capabilities</li>
+</ol>
+<h2 id=dogfooding>Dogfooding</h2>
+<p>The best way to understand how GitLab works is to use it for as much of your job as possible, this is why we practice <a href="https://about.gitlab.com/handbook/values/#dogfooding">dogfooding</a>. We have recently begun collaborating with these internal teams in GitLab which expressed their desire to dogfood some of our features:</p>
+<ul>
+<li>Engineering Productivity team - This effort is tracked through this <a href="https://gitlab.com/gitlab-org/quality/engineering-productivity/team/-/issues/141">collaboration issue</a>, and the team is currently identifying commonly used CI/CD templates and attempting to convert them into components. Our goal is to understand our customers' challenges when converting their templates into components.</li>
+<li>Incubation team - This effort is tracked through this <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/399480">collaboration issue</a>.</li>
+<li>Secure team - We've converted some of our existing templates such as SAST, Secret detection, and more. This effort is tracked through this <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/390656">collaboration issue</a>.</li>
+</ul>
+<h2 id=competitive-landscape>Competitive Landscape</h2>
+<p>Notable competitors in this space are:</p>
+<ul>
+<li>GitHub actions with their <a href="https://github.com/marketplace?category=&amp;query=&amp;type=actions&amp;verification=">actions marketplace</a>.</li>
+<li><a href="https://circleci.com/developer/orbs">Circle CI orbs</a>.</li>
+<li>CodeFresh also provide their users with a <a href="https://codefresh.io/steps/">CI step library</a>.</li>
+</ul>
+<p>Watch this walkthrough video of the different contribution frameworks available by these competitors:</p>
+<figure class=video_container>
+<iframe src="https://www.youtube.com/embed/7WSWGDtMD7A" frameborder=0 allowfullscreen=true> </iframe>
+</figure>
+<h2 id=glossary>Glossary</h2>
+<p>This section defines the terminology used throughout this project. With these terms we are only identifying abstract concepts, and they are subject to changes as we refine the design by discovering new insights:</p>
+<ul>
+<li><strong>Component</strong>: A reusable single pipeline configuration unit. Use them to compose an entire pipeline configuration or a small part of a larger pipeline..</li>
+<li><strong>Component Project</strong>: A component project is a GitLab project with a repository that hosts one or more components..</li>
+<li><strong>Catalog</strong>: Collaborative platform that presents the collection of CI/CD projects and components.</li>
+<li><strong>Version</strong>: The release name of a tag in the project, which allows components to be pinned to a specific revision, components of the same project and versioned together.</li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/verify/component_catalog/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/verify/component_catalog/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

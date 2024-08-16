@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Internationalization
+|
+GitLab
+</title>
+<meta content='As GitLab evolves, we&#39;d like anyone around the world to be able to use the application and contribute to it. Learn more here!' name=description />
+<meta content='As GitLab evolves, we&#39;d like anyone around the world to be able to use the application and contribute to it. Learn more here!' name='twitter:description'/>
+<meta content='As GitLab evolves, we&#39;d like anyone around the world to be able to use the application and contribute to it. Learn more here!' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Internationalization' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/foundations/import_and_integrate/internationalization/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/foundations/import_and_integrate/internationalization/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Internationalization' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/foundations/import_and_integrate/internationalization/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Internationalization
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/joshlambert'>
+<img
+src='/images/team/joshua.png'
+class=codeowner-avatar-img
+alt='Joshua Lambert'
+title='Joshua Lambert'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/m_frankiewicz'>
+<img
+src='/images/team/magdalenafrankiewicz.jpg'
+class=codeowner-avatar-img
+alt='Magdalena Frankiewicz'
+title='Magdalena Frankiewicz'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/foundations/import_and_integrate/internationalization/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/foundations/">Product Stage Direction - Foundations</a></li><li><a href="/direction/foundations/import_and_integrate/">Group Direction - Import and Integrate</a></li><li>Category Direction - Internationalization</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#internationalization" id=markdown-toc-internationalization>Internationalization</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#mission" id=markdown-toc-mission>Mission</a> <ul>
+<li><a href="#target-languages" id=markdown-toc-target-languages>Target Languages</a></li>
+</ul>
+</li>
+<li><a href="#maturity-plan" id=markdown-toc-maturity-plan>Maturity Plan</a></li>
+</ul>
+</li>
+<li><a href="#whats-next--why" id=markdown-toc-whats-next--why>What's next &amp; why</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is not planned right now</a></li>
+<li><a href="#how-you-can-help" id=markdown-toc-how-you-can-help>How you can help</a></li>
+<li><a href="#current-translation-status" id=markdown-toc-current-translation-status>Current translation status</a></li>
+</ul>
+<h2 id=internationalization>Internationalization</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/foundations/">Foundations</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-01-09</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+<p>Thanks for visiting the direction page for Internationalization in GitLab. This page belongs to the <a href="https://about.gitlab.com/handbook/product/categories/#import-and-integrate-group">Import and Integrate</a> group of the Foundations stage and is maintained by the group's Product Manager, <a href="https://gitlab.com/m_frankiewicz">Magdalena Frankiewicz</a> (<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#102;&#114;&#097;&#110;&#107;&#105;&#101;&#119;&#105;&#099;&#122;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">E-mail</a>, <a href="https://calendly.com/gitlab-magdalenafrankiewicz/45mins">Calendly</a>).</p>
+<p>This vision is a collaboration with the community and anyone can contribute. If you'd like to provide feedback or contribute to this vision, please feel free to comment directly on issues and epics at GitLab.com.</p>
+<ul>
+<li>Main <a href="https://gitlab.com/groups/gitlab-org/-/epics/2722">epic</a> for Internationalization category.</li>
+</ul>
+<h3 id=mission>Mission</h3>
+<p>As GitLab evolves, we'd like anyone around the world to be able to use the application and contribute to it. Our goal is to translate the GitLab application to many languages. To support this vision, the product should be built with internationalization in mind as the default (e.g. by continually externalizing strings).</p>
+<p>We also would like to localize GitLab for as many countries and regions as possible. To support this vision, in addition to translating the product, we should present data, such as numbers, dates, time, etc. in the locally expected format.</p>
+<h4 id=target-languages>Target Languages</h4>
+<p>The following languages have been identified as our primary targets for translations:</p>
+<ul>
+<li>Spanish</li>
+<li>Chinese (China)</li>
+<li>Russian</li>
+<li>French</li>
+<li>Japanese</li>
+<li>Portuguese (Brazil)</li>
+<li>German</li>
+<li>Korean</li>
+</ul>
+<p>These languages have been targeted due to usage (as measured on GitLab.com) and country profile (large number of native speakers and a strong domestic software development industry) however we will continue to support any language community that wants to translate GitLab.</p>
+<h3 id=maturity-plan>Maturity Plan</h3>
+<p>Internationalization is a <strong>non-marketable category</strong>, and is therefore not assigned a maturity level. However, we use <a href="https://about.gitlab.com/direction/maturity/">GitLab's Maturity framework</a> to visualize the current state of the category and discuss the future roadmap.</p>
+<p>The Internationalization category is currently a <strong>Viable</strong> feature in GitLab. Most of the strings are externalized and available for translations. Several languages are mostly translated (Japanese, Chinese, Ukrainian, Spanish). New translations are being merged on a <a href="https://gitlab.com/groups/gitlab-org/-/epics/3571">monthly cadence</a>.</p>
+<p>There is currently no ongoing work on the <strong>Complete</strong> maturity level for Internationalization. This would include <a href="https://gitlab.com/groups/gitlab-org/-/epics/4688">externalizing</a> all the strings and <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/19896">automating</a> most of the process for merging new translations.</p>
+<h2 id=whats-next--why>What's next &amp; why</h2>
+<p>Internationalization is a community-driven effort maintained by the <a href="https://about.gitlab.com/handbook/product/categories/#import-and-integrate-group">Import and Integrate group</a>. The Import and Integrate group is currently planning to only work on critical bugs and security fixes for existing Internationalization features.</p>
+<p>While no Internationalization improvements are being actively prioritized in the Import and Integrate group, we intend to continue with these key commitments in 2024:</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/3571">Regular monthly import of the latest translations</a>. We have started importing the latest translations from Crowdin on a regular monthly cadence in April 2020 and intend to continue this process until it is fully automated and continuous.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2722">Support for the translation community</a>. We have actively engaged the translation community in order to remove roadblocks for contributing to our translation effort. This includes providing active guidance on translation decisions, awarding swag to star contributors and encouraging language communities to increase their translation levels.</li>
+<li>We encourage and actively support code contributions from the community. If you are interested in contributing to the translation and localization features, please consider issues from <a href="https://gitlab.com/gitlab-org/gitlab/-/issues?sort=updated_desc&amp;state=opened&amp;label_name[]=Category:Internationalization&amp;label_name[]=Seeking+community+contributions">this list</a>, which directly support GitLab's internationalization efforts.</li>
+</ul>
+<p>In 16.7 a community member contributed, so that now it's possible to <a href="https://about.gitlab.com/releases/2023/12/21/gitlab-16-7-released/#customize-time-format-for-display">customize time format for display</a>!</p>
+<h2 id=what-is-not-planned-right-now>What is not planned right now</h2>
+<p>These feature have been discussed, but there are currently no plans to work on them:</p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/4298">Confirm that all strings in GitLab are externalized</a>. We've made significant improvements in our ability to detect non-externalized strings; we need to finish this work and are hold a hackathon to complete string externalization in the application.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/19896">Automate merge of Crowdin translations</a>. We need to implement the required changes to remove any manual steps from the Crowdin translations merge process.</li>
+</ul>
+<p>The translation of our documentation and contribution guidance has been discussed on several occasions. However, we currently <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/15471#note_214823504">do not have a goal to include GitLab documentation</a> into our crowd-sourced translation effort. While this would be a valuable resource for our international users, we do not feel that we can ensure the quality, nor the timely updates to our documentation.</p>
+<p>Finally, no significant changes to our Crowdin program are currently planned. Although we may consider hiring a translation company to translate GitLab in the future, internationalization remains a community-driven effort that can only succeed with the involvement of the wider community.</p>
+<h2 id=how-you-can-help>How you can help</h2>
+<p>We're always looking for contributions to help us translate GitLab. <a href="https://docs.gitlab.com/ee/development/i18n/#how-to-contribute">Here's how you can help</a>:</p>
+<ol>
+<li><a href="https://docs.gitlab.com/ee/development/i18n/externalization.html">Externalize</a> strings in GitLab. Before we can translate a string, we first need to mark it so the application is able to retrieve an appropriate translation in another language.</li>
+<li>Contribute translations at <a href="https://translate.gitlab.com/">Crowdin</a>. You can help contribute new translations to a variety of languages and vote up/down on existing translations.</li>
+<li>Become a <a href="https://docs.gitlab.com/ee/development/i18n/proofreader.html">proofreader</a>. All translations are read by a <a href="https://docs.gitlab.com/ee/development/i18n/proofreader.html">proofreader</a> before being accepted, and we're always looking for help across a number of languages.</li>
+</ol>
+<h2 id=current-translation-status>Current translation status</h2>
+<p>This is the overall translation level for all target languages:</p>
+<p><a href="https://translate.gitlab.com/"><img src="https://badges.crowdin.net/gitlab-ee/localized.svg" alt="Translation Status" title="Current Status"/></a></p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/foundations/import_and_integrate/internationalization/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/foundations/import_and_integrate/internationalization/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

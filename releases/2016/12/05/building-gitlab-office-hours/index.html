@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Building GitLab Recap & Recording
+|
+GitLab
+</title>
+<meta content='A conversational take on what&#39;s new from GitLab 8.14' name=description />
+<meta content='A conversational take on what&#39;s new from GitLab 8.14' name='twitter:description'/>
+<meta content='A conversational take on what&#39;s new from GitLab 8.14' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Building GitLab Recap &amp; Recording' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2016-12-05-building-gitlab-office-hours.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2016/12/05/building-gitlab-office-hours/' property='og:url'/>
+<meta content="https://about.gitlab.com" property="og:image">
+<meta content="https://about.gitlab.com" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Building GitLab Recap &amp; Recording' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2016/12/05/building-gitlab-office-hours/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Dec 5, 2016
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#EricaLindberg_">Erica Lindberg</a>
+<a href="https://twitter.com/EricaLindberg_"><span>&nbsp;</span>
+<span class=author-twitter>
+<i class='fab fa-twitter'></i>
+</span>
+</a></span>
+<h1>
+Building GitLab Recap & Recording
+</h1>
+<p class=description>
+A conversational take on what's new from GitLab 8.14
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/blogimages/facebook-open-office-hours-webcast.png);'></div>
+<div class=content>
+<p>Following the release of <a href="/releases/2016/11/22/gitlab-8-14-released/">GitLab 8.14</a>, VP of Product <a href="https://twitter.com/Jobvo">Job van der Voort</a>
+hosted a YouTube live stream to discuss how our team is working to realize GitLab's vision and
+some of the awesome features we just released. Check out the video and highlights below.</p>
+<figure class=video_container>
+<iframe src="https://www.youtube.com/embed/njP8Wvp45o0" frameborder=0 allowfullscreen=true></iframe>
+</figure>
+<h2 id=highlights>Highlights</h2>
+<h3 id=107-gitlabs-vision>1:07 GitLab's Vision</h3>
+<p>"When we <a href="/2016/09/13/gitlab-master-plan/">announced our series B round in September</a>, we said, "Ok, what we're going to do is we're going to try
+and ship the whole <a href="https://docs.gitlab.com/ee/university/training/gitlab_flow.html">GitLab flow</a>, going from idea all the way to production and we're going to ship it by the end of the year."</p>
+<h3 id=242-what-is-review-apps>2:42 What is Review Apps?</h3>
+<p>"When you do a merge request, let's say you have some change you want to make on the website.
+In the past, you would create a merge request and then somebody would check out the code; maybe
+you have <a href="/features/continuous-integration/">continuous integration</a> running automatically to see if those tests past. Now, if
+you wanted to actually <em>see</em> the changes, and play around with them, you would still have to
+checkout the branch for the merge request locally and run it to your local development environment.</p>
+<p>With <a href="/2016/11/22/introducing-review-apps/">Review Apps</a>, what happens is that rather than you having to do anything,
+on every single merge request we automatically create a new environment. In that environment,
+we run a full, live environment."</p>
+<h3 id=457-time-tracking-beta-released-for-gitlab-enterprise-edition>4:57 Time Tracking Beta released for GitLab Enterprise Edition</h3>
+<p>"What you can do with GitLab 8.14 Enterprise Edition is you can set - for each issue
+that you're working on - an estimate and you can set how you are spent your time.
+You don't even need to do this all at once. You can just set an estimate at the beginning,
+and as you spend time, you can just type a comment with a slash command for time spent."</p>
+<h3 id=704-mattmost-chat-commands>7:04 Mattmost Chat Commands</h3>
+<p>"As the whole world started hanging out in chat, we wanted to bridge the gap
+from chat to GitLab. In GitLab 8.14, for the first time we released chat slash
+commands."</p>
+<h3 id=850-but-wait-theres-more>8:50 But wait, there's more</h3>
+<p>"There's a few small feautures that we added that I think are extremely cool."
+(Seriously, go find out!)</p>
+<h3 id=1023-ask-me-anything>10:23 Ask me anything</h3>
+<p>10:38 Is there a mobile handbook of GitLab for the Kindle?</p>
+<p>11:02 What are your thoughts on the short term possibilities of NLP, chat,
+Conversational Development, and local development data sets?</p>
+<p>12:38 How do you decide what to work on each release?</p>
+<p>15:29 Feature proposal to improve labels and issues</p>
+<p>18:40 What kind of data do you receive from on-premise GitLab instances? What kind of
+data insights can you obtain from this group of users?</p>
+<p>21:22 Are there any downsides of only planning a few months ahead?</p>
+<h2 id=upcoming-live-streams>Upcoming Live Streams</h2>
+<p><img src="/images/blogimages/facebook-inside-gitlab-webcast-ad.png" alt="Inside GitLab"/></p>
+<h2 id=1-why-we-chose-vuejs>1. Why We Chose Vue.js</h2>
+<p><a href="https://www.youtube.com/watch?v=ioogrvs2Ejc">Watch the recording</a></p>
+<p>A couple of months ago, <a href="https://twitter.com/jakecodes">Jacob Schatz</a>, Front End Lead at GitLab, published a post
+detailing <a href="/2016/10/20/why-we-chose-vue/">why we chose Vue.js</a> as our JavaScript framework. Since,
+this post has spurred tons of conversation on the topic. To facilitate the conversation
+further, GitLab Front End engineer Phil Hughes presented a front end update
+and host a Q&amp;A session along with Jacob.</p>
+<h2 id=2-monitoring-distributed-systems-with-prometheus>2. Monitoring Distributed Systems with Prometheus</h2>
+<p><a href="https://www.youtube.com/watch?v=WzAzm0C15W8">Watch live</a> on <strong>December 14 at 9am PT/5pm GMT.</strong>
+<a href="https://page.gitlab.com/20161207_PrometheusWebcast_LandingPage.html">Sign up to receive a reminder and the recording.</a></p>
+<p>Infrastructure Lead <a href="https://twitter.com/psczg">Pablo Carranza</a> will give a behind-the-scenes
+look at GitLab's Prometheus set up, explain how we plan to ship Prometheus with
+GitLab CE, and give a tutorial on how you can set up your own dashboard.
+A live chat Q&amp;A will follow the presentation. See more details and sign up for
+a reminder <a href="https://page.gitlab.com/20161207_PrometheusWebcast_LandingPage.html">here</a>.</p>
+<p>For more information on the topic, read Pablo's blog post on <a href="/blog/2016/11/10/why-choose-bare-metal/">how we knew it was time to leave the cloud</a>.</p>
+<h2 id=3-designing-gitlabs-user-experience-with-ux-lead-allison-whilden>3. Designing GitLab's User Experience with UX Lead Allison Whilden</h2>
+<p><a href="https://www.youtube.com/watch?v=Lxy1jET5pww">Watch live</a> on <strong>December 15 at 10am PT/6pm GMT.</strong> <a href="https://page.gitlab.com/UXLiveStream_LandingPage.html">Sign up to receive
+a reminder and the recording.</a></p>
+<p>User experience (UX) affects every interaction a user has with a product. Because
+of this, it can literally make or break the adoption of a website, or application.
+UX designers have a really big job to do as they dig into the who, the what,
+the why, and the how of essentially everything that happens within a platform.</p>
+<p>How does GitLab's UX team work to solve the challenge of creating an application
+that has so many different types of users and releases a new version of its
+product every month? Join GitLab's UX Lead, Allison Whilden, and her team, as
+they discuss their process, the big challenges they face and how they look to solve them.</p>
+
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=Building+GitLab+Recap+%26+Recording+via+%40EricaLindberg_&amp;url=https://about.gitlab.com/releases/2016/12/05/building-gitlab-office-hours/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+Building GitLab Recap & Recording
+via @EricaLindberg_
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2016/12/05/building-gitlab-office-hours/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2016/12/05/building-gitlab-office-hours/&amp;text=Building GitLab Recap &amp; Recording' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2016/12/05/building-gitlab-office-hours/&amp;title=Building GitLab Recap &amp; Recording&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2016/12/05/building-gitlab-office-hours/&amp;t=Building GitLab Recap &amp; Recording' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2016/12/01/gitlab-8-dot-14-dot-2-released/" title="GitLab 8.14.2 released"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.14.2 released
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2016/12/05/cve-2016-9469/" title="GitLab 8.14.3, 8.13.8, and 8.12.11 Released"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.14.3, 8.13.8, and 8.12.11 Released
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2016-12-05-building-gitlab-office-hours.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2016-12-05-building-gitlab-office-hours.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

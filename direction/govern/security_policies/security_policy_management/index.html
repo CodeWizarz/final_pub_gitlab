@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Security Policy Management
+|
+GitLab
+</title>
+<meta content='GitLab&#39;s Security Policy Management category provides unified policy and alert orchestration capabilities that span across the breadth of GitLab&#39;s security offerings.' name=description />
+<meta content='GitLab&#39;s Security Policy Management category provides unified policy and alert orchestration capabilities that span across the breadth of GitLab&#39;s security offerings.' name='twitter:description'/>
+<meta content='GitLab&#39;s Security Policy Management category provides unified policy and alert orchestration capabilities that span across the breadth of GitLab&#39;s security offerings.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Security Policy Management' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/govern/security_policies/security_policy_management/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/govern/security_policies/security_policy_management/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Security Policy Management' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/govern/security_policies/security_policy_management/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target=".qnav">
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Security Policy Management
+</h1>
+</div>
+</div>
+<div class="wrapper sidebar-layout-wrapper clearfix">
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/g.hickman'>
+<img
+src='/images/team/granthickman.png'
+class=codeowner-avatar-img
+alt='Grant Hickman'
+title='Grant Hickman'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/sam.white'>
+<img
+src='/images/team/samuelwhite.png'
+class=codeowner-avatar-img
+alt='Sam White'
+title='Sam White'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+</a>
+</div>
+</div>
+</aside>
+<div class=" container md-page">
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/govern/">Product Stage Direction - Govern</a></li><li><a href="/direction/govern/security_policies/">Group Direction - Security Policies</a></li><li>Category Direction - Security Policy Management</li>
+</ol>
+<div class="hidden-md hidden-lg">
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/g.hickman'>
+<img
+src='/images/team/granthickman.png'
+class=codeowner-avatar-img
+alt='Grant Hickman'
+title='Grant Hickman'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/sam.white'>
+<img
+src='/images/team/samuelwhite.png'
+class=codeowner-avatar-img
+alt='Sam White'
+title='Sam White'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+</a>
+</div>
+</div>
+</div>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#govern" id=markdown-toc-govern>Govern</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#security-policies" id=markdown-toc-security-policies>Security Policies</a></li>
+<li><a href="#security-approvals" id=markdown-toc-security-approvals>Security Approvals</a></li>
+<li><a href="#license-approvals" id=markdown-toc-license-approvals>License Approvals</a></li>
+<li><a href="#compliance-approvals" id=markdown-toc-compliance-approvals>Compliance Approvals</a></li>
+</ul>
+</li>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and Themes</a></li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a> <ul>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a></li>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is Not Planned Right Now</a></li>
+</ul>
+</li>
+<li><a href="#long-term-vision" id=markdown-toc-long-term-vision>Long-term Vision</a></li>
+<li><a href="#best-in-class-landscape" id=markdown-toc-best-in-class-landscape>Best in Class Landscape</a> <ul>
+<li><a href="#github" id=markdown-toc-github>GitHub</a></li>
+<li><a href="#synopsys" id=markdown-toc-synopsys>Synopsys</a></li>
+</ul>
+</li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a></li>
+<li><a href="#pricing-and-packaging" id=markdown-toc-pricing-and-packaging>Pricing and Packaging</a></li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst Landscape</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=govern>Govern</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/govern/">Govern</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">Minimal</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-05-31</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+
+<p>Thanks for visiting this category direction page on Security Policy Management in GitLab. This page belongs to the Security Policies group of the Govern stage and is maintained by Grant Hickman (<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#060;&#103;&#104;&#105;&#099;&#107;&#109;&#097;&#110;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;&#062;">ghickman@gitlab.com</a>).</p>
+<p>This direction page is a work in progress, and everyone can contribute. We welcome feedback, bug reports, feature requests, and community contributions.</p>
+<ul>
+<li>Please comment and contribute in the linked <a href="https://gitlab.com/gitlab-org/gitlab/-/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=Category%3ASecurity%20Policy%20Management">issues</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/4592">epics</a> on this page. Sharing your feedback directly on GitLab.com is the best way to contribute to our strategy and vision.</li>
+<li><a href="https://calendly.com/g-hickman">Schedule a video call</a> with the Security Policies Product Manager. If you're a GitLab user and have direct knowledge of your need for security policies, we'd especially love to hear from you.</li>
+<li><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#060;&#103;&#104;&#105;&#099;&#107;&#109;&#097;&#110;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;&#062;">Email the Security Policies Product Manager, Grant</a>.</li>
+<li>Can't find an issue? Make a <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/new?issuable_template=Feature%20proposal%20-%20detailed">feature proposal</a> or a <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/new?&amp;issuable_template=Bug">bug report</a>. Please add the appropriate labels by adding this line to the bottom of your new issue <code>/label ~"devops::govern" ~"Category:Security Policy Management" ~"group::security policies"</code>.
+</li>
+<li>Consider signing up for <a href="https://about.gitlab.com/community/gitlab-first-look/">First Look</a>.</li>
+</ul>
+<p>We believe <a href="https://about.gitlab.com/company/mission/#contribute-to-gitlab-application">everyone can contribute</a> and so if you wish to contribute <a href="https://about.gitlab.com/community/contribute/">here is how to get started</a>.</p>
+<h3 id=overview>Overview</h3>
+
+<p>Security Policy Management is an overlay category that provides security and compliance policy enforcement across the DevSecOps lifecyle. Security Policy Management gives organizations a central location to globally enforce policies to achieve a few core jobs:</p>
+<ol>
+<li>Ensuring that security scanners run when and where necessary in development projects.</li>
+<li>Helping security and compliance teams cut through the volume of vulnerabilities to identify what is actionable in terms of security risk or compliance risk.</li>
+<li>Enabling compliance teams to implement compliance controls that can be enforced across an organization's GitLab instance, while leveraging our Compliance center and audit events to track compliance.</li>
+<li>Engaging the right cross-functional team members within the DevSecOps lifecycle to address challenges while reducing the impact to velocity.</li>
+<li>Blocking risky changes that may impact production code by requiring support and oversight to fix vulnerabilities.</li>
+</ol>
+<p>Security policies will continue to address core use cases across the lifecycle, such as defining enforcement around CI component usage, blocking risks related to dependency/package management, and automation of vulnerability management workflows to address security and compliance controls.</p>
+<p align=center>
+<img height=500 src="/images/direction/govern/devsecops-lifecycle-policies.png" alt="Potential areas of enforcement across the lifecycle"/>
+</p>
+<p>GitLab was recently named as a <a href="https://about.gitlab.com/analysts/gartner-ast22/">Challenger in the 2022 Magic Quadrant for Application Security Testing</a>. As highlighted by Gartner, "It's not enough to automate the process of scanning. When and how policies are applied, and how exceptions are handled, also needs to be automated to bring consistency and auditability. GitLab provides a broad range of policies and common controls for compliance." With GitLab's Security Policy Management, you can leverage automation to efficiently improve your security posture and gain some clarity amidst the chaos.</p>
+<details>
+<summary>Current Capabilities</summary>
+<h4 id=security-policies>Security Policies</h4>
+<p>Security policies allow users to use a single, simple UI to define rules and actions that are then enforced. Two types of policies are currently supported: scan execution policies and merge request approval policies. Security policies themselves are fully audited and can be configured to go through a two-step approval process before any changes are made. All policies are supported at the group, sub-group, and project levels, and you can enforce policies across your entire GitLab instance or namespace.</p>
+<p><strong>Scan Execution Policies</strong> allow users to require vulnerability scans to be run, either on a specified schedule or as part of a pipeline job. Currently we support requiring the execution of <a href="https://docs.gitlab.com/ee/user/application_security/policies/scan-execution-policies.html">SAST, Secret Detection, Container Scanning, Dependency Scanning, and DAST scans</a>. We do not plan on adding support for License Compliance as its functionality is <a href="https://gitlab.com/groups/gitlab-org/-/epics/8072">planned to be merged into Dependency Scanning</a> (<a href="https://about.gitlab.com/releases/2023/02/22/gitlab-15-9-released/#new-license-compliance-scanner">now supported for SaaS behind feature flag</a>). We do intend to add support for Fuzzing; however, this is not on our near-term roadmap.</p>
+<p><strong>Merge Request Approval Policies</strong> allow users to enforce approval on a merge request when policy conditions are violated. Currently criteria related to both security and license scanners are supported. For example, users can require approval on merge requests that introduce newly-detected, critical vulnerabilities into their application. Additionally, you may enforce and override particular project settings, such as blocking push/force pushing and ensuring that approvals are now allowed by a merge request author or committer on the MR. Merge request approval policies have support multiple different rules: Security approvals, License approvals, and Compliance Approvals (via the "Any merge request" option).</p>
+<p><a href="https://docs.gitlab.com/ee/user/application_security/policies/">Learn more</a></p>
+<h4 id=security-approvals>Security Approvals</h4>
+<p align=center>
+<img src="/images/direction/govern/security-approvals.png" alt="Security Approvals"/>
+</p>
+<p>Security approvals allow users to select the conditions that must be met to trigger the security approval rule, including which branches, scanners, vulnerability count, and vulnerability severity levels must be present in the MR. If all conditions are met, then the merge request is blocked unless an eligible user approves the MR. This extra layer of oversight can serve as an enforcement mechanism as part of a strong security compliance program.</p>
+<p>Security approvals are a type of merge request approval policy and can be configured in the <strong>Security &amp; Compliance &gt; Policies</strong> page.</p>
+<p><a href="https://docs.gitlab.com/ee/user/application_security/policies/scan-result-policies.html">Learn more</a></p>
+<h4 id=license-approvals>License Approvals</h4>
+<p align=center>
+<img src="/images/direction/govern/license-approvals.png" alt="License Approvals"/>
+</p>
+<p>License approvals allow users to select the conditions that must be met to trigger the license approval rule, including which licenses are expressly allowed or prohibited from being present in the MR. If all conditions are met, then the merge request is blocked unless an eligible user approves the MR. This extra layer of oversight can serve as an enforcement mechanism as part of a strong legal compliance program.</p>
+<p>License approvals are a type of merge request approval policy and can be configured in the <strong>Security &amp; Compliance &gt; Policies</strong> page.</p>
+<p><a href="https://docs.gitlab.com/ee/user/compliance/license_approval_policies.html">Learn more</a></p>
+<h4 id=compliance-approvals>Compliance Approvals</h4>
+<p>By selecting "Any merge request" in the policy rules, you can enforce approvals on any merge request, regardless of any security scan or license results. This allows for enforcement of the "four eyes principle", which ensures that no code changes that will ultimately end up in a production environment can be merged without approval from at least two different people. Compliance requirements may vary, but this policy rule allows for enforcement of one or more approvals on a merge request that meets the specified criteria.</p>
+<p><a href="https://docs.gitlab.com/ee/user/application_security/policies/scan-result-policies.html#any_merge_request-rule-type">Learn more</a></p>
+</details>
+<h3 id=strategy-and-themes>Strategy and Themes</h3>
+
+<p>The traditional approach to application security was to enable scanners, detect all the vulnerabilities, then have AppSec triage vulnerabilities in a vacuum. Triaging large volumes of vulnerabilities is too noisy. It's a significant effort to identify what is actionable, filter out false positives, and determine when dependencies can be fixed and when the security or compliance team needs to be engaged to support.</p>
+<p>In addition to this outdated and siloed approach, companies are required to navigate toolchain sprawl, connecting many different systems while creating controls at each different connection point. The more tools one has, the more connections are required and the more fickle they are to manage and secure.</p>
+<p>GitLab offers a complete DevSecOps platform <a href="https://about.gitlab.com/handbook/product/single-application/">as a single application</a> with integrated security and compliance controls that ensure visibility, auditability, and enforcement across the SDLC. This modern approach builds Security into the process and encourages collaboration, increasing velocity and improving innovation. And, while other solutions require you to stitch together tools and create complex systems to enforce policies, GitLab's Security Policy Management enables organizations to maintain global oversight while establishing the separation of duties between security, compliance, legal teams, and engineering departments. Security Policies feature also grants development teams a level of flexibility over their processes that ensure stable, reliable, and quality production-quality code. As businesses typically struggle with troubling gearing ratios between software engineers to security engineers (<a href="https://engineering.gusto.com/security-is-testing/#:~:text=At%20many%20organizations%2C%20there%20is,software%20engineers%20to%20security%20engineers.">20:1 or worse</a>), GitLab's tools can help enterprises <a href="https://about.gitlab.com/free-trial/devsecops/">automate and manage security and compliance risk at scale</a>.</p>
+<details>
+<summary>Critical Workflows in DevSecOps</summary>
+<ul>
+<li>The points between Dev and Sec are critical and underserved in our market today. Efficiently managing risk and collaborating between these two domains to delicately balance business requirements is an area that can provide immense value for our customers, especially those in highly regulated industries. These overlapping concerns include controlling what code is merged into production, identifying vulnerabilities and risk, and determining when this impacts how production code is developed and deployed.</li>
+<li>The coordination between Sec and Ops is also lacking. Ops may manage golden images, automate deployment through IaC, and have complex steps to ensure software products are delivered to customers in a way that is stable and reliable and aligns with current legal and compliance requirements. Security and compliance teams must be acutely aware of CVEs, CWEs, and other common vulnerability exposures to ensure deployment processes that directly impact business revenue are not impacted. This, too, requires overlapping concerns and collaboration between approved code being merged to production, and the deployment pipelines that manage building images, pulling in packages and deploying SaaS containers cutting packaged software releases.</li>
+</ul>
+</details>
+<details>
+<summary>How Security Policies help GitLab Win</summary>
+<ul>
+<li>Security Policies aligns with our efforts in <a href="https://about.gitlab.com/direction/#drive-adoption-of-gitlab-ultimate">driving adoption of GitLab Ultimate</a>, as we're satisfying a market need that truly differentiates GitLab as a DevSecOps platform.</li>
+<li>Security Policies is core to one of our FY24 Product Investment themes,<a href="https://about.gitlab.com/direction/#advanced-security-and-compliance">"Advanced security and compliance"</a>.</li>
+<li>Investment in Security Policies is strategic as we focus on <a href="https://about.gitlab.com/direction/#depth-over-breadth">depth over breadth</a> in the Security section and Govern stage to provide robust solutions that address <a href="https://internal.gitlab.com/handbook/product/devsecops-adoption/priorities/">DevSecOps adoption challenges (internal)</a> (also highlighted as one of our <a href="https://about.gitlab.com/company/yearlies/#fy24-yearlies">FY24 Yearlies</a>). Security Policies and the greater Security section vision will help reduce churn/contraction by delivering predictable high value to customers.</li>
+</ul>
+</details>
+<details>
+<summary>Key Security Policy Themes</summary>
+<p>GitLab's Security and Compliance Policy Management covers the many touch points across the DevSecOps platform to reduce risk and allow the business to operate efficiently. The top-level themes that will help our customers succeed are:</p>
+<ul>
+<li>Robustness of Merge Request Approval Policies, Scan Execution Policies, and Pipeline Execution Policides which ensure security analyzers and compliance jobs/scripts run when and where they must and that code is reviewed thoroughly to reduce the risk of introducing new vulnerabilities</li>
+<li>Global and fine-grained management of policies, which will allow Organizations to manage policies at an Organization level, with enforcement flowing down through groups, subgroups, and projects</li>
+<li>Efficient and intelligent security orchestration will automate the steps required to configure and enforce scanners while also making pipelines more efficient, reducing CI minutes, and increasing developer productivity</li>
+<li>Broader policy enforcement that better serves our diverse customers and satisfies diverse security and compliance requirements</li>
+<li>Elegant cross-functional security, compliance, and developer workflows that encourage collaboration across domains</li>
+<li>Tighter controls that mitigate circumvention without blocking developers</li>
+<li>More customizable policy rules that support use cases across scanners, such as enabling support for Custom CI Variables in our UI Rule mode and Custom SAST/Secret Detection rulesets.</li>
+<li>UX Improvements to eliminate or abstract away Security Policy Projects to provide more customized workflows for Security and Compliance professionals</li>
+</ul>
+</details>
+<h3 id=1-year-plan>1 year plan</h3>
+
+<p>See our <a href="https://about.gitlab.com/direction/govern/security_policies/">prioritized roadmap here</a>.</p>
+<h4 id=what-we-are-currently-working-on>What we are currently working on</h4>
+
+<p>We're working to mature our support for enforcing custom CI across projects. While today we have an experiment – the Pipeline Execution Action for Scan Execution Policies, based on customer feedback we will be releasing the new capability within a new policy type – the Pipeline Execution Policy type. This new policy type will support custom CI YAML input, which may be configured in a remote compliance yaml file and managed from the <code>policy.yml</code>.</p>
+<p>As we mature these features we are adding the following capabilities:</p>
+<ul>
+<li>A mechanism to ensure all jobs enforced through the pipeline execution action are unique and enforceable (such as using an index pattern in the job naming for jobs enforced).</li>
+<li>Dynamic stage management, defining a new concept of "reserved" stages which may only be used by jobs created by policies.</li>
+<li>Established policy limits for this new policy type, that will allow us to confidently scale.</li>
+<li>UX improvements for creating custom yaml via the pipeline execution policy.</li>
+<li>Proper handling of global variables and rules.</li>
+</ul>
+<p>Additionally, we're working on:</p>
+<ol>
+<li>Support for component filters in License Approval Policies</li>
+<li>Improving our database performance</li>
+<li>Adding support for choosing <code>.latest</code> templates in scan execution policies</li>
+</ol>
+<h4 id=what-is-next-for-us>What is next for us</h4>
+
+<ol>
+<li>Performance enhancements, performance testing, and as a result increased limits for merge request approval policies and scan execution policies.</li>
+<li>More flexible trigger definitions in scan execution policies.</li>
+<li>Usability improvements for seamlessly linking/scoping policies during policy creation.</li>
+<li>More capabilities for defining approvers, including support for multiple distinct approval actions, custom roles, and code/project-specific approvers.</li>
+<li>Abstraction of security policy projects for simpler policy management.</li>
+<li>Enabling other teams cross-functionally to introduce new policy types, such as Auto-dismiss and Auto-resolve policies for vulnerability management.</li>
+</ol>
+<h4 id=what-we-recently-completed>What we recently completed</h4>
+
+<ol>
+<li>Ability to toggle merge request approval policies to <a href="https://gitlab.com/groups/gitlab-org/-/epics/10816">fail open or fail closed</a>.</li>
+<li>Surfacing <a href="https://gitlab.com/groups/gitlab-org/-/epics/12191">policy violations</a> via the security policy bot, within MR comments.</li>
+<li>Violations detected by merge request approval policies, along with additional details, are now surfaced in <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/433403">bot comments</a> for MRs evaluated by merge request approval policies.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5510">Security Policy Scopes</a> were released as generally available in 16.11.</li>
+<li>We've made improvements to <a href="https://gitlab.com/groups/gitlab-org/-/epics/11847">align scan result policy data with the MR Widget</a>, ensuring more accurate and expected results when blocking merge requests.</li>
+<li>We've enabled Security Policy Scopes and the Pipeline Execution Action as experiments (enabled through group settings).</li>
+</ol>
+<h4 id=what-is-not-planned-right-now>What is Not Planned Right Now</h4>
+
+<p>We do not plan to be a full-featured SOAR solution capable of aggregating, correlating, and enriching events from multiple security vendors. We intend to remain focused on providing security management and security orchestration for the security tools that are part of the GitLab product only.</p>
+<p>We do not plan to support Network Policies (Container Host Security and Container Network Security). We previously offered this capability but learned that challenges related to GTM, pricing &amp; packaging, and personas led to low adoption. This required a shift in our strategy. More details around the decision can be found <a href="https://gitlab.com/gitlab-com/Product/-/issues/3600">in this internal issue</a>.</p>
+<p>We are not building a workflow engine for broad automation use cases in GitLab, but are focused on security and compliance personas.</p>
+<h3 id=long-term-vision>Long-term Vision</h3>
+<p>In the long-term, we will add support for additional policy types that span the DevSecOps lifecycle, including Vulnerability Management, CI Component Governance, Dependency Firewall, and Insider Threat policies. Security and compliance teams will be able to leverage security policies to create controls that reliably ensure enforcement where it matters most.</p>
+<p>See below for a detailed list of opportunities we'll be exploring for security policy types in the long-term, along with the current status of each policy type.</p>
+<iframe width="100%" height=700 style="border: none; display: block; margin: 0 auto;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS5h5Zwh0LyyehKVVFPfJ5vG9GV4CJKVIRdJlPSUjGjJ2hhQZo_y7oII57H6kQjw5JzBaEu2ZuP4B5C/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<p>Integration between security policies and our compliance feature (including compliance frameworks and standards adherence reporting), will bridge the gap between compliance observability and reporting and security and compliance enforcement. Policies can be enforced against projects, linked up to compliance reporting, and used to remediate compliance violations. By leveraging security policies, alongside GitLab compliance features,</p>
+<p>Enterprise users will be able to simplify the process of creating global policies across their organization (from the Organization layer in GitLab), to manage security and compliance risk with ease, to gain insight into the health status of their organization, and to granularly enforce policy rules only where it's appropriate for the business.</p>
+<p>We'll further improve upon the user experience of policies by reducing reliance on the <code>policy.yml</code> and reducing the number of steps required to create a policy (while maintaining benefits of policy-as-code).</p>
+<p>As we work to mature our Security Policy Management category, we'll be providing additional support for gauging the impact (blast radius) a policy will have before it is deployed. Audit mode will give teams a method to roll out policies and observe before enforcing. Impact assessments will help users understand how many projects will be impacted and expected behavior before enforcing a policy.</p>
+<p>For each policy type, we'll work to provide deep capability that helps users filter and customize rules to address most common use cases and requirements for security and compliance enforcement.</p>
+<p>We'll also work cross-functionally with teams in GitLab to provide more visibility into how policies are applied and affect other features, such as how policies may affect project settings or modify behaviors in pipelines. We'll also work to improve context and onboarding, making it easier to enable policies by default through compliance frameworks, or identify where policies should be applied.</p>
+<p>And lastly, policies will continue to grow to become more sophisticated and intelligent, leveraging the insight of an integrated DevSecOps platform to make decisions and enforce behaviors efficiently, contextually, and non-destructively. Policies will ensure that security and compliance are met globally, while increasing rather than disrupting velocity.</p>
+<h3 id=best-in-class-landscape>Best in Class Landscape</h3>
+
+<p>BIC (Best In Class) is an indicator of forecasted near-term market performance based on a combination of factors, including analyst views, market news, and feedback from the sales and product teams. It is critical that we understand where GitLab appears in the BIC landscape.</p>
+<details>
+<summary>BIC Capabilities </summary>
+
+<p>Security Policy Management enables global control of settings across an organizations technology assets and can extend to the processes and procedures used to enforce particular policies.</p>
+<p>For GitLab, our focus is on supporting DevSecOps personas, which specifically involves AppSec, Security Operations, Compliance, and InfraSec personas. Each of these users is tasked with ensuring a business' applications are secure and compliant by preventing or reducing the risk of introducing vulnerabilities into production code and live applications. This involves securing each step of the SDLC as well as ensuring proper access and compliance within GitLab itself.</p>
+<p>The most critical capabilities for a best-in-class DevSecOps Policy Management solution are as follows:</p>
+<ul>
+<li>The ability to easily manage and enforce policies globally across all relevant development projects.</li>
+<li>Two person approval of code changes, or change management workflows to reduce risk of introducing vulnerabilities.</li>
+<li>Complete assurance that policies cannot be circumvented.</li>
+<li>Audit capabilities to record and produce proof of any policy changes.</li>
+<li>Granular configuration of policies to allow businesses to filter out false positives, non-material findings, or irrelevant changes.</li>
+<li>Enforcement of security scanning in development projects.</li>
+<li>Enforcement of various project settings and configurations, such as push rules.</li>
+<li>A mechanism for ensuring production environments can only be deployed from the default/protected branch (which is presumed secure/compliant from policies above).</li>
+<li>Thorough alerting and notification capabilities to communicate high-risk changes, violations, or other policy related data into the communication tool of choice.</li>
+<li>Risk-based Vulnerability Management workflows.</li>
+<li>Insider threat policies to identify and protect against potential attacks.</li>
+<li>Pipeline health policies that identify malicious or anomalous network/system calls.</li>
+</ul>
+</details>
+<details>
+<summary>BIC Roadmap</summary>
+
+<ol>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6826">Additional filters for merge request approval policies</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9704">Compliance enforcement of security policies</a></li>
+</ol>
+</details>
+<details>
+<summary>Top 2 BIC Competitive Solutions</summary>
+
+<p>Security Policy Management at GitLab is in a category of its own. It's not currently possible to fully orchestrate the enforcement of security policies across the entire Software Development Lifecycle in the way you can with GitLab. Often, enforcing security and compliance requirements requires identifying endpoints across many tools in your software toolchain and creating custom solutions to instantiate controls that you must maintain.</p>
+<p>With GitLab Security Policy Management, we offer global enforcement of policies across the groups, subgroups, and projects in your GitLab instance (or namespace in the case of GitLab.com). GitLab is responsible for maintaining the UI and YAML editor that can be leveraged to create and enforce policies, and we continue to build more capabilities to optimize and simplify management for diverse use cases, which mitigates further development efforts to manage customization of policy logic.</p>
+<p>While we offer a competitive solution that reduces toolchain complexity and eases global enforcement, some of our competitors have offerings with comparable functionality.</p>
+<h4 id=github>GitHub</h4>
+<p>We have a very competitive position against GitHub regarding policy management. We offer a UI for intuitively defining custom policies, in addition to YAML mode for advanced users. We're expanding to make group and organization-level management of policies a breeze across large organizations while increasing the accuracy and confidence in the enforcement of policies. GitHub offers a very basic solution for checking vulnerabilities and blocking the merge of a PR but lacks the depth as well as the strategic investment to solve this holistically for Enterprise customers.</p>
+<p>GitHub includes the following capabilities today:</p>
+<ul>
+<li>Code scanning results check can be used to find problems in code by severity.</li>
+<li>Users can override default behaviors.</li>
+<li>CodeQL can be integrated to require approval based on vulnerabilities found. If the code scanning results check finds any problems with the severity of the error, critical or high, the check fails, and the error is reported in the check results. If all the results found by code scanning have lower severities, the alerts are treated as warnings or notes, and the check succeeds.</li>
+</ul>
+<p>There are prerequisites to utilizing GitHub, however:</p>
+<ul>
+<li>Many types of scanning require integration with external scanners</li>
+<li>It lacks the visual editor and native management of policy as code</li>
+<li>The ability to intuitively manage policies across groups is limited or requires manual configuration and maintenance using CodeQL</li>
+<li>It lacks the ability to limit who can give approval for failed code scanning checks. When critical or high vulnerabilities are found, anyone who is eligible to approve the PR can approve and allow the code to be merged in.</li>
+</ul>
+<h4 id=synopsys>Synopsys</h4>
+<p>Synopsys offers <a href="https://www.synopsys.com/software-integrity/intelligent-orchestration.html">Intelligent Orchestration</a>, which allows users to optimize pipeline usage, in turn reducing pipeline costs and potentially impacting developer velocity due to optimizing pipeline duration.</p>
+<p>However, leveraging Synopsys requires integration with your CI/CD and maintaining enforcement across the toolchain.</p>
+</details>
+<p>More details about Govern's Best-in-class position are captured in our <a href="https://internal.gitlab.com/handbook/product/best-in-class/govern/">internal handbook</a>.</p>
+<h3 id=target-audience>Target Audience</h3>
+
+<ol>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Cameron (Compliance Manager)</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#devon-devops-engineer">Devon (DevOps Engineer)</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#alex-security-operations-engineer">Alex (Security Operations Engineer)</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#delaney-development-team-lead">Delaney (Development Team Lead)</a></li>
+</ol>
+<h3 id=pricing-and-packaging>Pricing and Packaging</h3>
+
+<p>Security and Compliance policies are capabilities that serve the needs of Large, Ultimate tier customers, Mid-market customers, and customers working in highly regulated industries/sectors such as PubSec, Healthcare, and Financial Services.</p>
+<p>All features under Security Policy Management target Ultimate-tier customers.</p>
+<p>GitLab offers a <a href="https://about.gitlab.com/pricing/">simple pricing model</a> based on monthly seats. Ultimate tier customers gain access to more powerful tools that unlock the power of DevSecOps, including Security Policy Management, Security Dashboards, Dependency Scanning, DAST, Fuzzing, and much more.</p>
+<h3 id=analyst-landscape>Analyst Landscape</h3>
+<p>We are beginning to engage analysts on this topic, but do not currently have research to provide.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/govern/security_policies/security_policy_management/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/govern/security_policies/security_policy_management/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

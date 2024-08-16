@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab's 50th Release: 8.4
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab 50th Release 8.4 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name=description />
+<meta content='Learn more about GitLab 50th Release 8.4 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name='twitter:description'/>
+<meta content='Learn more about GitLab 50th Release 8.4 for GitLab Community Edition (CE) and Enterprise Edition (EE)' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab&#39;s 50th Release: 8.4' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2016-01-22-gitlab-8-4-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2016/01/22/gitlab-8-4-released/' property='og:url'/>
+<meta content=2016-01-22 property='article:published_time'/>
+<meta content='https://about.gitlab.com/about' property='article:author'/>
+<meta content="https://about.gitlab.com/images/8_4/building_gitlab.jpg" property="og:image">
+<meta content="https://about.gitlab.com/images/8_4/building_gitlab.jpg" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab&#39;s 50th Release: 8.4' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2016/01/22/gitlab-8-4-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Jan 22, 2016
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#Jobvo">Job van der Voort</a>
+<a href="https://twitter.com/Jobvo"><span>&nbsp;</span>
+<span class=author-twitter>
+<i class='fab fa-twitter'></i>
+</span>
+</a></span>
+<h1>
+GitLab's 50th Release: 8.4
+</h1>
+<p class=description>
+Learn more about GitLab 50th Release 8.4 for GitLab Community Edition (CE) and Enterprise Edition (EE)
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/8_4/building_gitlab.jpg);'></div>
+<div class=content>
+<p>What better way to kick off a new year than with the 50th release of GitLab,
+8.4!</p>
+<p>No matter how you use GitLab, you're going to like this release.
+Your diffs will look better than ever, you can browse through your
+build artifacts in CI and search has been super powered with Elasticsearch
+in EE!</p>
+<p>We're extremely happy to receive some amazing contributions this release.
+Kyungchul Shin contributed a fuzzy file finder to GitLab this release,
+a much requested and truly MVP-worthy contribution.</p>
+<p>Thanks Kyungchul Shin and congratulations on being
+<a href="/community/mvp/">this month's MVP</a>!</p>
+<div style="width: 112px; margin: 0 auto;">
+<img src="/images/8_4/loading_tanuki2.gif" alt="GitLab's Tanuki is loading"/>
+</div>
+<h2 id=super-powered-search-with-elasticsearch-ee-only>Super-powered Search with Elasticsearch (EE only)</h2>
+<p>If you have a lot of data, searching through everything in GitLab can
+require a lot of number crunching, which can take a while.
+Search is the last thing you want to wait for, which is why GitLab can now
+leverage <a href="https://www.elastic.co/elasticsearch">Elasticsearch</a>
+to speed up those searches!</p>
+<p>Elasticsearch is a flexible, scalable and powerful search service that lives
+on its own server(s). Connecting it to GitLab is
+<a href="http://doc.gitlab.com/ee/integration/elasticsearch.html" title="Elasticsearch documentation for GitLab 8.4 and up">easy as pie</a>.</p>
+<p>Just like good-old search, Elasticsearch will search through your
+issues, merge requests, milestones, comments, projects, repositories,
+snippets and wikis.</p>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ee/integration/elasticsearch.html" title="Elasticsearch documentation for GitLab 8.4 and up">Read about setting up Elasticsearch in our documentation</a></p>
+</blockquote>
+<h2 id=artifacts-browser>Artifacts browser</h2>
+<p>Since <a href="/releases/2015/11/22/gitlab-8-2-released/">GitLab 8.2</a>,
+you've been able to have CI output artifacts, which you could then
+download as a single compressed file containing all artifacts of a build.</p>
+<p><img src="/images/8_4/artifacts_browser.jpg" alt="Build artifacts browser in GitLab 8.4"/></p>
+<p>With GitLab 8.4, you can now browse all your artifacts directly in GitLab's
+interface and download files individually. GitLab does not extract the entire
+compressed file when viewing and when downloading, it'll only extract the
+requested file. This can save you a lot of storage space and makes it much
+easier to work with large files or large volumes of artifacts, as you don't need
+to download everything to get a single file.</p>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ce/ci/build_artifacts/README.html">Read the documentation on build artifacts browser</a></p>
+</blockquote>
+<h2 id=improved-github-importer>Improved GitHub Importer</h2>
+<p>Want to move your projects from GitHub?
+GitLab now imports your repositories, wikis, issues and pull requests from
+GitHub!</p>
+<p>On the new project page <code>/projects/new</code>, simply click on the GitHub link
+and click to import any or all projects. GitLab will automatically take care
+of the rest.</p>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ce/workflow/importing/import_projects_from_github.html">Read the documentation on the GitHub importer</a></p>
+</blockquote>
+<h2 id=fuzzy-file-finder>Fuzzy File Finder</h2>
+<p>The new Fuzzy File Finder lets you quickly navigate to a file by name
+in the current repository without having to reach for the mouse!</p>
+<p><img src="/images/8_4/fuzzy_file_finder.gif" alt="Find files easily with GitLab 8.4"/></p>
+<p>You can quickly access the Fuzzy File Finder by pressing <code>t</code> anywhere
+in a project.</p>
+<p><em>For more shortcuts, press <code>?</code> anywhere in GitLab!</em></p>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ce/workflow/file_finder.html">Read the documentation on the File finder</a></p>
+</blockquote>
+<h2 id=code-highlighting-in-diffs>Code highlighting in Diffs</h2>
+<p>Diffs in GitLab now have highlighted syntax!</p>
+<p><img src="/images/8_4/diff_highlighting.jpg" alt="Diffs are now highlighted in GitLab 8.4"/></p>
+<p><img src="/images/8_4/diff_highlighting_2.jpg" alt="Diffs are now highlighted in GitLab 8.4"/></p>
+<h2 id=unsubscribe-from-threads-in-email>Unsubscribe from Threads in Email</h2>
+<p>If you're getting notifications from issues or merge requests you're no
+longer interested in, there is now a quick link in every email to
+unsubscribe from that thread.</p>
+<div style="width: 400px; margin: 0 auto;">
+<img src="/images/8_4/unsub.jpg" alt="Quickly unsubscribe from a thread in GitLab 8.4" style="max-width: 400px"/>
+</div>
+<p>The link doesn't require you to sign in, so you can easily use it from your
+phone, watch, or VR headset.</p>
+<h2 id=better-links-in-other-apps-slack-unfurls>Better links in other apps (Slack unfurls!)</h2>
+<p>When pasting a GitLab link in Slack, Twitter or Facebook,
+it now automagically becomes a little bit prettier and informative
+by making use of the Open Graph standard.</p>
+<p>For instance, if you post a GitLab link in Slack, you now get some
+extra information about the issue or merge request:</p>
+<p><img src="/images/8_4/unfurl.png" alt="Slack unfurls in GitLab 8.4"/></p>
+<p>We're looking forward to seeing pretty GitLab links all over the internet!</p>
+<h2 id=cas-support>CAS Support</h2>
+<p>GitLab user <a href="https://gitlab.com/tduehr">tduehr</a> contributed
+<a href="https://en.wikipedia.org/wiki/Central_Authentication_Service">CAS support</a>
+for GitLab, allowing you to use your CAS single sign-on server to sign
+into GitLab.
+Thanks, tduehr!</p>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ce/integration/cas.html">Read the documentation on using CAS with GitLab</a></p>
+</blockquote>
+<h2 id=performance-monitoring>Performance Monitoring</h2>
+<p>We've said in
+<a href="/blog/2016/01/15/making-gitlab-better-for-large-open-source-projects/">multiple</a>
+<a href="https://news.ycombinator.com/item?id=10923379">places</a> that improving
+performance of GitLab.com is a big priority for us.
+To give us more insights into this,
+we've built performance monitoring into GitLab.</p>
+<p>GitLab can now send performance data to an InfluxDB database, which in turn
+can be connected to graphing software such as Grafana (shown below).</p>
+<p>Data gathered by Performance Monitoring includes:</p>
+<ul>
+<li>The time it took to complete a transaction (a web request or Sidekiq job).</li>
+<li>The time spent in running SQL queries and rendering HAML views.</li>
+<li>The time spent executing Ruby methods.</li>
+<li>Ruby objects that have not yet been released by the garbage collector.</li>
+<li>System statistics such as the process' memory usage and open file descriptors.</li>
+<li>Ruby garbage collection statistics.</li>
+</ul>
+<p><img src="/images/8_4/perf_1.png" alt="Using Grafana to plot GitLab Performance Monitoring data"/>
+<img src="/images/8_4/perf_2.png" alt="Using Grafana to plot GitLab Performance Monitoring data"/></p>
+<p>Right now Performance Monitoring still requires some setup to be
+useful, but we're planning to bundle all the required software with
+our EE Omnibus packages in the coming releases.</p>
+<blockquote>
+<p><a href="http://doc.gitlab.com/ce/monitoring/performance/introduction.html">View the documentation on GitLab Performance Monitoring</a></p>
+</blockquote>
+<h2 id=filter-commit-messages>Filter Commit Messages</h2>
+<p>Want to quickly find a specific commit in the list of commits?
+You can now quickly filter them by commit message, using the input on
+top!</p>
+<p><img src="/images/8_4/commit_filter.gif" alt="Filter commits in GitLab 8.4"/></p>
+<p>Find the commit filter on the commits page of any of your projects.</p>
+<h2 id=emoji-picker-improvements>Emoji Picker Improvements</h2>
+<p>Now you can quickly search all available emoji!</p>
+<p><img src="/images/8_4/emoji_picker.gif" alt="Search and find your favorite Emoji quickly in GitLab 8.4"/></p>
+<p>The new Emoji picker also stores your favorite Emoji and is available
+in any issue and merge request.</p>
+<h2 id=design-updates>Design Updates</h2>
+<p>Upgrading the looks and usability of GitLab is very important to us.
+GitLab 8.4 introduces several design changes that will be built upon in
+future releases.</p>
+<p>Groups now look cleaner:</p>
+<p><img src="/images/8_4/design_group.png" alt="Upgraded Group page for GitLab 8.4"/></p>
+<p>And issues are also easier on the eyes, especially if you're using a smaller
+window:</p>
+<p><img src="/images/8_4/design_issue.png" alt="Renewed issue design in GitLab 8.4"/></p>
+<p>We're working hard to improve the design of GitLab and put more emphasis
+on content, while making everything easier to use. We'd love to get your
+feedback on the latest changes.</p>
+<h2 id=new-ci-features-in-api>New CI features in API</h2>
+<p>The build artifacts browser is not the only enhancement in GitLab CI. With
+GitLab 8.4 we are introducing new CI features in our API:</p>
+<ul>
+<li><a href="http://doc.gitlab.com/ce/api/builds.html" title="Builds API documentation">builds</a> - list, cancel or retry any build in your project</li>
+<li><a href="http://doc.gitlab.com/ce/api/build_triggers.html" title="Build triggers API documentation">build triggers</a> - manage your project's <a href="http://doc.gitlab.com/ce/ci/triggers/README.html" title="Triggers documentation">triggers</a></li>
+<li><a href="http://doc.gitlab.com/ce/api/build_variables.html" title="Build variables API documentation">build variables</a> - manage your project's variables</li>
+</ul>
+<h2 id=other-changes>Other changes</h2>
+<p>Some other notable changes include:</p>
+<ul>
+<li>Do some housekeeping and use <code>git gc</code> on your projects <a href="http://doc.gitlab.com/ce/administration/housekeeping.html" title="Housekeeping documentation">right from your browser</a></li>
+<li><a href="http://doc.gitlab.com/ce/security/two_factor_authentication.html" title="Two-factor authentication security documentation">Enforce Two-factor authentication</a> for all users on your GitLab
+instance</li>
+<li>Sign-in using your <a href="http://doc.gitlab.com/ce/integration/azure.html" title="Microsoft Azure integration documentation">Microsoft Azure account</a></li>
+</ul>
+<p>This release has many more improvements. Please check out
+<a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/8-4-stable/CHANGELOG">the Changelog</a>
+to see the all named changes.</p>
+<h2 id=upgrade-barometer>Upgrade barometer</h2>
+<h3 id=downtime-required>Downtime required</h3>
+<p>This upgrade <strong>requires downtime</strong> as it brings a couple of migrations that are
+updating a large set of records.</p>
+<p>Most notably, the update iterates through all services, updating default values.
+For instances that have LDAP enabled, it iterates through the whole user base
+to update LDAP email settings.</p>
+<p>On GitLab.com these migrations took around 5 minutes to complete. Do note that
+GitLab.com doesn't have LDAP enabled so on instances that do have it enabled,
+migration will take longer.</p>
+<h3 id=upgrading-from-7x-or-prior>Upgrading from 7.x or prior?</h3>
+<p><em>Note</em> If you are upgrading from a GitLab version prior to 8.0 <em>and</em> you have CI enabled,
+you have to upgrade to GitLab 8.0 <a href="/releases/2015/09/22/gitlab-8-0-released/">first</a>.</p>
+<h3 id=default-upgrade-behavior>Default upgrade behavior</h3>
+<p>Please be aware that by default the Omnibus packages will stop, run migrations,
+and start again, no matter how “big” or “small” the upgrade is. This behavior
+can be changed by adding a <a href="http://doc.gitlab.com/omnibus/update/README.html"><code>/etc/gitlab/skip-auto-migrations</code>
+file</a>.</p>
+<hr/>
+<h2 id=installation>Installation</h2>
+<p>If you are setting up a new GitLab installation please see the
+<a href="/install/">download GitLab page</a>.</p>
+<h2 id=updating>Updating</h2>
+<p>Check out our <a href="/update/">update page</a>.</p>
+<h2 id=enterprise-edition>Enterprise Edition</h2>
+<p>The mentioned EE only features and things like LDAP group support can be found in GitLab Enterprise Edition.
+For a complete overview please have a look at the <a href="/features/#enterprise">feature list of GitLab EE</a>.</p>
+<p>Access to GitLab Enterprise Edition is included with a
+<a href="/pricing/">subscription</a>.
+No time to upgrade GitLab yourself?
+A subscription also entitles you to our upgrade and installation services.</p>
+<h2 id=join-us-for-a-live-q--a>Join us for a live Q &amp; A</h2>
+<p>If you'd like to find out more about GitLab 8.4, <a href="http://page.gitlab.com/Jan282016Webcast.html" title="Webcast: 8.4 Feature Walk-through">sign up to the webcast</a>.
+We'll give a live walk-through for this release and talk about what's coming up
+next for GitLab. It's on Thursday, January 28, 5pm (17:00) UTC; 12pm EST; 9am PST.</p>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab%27s+50th+Release%3A+8.4+via+%40Jobvo&amp;url=https://about.gitlab.com/releases/2016/01/22/gitlab-8-4-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab's 50th Release: 8.4
+via @Jobvo
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2016/01/22/gitlab-8-4-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2016/01/22/gitlab-8-4-released/&amp;text=GitLab&#39;s 50th Release: 8.4' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2016/01/22/gitlab-8-4-released/&amp;title=GitLab&#39;s 50th Release: 8.4&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2016/01/22/gitlab-8-4-released/&amp;t=GitLab&#39;s 50th Release: 8.4' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2016/01/12/gitlab-8-dot-3-4-released/" title="GitLab 8.3.4 Released"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.3.4 Released
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2016/01/26/gitlab-8-dot-4-dot-1-released/" title="GitLab 8.4.1 Released"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.4.1 Released
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2016-01-22-gitlab-8-4-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2016-01-22-gitlab-8-4-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

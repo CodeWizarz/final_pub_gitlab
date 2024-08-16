@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7 for GitLab Community Edition (CE) and Enterprise Edition (EE).' name=description />
+<meta content='Learn more about GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7 for GitLab Community Edition (CE) and Enterprise Edition (EE).' name='twitter:description'/>
+<meta content='Learn more about GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7 for GitLab Community Edition (CE) and Enterprise Edition (EE).' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2021-09-30-security-release-gitlab-14-3-1-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2021/09/30/security-release-gitlab-14-3-1-released/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/blogimages/security-cover-new.png" property="og:image">
+<meta content="https://about.gitlab.com/images/blogimages/security-cover-new.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2021/09/30/security-release-gitlab-14-3-1-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'tags': ["security"]});
+</script>
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Sep 30, 2021
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#mhenriksen">Michael Henriksen</a>
+<a href="https://gitlab.com/mhenriksen"><span>&nbsp;</span>
+<span class=author-gitlab>
+<i class='fab fa-gitlab'></i>
+</span>
+</a></span>
+<h1>
+GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7
+</h1>
+<p class=description>
+Learn more about GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7 for GitLab Community Edition (CE) and Enterprise Edition (EE).
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/blogimages/security-cover-new.png);'></div>
+<div class=content>
+<p>Today we are releasing versions 14.3.1, 14.2.5, and 14.1.7 for GitLab Community Edition (CE) and Enterprise Edition (EE).</p>
+<p>These versions contain important security fixes, and we strongly recommend that all GitLab installations be upgraded to one of these versions immediately.</p>
+<p>GitLab releases patches for vulnerabilities in dedicated security releases. There are two types of security releases: a monthly, scheduled security release, released a week after the feature release (which deploys on the 22nd of each month), and ad-hoc security releases for critical vulnerabilities. For more information, you can visit our <a href="https://about.gitlab.com/security/faq/">security FAQ</a>. You can see all of our regular and security release blog posts <a href="/releases/categories/releases/">here</a>. In addition, the issues detailing each vulnerability are made public on our <a href="https://gitlab.com/gitlab-org/gitlab/issues?label_name%5B%5D=security&amp;scope=all&amp;state=opened">issue tracker</a> 30 days after the release in which they were patched.</p>
+<p>We are dedicated to ensuring all aspects of GitLab that are exposed to customers or that host customer data are held to the highest security standards. As part of maintaining good security hygiene, it is highly recommended that all customers upgrade to the latest security release for their supported version. You can read more <a href="/blog/2020/05/20/gitlab-instance-security-best-practices/">best practices in securing your GitLab instance</a> in our blog post.</p>
+<h3 id=recommended-action>Recommended Action</h3>
+<p>We <strong>strongly recommend</strong> that all installations running a version affected by the issues described below are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=table-of-fixes>Table of Fixes</h2>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#stored-xss-in-merge-request-creation-page">Stored XSS in merge request creation page</a></td>
+<td>high</td>
+</tr>
+<tr>
+<td><a href="#denial-of-service-attack-in-markdown-parser">Denial-of-service attack in Markdown parser</a></td>
+<td>high</td>
+</tr>
+<tr>
+<td><a href="#stored-cross-site-scripting-vulnerability-in-the-gitlab-flavored-markdown">Stored Cross-Site Scripting vulnerability in the GitLab Flavored Markdown</a></td>
+<td>high</td>
+</tr>
+<tr>
+<td><a href="#dns-rebinding-vulnerability-in-gitea-importer">DNS Rebinding vulnerability in Gitea importer</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#exposure-of-trigger-tokens-on-project-exports">Exposure of trigger tokens on project exports</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#improper-access-control-for-users-with-expired-password">Improper access control for users with expired password</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#access-tokens-are-not-cleared-after-impersonation">Access tokens are not cleared after impersonation</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#reflected-cross-site-scripting-in-jira-integration">Reflected Cross-Site Scripting in Jira Integration</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#dns-rebinding-vulnerability-in-fogbugz-importer">DNS Rebinding vulnerability in Fogbugz importer</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#access-tokens-persist-after-project-deletion">Access tokens persist after project deletion</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#user-enumeration-vulnerability">User enumeration vulnerability</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#potential-dos-via-api-requests">Potential DOS via API requests</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#pending-invitations-of-public-groups-and-public-projects-are-visible-to-any-user">Pending invitations of public groups and public projects are visible to any user</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#bypass-disabled-repo-by-url-project-creation">Bypass Disabled Repo by URL Project Creation</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#low-privileged-users-can-see-names-of-the-private-groups-shared-in-projects">Low privileged users can see names of the private groups shared in projects</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#api-discloses-sensitive-info-to-low-privileged-users">API discloses sensitive info to low privileged users</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#epic-listing-do-not-honour-group-memberships">Epic listing do not honour group memberships</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#insecure-direct-object-reference-vulnerability-may-lead-to-protected-branch-names-getting-disclosed">Insecure Direct Object Reference vulnerability may lead to protected branch names getting disclosed</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#low-privileged-users-can-import-users-from-projects-that-they-they-are-not-a-maintainer-on">Low privileged users can import users from projects that they they are not a maintainer on</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#potential-dos-via-dependencies-api">Potential DOS via dependencies API</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#create-a-project-with-unlimited-repository-size-through-malicious-project-import">Create a project with unlimited repository size through malicious Project Import</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#bypass-disabled-bitbucket-server-import-source-project-creation">Bypass disabled Bitbucket Server import source project creation</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#requirement-to-enforce-2fa-is-not-honored-when-using-git-commands">Requirement to enforce 2FA is not honored when using git commands</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#content-spoofing-vulnerability">Content spoofing vulnerability</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#improper-session-management-in-impersonation-feature">Improper session management in impersonation feature</a></td>
+<td>low</td>
+</tr>
+<tr>
+<td><a href="#create-oauth-application-with-arbitrary-scopes-through-content-spoofing">Create OAuth application with arbitrary scopes through content spoofing</a></td>
+<td>low</td>
+</tr>
+<tr>
+<td><a href="#ldap-users-can-bypass-2fa-and-load-certain-pages-with-http-basic-auth">LDAP users can bypass 2FA and load certain pages with HTTP Basic Auth</a></td>
+<td>low</td>
+</tr>
+<tr>
+<td><a href="#lack-of-account-lockout-on-change-password-functionality">Lack of account lockout on change password functionality</a></td>
+<td>low</td>
+</tr>
+<tr>
+<td><a href="#epic-reference-was-not-updated-while-moved-between-groups">Epic reference was not updated while moved between groups</a></td>
+<td>low</td>
+</tr>
+<tr>
+<td><a href="#missing-authentication-allows-disabling-of-two-factor-authentication">Missing authentication allows disabling of two-factor authentication</a></td>
+<td>low</td>
+</tr>
+<tr>
+<td><a href="#information-disclosure-in-sendentry">Information disclosure in SendEntry</a></td>
+<td>low</td>
+</tr>
+</tbody>
+</table>
+<h2 id=stored-xss-in-merge-request-creation-page>Stored XSS in merge request creation page</h2>
+<p>A Stored XSS in merge request creation page in Gitlab EE version 13.5 and above allows an attacker to execute arbitrary JavaScript code on the victim's behalf via malicious approval rule names. This is a high severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N</code>, 8.7). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39885">CVE-2021-39885</a>.</p>
+<p>Thanks joaxcar for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=denial-of-service-attack-in-markdown-parser>Denial-of-service attack in Markdown parser</h2>
+<p>A vulnerability was discovered in GitLab starting with version 12.2 that allows an attacker to cause uncontrolled resource consumption with a specially crafted file. This is a high severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H</code>, 7.7). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39877">CVE-2021-39877</a>.</p>
+<p>Thanks phill for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=stored-cross-site-scripting-vulnerability-in-the-gitlab-flavored-markdown>Stored Cross-Site Scripting vulnerability in the GitLab Flavored Markdown</h2>
+<p>A stored Cross-Site Scripting vulnerability in the GitLab Flavored Markdown in GitLab CE/EE version 8.4 and above allowed an attacker to execute arbitrary JavaScript code on the victim's behalf. This is a high severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N</code>, 7.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39887">CVE-2021-39887</a>.</p>
+<p>Thanks saleemrashid for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=dns-rebinding-vulnerability-in-gitea-importer>DNS Rebinding vulnerability in Gitea importer</h2>
+<p>In all versions of GitLab CE/EE since version 8.15, a DNS rebinding vulnerability in Gitea Importer may be exploited by an attacker to trigger Server Side Request Forgery (SSRF) attacks. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N</code>, 6.5). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39867">CVE-2021-39867</a>.</p>
+<p>This issue was found internally by a member of the GitLab team.</p>
+<h2 id=exposure-of-trigger-tokens-on-project-exports>Exposure of trigger tokens on project exports</h2>
+<p>In all versions of GitLab CE/EE since version 8.9, project exports may expose trigger tokens configured on that project. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N</code>, 6.5). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39869">CVE-2021-39869</a>.</p>
+<p>Thanks @mishre for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=improper-access-control-for-users-with-expired-password>Improper access control for users with expired password</h2>
+<p>In all versions of GitLab CE/EE since version 14.1, an improper access control vulnerability allows users with expired password to still access GitLab through git and API through access tokens acquired before password expiration. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N</code>, 6.5). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39872">CVE-2021-39872</a>.</p>
+<p>Thanks @joaxcar for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=access-tokens-are-not-cleared-after-impersonation>Access tokens are not cleared after impersonation</h2>
+<p>In all versions of GitLab CE/EE since version 8.0, access tokens created as part of admin's impersonation of a user are not cleared at the end of impersonation which may lead to unnecessary sensitive info disclosure. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N</code>, 5.9). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39891">CVE-2021-39891</a>.</p>
+<p>This vulnerability was found internally by a member of the GitLab team.</p>
+<h2 id=reflected-cross-site-scripting-in-jira-integration>Reflected Cross-Site Scripting in Jira Integration</h2>
+<p>A stored Reflected Cross-Site Scripting vulnerability in the Jira integration in GitLab version 13.0 up to 14.3.1 allowed an attacker to execute arbitrary javascript code. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:N/A:N</code>, 5.8). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39878">CVE-2021-39878</a>.</p>
+<p>Thanks ooooooo_q for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=dns-rebinding-vulnerability-in-fogbugz-importer>DNS Rebinding vulnerability in Fogbugz importer</h2>
+<p>In all versions of GitLab CE/EE since version 8.0, a DNS rebinding vulnerability exists in Fogbugz importer which may be used by attackers to exploit Server Side Request Forgery attacks. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N</code>, 5.4). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39894">CVE-2021-39894</a>.</p>
+<p>This vulnerability was discovered internally by the GitLab team.</p>
+<h2 id=access-tokens-persist-after-project-deletion>Access tokens persist after project deletion</h2>
+<p>A business logic error in the project deletion process in GitLab 13.6 and later allows persistent access via project access tokens. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N</code>, 5.4). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39866">CVE-2021-39866</a>.</p>
+<p>Thanks joaxcar for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=user-enumeration-vulnerability>User enumeration vulnerability</h2>
+<p>In all versions of GitLab CE/EE, provided a user ID, anonymous users can use a few endpoints to retrieve information about any GitLab user. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N</code>, 5.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39882">CVE-2021-39882</a>.</p>
+<p>This issue was found internally by a member of the GitLab team.</p>
+<h2 id=potential-dos-via-api-requests>Potential DOS via API requests</h2>
+<p>A potential DOS vulnerability was discovered in GitLab starting with version 9.1 that allowed parsing files without authorisation. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L</code>, 5.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39893">CVE-2021-39893</a>.</p>
+<p>This vulnerability has been discovered internally by the GitLab team.</p>
+<h2 id=pending-invitations-of-public-groups-and-public-projects-are-visible-to-any-user>Pending invitations of public groups and public projects are visible to any user</h2>
+<p>In all versions of GitLab CE/EE since version 13.6, it is possible to see pending invitations of any public group or public project by visiting an API endpoint. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N</code>, 5.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39875">CVE-2021-39875</a>.</p>
+<p>Thanks @ashish_r_padelkar for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=bypass-disabled-repo-by-url-project-creation>Bypass Disabled Repo by URL Project Creation</h2>
+<p>In all versions of GitLab CE/EE since version 11.11, an instance that has the setting to disable Repo by URL import enabled is bypassed by an attacker making a crafted API call. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N</code>, 4.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39870">CVE-2021-39870</a>.</p>
+<p>Thanks @ngalog for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=low-privileged-users-can-see-names-of-the-private-groups-shared-in-projects>Low privileged users can see names of the private groups shared in projects</h2>
+<p>In all versions of GitLab EE since version 8.13, an endpoint discloses names of private groups that have access to a project to low privileged users that are part of that project. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N</code>, 4.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39884">CVE-2021-39884</a>.</p>
+<p>Thanks @ashish_r_padelkar for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=api-discloses-sensitive-info-to-low-privileged-users>API discloses sensitive info to low privileged users</h2>
+<p>In all versions of GitLab EE since version 13.10, a specific API endpoint may reveal details about a private group and other sensitive info inside issue and merge request templates. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N</code>, 4.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39888">CVE-2021-39888</a>.
+Thanks @0xn3va for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=epic-listing-do-not-honour-group-memberships>Epic listing do not honour group memberships</h2>
+<p>Improper authorization checks in GitLab EE &gt; 13.11 allows subgroup members to see epics from all parent subgroups. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N</code>, 4.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39883">CVE-2021-39883</a>.</p>
+<p>This vulnerability has been discovered internally by the GitLab team.</p>
+<h2 id=insecure-direct-object-reference-vulnerability-may-lead-to-protected-branch-names-getting-disclosed>Insecure Direct Object Reference vulnerability may lead to protected branch names getting disclosed</h2>
+<p>In all versions of GitLab EE since version 14.1, due to an insecure direct object reference vulnerability, an endpoint may reveal the protected branch name to a malicious user who makes a crafted API call with the ID of the protected branch. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N</code>, 4.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39889">CVE-2021-39889</a>.</p>
+<p>Thanks @ashish_r_padelkar for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=low-privileged-users-can-import-users-from-projects-that-they-they-are-not-a-maintainer-on>Low privileged users can import users from projects that they they are not a maintainer on</h2>
+<p>In all versions of GitLab CE/EE since version 12.0, a lower privileged user can import users from projects that they don't have a maintainer role on and disclose email addresses of those users. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N</code>, 4.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39892">CVE-2021-39892</a>.</p>
+<p>Thanks @ashish_r_padelkar for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=potential-dos-via-dependencies-api>Potential DOS via dependencies API</h2>
+<p>A potential DOS vulnerability was discovered in GitLab EE starting with version 12.6 due to lack of pagination in dependencies API. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L</code>, 4.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22259">CVE-2021-22259</a>.</p>
+<p>This vulnerability has been discovered internally by the GitLab team.</p>
+<h2 id=create-a-project-with-unlimited-repository-size-through-malicious-project-import>Create a project with unlimited repository size through malicious Project Import</h2>
+<p>In all versions of GitLab CE/EE since version 8.12, an authenticated low-privileged malicious user may create a project with unlimited repository size by modifying values in a project export. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N</code>, 4.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39868">CVE-2021-39868</a>.</p>
+<p>Thanks @ngalog for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=bypass-disabled-bitbucket-server-import-source-project-creation>Bypass disabled Bitbucket Server import source project creation</h2>
+<p>In all versions of GitLab CE/EE since version 13.0, an instance that has the setting to disable Bitbucket Server import enabled is bypassed by an attacker making a crafted API call. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N</code>, 4.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39871">CVE-2021-39871</a>.</p>
+<p>This issue was discovered internally by a member of the GitLab team.</p>
+<h2 id=requirement-to-enforce-2fa-is-not-honored-when-using-git-commands>Requirement to enforce 2FA is not honored when using git commands</h2>
+<p>In all versions of GitLab CE/EE since version 11.0, the requirement to enforce 2FA is not honored when using git commands. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N</code>, 4.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39874">CVE-2021-39874</a>.</p>
+<p>Thanks @melar_dev for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=content-spoofing-vulnerability>Content spoofing vulnerability</h2>
+<p>In all versions of GitLab CE/EE, there exists a content spoofing vulnerability which may be leveraged by attackers to trick users into visiting a malicious website by spoofing the content in an error response. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N</code>, 4.3). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39873">CVE-2021-39873</a>.</p>
+<p>Thanks @w00t1 for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=improper-session-management-in-impersonation-feature>Improper session management in impersonation feature</h2>
+<p>In all versions of GitLab CE/EE since version 8.0, when an admin uses the impersonate feature twice and stops impersonating, the admin may be logged in as the second user they impersonated, which may lead to repudiation issues. This is a low severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N</code>, 3.8). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39896">CVE-2021-39896</a>.</p>
+<p>This vulnerability was reported to GitLab by a customer.</p>
+<h2 id=create-oauth-application-with-arbitrary-scopes-through-content-spoofing>Create OAuth application with arbitrary scopes through content spoofing</h2>
+<p>In all versions of GitLab CE/EE since version 7.7, the application may let a malicious user create an OAuth client application with arbitrary scope names which may allow the malicious user to trick unsuspecting users to authorize the malicious client application using the spoofed scope name and description. This is a low severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N</code>, 3.5). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39881">CVE-2021-39881</a>.</p>
+<p>Thanks @executor for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h2 id=ldap-users-can-bypass-2fa-and-load-certain-pages-with-http-basic-auth>LDAP users can bypass 2FA and load certain pages with HTTP Basic Auth</h2>
+<p>It was possible to bypass 2FA for LDAP users and access some specific pages with Basic Authentication in GitLab 14.1.1 and above. This is a low severity issue (<code>CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N</code>, 3.1). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39890">CVE-2021-39890</a>.</p>
+<p>This vulnerability has been discovered internally by the GitLab team.</p>
+<h2 id=lack-of-account-lockout-on-change-password-functionality>Lack of account lockout on change password functionality</h2>
+<p>In all versions of GitLab CE/EE, an attacker with access to a user’s session may brute force the user’s password via the change password function. There is a rate limit in place, but the attack may still be conducted by splitting the attack over several IP addresses. This is a low severity issue (<code>CVSS:3.0/AV:P/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N</code>, 2.9). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39899">CVE-2021-39899</a>.</p>
+<p>This vulnerability was discovered internally by the GitLab team.</p>
+<h2 id=epic-reference-was-not-updated-while-moved-between-groups>Epic reference was not updated while moved between groups</h2>
+<p>Permissions rules were not applied while issues were moved between projects of the same group in GitLab versions starting with 10.6 and up to 14.1.7 allowing users to read confidential Epic references. This is a low severity issue (<code>CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:N</code>, 2.6). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39886">CVE-2021-39886</a>.</p>
+<p>This vulnerability was discovered internally by the GitLab team.</p>
+<h2 id=missing-authentication-allows-disabling-of-two-factor-authentication>Missing authentication allows disabling of two-factor authentication</h2>
+<p>Missing authentication in all versions of GitLab CE/EE since version 7.11.0 allows an attacker with access to a victim's session to disable two-factor authentication. This is a low severity issue (<code>CVSS:3.0/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:L/A:N</code>, 2.2). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39879">CVE-2021-39879</a>.</p>
+<p>This vulnerability has been discovered internally by the GitLab team.</p>
+<h2 id=information-disclosure-in-sendentry>Information disclosure in SendEntry</h2>
+<p>Information disclosure from SendEntry in GitLab starting with 10.8 allowed exposure of full URL of artifacts stored in object-storage with a temporary availability via Rails logs. This is a low severity issue (<code>CVSS:3.0/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:N/A:N</code>, 2.0). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39900">CVE-2021-39900</a>.</p>
+<p>This vulnerability has been discovered internally by the GitLab team.</p>
+<h2 id=updating>Updating</h2>
+<p>To update GitLab, see the <a href="/update/">Update page</a>.
+To update Gitlab Runner, see the <a href="https://docs.gitlab.com/runner/install/linux-repository.html#updating-the-runner">Updating the Runner page</a>.</p>
+<h2 id=receive-security-release-notifications>Receive Security Release Notifications</h2>
+<p>To receive security release blog notifications delivered to your inbox, visit our <a href="https://about.gitlab.com/company/contact/">contact us</a> page.
+To receive release notifications via RSS, subscribe to our <a href="https://about.gitlab.com/security-releases.xml">security release RSS feed</a> or our <a href="https://about.gitlab.com/all-releases.xml">RSS feed for all releases</a>.</p>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+Security+Release%3A+14.3.1%2C+14.2.5%2C+and+14.1.7&amp;url=https://about.gitlab.com/releases/2021/09/30/security-release-gitlab-14-3-1-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<ul class='tag-list list-unstyled'>
+<li class=tag>
+<a href="/releases/tags.html#security">security</a>
+</li>
+</ul>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2021/09/30/security-release-gitlab-14-3-1-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2021/09/30/security-release-gitlab-14-3-1-released/&amp;text=GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2021/09/30/security-release-gitlab-14-3-1-released/&amp;title=GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2021/09/30/security-release-gitlab-14-3-1-released/&amp;t=GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2021/09/27/gitlab-14-1-6-released/" title="GitLab Patch Release: 14.1.6"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab Patch Release: 14.1.6
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2021/10/01/gitlab-14-3-2-released/" title="GitLab Patch Release: 14.3.2"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab Patch Release: 14.3.2
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2021-09-30-security-release-gitlab-14-3-1-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2021-09-30-security-release-gitlab-14-3-1-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

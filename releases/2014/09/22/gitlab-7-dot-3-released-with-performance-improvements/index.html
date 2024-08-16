@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab 7.3 released with performance improvements
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab Release 7.3 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name=description />
+<meta content='Learn more about GitLab Release 7.3 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name='twitter:description'/>
+<meta content='Learn more about GitLab Release 7.3 for GitLab Community Edition (CE) and Enterprise Edition (EE)' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab 7.3 released with performance improvements' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2014-09-22-gitlab-7-dot-3-released-with-performance-improvements.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2014/09/22/gitlab-7-dot-3-released-with-performance-improvements/' property='og:url'/>
+<meta content='2014-09-22 12:50:22 +0200' property='article:published_time'/>
+<meta content='https://about.gitlab.com/about' property='article:author'/>
+<meta content="https://about.gitlab.com/images/default-blog-image.png" property="og:image">
+<meta content="https://about.gitlab.com/images/default-blog-image.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab 7.3 released with performance improvements' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2014/09/22/gitlab-7-dot-3-released-with-performance-improvements/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Sep 22, 2014
+</span>
+<span>-</span>
+<span class=author>
+Marin Jankovski
+</span>
+<h1>
+GitLab 7.3 released with performance improvements
+</h1>
+<p class=description>
+Learn more about GitLab Release 7.3 for GitLab Community Edition (CE) and Enterprise Edition (EE)
+</p>
+<p></p>
+<div class=content>
+<p>GitLab is open source software to collaborate on code.
+Today we announce the release of a new version of GitLab Community Edition (CE) and GitLab Enterprise Edition (EE), with new features, usability and performance improvements, and bug fixes.
+The biggest new feature in Community Edition is the improved performance with large pushes.
+Other changes include the ability to edit a file in fullscreen (zen) mode, 'comment and close' button, wiki and snippets search and several API improvements.</p>
+<p>In addition to the updates from Community Edition, GitLab Enterprise Edition allows assigning multiple LDAP groups to a single GitLab group.</p>
+<p>This month's Most Valuable Person (MVP) is Robert Schilling for contributing zen mode, keyboard shortcuts and helping out on the issue tracker.
+Thanks Robert!</p>
+<p><em>Updated 2014-09-23 10:00 CEST:</em> Added a paragraph about omnibus-gitlab changes.</p>
+<h2 id=improved-performance-on-large-pushes>Improved performance on large pushes</h2>
+<p>Previously on a push that contained 1 thousand branches GitLab would create 1 thousand workers.</p>
+<p>That would take some time to process during which other background tasks would be queued.</p>
+<p>With the changes introduced in GitLab 7.3, a single push will only create a single worker which will handle all branches.</p>
+<p>This allows other workers to be ready for new jobs and any long running workers can
+easily be stopped if necessary and making it less likely that GitLab slows down due to large pushes.</p>
+<h2 id=keyboard-shortcuts>Keyboard shortcuts</h2>
+<p>Thanks to the contribution by Robert Schilling, keyboard shortcuts have been further improved with multiple shortcuts added. Navigation in GitLab just got easier!</p>
+<p><a href="/images/7_3/keyboard.png"><img src="/images/7_3/keyboard.png" alt=screenshot /></a></p>
+<h2 id=comment-and-close-button>Comment and close button</h2>
+<p>When commenting in an issue or merge request you can now easily close an issue while leaving the comment.</p>
+<p><a href="/images/7_3/comment_and_close.gif"><img src="/images/7_3/comment_and_close.gif" alt=screenshot /></a></p>
+<h2 id=zen-fullscreen-mode>Zen (fullscreen) mode</h2>
+<p>Thanks to the contribution by Robert Schilling, you can now switch into a fullscreen mode to have more room to edit your issue, merge request or a comment.</p>
+<p><a href="/images/7_3/zen.gif"><img src="/images/7_3/zen.gif" alt=screenshot /></a></p>
+<h2 id=new-commits-linked-in-merge-request>New commits linked in Merge Request</h2>
+<p>When new commits are pushed to the existing Merge Request, they will be shown in the Merge Request timeline.</p>
+<p><a href="/images/7_3/linked_commits.png"><img src="/images/7_3/linked_commits.png" alt=screenshot /></a></p>
+<h2 id=new-api-features>New API features</h2>
+<p>Users can now filter issues by state and labels when interacting with the API.</p>
+<p>Thanks to sponsoring by O'Reilly Media it is now possible to sort merge requests in ascending or descending order for updated_at and created_at fields.</p>
+<p>In addition you can also get more detailed information about merge requests and comments.
+You can read more about the GitLab API at <a href="http://doc.gitlab.com/ce/api/README.html">doc.gitlab.com/ce/api</a>.</p>
+<h2 id=assigning-multiple-ldap-groups-to-a-gitlab-group-ee-only-feature>Assigning multiple LDAP groups to a GitLab group (EE only feature)</h2>
+<p>Synchronizing with more than one LDAP group is now possible with GitLab 7.3 EE.
+You can link multiple LDAP groups to a single GitLab group and give them different permissions.</p>
+<p>This makes our LDAP integration much more powerful and flexible.</p>
+<p>Check the <a href="http://doc.gitlab.com/ee/integration/ldap.html#synchronizing-with-more-than-one-ldap-group-gitlab-ee-7.3-and-newer">documentation</a> for more information.</p>
+<p><a href="/images/7_3/multiple_ldap_groups.png"><img src="/images/7_3/multiple_ldap_groups.png" alt=screenshot /></a></p>
+<h2 id=security-connect-to-redis-via-sockets>Security: connect to Redis via sockets</h2>
+<p>Redis is an in-memory database used by GitLab for asynchronous inter-process communication, cache storage and session storage.
+A standard Redis installation trusts all local TCP connections.
+This means that an attacker who can create a TCP connection originating on the GitLab server could be able to modify or read user session data.
+As a security measure against this risk we are changing the default settings for GitLab to connect to Redis via Unix domain sockets.
+This allows system administrators to limit Redis access to the <code>git</code> user using file/directory permissions.</p>
+<p>What do you need to do to switch to Redis via sockets?</p>
+<ul>
+<li>Omnibus-gitlab users switch to sockets automatically when they upgrade to 7.3.
+Tip: if you changed your Redis port in gitlab.rb with <code>redis['port'] = xxxx</code> to avoid port conflicts, you can remove that line now.</li>
+<li>The required configuration changes for manual installations are <a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/update/7.2-to-7.3.md">described in the 7.3 upgrade guide</a>.</li>
+<li>Instructions for cookbook-gitlab are still a <a href="https://gitlab.com/gitlab-org/cookbook-gitlab/issues/68">work in progress</a>.</li>
+</ul>
+<p>Unix domain sockets only work for connections between local processes.
+If your Redis instance is running on another machine consider adding the firewall rules below.
+Alternatively, you could create an encrypted connection between the GitLab server and the Redis server using <a href="http://www.tarsnap.com/spiped.html">spiped</a>.</p>
+<div class=highlight><pre class="highlight plaintext"><code># Iptables example for GitLab installations which cannot use sockets
+# We assume the Redis server is listening at 192.168.99.1:6379
+
+# Allow outgoing connections to 192.168.99.1:6379 for the git user.
+# Disallow outgoing connections to 192.168.99.1:6379 for everybody else.
+# Note: the order of these rules matters.
+iptables -A OUTPUT -m owner --uid-owner git -p tcp -d 192.168.99.1 --dport 6379 -j ACCEPT
+iptables -A OUTPUT -p tcp -d 192.168.99.1 --dport 6379 -j REJECT
+</code></pre></div>
+<p>We would like to thank Wyatt J. Brown for their responsible disclosure of this issue.</p>
+<h2 id=omnibus-gitlab-now-supports-non-bundled-web-servers>Omnibus-gitlab now supports non-bundled web servers</h2>
+<p>The omnibus-gitlab packages provide a bundled NGINX web server which acts as a reverse proxy for GitLab, and which also serves static files such as Javascript, CSS files and user uploads.
+Prior to omnibus-gitlab 7.3 it was not supported to use a web server other than the bundled NGINX, because the omnibus-gitlab directory layout prevented access to user uploads in the interest of security.
+In omnibus-gitlab 7.3 we have changed the omnibus-gitlab directory layout and permissions to allow for non-bundled web servers.
+As a side benefit, we now have a stronger privilege separation between NGINX and the GitLab Rails application.</p>
+<p>To implement this change, omnibus-gitlab now creates a <code>gitlab-www</code> user which is intended to have read-only access to user uploads and read-write access to the Unicorn socket.
+For practical reasons, the socket used for communication between NGINX and Unicorn was moved from <code>/var/opt/gitlab/gitlab-rails/tmp/sockets</code> to <code>/var/opt/gitlab/gitlab-rails/sockets</code>.
+For more information about using a non-bundled web server with omnibus-gitlab, please see the <a href="https://gitlab.com/gitlab-org/omnibus-gitlab/blob/7-3-stable/README.md#use-non-bundled-web-server">omnibus-gitlab README</a>.</p>
+<p>In addition to the changes above, we changed the NGINX directory layout to avoid directories like <code>/opt/gitlab/embedded/proxy_temp</code> being created by NGINX.
+These temporary directories now get created in <code>/var/opt/gitlab/nginx</code>.</p>
+<h2 id=other-changes>Other changes</h2>
+<p>Check out <a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/7-3-stable/CHANGELOG">the Changelog</a> to see these and additional changes.</p>
+<h2 id=upgrade-barometer>Upgrade barometer</h2>
+<p>When upgrading to 7.3 there will be more time needed for migrations since there has been an important update to the GitLab structure, more specifically git hooks.</p>
+<p>In addition to the hooks update there is a migration for the serialization of project services which loops through a lot of data. On installation with more than 10000 projects this migration alone took about 3 minutes.</p>
+<p>** NOTE ** Users with large number of repositories (more than 1000) can expect prolonged downtime(up to 100 minutes depending on number or repositories) if upgrading from versions &lt;= 7.2.1 . For that reason, we advise
+first upgrading to version 7.2.2, see <a href="/releases/2014/09/19/gitlab-7-dot-2-2-security-release/#hooks-migration-script">this blogpost for detailed information</a></p>
+<p>Users with smaller number of repositories (less than 1000) can safely upgrade directly to 7.3 expecting downtime similar to previous upgrades.</p>
+<h2 id=other-news>Other news</h2>
+<p>We just <a href="/blog/2014/09/22/wandisco-integrates-gitlab-enterprise-edition-in-their-git-multisite-offering/">announced</a> that WANdisco will incorporate GitLab in their globally distributed git product.</p>
+<hr/>
+<h1 id=installation>Installation</h1>
+<p>If you are setting up a new GitLab installation please see the <a href="https://www.gitlab.com/install/">installing GitLab page</a>.</p>
+<h1 id=updating>Updating</h1>
+<p>Upgrade instructions for omnibus-gitlab packages can be found in <a href="https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/update.md">the omnibus-gitlab repository</a>.</p>
+<p>If you installed GitLab from source and you have version 6.4.2 or higher you can use the <a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/update/upgrader.md">upgrade script</a>.
+You have to update GitLab Shell to 2.0.0 manually, see <a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/update/7.2-to-7.3.md#3-update-gitlab-shell">point 3 of the upgrade guide</a>.</p>
+<p>If you still want to do it manually - see the <a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/update/7.2-to-7.3.md">Update Guide</a>.</p>
+<h1 id=enterprise-edition>Enterprise Edition</h1>
+<p>The mentioned EE only features and things like LDAP group support can be found in GitLab Enterprise Edition.
+For a complete overview please have a look at the <a href="http://www.gitlab.com/gitlab-ee/">feature list of GitLab EE</a>.</p>
+<p>Access to GitLab Enterprise Edition is included with a <a href="/pricing/">subscription</a>.
+No time to upgrade GitLab yourself?
+A subscription also entitles to our upgrade and installation services.</p>
+<hr/>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+7.3+released+with+performance+improvements&amp;url=https://about.gitlab.com/releases/2014/09/22/gitlab-7-dot-3-released-with-performance-improvements/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab 7.3 released with performance improvements
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2014/09/22/gitlab-7-dot-3-released-with-performance-improvements/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2014/09/22/gitlab-7-dot-3-released-with-performance-improvements/&amp;text=GitLab 7.3 released with performance improvements' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2014/09/22/gitlab-7-dot-3-released-with-performance-improvements/&amp;title=GitLab 7.3 released with performance improvements&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2014/09/22/gitlab-7-dot-3-released-with-performance-improvements/&amp;t=GitLab 7.3 released with performance improvements' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2014/09/19/gitlab-7-dot-2-2-security-release/" title="GitLab 7.2.2 Security Release and hooks migration"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 7.2.2 Security Release and hooks migration
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2014/09/24/gitlab-7-dot-3-dot-1-released/" title="GitLab 7.3.1 released"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab 7.3.1 released
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2014-09-22-gitlab-7-dot-3-released-with-performance-improvements.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2014-09-22-gitlab-7-dot-3-released-with-performance-improvements.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

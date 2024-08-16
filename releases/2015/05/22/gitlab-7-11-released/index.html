@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab 7.11 released with Two-factor Authentication and a publicly viewable Enterprise Edition
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab Release 7.11 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name=description />
+<meta content='Learn more about GitLab Release 7.11 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name='twitter:description'/>
+<meta content='Learn more about GitLab Release 7.11 for GitLab Community Edition (CE) and Enterprise Edition (EE)' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab 7.11 released with Two-factor Authentication and a publicly viewable Enterprise Edition' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2015-05-22-gitlab-7-11-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2015/05/22/gitlab-7-11-released/' property='og:url'/>
+<meta content=2015-05-22 property='article:published_time'/>
+<meta content='https://about.gitlab.com/about' property='article:author'/>
+<meta content="https://about.gitlab.com/images/7_11/ny.jpg" property="og:image">
+<meta content="https://about.gitlab.com/images/7_11/ny.jpg" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab 7.11 released with Two-factor Authentication and a publicly viewable Enterprise Edition' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2015/05/22/gitlab-7-11-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+May 22, 2015
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#Jobvo">Job van der Voort</a>
+<a href="https://twitter.com/Jobvo"><span>&nbsp;</span>
+<span class=author-twitter>
+<i class='fab fa-twitter'></i>
+</span>
+</a></span>
+<h1>
+GitLab 7.11 released with Two-factor Authentication and a publicly viewable Enterprise Edition
+</h1>
+<p class=description>
+Learn more about GitLab Release 7.11 for GitLab Community Edition (CE) and Enterprise Edition (EE)
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/7_11/ny.jpg);'></div>
+<div class=content>
+<p>It's the 22nd of the month, so we have a new GitLab release ready!
+GitLab 7.11 brings more improvements to the look and feel of GitLab,
+two-factor authentication, a version check and more!</p>
+<p>Of course we're also releasing GitLab CI 7.11, with a new backup and restore
+utility, improvements in the UI and other new features.</p>
+<p>This month's MVP is <a href="http://jamesnewton.com/">James Newton</a> (newton on IRC)!
+James is very active on our <code>#gitlab</code> IRC channel, often helping people out
+with issues or helping people getting started with GitLab. We're very
+happy to have James supporting the community and believe that is deserving
+of a MVP award!
+Thanks James!</p>
+<h2 id=better-looking-sidebar>Better looking sidebar</h2>
+<p>We changed the look of the sidebar to reflect its function better and make it look
+more pretty:</p>
+<p><img src="/images/7_11/sidebar.png" alt="The new sidebar in GitLab 7.11"/></p>
+<h2 id=clean-project-dashboard>Clean project dashboard</h2>
+<p>The project dashboard was a good example of design by committee, one GitLab
+contributor noted. We broomed through it and cleaned it up:</p>
+<p><img src="/images/7_11/project.png" alt="Project Dashboard in GitLab 7.11"/></p>
+<h2 id=two-factor-authentication>Two-factor authentication</h2>
+<p>Keep your code more secure and start using two-factor authentication (2FA)!
+GitLab has built-in 2FA in both CE and EE now and makes use of the convenient
+Google Authenticator.</p>
+<p>All you have to do is go to your Profile &gt; Account and scan the QR code using
+Google's app.</p>
+<p><img src="/images/7_11/2fa.png" alt="two-factor authentication"/></p>
+<p>From now on, on login you'll be required to provide the code the app gives you
+for GitLab. Two-factor authentication only works with the web-UI for now.</p>
+<h2 id=user-roles-in-comments>User roles in comments</h2>
+<p>Now you know who's who in your favorite project. On comments you will see
+the role of the person in that project:</p>
+<p><img src="/images/7_11/roles.png" alt="not an actual conversation"/></p>
+<h2 id=task-lists-everywhere>Task lists everywhere</h2>
+<p>Want a task list in the comments? Now you can!</p>
+<p><img src="/images/7_11/task.png" alt="Task list in comments"/></p>
+<h2 id=version-check>Version Check</h2>
+<p>GitLab releases a new version <em>every single month on the 22nd</em>, so we understand
+that people are not always up to date. We wanted to give you some help with
+this, so from now on you can quickly see which version of GitLab you have running
+by visiting the Help or Admin page. It will show if you are up to date and
+if there is a security release you should have installed.</p>
+<p>Read more about the version check in our <a href="/blog/2015/05/07/version-check/">blog post about it.</a></p>
+<p>You can turn off the version check under Admin &gt; Settings.</p>
+<h2 id=license-keys-for-enterprise-edition>License keys for Enterprise Edition</h2>
+<p>GitLab Enterprise Edition used to live in a private repository, which was fine up
+until now. However, with the addition of our package server, we want
+to make it easier to start using GitLab Enterprise Edition.</p>
+<p>Rather than locking up the package repository of GitLab EE, we decided to
+open up all the code and <a href="https://packages.gitlab.com/gitlab/gitlab-ee">packages</a> and start using license keys. The code
+is still proprietary, but now is <a href="https://gitlab.com/gitlab-org/gitlab-ee/">publicly viewable</a>.</p>
+<p>This has several advantages. The installation of GitLab EE becomes as easy as
+installing GitLab CE. You no longer needs access to specific repositories,
+rather you can download it using the same methods as CE (including AWS/Azure templates, Docker images, etc).</p>
+<p>In addition, the code for Enterprise Edition is now becoming open to inspect
+for everyone. This will make it easier to send enhancements and makes it easier
+to do a trial of Enterprise Edition.</p>
+<p>Getting organizations to purchase a subscription after their trial expires or
+at renewal time sometimes took a substantial effort from us.
+We don't want to raise prices for customers that renew without prompting because
+we need to invest more time in unresponsive customers.
+Therefore we decided to introduce license keys that prompt customers automatically.
+We regret the inconvenience that license keys introduce
+but we think it is the best solution to keep prices low.</p>
+<h2 id=true-up-model-for-subscriptions>True-up model for subscriptions</h2>
+<p>The worst thing about license keys is that they can be very inflexible.
+Most GitLab installations quickly grow in popularity within the organization.
+Having to purchase a new license key every time this happens is very inefficient.
+Also, we noticed that the majority of our customers didn't have a compliant subscription, for us this indicates that having to renew the subscription multiple times a year is very inconvenient.</p>
+<p>Therefore we will switch to a true-up model that allows you to grow now and pay later.
+When you get a new license you should get it for your current number of active users.
+For users that are added during the year you pay half price when you renew.</p>
+<p>So if you have 100 active users today you get a 100 user subscription.
+Suppose that when you renew a year from now you have 300 active users.
+You pay for a 300 user subscription and pay half a year for the 200 users that you added during the year.</p>
+<h3 id=getting-the-license-key>Getting the license key</h3>
+<p>If you are currently a GitLab customer, you should have received your license
+key already at the email you registered with your payment. You can also email
+<code>sales at gitlab dot com</code> to request it at any time.</p>
+<p>New subscribers will receive their license key automatically.</p>
+<h3 id=installing-the-license-key>Installing the license key</h3>
+<p>To install the license, vist <code>/admin/license</code> in your GitLab instance as an
+admin. Here you can upload your <code>.gitlab-license</code> file, which will instantly
+unlock GitLab Enterprise Edition.</p>
+<p><img src="/images/7_11/license.png" alt="Installing your license"/></p>
+<p>You can also download and review your current license here.</p>
+<p><em>Please note that we will release GitLab 7.10.5 soon, that will allow you to
+upload the license key to your GitLab instance before upgrading, to avoid
+unnecessary downtime.</em></p>
+<h2 id=two-factor-authentication-for-ldap--active-directory-ee-only>Two-Factor Authentication for LDAP / Active Directory (EE-only)</h2>
+<p>Want to use two-factor authentication together with your LDAP or Active Directory
+integration? With GitLab Enterprise Edition you can.</p>
+<h2 id=new-gitlab-ci-features>New GitLab CI Features</h2>
+<p>With the release of GitLab 7.11, we also updated GitLab CI to 7.11.
+Some changes worth mentioning are an improved runners page,
+public accessible build and commit pages for public projects
+, a new backup/restore utility that will backup your CI database and
+HipChat notifications!</p>
+<h2 id=other-awesome-changes-in-gitlab-ce>Other awesome changes in GitLab CE</h2>
+<p>We can never cover all the new stuff in each GitLab release, but these
+are worth to have a quick look at as well:</p>
+<p><strong>Quick quote-reply</strong> You can now reply with a quotation by simply selecting text in an issue
+or merge request and pressing <code>r</code>. It will set the focus to the editing window
+and have the quoted text already in it!</p>
+<p><strong>Atom feeds for all!</strong> There is now an atom feed for each project!</p>
+<p><strong>Settings in admin UI</strong> We moved default project and snippet visibility settings
+to the admin web interface.</p>
+<p><strong>Improved UI for mobile</strong> GitLab is now better viewable on mobile!</p>
+<p><strong>WIP your MRs!</strong> If you add <code>WIP</code> or <code>[WIP]</code> (work in progress) to the start of the title of a merge request,
+it will be protected from merging now.</p>
+<p><img src="/images/7_11/wip.png" alt="WIP blocking the merge request of this blog post!"/></p>
+<p>This release has more improvements, including security fixes, please check out <a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CHANGELOG">the Changelog</a> to see the all named changes.</p>
+<h2 id=upgrade-barometer>Upgrade barometer</h2>
+<p>Coming from 7.10, the migrations in 7.11 are pretty fast (under 1 minute), but one of them is tricky:
+we rename any existing users with names ending in a period ('.').
+This migration updates both the database and the filesystem and previous versions
+of this migration have proven to be fragile.</p>
+<p>If you have no user namespaces with paths ending in '.' in your database and if you trust your users not to
+create any until after you upgrade to GitLab 7.11 you can perform this upgrade online.
+If not, we recommend to take downtime (this is what we did for gitlab.com).
+You can find the current number of affected database records with the following command:</p>
+<div class=highlight><pre class="highlight plaintext"><code> sudo gitlab-rails runner "puts Namespace.where(type: nil).where(%q{path LIKE '%.'}).count"
+</code></pre></div><hr/>
+<h2 id=installation>Installation</h2>
+<p>If you are setting up a new GitLab installation please see the <a href="https://www.gitlab.com/install/">installing GitLab page</a>.</p>
+<h2 id=updating>Updating</h2>
+<p>Check out our <a href="/update/">update page</a>.</p>
+<p>Please note that cookbook-omnibus-gitlab, our Chef cookbook that installs/manages GitLab omnibus packages,
+does not yet support packages.gitlab.com. See <a href="https://gitlab.com/gitlab-org/cookbook-omnibus-gitlab/issues/8">this issue</a>.</p>
+<h2 id=enterprise-edition>Enterprise Edition</h2>
+<p>The mentioned EE-only features and things like LDAP group support can be found in GitLab Enterprise Edition.
+For a complete overview please have a look at the <a href="http://www.gitlab.com/gitlab-ee/">feature list of GitLab EE</a>.</p>
+<p>Access to GitLab Enterprise Edition is included with a <a href="http://www.gitlab.com/pricing/">subscription</a>.
+No time to upgrade GitLab yourself?
+A subscription also entitles you to our upgrade and installation services.</p>
+<hr/>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+7.11+released+with+Two-factor+Authentication+and+a+publicly+viewable+Enterprise+Edition+via+%40Jobvo&amp;url=https://about.gitlab.com/releases/2015/05/22/gitlab-7-11-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab 7.11 released with Two-factor Authentication and a publicly viewable Enterprise Edition
+via @Jobvo
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2015/05/22/gitlab-7-11-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2015/05/22/gitlab-7-11-released/&amp;text=GitLab 7.11 released with Two-factor Authentication and a publicly viewable Enterprise Edition' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2015/05/22/gitlab-7-11-released/&amp;title=GitLab 7.11 released with Two-factor Authentication and a publicly viewable Enterprise Edition&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2015/05/22/gitlab-7-11-released/&amp;t=GitLab 7.11 released with Two-factor Authentication and a publicly viewable Enterprise Edition' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2015/05/11/gitlab-7-dot-10-dot-4-released/" title="GitLab 7.10.4 released"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 7.10.4 released
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2015/05/27/gitlab-7-dot-10-dot-5-released/" title="GitLab 7.10.5 released"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab 7.10.5 released
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2015-05-22-gitlab-7-11-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2015-05-22-gitlab-7-11-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

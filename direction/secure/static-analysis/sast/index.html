@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Static Application Security Testing (SAST)
+|
+GitLab
+</title>
+<meta content='Static Application Security Testing (SAST) checks source code to find possible security vulnerabilities.' name=description />
+<meta content='Static Application Security Testing (SAST) checks source code to find possible security vulnerabilities.' name='twitter:description'/>
+<meta content='Static Application Security Testing (SAST) checks source code to find possible security vulnerabilities.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Static Application Security Testing (SAST)' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/secure/static-analysis/sast/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/secure/static-analysis/sast/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Static Application Security Testing (SAST)' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/secure/static-analysis/sast/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target=".qnav">
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Static Application Security Testing (SAST)
+</h1>
+</div>
+</div>
+<div class="wrapper sidebar-layout-wrapper clearfix">
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/connorgilbert'>
+<img
+src='/images/team/connorgilbert.jpg'
+class=codeowner-avatar-img
+alt='Connor Gilbert'
+title='Connor Gilbert'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/sarahwaldner'>
+<img
+src='/images/team/sarahwaldner.png'
+class=codeowner-avatar-img
+alt='Sarah Waldner'
+title='Sarah Waldner'
+>
+</a>
+</div>
+</div>
+</aside>
+<div class=" container md-page">
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/secure/">Product Stage Direction - Secure</a></li><li><a href="/direction/secure/static-analysis/">Static Analysis group priorities</a></li><li>Category Direction - Static Application Security Testing (SAST)</li>
+</ol>
+<div class="hidden-md hidden-lg">
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/connorgilbert'>
+<img
+src='/images/team/connorgilbert.jpg'
+class=codeowner-avatar-img
+alt='Connor Gilbert'
+title='Connor Gilbert'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/sarahwaldner'>
+<img
+src='/images/team/sarahwaldner.png'
+class=codeowner-avatar-img
+alt='Sarah Waldner'
+title='Sarah Waldner'
+>
+</a>
+</div>
+</div>
+</div>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#sast" id=markdown-toc-sast>SAST</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a></li>
+<li><a href="#context-know-our-customers" id=markdown-toc-context-know-our-customers>Context: Know our customers</a> <ul>
+<li><a href="#customer-journey" id=markdown-toc-customer-journey>Customer journey</a></li>
+<li><a href="#big-picture-constraints" id=markdown-toc-big-picture-constraints>Big-picture constraints</a></li>
+<li><a href="#next-level-details" id=markdown-toc-next-level-details>Next-level details</a></li>
+</ul>
+</li>
+<li><a href="#strategy-and-themes" id=markdown-toc-strategy-and-themes>Strategy and themes</a> <ul>
+<li><a href="#meet-table-stakes-requirements" id=markdown-toc-meet-table-stakes-requirements>Meet table-stakes requirements</a></li>
+<li><a href="#lean-into-unique-advantages" id=markdown-toc-lean-into-unique-advantages>Lean into unique advantages</a></li>
+<li><a href="#focus-on-ultimate-but-support-free" id=markdown-toc-focus-on-ultimate-but-support-free>Focus on Ultimate, but support Free</a></li>
+<li><a href="#dont-invest-uniformly" id=markdown-toc-dont-invest-uniformly>Don't invest uniformly</a></li>
+<li><a href="#operate-everywhere" id=markdown-toc-operate-everywhere>Operate everywhere</a></li>
+<li><a href="#allow-customization-but-still-be-opinionated" id=markdown-toc-allow-customization-but-still-be-opinionated>Allow customization, but still be opinionated</a></li>
+</ul>
+</li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 year plan</a> <ul>
+<li><a href="#what-is-next-for-us" id=markdown-toc-what-is-next-for-us>What is next for us</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is not planned right now</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id=sast>SAST</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/secure/">Secure</a></td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td><a href="/direction/maturity/">Viable</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-07-22</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+<p>This direction page describes GitLab's plans for the SAST category, which checks source code to find possible security vulnerabilities.</p>
+<p>This page is maintained by the Product Manager for <a href="/handbook/product/categories/#static-analysis-group">Static Analysis</a>, <a href="/company/team/#connorgilbert">Connor Gilbert</a>.</p>
+<p>Everyone can contribute to where GitLab SAST goes next, and we'd love to hear from you.
+The best ways to participate in the conversation are to:</p>
+<ul>
+<li>Comment or contribute to existing <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/?sort=created_date&amp;state=opened&amp;label_name%5B%5D=Category%3ASAST">SAST issues</a> in the public <code>gitlab-org/gitlab</code> issue tracker.</li>
+<li>If you don't see an issue that matches, file <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/new?issuable_template=Feature%20Proposal%20-%20basic">a new issue</a>.
+<ul>
+<li>Post a comment that says <code>@gitlab-bot label ~"group::static analysis" ~"Category:SAST"</code> so your issue lands in our triage workflow.</li>
+</ul>
+</li>
+<li>If you're a GitLab customer, discuss your needs with your account team.</li>
+</ul>
+<h3 id=overview>Overview</h3>
+<p><a href="https://docs.gitlab.com/ee/user/application_security/sast/">GitLab SAST</a> runs on merge requests and the default branch of your software projects so you can continuously monitor and improve the security of the code you write.
+SAST jobs run in your CI/CD pipelines alongside existing builds, tests, and deployments, so it's easy for developers to interact with.</p>
+<p>While SAST uses sophisticated techniques, we want it to be simple to understand and use day-to-day, especially by developers who may not have specific security expertise.
+So, when you <a href="https://docs.gitlab.com/ee/user/application_security/sast/#configuration">enable GitLab SAST</a>, it automatically detects the programming languages used in your project and runs the right security analyzers.</p>
+<p>While <a href="https://docs.gitlab.com/ee/user/application_security/sast/#summary-of-features-per-tier">basic SAST scans</a> are available in every GitLab tier, organizations that use GitLab SAST in their security programs should use Ultimate.
+Only GitLab Ultimate <a href="https://docs.gitlab.com/ee/user/application_security/sast/#summary-of-features-per-tier">includes</a>:</p>
+<ul>
+<li>Proprietary scanning technology that delivers higher-quality results.</li>
+<li>Proprietary Advanced Vulnerability Tracking that keeps track of vulnerabilities as they move around a codebase.</li>
+<li>Integrating SAST results into the merge request workflow.</li>
+<li>Vulnerability Management, Security Policies, and other capabilities that help you enforce security requirements.</li>
+</ul>
+<h3 id=context-know-our-customers>Context: Know our customers</h3>
+<p>The ideal/typical customer profile for GitLab SAST is affected by our pricing, our packaging (as part of Ultimate), and the market that our company addresses overall.
+Customers approach SAST and other GitLab security products in a way that's somewhat different from other areas of the product.</p>
+<h4 id=customer-journey>Customer journey</h4>
+<p>There are at least a few big-picture aspects to mention:</p>
+<ul>
+<li>Our customers are generally trying to <strong>bring developers into their security program</strong>. They’re often doing this because there are so many more developers than security engineers. For our customers, security testing is not a "once in a release" task.
+<ul>
+<li>This applies at any organization size—we have customers with 50 developers and 1 security engineer, or thousands of developers and a team of dozens of security engineers. Notice how, in both cases, each security engineer has to scale their impact to many, many developers!</li>
+<li>In many cases, these organizations are trying to get wide scanning coverage because their business has scaled faster than their security program.</li>
+<li>As a result of these factors, our customers tend not to tolerate many false-positive (incorrect) results. They are (sometimes implicitly, sometimes explicitly) willing to accept some false-negative results (missed detections) so that they can avoid the false positives.</li>
+</ul>
+</li>
+<li>Our customers generally tend to have <strong>more modern technology stacks</strong>. That’s because using GitLab is itself an indication that they’re at least <em>attempting</em> something like DevOps, DevSecOps, or “digital transformation”.
+<ul>
+<li>This doesn’t mean that every customer is writing web applications and deploying them on Kubernetes or something like that—far from it. For example, we have a lot of hardware companies doing firmware development on C/C++ and banks or other entities building on what you could call “legacy” technologies.</li>
+<li>However, this does mean that we can largely stick to more-modern languages and ecosystems as we develop features. This is part of why we currently are prioritizing improving result quality rather than expanding the set of languages scanned.</li>
+</ul>
+</li>
+<li>Because of how GitLab is priced and packaged, our customers typically are <strong>uptiering from Premium to Ultimate</strong> when they have their first experience of GitLab SAST. It is comparatively rare for customers to purchase Ultimate right off the bat, though we want this to happen too.
+<ul>
+<li>Either way, during their evaluation, they are often in the midst of a time-limited Ultimate trial (typically 30 days).</li>
+<li>If a customer is upgrading from Premium, they experience a list-price increase of roughly 3x. (The price difference an individual customer sees will vary depending on the terms of their existing contract.)</li>
+<li>Customers often want to consolidate other products onto GitLab. These are often security tools because of the number of GitLab security features that are Ultimate-only.</li>
+</ul>
+</li>
+</ul>
+<h4 id=big-picture-constraints>Big-picture constraints</h4>
+<p>These large factors have led us to a few foundational design goals and constraints:</p>
+<ul>
+<li><strong>Developer-oriented:</strong> Our customers are using GitLab SAST to scale up their AppSec programs. They need their developers to contribute to security improvements—or at least avoid making new security mistakes.</li>
+<li><strong>Fast:</strong> Everyone's busy, and a security tool that doesn't deliver timely results is a security tool that's ignored. Results and guidance need to be available before the developer or security engineer switches to another task.</li>
+<li><strong>Deeply integrated:</strong> GitLab is a unified DevSecOps platform, and our customers build their SDLC and processes around it. We can deliver uniquely convenient and "sticky" workflows as part of a platform.</li>
+</ul>
+<h4 id=next-level-details>Next-level details</h4>
+<p>Those foundational goals are helpful, but not specific enough to guide all decisions. Going one level deeper, we can use beliefs like the following:</p>
+<ul>
+<li><strong>False positives are disfavored:</strong> Our customers tend to prefer fewer false-positive (incorrect) results. They are willing to tolerate some false-negative results (missed detections) so that they can avoid false positives.</li>
+<li><strong>We need to explain ourselves:</strong> Our product serves a broad audience, from expert security engineers to junior developers. This means that we must explain potential vulnerabilities clearly—even if we raise a true-positive result, if the user is confused by it result and doesn't believe it's true, we don't get any credit for that!</li>
+<li><strong>Some results is better than none:</strong> When a scan runs into an error, it's better to provide whatever insights we can correctly produce. We should still make the error visible in an appropriate way, but imagine a customer rolling out SAST to all their projects—it should "just work" and, if it doesn't work, this should not cause noisy pipeline failures or disrupt developer workflows.</li>
+<li><strong>Design as if scan results will be enforced automatically:</strong> Development teams often do not take action unless they are required to, so our security customers often want to implement automated enforcement. They can't do this unless we are careful to design our findings to be enforceable—for example by giving enough metadata that a policy can target the most-reliable and highest-impact findings while not causing workflows to be disrupted for minor nitpicks or guesses.</li>
+</ul>
+<h3 id=strategy-and-themes>Strategy and themes</h3>
+
+<p>The <a href="#context-know-our-customers">customer context described above</a> informs our strategy.</p>
+<h4 id=meet-table-stakes-requirements>Meet table-stakes requirements</h4>
+<p>We need to meet "table stakes" requirements because we aren't creating the market or introducing customers to the concept of a SAST product for the first time.
+Nearly all of our customers have used a SAST product, or at least a related product like a linter or quality tool, before.</p>
+<p>And, most organizations adopting Ultimate are going to compare us to other tools. Typically, they are either:</p>
+<ol>
+<li>Trying to use GitLab SAST to <strong>replace another product</strong> they already use (usually paid, but sometimes open-source or free).
+<ul>
+<li>In this case they often know the incumbent product well. This can be good or bad, since customers will know both the benefits and the frustrations related to that tool!</li>
+<li>The social/organizational dynamics are most interesting when one team (often Security) wants to keep the incumbent tool, but the other team (often Development) wants to adopt Ultimate. These head-to-heads can be particularly detailed and exacting.</li>
+<li>Customers differ in how intensively they evaluate GitLab against their incumbent tools. They also differ in how quickly they expect to consolidate their other tools onto GitLab. Some do detailed evaluations as part of the initial evaluation, while others postpone this until closer to a renewal decision.</li>
+</ul>
+</li>
+<li>Evaluating which SAST tool they should <strong>adopt for the first time</strong>.
+<ul>
+<li>In this case we are usually compared against newer-generation, easier-to-purchase tools.</li>
+</ul>
+</li>
+</ol>
+<p>In both cases, customers will design some kind of evaluation or testing process, ideally in collaboration with their account team.
+These can be very quantitative, comparing results and FP/FN rates, or they can be more qualitative.
+Sometimes the evaluation is on a benchmark app like <a href="https://github.com/digininja/DVWA">DVWA</a>, <a href="https://github.com/juice-shop/juice-shop">JuiceShop</a>, or <a href="https://owasp.org/www-project-benchmark/">OWASP Benchmark</a>; evaluators often view these as "simple tests" so they expect GitLab SAST to perform well on them, even if they are unrepresentative of the organization's typical code.
+Other times the evaluation is based on the organization's real code.</p>
+<p>The upshot is that we need to perform <em>well enough</em> in these evaluations to get through to the next stage of the evaluation.
+In other words, our platform value proposition, or other features like security policies, don't get a chance to compete if we aren't at least <em>close</em> in terms of result quality and clarity.</p>
+<p>Similarly, we need to avoid being eliminated for lacking common "checklist" buyer features, like offering cross-file analysis, IDE integration, or ability to implement policies.</p>
+<h4 id=lean-into-unique-advantages>Lean into unique advantages</h4>
+<p>Often, the best products rely on some kind of "unfair advantage" against competitors. (For some companies, that's access to a brand-new technology; for others, it's the opportunity to start fresh without a legacy stack and customer base; for others, it's an uncommonly powerful sales and marketing motion; for others it's pricing or packaging.)</p>
+<p>We will "punch above our weight" if we leverage GitLab's unique advantages. Those advantages include:</p>
+<ul>
+<li>Our product is a key part of user workflows throughout the SDLC: viewing source code, doing code review in merge requests, using the IDE, building artifacts, running tests, searching, planning, etc. We can build native integrations where other companies would not be able to.</li>
+<li>As a result, we have real-time access to data and events across the SDLC, such as commit history, builds, other information; many other tools do not have this data natively and must connect to it over APIs or other integrations.</li>
+<li>We are part of a unified platform that's prepaid annually, so we can lead customers and users on a gradual adoption or activation journey, progressively increasing the amount of insight and value we provide without requiring them to first buy a new product or pay a bill.</li>
+</ul>
+<h4 id=focus-on-ultimate-but-support-free>Focus on Ultimate, but support Free</h4>
+<p>GitLab SAST must exist in certain tiers based on our business model.</p>
+<ul>
+<li><strong>Ultimate:</strong> We focus on Ultimate. Our main focus should be making Ultimate as valuable as we can. That's because security and compliance is a key driver of Ultimate revenue, and this is our role in GitLab's business.</li>
+<li><strong>All tiers:</strong> "Basic scans" are currently available in all tiers.
+<ul>
+<li>This is partly due to our historical use of open-source technology and our desire to provide basic security hygiene to all. Today, the Free offering does not play a major part in our business strategy.</li>
+<li>However, GitLab disfavors removing or uptiering features, so some basic GitLab SAST functionality must be available in Free/Premium.</li>
+<li>This does not mean that some part of <em>every aspect of SAST</em> is available in Free. For example, features like vulnerability management, vuln tracking, and UI flows are (and should remain) 100% Ultimate-only.</li>
+<li>Similarly, proprietary technology in which we've invested significant resources will almost always remain Ultimate-only.</li>
+</ul>
+</li>
+</ul>
+<h4 id=dont-invest-uniformly>Don't invest uniformly</h4>
+<p>Not all features or languages are equal-value.</p>
+<p>Our customers expect the features we have previously released to continue to exist, so we disfavor removing capabilities entirely.
+This means that we should assume that we need to continue to maintain the support matrix and features we current have. For example, if we have declared support for scanning a particular language, we cannot easily remove it.</p>
+<p>However, this <em>doesn't</em> mean that we need to invest the same amount of effort or achieve the same sophistication for every language or feature.
+For example, it is completely appropriate to continue to use open-source scanners to power less-commonly-used languages like Apex or Elixir until the appropriate customer demand shows us that we need to invest more resources in developing improved technology for those languages.</p>
+<h4 id=operate-everywhere>Operate everywhere</h4>
+<p>Our technology stack going forward must:</p>
+<ul>
+<li>Support operating in different contexts, including classic "shift left" contexts like the IDE and merge request (code review).
+<ul>
+<li>The biggest thing to remember is that we need to provide a <em>consistent</em> experience across these contexts.
+<ul>
+<li>"Consistent" <em>does not</em> mean "identical". For example, in the IDE we are subject to short time deadlines and our goal is to get easy-to-understand fixes in front of developers very quickly. In such cases we can make limitations like only scanning for simpler-to-detect issues (e.g. bad/risky functions) and reserve taint analysis for operational environments where longer-running scans are acceptable.</li>
+<li>"Consistent" <em>does</em> mean that the product feels like it's actually one product. So, for example, if you dismiss a finding in Vulnerability Management, that same finding should not reappear in the IDE. Or, if you disable a rule in a project, that preference should be applied everywhere that scanning happens.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>We also must support operating in all three types of GitLab Ultimate offerings: GitLab.com (multi-tenant SaaS), GitLab Dedicated (single-tenant SaaS), and self-managed.
+<ul>
+<li>Self-managed includes operating completely offline (not connected to GitLab cloud services in any way). A significant number of customers do this—often the most security-conscious ones, who also want to use SAST and other security tools.</li>
+</ul>
+</li>
+</ul>
+<h4 id=allow-customization-but-still-be-opinionated>Allow customization, but still be opinionated</h4>
+<p>Some customers want a product that "just works"—more of a black box than anything.
+Others will want to customize scan behavior to detect custom problems, for example insecure use of an internal library, that would not be appropriate to ship in a global ruleset to all customers.
+Roughly speaking, most customers are closer to the "black box" mentality; a smaller proportion of security teams prefer the customization approach—typically those who have a Security Engineering approach and build significant hands-on expertise within their teams.</p>
+<p>One strength of GitLab as a product is that we offer many basic "primitives" that customers can use in creative ways to achieve their goals.
+But, it is easy to allow a product to become very complicated and hard-to-use in the service of endless customization. GitLab's <a href="/handbook/product/product-principles/#configuration-principles">configuration principles</a> include:</p>
+<ul>
+<li>Ensure a great experience by default.</li>
+<li>Encourage favorable behaviors by limiting configuration.</li>
+<li>Avoid configuration completely when possible.</li>
+</ul>
+<p>We should be opinionated about the interfaces we offer, including the types of customizations we support, so that we can give customers simplicity and maintain our own technical flexibility.
+For example, customers sometimes want to ban calls to particular libraries or functions.</p>
+<ul>
+<li>One way to offer this is to allow injection of fully custom rules.</li>
+<li>But another would be to accept, as a specific configuration option, a list of function names that should never be called.</li>
+</ul>
+<p>The two options here differ greatly in:</p>
+<ul>
+<li>the amount of complexity surfaced to the user—learning a pattern language and a YAML format, for example, versus entering a function name into a form.</li>
+<li>how much the customization dictates other technology choices. While a generic list of banned functions could be consulted by many different scanning systems, a more generic pattern is unlikely to losslessly translate to systems other than the one it was originally designed for.</li>
+</ul>
+<h3 id=1-year-plan>1 year plan</h3>
+
+<p>GitLab Static Analysis and Vulnerability Research teams are collaborating to improve the customer experience with SAST.</p>
+<p>We've identified four themes that summarize the work we're planning and completing:</p>
+<ol>
+<li><strong>Result quality:</strong> Security professionals and developers should be able to trust every result from GitLab SAST. This work improves the user experience directly, but also indirectly by reducing the number of times users have to go through other workflows.</li>
+<li><strong>Shifting further left:</strong> GitLab SAST already scans code as soon as it's pushed, before code reviews even begin. But, we can make it easier to improve security by scanning code even earlier, including before code leaves developer machines.</li>
+<li><strong>"Day 1" experience and "Day 2" efficiency:</strong> We need to be sure SAST is both easy to enable ("Day 1") and operate going forward ("Day 2").</li>
+<li><strong>Triage and remediation experience:</strong> We value our users' time, and we know that vulnerabilities are resolved more often if they're easier to understand and interact with.</li>
+</ol>
+<h4 id=what-is-next-for-us>What is next for us</h4>
+
+
+<p>In the next 3 months, we are planning to work on:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Overall status</th>
+<th>One-month plan</th>
+<th>Three-month plan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Make GitLab Advanced SAST an opt-in GA feature; add JavaScript support and dataflow UI<br/><em><a href="https://gitlab.com/groups/gitlab-org/-/epics/13278"><em>Tracking issue/epic</em></a></em></td>
+<td>ETA 17.3</td>
+<td>Complete JavaScript rule migration and other GA maturity requirements. Make Advanced SAST available in stable template with opt-in.</td>
+<td><em>See one-month plan</em></td>
+</tr>
+<tr>
+<td>Ship a data migration to resolve findings from End-of-Support/removed analyzers<br/><em><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/444926"><em>Tracking issue/epic</em></a></em></td>
+<td>ETA 17.3. In progress.</td>
+<td>Complete work; begin executing migration on GitLab.com</td>
+<td><em>See one-month plan</em></td>
+</tr>
+<tr>
+<td>Real-time SAST scanning in the IDE<br/><em><a href="https://gitlab.com/groups/gitlab-org/-/epics/10283"><em>Tracking issue/epic</em></a></em></td>
+<td>Target October 2024 for MVC. (Not a committed date.) In progress.</td>
+<td>Continue prototyping</td>
+<td>Deliver MVC</td>
+</tr>
+<tr>
+<td>Make Advanced SAST ready to be on-by-default<br/><em><a href="https://gitlab.com/groups/gitlab-org/-/epics/14523"><em>Tracking issue/epic</em></a></em></td>
+<td>ETA next few months. Starting after opt-in GA release.</td>
+<td> </td>
+<td>Implement finding deduplication and other requirements</td>
+</tr>
+<tr>
+<td>Expand GitLab Advanced SAST language support<br/><em><a href="https://gitlab.com/groups/gitlab-org/-/epics/14312"><em>Tracking issue/epic</em></a></em></td>
+<td>Releases starting in 17.3, language-by-language.</td>
+<td>Finalize TypeScript support; work on C# and PHP</td>
+<td>Continue with Ruby, C, and C++</td>
+</tr>
+<tr>
+<td>Incremental pipeline-based scans (skip unmodified code)<br/><em><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/419734"><em>Tracking issue/epic</em></a></em></td>
+<td>ETA not yet defined</td>
+<td>Identify path forward for storage of cache</td>
+<td>Implement cache storage</td>
+</tr>
+<tr>
+<td>Document rule information and CWE coverage<br/><em><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/457969"><em>Tracking issue/epic</em></a></em></td>
+<td>ETA 17.4 (tentative)</td>
+<td>Develop technical plan</td>
+<td>Ship documentation</td>
+</tr>
+</tbody>
+</table>
+<h4 id=what-we-recently-completed>What we recently completed</h4>
+
+<p>Our recent work includes:</p>
+<ul>
+<li>Adding a variable to <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/414732">prevent local config files from interfering with policy-driven scans</a> in GitLab 17.3.</li>
+<li>Releasing <a href="https://docs.gitlab.com/ee/user/application_security/sast/gitlab_advanced_sast.html">GitLab Advanced SAST</a> for Python, Go, and Java as a <a href="https://docs.gitlab.com/ee/policy/experiment-beta-support.html">Beta feature</a>.</li>
+<li>Introducing GitLab-managed rules for multiple programming languages and <a href="https://gitlab.com/groups/gitlab-org/-/epics/13050">consolidating analyzer coverage in GitLab 17.0</a>.</li>
+<li>Significant (and ongoing) <a href="https://about.gitlab.com/releases/2023/12/21/gitlab-16-7-released/#updated-sast-rules-to-reduce-false-positive-results">improvements to the default SAST ruleset</a>, delivering substantially fewer false-positive and false-negative results in 16.8 and future releases. See <a href="https://gitlab.com/groups/gitlab-org/-/epics/10907">epic 10907</a> for further progress.</li>
+<li><a href="https://about.gitlab.com/releases/2023/12/21/gitlab-16-7-released/#sast-results-in-mr-changes-view">Integrating SAST results into the MR diff view</a> (in the Changes tab). This project involved updating the Code Quality inline diff feature and adding SAST results to it.</li>
+<li><a href="https://about.gitlab.com/releases/2024/02/15/gitlab-16-9-released/#more-detailed-security-findings-in-vs-code">More detailed security findings</a> in the recently released <a href="https://gitlab.com/groups/gitlab-org/-/epics/9004">integration of CI/CD pipeline-based security scan results into the VS Code IDE</a>.</li>
+</ul>
+<p>Check <a href="https://gitlab-com.gitlab.io/cs-tools/gitlab-cs-tools/what-is-new-since/?tab=features&amp;selectedCategories=SAST&amp;minVersion=13_00">older release posts</a> for our previous work in this area.</p>
+<h4 id=what-is-not-planned-right-now>What is not planned right now</h4>
+<p>We understand the value of many potential improvements to GitLab SAST, but aren't currently planning to work on the following initiatives:</p>
+<ul>
+<li><strong>Expanding language support:</strong> Currently, we're focusing on delivering better-quality results, faster, for <a href="https://docs.gitlab.com/ee/user/application_security/sast/#supported-languages-and-frameworks">the many languages and frameworks we already support</a>. We're not actively adding adding support for new languages.
+However, if we don't support a language you use, you can:
+<ul>
+<li><a href="https://docs.gitlab.com/ee/development/integrations/secure.html">Integrate third-party tools</a> (open-source or proprietary) using our <a href="https://docs.gitlab.com/ee/development/integrations/secure.html#report">documented, open report format</a>.</li>
+<li>Document your request by opening an issue or commenting on an existing issue in <a href="https://gitlab.com/groups/gitlab-org/-/epics/297">epic 297</a>.</li>
+</ul>
+</li>
+<li><strong>More analyzer consolidations:</strong> We are not currently focusing on consolidating more analyzers into Semgrep-based scanning with <a href="https://docs.gitlab.com/ee/user/application_security/sast/rules.html#source-of-rules">GitLab-managed rules</a>.
+<ul>
+<li>We recently completed work to consolidate scanning coverage from many language-specific scanners to Semgrep-based scanning. This provides a simpler, more consistent operational experience; allows GitLab to directly manage rules; and makes scans run faster.</li>
+<li>We released these changes as part of <a href="https://docs.gitlab.com/ee/update/deprecations.html#sast-analyzer-coverage-changing-in-gitlab-170">GitLab 17.0</a>, <a href="https://docs.gitlab.com/ee/update/deprecations.html#sast-analyzer-coverage-changing-in-gitlab-160">GitLab 16.0</a>, and <a href="https://docs.gitlab.com/ee/update/deprecations.html#sast-analyzer-consolidation-and-cicd-template-changes">GitLab 15.4</a>.</li>
+<li>The remaining analyzers cover less-commonly-used languages that we cannot immediately convert due to limitations in the Semgrep engine.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/secure/static-analysis/sast/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/secure/static-analysis/sast/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

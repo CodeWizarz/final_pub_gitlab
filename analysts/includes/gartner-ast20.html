@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='noindex, follow' name=robots />
+<title>
+Gartner Magic Quadrant for Application Security Testing 2020
+|
+GitLab
+</title>
+<meta content='This page shares how Gartner positioned us on the Magic Quadrant and viewed our application testing capabilities in relation to the larger market.' name=description />
+<meta content='This page shares how Gartner positioned us on the Magic Quadrant and viewed our application testing capabilities in relation to the larger market.' name='twitter:description'/>
+<meta content='This page shares how Gartner positioned us on the Magic Quadrant and viewed our application testing capabilities in relation to the larger market.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Gartner Magic Quadrant for Application Security Testing 2020' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='analysts/includes/gartner-ast20.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/analysts/includes/gartner-ast20.html' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Gartner Magic Quadrant for Application Security Testing 2020' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/analysts/gartner-ast20/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Gartner Magic Quadrant for Application Security Testing 2020
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/akramer'>
+<div class=codeowners-single>
+<img
+src='/images/team/ashleykramer.jpeg'
+class=codeowner-avatar-img
+alt='Ashley Kramer'
+title='Ashley Kramer'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Ashley Kramer
+</div>
+<div class=codeowners-handle>
+@akramer
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/analysts/includes/gartner-ast20.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li>Gartner Magic Quadrant for Application Security Testing 2020</li>
+</ol>
+<h2 id=gitlab-is-named-in-the-2020-gartner-magic-quadrant-for-application-security-testing>GitLab is named in the 2020 Gartner Magic Quadrant for Application Security Testing</h2>
+<p>This page shares how Gartner positioned us on the Magic Quadrant and viewed our application testing capabilities in relation to the larger market and how we're working with that information in our ongoing product evolution.</p>
+<h3 id=gartners-key-takeaways-on-the-ast-market-at-time-of-report-publication>Gartner's Key Takeaways on the AST Market at time of report publication</h3>
+<p><strong>Market Definition/Description</strong></p>
+<p>In the published document, "Gartner defines the application security testing (AST) market as the buyers and sellers of products and services designed to analyze and test applications for security vulnerabilities."</p>
+<p>According to Gartner, "We identify four main AST technologies:</p>
+<ul>
+<li>Static AST (SAST) technology analyzes an application’s source, bytecode or binary code for security vulnerabilities, typically at the programming and/or testing software life cycle (SLC) phases.</li>
+<li>Dynamic AST (DAST) technology analyzes applications in their dynamic, running state during testing or operational phases. It simulates attacks against an application (typically web-enabled applications and services and APIs), analyzes the application’s reactions and, thus, determines whether it is vulnerable.</li>
+<li>Interactive AST (IAST) technology combines elements of DAST simultaneously with instrumentation of the application under test. It is typically implemented as an agent within the test runtime environment (for example, instrumenting the Java Virtual Machine [JVM] or .NET CLR) that observes operation or attacks and identifies vulnerabilities.</li>
+<li>Software composition analysis (SCA) technology used to identify open-source and third-party components in use in an application, their known security vulnerabilities, and typically adversarial license restrictions."</li>
+</ul>
+<p>Gartner also explains how they see the AST market evolving over time: "Gartner has observed the major driver in the evolution of the AST market is the need to support enterprise DevOps initiatives. Customers require offerings that provide high-assurance, high-value findings while not unnecessarily slowing down development efforts. Clients expect offerings to fit earlier in the development process, with testing often driven by developers rather than security specialists. As a result, this market evaluation focuses more heavily on the buyer’s needs when it comes to supporting rapid and accurate testing capable of being integrated in an increasingly automated fashion throughout the software development life cycle. In addition, Gartner recognizes the growing relevance of containers as an attractive technology for application development, especially for cloud-native applications. We have added support for containers as a factor in the 2020 Magic Quadrant."</p>
+<h3 id=gartners-take-on-gitlab-at-time-of-report-publication>Gartner's take on GitLab at time of report publication</h3>
+<p>In this report, GitLab is named/positioned as a Niche Player. Gartner defines a Niche Player in the following way: "Niche Players offer viable, dependable solutions that meet the needs of specific buyers. Niche Players fare well when considered for buyers looking for “best of breed” or “best fit” to address a particular business or technical use case that matches the vendor’s focus. Niche Players may address subsets of the overall market. Enterprises tend to pick Niche Players when the focus is on a few important functions, or on specific vendor expertise or when they have an established relationship with the vendor. Niche Players typically focus on a specific type of AST technology or delivery model, or a specific geographic region."</p>
+<h2 id=gitlabs-commentary-on-this-report>GitLab's commentary on this report</h2>
+<p>We are thrilled to be included in the Magic Quadrant for Application Security Testing!</p>
+<p><strong>Validating the importance of security within CI</strong></p>
+<p>GitLab aspires to the an industry leader with its <a href="https://about.gitlab.com/direction/secure/">Application Security Testing capabilities</a>. We are rapidly pursuing this vision through both internal growth and <a href="https://about.gitlab.com/press/releases/2018-01-30-gemnasium-acquisition.html">acquisition</a>.</p>
+<p>We have grown our capabilities quickly by focusing less on reinventing scanners and more on providing the results where they are most useful in the software development lifecycle - to the developer. While security teams typically find vulnerabilities, the developer is in the position to remediate them. GitLab's focus is on empowering the developer to find and fix as much as they can while they are still iterating on the code's development, an approach that is far less expensive and more efficient.</p>
+<p><strong>Enabling the developer</strong></p>
+<p>GitLab's strength is our workflow. Unlike traditional application security tools primarily intended for use by security pros, GitLab security testing capabilities are built into the CI/CD workflows where the developers live. At the same time, GitLab provides security professionals with a dashboard to view items resolved by the developer, across projects. This contextual approach helps each role deal with items that are most important and most relevant to their scope of work within their unique workflow.</p>
+<p>Benefits of this approach:</p>
+<ul>
+<li>Meets the developer on their turf; no context switching</li>
+<li>Tests the delta code changes, allowing scans to complete rapidly and iteratively alongside coding efforts</li>
+<li>Provides results before code is merged with others making results accountable with clear cause-and-effect</li>
+<li>Requires no added tools; leverages a tool the developer already uses</li>
+<li>Provides results in the CI pipeline as actionable findings, not as a comment</li>
+<li>Requires no set up with SAST, DAST, Dependency scanning, Container scanning and License Compliance available "out-of-the-box".</li>
+</ul>
+<p>Read more about our workflow in the whitepaper: <a href="https://about.gitlab.com/resources/whitepaper-seismic-shift-application-security/">A Seismic Shift in Application Security</a></p>
+<p><strong>SDLC Integration</strong></p>
+<p>In the publication, Gartner's SDLC Integration requirements capture the ability to deeply and seamlessly integrate the AST solution into the SDLC, particularly critical in DevOps environments. They go on to clarify that tools should support integration across multiple types of development environments via APIs and plug-ins.</p>
+<p>We believe given that their client readership is comprised of a broad spectrum of enterprise application security professionals that spans traditional and more modern application security requirements, in this evaluation they valued app sec tools that integrate with many development environments types. Because of this, they placed GitLab as a Niche vendor.</p>
+<p>Yet what makes us a niche, also makes us the very best solution for the growing number of GitLab users.</p>
+<p><strong>A valuable niche for GitLab users</strong></p>
+<p>While it was true at the time of the assessment that those not using GitLab for CI would find it impractical to use GitLab security scanning, we are working to show how you can use GitLab's security testing even if you are using Jenkins for CI. This would broaden the utility to customers that may be only using GitLab for Source Code Management (SCM).</p>
+<p>In addition, recognizing that GitLab customers often have their favorite incumbent scanner, we are working to make it easier for other vendors to more seamlessly integrate their scan results into the GitLab CI pipeline and security dashboard found in the Ultimate tier. WhiteSource is one of the first to do this <a href="https://www.whitesourcesoftware.com/gitlab/">integration</a> in a way that optimizes benefit to our joint customers.</p>
+<p>The lack of an IDE plug-in is less important for our intended audience of GitLab users. GitLab has our own <a href="https://docs.gitlab.com/ee/user/project/web_ide/">web IDE</a> within SCM and so we see less need to plug into Visual Studio or Eclipse. We also do not have a spell-check-like functionality because those are typically a scaled down version of SAST. They cannot be relied upon as a scan replacement, and, since we do full SAST plus SCA and DAST right at the point of code commit, catching vulns as they are typed has been less important to our users. We may add it in the future, but haven’t seen the demand for it given our unique workflow.</p>
+<h2 id=looking-forward---weve-only-just-begun>Looking forward - We've only just begun!</h2>
+<p>We agree with Gartner that our features are less mature, our languages more limited than some vendors, and our dashboard not as customizable! Iteration is important at GitLab. We release useful capabilities to the market quickly and then add features quickly, releasing on 22nd each month. We are rapidly maturing our offering. Since the time of Gartner's assessment, (version 12.4), we have added many <a href="https://about.gitlab.com/releases/">new features</a>.</p>
+<p><strong>A couple favorite SAST improvements include:</strong></p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/user/application_security/sast/#supported-languages-and-frameworks">SAST for React</a>,</li>
+<li><a href="https://docs.gitlab.com/ee/user/application_security/sast/#supported-languages-and-frameworks">SAST for Kubernetes</a>, and</li>
+<li><a href="https://docs.gitlab.com/ee/user/application_security/sast/#using-environment-variables-to-pass-credentials-for-private-repositories">SAST with private dependencies</a>.</li>
+</ul>
+<p><strong>Beyond SAST, we've added other key capabilities such as:</strong></p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/user/application_security/offline_deployments/">Offline Environment Support</a> where self-managed installations can use our Secure capabilities in environments with physical barriers or security policies (for example, firewalls) that prevent or limit internet access.
+This environment is often referred to as an air-gapped environment.</li>
+<li><a href="https://docs.gitlab.com/ee/user/application_security/container_scanning/#solutions-for-vulnerabilities-auto-remediation">Suggested Solutions for Container Scanning</a> to automatically apply a remediation solution via auto-remediation.</li>
+<li>Risk Scores in the <a href="https://docs.gitlab.com/ee/user/application_security/security_dashboard/#group-security-dashboard">Group Security Dashboard</a> making it easy to quickly target problem projects.</li>
+</ul>
+<p><strong>We have also expanded language coverage via our <a href="https://about.gitlab.com/handbook/alliances/#interested-in-a-gitlab-technology-partnership">technology partnerships</a>.</strong></p>
+<p>A complete list of features released since 12.4 can be found on the <a href="https://about.gitlab.com/releases/">releases page</a>.</p>
+<p>In May we plan to launch <a href="https://gitlab.com/groups/gitlab-org/-/epics/634">Stand-alone Vulnerabilities</a>, essentially a re-architecture of how we handle vulnerability findings aimed to help security pros by more easily tracking and reporting vulnerabilities and their status (even to people not using GitLab).</p>
+<p><strong>Transparency</strong></p>
+<p>GitLab's security capabilities <a href="https://about.gitlab.com/direction/secure/">direction</a>
+and product <a href="https://about.gitlab.com/direction/secure/#upcoming-releases">roadmap</a> are both entirely transparent.
+We encourage everyone to contribute! Check out our <a href="https://about.gitlab.com/direction/secure/#upcoming-releases">upcoming releases</a>, and weigh in with upvotes and comments as to how these planned features can be most impactful for you.</p>
+<p><strong>We are also Shifting Right</strong></p>
+<p>In addition to application security testing, GitLab is working to provide the best defensive protection of your cloud-native applications and their operating environments. Check out our <a href="https://about.gitlab.com/direction/secure/">Secure</a> vision!</p>
+<p class="note font-small margin-top40"><strong>Note:</strong> Gartner, Magic Quadrant for Application Security Testing, Mark Horvath, Dionisio Zumerle, Dale Gardner, 29 April 2020.</p>
+<p class="note font-small">Gartner does not endorse any vendor, product or service depicted in its research publications, and does not advise technology users to select only those vendors with the highest ratings or other designation. Gartner research publications consist of the opinions of Gartner’s research organization and should not be construed as statements of fact. Gartner disclaims all warranties, express or implied, with respect to this research, including any warranties of merchantability or fitness for a particular purpose.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/analysts/includes/gartner-ast20.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/analysts/includes/gartner-ast20.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

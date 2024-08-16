@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Audit Events
+|
+GitLab
+</title>
+<meta content='In order to manage, or prove, compliance you must have visibility into all of the activity within your GitLab environment. Learn more here!' name=description />
+<meta content='In order to manage, or prove, compliance you must have visibility into all of the activity within your GitLab environment. Learn more here!' name='twitter:description'/>
+<meta content='In order to manage, or prove, compliance you must have visibility into all of the activity within your GitLab environment. Learn more here!' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Audit Events' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/govern/compliance/audit-events/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/govern/compliance/audit-events/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Audit Events' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/govern/compliance/audit-events/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Audit Events
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/g.hickman'>
+<img
+src='/images/team/granthickman.png'
+class=codeowner-avatar-img
+alt='Grant Hickman'
+title='Grant Hickman'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/sam.white'>
+<img
+src='/images/team/samuelwhite.png'
+class=codeowner-avatar-img
+alt='Sam White'
+title='Sam White'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/govern/compliance/audit-events/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/govern/">Product Stage Direction - Govern</a></li><li><a href="/direction/govern/compliance/">Group Direction - Compliance</a></li><li>Category Direction - Audit Events</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#audit-events" id=markdown-toc-audit-events>Audit Events</a> <ul>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target Audience</a></li>
+</ul>
+</li>
+<li><a href="#user-pain-points-to-address" id=markdown-toc-user-pain-points-to-address>User pain points to address</a> <ul>
+<li><a href="#thorough-coverage-of-the-actions-that-matter" id=markdown-toc-thorough-coverage-of-the-actions-that-matter>Thorough coverage of the actions that matter</a></li>
+<li><a href="#traceability" id=markdown-toc-traceability>Traceability</a></li>
+<li><a href="#flexibility-in-how-to-consume-events" id=markdown-toc-flexibility-in-how-to-consume-events>Flexibility in how to consume events</a></li>
+<li><a href="#actionability-of-results" id=markdown-toc-actionability-of-results>Actionability of results</a> <ul>
+<li><a href="#granularity" id=markdown-toc-granularity>Granularity</a></li>
+<li><a href="#simplicity" id=markdown-toc-simplicity>Simplicity</a></li>
+<li><a href="#time-savings" id=markdown-toc-time-savings>Time savings</a></li>
+</ul>
+</li>
+<li><a href="#whats-next--why" id=markdown-toc-whats-next--why>What’s Next &amp; Why</a> <ul>
+<li><a href="#how-we-will-prioritize-adding-new-audit-events" id=markdown-toc-how-we-will-prioritize-adding-new-audit-events>How we will prioritize adding new audit events</a></li>
+</ul>
+</li>
+<li><a href="#feature-authors-should-add-their-own-audit-events-for-features-that-are-built" id=markdown-toc-feature-authors-should-add-their-own-audit-events-for-features-that-are-built>Feature authors should add their own audit events for features that are built</a></li>
+<li><a href="#what-is-not-planned-right-now" id=markdown-toc-what-is-not-planned-right-now>What is Not Planned Right Now</a></li>
+<li><a href="#maturity" id=markdown-toc-maturity>Maturity</a></li>
+</ul>
+</li>
+<li><a href="#user-success-metrics" id=markdown-toc-user-success-metrics>User Success Metrics</a></li>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive landscape</a> <ul>
+<li><a href="#github-audit-logs" id=markdown-toc-github-audit-logs>GitHub Audit Logs</a></li>
+<li><a href="#azure-devops-audit" id=markdown-toc-azure-devops-audit>Azure DevOps Audit</a></li>
+<li><a href="#bitbucket-auditing" id=markdown-toc-bitbucket-auditing>Bitbucket Auditing</a></li>
+<li><a href="#key-takeaways" id=markdown-toc-key-takeaways>Key Takeaways</a></li>
+</ul>
+</li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst landscape</a></li>
+<li><a href="#top-customer-successsales-issues" id=markdown-toc-top-customer-successsales-issues>Top Customer Success/Sales issue(s)</a></li>
+<li><a href="#top-vision-issues" id=markdown-toc-top-vision-issues>Top Vision issue(s)</a></li>
+</ul>
+</li>
+<li><a href="#how-you-can-help" id=markdown-toc-how-you-can-help>How you can help</a></li>
+</ul>
+<h2 id=audit-events>Audit Events</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Stage</strong></th>
+<th><strong>Maturity</strong></th>
+<th><strong>Content Last Reviewed</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/direction/security/#govern">Govern</a></td>
+<td><a href="/direction/maturity/">Viable</a></td>
+<td><code>2022-03-04</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=overview>Overview</h3>
+<p>Legal, regulatory, and business requirements call for reliable, secure, and performant audit logging capabilities. Users interact with shared resources like projects, comments, and groups inside GitLab.
+Administrators need the ability to see and review activities to understand what happened in GitLab and who performed those actions.
+Audit events are individual records of what happened, when it happened, and who did it for various actions inside GitLab.</p>
+<p>A comprehensive set of audit events for the most critical and sensitive types of actions inside GitLab allows for a detailed record of what happened, when it happened, and who did it.
+This empowers administrators to quickly understand what changes happened. It also empowers compliance managers, like <a href="https://about.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Cameron (Compliance Manager)</a>,
+to confirm that compliance policies have not been violated or to maintain records for if exceptions have occurred.</p>
+<p>The <strong>Audit Events</strong> category is focused on capturing the most important user-driven events within GitLab, making that data easily available (via APIs, webhooks, and exportable reports),
+and providing a reasonable duration of storage for the data that follows compliance requirements (7 years).</p>
+<h4 id=target-audience>Target Audience</h4>
+<ul>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Cameron (Compliance Manager)</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#amy-application-security-engineer">Amy (Application Security Engineer)</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/personas/#isaac-infrastructure-security-engineer">Isaac (Infrastructure Security Engineer)</a></li>
+</ul>
+<h3 id=user-pain-points-to-address>User pain points to address</h3>
+<h4 id=thorough-coverage-of-the-actions-that-matter>Thorough coverage of the actions that matter</h4>
+<p>As users use more of GitLab's capabilities, there will be more potentially sensitive changes to monitor for. We will focus on ensuring that key areas of GitLab generate audit events to support
+administrators and compliance managers. GitLab moves quickly, releasing new features every month, so a challenge we will need to focus on is to add and capture new actions associated with these new capabilities.
+This aspect is key, because we can export audit events for users to post-process themselves, but if we never logged the event in the first place, there is not a good way forward.</p>
+<ul>
+<li>What success looks like: GitLab captures audit events for sensitive actions and has a framework to ensure new features ship with auditable events captured where appropriate.</li>
+</ul>
+<h4 id=traceability>Traceability</h4>
+<p>It's important that we’re presenting information in a way that makes answering questions simple. Users goal is to uncover quickly insights from a set of logs, not to comb through all the logs.
+Separation of duties questions like “who opened and merged this MR?” aren’t readily available in a logging system that logs individual events.
+GitLab should promote <strong>traceability</strong>; when a change is logged, we should enable an administrator to see the full context around the change.</p>
+<ul>
+<li>What success looks like: an administrator should be able to explore a logged event and see related changes and users. Clicking on the recorded event for a comment in a merge request,
+for instance, should show more contextual data around the merge request itself (when it was opened, merged, and who interacted with it). This should also be possible to do via the API.</li>
+</ul>
+<h4 id=flexibility-in-how-to-consume-events>Flexibility in how to consume events</h4>
+<p>Organizations, especially enterprises, have complex services and tooling built to integrate with their existing data analytics processes. This means that GitLab needs to ensure data parity between the audit events table within the UI and the audit events API. It also means incorporating different types of data ingestion for organizations, such as webhooks for various components within GitLab that are critical for an organization's custom tooling and analytics.</p>
+<ul>
+<li>What success looks like: GitLab has feature parity between the application's audit events tables and the audit events API and a <a href="https://gitlab.com/groups/gitlab-org/-/epics/5925">comprehensive webhook system</a>. We are using <a href="https://gitlab.com/groups/gitlab-org/-/epics/4994">this Epic</a> for tracking feature parity issues.</li>
+</ul>
+<p>Excellence in this category means that we’re solving for all of these needs: <strong>transparency</strong>, <strong>traceability</strong>, <strong>configuration</strong>, and <strong>monitoring</strong>.</p>
+<h4 id=actionability-of-results>Actionability of results</h4>
+<p>Audit events are a necessary aspect of compliance, but more important is leveraging audit events to inform proactive decisions and actions. Every customer differs in their policies and procedures, but also in their security and compliance culture and mindset.
+It will be critical to provide customers with smart, proactive alerts about anomalous activity in a way that's easy to setup and take action on.
+Flexibility is key because some customers will want to take programmatic action (e.g. automatically block a user's account) and some will want to take a "lighter touch" approach (e.g. notify an administrator, but take no further action).</p>
+<ul>
+<li>What success looks like: you should be able to define anomalous user behavior and GitLab's audit events should automatically flag activity matching that criteria.
+These definitions should be highly configurable and range from the simple to the complex. We are exploring this in <a href="https://gitlab.com/groups/gitlab-org/-/epics/259">an epic</a>.</li>
+</ul>
+<p><strong>Audit Events</strong> are a core component of any compliance program. An organization needs to know what activity is occurring on their systems in order to proactively manage those systems.
+Traditionally, audit logs have been technical, verbose, and difficult to manage.
+The <strong>Audit Events</strong> category wants to ensure that anyone can easily find the data they're looking for, in as little time as possible, and at the granularity that they need.</p>
+<p>The three key themes for this category are: granularity, simplicity, and time savings.</p>
+<h5 id=granularity>Granularity</h5>
+<p>An audit events system is incomplete if it cannot answer any questions about who did what, when, and on what system.
+GitLab has the breadth and depth of insight to be able to shed light on the complexities of the devops workflows your organization employs.
+Not only should GitLab provide logs for the most important user-driven events, but those events should be traceable to other entities or events in the system.
+We want to provide you with an experience that answers your auditing questions, but also delights you while you're answering them.</p>
+<p>The capture of all necessary audit events leads to a more reliable auditing process for your team and organization. This will enhance your ability to identify and deal with any incident or anomaly.</p>
+<h5 id=simplicity>Simplicity</h5>
+<p>We want to make it simple to work with GitLab audit events. When users look at the logs to find out what happened in their instance,
+we will make it easy to find out what happened and to identify any anomalies or policy violations. Our goal is to enable this
+with straightforward workflows that do not require coding or using complicated interfaces.</p>
+<p>By making the <strong>Audit Events</strong> experience super simple, we hope to alleviate the time commitment and headache our users typically experience when searching for data in this context.</p>
+<h5 id=time-savings>Time savings</h5>
+<p>Audits and compliance efforts can be a major time commitment.
+Time spent building custom tooling and reporting to searching through the data in these, or other systems, for specific answers is time that could be used on other activities.
+The person doing the analysis frequently does not specialize in compliance. This introduces friction because these people may not understand what events are important, how to get relevant artifacts,
+or exactly what the person requesting compliance artifacts needs.</p>
+<p>By making GitLab audit events simple and friendly, we will enable <a href="https://about.gitlab.com/company/mission/#everyone-can-contribute">everyone to contribute</a> to compliance efforts and get the visibility needed to do so.</p>
+<h4 id=whats-next--why>What’s Next &amp; Why</h4>
+<p>Our top priority is to evolve our storage database architecture so we may improve performance and scalability. This will be achieved through <a href="https://gitlab.com/groups/gitlab-org/-/epics/10241">migration to Clickhouse</a>. Improvements in this area provides a number of advantages:</p>
+<ul>
+<li>High volume data storage: The database must be able to accommodate a large volume of audit events data without compromising performance.</li>
+<li>Support for billions of records: The database must be capable of handling billions of records, as the number of audit events is expected to increase over time.</li>
+<li>Capability to run complex queries for reports and analysis: The database should enable the execution of complex queries to generate insightful reports and analyses.</li>
+<li>Full-text search support: While not a critical requirement for audit events, the database should ideally offer full-text search capabilities for easier data retrieval and improved user experience.</li>
+<li>Immutability of audit events: Since audit events are immutable records that are never updated, the database should be optimized for this use case. ClickHouse is well-suited for this purpose, as noted in GitLab's documentation (https://docs.gitlab.com/ee/development/database/clickhouse/#how-it-differs-from-postgresql).</li>
+</ul>
+<p>We'll then be working to expand support for filtering and adding capabilities across group and instance levels, while also extending support into <a href="https://gitlab.com/groups/gitlab-org/-/epics/7792">3rd-party storage systems</a>. Third-party audit event storage solutions will make it a lot easier for users to get started with streaming audit events and use the tools they already have, rather than require them to build logic to ingest and process HTTP events.</p>
+<table>
+<thead>
+<tr>
+<th>Destination</th>
+<th>Feature</th>
+<th>Group</th>
+<th>Instance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HTTP Destination</strong></td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>Sending audit events</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td> </td>
+<td>Filter by event type</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td> </td>
+<td>Filter by subgroup/project</td>
+<td>🔄 (https://gitlab.com/groups/gitlab-org/-/epics/11384)</td>
+<td>🔄 <a href="https://gitlab.com/groups/gitlab-org/-/epics/11440">Epic</a></td>
+</tr>
+<tr>
+<td><strong>GCP Logging</strong></td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>Sending audit events</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td> </td>
+<td>Filter by event type</td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/11299">Epic</a></td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/11299">Epic</a></td>
+</tr>
+<tr>
+<td> </td>
+<td>Filter by subgroup/project</td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/11441">Epic</a></td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/11441">Epic</a></td>
+</tr>
+<tr>
+<td><strong>AWS S3</strong></td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>Sending audit events</td>
+<td>🔄 <a href="https://gitlab.com/groups/gitlab-org/-/epics/6188">Epic</a></td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/6188">Epic</a></td>
+</tr>
+<tr>
+<td> </td>
+<td>Filter by event type</td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/6188">Epic</a></td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/6188">Epic</a></td>
+</tr>
+<tr>
+<td> </td>
+<td>Filter by subgroup/project</td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/6188">Epic</a></td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/6188">Epic</a></td>
+</tr>
+<tr>
+<td><strong>Azure Blob storage</strong></td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>Sending audit events</td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/11055">Epic</a></td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/11055">Epic</a></td>
+</tr>
+<tr>
+<td> </td>
+<td>Filter by event type</td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/11055">Epic</a></td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/11055">Epic</a></td>
+</tr>
+<tr>
+<td> </td>
+<td>Filter by subgroup/project</td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/11055">Epic</a></td>
+<td>📆 <a href="https://gitlab.com/groups/gitlab-org/-/epics/11055">Epic</a></td>
+</tr>
+</tbody>
+</table>
+<p>Contributors outside of the Compliance group can add support for new audit event collection into GitLab by following our <a href="https://docs.gitlab.com/ee/development/audit_event_guide/">guide to contributing new audit events</a>. An example of this is how the DAST group was able to <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/217872">contribute support for auditing their events</a>.</p>
+<p>Additionally we work to add in support for new audit events on a regular basis to expand our <a href="https://gitlab.com/groups/gitlab-org/-/epics/736">comprehensive audit log</a>.</p>
+<h5 id=how-we-will-prioritize-adding-new-audit-events>How we will prioritize adding new audit events</h5>
+<p>As we add new audit events in the future, we will thoughtfully consider which to add first and
+which to add later. To help decide which events to add before others, we consider these priorities,
+in stack rank order, when deciding which events to focus on next:</p>
+<ol>
+<li>Events which cause irreversible, possibly damaging if inappropriate, changes or deletion of data
+<ul>
+<li>Actions which can permanently affect the state of an instance, group, project or data are key events that we want to maintain a log of, since they generally cannot be undone.</li>
+</ul>
+</li>
+<li>Events which alter configuration of settings or the permissions of users
+<ul>
+<li>The potential impact of high level changes can be detrimental, so an instance level change takes priority over a project</li>
+<li>Anything related to escalating roles, for example users may inappropriately elevate their permissions to access other parts of the product</li>
+<li>Users may try to temporarily subvert restrictive settings to avoid a compliance control or policy, which may could pose a problem in an audit.</li>
+</ul>
+</li>
+<li>Use of sensitive keys and tokens
+<ul>
+<li>Tokens such as Personal Access Tokens can give anyone who holds them the permissions the token has. Steps done with these tokens will be logged in case a token falls into inappropriate hands and the changes made with it need to be undone.</li>
+</ul>
+</li>
+<li>Changes that cause data to be copied or exported to other sources
+<ul>
+<li>Because the data in an instance is very sensitive, we will record logs of actions that are used to copy, mirror, or export that data.</li>
+</ul>
+</li>
+<li>Workflow changes or cosmetic changes to a GitLab instance, group, or project
+<ul>
+<li>If a change is made to something like a template or project label, it could potentially be disruptive to the workflow of the teams using it, so we will log those actions.</li>
+</ul>
+</li>
+</ol>
+<p>Please note that the list above is not exhaustive, but shows a stack rank of some of the most important types of
+events to record and our perspective as we work on prioritizing them. The individual events we are working on are captured in <a href="https://gitlab.com/groups/gitlab-org/-/epics/736">this epic</a> and we would love your feedback.</p>
+<p>Note that when an action is taken very often, the audit events will likely generate more data than we can store. In those cases, we will deliver audit events for those actions as
+<a href="https://docs.gitlab.com/ee/administration/audit_event_streaming.html">streaming-only audit events</a>. This provides a good balance between
+recording the actions that users care about while not overwheliming GitLab servers with needing to store large amounts of data.</p>
+<h4 id=feature-authors-should-add-their-own-audit-events-for-features-that-are-built>Feature authors should add their own audit events for features that are built</h4>
+<p>As part of the Audit Event category, the Compliance group is responsible for delivering a standardized and robust
+auditing system as part of the GitLab product. Our group will occasionally add events
+ourselves using the priority list above, but it is not scalable for one group to add them for all features
+in GitLab since all groups ship so much so often.</p>
+<p>Individual groups are responsible for adding audit events for their own features as they develop them.
+We maintain a self-service <a href="https://docs.gitlab.com/ee/development/audit_event_guide/">development guide</a> in the
+documentation for how people can add a new audit event. If there are questions about the guide or about how to
+add an audit event for a specific feature, the Compliance group is happy to help.</p>
+<h4 id=what-is-not-planned-right-now>What is Not Planned Right Now</h4>
+<p>Audit Events is a very deep domain and can mean different things to different people. Above we highlight areas we will focus on
+but it is also important to highlight areas that we intentionally will not focus on.</p>
+<p>At this time, we do not intend to build
+a <a href="https://en.wikipedia.org/wiki/Security_information_and_event_management">full SIEM</a> experience around Audit Events.
+A SIEM can do many different tasks and can consume many different data streams simultaneously, correlate them, and handle high data
+volumes. We envision audit events as being able to be consumed by an external SIEM, but we will not build a SIEM into GitLab itself.</p>
+<p>We do not intend Audit Events to be used in such a way that they could be used for product analytics or measuring
+feature adoption. There are purpose-built tools, such as <a href="https://about.gitlab.com/solutions/value-stream-management/">GitLab Value Stream Management</a> that can be used to understand how end-users use a product
+and measure adoption over time.</p>
+<p>We do not intend to log every single user-driven action inside GitLab. Because GitLab is such a large application, it is not feasible to process
+and store the amount of data that would be generated if every single action was recorded. Additionally, not every single event inside of GitLab will be as sensitive as others or
+relevant during audits. Instead, our plan is to identify the most critical and sensitive actions and focus on those.</p>
+<h4 id=maturity>Maturity</h4>
+<p>Currently, GitLab’s maturity in Audit Events is <strong>viable</strong>. Here’s why: GitLab currently offers an audit log system, but it does not capture all of the required user-driven events.
+While we’re iterating and capturing more events over time, our users demand a comprehensive view of activity in application logs.
+However, the events being captured are useful at answering valuable questions on GitLab instances, and are <a href="https://about.gitlab.com/direction/maturity/">used to solve real problems</a>.</p>
+<ul>
+<li>You can read more about GitLab's <a href="https://about.gitlab.com/direction/maturity/">maturity framework here</a>, including an approximate timeline for this category's evolution.</li>
+</ul>
+<p>Advancing this category to a <a href="https://gitlab.com/groups/gitlab-org/-/epics/1217"><strong>complete</strong> state</a> means having a robust, complete set of logs that captures the vast majority of user activity. These logs are structured and easily parsed; while GitLab may not actively guard against threats, an administrator can easily track down the history behind nearly any change. Additionally, these audit logs should be usable; an administrator should be able to ingest them into their Security Information and Event Management (SIEM) tool of choice or search for events easily in the GitLab UI and via our API.</p>
+<p><strong>Lovable</strong> consists of compliance adding active monitoring for Audit Events to be truly trusted by users. The application is able to demonstrate security and compliance on an ongoing basis, in a single view, and actively monitors for (and defends against) suspicious behavior. An administrator or auditor can check a dashboard to be brought up to speed - or simply get some peace of mind.</p>
+<h3 id=user-success-metrics>User Success Metrics</h3>
+<p>We'll know we're on the right track with <strong>Audit Events</strong> based on the following metrics:</p>
+<ul>
+<li>More audit event searches via the <a href="https://docs.gitlab.com/ee/administration/audit_events.html">application UI</a> and <a href="https://docs.gitlab.com/ee/api/audit_events.html">audit events API</a></li>
+<li>More <a href="https://docs.gitlab.com/ee/administration/audit_events.html#export-to-csv">audit events CSV exports</a></li>
+<li>Fewer GitLab issues created to add audit events</li>
+</ul>
+<h3 id=competitive-landscape>Competitive landscape</h3>
+<p>GitLab has several competitors in this area with mature product offerings.
+To compete with these experiences, we need to first understand the value they offer to users. This will enable us to find opportunities to
+differentiate GitLab as we build out our own capabilities.</p>
+<h5 id=github-audit-logs>GitHub Audit Logs</h5>
+<p>GitHub provides a comprehensive and versatile <a href="https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/reviewing-the-audit-log-for-your-organization">audit log experience</a>. Their search capability empowers users to find any data they need and categorizes audit events into different types. The delineation between <code>operation</code>, <code>repository</code>, <code>user</code>, <code>action performed</code>, and various other categories, provides convenience and easy searchability for their users. They provide a <a href="https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-organizations-and-teams/reviewing-the-audit-log-for-your-organization#search-based-on-the-action-performed">detailed breakdown</a> of each event category, reducing the friction of learning about the various events and lowers the barrier of instrumenting custom tooling around these logs.</p>
+<p>Another convenience feature they provide is the ability to <a href="https://docs.github.com/en/free-pro-team@latest/actions/reference/usage-limits-billing-and-administration#artifact-and-log-retention-policy">configure the retention period</a> of audit logs. Public repositories can be configured to retain logs for 1 - 90 days. Private, internal, and enterprise repositories can be configured to retain logs for 1 - 400 days.</p>
+<h5 id=azure-devops-audit>Azure DevOps Audit</h5>
+<p>This audit log experience is currently in <a href="https://docs.microsoft.com/en-us/azure/devops/organizations/settings/azure-devops-auditing?view=azure-devops&amp;tabs=preview-page">public preview</a> but shows a methodical approach to audit events. The primary segmentation is between <code>Categories</code> (event type) and <code>Areas</code> (areas of the application). This allows both Microsoft and users to navigate the various event types more easily and ingest that data into SIEM tools for longer retention periods. This audit log experience only provides 90-day retention and instructs the user to leverage the API to backup the data elsewhere for longer storage.</p>
+<p>Filtering and exporting audit events is supported, which makes it easier for users to parse and analyze the data outside of Azure. They also provide a useful <code>ID</code> and <code>CorrelationID</code> relationship so an event can be linked to other events. This is important for traceability and makes it much easier to analyze the series of events that lead to an incident or undesirable action.</p>
+<p>Azure DevOps Audit also supports audit <a href="https://docs.microsoft.com/en-us/azure/devops/organizations/audit/auditing-streaming?view=azure-devops">event streaming</a>, which is a request we receive regularly from our customers to work with their existing tooling to ingest data into SIEM or other systems. They seem to have built-in some native integrations with tools like Splunk to provide this streaming experience.</p>
+<p>Another offering is the ability to <a href="https://docs.microsoft.com/en-us/azure/devops/organizations/security/export-users-audit-log?view=azure-devops&amp;tabs=browser">export a list of users and their access levels</a>, further emphasizing the fact that organizations need to pull specific reports that can be automated and standardized.</p>
+<h5 id=bitbucket-auditing>Bitbucket Auditing</h5>
+<p>This <a href="https://confluence.atlassian.com/bitbucketserver/auditing-in-bitbucket-776640417.html">audit log experience</a> from Atlassian provides flexibility to define the level of detail users wish to capture in their audit logs. They segment the logs by "coverage area" and offer an additional setting for "coverage". They provide 26 categories and their coverage options break down into: <a href="https://confluence.atlassian.com/bitbucketserver/audit-log-events-in-bitbucket-776640423.html">Off, Base, Advanced, and Full</a>.</p>
+<p>Users can create a custom-tailored logging solution, in-app, that meets their needs which may require <code>Full</code> coverage of the <code>Repositories</code> category but <code>Base</code> coverage of the <code>Users and groups</code> category. This allows organizations to focus on the areas that are most important to them, which reduces the volume of logged activity and therefore makes it easier to search through the logs.</p>
+<p>Bitbucket allows users to retain data up to 99 years, which is well beyond even the more conservative logging policies and compliance requirements.</p>
+<h5 id=key-takeaways>Key Takeaways</h5>
+<p>Each competitor seems to follow a similar theme of breaking out their event types into categories or coverage areas. This creates a hierarchical structure for building out audit logs which has benefits for both the service provider and the customer organization. They also provide a sensible amount of granularity in the audit log configuration, such as defining the level of detail to log (Bitbucket) or delineating between specific event types like GitHub. This categorization makes it easier to work with the audit event system through consistency and human-readable syntax.</p>
+<p>All of these competitors seem to be focused on making audit events complete in their coverage as well as the usability: searching, filtering, and integrating event streaming.</p>
+<p>When it comes to data retention, there's significant variance, but each company provides the flexibility to customize the retention period to some maximum value and offers parity with an API to ensure an organization can capture this data outside of the respective audit log systems for longer retention periods and other analysis or workflows.</p>
+<p>To summarize:</p>
+<ul>
+<li>We should build a logical hierarchy for our audit events</li>
+<li>Enabling customers to get audit event data out of GitLab and into a SIEM or other tool is necessary</li>
+<li>We need to provide a consistent, default retention policy for customers and allow them to customize it as needed</li>
+</ul>
+<h3 id=analyst-landscape>Analyst landscape</h3>
+<p>The primary feedback we've received from analysts about this category has centered around programmatic alerting. Providing smart audit logs that can notify appropriately personnel of anomalous activity or specific, defined events can really elevate the value of <strong>Audit Events</strong> for our customers.</p>
+<h3 id=top-customer-successsales-issues>Top Customer Success/Sales issue(s)</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/736">Comprehensive audit log</a>. CS, sales, and users all want a set of logs that captures the vast majority of events in GitLab. Since you don't know what you need until you need it, customers expect us to log everything.</li>
+</ul>
+<h3 id=top-vision-issues>Top Vision issue(s)</h3>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/259">Behavioral monitoring MVC</a>. With the volume of events in GitLab, effective monitoring won't be possible without automated alerting.</li>
+</ul>
+<h2 id=how-you-can-help>How you can help</h2>
+<p>Thanks for visiting this direction page for Audit Events in GitLab. If you'd like to provide feedback or contribute to our vision, please open a merge request for this page or comment in the <a href="https://gitlab.com/groups/gitlab-org/-/epics/1985">corresponding epic</a>.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/govern/compliance/audit-events/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/govern/compliance/audit-events/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

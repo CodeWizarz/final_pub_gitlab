@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab 8.9 released with File Locking, Environments, Priority Labels and more!
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab Release 8.9 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name=description />
+<meta content='Learn more about GitLab Release 8.9 for GitLab Community Edition (CE) and Enterprise Edition (EE)' name='twitter:description'/>
+<meta content='Learn more about GitLab Release 8.9 for GitLab Community Edition (CE) and Enterprise Edition (EE)' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab 8.9 released with File Locking, Environments, Priority Labels and more!' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2016-06-22-gitlab-8-9-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2016/06/22/gitlab-8-9-released/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/8_9/windmills.jpg" property="og:image">
+<meta content="https://about.gitlab.com/images/8_9/windmills.jpg" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab 8.9 released with File Locking, Environments, Priority Labels and more!' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2016/06/22/gitlab-8-9-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Jun 22, 2016
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#Jobvo">Job van der Voort</a>
+<a href="https://twitter.com/Jobvo"><span>&nbsp;</span>
+<span class=author-twitter>
+<i class='fab fa-twitter'></i>
+</span>
+</a></span>
+<h1>
+GitLab 8.9 released with File Locking, Environments, Priority Labels and more!
+</h1>
+<p class=description>
+Learn more about GitLab Release 8.9 for GitLab Community Edition (CE) and Enterprise Edition (EE)
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/8_9/windmills.jpg);'></div>
+<div class=content>
+<p>Whether you work on code or media,
+work thousands of miles away from your organization's HQ,
+or work on a project with ten thousand issues,
+GitLab 8.9 will help you get stuff done faster.</p>
+<p>With GitLab 8.9 you will be able to work better on complex projects together
+with file locking, priority labels and new workflow tools, like
+a custom notification level and the ability to
+restrict merging until the build passes.
+We're also continuing to improve GitLab's built-in continuous integration.
+You can now specify environments, have artifacts expire and quickly get started
+with templates.</p>
+<p>This month's Most Valuable Person (<a href="/community/mvp/">MVP</a>) is
+Rui Santos, for building the new feature that restricts merging until your build
+passes. It's a great feature that we're sure many people are going to use.
+Thanks Rui!</p>
+<p>Since GitLab 8.8.0 we've had 1761 commits with 1947 files changed,
+see what has changed exactly, below.</p>
+<h2 id=file-locking-new-product>File Locking (new Product)</h2>
+<p>When you're working on files that Git can't merge for you,
+working with multiple people on the same file can be a risk.
+Conflicts when merging the non-text file
+(which inevitably happens when two people work on the same file at the same
+time), are hard to overcome and will require a lot of manual work to resolve.</p>
+<p>To work around this, we've added the ability to lock files in GitLab.
+File Locking prevents everyone, except you, from modifying a specific file or
+entire directory.
+It's also a good way of communicating to your collaborators that you
+are working on this file.</p>
+<h3 id=example-game-assets>Example: Game assets</h3>
+<p>For example, you're working on a game. Many people are involved with building
+the complex levels. With file locking, you can lock the level you want to work
+on by clicking lock in the interface:</p>
+<p><img src="/images/8_9/lock_file.png" alt="Lock a file in GitLab 8.9"/></p>
+<p>Your colleagues will see that you are working on this file.
+Except for you, no one else is able to push changes that modify this file.</p>
+<p><img src="/images/8_9/locked_file.png" alt="A locked file in GitLab 8.9"/></p>
+<p>Once you're done making changes and you've merged them, you can remove your lock
+in the same way as you've placed it.</p>
+<p>Find a list of all locked files under repository:</p>
+<p><img src="/images/8_9/locked_files.png" alt="Locked files in GitLab 8.9"/></p>
+<h3 id=availability>Availability</h3>
+<p>File locking is available as a <a href="/pricing/">paid option</a> for Enterprise Edition
+and for free on GitLab.com.
+We welcome further suggestions to expanding this feature.</p>
+<blockquote>
+<p>Read more in the <a href="https://docs.gitlab.com/ee/user/project/file_lock.html">File lock documentation</a>.</p>
+</blockquote>
+<h2 id=environments-and-deployments-in-ci>Environments and Deployments in CI</h2>
+<p>You can already deploy from GitLab to your various environments,
+whether it is test, staging or production.
+With GitLab CI you can set up pipelines with one or more jobs that
+deploy for you.</p>
+<p>With GitLab 8.9 you can now define environments in your project's
+CI configuration file (<code>.gitlab-ci.yml</code>).
+This allows you to track deployments to these environments and quickly
+understand things like "what's running in staging?"</p>
+<p>Defining an environment is as simple as adding the <code>environment</code> variable
+to your <code>.gitlab-ci.yml</code>:</p>
+<div class=highlight><pre class="highlight plaintext"><code>deploy to production:
+  stage: deploy
+  script: git push production HEAD:master
+  environment: production
+</code></pre></div>
+<p>You can then see exactly what is live on which environment:</p>
+<p><img src="/images/8_9/environments.png" alt="Environments in GitLab 8.9"/></p>
+<blockquote>
+<p>Read more in the documentation on <a href="https://docs.gitlab.com/ee/ci/yaml/#environment">environments in GitLab CI</a>.</p>
+</blockquote>
+<h2 id=priority-labels>Priority Labels</h2>
+<p>It can be hard to prioritize issues and merge requests, especially larger
+projects can have a hard time sorting through hundreds, thousands of issues.</p>
+<p>Adding priorities to issues could help with that, but we felt that there had
+to be a better way that involved less manual work. Our solution is prioritized
+labels.</p>
+<p>Prioritized labels are like any other label, but sorted by priority.
+This allows you to sort issues and merge requests by priority. Those with
+the highest priority label, will appear on top.</p>
+<p><img src="/images/8_9/plabels2.png" alt="Priority Labels in GitLab 8.9"/></p>
+<p>For instance, the highest priority label for GitLab is <code>P1</code>. If I sort by
+priority, I will see that issues with <code>P1</code> appear on top, followed by <code>P2</code>, etc.
+In most cases, <code>security</code> issues are very important. By making the <code>security</code>
+label highly prioritized, I can rest assure that my colleagues will start
+working on those issues before any other issue in this milestone.</p>
+<p><img src="/images/8_9/plabels3.png" alt="Priority Labels in GitLab 8.9"/></p>
+<p>If you prefer a more traditional priority system, you're free to add labels
+such as <code>priority: 1</code>, <code>priority: 2</code>.</p>
+<p>Right now, priority sorting is based the highest priority label only.</p>
+<blockquote>
+<p>Read more in the documentation about <a href="https://docs.gitlab.com/ee/user/project/labels.html">Labels</a>.</p>
+</blockquote>
+<h2 id=custom-notification-level>Custom Notification Level</h2>
+<p>It's amazing to see how people use GitLab. Some people only review code,
+others closely monitor everything that happens on the issue tracker,
+yet other people only want to see what's new.</p>
+<p>To make it easier to only get notified on what's important to you,
+we've added a new notification level: custom.</p>
+<p><img src="/images/8_9/custom_not_1.png" alt="Custom notification level in GitLab 8.9" style="max-height: 350px;"/></p>
+<p>The custom notification level works just like a participating level.
+This means anywhere you participate or get mentioned, you receive a
+notification. On top of that, you now have the ability to also receive
+select notifications for things that are important to you.</p>
+<p><img src="/images/8_9/custom_not2.png" alt="Custom notification level in GitLab 8.9" style="max-height: 350px;"/></p>
+<p>So if you just want notifications for new merge requests, you can now easily
+set that up.</p>
+<blockquote>
+<p>Read more in the documentation about <a href="https://docs.gitlab.com/ee/user/profile/notifications.html">Notifications</a>.</p>
+</blockquote>
+<h2 id=request-access-to-a-project>Request Access to a Project</h2>
+<p>Rather than having to contact the owners through some other means,
+you can now request access to a project straight from GitLab.
+Find the button on the project home page:</p>
+<p><img src="/images/8_9/req_access.png" alt="Request access to a project in GitLab 8.9"/></p>
+<p>You'll get a notification when someone requests access and see the request
+appear in the members sections of your project.</p>
+<p><img src="/images/8_9/access_request.png" alt="Request access to a project in GitLab 8.9"/></p>
+<blockquote>
+<p>Read more in the documentation on <a href="https://docs.gitlab.com/ee/user/project/members/index.html#project-membership-and-requesting-access">requesting access to a project</a> or
+a <a href="https://docs.gitlab.com/ee/user/group/index.html#request-access-to-a-group">group</a>.</p>
+</blockquote>
+<h2 id=gitlab-ciyml-templates>.gitlab-ci.yml Templates</h2>
+<p>Continuous integration, built into GitLab, works by a <code>.gitlab-ci.yml</code> file,
+where you define your tests, builds and deployments. Getting started with
+creating this file can be hard, so we've created several templates to make
+this easier.</p>
+<p>To start with a template <code>.gitlab-ci.yml</code>, simply create a new file and
+call it <code>.gitlab-ci.yml</code>. You'll see a dropdown appear where you can choose
+from several templates.</p>
+<p><img src="/images/8_9/ci_template.png" alt=".gitlab-ci.yml templates in GitLab 8.9"/></p>
+<p>If you want to contribute your own templates, you can do so in the <a href="https://gitlab.com/gitlab-org/gitlab-ci-yml"><code>.gitlab-ci.yml</code> repository</a>.</p>
+<p>Want to give GitLab CI a roll? You can use it completely for free on GitLab.com
+or on your own server.</p>
+<h2 id=new-navigation>New Navigation</h2>
+<p>We've revamped the navigation of GitLab. <a href="/blog/2016/06/06/navigation-redesign/">We wrote before about this</a>,
+but have made further changes.</p>
+<p><img src="/images/8_9/look3.png" alt="Updated navigation in GitLab 8.9"/></p>
+<p>The main navigation within projects is now on the top bar. Global navigation,
+to pages specific to you, such as your issues and groups is in the new sidebar,
+hiding automatically.</p>
+<p><img src="/images/8_9/look4.gif" alt="Updated navigation in GitLab 8.9"/></p>
+<h2 id=universal-2nd-factor-support>Universal 2nd Factor Support</h2>
+<p>GitLab now fully supports the Universal 2nd Factor (U2F)
+authentication standard. This means you can use a device like the U2F security
+keys by Yubico, known as YubiKeys as your 2nd factor when signing into GitLab.</p>
+<p>Read more about our support for U2F in our <a href="/blog/2016/06/22/gitlab-adds-support-for-u2f/">our blog post about it</a>
+and the documentation on <a href="https://docs.gitlab.com/ee/profile/two_factor_authentication.html">Two-factor Authentication</a> in GitLab.</p>
+<h2 id=import--export-projects>Import / Export Projects</h2>
+<p>If you're moving between GitLab instances or just want a backup of your
+most important data, you can now Import and Export entire projects.</p>
+<p><img src="/images/8_9/export1.png" alt="Export entire projects with GitLab 8.9"/></p>
+<p>Visit the project settings page to export your project. Importing a project
+can be done from the new project page.</p>
+<p><img src="/images/8_9/import.png" alt="Import entire projects with GitLab 8.9"/></p>
+<blockquote>
+<p>Read more in the <a href="https://docs.gitlab.com/ee/user/project/settings/import_export.html">documentation</a>.</p>
+</blockquote>
+<h2 id=restrict-merging-until-build-passes>Restrict Merging until Build Passes</h2>
+<p>You can already merge a merge request automatically after the CI builds have
+passed successfully. Thanks to Rui Santos, you can now
+even prevent people from merging a merge request unless the build is 'green'.</p>
+<p><img src="/images/8_9/merge_if_build_passes.png" alt="Only merge if the build passes in GitLab 8.9"/></p>
+<p>This prevents people from circumventing your tests, guards your code from
+sloppy contributions and encourages everyone to maintain a solid test suite.</p>
+<h2 id=gitlab-geo-new-product>GitLab Geo (new Product)</h2>
+<p>GitLab Geo allows you to have one or multiple mirrored instance of GitLab
+running in another location. That allows your remote team to have quick
+cloning and pulling of repositories, while still having everyone, globally
+in sync.</p>
+<p><a href="/releases/2016/02/22/gitlab-8-5-released/">We released Geo in Alpha</a> with GitLab 8.5 and have been
+testing it intensely internally and with customers since. One customer
+reported that git clone times dropped from 10 minutes to 30 seconds
+on average for their teams.</p>
+<h3 id=availability-1>Availability</h3>
+<p>GitLab Geo is available for purchase from <a href="/pricing/">our pricing page</a> or through <a href="/sales/">our sales team</a>.</p>
+<h3 id=limitations>Limitations</h3>
+<p>GitLab Geo isn't supported for disaster recovery purposes yet.
+We've released a guide with manual steps in the unfortunate case that you'd
+have to use it for this purpose, but we recommend against using it for that.</p>
+<p>GitLab Geo only supports PostgreSQL at the moment. MySQL is not supported.</p>
+<h3 id=getting-started>Getting Started</h3>
+<p>To get started with GitLab Geo, <a href="https://docs.gitlab.com/ee/administration/geo/%20Geo">read our documentation on it</a>.</p>
+<h2 id=other-changes>Other changes</h2>
+<p>This release has more improvements, including security fixes. Please check out
+<a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CHANGELOG.md">the Changelog</a>
+to see all the named changes. See below for some further highlights of changes.</p>
+<h3 id=better-highlighting>Better Highlighting</h3>
+<p>GitLab 8.9 incorporates the first <a href="https://github.com/jneen/rouge">Rouge</a> release since September (!) with over
+20 new languages supported, plus support for newer features of Swift, Ruby,
+Python, and C/C++, as well as some critical bug fixes for Apache, JavaScript,
+Objective-C, and Groovy.
+R and Apache users will also see a marked improvement in lexing quality.
+<a href="https://github.com/jneen/rouge/blob/master/CHANGELOG.md#version-1110-2016-06-06">See the full changelog here</a></p>
+<h3 id=award-emoji-in-comments>Award Emoji in Comments</h3>
+<p>Besides issues and merge requests, you can now also vote on individual comments.
+Whether you want to react to someone without distorting the flow of the
+conversation or want to conduct a quick poll, you can now do it quickly,
+everywhere.</p>
+<blockquote>
+<p>Read more in the <a href="https://docs.gitlab.com/ee/user/award_emojis.html">award emoji documentation</a>.</p>
+</blockquote>
+<h3 id=manually-add-todos>Manually add Todos</h3>
+<p>Every issue and merge request can now be marked as 'Todo' or 'Done'. This means
+you don't have to go back to the lists of Todos to mark one off and can even add
+items quickly to your Todos. Super useful!</p>
+<p><img src="/images/8_9/add_todo.png" alt="Manually add Todos in GitLab 8.9"/></p>
+<p><img src="/images/8_9/mark_done.png" alt="Mark as done in GitLab 8.9"/></p>
+<blockquote>
+<p>Read more in the <a href="https://docs.gitlab.com/ee/user/todos.html">Todos documentation</a>.</p>
+</blockquote>
+<h3 id=bulk-assign-labels>Bulk-assign labels</h3>
+<p>With label priorities and future features (such as <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/2306168">issue boards</a>), labels are
+becoming more and more important in GitLab.
+To make working with issues a bit easier,
+we've added the ability to bulk-assign labels.</p>
+<h3 id=expire-artifacts>Expire Artifacts</h3>
+<p>If you're using artifacts in GitLab's built-in CI, you might be building up
+quite a catalogue of old data. You can now have artifacts expire by adding
+a <code>expire_in</code> line to your <code>.gitlab-ci.yml</code> file. The artifacts will expire
+after the duration that you specify.</p>
+<div class=highlight><pre class="highlight plaintext"><code>job:
+  artifacts:
+    expire_in: 1 week
+</code></pre></div>
+<p>You can use natural language to set the expiry time:</p>
+<ul>
+<li>3 mins 4 sec</li>
+<li>2 hrs 20 min</li>
+<li>2h20min</li>
+<li>6 mos 1 day</li>
+<li>47 yrs 6 mos and 4d</li>
+<li>3 weeks and 2 days</li>
+</ul>
+<p><em><strong>Note:</strong> this feature requires Runner 1.3, released at the same time as
+GitLab 8.9</em></p>
+<blockquote>
+<p>Read more in the <a href="https://docs.gitlab.com/ee/ci/yaml/#artifactsexpire_in">artifacts documentation</a>.</p>
+</blockquote>
+<h3 id=when-keyword-for-artifacts>When keyword for Artifacts</h3>
+<p>You can now only have artifacts be made available on failure, success or always.</p>
+<div class=highlight><pre class="highlight plaintext"><code>job:
+  artifacts:
+    when: on_failure
+</code></pre></div>
+<p>The default behavior is the same as before, only creating artifacts on success.</p>
+<p><em><strong>Note:</strong> this feature requires Runner 1.3, released at the same time as
+GitLab 8.9</em></p>
+<blockquote>
+<p>Read more in the <a href="https://docs.gitlab.com/ee/ci/yaml/#artifactswhen">artifacts documentation</a>.</p>
+</blockquote>
+<h3 id=support-for-docker-registry-manifest-v1>Support for Docker Registry Manifest V1</h3>
+<p>GitLab 8.9 adds support for Manifest V1 generated by older versions
+of Docker (before 1.10).</p>
+<h3 id=smarter-allocation-for-shared-runners>Smarter allocation for Shared Runners</h3>
+<p>Shared Runners now prioritize projects without any other shared Runners
+assigned to them, before allocating more shared Runners to a single demanding
+project.</p>
+<h3 id=gitlab-mattermost-31>GitLab Mattermost 3.1</h3>
+<p><a href="http://www.mattermost.org/mattermost-3-1-apple-watch-notification-upgrades-shortcuts-compact-view-openshift-and-more/">Mattermost 3.1</a> ships in GitLab 8.9 with multi-team accounts, Japanese language translation, Apple Watch &amp; upgraded notifications, keyboard shortcuts &amp; channel switcher, new full width and compact view display options, new emoji, plus <a href="https://about.mattermost.com/security-updates/">security updates</a> and <a href="http://docs.mattermost.com/administration/changelog.html">many more improvements.</a></p>
+<p><strong>The upgrade requires manual steps!</strong>
+Before upgrading, make sure to read <a href="http://docs.gitlab.com/omnibus/gitlab-mattermost/#upgrading-gitlab-mattermost-from-versions-prior-to-8.9">documentation for upgrades from versions prior to 8.9</a></p>
+<h3 id=managing-custom-certificate-authorities-with-omnibus-gitlab-package>Managing custom certificate authorities with omnibus-gitlab package</h3>
+<p>If you run your own CA or you have self-signed certificates, you need to tell omnibus-gitlab explicitly to trust them.
+This is required for web-hooks, system-hooks and anything that requires a trusted connection.
+Accomplishing this task was possible with older versions of the package, however it was difficult and error prone.
+Now it is possible to add all your custom certificates into a single place and after reconfiguring the package,
+GitLab will be able to verify the certificate authenticity.
+For more information, see the <a href="http://docs.gitlab.com/omnibus/common_installation_problems/README.html#using-self-signed-certificate-or-custom-certificate-authorities">custom certificate authority documentation</a>.</p>
+<h2 id=performance-improvements>Performance Improvements</h2>
+<p>Performance is a great priority for us. We're working hard on making sure
+GitLab can handle the loads of very large instances (like GitLab.com with hundreds
+of thousands of active users) easily.</p>
+<p>With GitLab 8.9 we've made many improvements, below are some of the highlights.</p>
+<h3 id=increased-memory-limits>Increased Memory Limits</h3>
+<p>We increased the default memory limits from 300-350MB to 450-600MB per worker.
+Previously, our workers were being killed every 6 seconds. This was increasing
+the load of the whole system, as every 6 seconds a new worker was spawned that
+had to create new connections to the database and cache the data that is used
+often. As a result of this change we saw a drop in HTTP queuing time from ~2
+seconds down to ~100ms on average. As a side effect we also noticed that the
+system load of our worker and database nodes went down to half. Memory usage on
+the workers does not change too much, but worker processes now live for 20
+minutes on average.</p>
+<p><img src="/images/8_9/http-queue-timings.png" alt="Increased memory limits in GitLab 8.9 brought down HTTP queue timings"/></p>
+<p>See how this affected the worker load (for GitLab.com):</p>
+<p><img src="/images/8_9/worker-load.png" alt="Decreased worker load for GitLab 8.9"/></p>
+<h3 id=better-handling-of-mirroring>Better Handling of Mirroring</h3>
+<p>We've changed how we schedule mirroring in Sidekiq.
+See the difference in queries being pushed into the database:</p>
+<p><img src="/images/8_9/pg-from-sidekiq.png" alt="Lower amount of queries"/></p>
+<h3 id=api-endpoint-for-sidekiq-metrics>API Endpoint for Sidekiq Metrics</h3>
+<p>This API endpoint allows you to retrieve some information about the current state of Sidekiq, its jobs, queues, and processes.</p>
+<blockquote>
+<p><a href="https://docs.gitlab.com/ee/api/sidekiq_metrics.html">Read more in our docs</a></p>
+</blockquote>
+<h3 id=other-performance-improvements>Other performance improvements</h3>
+<ul>
+<li>Lower PG auto-vacuum/analyze thresholds 10x: On large GitLab servers this should amortize the costs of autovacuuming and auto-analyzing better</li>
+<li>Only use JS libraries where needed</li>
+<li>Upgrade to <a href="https://blog.jquery.com/2013/04/18/jquery-2-0-released/">jQuery 2</a></li>
+<li>Large amount of changes to performance monitoring, <a href="https://gitlab.com/gitlab-com/www-gitlab-com/merge_requests/2187#note_12598695">see here</a></li>
+<li>The column <code>users.state</code> is now indexed</li>
+<li>The number of queries needed to render username references in Markdown has been reduced</li>
+<li>The builds counter for projects is now cached</li>
+<li>The assigned issues and merge requests counters are now cached</li>
+<li>The number of queries needed to render issue references in Markdown has been reduced</li>
+<li>Rendering labels in the issue/merge requests sidebar now only needs 1 query instead of 2</li>
+<li>The number of pending/done TODOs is now cached</li>
+<li>The presence of an external issue tracker is now cached per project, reducing the number of queries needed to figure out if a project uses an external issue tracker</li>
+<li>The number of queries needed by the issues API has been reduced</li>
+<li>The number of queries needed to extract issue references has been reduced</li>
+<li>Rendering external links now uses a more efficient way of querying elements to process</li>
+<li>Project dashboards now use the appropriate methods for getting branch/tag counts, these methods cache their output to reduce load on the Git repository/storage system</li>
+<li>The <code>keys.fingerprint</code> column is now indexed and any duplicate keys are removed automatically. This speeds up looking up keys using a fingerprint</li>
+<li>Project dashboards now run fewer Git operations</li>
+<li>The list of issue/merge requests participants is now memoized so repeated calls in the same request don't end up doing the same work over and over</li>
+<li>Rendering relative links has been optimised so it uses fewer (and more efficient) Git operations</li>
+</ul>
+<h2 id=upgrade-barometer>Upgrade barometer</h2>
+<p>Downtime notice: while technically this release allows one
+to upgrade without downtime, one may get errors if new comments or award emoji
+are created/assigned during the upgrade.</p>
+<p><em><strong>Note</strong>: We assume you are upgrading from the latest version. If not, then also consult the upgrade barometers of any intermediate versions you are skipping.
+If you are upgrading from a GitLab version prior to 8.0 and you have CI enabled, you have to upgrade to GitLab 8.0 <a href="/releases/2015/09/22/gitlab-8-0-released/">first</a>.</em></p>
+<p>Please be aware that by default the Omnibus packages will stop, run migrations,
+and start again, no matter how “big” or “small” the upgrade is. This behavior
+can be changed by adding a <a href="http://doc.gitlab.com/omnibus/update/README.html"><code>/etc/gitlab/skip-auto-migrations</code>
+file</a>.</p>
+<hr/>
+<h2 id=installation>Installation</h2>
+<p>If you are setting up a new GitLab installation please see the
+<a href="/install/">download GitLab page</a>.</p>
+<h2 id=updating>Updating</h2>
+<p>Check out our <a href="/update/">update page</a>.</p>
+<h2 id=enterprise-edition>Enterprise Edition</h2>
+<p>The mentioned EE only features and things like LDAP group support can be found in GitLab Enterprise Edition.
+For a complete overview please have a look at the <a href="/features/#enterprise">feature list of GitLab EE</a>.</p>
+<p>Access to GitLab Enterprise Edition is included with a
+<a href="/pricing/">subscription</a>.
+No time to upgrade GitLab yourself?
+A subscription also entitles you to our upgrade and installation services.</p>
+<hr/>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+8.9+released+with+File+Locking%2C+Environments%2C+Priority+Labels+and+more%21+via+%40Jobvo&amp;url=https://about.gitlab.com/releases/2016/06/22/gitlab-8-9-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab 8.9 released with File Locking, Environments, Priority Labels and more!
+via @Jobvo
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2016/06/22/gitlab-8-9-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2016/06/22/gitlab-8-9-released/&amp;text=GitLab 8.9 released with File Locking, Environments, Priority Labels and more!' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2016/06/22/gitlab-8-9-released/&amp;title=GitLab 8.9 released with File Locking, Environments, Priority Labels and more!&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2016/06/22/gitlab-8-9-released/&amp;t=GitLab 8.9 released with File Locking, Environments, Priority Labels and more!' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2016/06/15/gitlab-8-dot-8-dot-5-released/" title="GitLab 8.8.5 released"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.8.5 released
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2016/06/26/gitlab-8-dot-9-dot-1-released/" title="GitLab 8.9.1 released"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.9.1 released
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2016-06-22-gitlab-8-9-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2016-06-22-gitlab-8-9-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Direction - Product Operations
+|
+GitLab
+</title>
+<meta content='Product Operations (Product Ops) at GitLab.' name=description />
+<meta content='Product Operations (Product Ops) at GitLab.' name='twitter:description'/>
+<meta content='Product Operations (Product Ops) at GitLab.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Direction - Product Operations' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/product-operations/template.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/product-operations/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Direction - Product Operations' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/product-operations/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Direction - Product Operations
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/david'>
+<div class=codeowners-single>
+<img
+src='/images/team/ddesanto.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+David DeSanto
+</div>
+<div class=codeowners-handle>
+@david
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/product-operations/template.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Product Direction - Product Operations</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 class=no_toc id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#what-is-product-operations" id=markdown-toc-what-is-product-operations>What is Product Operations?</a></li>
+<li><a href="#why-is-product-operations-important" id=markdown-toc-why-is-product-operations-important>Why is Product Operations important?</a> <ul>
+<li><a href="#core-responsiblities-of-product-operations" id=markdown-toc-core-responsiblities-of-product-operations>Core responsiblities of Product Operations</a></li>
+</ul>
+</li>
+<li><a href="#what-does-product-operations-do-at-gitlab" id=markdown-toc-what-does-product-operations-do-at-gitlab>What does Product Operations do at GitLab?</a> <ul>
+<li><a href="#vision" id=markdown-toc-vision>Vision</a></li>
+<li><a href="#mission" id=markdown-toc-mission>Mission</a></li>
+<li><a href="#principles" id=markdown-toc-principles>Principles</a></li>
+<li><a href="#opportunities" id=markdown-toc-opportunities>Opportunities</a></li>
+<li><a href="#challenges" id=markdown-toc-challenges>Challenges</a></li>
+</ul>
+</li>
+<li><a href="#key-initiatives" id=markdown-toc-key-initiatives>Key Initiatives</a> <ul>
+<li><a href="#current" id=markdown-toc-current>Current</a> <ul>
+<li><a href="#scale-up-gitlabs-release-notes-workflow-and-design" id=markdown-toc-scale-up-gitlabs-release-notes-workflow-and-design>Scale up GitLab's release notes workflow and design</a></li>
+<li><a href="#grow-gitlabs-post-purchase-survey" id=markdown-toc-grow-gitlabs-post-purchase-survey>Grow GitLab's post purchase survey</a></li>
+<li><a href="#establish-thought-leadership-for-gitlab" id=markdown-toc-establish-thought-leadership-for-gitlab>Establish thought leadership for GitLab</a></li>
+<li><a href="#grow-gitlabs-paid-nps-survey" id=markdown-toc-grow-gitlabs-paid-nps-survey>Grow GitLab's Paid NPS survey</a></li>
+</ul>
+</li>
+<li><a href="#upcoming" id=markdown-toc-upcoming>Upcoming</a> <ul>
+<li><a href="#improve-usability-of-product-management-learning--development-resources" id=markdown-toc-improve-usability-of-product-management-learning--development-resources>Improve usability of Product Management Learning &amp; Development resources</a></li>
+<li><a href="#grow-gitlabs-paid-nps-survey-1" id=markdown-toc-grow-gitlabs-paid-nps-survey-1>Grow GitLab's Paid NPS survey</a></li>
+<li><a href="#improve-usability-gitlabs-product-handbook" id=markdown-toc-improve-usability-gitlabs-product-handbook>Improve usability GitLab's Product Handbook</a></li>
+<li><a href="#establish-thought-leadership-for-gitlab-1" id=markdown-toc-establish-thought-leadership-for-gitlab-1>Establish thought leadership for GitLab</a></li>
+</ul>
+</li>
+<li><a href="#recently-completed" id=markdown-toc-recently-completed>Recently Completed</a> <ul>
+<li><a href="#establish-thought-leadership-for-gitlab-2" id=markdown-toc-establish-thought-leadership-for-gitlab-2>Establish thought leadership for GitLab</a></li>
+<li><a href="#simplify-gitlabs-product-manager-onboarding" id=markdown-toc-simplify-gitlabs-product-manager-onboarding>Simplify GitLab's product manager onboarding</a></li>
+<li><a href="#scale-up-gitlabs-release-notes-workflow-and-design-1" id=markdown-toc-scale-up-gitlabs-release-notes-workflow-and-design-1>Scale up GitLab's release notes workflow and design</a></li>
+<li><a href="#grow-gitlabs-post-purchase-survey-1" id=markdown-toc-grow-gitlabs-post-purchase-survey-1>Grow GitLab's post purchase survey</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#areas-of-focus" id=markdown-toc-areas-of-focus>Areas of Focus</a> <ul>
+<li><a href="#operationalizing-outcome-driven-products" id=markdown-toc-operationalizing-outcome-driven-products>Operationalizing Outcome Driven Products</a> <ul>
+<li><a href="#in-progress-and-upcoming" id=markdown-toc-in-progress-and-upcoming>In Progress and Upcoming</a></li>
+<li><a href="#recently-completed-1" id=markdown-toc-recently-completed-1>Recently completed</a></li>
+</ul>
+</li>
+<li><a href="#building-qualitative--quantitative-feedback-loops" id=markdown-toc-building-qualitative--quantitative-feedback-loops>Building Qualitative &amp; Quantitative Feedback Loops</a> <ul>
+<li><a href="#in-progress-and-upcoming-1" id=markdown-toc-in-progress-and-upcoming-1>In Progress and Upcoming</a></li>
+<li><a href="#recently-completed-2" id=markdown-toc-recently-completed-2>Recently completed</a></li>
+</ul>
+</li>
+<li><a href="#scaling-product-knowledge" id=markdown-toc-scaling-product-knowledge>Scaling Product Knowledge</a> <ul>
+<li><a href="#in-progress-and-upcoming-2" id=markdown-toc-in-progress-and-upcoming-2>In Progress and Upcoming</a></li>
+<li><a href="#recently-completed-3" id=markdown-toc-recently-completed-3>Recently completed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#areas-of-ownership" id=markdown-toc-areas-of-ownership>Areas of Ownership</a></li>
+<li><a href="#areas-of-advisement" id=markdown-toc-areas-of-advisement>Areas of Advisement</a></li>
+<li><a href="#gitlab-product-operations-blog" id=markdown-toc-gitlab-product-operations-blog>GitLab Product Operations Blog</a></li>
+<li><a href="#contributing-to-this-page" id=markdown-toc-contributing-to-this-page>Contributing to this page</a></li>
+</ul>
+<h2 id=what-is-product-operations>What is Product Operations?</h2>
+<p>Product Operations (Product Ops) is a critical function of scaled, product-led organizations that aims to optimize the intersection of product management with cross-functional collaborators and stable counterparts across the business. High performing Product Ops teams increase efficiency, accelerate feedback loops and improve feature adoption by implementing workflows/systems to ensure alignment around the product from initial ideation through go-to-market and back to improvements prioritization.</p>
+<h2 id=why-is-product-operations-important>Why is Product Operations important?</h2>
+<p>There are 3 key benefits to having a Product Ops function:</p>
+<ol>
+<li>Product Ops removes time consuming output focused work from product management responsibilities, so they can focus on delivering value to customers and outcomes for the business</li>
+<li>Product Ops provides advisement and builds systems to bridge communication gaps and create transparency across all teams partnering with product management to ensure the best solutions for customers</li>
+<li>Product Ops serves the voice of two very important personas:
+<ul>
+<li>the product managers serving the customer and the business</li>
+<li>the actual users of the product and solutions the business offers to customers</li>
+</ul>
+</li>
+</ol>
+<h3 id=core-responsiblities-of-product-operations>Core responsiblities of Product Operations</h3>
+<p>Some typical responsibilities of Product Ops teams:</p>
+<ul>
+<li>Define, communicate, and improve standardized practices including tools, team processes, product management and knowledge/training</li>
+<li>Support product and engineering in consistently delivering outcomes to customers/users through healthy feedback loops and optimal workflows</li>
+<li>Design and implement systems to continuously drive collaboration between product management and other teams across the business, such as marketing, sales and customer success</li>
+<li>Faciliate the collection and synthsis of customer and user data for product improvement and feature adoption</li>
+<li>Implement and drive change management for any new or modified product owned workflows across teams and/or the organization</li>
+<li>Partner with teams across the business on the program management/execution of large scale product related initiatives</li>
+<li>Advise on betas and go-to-market planning for larger product initiatives and feature releases</li>
+</ul>
+<h2 id=what-does-product-operations-do-at-gitlab>What does Product Operations do at GitLab?</h2>
+<p>At GitLab, Product Ops enables the Product Division to operate more efficiently, and consistently across all <a href="/handbook/product/categories/">groups, stages, and sections</a>. We optimize and automate worflows, improve upon best practices, and scale how product management can consistently receive feedback and act on it.</p>
+<p>We run Product Operations as an independent function under the "product umbrella". This allows the function to maintain a broad and unbiased view to develop strategies/tactics serving the product division as well as the whole business without favor toward any particular group. This approach enables us to build and maintain a product system that serves not just product managers but all our internal customers: UX/design, engineering and our go-to-market counterparts.</p>
+<p>We aim to serve as the voice of the customer, pulling insights directly from users when possible and enabling direct communication between product managers and customers as frequently as possible.</p>
+<p>We continually support GitLab in applying the following strategies and tactics:</p>
+<ul>
+<li>Iterative design</li>
+<li>Product-led growth</li>
+<li>Lean product development</li>
+<li>Asynchronous collaboration</li>
+</ul>
+<p>As GitLab grows and matures, we strive to evolve Product Operations to flexibly support the shifting needs of the business and customers. We're the only Product Operations function that's always been <a href="https://about.gitlab.com/company/culture/all-remote/">all-remote</a> and <a href="https://about.gitlab.com/company/culture/all-remote/handbook-first-documentation/">handbook first</a>. This gives us the unique opportunity to transparently share how we run the Product Division and how it can scale its impact to dozens of teams and 100s of features delivered with each major release. We welcome GitLab users and the wider community to improve and evolve their Product Operations practices along with us by learning from and contributing to our public <a href="http://about.gitlab.com/handbook">handbook</a>. <a href="https://about.gitlab.com/company/mission/#everyone-can-contribute">Everyone can contribute</a>!</p>
+<h3 id=vision>Vision</h3>
+<p>A world-class product system, that GitLab team members and the wider community can benefit from.</p>
+<h3 id=mission>Mission</h3>
+<p>Empower GitLab to be product-led and customer-centered, by iterating on Agile/Lean best practices with a remote-first mindset, one MR at a time.</p>
+<h3 id=principles>Principles</h3>
+<ul>
+<li>
+<p><strong>We embody all <a href="https://about.gitlab.com/handbook/values/">GitLab values</a>, with a deep appreciation for <a href="https://about.gitlab.com/handbook/values/#collaboration">collaboration</a>.</strong> Product Operations is only as good as the sum of its <em>contributions</em> from the whole product development team and its stable counterparts. Teams that share accountability for (product) ownership invent better solutions and gain traction with less internal friction. These teams bond and rally around achieving a shared definition of success.</p>
+</li>
+<li>
+<p><strong>We prioritize <a href="https://about.gitlab.com/handbook/values/#results">results</a> and <a href="https://about.gitlab.com/handbook/values/#efficiency">efficiency</a> by valuing outcomes over outputs.</strong> This mindset is propelled by our core <a href="https://about.gitlab.com/handbook/product-development-flow/">product development flow</a>, which rallies us around the goal of delivering business impact to GitLab's customers and users with every iteration. Anything that doesn’t contribute to this overarching goal is waste and will be removed from our product system.</p>
+</li>
+<li>
+<p><strong>We continually align around <a href="https://about.gitlab.com/handbook/product/product-principles/#our-product-principles">our product principles</a>, with a focus on understanding the customer problem rather than assuming we know the solution.</strong> A single problem will have multiple solutions with varying impact potential. Customer-focused teams maximize value by prioritizing one problem to generate multiple solutions, rather than assuming a singular solution to solve multiple problems.</p>
+</li>
+<li>
+<p><strong>We build feedback bridges between Product and other teams, such as Marketing, Sales, Customer Success, UX/Design, and Engineering</strong> The most important success metric for any (product) team is the time it takes to move through the Think-Make-Check (or Build-Measure-Learn) cycle. Teams that <a href="https://about.gitlab.com/handbook/product/ux/how-we-work/#iteration">iterate</a> successfully and quickly through this cycle have continual access to qualitative and quantitative data through every phase of development and across every function in the business.</p>
+</li>
+<li>
+<p><strong>We support high-functioning, cross-functional teams by creating flexible frameworks that support confident decision making along with the permission to fail, which in turn fuels velocity.</strong> When teams have <a href="https://about.gitlab.com/handbook/leadership/emotional-intelligence/psychological-safety/">psychological safety</a>, they are more likely to take risks and move faster, which ultimately leads to <a href="https://about.gitlab.com/handbook/product/ux/thinkbig/">bigger ideas</a> and better <a href="https://about.gitlab.com/handbook/product/product-principles/#the-minimal-viable-change-mvc">MVCs</a> toward those ideas. These teams lose judgment in favor of trust.</p>
+</li>
+</ul>
+<h3 id=opportunities>Opportunities</h3>
+<p><strong>Continuing GitLab's leadership in the "all remote" work revolution.</strong> While the Covid pandemic has given remote working an unexpected relevance and urgency for organizations worldwide, even prior to the pandemic remote working had begun taking precedence due proof around the core, repeatable benefits*:</p>
+<ul>
+<li><em>Productivity — Teleworkers are an average of 35-40% more productive than their office counterparts, and have measured an output increase of at least 4.4%</em></li>
+<li><em>Performance — With stronger autonomy via location independence, workers produce results with 40% fewer quality defects</em></li>
+<li><em>Engagement — Higher productivity and performance combine to create stronger engagement, or in other words, 41% lower absenteeism</em></li>
+<li><em>Retention — 54% of employees say they would change jobs for one that offered them more flexibility, which results in an average of 12% turnover reduction after remote work agreement is offered</em></li>
+<li><em>Profitability — Organizations save an average of $11,000 per year per part-time telecommuter, or 21% higher profitability</em></li>
+</ul>
+<p>As a successful all-remote organization, GitLab is already familiar with the benefits of workplace flexibility. We know that remote teams have the ability to move fast, in both parallel and non-parallel workflows, achieving optimal efficiency. And by dogfooding our own <a href="https://about.gitlab.com/company/culture/all-remote/guide/">all-remote guide</a> and <a href="https://about.gitlab.com/company/culture/all-remote/tips/">all-remote cultural tips</a>, we've demonstrated remote teams are not just more productive, but happier and more innovative when autonomy and ownership are combined, allowing a focus on goals/outcomes rather than hours/outputs to measure success. With remote-first working practices more at the forefront than ever, GitLab as an opportunity to continue leading by example, helping organizations across various industries, not just technology. We can help teams lose the disadvantages of in-office work, such as office politics. And we can help teams translate the benefits of in-office culture, such as the empathy that comes from human connection, to an all-remote environment. Product Operations will work cross-functionally to ensure GitLab's product team best practices are continually <a href="https://about.gitlab.com/company/culture/all-remote/guide/#handbook-first-documentation">handbook first</a> such GitLab and non-Gitlab teams can benefit from our learnings, in alignment with our value of <a href="https://about.gitlab.com/company/culture/all-remote/values/#transparency">transparency</a>.</p>
+<p>*Statistics reference via <a href="https://www.forbes.com/sites/laurelfarrer/2020/02/12/top-5-benefits-of-remote-work-for-companies/?sh=51d1271716c8">Forbes</a></p>
+<p><strong>Productizing our product development successes for the benefit of our users as well as the benefit of GitLab as a business.</strong> As an open core product, we have the unique advantage that what we build for ourselves at GitLab can be productized for our customers and improved upon by our users. This means that every strategy/tactic we leverage to optimize our internal processes, be it an automation such as <a href="https://about.gitlab.com/handbook/marketing/blog/release-posts/#release-post-item-generator">release post item generator</a> or workflow optimization such as <a href="https://docs.google.com/presentation/d/1_Osx3FrDxT4aqjl-Kc9QXgp30z0Pl1k4tBCv0DlZYkk/edit">scaling our release post</a>, can and should be built into our product for our users. Building it into our product can be as simple as an update to our transparent and highly referenced <a href="https://about.gitlab.com/handbook/">handbook</a> or <a href="https://gitlab.com/gitlab-com/www-gitlab-com/-/issues/8641">iterating on our release feature</a> over multiple cycles to optimize our release notes process. Product operations will treat all of Gitlab's product development practices, such as a <a href="https://about.gitlab.com/handbook/product-development-flow/">product development flow</a>, as a product to be optimized, dogfooding with the intention of improving existing or introducing new GitLab features to operationalize successful outcomes for the benefit of GitLab and non-Gitlab teams.</p>
+<h3 id=challenges>Challenges</h3>
+<p><strong>Finding the right balance of synchronous versus asynchronous collaboration as an all-remote team.</strong> GitLab has a <a href="https://about.gitlab.com/company/culture/all-remote/values/">unique culture </a> of combined independence and ownership as a fully remote organization. We've carved the path for successful remote work with our <a href="https://about.gitlab.com/company/culture/all-remote/values/#transparency">transparent</a> handbook first approach, which has also propelled a highly productive asynchronous team with an <a href="https://about.gitlab.com/company/strategy/#contribute-with-gitlab">everyone can contribute</a> mindset. However, as GitLab has gone from fewer than 350 to over 1200 employees, we've seen some of our asynchronous processes fail serve us at scale.</p>
+<p>At scale, leaning too much toward asynchronous results in opportunity gaps to collaborate on optimal outcomes within and across teams, and even operational chaos. Too much synchronous communication creates the overly burdened "red tape" operational inefficiencies that traditional companies suffer from across large teams and various time zones. So as we grow our team and our userbase, we have to continue adjusting the levers to establish the right convergence and divergence points, for product development teams and across the business.</p>
+<p><strong>Providing access to actionable product usage data for GitLab product development teams</strong> As GitLab's userbase grows, collecting quantitative data to identify patterns and trends while leveraging qualitative data to better understand the reason behind those patterns and trends will be key to delivering meaningful impact to customers. However, GitLab is committed to <a href="https://about.gitlab.com/privacy/">user data privacy</a> and respects user-requested boundaries on data collection. Alternatives to product usage data, such as user surveys and testing can help fill some of the gaps but are not as scalable or unbiased. And while leveraging product usage data from SaaS users can yield meaningful insights for Self-managed users as well, it's not always an apples to apples comparison. We need to continually work on finding the balance between user privacy and providing the product teams access to the business intelligence they need to deliver meaningful impact to customers. Concurrently, we need to minimize the complexity and manual nature of effort needed by product development teams to access the most meaningful data available to them in the system by prioritizing instrumentation and providing standardized dashboards for teams to leverage and customize.</p>
+<h2 id=key-initiatives>Key Initiatives</h2>
+<h3 id=current>Current</h3>
+<h4 id=scale-up-gitlabs-release-notes-workflow-and-design>Scale up GitLab's release notes workflow and design</h4>
+<p><em>Supports <a href="#operationalizing-outcome-driven-products">Outcome driven products</a></em></p>
+<p><strong>Automate the release post workflow to communicate product release notes more efficiently.</strong></p>
+<p><strong>Why?</strong> Minimize the amount of work necessary for product managers to contribute to and manage their release notes.</p>
+<p><strong>How are we measuring success?</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Reduce number of manual release post manager tasks in the <a href="https://gitlab.com/gitlab-com/www-gitlab-com/-/blob/master/.gitlab/merge_request_templates/Release-Post.md">monthly release post MR template</a> from ~120 to 10</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Increase percent of automated ~"release post item" MRs from 32% to 51% (Update: FY23 is 49.5%)
+<ul>
+<li><a href="https://gitlab.com/gitlab-com/www-gitlab-com/-/merge_requests?scope=all&amp;state=merged&amp;label_name[]=release%20post%20item&amp;deployed_after=2021-01-01&amp;not[author_username]=gitlab-bot&amp;deployed_before=2022-09-01">Manual 68%</a></li>
+<li><a href="https://gitlab.com/gitlab-com/www-gitlab-com/-/merge_requests?scope=all&amp;state=merged&amp;label_name[]=release%20post%20item&amp;deployed_after=2021-01-01&amp;deployed_before=2022-09-01&amp;author_username=gitlab-bot">Automated 32%</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>Improve design of release notes and related documentation such as deprecations, removals and migrations</strong></p>
+<p><strong>Why?</strong> Make it easier for GitLab customers to discover new features and be informed of any product changes relevant to them.</p>
+<p><strong>How are we measuring success?</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Introduce a "Notable Changes" announcement type</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Display all deprecation, removal, notable announcements on a single page</li>
+</ul>
+<h4 id=grow-gitlabs-post-purchase-survey>Grow GitLab's post purchase survey</h4>
+<p><em>Supports <a href="#building-qualitative--quantitative-feedback-loops">Feedback loops</a></em></p>
+<p><strong>Automate deployment, data collection and analysis of post purchase survey to increase accuracy and efficiency.</strong></p>
+<p><strong>Why?</strong></p>
+<p><strong>How are we measuring success?</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Reduce the number of manual interventions required to add PPS data to <code>features.yml</code> to 0</li>
+</ul>
+<p><strong>Expand data types collected by post purchase survey to include web direct sales.</strong></p>
+<p><strong>Why?</strong> To provide an additional sensing mechanism to product management for category direction, maturity and feature optimization and to inform investments in across marketing, sales and customer success teams.</p>
+<p><strong>How are we measuring success?</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Trigger post purchase survey to 100% of web direct sales</li>
+</ul>
+<h4 id=establish-thought-leadership-for-gitlab>Establish thought leadership for GitLab</h4>
+<p><em>Supports <a href="#scaling-product-knowledge">Scaling product knowledge</a></em></p>
+<p><strong>Increase GitLab's footprint as thought leaders in Product Management and Product Operations.</strong></p>
+<p><strong>Why?</strong> So GitLab customers and the broader tech community can benefit from and contribute to our best practices.</p>
+<p><strong>How are we measuring success?</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Implement rank opptimizaton content to take <code>/direction/product-operations/</code> from position 18 to position 10 in Google search results</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>100% of blog posts generated by product managers have the 'product tag in preparation for launching a product category in the Gitlab blog</li>
+</ul>
+<h4 id=grow-gitlabs-paid-nps-survey>Grow GitLab's Paid NPS survey</h4>
+<p><em>Supports <a href="#building-qualitative--quantitative-feedback-loops">Feedback loops</a></em></p>
+<p><strong>Identify a solution to collect survey responses from paid account self-managed users.</strong> (see pilot history <a href="https://docs.google.com/presentation/d/14wBTy7mLd4qAOrsy36h7HjEWPXHxmYxK8c3l4Xw7hkM/edit#slide=id.gb520b95e46_0_0">here</a>)</p>
+<p><strong>Why?</strong> To deternime a viable soultion to better understand the sentiment of self-managed users.</p>
+<p><strong>How are we measuring success:</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Complete spike to answer the following questions:
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Is the current proposal to leverage <a href="https://gitlab.com/gitlab-com/Product/-/issues/2249">GitLab broadcast message feature</a> the only and/or best solution for deploying the PNPS survey to self-managed users?</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>If yes, what is the scope and timeline for implementing the proposed <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/326239">MVC</a>?</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>If no, what is an alternate MVC, scope and timeline to consider?</li>
+</ul>
+</li>
+</ul>
+<h3 id=upcoming>Upcoming</h3>
+<h4 id=improve-usability-of-product-management-learning--development-resources>Improve usability of <a href="https://about.gitlab.com/handbook/product/product-manager-role/learning-and-development/">Product Management Learning &amp; Development</a> resources</h4>
+<p><em>Supports <a href="#scaling-product-knowledge">Scaling product knowledge</a></em></p>
+<p><strong>Redesign the L&amp;D pages to be more interactive</strong></p>
+<p><strong>Why?</strong> To help product managers to take advantage of the valuable and curated content available to them in the L&amp;D to improve their product management skills at GitLab and beyond in thier careers.</p>
+<p><strong>How are we measuring success?</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Create Level Up content to support 4 our of the 7 categories in the <a href="https://about.gitlab.com/handbook/product/product-manager-role/learning-and-development/#kubernetes">L &amp; D</a>.</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Increase <a href="https://about.gitlab.com/handbook/product/product-manager-role/learning-and-development/">L &amp; D</a> page views by 20%</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Increase Product Management Level Up course completion by 20%</li>
+</ul>
+<h4 id=grow-gitlabs-paid-nps-survey-1>Grow GitLab's Paid NPS survey</h4>
+<p><em>Supports <a href="#building-qualitative--quantitative-feedback-loops">Feedback loops</a></em></p>
+<p><strong>Implement a solution to collect survey responses from paid account self-managed users.</strong></p>
+<p><strong>Why?</strong> To better understand the sentiment of self-managed users given they make up X% user population.</p>
+<p><strong>How are we measuring success:</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Increase the percent of self-managed paid NPS responses collected from 0% to 20%</li>
+</ul>
+<h4 id=improve-usability-gitlabs-product-handbook>Improve usability GitLab's Product Handbook</h4>
+<p><strong>*Redesign Product Handbook content to make it easier discover or find specific content types</strong></p>
+<p><em>Supports <a href="#scaling-product-knowledge">Scaling product knowledge</a></em></p>
+<p><strong>Why?</strong> So product managers, cross-functional team members and the wider GitLab community can find helpful references and workflow to due their job.</p>
+<p><strong>How are we measuring success?</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Reduce word count of <a href="https://about.gitlab.com/handbook/product">Product Handbook</a> from 14,4000 to 10,000</li>
+</ul>
+<h4 id=establish-thought-leadership-for-gitlab-1>Establish thought leadership for GitLab</h4>
+<p><em>Supports <a href="#scaling-product-knowledge">Scaling product knowledge</a></em></p>
+<p><strong>Increase GitLab's footprint as thought leaders in Product Management and Product Operations.</strong></p>
+<p><strong>Why?</strong> So GitLab customers and the broader tech community can benefit from and contribute to our best practices.</p>
+<p><strong>How are we measuring success?</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Publish at least 4 Product Operations authored <a href="https://about.gitlab.com/blog/">GitLab blog</a> posts in FY24</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Create a new/separate category for product manager generated content in the <a href="https://about.gitlab.com/blog/">GitLab blog</a></li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Take Product Operations speaker engagements from 1 to 3</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Increase Product Operations direction page views by X%</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled/>Elevate rank <code>/direction/product-operations/</code> from position 18 to position 5 in Google search results</li>
+</ul>
+<h3 id=recently-completed>Recently Completed</h3>
+<h4 id=establish-thought-leadership-for-gitlab-2>Establish thought leadership for GitLab</h4>
+<p><em>Supports <a href="#scaling-product-knowledge">Scaling product knowledge</a></em></p>
+<p><strong>Increase GitLab's footprint as thought leaders in Product Management and Product Operations.</strong></p>
+<p><strong>Why?</strong> So GitLab customers and the broader tech community can benefit from and contribute to our best practices.</p>
+<p><strong>How are we measuring success?</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>Publish at least 1 Product Operations authored <a href="https://about.gitlab.com/blog/">GitLab blog</a> posts in FY23</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>Take Product Operations speaker engagements from 0 to 1</li>
+</ul>
+<h4 id=simplify-gitlabs-product-manager-onboarding>Simplify GitLab's product manager onboarding</h4>
+<p><em>Supports <a href="#operationalizing-outcome-driven-products">Outcome driven products</a></em></p>
+<p><strong>Streamline the general and product management specific onboarding workflows to better compliment each other.</strong></p>
+<p><strong>Why?</strong> Minimize the amount of time it takes for product managers to ramp up to perform their job successfully at GitLab.</p>
+<p><strong>How are we measuring success?</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>Reduce the number of tasks in the general PM onbaording and product management specific onboarding templates by 40%</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>Reduce total the number of onboarding templates from 4 to 2</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>Reduce the timeline to complete required product manager onboarding from 3 months to 4 weeks</li>
+</ul>
+<h4 id=scale-up-gitlabs-release-notes-workflow-and-design-1>Scale up GitLab's release notes workflow and design</h4>
+<p><em>Supports <a href="#operationalizing-outcome-driven-products">Outcome driven products</a></em></p>
+<p><strong>Automate the release post workflow to communicate product release notes more efficiently.</strong></p>
+<p><strong>Why?</strong> Minimize the amount of work necessary for product managers to contribute to and manage their release notes.</p>
+<p><strong>How are we measuring success?</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>Reduce <a href="https://about.gitlab.com/handbook/marketing/blog/release-posts/">documentation of the Release Post</a> from 18,623 words to 10,000 words</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>Create an SSOT for documentatin of deprecations, removals and breaking changes in GitLab Docs
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>Add a content filtering mechanism to the depreciations docs page</li>
+<li class=task-list-item><del>Add a content filtering mechanism to the removals docs page</del></li>
+</ul>
+</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/><a href="https://gitlab.com/gitlab-com/Product/-/issues/4713">Identify a soluton to enable users to receive push notifications</a> (such as email, RSS, pub/sub) about breaking changes</li>
+</ul>
+<h4 id=grow-gitlabs-post-purchase-survey-1>Grow GitLab's post purchase survey</h4>
+<p><em>Supports <a href="#building-qualitative--quantitative-feedback-loops">Feedback loops</a></em></p>
+<p><strong>Automate deployment, data collection and analysis of post purchase survey to increase accuracy and efficiency.</strong></p>
+<p><strong>Why?</strong></p>
+<p><strong>How are we measuring success?</strong></p>
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>90% reduction of aggregate manual work needed to perform/share out quarterly analysis (from 80 hours –&gt; 8 hours)</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>Take manual calculation error risk to 0% by implementing full automation between SFDC, Qualtrics and Sisense for:
+<ul class=task-list>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>quarterly feature counts</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>all time feature counts</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>quarterly ARR segmentation</li>
+<li class=task-list-item><input type=checkbox class=task-list-item-checkbox disabled=disabled checked/>all time ARR segmentation</li>
+</ul>
+</li>
+</ul>
+<h2 id=areas-of-focus>Areas of Focus</h2>
+<p>The focus areas below are evergreen for Product Operations. One year plans to improve GitLab's product system always map to the areas of focus below.</p>
+<h3 id=operationalizing-outcome-driven-products>Operationalizing Outcome Driven Products</h3>
+<p>We aim to minimize manual processes in favor of flexible automation that compliments existing human workflows. Doing so enables Product Division team members to operate more <a href="https://about.gitlab.com/handbook/values/#efficiency">efficiently</a>, spending more time delivering value to GitLab's customers and the wider community.</p>
+<h4 id=in-progress-and-upcoming>In Progress and Upcoming</h4>
+<h4 id=recently-completed-1>Recently completed</h4>
+<h3 id=building-qualitative--quantitative-feedback-loops>Building Qualitative &amp; Quantitative Feedback Loops</h3>
+<p>We lean into opportunities to grow internal and external communication channels for GitLab's product development teams and their stable counterparts. The outcome is the collection and exposure of actionable user feedback and data that can be utilized across the business to deliver impactful <a href="https://about.gitlab.com/handbook/values/#results">results</a> to GitLab's users.</p>
+<h4 id=in-progress-and-upcoming-1>In Progress and Upcoming</h4>
+<h4 id=recently-completed-2>Recently completed</h4>
+<h3 id=scaling-product-knowledge>Scaling Product Knowledge</h3>
+<p>We collaborate to identify best practices for product development and create <a href="https://about.gitlab.com/handbook/values/#transparency">transparency</a> of knowledge across teams in an ongoing and remote-friendly way. The outcome is a collection of written, video and interactive content in the GitLab <a href="https://about.gitlab.com/handbook/#product">handbook</a> that is easy to consume and adopt for GitLab's product managers as well as product managers throughout the tech community.</p>
+<h4 id=in-progress-and-upcoming-2>In Progress and Upcoming</h4>
+<h4 id=recently-completed-3>Recently completed</h4>
+<h2 id=areas-of-ownership>Areas of Ownership</h2>
+<p>The areas of ownership below highlight workflows and processes for which Product Operations acts as <a href="https://about.gitlab.com/handbook/people-group/directly-responsible-individuals/">DRI</a>.</p>
+<ul>
+<li><a href="https://about.gitlab.com/handbook/marketing/blog/release-posts/">GitLab's product release notes (release post),related templates and workflow automations</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/product-operations/surveys/">Paid NPS and Post Purchase Surveys</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/product-processes/#prioritization">Prioritization framework</a></li>
+<li><a href="https://about.gitlab.com/handbook/product-development-flow/">Product development flow</a></li>
+<li><a href="https://about.gitlab.com/handbook/product">Product handbook</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/product-manager-role/learning-and-development/">Product manager learning and development</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/product-manager-role/#product-manager-onboarding">Product manager onboarding and training</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/product-manager-role/">Product manager role</a> and <a href="https://about.gitlab.com/handbook/product/product-manager-responsibilities/">responsibilities</a></li>
+<li><a href="https://gitlab.com/gitlab-com/Product/-/tree/main/.gitlab/issue_templates">Product team epic, issue and MR templates and workflow automations</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/product-processes/#team-meetings">Product team meetings</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/product-okrs/">Product team OKR workflow and facilitation</a></li>
+</ul>
+<h2 id=areas-of-advisement>Areas of Advisement</h2>
+<p>The areas of advisement below highlight workflows and processes for which Product Operations continually acts as trusted advisor.</p>
+<ul>
+<li><a href="https://about.gitlab.com/handbook/product/cross-functional-prioritization/">Cross-functional prioritization</a></li>
+<li><a href="https://about.gitlab.com/company/team/structure/working-groups/">GitLab working groups</a></li>
+<li><a href="https://about.gitlab.com/handbook/product/product-manager-role/product-CDF-competencies/">Product manager career development, assessment and growth</a></li>
+<li><a href="https://about.gitlab.com/handbook/engineering/workflow/#product-development-timeline">Product development timeline</a></li>
+</ul>
+<h2 id=gitlab-product-operations-blog>GitLab Product Operations Blog</h2>
+<p><a href="https://about.gitlab.com/blog/2022/05/24/keys-to-success-for-product-operations/">3 keys to success for product Operations</a></p>
+<h2 id=contributing-to-this-page>Contributing to this page</h2>
+<p>Product Operations welcomes contributions to this page! Please feel free to raise an MR and assign to the <a href="https://gitlab.com/fseifoddini">Product Operations</a> for collaboration.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/product-operations/template.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/product-operations/template.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab Security Release: 16.6.1, 16.5.3, 16.4.3
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab Security Release: 16.6.1, 16.5.3, 16.4.3 for GitLab Community Edition (CE) and Enterprise Edition (EE).' name=description />
+<meta content='Learn more about GitLab Security Release: 16.6.1, 16.5.3, 16.4.3 for GitLab Community Edition (CE) and Enterprise Edition (EE).' name='twitter:description'/>
+<meta content='Learn more about GitLab Security Release: 16.6.1, 16.5.3, 16.4.3 for GitLab Community Edition (CE) and Enterprise Edition (EE).' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab Security Release: 16.6.1, 16.5.3, 16.4.3' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2023-11-30-security-release-gitlab-16-6-1-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2023/11/30/security-release-gitlab-16-6-1-released/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/blogimages/security-cover-new.png" property="og:image">
+<meta content="https://about.gitlab.com/images/blogimages/security-cover-new.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab Security Release: 16.6.1, 16.5.3, 16.4.3' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2023/11/30/security-release-gitlab-16-6-1-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'tags': ["security"]});
+</script>
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Nov 30, 2023
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#gitlab">Greg Myers</a>
+<a href="https://gitlab.com/greg"><span>&nbsp;</span>
+<span class=author-gitlab>
+<i class='fab fa-gitlab'></i>
+</span>
+</a><a href="https://twitter.com/gitlab"><span>&nbsp;</span>
+<span class=author-twitter>
+<i class='fab fa-twitter'></i>
+</span>
+</a></span>
+<h1>
+GitLab Security Release: 16.6.1, 16.5.3, 16.4.3
+</h1>
+<p class=description>
+Learn more about GitLab Security Release: 16.6.1, 16.5.3, 16.4.3 for GitLab Community Edition (CE) and Enterprise Edition (EE).
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/blogimages/security-cover-new.png);'></div>
+<div class=content>
+<p>Today we are releasing versions 16.6.1, 16.5.3, 16.4.3 for GitLab Community Edition (CE) and Enterprise Edition (EE).</p>
+<p>These versions contain important security fixes, and we strongly recommend that all GitLab installations be upgraded to
+one of these versions immediately. GitLab.com is already running the patched version.</p>
+<p>GitLab releases patches for vulnerabilities in dedicated security releases. There are two types of security releases:
+a monthly, scheduled security release, released a week after the feature release (which deploys on the 3rd Thursday of each month),
+and ad-hoc security releases for critical vulnerabilities. For more information, you can visit our <a href="https://about.gitlab.com/security/faq/">security FAQ</a>.
+You can see all of our regular and security release blog posts <a href="/releases/categories/releases/">here</a>.
+In addition, the issues detailing each vulnerability are made public on our
+<a href="https://gitlab.com/gitlab-org/gitlab/-/issues/?sort=created_date&amp;state=closed&amp;label_name%5B%5D=bug%3A%3Avulnerability&amp;confidential=no&amp;first_page_size=100">issue tracker</a>
+30 days after the release in which they were patched.</p>
+<p>We are dedicated to ensuring all aspects of GitLab that are exposed to customers or that host customer data are held to
+the highest security standards. As part of maintaining good security hygiene, it is highly recommended that all customers
+upgrade to the latest security release for their supported version. You can read more
+<a href="/blog/2020/05/20/gitlab-instance-security-best-practices/">best practices in securing your GitLab instance</a> in our blog post.</p>
+<h3 id=recommended-action>Recommended Action</h3>
+<p>We <strong>strongly recommend</strong> that all installations running a version affected by the issues described below are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<p>When no specific deployment type (omnibus, source code, helm chart, etc.) of a product is mentioned, this means all types are affected.</p>
+<h2 id=table-of-fixes>Table of fixes</h2>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#xss-and-redos-in-markdown-via-banzai-pipeline-of-jira">XSS and ReDoS in Markdown via Banzai pipeline of Jira</a></td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="#members-with-admin_group_member-custom-permission-can-add-members-with-higher-role">Members with admin_group_member custom permission can add members with higher role</a></td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="#release-description-visible-in-public-projects-despite-release-set-as-project-members-only-through-atom-response">Release Description visible in public projects despite release set as project members only through atom response</a></td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><a href="#manipulate-the-repository-content-in-the-ui-cve-2023-3401-bypass">Manipulate the repository content in the UI (CVE-2023-3401 bypass)</a></td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><a href="#external-user-can-abuse-policy-bot-to-gain-access-to-internal-projects">External user can abuse policy bot to gain access to internal projects</a></td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><a href="#developers-can-update-pipeline-schedules-to-use-protected-branches-even-if-they-dont-have-permission-to-merge">Developers can update pipeline schedules to use protected branches even if they don't have permission to merge</a></td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><a href="#users-can-install-composer-packages-from-public-projects-even-when-package-registry-is-turned-off">Users can install Composer packages from public projects even when <code>Package registry</code> is turned off</a></td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><a href="#client-side-dos-via-mermaid-flowchart">Client-side DOS via Mermaid Flowchart</a></td>
+<td>Low</td>
+</tr>
+<tr>
+<td><a href="#unauthorized-member-can-gain-allowed-to-push-and-merge-access-and-affect-integrity-of-protected-branches">Unauthorized member can gain <code>Allowed to push and merge</code> access and affect integrity of protected branches</a></td>
+<td>Low</td>
+</tr>
+<tr>
+<td><a href="#guest-users-can-react-emojis-on-confidential-work-items-which-they-cant-see-in-a-project">Guest users can react (emojis) on confidential work items which they cant see in a project</a></td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+<h3 id=xss-and-redos-in-markdown-via-banzai-pipeline-of-jira>XSS and ReDoS in Markdown via Banzai pipeline of Jira</h3>
+<p>Improper neutralization of input in Jira integration configuration in GitLab CE/EE, affecting all versions from 15.10 prior to 16.6.1, 16.5 prior to 16.5.3, and 16.4 prior to 16.4.3 allowed attacker to execute javascript in victim's browser.</p>
+<p>This is a high severity issue (<code>CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N</code>, 8.7).
+It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6033">CVE-2023-6033</a>.</p>
+<p>Thanks <a href="https://hackerone.com/yvvdwf">yvvdwf</a> for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=members-with-admin_group_member-custom-permission-can-add-members-with-higher-role>Members with admin_group_member custom permission can add members with higher role</h3>
+<p>An issue has been discovered in GitLab EE affecting all versions starting from 16.5 before 16.5.3,
+all versions starting from 16.6 before 16.6.1. When a user is assigned a custom role with <code>admin_group_member</code>` enabled, they may be able to add a member with a higher static role than themselves to the group which may lead to privilege escalation.</p>
+<p>This is a high severity issue (<code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N</code>, 8.1).
+It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6396">CVE-2023-6396</a>.</p>
+<p>This vulnerability was discovered internally by GitLab team member <a href="https://gitlab.com/jarka">jarka</a>.</p>
+<h3 id=release-description-visible-in-public-projects-despite-release-set-as-project-members-only-through-atom-response>Release Description visible in public projects despite release set as project members only through atom response</h3>
+<p>An issue has been discovered in GitLab affecting all versions starting from 11.3 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1.
+It was possible for unauthorized users to view a public projects' release descriptions via an atom endpoint when release access on the public was set to only project members</p>
+<p>This is a medium severity issue (<code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N</code>, 5.3).
+It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3949">CVE-2023-3949</a>.</p>
+<p>Thanks <a href="https://hackerone.com/ashish_r_padelkar">ashish_r_padelkar</a> for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=manipulate-the-repository-content-in-the-ui-cve-2023-3401-bypass>Manipulate the repository content in the UI (CVE-2023-3401 bypass)</h3>
+<p>An issue has been discovered in GitLab affecting all versions before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. Under certain circumstances, a malicious actor bypass prohibited branch checks using a specially crafted branch name to manipulate repository content in the UI.</p>
+<p>This is a medium severity issue (<code>CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N</code>, 4.8).
+It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5226">CVE-2023-5226</a>.</p>
+<p>Thanks <a href="https://hackerone.com/shells3c">shells3c</a> for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=external-user-can-abuse-policy-bot-to-gain-access-to-internal-projects>External user can abuse policy bot to gain access to internal projects</h3>
+<p>An issue has been discovered in GitLab EE affecting all versions starting from 16.2 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for an attacker to abuse the policy bot to gain access to internal projects.</p>
+<p>This is a medium severity issue (<code>CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N</code>, 4.4). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5995">CVE-2023-5995</a>.</p>
+<p>Thanks <a href="https://hackerone.com/joaxcar">joaxcar</a> for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=client-side-dos-via-mermaid-flowchart>Client-side DOS via Mermaid Flowchart</h3>
+<p>An issue has been discovered in GitLab EE affecting all versions starting from 10.5 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for an attacker to cause a client-side denial of service using malicious crafted mermaid diagram input.</p>
+<p>This is a low severity issue (<code>CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:L</code>, 2.6).
+It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4912">CVE-2023-4912</a>.</p>
+<p>Thanks <a href="https://hackerone.com/toukakirishima">toukakirishima</a> for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=developers-can-update-pipeline-schedules-to-use-protected-branches-even-if-they-dont-have-permission-to-merge>Developers can update pipeline schedules to use protected branches even if they don't have permission to merge</h3>
+<p>An issue has been discovered in GitLab affecting all versions starting from 9.2 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for a user with the Developer role to update a pipeline schedule from an unprotected branch to a protected branch.</p>
+<p>This is a medium severity issue (<code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N</code>, 4.3).
+It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4317">CVE-2023-4317</a>.</p>
+<p>Thanks <a href="https://hackerone.com/js_noob">js_noob</a> for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=users-can-install-composer-packages-from-public-projects-even-when-package-registry-is-turned-off>Users can install Composer packages from public projects even when <code>Package registry</code> is turned off</h3>
+<p>An issue has been discovered in GitLab affecting all versions starting from 13.2 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for users to access composer packages on public projects that have package registry disabled in the project settings.</p>
+<p>This is a medium severity issue (<code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N</code>, 4.3).
+It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3964">CVE-2023-3964</a>.</p>
+<p>Thanks <a href="https://hackerone.com/js_noob">js_noob</a> for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=unauthorized-member-can-gain-allowed-to-push-and-merge-access-and-affect-integrity-of-protected-branches>Unauthorized member can gain <code>Allowed to push and merge</code> access and affect integrity of protected branches</h3>
+<p>An issue has been discovered in GitLab EE affecting all versions starting from 8.13 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for an attacker to abuse the <code>Allowed to merge</code> permission as a guest user, when granted the permission through a group.</p>
+<p>This is a low severity issue (<code>CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N</code>, 3.1).
+It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4658">CVE-2023-4658</a>.</p>
+<p>Thanks <a href="https://hackerone.com/theluci">theluci</a> for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=guest-users-can-react-emojis-on-confidential-work-items-which-they-cant-see-in-a-project>Guest users can react (emojis) on confidential work items which they cant see in a project</h3>
+<p>An issue has been discovered in GitLab affecting all versions starting from 12.1 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for a Guest user to add an emoji on confidential work items.</p>
+<p>This is a low severity issue (<code>CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N</code>, 3.1).
+It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3443">CVE-2023-3443</a>.</p>
+<p>Thanks <a href="https://hackerone.com/ashish_r_padelkar">ashish_r_padelkar</a> for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=mattermost-security-update>Mattermost Security Update</h3>
+<p>Mattermost has been updated to the latest patch release to mitigate several security issues.</p>
+<h3 id=update-to-pg-149-and-1312>Update to PG 14.9 and 13.12</h3>
+<p>PostgreSQL has been updated to 14.9 and 13.12 to mitigate CVE-2023-39417.</p>
+<h3 id=update-pcre2-to-1042>Update pcre2 to 10.42</h3>
+<p><code>pcre2</code> has been updated to version 10.42 to mitigate CVE-2022-41409.</p>
+<h2 id=non-security-patches>Non Security Patches</h2>
+<h3 id=1661>16.6.1</h3>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/build/CNG/-/merge_requests/1639">Install Gitaly dependencies for project archiving (16.6 backport)</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/137167">Fix intermittent 404 errors loading GitLab Pages</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/136888">Prefer custom sort order with search in users API</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/136902">Backport "Fix group page erroring because of nil user" to 16-6-stable-ee</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/137296">Skip encrypted settings logic for Redis when used by Mailroom</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/137687">Allow <code>+</code> char in abuse detection for global search</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/137800">Backport "Move unlock pipeline cron scheduler out of ee" to 16.6</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/137899">Fix bug with pages_deployments files not being deleted on disk</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/137711">Backport - Truncate verification failure message to 255</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/138131">Backport "Revert "Merge branch 'sc1-release-goredis' into 'master'""</a></li>
+</ul>
+<h3 id=1653>16.5.3</h3>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/build/CNG/-/merge_requests/1636">Backport 10871d71b171db38701bfefe15883b05c234ca6d to <code>16-5-stable</code></a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/136934">Geo: Reduce batch size of verification state backfill</a></li>
+</ul>
+<h3 id=1643>16.4.3</h3>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/build/CNG/-/merge_requests/1622">Backport 10871d71b171db38701bfefe15883b05c234ca6d to <code>16-4-stable</code></a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitaly/-/merge_requests/6554">Backport to 16.4 the fix for test failure due to "not-existing.com" being registered</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/135647">Bump <code>asdf-bootstrapped-verify</code> version on 16.4</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/133886">Fix bulk batch export of badges and uploads</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/136764">[16.4] ci: Fix broken master by not reading GITLAB_ENV</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/136433">Fix assign security check permission checks</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/136774">For 16.4: Fix Geo verification state backfill job can exceed batch size</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/136937">Geo: Reduce batch size of verification state backfill</a></li>
+</ul>
+<h2 id=updating>Updating</h2>
+<p>To update GitLab, see the <a href="/update">Update page</a>.
+To update Gitlab Runner, see the <a href="https://docs.gitlab.com/runner/install/linux-repository.html#updating-the-runner">Updating the Runner page</a>.</p>
+<h2 id=receive-security-release-notifications>Receive Security Release Notifications</h2>
+<p>To receive security release blog notifications delivered to your inbox, visit our <a href="https://about.gitlab.com/company/contact/">contact us</a> page.
+To receive release notifications via RSS, subscribe to our <a href="https://about.gitlab.com/security-releases.xml">security release RSS feed</a> or our <a href="https://about.gitlab.com/all-releases.xml">RSS feed for all releases</a>.</p>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+Security+Release%3A+16.6.1%2C+16.5.3%2C+16.4.3+via+%40gitlab&amp;url=https://about.gitlab.com/releases/2023/11/30/security-release-gitlab-16-6-1-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab Security Release: 16.6.1, 16.5.3, 16.4.3
+via @gitlab
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<ul class='tag-list list-unstyled'>
+<li class=tag>
+<a href="/releases/tags.html#security">security</a>
+</li>
+</ul>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2023/11/30/security-release-gitlab-16-6-1-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2023/11/30/security-release-gitlab-16-6-1-released/&amp;text=GitLab Security Release: 16.6.1, 16.5.3, 16.4.3' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2023/11/30/security-release-gitlab-16-6-1-released/&amp;title=GitLab Security Release: 16.6.1, 16.5.3, 16.4.3&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2023/11/30/security-release-gitlab-16-6-1-released/&amp;t=GitLab Security Release: 16.6.1, 16.5.3, 16.4.3' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2023/11/16/gitlab-16-6-released/" title="GitLab 16.6 released with GitLab Duo Chat available in Beta"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 16.6 released with GitLab Duo Chat available
+...
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2023/12/13/security-release-gitlab-16-6-2-released/" title="GitLab Security Release: 16.6.2, 16.5.4, 16.4.4"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab Security Release: 16.6.2, 16.5.4, 16.4.4
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2023-11-30-security-release-gitlab-16-6-1-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2023-11-30-security-release-gitlab-16-6-1-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

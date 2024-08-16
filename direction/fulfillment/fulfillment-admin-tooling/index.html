@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - Fulfillment Admin Tooling
+|
+GitLab
+</title>
+<meta content='The Fulfillment Admin Tooling strategy page belongs to the Fulfillment Platform group of the Fulfillment stage' name=description />
+<meta content='The Fulfillment Admin Tooling strategy page belongs to the Fulfillment Platform group of the Fulfillment stage' name='twitter:description'/>
+<meta content='The Fulfillment Admin Tooling strategy page belongs to the Fulfillment Platform group of the Fulfillment stage' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - Fulfillment Admin Tooling' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/fulfillment/fulfillment-admin-tooling/index.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/fulfillment/fulfillment-admin-tooling/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - Fulfillment Admin Tooling' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/fulfillment/fulfillment-admin-tooling/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - Fulfillment Admin Tooling
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/ppalanikumar'>
+<div class=codeowners-single>
+<img
+src='/images/team/../gitlab-logo-extra-whitespace.png'
+class=codeowner-avatar-img
+alt='Priyanka Palanikumar'
+title='Priyanka Palanikumar'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Priyanka Palanikumar
+</div>
+<div class=codeowners-handle>
+@ppalanikumar
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/fulfillment/fulfillment-admin-tooling/index.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/fulfillment/">Product Section Direction - Fulfillment</a></li><li>Category Direction - Fulfillment Admin Tooling</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 class="no_toc hidden-md hidden-lg" id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#mission" id=markdown-toc-mission>Mission</a></li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a> <ul>
+<li><a href="#target-audience-and-experience" id=markdown-toc-target-audience-and-experience>Target Audience and Experience</a></li>
+</ul>
+</li>
+<li><a href="#challenges-to-address" id=markdown-toc-challenges-to-address>Challenges to address</a> <ul>
+<li><a href="#visibility-and-data-integrity" id=markdown-toc-visibility-and-data-integrity>Visibility and data integrity</a></li>
+<li><a href="#efficiency" id=markdown-toc-efficiency>Efficiency</a></li>
+</ul>
+</li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 Year Plan</a></li>
+<li><a href="#prioritisation-and-data-insights" id=markdown-toc-prioritisation-and-data-insights>Prioritisation and data insights</a></li>
+<li><a href="#key-links" id=markdown-toc-key-links>Key Links</a></li>
+</ul>
+<link rel=stylesheet href="/stylesheets/biztech.css"/>
+<p><strong>Last updated</strong>: 2023-05-23</p>
+<h2 id=mission>Mission</h2>
+<blockquote>
+<p>Provide GitLab's internal teams with the tools they need to serve customers efficiently and in a way that minimises repeat issues.</p>
+</blockquote>
+<h2 id=overview>Overview</h2>
+<p>The Admin Tooling category is designed to provide internal teams with the tools and automation they need to support our customers. Within this category we aim to develop tools that are intuitive, easy to use and streamline internal team workflows.</p>
+<p>The key responsibilities span over:</p>
+<ul>
+<li>Focus on building admin tools for the support team.</li>
+<li>Focus on providing internal solutions that free up support team capacity.</li>
+<li>Provide internal teams with visibility into customer subscriptions, billing and licensing.</li>
+</ul>
+<p>When our teams do not have the right tools to solve customer problems, it leads to massive inefficiencies and, in some scenarios, problems such as customers temporarily losing access to critical paid plan functionality.</p>
+<p>Inefficiencies can occur in the following ways:</p>
+<ul>
+<li>Finding customer and account information is difficult because: our internal platform lacks functionality and is not intuitive, the information is scattered across multiple systems, and the information is inconsistent across systems, leading to low confidence in the accuracy of the information for some systems.</li>
+<li>Manual intervention leads to data integrity issues, which perpetuates more manual intervention and leads to errors and unexpected states for customer accounts and subscriptions.</li>
+<li>Customer accounts and subscriptions in unexpected states create complexity that is harder to diagnose and troubleshoot, resulting in more time and more people involved in resolving the issue.</li>
+<li>When a bug remains unresolved or a feature is missing, it creates the need for a workaround to serve the customer. Workarounds create new workflows for the team to support, adding to the volume of tickets.</li>
+<li>Some tasks require a lengthy workflow that includes: verifying the requester and the request, finding and validating information, getting and confirming approvals from the right people, performing the task, communicating and confirming task completion, and reviewing changes.</li>
+</ul>
+<h3 id=target-audience-and-experience>Target Audience and Experience</h3>
+<p>Our audience are GitLab internal team members, with a focus on team members that help support our commercial operations. In particular:</p>
+<ul>
+<li><a href="https://about.gitlab.com/handbook/support/">GitLab L&amp;R Support team</a></li>
+<li><a href="https://about.gitlab.com/handbook/sales/">GitLab Sales team</a></li>
+<li><a href="https://about.gitlab.com/handbook/finance/accounting/finance-ops/billing-ops/">GitLab Billing</a> and Accounts Receivable team</li>
+</ul>
+<p>We work in collaboration with the Support Operations and Field Operations teams to achieve internal team efficiency goals.</p>
+<h2 id=challenges-to-address>Challenges to address</h2>
+<h3 id=visibility-and-data-integrity>Visibility and data integrity</h3>
+<p>Our internal teams don't always have the visibility they need to serve a customer quickly. The longer it takes to find information, troubleshoot and then resolve an issue, the more likely it is that the customer will be dissatisfied. Our internal systems should give our teams access to all the relevant information they need (preferably in one place) to resolve issues or complete a request.</p>
+<p>Where there are long-standing bugs or missing customer-facing features, the support team has created the Mechanizer tool as a temporary workaround to provide the functionality needed to troubleshoot and resolve customer issues and tasks. As Mechanizer is not built or maintained by a GitLab engineering team and leads to data integrity issues, it is important that this tool is deprecated in favour of intuitive tools and automation that can provide the required functionality.</p>
+<p><strong>Projects to tackle this challenge:</strong></p>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6828">Migrate Mechanizer features so it can be deprecated</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9451">Build controls for namespaces on a trial in CustomersDot</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9453">Build controls for namespaces with a subscription in CustomersDot</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9732">Build tools for license generation that enable the Sales team to unblock customer during renewals process</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9031">Implement minutes and storage change ability in CustomersDot</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9488">CustomersDot Admin maintenance</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9454">CustomersDot Admin usability</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9348">Auditing and activity logging</a></li>
+</ul>
+<h3 id=efficiency>Efficiency</h3>
+<p>For the L&amp;R Support team, we want to increase efficiency by focusing on:</p>
+<ul>
+<li>Easily finding the information needed to resolve a problem.</li>
+<li>Minimising the need to involve other teams to resolve a problem or complete a task.</li>
+<li>Being able to access information quickly and ideally from a single source.</li>
+</ul>
+<p>For the Sales team, we want to increase efficiency by focusing on:</p>
+<ul>
+<li>The ability to easily and quickly provide customers with access to the GitLab product as needed to support the sales process.</li>
+<li>Approval processes are intuitive and do not hinder the sales process.</li>
+<li>Sales has visibility to relevant customer information to support the sales process or to proactively or reactively resolve customer issues.</li>
+</ul>
+<p><strong>How we will tackle this:</strong></p>
+<ul>
+<li>Review inefficient workflows and identify opportunities for tooling and automation to reduce the time spent searching for relevant information, completing tasks and requesting approvals.</li>
+<li>Identify workflows that involve multiple teams to complete a task and explore solutions to place ownership and supporting tools with the appropriate team.</li>
+</ul>
+<h2 id=1-year-plan>1 Year Plan</h2>
+<p>Over the next 12 months, the Admin Tooling team has the following primary objectives:</p>
+<ol>
+<li>Provide additional tooling for the Sales team that allows the field to temporarily extend licenses at renewal to mitigate any customer issues during renewal. This initative is tracked in the following epic:
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10173">Temporary extensions: Allow the field to temporarily extend licenses at renewal</a></li>
+</ul>
+</li>
+<li>Deprecate the use of Mechanizer and build the needed functionality into our platform (customers.gitlab.com), this initiative is tracked in the following epics:
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9451">Namespace controls for trials in customersdot</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9453">Namespace controls for subscriptions in customersdot</a></li>
+</ul>
+</li>
+<li>Review use cases for Mechanizer functionality and seek to eliminate the need for the functionality that mechanizer was providing by solving for the underlying problems via: self-serve features in the product, enabling internal teams with features specific to their workflows (example: temporary license generation for the sales org), and automation. Efforts towards this goal are tracked in each review epic:
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8423">Review <code>Update GitLab Plan</code> mechanizer function</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8425">Review <code>Force reassociation</code> mechanizer function</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8424">Review <code>Clear subscription</code> mechanizer function</a></li>
+</ul>
+</li>
+</ol>
+<p>For a list of upcoming and ongoing projects for the Fulfillment Admin Tooling category, see our <a href="https://gitlab.com/groups/gitlab-org/-/roadmap?state=opened&amp;sort=start_date_asc&amp;layout=QUARTERS&amp;timeframe_range_type=THREE_YEARS&amp;label_name[]=Fulfillment+Roadmap&amp;label_name[]=Category:Fulfillment+Admin+Tooling&amp;progress=COUNT&amp;show_progress=true&amp;show_milestones=false&amp;milestones_type=GROUP&amp;show_labels=false">GitLab epic roadmap</a>.</p>
+<h2 id=prioritisation-and-data-insights>Prioritisation and data insights</h2>
+<p>Our <a href="https://app.periscopedata.com/app/gitlab/1106588/Fulfillment:-Admin-Tooling-PIs">performance indicator dashboard</a> gives us visibility into data relating to tickets.</p>
+<p>Further, we utilize the Support Priority <a href="https://gitlab.com/groups/gitlab-org/-/epic_boards/39981?label_name%5B%5D=devops::fulfillment&amp;label_name[]=Support%20Priority">Epic</a> and <a href="https://gitlab.com/groups/gitlab-org/-/boards/2543339?label_name%5B%5D=section::fulfillment">Issue board</a> to gather priotization input from our Support stakeholders.</p>
+<h2 id=key-links>Key Links</h2>
+<p>For more details into future oportunities of other categories within the Fulfillment Platform group, please refer to the sections in the dedicated category pages:</p>
+<ul>
+<li><a href="/direction/fulfillment/fulfillment-infrastructure/">Fulfillment Infrastructure</a></li>
+<li><a href="/direction/fulfillment/customers-dot-application/">CustomersDot Application</a></li>
+<li><a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/fulfillment-section/#fulfillment-platform---lr-internal-request-volume">Performance indicators</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/roadmap?state=opened&amp;sort=start_date_asc&amp;layout=QUARTERS&amp;timeframe_range_type=THREE_YEARS&amp;label_name[]=Fulfillment+Roadmap&amp;label_name[]=group::fulfillment+platform&amp;progress=COUNT&amp;show_progress=true&amp;show_milestones=false&amp;milestones_type=GROUP&amp;show_labels=false">Fulfillment Platform group roadmap</a></li>
+</ul>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/fulfillment/fulfillment-admin-tooling/index.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/fulfillment/fulfillment-admin-tooling/index.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

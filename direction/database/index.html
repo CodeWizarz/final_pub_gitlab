@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Direction - Database
+|
+GitLab
+</title>
+<meta content='The Database group is focused on improving the scalability, performance, and resilience of GitLab&#39;s database layer as well as instituting best practices across the wider development organization' name=description />
+<meta content='The Database group is focused on improving the scalability, performance, and resilience of GitLab&#39;s database layer as well as instituting best practices across the wider development organization' name='twitter:description'/>
+<meta content='The Database group is focused on improving the scalability, performance, and resilience of GitLab&#39;s database layer as well as instituting best practices across the wider development organization' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Direction - Database' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/database/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/database/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Direction - Database' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/database/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Direction - Database
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/joshlambert'>
+<div class=codeowners-single>
+<img
+src='/images/team/joshua.png'
+class=codeowner-avatar-img
+alt='Joshua Lambert'
+title='Joshua Lambert'
+>
+<div class=codeowners-single-labels>
+<div class=codeowners-description>
+Joshua Lambert
+</div>
+<div class=codeowners-handle>
+@joshlambert
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/database/index.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Product Direction - Database</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#database" id=markdown-toc-database>Database</a> <ul>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a></li>
+<li><a href="#approach" id=markdown-toc-approach>Approach</a></li>
+<li><a href="#our-direction" id=markdown-toc-our-direction>Our direction</a> <ul>
+<li><a href="#scale-database-operations-and-provide-self-service-tools-and-services" id=markdown-toc-scale-database-operations-and-provide-self-service-tools-and-services>Scale database operations and provide self-service tools and services</a></li>
+<li><a href="#efficiently-make-changes-to-the-database-with-less-risk" id=markdown-toc-efficiently-make-changes-to-the-database-with-less-risk>Efficiently make changes to the database with less risk</a></li>
+<li><a href="#increase-contributions-to-the-database-layer" id=markdown-toc-increase-contributions-to-the-database-layer>Increase contributions to the database layer</a></li>
+</ul>
+</li>
+<li><a href="#what-weve-recently-accomplished" id=markdown-toc-what-weve-recently-accomplished>What we've recently accomplished</a> <ul>
+<li><a href="#batched-background-migrations" id=markdown-toc-batched-background-migrations>Batched Background Migrations</a></li>
+<li><a href="#throttling-mechanism-for-large-data-changes" id=markdown-toc-throttling-mechanism-for-large-data-changes>Throttling mechanism for large data changes</a></li>
+<li><a href="#automated-database-testing-using-thin-clones" id=markdown-toc-automated-database-testing-using-thin-clones>Automated database testing using thin clones</a></li>
+</ul>
+</li>
+<li><a href="#what-were-currently-working-on" id=markdown-toc-what-were-currently-working-on>What we're currently working on</a> <ul>
+<li><a href="#reduce-table-sizes-to--100-gb-per-physical-table" id=markdown-toc-reduce-table-sizes-to--100-gb-per-physical-table>Reduce table sizes to &lt; 100 GB per physical table</a></li>
+<li><a href="#automated-query-analysis-for-merge-requests" id=markdown-toc-automated-query-analysis-for-merge-requests>Automated query analysis for Merge Requests</a></li>
+</ul>
+</li>
+<li><a href="#whats-next" id=markdown-toc-whats-next>What's next</a> <ul>
+<li><a href="#database-schema-validation" id=markdown-toc-database-schema-validation>Database Schema Validation</a></li>
+</ul>
+</li>
+<li><a href="#metrics--internal" id=markdown-toc-metrics--internal>Metrics (Internal)</a></li>
+</ul>
+</li>
+</ul>
+<h2 id=database>Database</h2>
+<p><strong>Last updated</strong>: 2022-10-08</p>
+<h3 id=introduction-and-how-you-can-help>Introduction and how you can help</h3>
+<ul>
+<li><a href="/direction/enablement">Overall Strategy</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/roadmap?state=opened&amp;sort=end_date_asc&amp;layout=WEEKS&amp;timeframe_range_type=CURRENT_QUARTER&amp;label_name%5B%5D=Roadmap&amp;label_name%5B%5D=group%3A%3Adatabase">Roadmap for the Database Group</a></li>
+<li>
+<p><a href="https://gitlab.com/groups/gitlab-org/-/epics?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=group%3A%3Adatabase">All Epics</a></p>
+</li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#approach">Approach</a></li>
+<li><a href="#where-we-are-headed">Where we are headed</a></li>
+<li><a href="#whats-next--why">What's next and why</a>
+<ul>
+<li><a href="#batched-background-migrations">Batched Background Migrations</a></li>
+<li><a href="#throttling-mechanism-for-large-data-changes">Throttling mechanism for large data changes</a></li>
+<li><a href="#automated-database-testing-using-thin-clones">Automated database testing using thin clones</a></li>
+</ul>
+</li>
+<li><a href="#what-will-follow">What will follow</a>
+<ul>
+<li><a href="#reduce-table-sizes-to--100-gb-per-physical-table">Reduce table sizes to &lt; 100 GB per physical table</a></li>
+<li><a href="#database-schema-validation">Database Schema Validation</a></li>
+</ul>
+</li>
+<li><a href="#metrics--internal">Metrics</a></li>
+</ul>
+<p>This page contains the product direction for the <a href="/handbook/engineering/infrastructure/core-platform/data_stores/database/">Database group</a> of the Enablement stage.</p>
+<p>Please reach out to Gabe Weaver, Acting Product Manager for the Database group (<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#103;&#119;&#101;&#097;&#118;&#101;&#114;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">Email</a>) if you'd like to provide feedback or ask any questions related to this product direction.</p>
+<p>This strategy is a work in progress, and everyone can contribute.
+Please comment and contribute in the linked <a href="https://gitlab.com/gitlab-org/gitlab/-/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=group%3A%3Adatabase">issues</a>
+and <a href="https://gitlab.com/groups/gitlab-org/-/epics?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name[]=group%3A%3Adatabase">epics</a> on this page.
+Sharing your feedback directly on GitLab.com is the best way to contribute to our strategy and vision.</p>
+<h3 id=overview>Overview</h3>
+<p>There are many ways in which GitLab stores data. Relational databases are the primary persistent storage mechanism in GitLab, used for storing most of the user-generated data in GitLab. We use Redis as a cache and lightweight semi-persistant storage. We leverage Object storage for data unsuited for a database. In some cases we even use the file system, for example for Gitaly or the existing version of the Container Registry.</p>
+<p>The Database Group is the steward of most relational database technologies at GitLab except for ClickHouse. The Group owns the primary GitLab database from an application technology perspective. Individual feature groups own specific tables and additional feature-specific databases, such as <a href="https://docs.gitlab.com/ee/administration/gitaly/praefect.html#postgresql">Gitaly Cluster</a>, <a href="https://docs.gitlab.com/ee/administration/geo/#geo-tracking-database">Geo</a> and the database for the new <a href="https://docs.gitlab.com/ee/architecture/blueprints/container_registry_metadata_database/">Container Registry</a>.</p>
+<p>The DB team is responsible for growing GitLab's database expertise, promoting and supporting its proper use, and ensuring continuity and no knowledge gaps as the GitLab team and product increase. In practice, the Database group focuses on improving the scalability, performance, and resilience of GitLab's database layer and instituting best practices across the broader development organization.</p>
+<p>The database is at the core of all user interactions with a GitLab instance and the layer on which most automated GitLab features, such as the CI pipelines, rely. Any bottleneck at the database layer, regression, or non-performant application code interacting with the database can break or render any lovable GitLab feature practically unusable. At the same time, database-related incidents can pose a significant threat to the availability of any GitLab instance.</p>
+<p>As GitLab's architecture becomes more complex and the list of features grows, the database layer becomes more complicated. The Database group's task is to ensure that this complexity is not introducing any short or long-term risks to Gitlab's availability so that we can continue to iterate on existing and new features while GitLab remains performant at all scales.</p>
+<h3 id=approach>Approach</h3>
+<p>We apply the Group's combined application and database-related expertise to tackle the complexity of the database design as it grows, no matter the scale to which this design is applied. Scaling is not the end goal by itself. It's the constant we have to always take into account.
+We must ensure that the best database practices are applied to all problems so that GitLab is performant at all sizes, ranging from small self-managed instances to GitLab.com. These best practices and research on state-of-the-art database approaches consequently allow us to scale our largest instances to the next order of magnitude with each longer-term iteration we take.</p>
+<p>We try to achieve those goals by:</p>
+<ul>
+<li>Building the core tools and frameworks that allow all of GitLab's engineering to interact efficiently with the database layer.</li>
+<li>Hiding complex implementations behind simple interfaces and tools that are easy to understand and use without requiring a deep understanding of database performance optimizations and approaches. For example, enabling a GitLab engineer to <a href="https://gitlab.com/gitlab-org/gitlab/-/blob/master/db/migrate/20210306121300_partition_web_hook_logs.rb">create a partitioned table</a> and then <a href="https://gitlab.com/gitlab-org/gitlab/-/blob/master/db/post_migrate/20210306121310_backfill_partitioned_web_hook_logs.rb">move hundreds of millions of records to it</a> by issuing two simple commands, while also guaranteeing that the process will succeed without any additional involvement required.</li>
+<li>Adding <a href="https://docs.gitlab.com/ee/development/database/">documentation and guidelines</a> that explain the tools offered and provide the necessary processes for the most common use cases application code may need to interact with the database.</li>
+<li>Dogfooding the tools provided and the processes proposed until we ensure they are ready for general availability. For example, we had to partition the first two tables in GitLab before asking other teams to use the final, thoroughly tested tools. Similarly, we battle-tested the initial implementation of our new background migration framework by updating more than 8.5 billion records before working on making it widely available.</li>
+<li>Enabling every GitLab team member to test against clones of our production database, either manually or in automated ways.</li>
+<li>Serving as an <a href="/handbook/engineering/infrastructure/core-platform/data_stores/database/stable.html">advisor</a> to other teams and working with them while they are designing new database features or even new databases from scratch (e.g. <a href="/handbook/engineering/infrastructure/core-platform/data_stores/database/doc/container-registry.html">the Container Registry Database</a>).</li>
+<li>Closely cooperating with various other groups inside GitLab that work on other database related aspects, especially the <a href="/handbook/engineering/infrastructure/">infrastructure department</a> and the <a href="/handbook/engineering/infrastructure/core-platform/data_stores/pods/">sharding group</a>.</li>
+<li>Helping our <a href="https://docs.gitlab.com/ee/development/database_review.html">database reviewing process</a> (reviewers, maintainers) to grow.</li>
+</ul>
+<h3 id=our-direction>Our direction</h3>
+<p>The Database Group's ongoing focus will always remain on the scalability of the database, increasing the responsiveness and the availability of the GitLab platform while also improving the efficiency and reliability of making database changes. We are planning to continue addressing this by focusing on the following themes, which align with the Enablement Section's <a href="/direction/enablement/#reduce-cycle-time-by-providing-tools-to-explore-complexity">theme of managing complexity for large software projects</a></p>
+<h4 id=scale-database-operations-and-provide-self-service-tools-and-services>Scale database operations and provide self-service tools and services</h4>
+<p>Create easy-to-use and understand application-level libraries and frameworks that make all database operations performant and as reliable as possible.</p>
+<p>We are moving towards more <a href="https://gitlab.com/groups/gitlab-org/-/epics/7594">self-monitoring, auto-tuning approaches</a> that can respond to changing conditions in production environments without requiring manual intervention, which includes the operations running in the background in a GitLab server and all the necessary operations to upgrade a GitLab instance. We are also trying to <a href="https://gitlab.com/gitlab-org/database-team/team-tasks/-/issues/273">close the knowledge gap</a> and make the most complex database operations simple to implement for other GitLab Groups by calling a few helper functions.</p>
+<h4 id=efficiently-make-changes-to-the-database-with-less-risk>Efficiently make changes to the database with less risk</h4>
+<p>Shift left our ability to pre-emptively find database-related regressions and performance issues by testing all database operations against a production clone of GitLab.com's database. In the long term, we also plan to extend our automated database testing capabilities and explore how we can provide the tools we are building to a broader audience. That audience can be internal or external, benefiting all the users of GitLab.</p>
+<p>Today, most developers have no easy way to test new queries or database changes at scale. We want to figure out ways for developers to test all their database changes on production data before they reach production. Our approach will be to automate the process of testing queries against production data and integrate it into the DevOps lifecycle, at the stage where developers spend most of their time developing and reviewing code. Automated query testing will enable developers to complete database-related updates and perform code reviews faster, with less guessing and more confidence backed by quantifiable data.</p>
+<h4 id=increase-contributions-to-the-database-layer>Increase contributions to the database layer</h4>
+<p>We are looking for ways to contribute to the wider community beyond GitLab. We have extended the way Ruby on Rails projects interact with the database and introduced numerous new ideas and frameworks. We are evaluating how we could extract parts of our tools by creating a separate library, open-sourcing it, and letting other developers use it.
+At the same time, that will enable more seamless contributions to GitLab's database layer.</p>
+<h3 id=what-weve-recently-accomplished>What we've recently accomplished</h3>
+<h4 id=batched-background-migrations><a href="https://gitlab.com/groups/gitlab-org/-/epics/6751">Batched Background Migrations</a></h4>
+<p><a href="https://docs.gitlab.com/ee/development/database/background_migrations.html">Background migrations</a> are the vehicle for executing all significant data updates (data migrations) in GitLab. Any operation that has to update more than a few thousand records has to be performed through a background migration
+with workers running asynchronously in the background executing the update in batches to avoid performance problems of a GitLab instance.</p>
+<p>The way of performing such operations up until GitLab 15.0, by scheduling background jobs in regular intervals, was static and did not take into account the database server load when each job was executed.
+To address this, we had to rethink our approach to performing massive data upgrades, which led us to build the <a href="https://docs.gitlab.com/ee/development/database/batched_background_migrations.html">batched background migrations framework</a>.</p>
+<p>We first introduced the batched background migrations framework while <a href="https://gitlab.com/groups/gitlab-org/-/epics/4785">addressing the Primary Key overflow risk for tables with an integer PK</a>, in which we had to update more than 8.5 Billion records. It provides real-time mechanisms to adapt to the load of a Database Server, adjust the work performed by monitoring in real-time the performance of the migrations,
+it requires minimal monitoring by the instance administrators and can automatically recover from performance-related errors.</p>
+<p>In 15.0, we made batched background migrations available to all GitLab engineers and switched them to the default way for performing background migrations. In the long term, we plan to update many of our existing tools that <a href="https://gitlab.com/groups/gitlab-org/-/epics/8245">perform data operations to use batched
+background migrations</a> as well. We plan to continue addressing any issues discovered and add support for missing or novel features that will make this framework even more reliable. We also plan to evaluate whether we can extend the framework or introduce a similar one, covering other asynchronous operations that are not background migrations, such as scheduled or recurring jobs.</p>
+<h4 id=throttling-mechanism-for-large-data-changes><a href="https://gitlab.com/groups/gitlab-org/-/epics/7594">Throttling mechanism for large data changes</a></h4>
+<p>We are implementing a generic throttling mechanism for large data changes that will monitor the health of the Database for various signals (leading indicators) and react to problems by throttling or even pausing the execution of the updates. We plan to do so by extending the batched background migrations auto-tuning layer to monitor for said signals and actively react by further adjusting the batch sizes of scheduled jobs.</p>
+<h4 id=automated-database-testing-using-thin-clones><a href="https://gitlab.com/groups/gitlab-org/database-team/-/epics/9">Automated database testing using thin clones</a></h4>
+<p>We are shifting left our ability to pre-emptively find database-related regressions and performance issues by testing all database updates against a production clone of GitLab.com's database. With every feature we add, we move closer to GitLab being more performant and lowering the risk that deployed code could cause incidents and affect the performance and availability of GitLab.com or other self-managed instances.</p>
+<p>Gitlab 15.0 marked a significant milestone for the Automated database testing GitLab internal feature - we are now testing <strong>all types</strong> of database migrations against a clone of the production database of GitLab.com:</p>
+<ul>
+<li>All regular and post migrations - all schema updates and small-scale data updates</li>
+<li>All data migrations (through sampling) - both Sidekiq and Batched background migrations</li>
+</ul>
+<p>That means that 100% of <em><strong>scheduled</strong></em> database updates are covered, ensuring we test our most tricky operations before they are merged.
+We expect that the effect of those tests will be evident in both GitLab.com and self-managed instances throughout GitLab 15 and beyond.</p>
+<h3 id=what-were-currently-working-on>What we're currently working on</h3>
+<h4 id=reduce-table-sizes-to--100-gb-per-physical-table><a href="https://gitlab.com/groups/gitlab-org/-/epics/6211">Reduce table sizes to &lt; 100 GB per physical table</a></h4>
+<p>One top reason for performance degradation in relational databases is tables growing too large. There is no globally applicable hard rule on the size threshold that tables should not exceed. It depends on the schema of the table, the number and types of indexes defined over it, the mix of read and write traffic it gets, the query workload used to access it, and more. As a result of our analysis, we set the limit at 100GB, and we <a href="https://docs.gitlab.com/ee/architecture/blueprints/database_scaling/size-limits.html#target-all-physical-tables-on-gitlabcom-are--100-gb-including-indexes">explain in detail our rationale</a> and how we plan to approach this problem.</p>
+<p>Addressing this for tables in GitLab.com is critical, but it will also allow us to provide a more scalable database design for GitLab instances with smaller databases. Based on our <a href="https://docs.gitlab.com/ee/architecture/blueprints/database_scaling/size-limits.html">analysis</a>, we are planning to work with multiple other GitLab teams in an ongoing fashion towards <a href="https://gitlab.com/groups/gitlab-org/-/epics/6211">achieving that goal</a>.</p>
+<h4 id=automated-query-analysis-for-merge-requests><a href="https://gitlab.com/groups/gitlab-org/-/epics/8440">Automated query analysis for Merge Requests</a></h4>
+<p>Following the initial success of the automated database testing effort, we are expanding our scope as <em><strong>scheduled</strong></em> database updates do not include regular queries or updates that result from user interactions (users performing an action or causing a background job to run).
+Our next effort will be to find ways to perform <a href="https://gitlab.com/groups/gitlab-org/-/epics/8440">automated query analysis for Merge Requests</a>
+and test newly introduced queries against our production clones as well.
+This automated testing is a complex problem as we must figure out the parameters for the queries, which depend on the data stored. We will start with the simplest iteration possible, <a href="https://gitlab.com/gitlab-org/database-team/team-tasks/-/issues/243">identifying the queries introduced by each MR to support the database reviewers</a>.</p>
+<h3 id=whats-next>What's next</h3>
+<h4 id=database-schema-validation><a href="https://gitlab.com/groups/gitlab-org/-/epics/3928">Database Schema Validation</a></h4>
+<p>Ensuring that the <a href="https://gitlab.com/groups/gitlab-org/-/epics/3928">deployed database schema matches codebase expectations</a> is essential for addressing challenges self-managed instances may face while upgrading to newer versions. It will allow us to support preemptive checks before an instance upgrade and warn about potential issues before the process starts.</p>
+<h3 id=metrics--internal>Metrics (Internal)</h3>
+<ol>
+<li><a href="https://app.periscopedata.com/app/gitlab/754160/Enablement::Database---Performance-Indicators">Enablement::Database - Performance Indicators Dashboard</a></li>
+<li>Average Query Apdex for GitLab.com
+<ul>
+<li>Master
+<ul>
+<li><a href="https://tinyurl.com/64e6acku">Target: 100ms - Tolerable 250ms</a></li>
+<li><a href="https://tinyurl.com/4mjw5azv">Target: 50ms - Tolerable 100ms</a></li>
+</ul>
+</li>
+<li>Replicas
+<ul>
+<li><a href="https://tinyurl.com/yde68e2k">Target: 100ms - Tolerable 250ms</a></li>
+<li><a href="https://tinyurl.com/42wc7n2z">Target: 50ms - Tolerable 100ms</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/database/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/database/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

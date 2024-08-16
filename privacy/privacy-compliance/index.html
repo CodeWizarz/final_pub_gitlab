@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab Privacy Compliance
+|
+GitLab
+</title>
+<meta content='Privacy compliance, requirements, action plan, and frequently asked questions with an emphasis on General Data Protection Regulation (GDPR). GDPR is a regulation law that requires businesses to protect the personal data and privacy of EU citizens.' name=description />
+<meta content='Privacy compliance, requirements, action plan, and frequently asked questions with an emphasis on General Data Protection Regulation (GDPR). GDPR is a regulation law that requires businesses to protect the personal data and privacy of EU citizens.' name='twitter:description'/>
+<meta content='Privacy compliance, requirements, action plan, and frequently asked questions with an emphasis on General Data Protection Regulation (GDPR). GDPR is a regulation law that requires businesses to protect the personal data and privacy of EU citizens.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab Privacy Compliance' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='privacy/privacy-compliance/index.html.haml' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/privacy/privacy-compliance/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab Privacy Compliance' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/privacy/privacy-compliance/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/gitlab-feature-landing-page.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/faq.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/features.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/kubernetes.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+</head>
+<body class='privacy privacy_privacy-compliance privacy_privacy-compliance_index ' data-offset=90 data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='wrapper gitlab-ee-page'>
+<div class=image-title>
+<div class=color-bg>
+<div>
+<h1>GitLab Privacy Compliance</h1>
+</div>
+</div>
+</div>
+<div class=sub-wrapper>
+<div class=container>
+<div class='row advantages'>
+<div class='col-xs-12 col-md-10 col-md-offset-1'>
+<h2>GDPR overview</h2>
+<p class=overview>
+The General Data Protection Regulation (GDPR) is a European privacy law that is set to go into effect in May 2018. The GDPR replaces the Data Protection Directive that was put into place in 1995. Although it is a European law, it will impact any entity that does business in or offers services and goods to people in the European Union (EU), regardless of their location. It will also apply to any entity that collects and analyzes the data of EU residents or businesses.
+</p>
+<p class=overview>
+The purpose of GDPR is to protect the private information of EU citizens and give them more control over their personal data. Under GDPR, private information is defined as any information that is directly or indirectly identifiable to an individual. This includes information such as social security numbers, location data, online identifiers, pseudonymous data, and genetic or biometric data, such as fingerprints and facial recognition.
+</p>
+<p class=overview>
+Specifically, GDPR grants EU citizens these controls over their personal data:
+</p>
+<ul>
+<li>
+<strong>Right of access:</strong>
+Data controllers will be required to fulfill requests from individuals seeking access to their private data or information on how it is being used. Data collectors and processors will have to detail how the personal information was obtained, how and why it is being used, as well as with whom the company is sharing the information. Companies will also be mandated to provide the individual with a copy of their personal records.
+</li>
+<li>
+<strong>Notice of security breaches:</strong>
+Individuals must be alerted within 72 hours if their personal data has been hacked or otherwise compromised.
+</li>
+<li>
+<strong>“Right to erasure”:</strong>
+Individuals can decide they no longer want their personal data to be processed and request that all of their information be deleted.
+</li>
+<li>
+<strong>Data portability:</strong>
+Individuals will be permitted to move their personal data from one company to another upon request, without opposition from the data controller.
+</li>
+</ul>
+<h2>CCPA overview</h2>
+<p class=overview>
+The California Consumer Protection Act (CCPA) took effect on January 1, 2020. Similar to GDPR, CCPA is intended to protect person information and also articulates the rights that California consumers have regarding their information. CCPA applies specifically to residents of California.
+</p>
+<p class=overview>
+The definition of Person Information in CCPA is very similar to GDPR's definition of Personal Data: "Information that identifies, relates to, describes, is reasonably capable of being associated with, or could reasonably be linked, directly or indirectly, with a particular consumer or household."
+</p>
+<p class=overview>
+Just as GDPR establishes rights for EU citizens, CCPA establishes certain rights for California residents:
+</p>
+<ul>
+<li>
+<strong>The rights to disclosure of data collected and sold:</strong>
+California residents have the right to request access to their personal information and to ask how their data is used by the company after it has been gathered. If the information is being shared or sold, this must be disclosed when requested.
+</li>
+<li>
+<strong>The right to deletion:</strong>
+Companies must delete a Consumer's personal information upon request.
+</li>
+<li>
+<strong>The right to opt out of sales of Personal Information:</strong>
+If a company sells personal information, consumers have the right to opt out.
+</li>
+<li>
+<strong>The right to non-discrimination:</strong>
+If a consumer exercises their rights under CCPA, the business may not discriminate against the consumer. For instance, they company cannot deny service or charge different rates to a consumer who exercises their rights under CCPA.
+</li>
+</ul>
+<p class=overview>
+<a data-ga-location=body data-ga-name=gdpr href='https://handbook.gitlab.com/handbook/legal/privacy/privacy-laws/'>See GitLab's Privacy Request Instructions.</a>
+</p>
+</div>
+</div>
+<hr class=divider />
+<div class=row>
+<div class='col-xs-12 col-md-10 col-md-offset-1'>
+<h2>Key GDPR requirements</h2>
+<p class=overview>
+Companies within and outside of the European Union will be required to make a number of adjustments to the way they access and process the personal data of EU residents in order to be GDPR compliant.
+</p>
+<p class=overview>
+The identification of information controllers and processors are key components to creating GDPR compliance.
+</p>
+</div>
+</div>
+<div class=row>
+<div class='col-md-5 col-md-offset-1'>
+<div class='panel panel-default panel-margin'>
+<div class=panel-heading>
+<h3 class=panel-title>What are controllers?</h3>
+</div>
+<div class=panel-body>
+<p class=overview>
+Controllers are a company or organization that determines the purpose for and manner in which personal data is processed.
+</p>
+<p class=overview>
+Controllers can also be processors.
+</p>
+</div>
+</div>
+</div>
+<div class=col-md-5>
+<div class='panel panel-default panel-margin'>
+<div class=panel-heading>
+<h3 class=panel-title>What are processors?</h3>
+</div>
+<div class=panel-body>
+<p class=overview>
+Data processors take the information controllers have accumulated and process the personal information.
+</p>
+<p class=overview>
+GitLab’s CI/CD tools fall under the processor category.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<p class=overview>
+The responsibility of GDPR compliance is heavily imposed on controllers. Data controllers are responsible and liable for GDPR compliance in the processing of personal data, even in cases when they have outsourced processing activities to another company. Nonetheless, processors are also obligated to be GDPR compliant under the law.
+</p>
+<p class=overview>
+To inquire about executing a DPA, please contact your Sales Account Manager. If you do not know your Account Manager, please email dpo@gitlab.com
+</p>
+</div>
+</div>
+<div class=row>
+<div class='col-xs-12 col-md-10 col-md-offset-1'>
+<h3>These are some of the key requirements for GDPR compliance:</h3>
+<table class=table-lg>
+<colgroup>
+<col width='25%'/>
+<col width='70%'/>
+</colgroup>
+<tbody>
+<tr>
+<th>
+<h4>
+<strong>Maintain a legal basis for data collection and processing</strong>
+</h4>
+</th>
+<td>
+<p>Companies must have a legal basis for the processing of personal data.</p>
+</td>
+</tr>
+<tr>
+<th>
+<h4>
+<strong>Be transparent</strong>
+</h4>
+</th>
+<td>
+<p>Companies must inform individuals about the collection of personal data as well as why and how the data is being used. Information must also be provided about how the data is being stored and the length of time for which it will be held.</p>
+<p>Individuals must also be advised when their information is transferred internationally.</p>
+</td>
+</tr>
+<tr>
+<th>
+<h4>
+<strong>Employ a data protection officer</strong>
+</h4>
+</th>
+<td class=text-left>
+<p>Companies that have personal data collection or processing at the core of their business will be required to hire or appoint a data protection officer (DPO).</p>
+<p>Specifically, a DPO will be required by GDPR if a company processes a large amount of personal or sensitive data regarding criminal offenses or convictions. Companies that regularly and systematically monitor the personal data of individuals on a large scale are also required to have a DPO in order to be GDPR compliant.</p>
+</td>
+</tr>
+<tr>
+<th>
+<h4>
+<strong>Preserve records</strong>
+</h4>
+</th>
+<td>
+<p>Under GDPR, companies will be required to maintain processing records for personal data. The records can be requested by the supervisory authority at any time.</p>
+</td>
+</tr>
+<tr>
+<th>
+<h4>
+<strong>Implement data protection by default and design</strong>
+</h4>
+</th>
+<td>
+<p>Data protection safeguards must be built into products and services during the earliest stages of development.</p>
+</td>
+</tr>
+<tr>
+<th>
+<h4>
+<strong>Provide notification of a security breach</strong>
+</h4>
+</th>
+<td>
+<p>Individuals must be directly notified of security breaches that affect their personal data within 72 hours.</p>
+<p>Supervisory authorities must be advised of security breaches that present a risk to the rights and freedom of individuals within 72 hours. The general public must be immediately alerted of security breaches that are sufficiently serious.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr class=divider />
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<h2>Creating a GDPR action plan</h2>
+<p>Controllers and processors of personal data must create a GDPR action plan that encompasses all of the new requirements.</p>
+<h3>GDPR checklist to ensure compliance:</h3>
+<ul class='fa-ul checkbox-list'>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Identify information controllers
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Identify information processors
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Train data controllers and/or collectors on GDPR requirements
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Ensure that partner vendors are GDPR compliant
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Designate or employ a Data Protection Officer, if necessary
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Conduct data mapping to determine what information your company collects and how it is transferred, processed, and stored
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Build products and services using principles of privacy by design and default
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Create a system that continuously monitors data handling and illustrates GDPR compliance
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Educate customers of their rights under GDPR
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Create a notification action plan for security breaches
+</li>
+</ul>
+</div>
+</div>
+<hr class=divider />
+<div class=row>
+<div class='col-md-10 col-md-push-1'>
+<h2>Security and Compliance with GitLab</h2>
+<p>As the first single application for software development, security, and operations (DevSecOps), GitLab’s tools offer a streamlined process that can keep your entire team synchronized and your most important data secure. Our tool features Kerberos-powered user authentication and a block secret push file system that allows your company to prevent sensitive files from being accidentally pushed into a live repository.</p>
+<p>GitLab’s CI/CD tools also offer a number of features that may help your team members remain in compliance with your company’s legal, licensing and other requirements. Some of those tools include:</p>
+<ul class='fa-ul checkbox-list'>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Push rules: This allows you to reject code that does not comply with company policy.
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Strict code review: You have the option to require multiple approvals from a certain set of team members before a merge request can be accepted.
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Multiple options for user roles and permissions: Access and permissions can be managed at many levels, with five different options for user roles and settings for external users. Permissions can be set according to one’s role as opposed to allowing only read or write access to a repository.
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Log forwarding: Logs can be forwarded to a central system for better tracking.
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Membership locking: Group owners can maintain control of their project by blocking other members from adding other parties to the project.
+</li>
+<li>
+<i class='fa-li fa fa-check-square-o'></i>
+Reject unsigned commits: GitLab Enterprise Edition Premium allows you to reject unsigned commits and require GPG signatures.
+</li>
+</ul>
+<p>GitLab offers built-in application security testing scanners that routinely check code for common issues during development and deployment. Our scanners also monitor previously patched vulnerabilities in order to ensure that our security-sensitive services are guarded.</p>
+</div>
+</div>
+<hr class=divider />
+<div class='row text-center'>
+<div class='col-md-10 col-md-offset-1'>
+<h3 class=sub-heading>
+<a data-ga-location=body data-ga-name='Learn more' href='/features/#verify'>
+Learn more about Application Security Testing at GitLab
+</a>
+</h3>
+<p>Find out how GitLab’s end-to-end software development tools can help your company monitor all of the steps in your production lifecycle.</p>
+<a href="/company/contact/" class="btn cta-btn accent">Contact us</a>
+<a href="/security/#common-security-related-questions" class="btn cta-btn ghost-accent">Security FAQ</a>
+</div>
+</div>
+<hr class=divider />
+<div class='row u-margin-bottom-lg'>
+<div class=col-md-12>
+<h2 class='faq-title light text-center'>GDPR Compliance FAQs</h2>
+<div class='faq-holder clearfix'>
+<ol class='faq-container list-unstyled'>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+Who is impacted by GDPR?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>Any entity that does business with corporations or individuals in the European Union and will have access to personal data.</p>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+When did the law go into effect?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>May 25, 2018</p>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+Is GitLab GDPR compliant?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>Yes, compliance is an ongoing process and we work diligently to keep up with best practices and processes every day.</p>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+What is the difference between a controller and processor?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>Controllers determine how personal data is processed and used. Processors simply process the data as prescribed by the controller.</p>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+What is the supervisory authority?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>The supervisory authority is the United Kingdom’s Information Commissioner’s Office (ICO). The independent regulatory office is a public body that reports to Parliament. The ICO is tasked with “uphold[ing] information rights in the public interest, promoting openness by public bodies and data privacy for individuals,” according to the authority’s website.</p>
+</div>
+</div>
+</li>
+</ol>
+<ol class='faq-container list-unstyled'>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+What are the principles of Privacy by Design and Privacy by Default?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>Privacy by design occurs when data protection is embedded into each step of the personal information processing life cycle, including processing product development, software development, and IT systems. Privacy by default means that the strictest privacy settings are automatically in place when an application is released to the public.</p>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+Who should be in control of ensuring GDPR compliance at my company?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>Companies should designate an employee to oversee GDPR compliance and determine where that responsibility will fall within the organization, i.e. security department. Some companies will be required to hire or designate a data protection officer to oversee GDPR compliance within their organization.</p>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+What is a Data Protection Officer?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>GDPR calls for some companies to designate a Data Protection Officer (DPO) depending on the nature and amount of personal data the entity processes. The officer, who must be an expert in data protection law, will be tasked with establishing and maintaining a data security plan and GDPR compliance. DPOs are required for public entities as well as companies that manage or store large amounts of personal data, process or hold special personal information or routinely monitor the personal data of private individuals.</p>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+Does using GitLab make my company GDPR compliant?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>No, GitLab is a processor of information. While GitLab continuously works towards maintaining GDPR compliance, simply using GitLab’s services does not make your company compliant. As the controller of the information, you must ensure that the collection of personal data is GDPR compliant as well as other processors in your pipeline.</p>
+</div>
+</div>
+</li>
+<li class=faq-item>
+<div class=faq-inner-item>
+<a class='faq-question js-faq-question' href='#'>
+What happens if my company is not GDPR compliant?
+<i class='fa fa-angle-down pull-right'></i>
+</a>
+<div class=faq-answer>
+<p>Breaches in GDPR compliance can range from a stern, written warning for first-time, unintentional infractions to a fine of €20 million or 4 percent of the company’s previous year’s total global revenue, whichever is greater.</p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class='feature-group u-subtle-bg'>
+<div class=container>
+<div class='row flex-row'>
+<div class='col-sm-6 col-md-3 col-lg-3'>
+<div class='feature js-all-clickable'>
+<div class=feature-media>
+<img src="/images/feature-thumbs/feature-thumb-gdpr-blog.png" alt="GDPR blog post" srcset="/images/feature-thumbs/feature-thumb-gdpr-blog_2x.png 2x"/>
+</div>
+<div class=feature-body>
+<h2 class=feature-title>If you do business in Europe, you need to know about GDPR</h2>
+<p class=feature-description></p>
+<a href="/blog/2018/02/16/european-general-data-protection-regulation-law/" class=feature-more>Read more</a>
+</div>
+</div>
+</div>
+<div class='col-sm-6 col-md-3 col-lg-3'>
+<div class='feature js-all-clickable'>
+<div class=feature-media>
+<img src="/images/feature-thumbs/feature-thumb-security.png" alt="GitLab Security" srcset="/images/feature-thumbs/feature-thumb-security_2x.png 2x"/>
+</div>
+<div class=feature-body>
+<h2 class=feature-title>GitLab Security Page</h2>
+<p class=feature-description></p>
+<a href="/security/" class=feature-more>Read more</a>
+</div>
+</div>
+</div>
+<div class='col-sm-6 col-md-3 col-lg-3'>
+<div class='feature js-all-clickable'>
+<div class=feature-media>
+<img src="/images/feature-thumbs/feature-thumb-gdpr.png" alt=GDPR srcset="/images/feature-thumbs/feature-thumb-gdpr_2x.png 2x"/>
+</div>
+<div class=feature-body>
+<h2 class=feature-title>GDPR Website</h2>
+<p class=feature-description></p>
+<a class=feature-more href='https://ec.europa.eu/info/law/law-topic/data-protection/data-protection-eu_en' target=_blank>Read more</a>
+</div>
+</div>
+</div>
+<div class='col-sm-6 col-md-3 col-lg-3'>
+<div class='feature js-all-clickable'>
+<div class=feature-media>
+<img src="/images/feature-thumbs/feature-thumb-docs.png" alt="GitLab Docs" srcset="/images/feature-thumbs/feature-thumb-docs_2x.png 2x"/>
+</div>
+<div class=feature-body>
+<h2 class=feature-title>GitLab Dynamic Application Security Testing</h2>
+<p class=feature-description></p>
+<a class=feature-more data-ga-location=body data-ga-name='Read more' href='https://docs.gitlab.com/ee/user/application_security/dast/' target=_blank>Read more</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/privacy/privacy-compliance/index.html.haml" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/privacy/privacy-compliance/index.html.haml" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/all-clickable.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<div class='sticky-banner js-sticky-banner active'>
+<div class=sticky-banner-content>
+<div class=sticky-banner-text>
+<p class=header-text>
+Try GitLab Ultimate risk-free for 30 days.
+</p>
+<p class=subheader-text>
+No credit card required. Have questions?
+<a href="/sales/" class=contact-us>Contact us.</a>
+</p>
+</div>
+<div class=action>
+<a href="/free-trial/" class="btn featured-item-cta-btn">Get Your Free Trial Today</a>
+</div>
+</div>
+</div>
+</body>
+</html>

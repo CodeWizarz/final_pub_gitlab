@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5
+|
+GitLab
+</title>
+<meta content='Learn more about GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5 for GitLab Community Edition (CE) and Enterprise Edition (EE).' name=description />
+<meta content='Learn more about GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5 for GitLab Community Edition (CE) and Enterprise Edition (EE).' name='twitter:description'/>
+<meta content='Learn more about GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5 for GitLab Community Edition (CE) and Enterprise Edition (EE).' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2021-06-01-security-release-gitlab-13-12-2-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2021/06/01/security-release-gitlab-13-12-2-released/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/blogimages/security-cover-new.png" property="og:image">
+<meta content="https://about.gitlab.com/images/blogimages/security-cover-new.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2021/06/01/security-release-gitlab-13-12-2-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'tags': ["security"]});
+</script>
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Jun 1, 2021
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#mhenriksen">Michael Henriksen</a>
+<a href="https://gitlab.com/mhenriksen"><span>&nbsp;</span>
+<span class=author-gitlab>
+<i class='fab fa-gitlab'></i>
+</span>
+</a></span>
+<h1>
+GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5
+</h1>
+<p class=description>
+Learn more about GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5 for GitLab Community Edition (CE) and Enterprise Edition (EE).
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/blogimages/security-cover-new.png);'></div>
+<div class=content>
+<p>Today we are releasing versions 13.12.2, 13.11.5, and 13.10.5 for GitLab Community Edition (CE) and Enterprise Edition (EE).</p>
+<p>These versions contain important security fixes, and we strongly recommend that all GitLab installations be upgraded to one of these versions immediately.</p>
+<p>GitLab releases patches for vulnerabilities in dedicated security releases. There are two types of security releases: a monthly, scheduled security release, released a week after the feature release (which deploys on the 22nd of each month), and ad-hoc security releases for critical vulnerabilities. For more information, you can visit our <a href="https://about.gitlab.com/security/faq/">security FAQ</a>. You can see all of our regular and security release blog posts <a href="/releases/categories/releases/">here</a>. In addition, the issues detailing each vulnerability are made public on our <a href="https://gitlab.com/gitlab-org/gitlab/issues?label_name%5B%5D=security&amp;scope=all&amp;state=opened">issue tracker</a> 30 days after the release in which they were patched.</p>
+<p>We are dedicated to ensuring all aspects of GitLab that are exposed to customers or that host customer data are held to the highest security standards. As part of maintaining good security hygiene, it is highly recommended that all customers upgrade to the latest security release for their supported version. You can read more <a href="/blog/2020/05/20/gitlab-instance-security-best-practices/">best practices in securing your GitLab instance</a> in our blog post.</p>
+<h2 id=additional-notes>Additional notes</h2>
+<p>In GitLab 13.10 the CI Lint API started requiring <a href="https://docs.gitlab.com/ee/api/#authentication">authentication</a> for GitLab instances where registration is disabled. Starting with this release, the CI Lint API endpoint will also require authentication when registration is limited (for example where an email domain allowlist is configured).</p>
+<p>This version also includes a data migration to fix some records with incorrect data that causes 2FA to not be enforced for some users even if they are members of groups that require it. The root cause for the issue was already fixed but some records created before the fix need to be corrected. The migration is a background migration that will be scheduled in batches of 10,000 users at two minute intervals.</p>
+<h2 id=table-of-fixes>Table of Fixes</h2>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#stealing-gitlab-oauth-access-tokens-using-xsleaks-in-safari">Stealing GitLab OAuth access tokens using XSLeaks in Safari</a></td>
+<td>high</td>
+</tr>
+<tr>
+<td><a href="#denial-of-service-through-recursive-triggered-pipelines">Denial of service through recursive triggered pipelines</a></td>
+<td>high</td>
+</tr>
+<tr>
+<td><a href="#unauthenticated-ci-lint-api-may-lead-to-information-disclosure-and-ssrf">Unauthenticated CI lint API may lead to information disclosure and SSRF</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#server-side-dos-through-rendering-crafted-markdown-documents">Server-side DoS through rendering crafted Markdown documents</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#issue-and-merge-request-length-limit-is-not-being-enforced">Issue and merge request length limit is not being enforced</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#insufficient-expired-password-validation">Insufficient Expired Password Validation</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#xss-in-blob-viewer-of-notebooks">XSS in blob viewer of notebooks</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#logging-of-sensitive-information">Logging of Sensitive Information</a></td>
+<td>medium</td>
+</tr>
+<tr>
+<td><a href="#on-call-rotation-information-exposed-when-removing-a-member">On-call rotation information exposed when removing a member</a></td>
+<td>low</td>
+</tr>
+<tr>
+<td><a href="#spoofing-commit-author-for-signed-commits">Spoofing commit author for signed commits</a></td>
+<td>low</td>
+</tr>
+</tbody>
+</table>
+<h2 id=stealing-gitlab-oauth-access-tokens-using-xsleaks-in-safari>Stealing GitLab OAuth access tokens using XSLeaks in Safari</h2>
+<p>A cross-site leak vulnerability in the OAuth flow of all versions of GitLab CE/EE since 7.10 allowed an attacker to leak an OAuth access token by getting the victim to visit a malicious page with Safari. This is a high severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H</code>, 8.8). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22213">CVE-2021-22213</a>.</p>
+<p>Thanks hubblebubble for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=remediation>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=denial-of-service-through-recursive-triggered-pipelines>Denial of service through recursive triggered pipelines</h2>
+<p>A denial of service vulnerability in GitLab CE/EE affecting all versions since 11.8 allows an attacker to create a recursive pipeline relationship and exhaust resources. This is a high severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H</code>, 7.7). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22181">CVE-2021-22181</a>.</p>
+<p>This vulnerability has been discovered internally by the GitLab team.</p>
+<h3 id=remediation-1>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=unauthenticated-ci-lint-api-may-lead-to-information-disclosure-and-ssrf>Unauthenticated CI lint API may lead to information disclosure and SSRF</h2>
+<p>When requests to the internal network for webhooks are enabled, a server-side request forgery vulnerability in GitLab CE/EE affecting all versions starting from 10.5 was possible to exploit for an unauthenticated attacker even on a GitLab instance where registration is limited. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N</code>, 6.8). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22214">CVE-2021-22214</a>.</p>
+<p>Thanks <a href="https://hackerone.com/myster?type=user">@myster</a> for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=remediation-2>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=server-side-dos-through-rendering-crafted-markdown-documents>Server-side DoS through rendering crafted Markdown documents</h2>
+<p>A denial of service vulnerability in all versions of GitLab CE/EE before 13.12.2, 13.11.5 or 13.10.5 allows an attacker to cause uncontrolled resource consumption with a specially crafted issue or merge request. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H</code>, 6.5). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22217">CVE-2021-22217</a>.</p>
+<p>Thanks phli for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=remediation-3>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=issue-and-merge-request-length-limit-is-not-being-enforced>Issue and merge request length limit is not being enforced</h2>
+<p>A denial of service vulnerability in all versions of GitLab CE/EE before 13.12.2, 13.11.5 or 13.10.5 allows an attacker to cause uncontrolled resource consumption with a very long issue or merge request description. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H</code>, 6.5). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22216">CVE-2021-22216</a>.</p>
+<p>This vulnerability has been discovered internally by the GitLab team.</p>
+<h3 id=remediation-4>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=insufficient-expired-password-validation>Insufficient Expired Password Validation</h2>
+<p>An issue has been discovered in GitLab affecting all versions starting from 12.9.0 before 13.10.5, all versions starting from 13.11.0 before 13.11.5, all versions starting from 13.12.0 before 13.12.2. Insufficient expired password validation in various operations allow user to maintain limited access after their password expired. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</code>, 6.5). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22221">CVE-2021-22221</a>.</p>
+<p>This vulnerability has been discovered internally by the GitLab team.</p>
+<h3 id=remediation-5>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=xss-in-blob-viewer-of-notebooks>XSS in blob viewer of notebooks</h2>
+<p>An issue has been discovered in GitLab affecting all versions starting with 13.10. GitLab was vulnerable to a stored XSS in blob viewer of notebooks. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</code>, 6.1). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22220">CVE-2021-22220</a>.</p>
+<p>Thanks (@yvvdwf)[https://hackerone.com/yvvdwf] for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=remediation-6>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=logging-of-sensitive-information>Logging of Sensitive Information</h2>
+<p>GitLab CE/EE since version 9.5 allows a high privilege user to obtain sensitive information from log files because the sensitive information was not correctly registered for log masking. This is a medium severity issue (<code>CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N</code>, 4.4). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22219">CVE-2021-22219</a>.</p>
+<p>This vulnerability has been discovered internally by the GitLab team https://gitlab.com/dcouture.</p>
+<h3 id=remediation-7>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=on-call-rotation-information-exposed-when-removing-a-member>On-call rotation information exposed when removing a member</h2>
+<p>An information disclosure vulnerability in GitLab EE versions 13.11 and later allowed a project owner to leak information about the members' on-call rotations in other projects. This is a low severity issue (<code>CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N</code>, 2.7). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22215">CVE-2021-22215</a>.</p>
+<p>This vulnerability has been discovered internally by the GitLab team.</p>
+<h3 id=remediation-8>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=spoofing-commit-author-for-signed-commits>Spoofing commit author for signed commits</h2>
+<p>All versions of GitLab CE/EE starting with 12.8 were affected by an issue in the handling of x509 certificates that could be used to spoof author of signed commits. This is a low severity issue (<code>CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:L/A:N</code>, 2.6). It is now mitigated in the latest release and is assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22218">CVE-2021-22218</a>.</p>
+<p>Thanks subbotin for reporting this vulnerability through our HackerOne bug bounty program.</p>
+<h3 id=remediation-9>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=enable-qsh-verification-for-atlassian-connect>Enable qsh verification for Atlassian Connect</h2>
+<p>qsh verification has been enabled for Atlassian Connect to address a breaking change in the Atlassian Connect API.</p>
+<p>If you are using Jira Connect with a self-managed instance you need to update to these latest security releases before June 7th. If you are on GitLab.com, you do not need to do anything. For more details see <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/328267">this GitLab issue</a>.</p>
+<h3 id=versions-affected>Versions affected</h3>
+<p>Affects all versions of GitLab.</p>
+<h3 id=remediation-10>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=update-bindata-dependency>Update bindata dependency</h2>
+<p>The dependency on bindata has been upgraded to 2.4.10 in order to mitigate security concerns.</p>
+<h3 id=versions-affected-1>Versions affected</h3>
+<p>Affects versions 12.0 and later.</p>
+<h3 id=remediation-11>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=update-grafana-dependency>Update grafana dependency</h2>
+<p>The dependency on Grafana has been upgraded to 7.5.4 in order to mitigate security concerns.</p>
+<h3 id=versions-affected-2>Versions affected</h3>
+<p>Affects versions 13.11, 13.10 and 13.9.</p>
+<h3 id=remediation-12>Remediation</h3>
+<p>We <strong>strongly recommend</strong> that all installations running an affected version above are <strong>upgraded to the latest version as soon as possible</strong>.</p>
+<h2 id=updating>Updating</h2>
+<p>To update GitLab, see the <a href="/update/">Update page</a>.
+To update Gitlab Runner, see the <a href="https://docs.gitlab.com/runner/install/linux-repository.html#updating-the-runner">Updating the Runner page</a>.</p>
+<h2 id=receive-security-release-notifications>Receive Security Release Notifications</h2>
+<p>To receive security release blog notifications delivered to your inbox, visit our <a href="https://about.gitlab.com/company/contact/">contact us</a> page.
+To receive release notifications via RSS, subscribe to our <a href="https://about.gitlab.com/security-releases.xml">security release RSS feed</a> or our <a href="https://about.gitlab.com/all-releases.xml">RSS feed for all releases</a>.</p>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+Security+Release%3A+13.12.2%2C+13.11.5%2C+and+13.10.5&amp;url=https://about.gitlab.com/releases/2021/06/01/security-release-gitlab-13-12-2-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<ul class='tag-list list-unstyled'>
+<li class=tag>
+<a href="/releases/tags.html#security">security</a>
+</li>
+</ul>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2021/06/01/security-release-gitlab-13-12-2-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2021/06/01/security-release-gitlab-13-12-2-released/&amp;text=GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2021/06/01/security-release-gitlab-13-12-2-released/&amp;title=GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2021/06/01/security-release-gitlab-13-12-2-released/&amp;t=GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2021/05/25/gitlab-13-12-1-released/" title="GitLab Patch Release: 13.12.1"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab Patch Release: 13.12.1
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2021/06/07/gitlab-13-12-3-released/" title="GitLab Patch Release: 13.12.3"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab Patch Release: 13.12.3
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2021-06-01-security-release-gitlab-13-12-2-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2021-06-01-security-release-gitlab-13-12-2-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

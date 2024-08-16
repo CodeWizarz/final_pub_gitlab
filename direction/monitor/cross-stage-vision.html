@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Cross Stage Vision for Analytics Data
+|
+GitLab
+</title>
+<meta content='This page describes the vision for cross-stage collaboration around analytics.' name=description />
+<meta content='This page describes the vision for cross-stage collaboration around analytics.' name='twitter:description'/>
+<meta content='This page describes the vision for cross-stage collaboration around analytics.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Cross Stage Vision for Analytics Data' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/monitor/cross-stage-vision.html.md' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/monitor/cross-stage-vision.html' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Cross Stage Vision for Analytics Data' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/monitor/cross-stage-vision.html' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Cross Stage Vision for Analytics Data
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/justinfarris'>
+<img
+src='/images/team/justinfarris.jpg'
+class=codeowner-avatar-img
+alt='Justin Farris'
+title='Justin Farris'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/stkerr'>
+<img
+src='/images/team/samkerr.jpeg'
+class=codeowner-avatar-img
+alt='Sam Kerr'
+title='Sam Kerr'
+>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/monitor/cross-stage-vision.html.md" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/monitor/">Stage Direction - Monitor</a></li><li>Cross Stage Vision for Analytics Data</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<ul id=markdown-toc>
+<li><a href="#the-challenge" id=markdown-toc-the-challenge>The Challenge</a></li>
+<li><a href="#the-opportunity" id=markdown-toc-the-opportunity>The Opportunity</a> <ul>
+<li><a href="#breaking-it-down" id=markdown-toc-breaking-it-down>Breaking it down</a> <ul>
+<li><a href="#data-recording" id=markdown-toc-data-recording>Data recording</a></li>
+<li><a href="#data-storage" id=markdown-toc-data-storage>Data storage</a></li>
+<li><a href="#data-consumption" id=markdown-toc-data-consumption>Data consumption</a></li>
+</ul>
+</li>
+<li><a href="#whats-next-and-why" id=markdown-toc-whats-next-and-why>What's next and why</a></li>
+<li><a href="#decisions-and-tradeoffs" id=markdown-toc-decisions-and-tradeoffs>Decisions and tradeoffs</a> <ul>
+<li><a href="#event-granularity" id=markdown-toc-event-granularity>Event granularity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#whos-involved" id=markdown-toc-whos-involved>Who's Involved</a></li>
+</ul>
+<p>This page describes the vision for cross-stage collaboration around GitLab usage analytics. Data collection, storage, and consumption methods will be provided within the GitLab product, so that users and internal team members can take advantage of it. The goal is to ensure that we have systems in place to collect relevant data to a single location and to empower different consumers of that data and help them collaborate with each other.</p>
+<h1 id=the-challenge>The Challenge</h1>
+<p>There are many reasons to look at usage data from GitLab. Customers want to understand which features they are using from their license, product teams want to understand how features they built are being used, operations teams want to understand usage patterns for predicting load, and more. There's also a need to build reports in GitLab that look at historical data to help users understand their DevOps health and team performance. GitLab Inc wishes to understand how our product is used by both our GitLab.com and self-managed users. This means we have systems in place for GitLab.com that are different from self-managed.</p>
+<p>Today there are multiple ways to both submit and consume this usage data to and from GitLab. This ranges from using <a href="https://handbook.gitlab.com/handbook/customer-success/csm/service-ping-faq/">Service Ping</a> to collect counts to using <a href="https://handbook.gitlab.com/handbook/business-technology/data-team/platform/snowplow/">Snowplow</a> to log full events to directly logging query results from Postgres. Teams that expose data within Gitlab have even more different solutions to collect data. Consuming that data could be done from in GitLab directly, using <a href="https://handbook.gitlab.com/handbook/business-technology/data-team/platform/sisensecdt/">Sisense</a>, <a href="https://handbook.gitlab.com/handbook/sales/gainsight/">Gainsight</a>, or others tools all of which have different sets of data available to view and often do not scale for large data sets.</p>
+<p>Because of these different approaches, it is difficult to know how to properly add instrumentation and gather data, easily find answers to data-related questions, and incredibly difficult to collaborate with different functional groups, who all likely have a different set of data to work with. It is also likely individuals reach different conclusions to the same question because they have access to different data.</p>
+<p>We have documented many of the <a href="https://about.gitlab.com/direction/analytics/analytics-instrumentation/#personas-that-we-work-with">personas</a> that interact with this problem space and that we need to address. In addition to the problems above, many of these personas are unaware of each other and what their needs are. This leads to some personas, such as Product Managers, changing a metric without understanding how it affects other personas, such as Customer Success. When multiple groups are unaware of each other, they could each be solving the same problems and they could be doing it in ways that don't help or even negatively impact other groups.</p>
+<h1 id=the-opportunity>The Opportunity</h1>
+<p>We will work towards having a unified way of both collecting data and providing that data for consumption by providing a single source of truth for users, customers, product teams, customer success, and others to use. We will ensure that everyone can see the same information and reach the same conclusions.</p>
+<p>Our vision is that the Analytics section will provide a single way for usage data to be recorded and consumed, with the <a href="https://about.gitlab.com/direction/analytics/analytics-instrumentation/">Analytics Instrumentation</a> group and <a href="https://about.gitlab.com/direction/analytics/product-analytics/">Product Analytics</a> group, respectively. Usage data, such as how many times a button has been clicked, when a feature is used, or when an activity like a deployment happens, can be recorded in a single way, stored in a single repository, and consumed later. We intend this to be used by our external users and customers as well as by GitLab to <a href="https://about.gitlab.com/handbook/product/product-processes/#dogfood-everything">dogfood</a> what we build.</p>
+<p>Once all data has been stored in a centralised data repository, this opens up many opportunities to build persona-specific reporting on top of it. We envision this data would be served:</p>
+<ul>
+<li>Directly back to end users for their review as part of the product
+<ul>
+<li>This could be in marquee features, such as <a href="https://about.gitlab.com/stages-devops-lifecycle/value-stream-analytics/">value stream analytics</a>, through text logs, or some combination.</li>
+</ul>
+</li>
+<li>To Product teams to gauge feature success or need for improvement
+<ul>
+<li>Understanding if feature use is increasing or decreasing and how users engage with a feature is critical to determining next steps.</li>
+</ul>
+</li>
+<li>Customer success and account teams to understand how their customers are doing with GitLab
+<ul>
+<li>Seeing what parts of GitLab are and are not being used is a way to ensure customers are getting the value they expect.</li>
+</ul>
+</li>
+</ul>
+<p>We will also support the larger vision for <a href="/direction/customizable-dashboards/">customizable dashboards</a>.</p>
+<h2 id=breaking-it-down>Breaking it down</h2>
+<p>It is important to break the large picture described above down into more tangible pieces so they can each be discussed and described in more detail.</p>
+<h3 id=data-recording>Data recording</h3>
+<p>This will be provided as a single SDK that is then integrated into GitLab and user applications. The code in those apps will then call APIs in the SDK to log relevant information when it occurs. This SDK will provide ways to collect data from both the front-end and back-end of an application. This SDK will allow recording of individual raw events as they happen, computed aggregate events, or a combination of the two. Wherever possible, this SDK will speak to use cases that can be done with it, rather than technologies used to implement it (for example, an API might be about "counting unique users" rather than "create a RedisHLL counter" like we have today).</p>
+<p>This SDK will also allow (and will highly encourage) metadata to be provided for all information provided. Today we have the GitLab <a href="https://about.gitlab.com/handbook/product/analytics-instrumentation-guide/#metrics-dictionary">Metrics Dictionary</a> to display metadata about every action that we instrument and it is very valuable since it lets people understand more about the data, what it is, and how they might use it without needing to directly view the code base of the application. The SDK will make it easy to do something similar so that it is easy to understand the data being collected and not needing to do a technical deep dive to figure out what is going on.</p>
+<h3 id=data-storage>Data storage</h3>
+<p>We will provide a single solution for all collected data, regardless of type, to be sent to and stored. Our current vision is this will be an instance of ClickHouse, which is what Product Analytics and several other teams at GitLab are <a href="https://about.gitlab.com/handbook/engineering/development/ops/monitor/observability/#clickhouse-datastore">already building on top of</a>. By providing a centralised repository for data to be stored, it makes it easier to reason about how data collection and retrieval should be done.</p>
+<p>This will be our long term focus given <a href="https://docs.gitlab.com/ee/architecture/blueprints/clickhouse_usage/#non-goals">the challenges</a> of using ClickHouse on self-managed instances.</p>
+<h3 id=data-consumption>Data consumption</h3>
+<p>Since all data will be stored in a <a href="#data-storage">single location</a>, it will be possible to provide multiple persona-specific ways to access that data and ensure that they are all built off of the same source of truth. This means each persona can be confident that they are viewing the data most interesting to them but also that it is correct and not in conflict with the data set another team is using.</p>
+<p>We envision that whenever we collect a metric or piece of data, it will be possible to view that data directly within the GitLab product. This may be in the form of a marquee feature or it may be in a screen that allows downloading data in a CSV file. We will decide how to best display this data in the product based on the data type, the personas it informs, and how useful it is. This will enable all personas to see the information within GitLab and not require another tool to view it. If desired, they may then take the data and reformat &amp; re-process it for their own needs (possibly using another tool). If we find users doing this often, that is a good signal for us that we should build their approach as a feature.</p>
+<p>Providing a single place to access data makes it easier for different personas to talk to each other about data since they both have the full context available. As an example, an account team could notice that a customer has not been using a new feature that they expressed interest in. They could point the customer to the usage data so that the customer could also see that they have not been using the new feature. This would then let them have a conversation, backed by data, about how to start using the feature more or if there is an issue.</p>
+<p>Because multiple groups benefit from this, we expect contributions from and collaborations with many of these other groups. This is discussed in more detail <a href="#who-s-involved">below</a>.</p>
+<h2 id=whats-next-and-why>What's next and why</h2>
+<p>In FY23 Q3, <a href="https://gitlab.com/gitlab-org/analytics-section/analytics-instrumentation/internal/-/issues/671">we interviewed</a> different personas that interact with Gitlab usage data to understand their needs around it. Understanding these use cases helped us define and execute a roadmap that works for everyone.</p>
+<p>In the coming quarters we will focus on the following work items:</p>
+<ul>
+<li>The old way of using multiple collection systems to record data is now deprecated in favor of a single interface called <a href="https://docs.gitlab.com/ee/development/internal_analytics/">internal events</a>.We will continue to cover a <a href="https://gitlab.com/groups/gitlab-org/-/epics/11903">wide range of use cases</a> with internal events so that users don't have to look for other ways to track usage data.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11904">Simplifying instrumentation</a> using internal events after exploring different solutions so teams can more efficiently instrument their features.</li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/428014">Ensuring metadata on events and metrics that are recorded is more easily and always collected</a> on <a href="https://about.gitlab.com/handbook/product/analytics-instrumentation-guide/#metrics-dictionary">Metrics Dictionary</a>. This is so that teams understand more about the data, what it is, and how they might use it without needing to directly view the code base of the application.</li>
+<li>Exploring ways of reducing the gaps in the granularity of the data collected between self-managed and SAAS so that this data can be more easily combined and compared when aggregated upon from a single storage.</li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10700">Continuing to improve on internal events</a> based on feedback from teams</li>
+<li>Ensuring our external customers have access to the data we are recording and can service insights more easily from it. Here, we will <a href="https://gitlab.com/gitlab-com/gitlab-OKRs/-/work_items/4594">focus on self-managed</a> customers in the short-term and SAAS customers in the long term</li>
+<li>Continuing to dogfood Product Analytics features for Gitlab usage analytics</li>
+</ul>
+<p>On the long term, we will focus on the problem of GitLab usage data stored in multiple places which can cause incomplete or incorrect data to be presented to users. Our vision is to have a single data store for GitLab usage data to ensure consistency for the personas who want to access the data.</p>
+<h2 id=decisions-and-tradeoffs>Decisions and tradeoffs</h2>
+<p>Part of the reason for the multiple different approaches to data collection and consumption is because users have a myriad of different needs when it comes to data. Several of these tradeoffs are listed below:</p>
+<h3 id=event-granularity>Event granularity</h3>
+<p>There is a tradeoff between exposing raw data and measures that are computed from raw data. Raw data is definitive and comprehensive at the cost of being an incredibly large data set. Aggregate measures computed from raw data (e.g. number of users per month using a given feature) are more compact at the cost of being a lossy transformation.</p>
+<p>We have found that most people we have talked to are most interested in aggregate measures more than raw data. Understanding Monthly Active Users (MAU), how many users are using a given feature, if a capability is being used or not are the most common workflows we hear about, compared to understanding the individual click events that feed into those aggregate measures. There are usually privacy concerns when individual events are discussed. Users don't mind us understanding overall pictures that aggregate measures provide, but are uncomfortable when individual actions are measured. Individual events are also very high volume which it makes it more difficult to manage them effectively.</p>
+<p>As a result, we plan to primarily focus our efforts on providing aggregate measures. Aggregate measures make the scale of the problem more manageable and can surface insights more effectively than raw data. Aggregate measures are also more privacy friendly for end users. We intend to collect certain usage data from our customers and they will be more amenable to sharing aggregate data with us than raw events. Raw data can be useful for low-level analysis but won't be our primary focus.</p>
+<p>Notably, the raw data will be available to look at if so desired by directly viewing the databases storing the data. This means that for GitLab.com, it will be possible for internal teams to examine raw data if that is useful to them.</p>
+<h1 id=whos-involved>Who's Involved</h1>
+<p>This vision is large and will encompass multiple groups and teams within GitLab to make it a reality. This section highlights several groups that are involved and their responsibilities. This is by no means exhaustive and this section can be expanded as needed.</p>
+<p>All involved parties are encouraged and expected to provide feedback and input so that we can gauge what is working well and what needs improvements.</p>
+<p><code>group::analytics instrumentation</code> - The Analytics Instrumentation group is responsible for providing a single way to record data and submit this data to GitLab for storage. They are also responsible for maintaining these systems so that they are robust and efficient under load. This group is not responsible for implementing tracking for every feature within GitLab. More details about this group is on their <a href="https://about.gitlab.com/direction/analytics/analytics-instrumentation/">direction page</a>.</p>
+<p><code>group::product analytics</code> - The Product Analytics group is responsible for providing the place for data to be stored and ways for users to consume it with APIs. This group will provide a minimal way to consume all data, so we can meet the goal of exposing all collected data within the product. This group will provide tooling to be able to create visualizations for collected data.</p>
+<p>The group will also build on top of the APIs to provide ways to consume certain data visually. The group will provide several visualizations but will not be responsible for implementing every desired visualization. More details about this group is on their <a href="https://about.gitlab.com/direction/analytics/product-analytics/">direction page</a>.</p>
+<p><code>All product groups</code> - Each individual product group best understands the features it works on and the relevant metrics for it. Each of those groups is responsible for using the provided SDK and APIs to add instrumentation to their own features to submit data.</p>
+<p>Product groups can also leverage the stored data and build features on top of this. An example of this is how we would envision the <a href="https://about.gitlab.com/direction/plan/#value-stream-management">Value Stream Management</a> dashboards being built on top of the stored data we collect.</p>
+<p><code>Data team</code> - The data team is responsible for analyzing the data to uncover insights from it. These insights could then be surfaced in custom reports or built back into the product.</p>
+<p><code>Customer success</code> - Customer success is responsible for using the collected data to understand how well customers are able to use GitLab or if they need assistance. They can use the collected data to build reports, such as <a href="https://about.gitlab.com/handbook/customer-success/customer-health-scoring/">customer health scorecards</a>, to achieve this. They can also work directly with customers to discuss what they are seeing and show the customers the exact same data set in the product.</p>
+<p><code>End users</code> - End users will look at the data visualizations we provide as well as the raw data that is stored to understand their own usage. They may then either build custom reporting that they need or request GitLab to provide additional features on top of it.</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/monitor/cross-stage-vision.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/monitor/cross-stage-vision.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

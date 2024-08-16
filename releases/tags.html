@@ -1,0 +1,4486 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Releases posts by tag
+|
+GitLab
+</title>
+<meta content='Take a look at all GitLab releases posts covering a range of topics such as security, features, patch releases and much more.' name=description />
+<meta content='Take a look at all GitLab releases posts covering a range of topics such as security, features, patch releases and much more.' name='twitter:description'/>
+<meta content='Take a look at all GitLab releases posts covering a range of topics such as security, features, patch releases and much more.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Releases posts by tag' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/tags.html.haml' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/tags.html' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Releases posts by tag' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/tags.html' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body class='releases releases_tags ' data-offset=90 data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Releases posts by tag
+</h1>
+</div>
+</div>
+<div class='blog archives'>
+<div class=wrapper>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class=section>
+<h2>Tags</h2>
+<ul class='tag-index-list list-unstyled'>
+<li>
+<a href="#features">features
+<span>(12)</span>
+</a></li>
+<li>
+<a href="#patch-releases">patch releases
+<span>(235)</span>
+</a></li>
+<li>
+<a href="#releases">releases
+<span>(244)</span>
+</a></li>
+<li>
+<a href="#security">security
+<span>(147)</span>
+</a></li>
+<li>
+<a href="#security-releases">security releases
+<span>(60)</span>
+</a></li>
+<li>
+<a href="#untagged">untagged
+<span>(3)</span>
+</a></li>
+</ul>
+<h3 id=features>Posts tagged ‘features’</h3>
+<ul class='article-list list-unstyled'>
+<li>
+<time>
+May 22, 2018
+</time>
+<a href="/releases/2018/05/22/gitlab-10-8-released/">GitLab 10.8 released with incremental rollouts, plus open source push mirroring
+</a></li>
+<li>
+<time>
+Apr 22, 2018
+</time>
+<a href="/releases/2018/04/22/gitlab-10-7-released/">GitLab 10.7 released with open source Web IDE and SAST for Go and C/C++!
+</a></li>
+<li>
+<time>
+Mar 22, 2018
+</time>
+<a href="/releases/2018/03/22/gitlab-10-6-released/">GitLab 10.6 released with CI/CD for GitHub and deeper Kubernetes integration
+</a></li>
+<li>
+<time>
+Feb 22, 2018
+</time>
+<a href="/releases/2018/02/22/gitlab-10-5-released/">GitLab 10.5 released with Let's Encrypt integration, Gemnasium dependency checks, and CI/CD external files
+</a></li>
+<li>
+<time>
+Jan 22, 2018
+</time>
+<a href="/releases/2018/01/22/gitlab-10-4-released/">GitLab 10.4 released with Dynamic Application Security Testing and Web IDE (beta)
+</a></li>
+<li>
+<time>
+Dec 22, 2017
+</time>
+<a href="/releases/2017/12/22/gitlab-10-3-released/">GitLab 10.3 released with Static Application Security Testing and Browser Performance Testing
+</a></li>
+<li>
+<time>
+Nov 22, 2017
+</time>
+<a href="/releases/2017/11/22/gitlab-10-2-released/">GitLab 10.2 released with Configurable Issue Boards and GitLab Geo General Availability
+</a></li>
+<li>
+<time>
+Oct 22, 2017
+</time>
+<a href="/releases/2017/10/22/gitlab-10-1-released/">GitLab 10.1 released with Image Discussions and Rejection of Unsigned Commits
+</a></li>
+<li>
+<time>
+Sep 22, 2017
+</time>
+<a href="/releases/2017/09/22/gitlab-10-0-released/">GitLab 10.0 released with Auto DevOps and Group Issue Boards
+</a></li>
+<li>
+<time>
+Aug 22, 2017
+</time>
+<a href="/releases/2017/08/22/gitlab-9-5-released/">GitLab 9.5 released with GPG Commit Verification and Project Templates
+</a></li>
+<li>
+<time>
+Jul 22, 2017
+</time>
+<a href="/releases/2017/07/22/gitlab-9-4-released/">GitLab 9.4 released with Related Issues and Web Application Monitoring
+</a></li>
+<li>
+<time>
+Jun 22, 2017
+</time>
+<a href="/releases/2017/06/22/gitlab-9-3-released/">GitLab 9.3 released with Code Quality and Multi-Project Pipeline Graphs
+</a></li>
+</ul>
+<h3 id=patch-releases>Posts tagged ‘patch releases’</h3>
+<ul class='article-list list-unstyled'>
+<li>
+<time>
+May 9, 2024
+</time>
+<a href="/releases/2024/05/09/gitlab-16-9-8-released/">GitLab Patch Release: 16.9.8
+</a></li>
+<li>
+<time>
+Apr 15, 2024
+</time>
+<a href="/releases/2024/04/15/gitlab-16-10-3-released/">GitLab Patch Release: 16.10.3, 16.9.5, 16.8.7
+</a></li>
+<li>
+<time>
+Jan 12, 2024
+</time>
+<a href="/releases/2024/01/12/gitlab-16-7-3-released/">GitLab Patch Release: 16.7.3 16.6.5 16.5.7
+</a></li>
+<li>
+<time>
+Nov 14, 2023
+</time>
+<a href="/releases/2023/11/14/gitlab-16-5-2-released/">GitLab Patch Release: 16.5.2
+</a></li>
+<li>
+<time>
+Sep 12, 2023
+</time>
+<a href="/releases/2023/09/12/gitlab-16-2-6-released/">GitLab Patch Release: 16.2.6
+</a></li>
+<li>
+<time>
+Sep 12, 2023
+</time>
+<a href="/releases/2023/09/12/gitlab-16-3-3-released/">GitLab Patch Release: 16.3.3
+</a></li>
+<li>
+<time>
+Sep 5, 2023
+</time>
+<a href="/releases/2023/09/05/gitlab-16-3-2-released/">GitLab Patch Release: 16.3.2
+</a></li>
+<li>
+<time>
+Aug 11, 2023
+</time>
+<a href="/releases/2023/08/11/gitlab-16-2-4-released/">GitLab Patch Release: 16.2.4
+</a></li>
+<li>
+<time>
+Aug 3, 2023
+</time>
+<a href="/releases/2023/08/03/gitlab-16-1-4-released/">GitLab Patch Release: 16.1.4
+</a></li>
+<li>
+<time>
+Aug 3, 2023
+</time>
+<a href="/releases/2023/08/03/gitlab-16-2-3-released/">GitLab Patch Release: 16.2.3
+</a></li>
+<li>
+<time>
+Jul 27, 2023
+</time>
+<a href="/releases/2023/07/27/gitlab-15-11-13-released/">GitLab Patch Release: 15.11.13
+</a></li>
+<li>
+<time>
+Jul 25, 2023
+</time>
+<a href="/releases/2023/07/25/gitlab-16-2-1-released/">GitLab Patch Release: 16.2.1
+</a></li>
+<li>
+<time>
+Jul 17, 2023
+</time>
+<a href="/releases/2023/07/17/gitlab-15-11-12-released/">GitLab Patch Release: 15.11.12
+</a></li>
+<li>
+<time>
+Jun 16, 2023
+</time>
+<a href="/releases/2023/06/16/gitlab-16-0-5-released/">GitLab Patch Release: 16.0.5
+</a></li>
+<li>
+<time>
+Jun 15, 2023
+</time>
+<a href="/releases/2023/06/15/gitlab-15-11-9-released/">GitLab Patch Release: 15.11.9
+</a></li>
+<li>
+<time>
+Jun 8, 2023
+</time>
+<a href="/releases/2023/06/08/gitlab-16-0-4-released/">GitLab Patch Release: 16.0.4
+</a></li>
+<li>
+<time>
+Jun 7, 2023
+</time>
+<a href="/releases/2023/06/07/gitlab-15-11-8-released/">GitLab Patch Release: 15.11.8
+</a></li>
+<li>
+<time>
+Jun 7, 2023
+</time>
+<a href="/releases/2023/06/07/gitlab-16-0-3-released/">GitLab Patch Release: 16.0.3
+</a></li>
+<li>
+<time>
+May 24, 2023
+</time>
+<a href="/releases/2023/05/24/gitlab-15-11-6-released/">GitLab Patch Release: 15.11.6
+</a></li>
+<li>
+<time>
+May 19, 2023
+</time>
+<a href="/releases/2023/05/19/gitlab-15-11-5-released/">GitLab Patch Release: 15.11.5
+</a></li>
+<li>
+<time>
+May 17, 2023
+</time>
+<a href="/releases/2023/05/17/gitlab-15-11-4-released/">GitLab Patch Release: 15.11.4
+</a></li>
+<li>
+<time>
+Apr 21, 2023
+</time>
+<a href="/releases/2023/04/21/gitlab-15-10-4-15-9-5-released/">GitLab Patch Release: 15.10.4, 15.9.5
+</a></li>
+<li>
+<time>
+Apr 20, 2023
+</time>
+<a href="/releases/2023/04/20/gitlab-15-7-9-released/">GitLab Patch Release: 15.7.9
+</a></li>
+<li>
+<time>
+Apr 19, 2023
+</time>
+<a href="/releases/2023/04/19/gitlab-15-8-6-released/">GitLab Patch Release: 15.8.6
+</a></li>
+<li>
+<time>
+Apr 14, 2023
+</time>
+<a href="/releases/2023/04/14/gitlab-15-10-3-released/">GitLab Patch Release: 15.10.3
+</a></li>
+<li>
+<time>
+Apr 5, 2023
+</time>
+<a href="/releases/2023/04/05/gitlab-15-10-2-released/">GitLab Patch Release: 15.10.2
+</a></li>
+<li>
+<time>
+Mar 9, 2023
+</time>
+<a href="/releases/2023/03/09/gitlab-15-9-3-released/">GitLab Patch Release: 15.9.3
+</a></li>
+<li>
+<time>
+Feb 24, 2023
+</time>
+<a href="/releases/2023/02/24/gitlab-15-9-1-released/">GitLab Patch Release: 15.9.1
+</a></li>
+<li>
+<time>
+Feb 14, 2023
+</time>
+<a href="/releases/2023/02/14/gitlab-15-8-3-released/">GitLab Patch Release: 15.8.3
+</a></li>
+<li>
+<time>
+Jan 11, 2023
+</time>
+<a href="/releases/2023/01/11/gitlab-15-7-3-released/">GitLab Patch Release: 15.7.3
+</a></li>
+<li>
+<time>
+Jan 5, 2023
+</time>
+<a href="/releases/2023/01/05/gitlab-15-7-1-released/">GitLab Patch Release: 15.7.1
+</a></li>
+<li>
+<time>
+Dec 16, 2022
+</time>
+<a href="/releases/2022/12/16/gitlab-15-6-3-released/">GitLab Patch Release: 15.6.3
+</a></li>
+<li>
+<time>
+Dec 8, 2022
+</time>
+<a href="/releases/2022/12/08/gitlab-15-5-6-released/">GitLab Patch Release: 15.5.6
+</a></li>
+<li>
+<time>
+Dec 2, 2022
+</time>
+<a href="/releases/2022/12/02/gitlab-15-6-2-released/">GitLab Patch Release: 15.6.2
+</a></li>
+<li>
+<time>
+Nov 14, 2022
+</time>
+<a href="/releases/2022/11/14/gitlab-15-4-5-released/">GitLab Patch Release: 15.4.5
+</a></li>
+<li>
+<time>
+Nov 14, 2022
+</time>
+<a href="/releases/2022/11/14/gitlab-15-5-4-released/">GitLab Patch Release: 15.5.4
+</a></li>
+<li>
+<time>
+Nov 8, 2022
+</time>
+<a href="/releases/2022/11/08/gitlab-15-5-3-released/">GitLab Patch Release: 15.5.3
+</a></li>
+<li>
+<time>
+Oct 24, 2022
+</time>
+<a href="/releases/2022/10/24/gitlab-15-5-1-released/">GitLab Patch Release: 15.5.1
+</a></li>
+<li>
+<time>
+Oct 19, 2022
+</time>
+<a href="/releases/2022/10/19/gitlab-15-4-3-released/">GitLab Patch Release: 15.4.3
+</a></li>
+<li>
+<time>
+Oct 3, 2022
+</time>
+<a href="/releases/2022/10/03/gitlab-15-4-2-released/">GitLab Patch Release: 15.4.2
+</a></li>
+<li>
+<time>
+Sep 5, 2022
+</time>
+<a href="/releases/2022/09/05/gitlab-15-3-3-released/">GitLab Patch Release: 15.3.3
+</a></li>
+<li>
+<time>
+Aug 1, 2022
+</time>
+<a href="/releases/2022/08/01/gitlab-15-2-2-released/">GitLab Patch Release: 15.2.2
+</a></li>
+<li>
+<time>
+Jul 19, 2022
+</time>
+<a href="/releases/2022/07/19/gitlab-15-1-3-released/">GitLab Patch Release: 15.1.3
+</a></li>
+<li>
+<time>
+Jul 4, 2022
+</time>
+<a href="/releases/2022/07/04/gitlab-15-1-2-released/">GitLab Patch Release: 15.1.2
+</a></li>
+<li>
+<time>
+Jun 16, 2022
+</time>
+<a href="/releases/2022/06/16/gitlab-15-0-3-released/">GitLab Patch Release: 15.0.3
+</a></li>
+<li>
+<time>
+Jun 6, 2022
+</time>
+<a href="/releases/2022/06/06/gitlab-15-0-2-released/">GitLab Patch Release: 15.0.2
+</a></li>
+<li>
+<time>
+May 16, 2022
+</time>
+<a href="/releases/2022/05/16/gitlab-14-10-3-released/">GitLab Patch Release: 14.10.3
+</a></li>
+<li>
+<time>
+May 5, 2022
+</time>
+<a href="/releases/2022/05/05/gitlab-14-10-2-released/">GitLab Patch Release: 14.10.2
+</a></li>
+<li>
+<time>
+Apr 12, 2022
+</time>
+<a href="/releases/2022/04/12/gitlab-14-9-3-released/">GitLab Patch Release: 14.9.3
+</a></li>
+<li>
+<time>
+Apr 1, 2022
+</time>
+<a href="/releases/2022/04/01/gitlab-14-6-7-released/">GitLab Patch Release: 14.6.7
+</a></li>
+<li>
+<time>
+Mar 24, 2022
+</time>
+<a href="/releases/2022/03/24/gitlab-14-7-6-released/">GitLab Patch Release: 14.7.6
+</a></li>
+<li>
+<time>
+Mar 23, 2022
+</time>
+<a href="/releases/2022/03/23/gitlab-14-9-1-released/">GitLab Patch Release: 14.9.1
+</a></li>
+<li>
+<time>
+Mar 16, 2022
+</time>
+<a href="/releases/2022/03/16/gitlab-14-8-4-released/">GitLab Patch Release: 14.8.4
+</a></li>
+<li>
+<time>
+Mar 15, 2022
+</time>
+<a href="/releases/2022/03/15/gitlab-14-8-3-released/">GitLab Patch Release: 14.8.3
+</a></li>
+<li>
+<time>
+Mar 9, 2022
+</time>
+<a href="/releases/2022/03/09/gitlab-14-7-5-released/">GitLab Patch Release: 14.7.5
+</a></li>
+<li>
+<time>
+Mar 2, 2022
+</time>
+<a href="/releases/2022/03/02/gitlab-14-6-6-released/">GitLab Patch Release: 14.6.6
+</a></li>
+<li>
+<time>
+Feb 23, 2022
+</time>
+<a href="/releases/2022/02/23/gitlab-14-8-1-released/">GitLab Patch Release: 14.8.1
+</a></li>
+<li>
+<time>
+Feb 14, 2022
+</time>
+<a href="/releases/2022/02/14/gitlab-14-7-3-released/">GitLab Patch Release: 14.7.3
+</a></li>
+<li>
+<time>
+Feb 8, 2022
+</time>
+<a href="/releases/2022/02/08/gitlab-14-7-2-released/">GitLab Patch Release: 14.7.2
+</a></li>
+<li>
+<time>
+Jan 17, 2022
+</time>
+<a href="/releases/2022/01/17/gitlab-14-6-3-released/">GitLab Patch Release: 14.6.3
+</a></li>
+<li>
+<time>
+Jan 4, 2022
+</time>
+<a href="/releases/2022/01/04/gitlab-14-6-1-released/">GitLab Patch Release: 14.6.1
+</a></li>
+<li>
+<time>
+Dec 1, 2021
+</time>
+<a href="/releases/2021/12/01/gitlab-14-4-3-released/">GitLab Patch Release: 14.4.3
+</a></li>
+<li>
+<time>
+Dec 1, 2021
+</time>
+<a href="/releases/2021/12/01/gitlab-14-5-1-released/">GitLab Patch Release: 14.5.1
+</a></li>
+<li>
+<time>
+Nov 26, 2021
+</time>
+<a href="/releases/2021/11/26/gitlab-14-2-7-released/">GitLab Patch Release: 14.2.7
+</a></li>
+<li>
+<time>
+Nov 26, 2021
+</time>
+<a href="/releases/2021/11/26/gitlab-14-3-5-released/">GitLab Patch Release: 14.3.5
+</a></li>
+<li>
+<time>
+Nov 15, 2021
+</time>
+<a href="/releases/2021/11/15/gitlab-14-1-8-released/">GitLab Patch Release: 14.1.8
+</a></li>
+<li>
+<time>
+Nov 8, 2021
+</time>
+<a href="/releases/2021/11/08/gitlab-14-4-2-released/">GitLab Patch Release: 14.4.2
+</a></li>
+<li>
+<time>
+Nov 5, 2021
+</time>
+<a href="/releases/2021/11/05/gitlab-14-0-12-released/">GitLab Patch Release: 14.0.12
+</a></li>
+<li>
+<time>
+Nov 3, 2021
+</time>
+<a href="/releases/2021/11/03/gitlab-13-12-15-released/">GitLab Patch Release: 13.12.15
+</a></li>
+<li>
+<time>
+Oct 12, 2021
+</time>
+<a href="/releases/2021/10/12/gitlab-14-3-3-released/">GitLab Patch Release: 14.3.3
+</a></li>
+<li>
+<time>
+Oct 1, 2021
+</time>
+<a href="/releases/2021/10/01/gitlab-14-3-2-released/">GitLab Patch Release: 14.3.2
+</a></li>
+<li>
+<time>
+Sep 27, 2021
+</time>
+<a href="/releases/2021/09/27/gitlab-14-0-11-released/">GitLab Patch Release: 14.0.11
+</a></li>
+<li>
+<time>
+Sep 27, 2021
+</time>
+<a href="/releases/2021/09/27/gitlab-14-1-6-released/">GitLab Patch Release: 14.1.6
+</a></li>
+<li>
+<time>
+Sep 22, 2021
+</time>
+<a href="/releases/2021/09/22/gitlab-13-12-12-released/">GitLab Patch Release: 13.12.12
+</a></li>
+<li>
+<time>
+Sep 17, 2021
+</time>
+<a href="/releases/2021/09/17/gitlab-14-2-4-released/">GitLab Patch Release: 14.2.4
+</a></li>
+<li>
+<time>
+Sep 2, 2021
+</time>
+<a href="/releases/2021/09/02/gitlab-13-12-11-released/">GitLab Patch Release: 13.12.11
+</a></li>
+<li>
+<time>
+Sep 2, 2021
+</time>
+<a href="/releases/2021/09/02/gitlab-14-0-10-released/">GitLab Patch Release: 14.0.10 and 14.1.5
+</a></li>
+<li>
+<time>
+Sep 1, 2021
+</time>
+<a href="/releases/2021/09/01/gitlab-14-2-3-released/">GitLab Patch Release: 14.2.3
+</a></li>
+<li>
+<time>
+Aug 26, 2021
+</time>
+<a href="/releases/2021/08/26/gitlab-14-0-8-released/">GitLab Patch Release: 14.0.8
+</a></li>
+<li>
+<time>
+Aug 23, 2021
+</time>
+<a href="/releases/2021/08/23/gitlab-14-2-1-released/">GitLab Patch Release: 14.2.1
+</a></li>
+<li>
+<time>
+Aug 17, 2021
+</time>
+<a href="/releases/2021/08/17/gitlab-14-1-3-released/">GitLab Patch Release: 14.1.3
+</a></li>
+<li>
+<time>
+Aug 10, 2021
+</time>
+<a href="/releases/2021/08/10/gitlab-13-12-10-released/">GitLab Patch Release: 13.12.10
+</a></li>
+<li>
+<time>
+Jul 28, 2021
+</time>
+<a href="/releases/2021/07/28/gitlab-14-1-1-released/">GitLab Patch Release: 14.1.1
+</a></li>
+<li>
+<time>
+Jul 20, 2021
+</time>
+<a href="/releases/2021/07/20/gitlab-14-0-6-released/">GitLab Patch Release: 14.0.6
+</a></li>
+<li>
+<time>
+Jul 8, 2021
+</time>
+<a href="/releases/2021/07/08/gitlab-14-0-5-released/">GitLab Patch Release: 14.0.5
+</a></li>
+<li>
+<time>
+Jul 6, 2021
+</time>
+<a href="/releases/2021/07/06/gitlab-14-0-3-released/">GitLab Patch Release: 14.0.3
+</a></li>
+<li>
+<time>
+Jul 5, 2021
+</time>
+<a href="/releases/2021/07/05/gitlab-13-12-7-released/">GitLab Patch Release: 13.12.7
+</a></li>
+<li>
+<time>
+Jun 24, 2021
+</time>
+<a href="/releases/2021/06/24/gitlab-14-0-1-released/">GitLab Patch Release: 14.0.1
+</a></li>
+<li>
+<time>
+Jun 21, 2021
+</time>
+<a href="/releases/2021/06/21/gitlab-13-12-5-released/">GitLab Patch Release: 13.12.5
+</a></li>
+<li>
+<time>
+Jun 14, 2021
+</time>
+<a href="/releases/2021/06/14/gitlab-13-12-4-released/">GitLab Patch Release: 13.12.4
+</a></li>
+<li>
+<time>
+Jun 7, 2021
+</time>
+<a href="/releases/2021/06/07/gitlab-13-12-3-released/">GitLab Patch Release: 13.12.3
+</a></li>
+<li>
+<time>
+May 25, 2021
+</time>
+<a href="/releases/2021/05/25/gitlab-13-12-1-released/">GitLab Patch Release: 13.12.1
+</a></li>
+<li>
+<time>
+May 14, 2021
+</time>
+<a href="/releases/2021/05/14/gitlab-13-11-4-released/">GitLab Patch Release: 13.11.4
+</a></li>
+<li>
+<time>
+Apr 30, 2021
+</time>
+<a href="/releases/2021/04/30/gitlab-13-11-3-released/">GitLab Patch Release: 13.11.3
+</a></li>
+<li>
+<time>
+Apr 23, 2021
+</time>
+<a href="/releases/2021/04/23/gitlab-13-11-1-released/">GitLab Patch Release: 13.11.1
+</a></li>
+<li>
+<time>
+Apr 1, 2021
+</time>
+<a href="/releases/2021/04/01/gitlab-13-10-2-released/">GitLab Patch Release: 13.10.2
+</a></li>
+<li>
+<time>
+Mar 8, 2021
+</time>
+<a href="/releases/2021/03/08/gitlab-13-9-3-released/">GitLab Patch Release: 13.9.3
+</a></li>
+<li>
+<time>
+Feb 23, 2021
+</time>
+<a href="/releases/2021/02/23/gitlab-13-9-1-released/">GitLab Patch Release: 13.9.1
+</a></li>
+<li>
+<time>
+Feb 5, 2021
+</time>
+<a href="/releases/2021/02/05/gitlab-13-8-3-released/">GitLab Patch Release: 13.8.3
+</a></li>
+<li>
+<time>
+Jan 26, 2021
+</time>
+<a href="/releases/2021/01/26/gitlab-13-8-1-released/">GitLab Patch Release: 13.8.1
+</a></li>
+<li>
+<time>
+Jan 25, 2021
+</time>
+<a href="/releases/2021/01/25/gitlab-13-7-5-released/">GitLab Patch Release: 13.7.5
+</a></li>
+<li>
+<time>
+Jan 8, 2021
+</time>
+<a href="/releases/2021/01/08/gitlab-13-7-3-released/">GitLab Patch Release: 13.7.3
+</a></li>
+<li>
+<time>
+Dec 23, 2020
+</time>
+<a href="/releases/2020/12/23/gitlab-13-7-1-released/">GitLab Patch Release: 13.7.1
+</a></li>
+<li>
+<time>
+Dec 10, 2020
+</time>
+<a href="/releases/2020/12/10/gitlab-13-6-3-released/">GitLab Patch Release: 13.6.3
+</a></li>
+<li>
+<time>
+Nov 23, 2020
+</time>
+<a href="/releases/2020/11/23/gitlab-13-6-1-released/">GitLab Patch Release: 13.6.1
+</a></li>
+<li>
+<time>
+Nov 13, 2020
+</time>
+<a href="/releases/2020/11/13/gitlab-13-5-4-released/">GitLab Patch Release: 13.5.4
+</a></li>
+<li>
+<time>
+Nov 3, 2020
+</time>
+<a href="/releases/2020/11/03/gitlab-13-5-3-released/">GitLab Patch Release: 13.5.3 and 13.4.6
+</a></li>
+<li>
+<time>
+Oct 23, 2020
+</time>
+<a href="/releases/2020/10/23/gitlab-13-3-8-released/">GitLab Patch Release: 13.3.8
+</a></li>
+<li>
+<time>
+Oct 22, 2020
+</time>
+<a href="/releases/2020/10/22/gitlab-13-5-1-released/">GitLab Patch Release: 13.5.1
+</a></li>
+<li>
+<time>
+Oct 15, 2020
+</time>
+<a href="/releases/2020/10/15/gitlab-13-4-4-released/">GitLab Patch Release: 13.4.4
+</a></li>
+<li>
+<time>
+Oct 5, 2020
+</time>
+<a href="/releases/2020/10/05/gitlab-13-4-3-released/">GitLab Patch Release: 13.4.3
+</a></li>
+<li>
+<time>
+Sep 24, 2020
+</time>
+<a href="/releases/2020/09/24/gitlab-13-4-1-released/">GitLab Patch Release: 13.4.1
+</a></li>
+<li>
+<time>
+Sep 14, 2020
+</time>
+<a href="/releases/2020/09/14/gitlab-13-3-6-released/">GitLab Patch Release: 13.3.6
+</a></li>
+<li>
+<time>
+Sep 4, 2020
+</time>
+<a href="/releases/2020/09/04/gitlab-13-3-5-released/">GitLab Patch Release: 13.3.5, 13.2.9 and 13.1.11
+</a></li>
+<li>
+<time>
+Aug 28, 2020
+</time>
+<a href="/releases/2020/08/28/gitlab-13-3-2-released/">GitLab Patch Release: 13.3.2
+</a></li>
+<li>
+<time>
+Aug 25, 2020
+</time>
+<a href="/releases/2020/08/25/gitlab-13-3-1-released/">GitLab Patch Release: 13.3.1
+</a></li>
+<li>
+<time>
+Aug 11, 2020
+</time>
+<a href="/releases/2020/08/11/gitlab-13-2-4-released/">GitLab Patch Release: 13.2.4
+</a></li>
+<li>
+<time>
+Jul 30, 2020
+</time>
+<a href="/releases/2020/07/30/gitlab-13-2-2-released/">GitLab Patch Release: 13.2.2
+</a></li>
+<li>
+<time>
+Jul 24, 2020
+</time>
+<a href="/releases/2020/07/24/gitlab-13-1-5-released/">GitLab Patch Release: 13.1.5
+</a></li>
+<li>
+<time>
+Jul 24, 2020
+</time>
+<a href="/releases/2020/07/24/gitlab-13-2-1-released/">GitLab Patch Release: 13.2.1
+</a></li>
+<li>
+<time>
+Jul 9, 2020
+</time>
+<a href="/releases/2020/07/09/gitlab-13-0-10-released/">GitLab Patch Release: 13.0.10
+</a></li>
+<li>
+<time>
+Jul 9, 2020
+</time>
+<a href="/releases/2020/07/09/gitlab-13-1-4-released/">GitLab Patch Release: 13.1.4
+</a></li>
+<li>
+<time>
+Jun 25, 2020
+</time>
+<a href="/releases/2020/06/25/gitlab-12-10-12-released/">GitLab Patch Release: 12.10.12
+</a></li>
+<li>
+<time>
+Jun 25, 2020
+</time>
+<a href="/releases/2020/06/25/gitlab-13-0-7-released/">GitLab Patch Release: 13.0.7
+</a></li>
+<li>
+<time>
+Jun 24, 2020
+</time>
+<a href="/releases/2020/06/24/gitlab-13-1-1-released/">GitLab Patch Release: 13.1.1
+</a></li>
+<li>
+<time>
+Jun 4, 2020
+</time>
+<a href="/releases/2020/06/04/gitlab-12-10-10-released/">GitLab Patch Release: 12.10.10
+</a></li>
+<li>
+<time>
+Jun 4, 2020
+</time>
+<a href="/releases/2020/06/04/gitlab-13-0-5-released/">GitLab Patch Release: 13.0.5
+</a></li>
+<li>
+<time>
+May 29, 2020
+</time>
+<a href="/releases/2020/05/29/gitlab-12-10-8-released/">GitLab Patch Release: 12.10.8
+</a></li>
+<li>
+<time>
+May 29, 2020
+</time>
+<a href="/releases/2020/05/29/gitlab-13-0-3-released/">GitLab Patch Release: 13.0.3
+</a></li>
+<li>
+<time>
+May 15, 2020
+</time>
+<a href="/releases/2020/05/15/gitlab-12-10-6-released/">GitLab Patch Release: 12.10.6
+</a></li>
+<li>
+<time>
+May 13, 2020
+</time>
+<a href="/releases/2020/05/13/gitlab-12-10-5-released/">GitLab Patch Release: 12.10.5 and 12.9.7
+</a></li>
+<li>
+<time>
+May 4, 2020
+</time>
+<a href="/releases/2020/05/04/gitlab-12-10-3-released/">GitLab Patch Release: 12.10.3
+</a></li>
+<li>
+<time>
+Apr 24, 2020
+</time>
+<a href="/releases/2020/04/24/gitlab-12-10-1-released/">GitLab Patch Release: 12.10.1
+</a></li>
+<li>
+<time>
+Apr 20, 2020
+</time>
+<a href="/releases/2020/04/20/gitlab-12-9-4-released/">GitLab Patch Release: 12.9.4
+</a></li>
+<li>
+<time>
+Mar 31, 2020
+</time>
+<a href="/releases/2020/03/31/gitlab-12-9-2-released/">GitLab Patch Release: 12.9.2
+</a></li>
+<li>
+<time>
+Mar 16, 2020
+</time>
+<a href="/releases/2020/03/16/gitlab-12-8-7-released/">GitLab Patch Release: 12.8.7
+</a></li>
+<li>
+<time>
+Mar 9, 2020
+</time>
+<a href="/releases/2020/03/09/gitlab-12-8-5-released/">GitLab Patch Release: 12.8.5
+</a></li>
+<li>
+<time>
+Feb 24, 2020
+</time>
+<a href="/releases/2020/02/24/gitlab-12-8-1-released/">GitLab Patch Release: 12.8.1
+</a></li>
+<li>
+<time>
+Jan 31, 2020
+</time>
+<a href="/releases/2020/01/31/gitlab-12-7-5-released/">GitLab Patch Release: 12.7.5
+</a></li>
+<li>
+<time>
+Jan 24, 2020
+</time>
+<a href="/releases/2020/01/24/gitlab-12-7-2-released/">GitLab Patch Release: 12.7.2
+</a></li>
+<li>
+<time>
+Jan 9, 2020
+</time>
+<a href="/releases/2020/01/09/gitlab-12-6-3-released/">GitLab Patch Release: 12.6.3
+</a></li>
+<li>
+<time>
+Dec 27, 2019
+</time>
+<a href="/releases/2019/12/27/gitlab-12-6-1-released/">GitLab Patch Release: 12.6.1
+</a></li>
+<li>
+<time>
+Dec 17, 2019
+</time>
+<a href="/releases/2019/12/17/gitlab-12-5-5-released/">GitLab Patch Release: 12.5.5
+</a></li>
+<li>
+<time>
+Dec 16, 2019
+</time>
+<a href="/releases/2019/12/16/gitlab-12-2-12-release/">GitLab Patch Release: 12.0.12, 12.1.17, and 12.2.12
+</a></li>
+<li>
+<time>
+Dec 3, 2019
+</time>
+<a href="/releases/2019/12/03/gitlab-12-5-3-released/">GitLab Patch Release: 12.5.3
+</a></li>
+<li>
+<time>
+Nov 18, 2019
+</time>
+<a href="/releases/2019/11/18/gitlab-12-4-3-released/">GitLab Patch Release: 12.4.3
+</a></li>
+<li>
+<time>
+Nov 4, 2019
+</time>
+<a href="/releases/2019/11/04/gitlab-12-4-2-released/">GitLab Patch Release: 12.4.2
+</a></li>
+<li>
+<time>
+Oct 3, 2019
+</time>
+<a href="/releases/2019/10/03/gitlab-12-dot-3-dot-4-released/">GitLab Patch Release: 12.3.4
+</a></li>
+<li>
+<time>
+Sep 24, 2019
+</time>
+<a href="/releases/2019/09/24/gitlab-12-3-1-released/">GitLab Patch Release: 12.3.1
+</a></li>
+<li>
+<time>
+Sep 19, 2019
+</time>
+<a href="/releases/2019/09/19/gitlab-12-1-11-released/">GitLab Patch Release: 12.1.11
+</a></li>
+<li>
+<time>
+Sep 2, 2019
+</time>
+<a href="/releases/2019/09/02/gitlab-12-2-4-released/">GitLab Patch Release: 12.2.4
+</a></li>
+<li>
+<time>
+Aug 23, 2019
+</time>
+<a href="/releases/2019/08/23/gitlab-12-2-1-released/">GitLab Patch Release: 12.2.1
+</a></li>
+<li>
+<time>
+Aug 6, 2019
+</time>
+<a href="/releases/2019/08/06/gitlab-12-1-4-released/">GitLab Patch Release: 12.1.4
+</a></li>
+<li>
+<time>
+Jul 31, 2019
+</time>
+<a href="/releases/2019/07/31/gitlab-12-1-3-released/">GitLab Patch Release: 12.1.3
+</a></li>
+<li>
+<time>
+Jul 24, 2019
+</time>
+<a href="/releases/2019/07/24/gitlab-12-1-1-released/">GitLab Patch Release: 12.1.1
+</a></li>
+<li>
+<time>
+Jul 23, 2019
+</time>
+<a href="/releases/2019/07/23/bugin12-1-0/">12.1.0 Bug: Self-managed users get an incorrect notification to purchase CI minutes on GitLab.com
+</a></li>
+<li>
+<time>
+Jun 26, 2019
+</time>
+<a href="/releases/2019/06/26/gitlab-12-0-2-11-11-4-11-10-7-released/">GitLab Patch Release: 12.0.2, 11.11.4, 11.10.7
+</a></li>
+<li>
+<time>
+Jun 25, 2019
+</time>
+<a href="/releases/2019/06/25/gitlab-12-0-1-released/">GitLab Patch Release: 12.0.1
+</a></li>
+<li>
+<time>
+Jun 10, 2019
+</time>
+<a href="/releases/2019/06/10/gitlab-11-11-3-released/">GitLab Patch Release: 11.11.3
+</a></li>
+<li>
+<time>
+Jun 5, 2019
+</time>
+<a href="/releases/2019/06/05/gitlab-11-10-6-released/">GitLab Patch Release: 11.10.6
+</a></li>
+<li>
+<time>
+Jun 5, 2019
+</time>
+<a href="/releases/2019/06/05/gitlab-11-11-2-released/">GitLab Patch Release: 11.11.2
+</a></li>
+<li>
+<time>
+May 1, 2019
+</time>
+<a href="/releases/2019/05/01/gitlab-11-10-4-released/">GitLab Patch Release: 11.10.4
+</a></li>
+<li>
+<time>
+Apr 24, 2019
+</time>
+<a href="/releases/2019/04/24/gitlab-11-10-1-released/">GitLab Patch Release: 11.10.1
+</a></li>
+<li>
+<time>
+Apr 24, 2019
+</time>
+<a href="/releases/2019/04/24/gitlab-11-5-11-released/">GitLab Patch Release: 11.5.11, 11.6.11, 11.7.12, 11.8.8, 11.9.9
+</a></li>
+<li>
+<time>
+Apr 11, 2019
+</time>
+<a href="/releases/2019/04/11/gitlab-11-9-8-released/">GitLab Patch Release: 11.9.8
+</a></li>
+<li>
+<time>
+Apr 4, 2019
+</time>
+<a href="/releases/2019/04/04/gitlab-11-9-6-released/">GitLab Patch Release: 11.9.6
+</a></li>
+<li>
+<time>
+Mar 26, 2019
+</time>
+<a href="/releases/2019/03/26/gitlab-11-9-1-released/">GitLab Patch Release: 11.9.1
+</a></li>
+<li>
+<time>
+Mar 14, 2019
+</time>
+<a href="/releases/2019/03/14/gitlab-11-8-2-released/">GitLab Patch Release: 11.8.2
+</a></li>
+<li>
+<time>
+Feb 7, 2019
+</time>
+<a href="/releases/2019/02/07/gitlab-11-7-5-released/">GitLab Patch Release: 11.7.5
+</a></li>
+<li>
+<time>
+Jan 17, 2019
+</time>
+<a href="/releases/2019/01/17/gitlab-11-6-5-released/">GitLab Patch Release: 11.6.5
+</a></li>
+<li>
+<time>
+Jan 5, 2019
+</time>
+<a href="/releases/2019/01/05/gitlab-11-6-3-released/">GitLab Patch Release: 11.6.3
+</a></li>
+<li>
+<time>
+Jan 3, 2019
+</time>
+<a href="/releases/2019/01/03/gitlab-11-6-2-released/">GitLab Patch Release: 11.6.2
+</a></li>
+<li>
+<time>
+Dec 4, 2018
+</time>
+<a href="/releases/2018/12/04/gitlab-11-4-9-released/">GitLab Patch Release: 11.4.9
+</a></li>
+<li>
+<time>
+Dec 4, 2018
+</time>
+<a href="/releases/2018/12/04/gitlab-11-5-2-released/">GitLab Patch Release: 11.5.2
+</a></li>
+<li>
+<time>
+Nov 21, 2018
+</time>
+<a href="/releases/2018/11/21/gitlab-11-4-7-released/">GitLab Patch Release: 11.4.7
+</a></li>
+<li>
+<time>
+Nov 5, 2018
+</time>
+<a href="/releases/2018/11/05/gitlab-11-4-5-released/">GitLab Patch Release: 11.4.5
+</a></li>
+<li>
+<time>
+Oct 4, 2018
+</time>
+<a href="/releases/2018/10/04/gitlab-11-3-3-released/">GitLab Patch Release: 11.3.3
+</a></li>
+<li>
+<time>
+Jun 7, 2018
+</time>
+<a href="/releases/2018/06/07/gitlab-10-8-4-released/">GitLab Patch Release: 10.8.4
+</a></li>
+<li>
+<time>
+Jun 1, 2018
+</time>
+<a href="/releases/2018/06/01/gitlab-10-8-3-released/">GitLab Patch Release: 10.8.3
+</a></li>
+<li>
+<time>
+May 24, 2018
+</time>
+<a href="/releases/2018/05/24/gitlab-10-8-1-released/">GitLab Patch Release: 10.8.1
+</a></li>
+<li>
+<time>
+May 22, 2018
+</time>
+<a href="/releases/2018/05/22/gitlab-10-7-4-released/">GitLab Patch Release: 10.7.4
+</a></li>
+<li>
+<time>
+May 3, 2018
+</time>
+<a href="/releases/2018/05/03/gitlab-10-7-3-released/">GitLab Patch Release: 10.7.3
+</a></li>
+<li>
+<time>
+Apr 23, 2018
+</time>
+<a href="/releases/2018/04/23/gitlab-10-7-1-released/">GitLab Patch Release: 10.7.1
+</a></li>
+<li>
+<time>
+Apr 9, 2018
+</time>
+<a href="/releases/2018/04/09/gitlab-10-6-4-released/">GitLab Patch Release: 10.6.4
+</a></li>
+<li>
+<time>
+Mar 29, 2018
+</time>
+<a href="/releases/2018/03/29/gitlab-10-6-2-released/">GitLab Patch Release: 10.6.2
+</a></li>
+<li>
+<time>
+Mar 28, 2018
+</time>
+<a href="/releases/2018/03/28/gitlab-10-6-1-released/">GitLab Patch Release: 10.6.1
+</a></li>
+<li>
+<time>
+Mar 19, 2018
+</time>
+<a href="/releases/2018/03/19/gitlab-10-5-5-released/">GitLab Patch Release: 10.5.5
+</a></li>
+<li>
+<time>
+Mar 9, 2018
+</time>
+<a href="/releases/2018/03/09/gitlab-10-5-4-released/">GitLab Patch Release: 10.5.4
+</a></li>
+<li>
+<time>
+Feb 27, 2018
+</time>
+<a href="/releases/2018/02/27/gitlab-10-5-2-released/">GitLab Patch Release: 10.5.2
+</a></li>
+<li>
+<time>
+Feb 22, 2018
+</time>
+<a href="/releases/2018/02/22/gitlab-10-5-1-released/">GitLab Patch Release: 10.5.1
+</a></li>
+<li>
+<time>
+Feb 16, 2018
+</time>
+<a href="/releases/2018/02/16/gitlab-10-dot-4-dot-4-released/">GitLab Patch Release: 10.4.4
+</a></li>
+<li>
+<time>
+Jan 31, 2018
+</time>
+<a href="/releases/2018/01/31/gitlab-10-dot-4-dot-2-released/">GitLab Patch Release: 10.4.2
+</a></li>
+<li>
+<time>
+Jan 26, 2018
+</time>
+<a href="/releases/2018/01/26/gitlab-10-dot-4-dot-1-released/">GitLab Patch Release: 10.4.1
+</a></li>
+<li>
+<time>
+Jan 23, 2018
+</time>
+<a href="/releases/2018/01/23/gitlab-10-dot-3-dot-6-released/">GitLab Patch Release: 10.3.6
+</a></li>
+<li>
+<time>
+Jan 18, 2018
+</time>
+<a href="/releases/2018/01/18/gitlab-10-3-5-released/">GitLab 10.3.5, 10.2.7, and 10.1.7 released
+</a></li>
+<li>
+<time>
+Jan 2, 2018
+</time>
+<a href="/releases/2018/01/02/gitlab-10-3-3-released/">GitLab Patch Release: 10.3.3
+</a></li>
+<li>
+<time>
+Dec 28, 2017
+</time>
+<a href="/releases/2017/12/28/gitlab-10-3-2-released/">GitLab Patch Release: 10.3.2
+</a></li>
+<li>
+<time>
+Dec 27, 2017
+</time>
+<a href="/releases/2017/12/27/gitlab-10-3-1-released/">GitLab Patch Release: 10.3.1
+</a></li>
+<li>
+<time>
+Dec 18, 2017
+</time>
+<a href="/releases/2017/12/18/gitlab-10-2-5-released/">GitLab Patch Release: 10.2.5
+</a></li>
+<li>
+<time>
+Dec 8, 2017
+</time>
+<a href="/releases/2017/12/08/gitlab-10-dot-2-dot-4-security-release/">GitLab 10.2.4, 10.1.5, and 10.0.7 Released
+</a></li>
+<li>
+<time>
+Dec 5, 2017
+</time>
+<a href="/releases/2017/12/05/gitlab-10-2-3-released/">GitLab Patch Release: 10.2.3
+</a></li>
+<li>
+<time>
+Nov 28, 2017
+</time>
+<a href="/releases/2017/11/28/gitlab-10-2-2-released/">GitLab Patch Release: 10.2.2
+</a></li>
+<li>
+<time>
+Nov 22, 2017
+</time>
+<a href="/releases/2017/11/22/gitlab-10-2-1-released/">GitLab Patch Release: 10.2.1
+</a></li>
+<li>
+<time>
+Nov 15, 2017
+</time>
+<a href="/releases/2017/11/15/gitlab-10-dot-1-dot-4-released/">GitLab Patch Release: 10.1.4
+</a></li>
+<li>
+<time>
+Nov 10, 2017
+</time>
+<a href="/releases/2017/11/10/gitlab-10-dot-1-dot-3-released/">GitLab Patch Release: 10.1.3
+</a></li>
+<li>
+<time>
+Nov 8, 2017
+</time>
+<a href="/releases/2017/11/08/gitlab-10-dot-1-dot-2-security-release/">GitLab 10.1.2, 10.0.6, and 9.5.10 released
+</a></li>
+<li>
+<time>
+Nov 3, 2017
+</time>
+<a href="/releases/2017/11/03/gitlab-10-dot-0-dot-5-released/">GitLab Patch Release: 10.0.5
+</a></li>
+<li>
+<time>
+Nov 1, 2017
+</time>
+<a href="/releases/2017/11/01/gitlab-10-dot-1-dot-1-released/">GitLab Patch Release: 10.1.1
+</a></li>
+<li>
+<time>
+Oct 17, 2017
+</time>
+<a href="/releases/2017/10/17/gitlab-10-dot-0-dot-4-security-release/">GitLab 10.0.4, 9.5.9, and 9.4.7 released
+</a></li>
+<li>
+<time>
+Oct 5, 2017
+</time>
+<a href="/releases/2017/10/05/gitlab-10-dot-0-dot-3-released/">GitLab Patch Release: 10.0.3
+</a></li>
+<li>
+<time>
+Oct 4, 2017
+</time>
+<a href="/releases/2017/10/04/gitlab-9-dot-5-dot-8-released/">GitLab Patch Release: 9.5.8
+</a></li>
+<li>
+<time>
+Oct 3, 2017
+</time>
+<a href="/releases/2017/10/03/gitlab-9-dot-5-dot-7-released/">GitLab Patch Release: 9.5.7
+</a></li>
+<li>
+<time>
+Sep 28, 2017
+</time>
+<a href="/releases/2017/09/28/gitlab-9-dot-5-dot-6-released/">GitLab Patch Release: 9.5.6
+</a></li>
+<li>
+<time>
+Sep 27, 2017
+</time>
+<a href="/releases/2017/09/27/gitlab-10-dot-0-dot-2-released/">GitLab Patch Release: 10.0.2
+</a></li>
+<li>
+<time>
+Sep 24, 2017
+</time>
+<a href="/releases/2017/09/24/gitlab-10-dot-0-dot-1-released/">GitLab Patch Release: 10.0.1
+</a></li>
+<li>
+<time>
+Sep 18, 2017
+</time>
+<a href="/releases/2017/09/18/gitlab-9-dot-5-dot-5-released/">GitLab Patch Release: 9.5.5
+</a></li>
+<li>
+<time>
+Sep 7, 2017
+</time>
+<a href="/releases/2017/09/07/gitlab-9-dot-5-dot-4-security-release/">GitLab 9.5.4, 9.4.6, and 9.3.11 released
+</a></li>
+<li>
+<time>
+Sep 4, 2017
+</time>
+<a href="/releases/2017/09/04/gitlab-9-dot-5-dot-3-released/">GitLab Patch Release: 9.5.3
+</a></li>
+<li>
+<time>
+Aug 28, 2017
+</time>
+<a href="/releases/2017/08/28/gitlab-9-dot-5-dot-2-released/">GitLab Patch Release: 9.5.2
+</a></li>
+<li>
+<time>
+Aug 14, 2017
+</time>
+<a href="/releases/2017/08/14/gitlab-9-dot-4-dot-5-released/">GitLab Patch Release: 9.4.5
+</a></li>
+<li>
+<time>
+Aug 3, 2017
+</time>
+<a href="/releases/2017/08/03/recent-bug-could-enable-signups/">9.3.7 Patch Release Update - Security Addendum
+</a></li>
+<li>
+<time>
+Aug 1, 2017
+</time>
+<a href="/releases/2017/08/01/gitlab-9-dot-4-dot-3-released/">GitLab Patch Release: 9.4.3
+</a></li>
+<li>
+<time>
+Jul 28, 2017
+</time>
+<a href="/releases/2017/07/28/gitlab-9-dot-4-dot-2-released/">GitLab Patch Release: 9.4.2
+</a></li>
+<li>
+<time>
+Jul 25, 2017
+</time>
+<a href="/releases/2017/07/25/gitlab-9-dot-4-dot-1-released/">GitLab Patch Release: 9.4.1
+</a></li>
+<li>
+<time>
+Jul 20, 2017
+</time>
+<a href="/releases/2017/07/20/gitlab-9-dot-3-dot-9-released/">GitLab 9.3.9, 9.2.9, 9.1.9 and 9.0.12 released
+</a></li>
+<li>
+<time>
+Jul 19, 2017
+</time>
+<a href="/releases/2017/07/19/gitlab-9-dot-3-dot-8-released/">GitLab 9.3.8, 9.2.8, 9.1.8, 9.0.11, and 8.17.7 released
+</a></li>
+<li>
+<time>
+Jul 18, 2017
+</time>
+<a href="/releases/2017/07/18/gitlab-9-dot-3-dot-7-released/">GitLab Patch Release: 9.3.7
+</a></li>
+<li>
+<time>
+Jul 11, 2017
+</time>
+<a href="/releases/2017/07/11/gitlab-9-dot-3-dot-6-released/">GitLab Patch Release: 9.3.6
+</a></li>
+<li>
+<time>
+Jul 5, 2017
+</time>
+<a href="/releases/2017/07/05/gitlab-9-dot-3-dot-5-released/">GitLab Patch Release: 9.3.5
+</a></li>
+<li>
+<time>
+Jul 4, 2017
+</time>
+<a href="/releases/2017/07/04/gitlab-9-dot-3-dot-4-released/">GitLab Patch Release: 9.3.4
+</a></li>
+<li>
+<time>
+Jun 28, 2017
+</time>
+<a href="/releases/2017/06/28/gitlab-9-dot-3-dot-2-released/">GitLab Patch Release: 9.3.2
+</a></li>
+<li>
+<time>
+Jun 27, 2017
+</time>
+<a href="/releases/2017/06/27/gitlab-9-dot-3-dot-1-released/">GitLab Patch Release: 9.3.1
+</a></li>
+<li>
+<time>
+Jun 21, 2017
+</time>
+<a href="/releases/2017/06/21/gitlab-9-dot-2-dot-7-released/">GitLab Patch Release: 9.2.7
+</a></li>
+<li>
+<time>
+Jun 15, 2017
+</time>
+<a href="/releases/2017/06/15/gitlab-9-dot-2-dot-6-released/">GitLab Patch Release: 9.2.6
+</a></li>
+<li>
+<time>
+Jun 7, 2017
+</time>
+<a href="/releases/2017/06/07/gitlab-9-dot-2-dot-5-security-release/">GitLab 9.2.5, 9.1.7, and 9.0.10 released
+</a></li>
+</ul>
+<h3 id=releases>Posts tagged ‘releases’</h3>
+<ul class='article-list list-unstyled'>
+<li>
+<time>
+May 9, 2024
+</time>
+<a href="/releases/2024/05/09/gitlab-16-9-8-released/">GitLab Patch Release: 16.9.8
+</a></li>
+<li>
+<time>
+Apr 15, 2024
+</time>
+<a href="/releases/2024/04/15/gitlab-16-10-3-released/">GitLab Patch Release: 16.10.3, 16.9.5, 16.8.7
+</a></li>
+<li>
+<time>
+Jan 12, 2024
+</time>
+<a href="/releases/2024/01/12/gitlab-16-7-3-released/">GitLab Patch Release: 16.7.3 16.6.5 16.5.7
+</a></li>
+<li>
+<time>
+Nov 14, 2023
+</time>
+<a href="/releases/2023/11/14/gitlab-16-5-2-released/">GitLab Patch Release: 16.5.2
+</a></li>
+<li>
+<time>
+Sep 12, 2023
+</time>
+<a href="/releases/2023/09/12/gitlab-16-2-6-released/">GitLab Patch Release: 16.2.6
+</a></li>
+<li>
+<time>
+Sep 12, 2023
+</time>
+<a href="/releases/2023/09/12/gitlab-16-3-3-released/">GitLab Patch Release: 16.3.3
+</a></li>
+<li>
+<time>
+Sep 5, 2023
+</time>
+<a href="/releases/2023/09/05/gitlab-16-3-2-released/">GitLab Patch Release: 16.3.2
+</a></li>
+<li>
+<time>
+Aug 11, 2023
+</time>
+<a href="/releases/2023/08/11/gitlab-16-2-4-released/">GitLab Patch Release: 16.2.4
+</a></li>
+<li>
+<time>
+Aug 3, 2023
+</time>
+<a href="/releases/2023/08/03/gitlab-16-1-4-released/">GitLab Patch Release: 16.1.4
+</a></li>
+<li>
+<time>
+Aug 3, 2023
+</time>
+<a href="/releases/2023/08/03/gitlab-16-2-3-released/">GitLab Patch Release: 16.2.3
+</a></li>
+<li>
+<time>
+Jul 27, 2023
+</time>
+<a href="/releases/2023/07/27/gitlab-15-11-13-released/">GitLab Patch Release: 15.11.13
+</a></li>
+<li>
+<time>
+Jul 25, 2023
+</time>
+<a href="/releases/2023/07/25/gitlab-16-2-1-released/">GitLab Patch Release: 16.2.1
+</a></li>
+<li>
+<time>
+Jul 17, 2023
+</time>
+<a href="/releases/2023/07/17/gitlab-15-11-12-released/">GitLab Patch Release: 15.11.12
+</a></li>
+<li>
+<time>
+Jun 16, 2023
+</time>
+<a href="/releases/2023/06/16/gitlab-16-0-5-released/">GitLab Patch Release: 16.0.5
+</a></li>
+<li>
+<time>
+Jun 15, 2023
+</time>
+<a href="/releases/2023/06/15/gitlab-15-11-9-released/">GitLab Patch Release: 15.11.9
+</a></li>
+<li>
+<time>
+Jun 8, 2023
+</time>
+<a href="/releases/2023/06/08/gitlab-16-0-4-released/">GitLab Patch Release: 16.0.4
+</a></li>
+<li>
+<time>
+Jun 7, 2023
+</time>
+<a href="/releases/2023/06/07/gitlab-15-11-8-released/">GitLab Patch Release: 15.11.8
+</a></li>
+<li>
+<time>
+Jun 7, 2023
+</time>
+<a href="/releases/2023/06/07/gitlab-16-0-3-released/">GitLab Patch Release: 16.0.3
+</a></li>
+<li>
+<time>
+May 24, 2023
+</time>
+<a href="/releases/2023/05/24/gitlab-15-11-6-released/">GitLab Patch Release: 15.11.6
+</a></li>
+<li>
+<time>
+May 19, 2023
+</time>
+<a href="/releases/2023/05/19/gitlab-15-11-5-released/">GitLab Patch Release: 15.11.5
+</a></li>
+<li>
+<time>
+May 17, 2023
+</time>
+<a href="/releases/2023/05/17/gitlab-15-11-4-released/">GitLab Patch Release: 15.11.4
+</a></li>
+<li>
+<time>
+Apr 21, 2023
+</time>
+<a href="/releases/2023/04/21/gitlab-15-10-4-15-9-5-released/">GitLab Patch Release: 15.10.4, 15.9.5
+</a></li>
+<li>
+<time>
+Apr 20, 2023
+</time>
+<a href="/releases/2023/04/20/gitlab-15-7-9-released/">GitLab Patch Release: 15.7.9
+</a></li>
+<li>
+<time>
+Apr 19, 2023
+</time>
+<a href="/releases/2023/04/19/gitlab-15-8-6-released/">GitLab Patch Release: 15.8.6
+</a></li>
+<li>
+<time>
+Apr 14, 2023
+</time>
+<a href="/releases/2023/04/14/gitlab-15-10-3-released/">GitLab Patch Release: 15.10.3
+</a></li>
+<li>
+<time>
+Apr 5, 2023
+</time>
+<a href="/releases/2023/04/05/gitlab-15-10-2-released/">GitLab Patch Release: 15.10.2
+</a></li>
+<li>
+<time>
+Mar 9, 2023
+</time>
+<a href="/releases/2023/03/09/gitlab-15-9-3-released/">GitLab Patch Release: 15.9.3
+</a></li>
+<li>
+<time>
+Feb 24, 2023
+</time>
+<a href="/releases/2023/02/24/gitlab-15-9-1-released/">GitLab Patch Release: 15.9.1
+</a></li>
+<li>
+<time>
+Feb 14, 2023
+</time>
+<a href="/releases/2023/02/14/gitlab-15-8-3-released/">GitLab Patch Release: 15.8.3
+</a></li>
+<li>
+<time>
+Jan 11, 2023
+</time>
+<a href="/releases/2023/01/11/gitlab-15-7-3-released/">GitLab Patch Release: 15.7.3
+</a></li>
+<li>
+<time>
+Jan 5, 2023
+</time>
+<a href="/releases/2023/01/05/gitlab-15-7-1-released/">GitLab Patch Release: 15.7.1
+</a></li>
+<li>
+<time>
+Dec 16, 2022
+</time>
+<a href="/releases/2022/12/16/gitlab-15-6-3-released/">GitLab Patch Release: 15.6.3
+</a></li>
+<li>
+<time>
+Dec 8, 2022
+</time>
+<a href="/releases/2022/12/08/gitlab-15-5-6-released/">GitLab Patch Release: 15.5.6
+</a></li>
+<li>
+<time>
+Dec 2, 2022
+</time>
+<a href="/releases/2022/12/02/gitlab-15-6-2-released/">GitLab Patch Release: 15.6.2
+</a></li>
+<li>
+<time>
+Nov 14, 2022
+</time>
+<a href="/releases/2022/11/14/gitlab-15-4-5-released/">GitLab Patch Release: 15.4.5
+</a></li>
+<li>
+<time>
+Nov 14, 2022
+</time>
+<a href="/releases/2022/11/14/gitlab-15-5-4-released/">GitLab Patch Release: 15.5.4
+</a></li>
+<li>
+<time>
+Nov 8, 2022
+</time>
+<a href="/releases/2022/11/08/gitlab-15-5-3-released/">GitLab Patch Release: 15.5.3
+</a></li>
+<li>
+<time>
+Oct 24, 2022
+</time>
+<a href="/releases/2022/10/24/gitlab-15-5-1-released/">GitLab Patch Release: 15.5.1
+</a></li>
+<li>
+<time>
+Oct 19, 2022
+</time>
+<a href="/releases/2022/10/19/gitlab-15-4-3-released/">GitLab Patch Release: 15.4.3
+</a></li>
+<li>
+<time>
+Oct 3, 2022
+</time>
+<a href="/releases/2022/10/03/gitlab-15-4-2-released/">GitLab Patch Release: 15.4.2
+</a></li>
+<li>
+<time>
+Sep 5, 2022
+</time>
+<a href="/releases/2022/09/05/gitlab-15-3-3-released/">GitLab Patch Release: 15.3.3
+</a></li>
+<li>
+<time>
+Aug 1, 2022
+</time>
+<a href="/releases/2022/08/01/gitlab-15-2-2-released/">GitLab Patch Release: 15.2.2
+</a></li>
+<li>
+<time>
+Jul 19, 2022
+</time>
+<a href="/releases/2022/07/19/gitlab-15-1-3-released/">GitLab Patch Release: 15.1.3
+</a></li>
+<li>
+<time>
+Jul 4, 2022
+</time>
+<a href="/releases/2022/07/04/gitlab-15-1-2-released/">GitLab Patch Release: 15.1.2
+</a></li>
+<li>
+<time>
+Jun 16, 2022
+</time>
+<a href="/releases/2022/06/16/gitlab-15-0-3-released/">GitLab Patch Release: 15.0.3
+</a></li>
+<li>
+<time>
+Jun 6, 2022
+</time>
+<a href="/releases/2022/06/06/gitlab-15-0-2-released/">GitLab Patch Release: 15.0.2
+</a></li>
+<li>
+<time>
+May 16, 2022
+</time>
+<a href="/releases/2022/05/16/gitlab-14-10-3-released/">GitLab Patch Release: 14.10.3
+</a></li>
+<li>
+<time>
+May 5, 2022
+</time>
+<a href="/releases/2022/05/05/gitlab-14-10-2-released/">GitLab Patch Release: 14.10.2
+</a></li>
+<li>
+<time>
+Apr 12, 2022
+</time>
+<a href="/releases/2022/04/12/gitlab-14-9-3-released/">GitLab Patch Release: 14.9.3
+</a></li>
+<li>
+<time>
+Apr 1, 2022
+</time>
+<a href="/releases/2022/04/01/gitlab-14-6-7-released/">GitLab Patch Release: 14.6.7
+</a></li>
+<li>
+<time>
+Mar 24, 2022
+</time>
+<a href="/releases/2022/03/24/gitlab-14-7-6-released/">GitLab Patch Release: 14.7.6
+</a></li>
+<li>
+<time>
+Mar 23, 2022
+</time>
+<a href="/releases/2022/03/23/gitlab-14-9-1-released/">GitLab Patch Release: 14.9.1
+</a></li>
+<li>
+<time>
+Mar 16, 2022
+</time>
+<a href="/releases/2022/03/16/gitlab-14-8-4-released/">GitLab Patch Release: 14.8.4
+</a></li>
+<li>
+<time>
+Mar 15, 2022
+</time>
+<a href="/releases/2022/03/15/gitlab-14-8-3-released/">GitLab Patch Release: 14.8.3
+</a></li>
+<li>
+<time>
+Mar 9, 2022
+</time>
+<a href="/releases/2022/03/09/gitlab-14-7-5-released/">GitLab Patch Release: 14.7.5
+</a></li>
+<li>
+<time>
+Mar 2, 2022
+</time>
+<a href="/releases/2022/03/02/gitlab-14-6-6-released/">GitLab Patch Release: 14.6.6
+</a></li>
+<li>
+<time>
+Feb 23, 2022
+</time>
+<a href="/releases/2022/02/23/gitlab-14-8-1-released/">GitLab Patch Release: 14.8.1
+</a></li>
+<li>
+<time>
+Feb 14, 2022
+</time>
+<a href="/releases/2022/02/14/gitlab-14-7-3-released/">GitLab Patch Release: 14.7.3
+</a></li>
+<li>
+<time>
+Feb 8, 2022
+</time>
+<a href="/releases/2022/02/08/gitlab-14-7-2-released/">GitLab Patch Release: 14.7.2
+</a></li>
+<li>
+<time>
+Jan 17, 2022
+</time>
+<a href="/releases/2022/01/17/gitlab-14-6-3-released/">GitLab Patch Release: 14.6.3
+</a></li>
+<li>
+<time>
+Jan 4, 2022
+</time>
+<a href="/releases/2022/01/04/gitlab-14-6-1-released/">GitLab Patch Release: 14.6.1
+</a></li>
+<li>
+<time>
+Dec 1, 2021
+</time>
+<a href="/releases/2021/12/01/gitlab-14-4-3-released/">GitLab Patch Release: 14.4.3
+</a></li>
+<li>
+<time>
+Dec 1, 2021
+</time>
+<a href="/releases/2021/12/01/gitlab-14-5-1-released/">GitLab Patch Release: 14.5.1
+</a></li>
+<li>
+<time>
+Nov 26, 2021
+</time>
+<a href="/releases/2021/11/26/gitlab-14-2-7-released/">GitLab Patch Release: 14.2.7
+</a></li>
+<li>
+<time>
+Nov 26, 2021
+</time>
+<a href="/releases/2021/11/26/gitlab-14-3-5-released/">GitLab Patch Release: 14.3.5
+</a></li>
+<li>
+<time>
+Nov 15, 2021
+</time>
+<a href="/releases/2021/11/15/gitlab-14-1-8-released/">GitLab Patch Release: 14.1.8
+</a></li>
+<li>
+<time>
+Nov 8, 2021
+</time>
+<a href="/releases/2021/11/08/gitlab-14-4-2-released/">GitLab Patch Release: 14.4.2
+</a></li>
+<li>
+<time>
+Nov 5, 2021
+</time>
+<a href="/releases/2021/11/05/gitlab-14-0-12-released/">GitLab Patch Release: 14.0.12
+</a></li>
+<li>
+<time>
+Nov 3, 2021
+</time>
+<a href="/releases/2021/11/03/gitlab-13-12-15-released/">GitLab Patch Release: 13.12.15
+</a></li>
+<li>
+<time>
+Oct 12, 2021
+</time>
+<a href="/releases/2021/10/12/gitlab-14-3-3-released/">GitLab Patch Release: 14.3.3
+</a></li>
+<li>
+<time>
+Oct 1, 2021
+</time>
+<a href="/releases/2021/10/01/gitlab-14-3-2-released/">GitLab Patch Release: 14.3.2
+</a></li>
+<li>
+<time>
+Sep 27, 2021
+</time>
+<a href="/releases/2021/09/27/gitlab-14-0-11-released/">GitLab Patch Release: 14.0.11
+</a></li>
+<li>
+<time>
+Sep 27, 2021
+</time>
+<a href="/releases/2021/09/27/gitlab-14-1-6-released/">GitLab Patch Release: 14.1.6
+</a></li>
+<li>
+<time>
+Sep 22, 2021
+</time>
+<a href="/releases/2021/09/22/gitlab-13-12-12-released/">GitLab Patch Release: 13.12.12
+</a></li>
+<li>
+<time>
+Sep 17, 2021
+</time>
+<a href="/releases/2021/09/17/gitlab-14-2-4-released/">GitLab Patch Release: 14.2.4
+</a></li>
+<li>
+<time>
+Sep 2, 2021
+</time>
+<a href="/releases/2021/09/02/gitlab-13-12-11-released/">GitLab Patch Release: 13.12.11
+</a></li>
+<li>
+<time>
+Sep 2, 2021
+</time>
+<a href="/releases/2021/09/02/gitlab-14-0-10-released/">GitLab Patch Release: 14.0.10 and 14.1.5
+</a></li>
+<li>
+<time>
+Sep 1, 2021
+</time>
+<a href="/releases/2021/09/01/gitlab-14-2-3-released/">GitLab Patch Release: 14.2.3
+</a></li>
+<li>
+<time>
+Aug 26, 2021
+</time>
+<a href="/releases/2021/08/26/gitlab-14-0-8-released/">GitLab Patch Release: 14.0.8
+</a></li>
+<li>
+<time>
+Aug 23, 2021
+</time>
+<a href="/releases/2021/08/23/gitlab-14-2-1-released/">GitLab Patch Release: 14.2.1
+</a></li>
+<li>
+<time>
+Aug 17, 2021
+</time>
+<a href="/releases/2021/08/17/gitlab-14-1-3-released/">GitLab Patch Release: 14.1.3
+</a></li>
+<li>
+<time>
+Aug 10, 2021
+</time>
+<a href="/releases/2021/08/10/gitlab-13-12-10-released/">GitLab Patch Release: 13.12.10
+</a></li>
+<li>
+<time>
+Jul 28, 2021
+</time>
+<a href="/releases/2021/07/28/gitlab-14-1-1-released/">GitLab Patch Release: 14.1.1
+</a></li>
+<li>
+<time>
+Jul 20, 2021
+</time>
+<a href="/releases/2021/07/20/gitlab-14-0-6-released/">GitLab Patch Release: 14.0.6
+</a></li>
+<li>
+<time>
+Jul 8, 2021
+</time>
+<a href="/releases/2021/07/08/gitlab-14-0-5-released/">GitLab Patch Release: 14.0.5
+</a></li>
+<li>
+<time>
+Jul 6, 2021
+</time>
+<a href="/releases/2021/07/06/gitlab-14-0-3-released/">GitLab Patch Release: 14.0.3
+</a></li>
+<li>
+<time>
+Jul 5, 2021
+</time>
+<a href="/releases/2021/07/05/gitlab-13-12-7-released/">GitLab Patch Release: 13.12.7
+</a></li>
+<li>
+<time>
+Jun 24, 2021
+</time>
+<a href="/releases/2021/06/24/gitlab-14-0-1-released/">GitLab Patch Release: 14.0.1
+</a></li>
+<li>
+<time>
+Jun 21, 2021
+</time>
+<a href="/releases/2021/06/21/gitlab-13-12-5-released/">GitLab Patch Release: 13.12.5
+</a></li>
+<li>
+<time>
+Jun 14, 2021
+</time>
+<a href="/releases/2021/06/14/gitlab-13-12-4-released/">GitLab Patch Release: 13.12.4
+</a></li>
+<li>
+<time>
+Jun 7, 2021
+</time>
+<a href="/releases/2021/06/07/gitlab-13-12-3-released/">GitLab Patch Release: 13.12.3
+</a></li>
+<li>
+<time>
+May 25, 2021
+</time>
+<a href="/releases/2021/05/25/gitlab-13-12-1-released/">GitLab Patch Release: 13.12.1
+</a></li>
+<li>
+<time>
+May 14, 2021
+</time>
+<a href="/releases/2021/05/14/gitlab-13-11-4-released/">GitLab Patch Release: 13.11.4
+</a></li>
+<li>
+<time>
+Apr 30, 2021
+</time>
+<a href="/releases/2021/04/30/gitlab-13-11-3-released/">GitLab Patch Release: 13.11.3
+</a></li>
+<li>
+<time>
+Apr 23, 2021
+</time>
+<a href="/releases/2021/04/23/gitlab-13-11-1-released/">GitLab Patch Release: 13.11.1
+</a></li>
+<li>
+<time>
+Apr 1, 2021
+</time>
+<a href="/releases/2021/04/01/gitlab-13-10-2-released/">GitLab Patch Release: 13.10.2
+</a></li>
+<li>
+<time>
+Mar 8, 2021
+</time>
+<a href="/releases/2021/03/08/gitlab-13-9-3-released/">GitLab Patch Release: 13.9.3
+</a></li>
+<li>
+<time>
+Feb 23, 2021
+</time>
+<a href="/releases/2021/02/23/gitlab-13-9-1-released/">GitLab Patch Release: 13.9.1
+</a></li>
+<li>
+<time>
+Feb 5, 2021
+</time>
+<a href="/releases/2021/02/05/gitlab-13-8-3-released/">GitLab Patch Release: 13.8.3
+</a></li>
+<li>
+<time>
+Jan 26, 2021
+</time>
+<a href="/releases/2021/01/26/gitlab-13-8-1-released/">GitLab Patch Release: 13.8.1
+</a></li>
+<li>
+<time>
+Jan 25, 2021
+</time>
+<a href="/releases/2021/01/25/gitlab-13-7-5-released/">GitLab Patch Release: 13.7.5
+</a></li>
+<li>
+<time>
+Jan 8, 2021
+</time>
+<a href="/releases/2021/01/08/gitlab-13-7-3-released/">GitLab Patch Release: 13.7.3
+</a></li>
+<li>
+<time>
+Dec 23, 2020
+</time>
+<a href="/releases/2020/12/23/gitlab-13-7-1-released/">GitLab Patch Release: 13.7.1
+</a></li>
+<li>
+<time>
+Dec 10, 2020
+</time>
+<a href="/releases/2020/12/10/gitlab-13-6-3-released/">GitLab Patch Release: 13.6.3
+</a></li>
+<li>
+<time>
+Nov 23, 2020
+</time>
+<a href="/releases/2020/11/23/gitlab-13-6-1-released/">GitLab Patch Release: 13.6.1
+</a></li>
+<li>
+<time>
+Nov 13, 2020
+</time>
+<a href="/releases/2020/11/13/gitlab-13-5-4-released/">GitLab Patch Release: 13.5.4
+</a></li>
+<li>
+<time>
+Nov 3, 2020
+</time>
+<a href="/releases/2020/11/03/gitlab-13-5-3-released/">GitLab Patch Release: 13.5.3 and 13.4.6
+</a></li>
+<li>
+<time>
+Oct 23, 2020
+</time>
+<a href="/releases/2020/10/23/gitlab-13-3-8-released/">GitLab Patch Release: 13.3.8
+</a></li>
+<li>
+<time>
+Oct 22, 2020
+</time>
+<a href="/releases/2020/10/22/gitlab-13-5-1-released/">GitLab Patch Release: 13.5.1
+</a></li>
+<li>
+<time>
+Oct 15, 2020
+</time>
+<a href="/releases/2020/10/15/gitlab-13-4-4-released/">GitLab Patch Release: 13.4.4
+</a></li>
+<li>
+<time>
+Oct 5, 2020
+</time>
+<a href="/releases/2020/10/05/gitlab-13-4-3-released/">GitLab Patch Release: 13.4.3
+</a></li>
+<li>
+<time>
+Sep 24, 2020
+</time>
+<a href="/releases/2020/09/24/gitlab-13-4-1-released/">GitLab Patch Release: 13.4.1
+</a></li>
+<li>
+<time>
+Sep 14, 2020
+</time>
+<a href="/releases/2020/09/14/gitlab-13-3-6-released/">GitLab Patch Release: 13.3.6
+</a></li>
+<li>
+<time>
+Sep 4, 2020
+</time>
+<a href="/releases/2020/09/04/gitlab-13-3-5-released/">GitLab Patch Release: 13.3.5, 13.2.9 and 13.1.11
+</a></li>
+<li>
+<time>
+Aug 28, 2020
+</time>
+<a href="/releases/2020/08/28/gitlab-13-3-2-released/">GitLab Patch Release: 13.3.2
+</a></li>
+<li>
+<time>
+Aug 25, 2020
+</time>
+<a href="/releases/2020/08/25/gitlab-13-3-1-released/">GitLab Patch Release: 13.3.1
+</a></li>
+<li>
+<time>
+Aug 11, 2020
+</time>
+<a href="/releases/2020/08/11/gitlab-13-2-4-released/">GitLab Patch Release: 13.2.4
+</a></li>
+<li>
+<time>
+Jul 30, 2020
+</time>
+<a href="/releases/2020/07/30/gitlab-13-2-2-released/">GitLab Patch Release: 13.2.2
+</a></li>
+<li>
+<time>
+Jul 24, 2020
+</time>
+<a href="/releases/2020/07/24/gitlab-13-1-5-released/">GitLab Patch Release: 13.1.5
+</a></li>
+<li>
+<time>
+Jul 24, 2020
+</time>
+<a href="/releases/2020/07/24/gitlab-13-2-1-released/">GitLab Patch Release: 13.2.1
+</a></li>
+<li>
+<time>
+Jul 9, 2020
+</time>
+<a href="/releases/2020/07/09/gitlab-13-0-10-released/">GitLab Patch Release: 13.0.10
+</a></li>
+<li>
+<time>
+Jul 9, 2020
+</time>
+<a href="/releases/2020/07/09/gitlab-13-1-4-released/">GitLab Patch Release: 13.1.4
+</a></li>
+<li>
+<time>
+Jun 25, 2020
+</time>
+<a href="/releases/2020/06/25/gitlab-12-10-12-released/">GitLab Patch Release: 12.10.12
+</a></li>
+<li>
+<time>
+Jun 25, 2020
+</time>
+<a href="/releases/2020/06/25/gitlab-13-0-7-released/">GitLab Patch Release: 13.0.7
+</a></li>
+<li>
+<time>
+Jun 24, 2020
+</time>
+<a href="/releases/2020/06/24/gitlab-13-1-1-released/">GitLab Patch Release: 13.1.1
+</a></li>
+<li>
+<time>
+Jun 4, 2020
+</time>
+<a href="/releases/2020/06/04/gitlab-12-10-10-released/">GitLab Patch Release: 12.10.10
+</a></li>
+<li>
+<time>
+Jun 4, 2020
+</time>
+<a href="/releases/2020/06/04/gitlab-13-0-5-released/">GitLab Patch Release: 13.0.5
+</a></li>
+<li>
+<time>
+May 29, 2020
+</time>
+<a href="/releases/2020/05/29/gitlab-12-10-8-released/">GitLab Patch Release: 12.10.8
+</a></li>
+<li>
+<time>
+May 29, 2020
+</time>
+<a href="/releases/2020/05/29/gitlab-13-0-3-released/">GitLab Patch Release: 13.0.3
+</a></li>
+<li>
+<time>
+May 15, 2020
+</time>
+<a href="/releases/2020/05/15/gitlab-12-10-6-released/">GitLab Patch Release: 12.10.6
+</a></li>
+<li>
+<time>
+May 13, 2020
+</time>
+<a href="/releases/2020/05/13/gitlab-12-10-5-released/">GitLab Patch Release: 12.10.5 and 12.9.7
+</a></li>
+<li>
+<time>
+May 4, 2020
+</time>
+<a href="/releases/2020/05/04/gitlab-12-10-3-released/">GitLab Patch Release: 12.10.3
+</a></li>
+<li>
+<time>
+Apr 24, 2020
+</time>
+<a href="/releases/2020/04/24/gitlab-12-10-1-released/">GitLab Patch Release: 12.10.1
+</a></li>
+<li>
+<time>
+Apr 20, 2020
+</time>
+<a href="/releases/2020/04/20/gitlab-12-9-4-released/">GitLab Patch Release: 12.9.4
+</a></li>
+<li>
+<time>
+Mar 31, 2020
+</time>
+<a href="/releases/2020/03/31/gitlab-12-9-2-released/">GitLab Patch Release: 12.9.2
+</a></li>
+<li>
+<time>
+Mar 16, 2020
+</time>
+<a href="/releases/2020/03/16/gitlab-12-8-7-released/">GitLab Patch Release: 12.8.7
+</a></li>
+<li>
+<time>
+Mar 9, 2020
+</time>
+<a href="/releases/2020/03/09/gitlab-12-8-5-released/">GitLab Patch Release: 12.8.5
+</a></li>
+<li>
+<time>
+Feb 24, 2020
+</time>
+<a href="/releases/2020/02/24/gitlab-12-8-1-released/">GitLab Patch Release: 12.8.1
+</a></li>
+<li>
+<time>
+Jan 31, 2020
+</time>
+<a href="/releases/2020/01/31/gitlab-12-7-5-released/">GitLab Patch Release: 12.7.5
+</a></li>
+<li>
+<time>
+Jan 24, 2020
+</time>
+<a href="/releases/2020/01/24/gitlab-12-7-2-released/">GitLab Patch Release: 12.7.2
+</a></li>
+<li>
+<time>
+Jan 9, 2020
+</time>
+<a href="/releases/2020/01/09/gitlab-12-6-3-released/">GitLab Patch Release: 12.6.3
+</a></li>
+<li>
+<time>
+Dec 27, 2019
+</time>
+<a href="/releases/2019/12/27/gitlab-12-6-1-released/">GitLab Patch Release: 12.6.1
+</a></li>
+<li>
+<time>
+Dec 17, 2019
+</time>
+<a href="/releases/2019/12/17/gitlab-12-5-5-released/">GitLab Patch Release: 12.5.5
+</a></li>
+<li>
+<time>
+Dec 16, 2019
+</time>
+<a href="/releases/2019/12/16/gitlab-12-2-12-release/">GitLab Patch Release: 12.0.12, 12.1.17, and 12.2.12
+</a></li>
+<li>
+<time>
+Dec 3, 2019
+</time>
+<a href="/releases/2019/12/03/gitlab-12-5-3-released/">GitLab Patch Release: 12.5.3
+</a></li>
+<li>
+<time>
+Nov 18, 2019
+</time>
+<a href="/releases/2019/11/18/gitlab-12-4-3-released/">GitLab Patch Release: 12.4.3
+</a></li>
+<li>
+<time>
+Nov 4, 2019
+</time>
+<a href="/releases/2019/11/04/gitlab-12-4-2-released/">GitLab Patch Release: 12.4.2
+</a></li>
+<li>
+<time>
+Oct 3, 2019
+</time>
+<a href="/releases/2019/10/03/gitlab-12-dot-3-dot-4-released/">GitLab Patch Release: 12.3.4
+</a></li>
+<li>
+<time>
+Sep 24, 2019
+</time>
+<a href="/releases/2019/09/24/gitlab-12-3-1-released/">GitLab Patch Release: 12.3.1
+</a></li>
+<li>
+<time>
+Sep 19, 2019
+</time>
+<a href="/releases/2019/09/19/gitlab-12-1-11-released/">GitLab Patch Release: 12.1.11
+</a></li>
+<li>
+<time>
+Sep 2, 2019
+</time>
+<a href="/releases/2019/09/02/gitlab-12-2-4-released/">GitLab Patch Release: 12.2.4
+</a></li>
+<li>
+<time>
+Aug 23, 2019
+</time>
+<a href="/releases/2019/08/23/gitlab-12-2-1-released/">GitLab Patch Release: 12.2.1
+</a></li>
+<li>
+<time>
+Aug 6, 2019
+</time>
+<a href="/releases/2019/08/06/gitlab-12-1-4-released/">GitLab Patch Release: 12.1.4
+</a></li>
+<li>
+<time>
+Jul 31, 2019
+</time>
+<a href="/releases/2019/07/31/gitlab-12-1-3-released/">GitLab Patch Release: 12.1.3
+</a></li>
+<li>
+<time>
+Jul 24, 2019
+</time>
+<a href="/releases/2019/07/24/gitlab-12-1-1-released/">GitLab Patch Release: 12.1.1
+</a></li>
+<li>
+<time>
+Jul 23, 2019
+</time>
+<a href="/releases/2019/07/23/bugin12-1-0/">12.1.0 Bug: Self-managed users get an incorrect notification to purchase CI minutes on GitLab.com
+</a></li>
+<li>
+<time>
+Jun 26, 2019
+</time>
+<a href="/releases/2019/06/26/gitlab-12-0-2-11-11-4-11-10-7-released/">GitLab Patch Release: 12.0.2, 11.11.4, 11.10.7
+</a></li>
+<li>
+<time>
+Jun 25, 2019
+</time>
+<a href="/releases/2019/06/25/gitlab-12-0-1-released/">GitLab Patch Release: 12.0.1
+</a></li>
+<li>
+<time>
+Jun 10, 2019
+</time>
+<a href="/releases/2019/06/10/gitlab-11-11-3-released/">GitLab Patch Release: 11.11.3
+</a></li>
+<li>
+<time>
+Jun 5, 2019
+</time>
+<a href="/releases/2019/06/05/gitlab-11-10-6-released/">GitLab Patch Release: 11.10.6
+</a></li>
+<li>
+<time>
+Jun 5, 2019
+</time>
+<a href="/releases/2019/06/05/gitlab-11-11-2-released/">GitLab Patch Release: 11.11.2
+</a></li>
+<li>
+<time>
+May 1, 2019
+</time>
+<a href="/releases/2019/05/01/gitlab-11-10-4-released/">GitLab Patch Release: 11.10.4
+</a></li>
+<li>
+<time>
+Apr 24, 2019
+</time>
+<a href="/releases/2019/04/24/gitlab-11-10-1-released/">GitLab Patch Release: 11.10.1
+</a></li>
+<li>
+<time>
+Apr 24, 2019
+</time>
+<a href="/releases/2019/04/24/gitlab-11-5-11-released/">GitLab Patch Release: 11.5.11, 11.6.11, 11.7.12, 11.8.8, 11.9.9
+</a></li>
+<li>
+<time>
+Apr 11, 2019
+</time>
+<a href="/releases/2019/04/11/gitlab-11-9-8-released/">GitLab Patch Release: 11.9.8
+</a></li>
+<li>
+<time>
+Apr 4, 2019
+</time>
+<a href="/releases/2019/04/04/gitlab-11-9-6-released/">GitLab Patch Release: 11.9.6
+</a></li>
+<li>
+<time>
+Mar 26, 2019
+</time>
+<a href="/releases/2019/03/26/gitlab-11-9-1-released/">GitLab Patch Release: 11.9.1
+</a></li>
+<li>
+<time>
+Mar 14, 2019
+</time>
+<a href="/releases/2019/03/14/gitlab-11-8-2-released/">GitLab Patch Release: 11.8.2
+</a></li>
+<li>
+<time>
+Feb 7, 2019
+</time>
+<a href="/releases/2019/02/07/gitlab-11-7-5-released/">GitLab Patch Release: 11.7.5
+</a></li>
+<li>
+<time>
+Jan 17, 2019
+</time>
+<a href="/releases/2019/01/17/gitlab-11-6-5-released/">GitLab Patch Release: 11.6.5
+</a></li>
+<li>
+<time>
+Jan 5, 2019
+</time>
+<a href="/releases/2019/01/05/gitlab-11-6-3-released/">GitLab Patch Release: 11.6.3
+</a></li>
+<li>
+<time>
+Jan 3, 2019
+</time>
+<a href="/releases/2019/01/03/gitlab-11-6-2-released/">GitLab Patch Release: 11.6.2
+</a></li>
+<li>
+<time>
+Dec 4, 2018
+</time>
+<a href="/releases/2018/12/04/gitlab-11-4-9-released/">GitLab Patch Release: 11.4.9
+</a></li>
+<li>
+<time>
+Dec 4, 2018
+</time>
+<a href="/releases/2018/12/04/gitlab-11-5-2-released/">GitLab Patch Release: 11.5.2
+</a></li>
+<li>
+<time>
+Nov 21, 2018
+</time>
+<a href="/releases/2018/11/21/gitlab-11-4-7-released/">GitLab Patch Release: 11.4.7
+</a></li>
+<li>
+<time>
+Nov 5, 2018
+</time>
+<a href="/releases/2018/11/05/gitlab-11-4-5-released/">GitLab Patch Release: 11.4.5
+</a></li>
+<li>
+<time>
+Oct 5, 2018
+</time>
+<a href="/releases/2018/10/05/critical-security-release-11-3-4/">GitLab Critical Security Release: 11.3.4, 11.2.5, and 11.1.8
+</a></li>
+<li>
+<time>
+Oct 4, 2018
+</time>
+<a href="/releases/2018/10/04/gitlab-11-3-3-released/">GitLab Patch Release: 11.3.3
+</a></li>
+<li>
+<time>
+Jun 7, 2018
+</time>
+<a href="/releases/2018/06/07/gitlab-10-8-4-released/">GitLab Patch Release: 10.8.4
+</a></li>
+<li>
+<time>
+Jun 1, 2018
+</time>
+<a href="/releases/2018/06/01/gitlab-10-8-3-released/">GitLab Patch Release: 10.8.3
+</a></li>
+<li>
+<time>
+May 24, 2018
+</time>
+<a href="/releases/2018/05/24/gitlab-10-8-1-released/">GitLab Patch Release: 10.8.1
+</a></li>
+<li>
+<time>
+May 22, 2018
+</time>
+<a href="/releases/2018/05/22/gitlab-10-7-4-released/">GitLab Patch Release: 10.7.4
+</a></li>
+<li>
+<time>
+May 22, 2018
+</time>
+<a href="/releases/2018/05/22/gitlab-10-8-released/">GitLab 10.8 released with incremental rollouts, plus open source push mirroring
+</a></li>
+<li>
+<time>
+May 3, 2018
+</time>
+<a href="/releases/2018/05/03/gitlab-10-7-3-released/">GitLab Patch Release: 10.7.3
+</a></li>
+<li>
+<time>
+Apr 30, 2018
+</time>
+<a href="/releases/2018/04/30/security-release-gitlab-10-dot-7-dot-2-released/">GitLab Security Release: 10.7.2, 10.6.5, and 10.5.8
+</a></li>
+<li>
+<time>
+Apr 23, 2018
+</time>
+<a href="/releases/2018/04/23/gitlab-10-7-1-released/">GitLab Patch Release: 10.7.1
+</a></li>
+<li>
+<time>
+Apr 22, 2018
+</time>
+<a href="/releases/2018/04/22/gitlab-10-7-released/">GitLab 10.7 released with open source Web IDE and SAST for Go and C/C++!
+</a></li>
+<li>
+<time>
+Feb 22, 2018
+</time>
+<a href="/releases/2018/02/22/gitlab-10-5-released/">GitLab 10.5 released with Let's Encrypt integration, Gemnasium dependency checks, and CI/CD external files
+</a></li>
+<li>
+<time>
+Jan 23, 2018
+</time>
+<a href="/releases/2018/01/23/gitlab-10-dot-3-dot-6-released/">GitLab Patch Release: 10.3.6
+</a></li>
+<li>
+<time>
+Jan 22, 2018
+</time>
+<a href="/releases/2018/01/22/gitlab-10-4-released/">GitLab 10.4 released with Dynamic Application Security Testing and Web IDE (beta)
+</a></li>
+<li>
+<time>
+Jan 18, 2018
+</time>
+<a href="/releases/2018/01/18/gitlab-10-3-5-released/">GitLab 10.3.5, 10.2.7, and 10.1.7 released
+</a></li>
+<li>
+<time>
+Dec 28, 2017
+</time>
+<a href="/releases/2017/12/28/gitlab-10-3-2-released/">GitLab Patch Release: 10.3.2
+</a></li>
+<li>
+<time>
+Dec 27, 2017
+</time>
+<a href="/releases/2017/12/27/gitlab-10-3-1-released/">GitLab Patch Release: 10.3.1
+</a></li>
+<li>
+<time>
+Dec 22, 2017
+</time>
+<a href="/releases/2017/12/22/gitlab-10-3-released/">GitLab 10.3 released with Static Application Security Testing and Browser Performance Testing
+</a></li>
+<li>
+<time>
+Dec 18, 2017
+</time>
+<a href="/releases/2017/12/18/gitlab-10-2-5-released/">GitLab Patch Release: 10.2.5
+</a></li>
+<li>
+<time>
+Dec 8, 2017
+</time>
+<a href="/releases/2017/12/08/gitlab-10-dot-2-dot-4-security-release/">GitLab 10.2.4, 10.1.5, and 10.0.7 Released
+</a></li>
+<li>
+<time>
+Dec 5, 2017
+</time>
+<a href="/releases/2017/12/05/gitlab-10-2-3-released/">GitLab Patch Release: 10.2.3
+</a></li>
+<li>
+<time>
+Nov 28, 2017
+</time>
+<a href="/releases/2017/11/28/gitlab-10-2-2-released/">GitLab Patch Release: 10.2.2
+</a></li>
+<li>
+<time>
+Nov 22, 2017
+</time>
+<a href="/releases/2017/11/22/gitlab-10-2-1-released/">GitLab Patch Release: 10.2.1
+</a></li>
+<li>
+<time>
+Nov 22, 2017
+</time>
+<a href="/releases/2017/11/22/gitlab-10-2-released/">GitLab 10.2 released with Configurable Issue Boards and GitLab Geo General Availability
+</a></li>
+<li>
+<time>
+Nov 15, 2017
+</time>
+<a href="/releases/2017/11/15/gitlab-10-dot-1-dot-4-released/">GitLab Patch Release: 10.1.4
+</a></li>
+<li>
+<time>
+Nov 10, 2017
+</time>
+<a href="/releases/2017/11/10/gitlab-10-dot-1-dot-3-released/">GitLab Patch Release: 10.1.3
+</a></li>
+<li>
+<time>
+Nov 8, 2017
+</time>
+<a href="/releases/2017/11/08/gitlab-10-dot-1-dot-2-security-release/">GitLab 10.1.2, 10.0.6, and 9.5.10 released
+</a></li>
+<li>
+<time>
+Nov 3, 2017
+</time>
+<a href="/releases/2017/11/03/gitlab-10-dot-0-dot-5-released/">GitLab Patch Release: 10.0.5
+</a></li>
+<li>
+<time>
+Nov 1, 2017
+</time>
+<a href="/releases/2017/11/01/gitlab-10-dot-1-dot-1-released/">GitLab Patch Release: 10.1.1
+</a></li>
+<li>
+<time>
+Oct 22, 2017
+</time>
+<a href="/releases/2017/10/22/gitlab-10-1-released/">GitLab 10.1 released with Image Discussions and Rejection of Unsigned Commits
+</a></li>
+<li>
+<time>
+Oct 17, 2017
+</time>
+<a href="/releases/2017/10/17/gitlab-10-dot-0-dot-4-security-release/">GitLab 10.0.4, 9.5.9, and 9.4.7 released
+</a></li>
+<li>
+<time>
+Oct 5, 2017
+</time>
+<a href="/releases/2017/10/05/gitlab-10-dot-0-dot-3-released/">GitLab Patch Release: 10.0.3
+</a></li>
+<li>
+<time>
+Oct 4, 2017
+</time>
+<a href="/releases/2017/10/04/gitlab-9-dot-5-dot-8-released/">GitLab Patch Release: 9.5.8
+</a></li>
+<li>
+<time>
+Oct 3, 2017
+</time>
+<a href="/releases/2017/10/03/gitlab-9-dot-5-dot-7-released/">GitLab Patch Release: 9.5.7
+</a></li>
+<li>
+<time>
+Sep 28, 2017
+</time>
+<a href="/releases/2017/09/28/gitlab-9-dot-5-dot-6-released/">GitLab Patch Release: 9.5.6
+</a></li>
+<li>
+<time>
+Sep 27, 2017
+</time>
+<a href="/releases/2017/09/27/gitlab-10-dot-0-dot-2-released/">GitLab Patch Release: 10.0.2
+</a></li>
+<li>
+<time>
+Sep 24, 2017
+</time>
+<a href="/releases/2017/09/24/gitlab-10-dot-0-dot-1-released/">GitLab Patch Release: 10.0.1
+</a></li>
+<li>
+<time>
+Sep 22, 2017
+</time>
+<a href="/releases/2017/09/22/gitlab-10-0-released/">GitLab 10.0 released with Auto DevOps and Group Issue Boards
+</a></li>
+<li>
+<time>
+Sep 18, 2017
+</time>
+<a href="/releases/2017/09/18/gitlab-9-dot-5-dot-5-released/">GitLab Patch Release: 9.5.5
+</a></li>
+<li>
+<time>
+Sep 7, 2017
+</time>
+<a href="/releases/2017/09/07/gitlab-9-dot-5-dot-4-security-release/">GitLab 9.5.4, 9.4.6, and 9.3.11 released
+</a></li>
+<li>
+<time>
+Sep 4, 2017
+</time>
+<a href="/releases/2017/09/04/gitlab-9-dot-5-dot-3-released/">GitLab Patch Release: 9.5.3
+</a></li>
+<li>
+<time>
+Aug 28, 2017
+</time>
+<a href="/releases/2017/08/28/gitlab-9-dot-5-dot-2-released/">GitLab Patch Release: 9.5.2
+</a></li>
+<li>
+<time>
+Aug 22, 2017
+</time>
+<a href="/releases/2017/08/22/gitlab-9-5-released/">GitLab 9.5 released with GPG Commit Verification and Project Templates
+</a></li>
+<li>
+<time>
+Aug 14, 2017
+</time>
+<a href="/releases/2017/08/14/gitlab-9-dot-4-dot-5-released/">GitLab Patch Release: 9.4.5
+</a></li>
+<li>
+<time>
+Aug 10, 2017
+</time>
+<a href="/releases/2017/08/10/gitlab-9-dot-4-dot-4-released/">GitLab 9.4.4, 9.3.10, 9.2.10, 9.1.10, 9.0.13, and 8.17.8 Critical Security Release
+</a></li>
+<li>
+<time>
+Aug 4, 2017
+</time>
+<a href="/releases/2017/08/04/gitlab-critical-release-preannouncement/">Announcing August 10, 2017 Critical Security Update
+</a></li>
+<li>
+<time>
+Aug 1, 2017
+</time>
+<a href="/releases/2017/08/01/gitlab-9-dot-4-dot-3-released/">GitLab Patch Release: 9.4.3
+</a></li>
+<li>
+<time>
+Jul 28, 2017
+</time>
+<a href="/releases/2017/07/28/gitlab-9-dot-4-dot-2-released/">GitLab Patch Release: 9.4.2
+</a></li>
+<li>
+<time>
+Jul 25, 2017
+</time>
+<a href="/releases/2017/07/25/gitlab-9-dot-4-dot-1-released/">GitLab Patch Release: 9.4.1
+</a></li>
+<li>
+<time>
+Jul 22, 2017
+</time>
+<a href="/releases/2017/07/22/gitlab-9-4-released/">GitLab 9.4 released with Related Issues and Web Application Monitoring
+</a></li>
+<li>
+<time>
+Jul 20, 2017
+</time>
+<a href="/releases/2017/07/20/gitlab-9-dot-3-dot-9-released/">GitLab 9.3.9, 9.2.9, 9.1.9 and 9.0.12 released
+</a></li>
+<li>
+<time>
+Jul 19, 2017
+</time>
+<a href="/releases/2017/07/19/gitlab-9-dot-3-dot-8-released/">GitLab 9.3.8, 9.2.8, 9.1.8, 9.0.11, and 8.17.7 released
+</a></li>
+<li>
+<time>
+Jul 18, 2017
+</time>
+<a href="/releases/2017/07/18/gitlab-9-dot-3-dot-7-released/">GitLab Patch Release: 9.3.7
+</a></li>
+<li>
+<time>
+Jul 14, 2017
+</time>
+<a href="/releases/2017/07/14/gitlab-critical-release-preannouncement/">Announcing July 19, 2017 Critical Security Update
+</a></li>
+<li>
+<time>
+Jul 11, 2017
+</time>
+<a href="/releases/2017/07/11/gitlab-9-dot-3-dot-6-released/">GitLab Patch Release: 9.3.6
+</a></li>
+<li>
+<time>
+Jul 5, 2017
+</time>
+<a href="/releases/2017/07/05/gitlab-9-dot-3-dot-5-released/">GitLab Patch Release: 9.3.5
+</a></li>
+<li>
+<time>
+Jul 4, 2017
+</time>
+<a href="/releases/2017/07/04/gitlab-9-dot-3-dot-4-released/">GitLab Patch Release: 9.3.4
+</a></li>
+<li>
+<time>
+Jun 28, 2017
+</time>
+<a href="/releases/2017/06/28/gitlab-9-dot-3-dot-2-released/">GitLab Patch Release: 9.3.2
+</a></li>
+<li>
+<time>
+Jun 27, 2017
+</time>
+<a href="/releases/2017/06/27/gitlab-9-dot-3-dot-1-released/">GitLab Patch Release: 9.3.1
+</a></li>
+<li>
+<time>
+Jun 22, 2017
+</time>
+<a href="/releases/2017/06/22/gitlab-9-3-released/">GitLab 9.3 released with Code Quality and Multi-Project Pipeline Graphs
+</a></li>
+<li>
+<time>
+Jun 21, 2017
+</time>
+<a href="/releases/2017/06/21/gitlab-9-dot-2-dot-7-released/">GitLab Patch Release: 9.2.7
+</a></li>
+<li>
+<time>
+Jun 15, 2017
+</time>
+<a href="/releases/2017/06/15/gitlab-9-dot-2-dot-6-released/">GitLab Patch Release: 9.2.6
+</a></li>
+<li>
+<time>
+Jun 7, 2017
+</time>
+<a href="/releases/2017/06/07/gitlab-9-dot-2-dot-5-security-release/">GitLab 9.2.5, 9.1.7, and 9.0.10 released
+</a></li>
+<li>
+<time>
+Mar 17, 2017
+</time>
+<a href="/releases/2017/03/17/gitlab-critical-release-preannouncement/">Announcing March 20, 2017 Critical Security Update
+</a></li>
+<li>
+<time>
+Nov 30, 2016
+</time>
+<a href="/releases/2016/11/30/gitlab-major-security-update-for-cve-2016-9469/">GitLab Major Security Update for CVE-2016-9469
+</a></li>
+<li>
+<time>
+Nov 2, 2016
+</time>
+<a href="/releases/2016/11/02/cve-2016-9086-patches/">GitLab 8.13.3, 8.12.8, 8.11.10, and 8.10.13 Released
+</a></li>
+<li>
+<time>
+Oct 31, 2016
+</time>
+<a href="/releases/2016/10/31/gitlab-major-security-update-for-cve-2016-9086/">GitLab Major Security Update for CVE-2016-9086
+</a></li>
+<li>
+<time>
+Apr 28, 2016
+</time>
+<a href="/releases/2016/04/28/gitlab-major-security-update-for-cve-2016-4340/">GitLab Major Security Update for CVE-2016-4340
+</a></li>
+</ul>
+<h3 id=security>Posts tagged ‘security’</h3>
+<ul class='article-list list-unstyled'>
+<li>
+<time>
+Aug 7, 2024
+</time>
+<a href="/releases/2024/08/07/patch-release-gitlab-17-2-2-released/">GitLab Patch Release: 17.2.2, 17.1.4, 17.0.6
+</a></li>
+<li>
+<time>
+Jul 24, 2024
+</time>
+<a href="/releases/2024/07/24/patch-release-gitlab-17-2-1-released/">GitLab Patch Release: 17.2.1, 17.1.3, 17.0.5
+</a></li>
+<li>
+<time>
+Jul 10, 2024
+</time>
+<a href="/releases/2024/07/10/patch-release-gitlab-17-1-2-released/">GitLab Critical Patch Release: 17.1.2, 17.0.4, 16.11.6
+</a></li>
+<li>
+<time>
+Jun 26, 2024
+</time>
+<a href="/releases/2024/06/26/patch-release-gitlab-17-1-1-released/">GitLab Critical Patch Release: 17.1.1, 17.0.3, 16.11.5
+</a></li>
+<li>
+<time>
+Jun 12, 2024
+</time>
+<a href="/releases/2024/06/12/patch-release-gitlab-17-0-2-released/">GitLab Patch Release: 17.0.2, 16.11.4, 16.10.7
+</a></li>
+<li>
+<time>
+May 22, 2024
+</time>
+<a href="/releases/2024/05/22/patch-release-gitlab-17-0-1-released/">GitLab Patch Release: 17.0.1, 16.11.3, 16.10.6
+</a></li>
+<li>
+<time>
+May 8, 2024
+</time>
+<a href="/releases/2024/05/08/patch-release-gitlab-16-11-2-released/">GitLab Patch Release: 16.11.2, 16.10.5, 16.9.7
+</a></li>
+<li>
+<time>
+Apr 24, 2024
+</time>
+<a href="/releases/2024/04/24/patch-release-gitlab-16-11-1-released/">GitLab Patch Release: 16.11.1, 16.10.4, 16.9.6
+</a></li>
+<li>
+<time>
+Apr 10, 2024
+</time>
+<a href="/releases/2024/04/10/patch-release-gitlab-16-10-2-released/">GitLab Patch Release: 16.10.2, 16.9.4, 16.8.6
+</a></li>
+<li>
+<time>
+Mar 27, 2024
+</time>
+<a href="/releases/2024/03/27/security-release-gitlab-16-10-1-released/">GitLab Security Release: 16.10.1, 16.9.3, 16.8.5
+</a></li>
+<li>
+<time>
+Mar 6, 2024
+</time>
+<a href="/releases/2024/03/06/security-release-gitlab-16-9-2-released/">GitLab Security Release: 16.9.2, 16.8.4, 16.7.7
+</a></li>
+<li>
+<time>
+Feb 21, 2024
+</time>
+<a href="/releases/2024/02/21/security-release-gitlab-16-9-1-released/">GitLab Security Release: 16.9.1, 16.8.3, 16.7.6
+</a></li>
+<li>
+<time>
+Feb 7, 2024
+</time>
+<a href="/releases/2024/02/07/security-release-gitlab-16-8-2-released/">GitLab Security Release: 16.8.2, 16.7.5, 16.6.7
+</a></li>
+<li>
+<time>
+Jan 25, 2024
+</time>
+<a href="/releases/2024/01/25/critical-security-release-gitlab-16-8-1-released/">GitLab Critical Security Release: 16.8.1, 16.7.4, 16.6.6, 16.5.8
+</a></li>
+<li>
+<time>
+Jan 11, 2024
+</time>
+<a href="/releases/2024/01/11/critical-security-release-gitlab-16-7-2-released/">GitLab Critical Security Release: 16.7.2, 16.6.4, 16.5.6
+</a></li>
+<li>
+<time>
+Dec 13, 2023
+</time>
+<a href="/releases/2023/12/13/security-release-gitlab-16-6-2-released/">GitLab Security Release: 16.6.2, 16.5.4, 16.4.4
+</a></li>
+<li>
+<time>
+Nov 30, 2023
+</time>
+<a href="/releases/2023/11/30/security-release-gitlab-16-6-1-released/">GitLab Security Release: 16.6.1, 16.5.3, 16.4.3
+</a></li>
+<li>
+<time>
+Oct 31, 2023
+</time>
+<a href="/releases/2023/10/31/security-release-gitlab-16-5-1-16-4-2-16-3-6-released/">GitLab Security Release: 16.5.1, 16.4.2, 16.3.6
+</a></li>
+<li>
+<time>
+Sep 28, 2023
+</time>
+<a href="/releases/2023/09/28/security-release-gitlab-16-4-1-released/">GitLab Security Release: 16.4.1, 16.3.5, and 16.2.8
+</a></li>
+<li>
+<time>
+Sep 18, 2023
+</time>
+<a href="/releases/2023/09/18/security-release-gitlab-16-3-4-released/">GitLab Critical Security Release: 16.3.4 and 16.2.7
+</a></li>
+<li>
+<time>
+Aug 31, 2023
+</time>
+<a href="/releases/2023/08/31/security-release-gitlab-16-3-1-released/">GitLab Security Release: 16.3.1, 16.2.5, and 16.1.5
+</a></li>
+<li>
+<time>
+Aug 1, 2023
+</time>
+<a href="/releases/2023/08/01/security-release-gitlab-16-2-2-released/">GitLab Security Release: 16.2.2, 16.1.3, and 16.0.8
+</a></li>
+<li>
+<time>
+Jul 5, 2023
+</time>
+<a href="/releases/2023/07/05/security-release-gitlab-16-1-2-released/">GitLab Security Release: 16.1.2, 16.0.7, and 15.11.11
+</a></li>
+<li>
+<time>
+Jun 29, 2023
+</time>
+<a href="/releases/2023/06/29/security-release-gitlab-16-1-1-released/">GitLab Security Release: 16.1.1, 16.0.6, and 15.11.10
+</a></li>
+<li>
+<time>
+Jun 5, 2023
+</time>
+<a href="/releases/2023/06/05/security-release-gitlab-16-0-2-released/">GitLab Security Release: 16.0.2, 15.11.7, and 15.10.8
+</a></li>
+<li>
+<time>
+May 23, 2023
+</time>
+<a href="/releases/2023/05/23/critical-security-release-gitlab-16-0-1-released/">GitLab Critical Security Release: 16.0.1
+</a></li>
+<li>
+<time>
+May 10, 2023
+</time>
+<a href="/releases/2023/05/10/security-release-gitlab-15-11-3-released/">GitLab Coordinated Security Release: 15.11.3, 15.10.7, 15.9.8
+</a></li>
+<li>
+<time>
+May 5, 2023
+</time>
+<a href="/releases/2023/05/05/critical-security-release-gitlab-15-11-2-released/">GitLab Critical Security Release: 15.11.2, 15.10.6, and 15.9.7
+</a></li>
+<li>
+<time>
+May 2, 2023
+</time>
+<a href="/releases/2023/05/02/security-release-gitlab-15-11-1-released/">GitLab Security Release: 15.11.1, 15.10.5, and 15.9.6
+</a></li>
+<li>
+<time>
+Mar 30, 2023
+</time>
+<a href="/releases/2023/03/30/security-release-gitlab-15-10-1-released/">GitLab Security Release: 15.10.1, 15.9.4, and 15.8.5
+</a></li>
+<li>
+<time>
+Mar 2, 2023
+</time>
+<a href="/releases/2023/03/02/security-release-gitlab-15-9-2-released/">GitLab Security Release: 15.9.2, 15.8.4, and 15.7.8
+</a></li>
+<li>
+<time>
+Feb 14, 2023
+</time>
+<a href="/releases/2023/02/14/critical-security-release-gitlab-15-8-2-released/">GitLab Critical Security Release: 15.8.2, 15.7.7 and 15.6.8
+</a></li>
+<li>
+<time>
+Jan 31, 2023
+</time>
+<a href="/releases/2023/01/31/security-release-gitlab-15-8-1-released/">GitLab Security Release: 15.8.1, 15.7.6, and 15.6.7
+</a></li>
+<li>
+<time>
+Jan 17, 2023
+</time>
+<a href="/releases/2023/01/17/critical-security-release-gitlab-15-7-5-released/">GitLab Critical Security Release: 15.7.5, 15.6.6, and 15.5.9
+</a></li>
+<li>
+<time>
+Jan 9, 2023
+</time>
+<a href="/releases/2023/01/09/security-release-gitlab-15-7-2-released/">GitLab Security Release: 15.7.2, 15.6.4, and 15.5.7
+</a></li>
+<li>
+<time>
+Nov 30, 2022
+</time>
+<a href="/releases/2022/11/30/security-release-gitlab-15-6-1-released/">GitLab Security Release: 15.6.1, 15.5.5 and 15.4.6
+</a></li>
+<li>
+<time>
+Nov 2, 2022
+</time>
+<a href="/releases/2022/11/02/security-release-gitlab-15-5-2-released/">GitLab Security Release: 15.5.2, 15.4.4, and 15.3.5
+</a></li>
+<li>
+<time>
+Sep 29, 2022
+</time>
+<a href="/releases/2022/09/29/security-release-gitlab-15-4-1-released/">GitLab Security Release: 15.4.1, 15.3.4, and 15.2.5
+</a></li>
+<li>
+<time>
+Aug 30, 2022
+</time>
+<a href="/releases/2022/08/30/critical-security-release-gitlab-15-3-2-released/">GitLab Critical Security Release: 15.3.2, 15.2.4 and 15.1.6
+</a></li>
+<li>
+<time>
+Aug 22, 2022
+</time>
+<a href="/releases/2022/08/22/critical-security-release-gitlab-15-3-1-released/">GitLab Critical Security Release: 15.3.1, 15.2.3, 15.1.5
+</a></li>
+<li>
+<time>
+Jul 28, 2022
+</time>
+<a href="/releases/2022/07/28/security-release-gitlab-15-2-1-released/">GitLab Security Release: 15.2.1, 15.1.4, and 15.0.5
+</a></li>
+<li>
+<time>
+Jun 30, 2022
+</time>
+<a href="/releases/2022/06/30/critical-security-release-gitlab-15-1-1-released/">GitLab Critical Security Release: 15.1.1, 15.0.4, and 14.10.5
+</a></li>
+<li>
+<time>
+Jun 1, 2022
+</time>
+<a href="/releases/2022/06/01/critical-security-release-gitlab-15-0-1-released/">GitLab Critical Security Release: 15.0.1, 14.10.4, and 14.9.5
+</a></li>
+<li>
+<time>
+May 2, 2022
+</time>
+<a href="/releases/2022/05/02/security-release-gitlab-14-10-1-released/">GitLab Security Release: 14.10.1, 14.9.4, and 14.8.6
+</a></li>
+<li>
+<time>
+Mar 31, 2022
+</time>
+<a href="/releases/2022/03/31/critical-security-release-gitlab-14-9-2-released/">GitLab Critical Security Release: 14.9.2, 14.8.5, and 14.7.7
+</a></li>
+<li>
+<time>
+Feb 25, 2022
+</time>
+<a href="/releases/2022/02/25/critical-security-release-gitlab-14-8-2-released/">GitLab Critical Security Release: 14.8.2, 14.7.4, and 14.6.5
+</a></li>
+<li>
+<time>
+Feb 3, 2022
+</time>
+<a href="/releases/2022/02/03/security-release-gitlab-14-7-1-released/">GitLab Security Release: 14.7.1, 14.6.4, and 14.5.4
+</a></li>
+<li>
+<time>
+Jan 11, 2022
+</time>
+<a href="/releases/2022/01/11/security-release-gitlab-14-6-2-released/">GitLab Security Release: 14.6.2, 14.5.3, and 14.4.5
+</a></li>
+<li>
+<time>
+Dec 10, 2021
+</time>
+<a href="/releases/2021/12/10/security-release-gitlab-runner-14-5-2-released/">GitLab Runner Critical Security Release: 14.5.2, 14.4.2, and 14.3.4
+</a></li>
+<li>
+<time>
+Dec 6, 2021
+</time>
+<a href="/releases/2021/12/06/security-release-gitlab-14-5-2-released/">GitLab Security Release: 14.5.2, 14.4.4, and 14.3.6
+</a></li>
+<li>
+<time>
+Oct 28, 2021
+</time>
+<a href="/releases/2021/10/28/security-release-gitlab-14-4-1-released/">GitLab Security Release: 14.4.1, 14.3.4, and 14.2.6
+</a></li>
+<li>
+<time>
+Sep 30, 2021
+</time>
+<a href="/releases/2021/09/30/security-release-gitlab-14-3-1-released/">GitLab Security Release: 14.3.1, 14.2.5, and 14.1.7
+</a></li>
+<li>
+<time>
+Aug 31, 2021
+</time>
+<a href="/releases/2021/08/31/security-release-gitlab-14-2-2-released/">GitLab Security Release: 14.2.2, 14.1.4, and 14.0.9
+</a></li>
+<li>
+<time>
+Aug 3, 2021
+</time>
+<a href="/releases/2021/08/03/security-release-gitlab-14-1-2-released/">GitLab Security Release: 14.1.2, 14.0.7, and 13.12.9
+</a></li>
+<li>
+<time>
+Jul 7, 2021
+</time>
+<a href="/releases/2021/07/07/critical-security-release-gitlab-14-0-4-released/">GitLab Critical Security Release: 14.0.4, 13.12.8, and 13.11.7
+</a></li>
+<li>
+<time>
+Jul 1, 2021
+</time>
+<a href="/releases/2021/07/01/security-release-gitlab-14-0-2-released/">GitLab Security Release: 14.0.2, 13.12.6, and 13.11.6
+</a></li>
+<li>
+<time>
+Jun 1, 2021
+</time>
+<a href="/releases/2021/06/01/security-release-gitlab-13-12-2-released/">GitLab Security Release: 13.12.2, 13.11.5, and 13.10.5
+</a></li>
+<li>
+<time>
+Apr 28, 2021
+</time>
+<a href="/releases/2021/04/28/security-release-gitlab-13-11-2-released/">GitLab Security Release: 13.11.2, 13.10.4, and 13.9.7
+</a></li>
+<li>
+<time>
+Apr 14, 2021
+</time>
+<a href="/releases/2021/04/14/security-release-gitlab-13-10-3-released/">GitLab Critical Security Release: 13.10.3, 13.9.6, and 13.8.8
+</a></li>
+<li>
+<time>
+Mar 31, 2021
+</time>
+<a href="/releases/2021/03/31/security-release-gitlab-13-10-1-released/">GitLab Security Release: 13.10.1, 13.9.5, and 13.8.7
+</a></li>
+<li>
+<time>
+Mar 17, 2021
+</time>
+<a href="/releases/2021/03/17/security-release-gitlab-13-9-4-released/">GitLab Critical Security Release: 13.9.4, 13.8.6, and 13.7.9
+</a></li>
+<li>
+<time>
+Mar 4, 2021
+</time>
+<a href="/releases/2021/03/04/security-release-gitlab-13-9-2-released/">GitLab Security Release: 13.9.2, 13.8.5 and 13.7.8
+</a></li>
+<li>
+<time>
+Feb 11, 2021
+</time>
+<a href="/releases/2021/02/11/security-release-gitlab-13-8-4-released/">GitLab Security Release: 13.8.4, 13.7.7 and 13.6.7
+</a></li>
+<li>
+<time>
+Feb 1, 2021
+</time>
+<a href="/releases/2021/02/01/security-release-gitlab-13-8-2-released/">GitLab Security Release: 13.8.2, 13.7.6 and 13.6.6
+</a></li>
+<li>
+<time>
+Jan 14, 2021
+</time>
+<a href="/releases/2021/01/14/critical-security-release-gitlab-13-7-4-released/">GitLab Critical Security Release: 13.7.4, 13.6.5 and 13.5.7
+</a></li>
+<li>
+<time>
+Jan 7, 2021
+</time>
+<a href="/releases/2021/01/07/security-release-gitlab-13-7-2-released/">GitLab Security Release: 13.7.2, 13.6.4, and 13.5.6
+</a></li>
+<li>
+<time>
+Dec 7, 2020
+</time>
+<a href="/releases/2020/12/07/security-release-gitlab-13-6-2-released/">GitLab Security Release: 13.6.2, 13.5.5, and 13.4.7
+</a></li>
+<li>
+<time>
+Nov 2, 2020
+</time>
+<a href="/releases/2020/11/02/security-release-gitlab-13-5-2-released/">GitLab Security Release: 13.5.2, 13.4.5, and 13.3.9
+</a></li>
+<li>
+<time>
+Oct 1, 2020
+</time>
+<a href="/releases/2020/10/01/security-release-13-4-2-release/">GitLab Security Release: 13.4.2, 13.3.7 and 13.2.10
+</a></li>
+<li>
+<time>
+Sep 2, 2020
+</time>
+<a href="/releases/2020/09/02/security-release-gitlab-13-3-3-released/">GitLab Security Release: 13.3.4, 13.2.8, and 13.1.10
+</a></li>
+<li>
+<time>
+Aug 18, 2020
+</time>
+<a href="/releases/2020/08/18/critical-security-release-gitlab-13-2-5-released/">GitLab Critical Security Release: 13.2.5, 13.1.7, 13.0.13
+</a></li>
+<li>
+<time>
+Aug 18, 2020
+</time>
+<a href="/releases/2020/08/18/critical-security-release-gitlab-13-2-6-released/">GitLab Critical Security Release: 13.2.6, 13.1.8, 13.0.14
+</a></li>
+<li>
+<time>
+Aug 5, 2020
+</time>
+<a href="/releases/2020/08/05/gitlab-13-2-3-released/">GitLab Security Release: 13.2.3, 13.1.6 and 13.0.12
+</a></li>
+<li>
+<time>
+Jul 6, 2020
+</time>
+<a href="/releases/2020/07/06/critical-security-release-gitlab-13-1-3-released/">GitLab Critical Security Release: 13.1.3, 13.0.9 and 12.10.14
+</a></li>
+<li>
+<time>
+Jul 1, 2020
+</time>
+<a href="/releases/2020/07/01/security-release-13-1-2-release/">GitLab Security Release: 13.1.2, 13.0.8 and 12.10.13
+</a></li>
+<li>
+<time>
+Jun 10, 2020
+</time>
+<a href="/releases/2020/06/10/critical-security-release-13-0-6-released/">GitLab Critical Security Release: 13.0.6, 12.10.11, 12.9.10
+</a></li>
+<li>
+<time>
+Jun 3, 2020
+</time>
+<a href="/releases/2020/06/03/critical-security-release-13-0-4-released/">GitLab Critical Security Release: 13.0.4, 12.10.9, 12.9.9
+</a></li>
+<li>
+<time>
+May 27, 2020
+</time>
+<a href="/releases/2020/05/27/security-release-13-0-1-released/">GitLab Security Release: 13.0.1, 12.10.7, 12.9.8
+</a></li>
+<li>
+<time>
+Apr 30, 2020
+</time>
+<a href="/releases/2020/04/30/security-release-12-10-2-released/">GitLab Security Release: 12.10.2, 12.9.5, 12.8.10
+</a></li>
+<li>
+<time>
+Apr 14, 2020
+</time>
+<a href="/releases/2020/04/14/critical-security-release-gitlab-12-dot-9-dot-3-released/">GitLab Critical Security Release: 12.9.3, 12.8.9, and 12.7.9
+</a></li>
+<li>
+<time>
+Mar 26, 2020
+</time>
+<a href="/releases/2020/03/26/security-release-12-dot-9-dot-1-released/">GitLab Security Release: 12.9.1, 12.8.8, and 12.7.8
+</a></li>
+<li>
+<time>
+Mar 11, 2020
+</time>
+<a href="/releases/2020/03/11/critical-security-release-gitlab-12-dot-8-dot-6-released/">GitLab Critical Security Release: 12.8.6
+</a></li>
+<li>
+<time>
+Mar 4, 2020
+</time>
+<a href="/releases/2020/03/04/gitlab-12-dot-8-dot-2-released/">GitLab Security Release: 12.8.2, 12.7.7, and 12.6.8
+</a></li>
+<li>
+<time>
+Feb 13, 2020
+</time>
+<a href="/releases/2020/02/13/critical-security-release-gitlab-12-dot-7-dot-6-released/">GitLab Critical Security Release: 12.7.6, 12.6.7, and 12.5.10
+</a></li>
+<li>
+<time>
+Jan 30, 2020
+</time>
+<a href="/releases/2020/01/30/security-release-gitlab-12-7-4-released/">GitLab Security Release: 12.7.4, 12.6.6, and 12.5.9
+</a></li>
+<li>
+<time>
+Jan 13, 2020
+</time>
+<a href="/releases/2020/01/13/critical-security-release-gitlab-12-dot-6-dot-4-released/">GitLab Critical Security Release: 12.6.4, 12.5.7, and 12.4.8
+</a></li>
+<li>
+<time>
+Jan 2, 2020
+</time>
+<a href="/releases/2020/01/02/security-release-gitlab-12-6-2-released/">GitLab Security Release: 12.6.2, 12.5.6, and 12.4.7
+</a></li>
+<li>
+<time>
+Dec 16, 2019
+</time>
+<a href="/releases/2019/12/16/gitlab-12-2-12-release/">GitLab Patch Release: 12.0.12, 12.1.17, and 12.2.12
+</a></li>
+<li>
+<time>
+Dec 10, 2019
+</time>
+<a href="/releases/2019/12/10/critical-security-release-gitlab-12-5-4-released/">GitLab Critical Security Release: 12.5.4, 12.4.6, and 12.3.9
+</a></li>
+<li>
+<time>
+Nov 27, 2019
+</time>
+<a href="/releases/2019/11/27/security-release-gitlab-12-5-1-released/">GitLab Security Release: 12.5.1, 12.4.4, and 12.3.7
+</a></li>
+<li>
+<time>
+Nov 27, 2019
+</time>
+<a href="/releases/2019/11/27/security-release-gitlab-12-5-2-released/">GitLab Security Release: 12.5.2, 12.4.5, and 12.3.8
+</a></li>
+<li>
+<time>
+Oct 30, 2019
+</time>
+<a href="/releases/2019/10/30/security-release-gitlab-12-dot-4-dot-1-released/">GitLab Security Release: 12.4.1, 12.3.6, and 12.2.9
+</a></li>
+<li>
+<time>
+Oct 7, 2019
+</time>
+<a href="/releases/2019/10/07/security-release-gitlab-12-dot-3-dot-5-released/">GitLab Critical Security Release: 12.3.5, 12.2.8, and 12.1.14
+</a></li>
+<li>
+<time>
+Oct 2, 2019
+</time>
+<a href="/releases/2019/10/02/security-release-gitlab-12-dot-3-dot-3-released/">GitLab Critical Security Release: 12.3.3, 12.2.7, and 12.1.13
+</a></li>
+<li>
+<time>
+Sep 30, 2019
+</time>
+<a href="/releases/2019/09/30/security-release-gitlab-12-dot-3-dot-2-released/">GitLab Security Release: 12.3.2, 12.2.6, and 12.1.12
+</a></li>
+<li>
+<time>
+Sep 10, 2019
+</time>
+<a href="/releases/2019/09/10/critical-security-release-gitlab-12-dot-2-dot-5-released/">GitLab Critical Security Release: 12.2.5, 12.1.9, and 12.0.9
+</a></li>
+<li>
+<time>
+Aug 29, 2019
+</time>
+<a href="/releases/2019/08/29/security-release-gitlab-12-dot-2-dot-3-released/">GitLab Security Release: 12.2.3, 12.1.8, and 12.0.8
+</a></li>
+<li>
+<time>
+Aug 12, 2019
+</time>
+<a href="/releases/2019/08/12/critical-security-release-gitlab-12-dot-1-dot-6-released/">GitLab Critical Security Release: 12.1.6, 12.0.6, and 11.11.8
+</a></li>
+<li>
+<time>
+Jul 29, 2019
+</time>
+<a href="/releases/2019/07/29/security-release-gitlab-12-dot-1-dot-2-released/">GitLab Security Release: 12.1.2, 12.0.4, and 11.11.7
+</a></li>
+<li>
+<time>
+Jul 3, 2019
+</time>
+<a href="/releases/2019/07/03/security-release-gitlab-12-dot-0-dot-3-released/">GitLab Security Release: 12.0.3, 11.11.5, and 11.10.8
+</a></li>
+<li>
+<time>
+Jun 3, 2019
+</time>
+<a href="/releases/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/">GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12
+</a></li>
+<li>
+<time>
+Apr 30, 2019
+</time>
+<a href="/releases/2019/04/30/security-release-gitlab-11-dot-10-dot-3-released/">GitLab Security Release: 11.10.3, 11.9.11, and 11.8.10
+</a></li>
+<li>
+<time>
+Apr 29, 2019
+</time>
+<a href="/releases/2019/04/29/security-release-gitlab-11-dot-10-dot-2-released/">GitLab Security Release: 11.10.2, 11.9.10, and 11.8.9
+</a></li>
+<li>
+<time>
+Apr 10, 2019
+</time>
+<a href="/releases/2019/04/10/critical-security-release-gitlab-11-dot-9-dot-7-released/">GitLab Critical Security Release: 11.9.7, 11.8.7, and 11.7.11
+</a></li>
+<li>
+<time>
+Apr 1, 2019
+</time>
+<a href="/releases/2019/04/01/security-release-gitlab-11-dot-9-dot-4-released/">GitLab Security Release: 11.9.4, 11.8.6, and 11.7.10
+</a></li>
+<li>
+<time>
+Mar 20, 2019
+</time>
+<a href="/releases/2019/03/20/critical-security-release-gitlab-11-dot-8-dot-3-released/">GitLab Critical Security Release: 11.8.3 and 11.7.7
+</a></li>
+<li>
+<time>
+Mar 4, 2019
+</time>
+<a href="/releases/2019/03/04/security-release-gitlab-11-dot-8-dot-1-released/">GitLab Security Release: 11.8.1, 11.7.6, and 11.6.10
+</a></li>
+<li>
+<time>
+Feb 5, 2019
+</time>
+<a href="/releases/2019/02/05/critical-security-release-gitlab-11-dot-7-dot-4-released/">GitLab Critical Security Release: 11.7.4 and 11.6.9
+</a></li>
+<li>
+<time>
+Jan 31, 2019
+</time>
+<a href="/releases/2019/01/31/security-release-gitlab-11-dot-7-dot-3-released/">GitLab Security Release: 11.7.3, 11.6.8, 11.5.10
+</a></li>
+<li>
+<time>
+Jan 16, 2019
+</time>
+<a href="/releases/2019/01/16/critical-security-release-gitlab-11-dot-6-dot-4-released/">GitLab Critical Security Release: 11.6.4, 11.5.7, 11.4.14
+</a></li>
+<li>
+<time>
+Dec 31, 2018
+</time>
+<a href="/releases/2018/12/31/security-release-gitlab-11-dot-6-dot-1-released/">GitLab Security Release: 11.6.1, 11.5.6, 11.4.13
+</a></li>
+<li>
+<time>
+Dec 20, 2018
+</time>
+<a href="/releases/2018/12/20/critical-security-release-gitlab-11-dot-5-dot-5-released/">GitLab Critical Security Release: 11.5.5, 11.4.12, 11.3.14
+</a></li>
+<li>
+<time>
+Dec 13, 2018
+</time>
+<a href="/releases/2018/12/13/critical-security-release-gitlab-11-dot-5-dot-4-released/">GitLab Critical Security Release: 11.6RC7, 11.5.4, 11.4.11, 11.3.13
+</a></li>
+<li>
+<time>
+Dec 6, 2018
+</time>
+<a href="/releases/2018/12/06/critical-security-release-gitlab-11-dot-5-dot-3-released/">GitLab Critical Security Release: 11.5.3, 11.4.10, 11.3.12
+</a></li>
+<li>
+<time>
+Nov 28, 2018
+</time>
+<a href="/releases/2018/11/28/security-release-gitlab-11-dot-5-dot-1-released/">GitLab Security Release: 11.5.1, 11.4.8, and 11.3.11
+</a></li>
+<li>
+<time>
+Nov 19, 2018
+</time>
+<a href="/releases/2018/11/19/critical-security-release-gitlab-11-dot-4-dot-6-released/">GitLab Critical Security Release: 11.5.0-rc12, 11.4.6, 11.3.10
+</a></li>
+<li>
+<time>
+Nov 1, 2018
+</time>
+<a href="/releases/2018/11/01/critical-security-release-gitlab-11-dot-4-dot-4-released/">GitLab Critical Security Release: 11.4.4, 11.3.9, 11.2.8
+</a></li>
+<li>
+<time>
+Oct 29, 2018
+</time>
+<a href="/releases/2018/10/29/security-release-gitlab-11-dot-4-dot-3-released/">GitLab Security Release: 11.4.3, 11.3.8, and 11.2.7
+</a></li>
+<li>
+<time>
+Oct 5, 2018
+</time>
+<a href="/releases/2018/10/05/critical-security-release-11-3-4/">GitLab Critical Security Release: 11.3.4, 11.2.5, and 11.1.8
+</a></li>
+<li>
+<time>
+Oct 1, 2018
+</time>
+<a href="/releases/2018/10/01/events-api-security-issue/">Exposure of Confidential Issues on Public Projects through the Events API
+</a></li>
+<li>
+<time>
+Oct 1, 2018
+</time>
+<a href="/releases/2018/10/01/security-release-gitlab-11-dot-3-dot-1-released/">GitLab Security Release: 11.3.1, 11.2.4, and 11.1.7
+</a></li>
+<li>
+<time>
+Aug 28, 2018
+</time>
+<a href="/releases/2018/08/28/security-release-gitlab-11-dot-2-dot-2-released/">GitLab Security Release: 11.2.3, 11.1.6, and 11.0.6
+</a></li>
+<li>
+<time>
+Jul 26, 2018
+</time>
+<a href="/releases/2018/07/26/security-release-gitlab-11-dot-1-dot-2-released/">GitLab Security Release: 11.1.2, 11.0.5, and 10.8.7
+</a></li>
+<li>
+<time>
+Jul 17, 2018
+</time>
+<a href="/releases/2018/07/17/critical-security-release-gitlab-11-dot-0-dot-4-released/">GitLab Critical Security Release: 11.0.4, 10.8.6, and 10.7.7
+</a></li>
+<li>
+<time>
+Jun 25, 2018
+</time>
+<a href="/releases/2018/06/25/security-release-gitlab-11-dot-0-dot-1-released/">GitLab Security Release: 11.0.1, 10.8.5, and 10.7.6
+</a></li>
+<li>
+<time>
+May 29, 2018
+</time>
+<a href="/releases/2018/05/29/security-release-gitlab-10-dot-8-dot-2-released/">GitLab Security Release: 10.8.2, 10.7.5, and 10.6.6
+</a></li>
+<li>
+<time>
+May 2, 2018
+</time>
+<a href="/releases/2018/05/02/download-archive-security-vulnerability/">Summary of limited download archive unauthorized access of repositories on GitLab.com
+</a></li>
+<li>
+<time>
+Apr 30, 2018
+</time>
+<a href="/releases/2018/04/30/security-release-gitlab-10-dot-7-dot-2-released/">GitLab Security Release: 10.7.2, 10.6.5, and 10.5.8
+</a></li>
+<li>
+<time>
+Apr 4, 2018
+</time>
+<a href="/releases/2018/04/04/security-release-gitlab-10-dot-6-dot-3-released/">GitLab Security Release: 10.6.3, 10.5.7, and 10.4.7
+</a></li>
+<li>
+<time>
+Mar 26, 2018
+</time>
+<a href="/releases/2018/03/26/summary-of-limited-gitlab-credentials-exposed/">Summary of limited GitLab credentials exposed in an internal logging system
+</a></li>
+<li>
+<time>
+Mar 20, 2018
+</time>
+<a href="/releases/2018/03/20/critical-security-release-gitlab-10-dot-5-dot-6-released/">GitLab Critical Security Release: 10.5.6, 10.4.6, and 10.3.9
+</a></li>
+<li>
+<time>
+Mar 16, 2018
+</time>
+<a href="/releases/2018/03/16/gitlab-critical-release-preannouncement/">Announcing March 20, 2018 Critical Security Update
+</a></li>
+<li>
+<time>
+Mar 6, 2018
+</time>
+<a href="/releases/2018/03/06/security-10-5-3-plus-10-4-5-plus-10-3-8-1st-blog-post/">GitLab Security Release: 10.5.3, 10.4.5, 10.3.8
+</a></li>
+<li>
+<time>
+Feb 21, 2018
+</time>
+<a href="/releases/2018/02/21/pages-security-fix-rollout/">GitLab Pages Security Fix Notification
+</a></li>
+<li>
+<time>
+Feb 7, 2018
+</time>
+<a href="/releases/2018/02/07/gitlab-security-10-4-3-plus-10-3-7-plus-10-2-8-blog/">GitLab Security Release: 10.4.3, 10.3.7, and 10.2.8
+</a></li>
+<li>
+<time>
+Feb 5, 2018
+</time>
+<a href="/releases/2018/02/05/gitlab-pages-custom-domain-validation/">GitLab Pages Security Issue Notification
+</a></li>
+<li>
+<time>
+Jan 16, 2018
+</time>
+<a href="/releases/2018/01/16/gitlab-10-dot-3-dot-4-released/">GitLab Security Release: 10.3.4, 10.2.6, and 10.1.6
+</a></li>
+<li>
+<time>
+Jan 12, 2018
+</time>
+<a href="/releases/2018/01/12/gitlab-critical-release-preannouncement/">Announcing January 16, 2018 Critical Security Update
+</a></li>
+<li>
+<time>
+Aug 10, 2017
+</time>
+<a href="/releases/2017/08/10/gitlab-9-dot-4-dot-4-released/">GitLab 9.4.4, 9.3.10, 9.2.10, 9.1.10, 9.0.13, and 8.17.8 Critical Security Release
+</a></li>
+<li>
+<time>
+Aug 4, 2017
+</time>
+<a href="/releases/2017/08/04/gitlab-critical-release-preannouncement/">Announcing August 10, 2017 Critical Security Update
+</a></li>
+<li>
+<time>
+Aug 3, 2017
+</time>
+<a href="/releases/2017/08/03/recent-bug-could-enable-signups/">9.3.7 Patch Release Update - Security Addendum
+</a></li>
+<li>
+<time>
+Jul 14, 2017
+</time>
+<a href="/releases/2017/07/14/gitlab-critical-release-preannouncement/">Announcing July 19, 2017 Critical Security Update
+</a></li>
+<li>
+<time>
+Mar 17, 2017
+</time>
+<a href="/releases/2017/03/17/gitlab-critical-release-preannouncement/">Announcing March 20, 2017 Critical Security Update
+</a></li>
+<li>
+<time>
+Nov 30, 2016
+</time>
+<a href="/releases/2016/11/30/gitlab-major-security-update-for-cve-2016-9469/">GitLab Major Security Update for CVE-2016-9469
+</a></li>
+<li>
+<time>
+Nov 2, 2016
+</time>
+<a href="/releases/2016/11/02/cve-2016-9086-patches/">GitLab 8.13.3, 8.12.8, 8.11.10, and 8.10.13 Released
+</a></li>
+<li>
+<time>
+Oct 31, 2016
+</time>
+<a href="/releases/2016/10/31/gitlab-major-security-update-for-cve-2016-9086/">GitLab Major Security Update for CVE-2016-9086
+</a></li>
+<li>
+<time>
+Apr 28, 2016
+</time>
+<a href="/releases/2016/04/28/gitlab-major-security-update-for-cve-2016-4340/">GitLab Major Security Update for CVE-2016-4340
+</a></li>
+</ul>
+<h3 id=security-releases>Posts tagged ‘security releases’</h3>
+<ul class='article-list list-unstyled'>
+<li>
+<time>
+Jan 7, 2021
+</time>
+<a href="/releases/2021/01/07/security-release-gitlab-13-7-2-released/">GitLab Security Release: 13.7.2, 13.6.4, and 13.5.6
+</a></li>
+<li>
+<time>
+Dec 7, 2020
+</time>
+<a href="/releases/2020/12/07/security-release-gitlab-13-6-2-released/">GitLab Security Release: 13.6.2, 13.5.5, and 13.4.7
+</a></li>
+<li>
+<time>
+Nov 2, 2020
+</time>
+<a href="/releases/2020/11/02/security-release-gitlab-13-5-2-released/">GitLab Security Release: 13.5.2, 13.4.5, and 13.3.9
+</a></li>
+<li>
+<time>
+Oct 1, 2020
+</time>
+<a href="/releases/2020/10/01/security-release-13-4-2-release/">GitLab Security Release: 13.4.2, 13.3.7 and 13.2.10
+</a></li>
+<li>
+<time>
+Sep 2, 2020
+</time>
+<a href="/releases/2020/09/02/security-release-gitlab-13-3-3-released/">GitLab Security Release: 13.3.4, 13.2.8, and 13.1.10
+</a></li>
+<li>
+<time>
+Aug 18, 2020
+</time>
+<a href="/releases/2020/08/18/critical-security-release-gitlab-13-2-5-released/">GitLab Critical Security Release: 13.2.5, 13.1.7, 13.0.13
+</a></li>
+<li>
+<time>
+Aug 18, 2020
+</time>
+<a href="/releases/2020/08/18/critical-security-release-gitlab-13-2-6-released/">GitLab Critical Security Release: 13.2.6, 13.1.8, 13.0.14
+</a></li>
+<li>
+<time>
+Jul 1, 2020
+</time>
+<a href="/releases/2020/07/01/security-release-13-1-2-release/">GitLab Security Release: 13.1.2, 13.0.8 and 12.10.13
+</a></li>
+<li>
+<time>
+Jun 10, 2020
+</time>
+<a href="/releases/2020/06/10/critical-security-release-13-0-6-released/">GitLab Critical Security Release: 13.0.6, 12.10.11, 12.9.10
+</a></li>
+<li>
+<time>
+Jun 3, 2020
+</time>
+<a href="/releases/2020/06/03/critical-security-release-13-0-4-released/">GitLab Critical Security Release: 13.0.4, 12.10.9, 12.9.9
+</a></li>
+<li>
+<time>
+May 27, 2020
+</time>
+<a href="/releases/2020/05/27/security-release-13-0-1-released/">GitLab Security Release: 13.0.1, 12.10.7, 12.9.8
+</a></li>
+<li>
+<time>
+Apr 30, 2020
+</time>
+<a href="/releases/2020/04/30/security-release-12-10-2-released/">GitLab Security Release: 12.10.2, 12.9.5, 12.8.10
+</a></li>
+<li>
+<time>
+Apr 14, 2020
+</time>
+<a href="/releases/2020/04/14/critical-security-release-gitlab-12-dot-9-dot-3-released/">GitLab Critical Security Release: 12.9.3, 12.8.9, and 12.7.9
+</a></li>
+<li>
+<time>
+Mar 26, 2020
+</time>
+<a href="/releases/2020/03/26/security-release-12-dot-9-dot-1-released/">GitLab Security Release: 12.9.1, 12.8.8, and 12.7.8
+</a></li>
+<li>
+<time>
+Mar 11, 2020
+</time>
+<a href="/releases/2020/03/11/critical-security-release-gitlab-12-dot-8-dot-6-released/">GitLab Critical Security Release: 12.8.6
+</a></li>
+<li>
+<time>
+Feb 13, 2020
+</time>
+<a href="/releases/2020/02/13/critical-security-release-gitlab-12-dot-7-dot-6-released/">GitLab Critical Security Release: 12.7.6, 12.6.7, and 12.5.10
+</a></li>
+<li>
+<time>
+Jan 30, 2020
+</time>
+<a href="/releases/2020/01/30/security-release-gitlab-12-7-4-released/">GitLab Security Release: 12.7.4, 12.6.6, and 12.5.9
+</a></li>
+<li>
+<time>
+Jan 13, 2020
+</time>
+<a href="/releases/2020/01/13/critical-security-release-gitlab-12-dot-6-dot-4-released/">GitLab Critical Security Release: 12.6.4, 12.5.7, and 12.4.8
+</a></li>
+<li>
+<time>
+Jan 2, 2020
+</time>
+<a href="/releases/2020/01/02/security-release-gitlab-12-6-2-released/">GitLab Security Release: 12.6.2, 12.5.6, and 12.4.7
+</a></li>
+<li>
+<time>
+Dec 10, 2019
+</time>
+<a href="/releases/2019/12/10/critical-security-release-gitlab-12-5-4-released/">GitLab Critical Security Release: 12.5.4, 12.4.6, and 12.3.9
+</a></li>
+<li>
+<time>
+Nov 27, 2019
+</time>
+<a href="/releases/2019/11/27/security-release-gitlab-12-5-1-released/">GitLab Security Release: 12.5.1, 12.4.4, and 12.3.7
+</a></li>
+<li>
+<time>
+Nov 27, 2019
+</time>
+<a href="/releases/2019/11/27/security-release-gitlab-12-5-2-released/">GitLab Security Release: 12.5.2, 12.4.5, and 12.3.8
+</a></li>
+<li>
+<time>
+Oct 30, 2019
+</time>
+<a href="/releases/2019/10/30/security-release-gitlab-12-dot-4-dot-1-released/">GitLab Security Release: 12.4.1, 12.3.6, and 12.2.9
+</a></li>
+<li>
+<time>
+Oct 7, 2019
+</time>
+<a href="/releases/2019/10/07/security-release-gitlab-12-dot-3-dot-5-released/">GitLab Critical Security Release: 12.3.5, 12.2.8, and 12.1.14
+</a></li>
+<li>
+<time>
+Oct 2, 2019
+</time>
+<a href="/releases/2019/10/02/security-release-gitlab-12-dot-3-dot-3-released/">GitLab Critical Security Release: 12.3.3, 12.2.7, and 12.1.13
+</a></li>
+<li>
+<time>
+Sep 30, 2019
+</time>
+<a href="/releases/2019/09/30/security-release-gitlab-12-dot-3-dot-2-released/">GitLab Security Release: 12.3.2, 12.2.6, and 12.1.12
+</a></li>
+<li>
+<time>
+Sep 10, 2019
+</time>
+<a href="/releases/2019/09/10/critical-security-release-gitlab-12-dot-2-dot-5-released/">GitLab Critical Security Release: 12.2.5, 12.1.9, and 12.0.9
+</a></li>
+<li>
+<time>
+Aug 29, 2019
+</time>
+<a href="/releases/2019/08/29/security-release-gitlab-12-dot-2-dot-3-released/">GitLab Security Release: 12.2.3, 12.1.8, and 12.0.8
+</a></li>
+<li>
+<time>
+Aug 12, 2019
+</time>
+<a href="/releases/2019/08/12/critical-security-release-gitlab-12-dot-1-dot-6-released/">GitLab Critical Security Release: 12.1.6, 12.0.6, and 11.11.8
+</a></li>
+<li>
+<time>
+Jul 29, 2019
+</time>
+<a href="/releases/2019/07/29/security-release-gitlab-12-dot-1-dot-2-released/">GitLab Security Release: 12.1.2, 12.0.4, and 11.11.7
+</a></li>
+<li>
+<time>
+Jul 3, 2019
+</time>
+<a href="/releases/2019/07/03/security-release-gitlab-12-dot-0-dot-3-released/">GitLab Security Release: 12.0.3, 11.11.5, and 11.10.8
+</a></li>
+<li>
+<time>
+Jun 3, 2019
+</time>
+<a href="/releases/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/">GitLab Security Release: 11.11.1, 11.10.5, and 11.9.12
+</a></li>
+<li>
+<time>
+Apr 30, 2019
+</time>
+<a href="/releases/2019/04/30/security-release-gitlab-11-dot-10-dot-3-released/">GitLab Security Release: 11.10.3, 11.9.11, and 11.8.10
+</a></li>
+<li>
+<time>
+Apr 29, 2019
+</time>
+<a href="/releases/2019/04/29/security-release-gitlab-11-dot-10-dot-2-released/">GitLab Security Release: 11.10.2, 11.9.10, and 11.8.9
+</a></li>
+<li>
+<time>
+Apr 10, 2019
+</time>
+<a href="/releases/2019/04/10/critical-security-release-gitlab-11-dot-9-dot-7-released/">GitLab Critical Security Release: 11.9.7, 11.8.7, and 11.7.11
+</a></li>
+<li>
+<time>
+Apr 1, 2019
+</time>
+<a href="/releases/2019/04/01/security-release-gitlab-11-dot-9-dot-4-released/">GitLab Security Release: 11.9.4, 11.8.6, and 11.7.10
+</a></li>
+<li>
+<time>
+Mar 20, 2019
+</time>
+<a href="/releases/2019/03/20/critical-security-release-gitlab-11-dot-8-dot-3-released/">GitLab Critical Security Release: 11.8.3 and 11.7.7
+</a></li>
+<li>
+<time>
+Mar 4, 2019
+</time>
+<a href="/releases/2019/03/04/security-release-gitlab-11-dot-8-dot-1-released/">GitLab Security Release: 11.8.1, 11.7.6, and 11.6.10
+</a></li>
+<li>
+<time>
+Feb 5, 2019
+</time>
+<a href="/releases/2019/02/05/critical-security-release-gitlab-11-dot-7-dot-4-released/">GitLab Critical Security Release: 11.7.4 and 11.6.9
+</a></li>
+<li>
+<time>
+Jan 31, 2019
+</time>
+<a href="/releases/2019/01/31/security-release-gitlab-11-dot-7-dot-3-released/">GitLab Security Release: 11.7.3, 11.6.8, 11.5.10
+</a></li>
+<li>
+<time>
+Jan 16, 2019
+</time>
+<a href="/releases/2019/01/16/critical-security-release-gitlab-11-dot-6-dot-4-released/">GitLab Critical Security Release: 11.6.4, 11.5.7, 11.4.14
+</a></li>
+<li>
+<time>
+Dec 31, 2018
+</time>
+<a href="/releases/2018/12/31/security-release-gitlab-11-dot-6-dot-1-released/">GitLab Security Release: 11.6.1, 11.5.6, 11.4.13
+</a></li>
+<li>
+<time>
+Dec 20, 2018
+</time>
+<a href="/releases/2018/12/20/critical-security-release-gitlab-11-dot-5-dot-5-released/">GitLab Critical Security Release: 11.5.5, 11.4.12, 11.3.14
+</a></li>
+<li>
+<time>
+Dec 13, 2018
+</time>
+<a href="/releases/2018/12/13/critical-security-release-gitlab-11-dot-5-dot-4-released/">GitLab Critical Security Release: 11.6RC7, 11.5.4, 11.4.11, 11.3.13
+</a></li>
+<li>
+<time>
+Dec 6, 2018
+</time>
+<a href="/releases/2018/12/06/critical-security-release-gitlab-11-dot-5-dot-3-released/">GitLab Critical Security Release: 11.5.3, 11.4.10, 11.3.12
+</a></li>
+<li>
+<time>
+Nov 28, 2018
+</time>
+<a href="/releases/2018/11/28/security-release-gitlab-11-dot-5-dot-1-released/">GitLab Security Release: 11.5.1, 11.4.8, and 11.3.11
+</a></li>
+<li>
+<time>
+Nov 19, 2018
+</time>
+<a href="/releases/2018/11/19/critical-security-release-gitlab-11-dot-4-dot-6-released/">GitLab Critical Security Release: 11.5.0-rc12, 11.4.6, 11.3.10
+</a></li>
+<li>
+<time>
+Nov 1, 2018
+</time>
+<a href="/releases/2018/11/01/critical-security-release-gitlab-11-dot-4-dot-4-released/">GitLab Critical Security Release: 11.4.4, 11.3.9, 11.2.8
+</a></li>
+<li>
+<time>
+Oct 29, 2018
+</time>
+<a href="/releases/2018/10/29/security-release-gitlab-11-dot-4-dot-3-released/">GitLab Security Release: 11.4.3, 11.3.8, and 11.2.7
+</a></li>
+<li>
+<time>
+Oct 5, 2018
+</time>
+<a href="/releases/2018/10/05/critical-security-release-11-3-4/">GitLab Critical Security Release: 11.3.4, 11.2.5, and 11.1.8
+</a></li>
+<li>
+<time>
+Oct 1, 2018
+</time>
+<a href="/releases/2018/10/01/security-release-gitlab-11-dot-3-dot-1-released/">GitLab Security Release: 11.3.1, 11.2.4, and 11.1.7
+</a></li>
+<li>
+<time>
+Aug 28, 2018
+</time>
+<a href="/releases/2018/08/28/security-release-gitlab-11-dot-2-dot-2-released/">GitLab Security Release: 11.2.3, 11.1.6, and 11.0.6
+</a></li>
+<li>
+<time>
+Jul 26, 2018
+</time>
+<a href="/releases/2018/07/26/security-release-gitlab-11-dot-1-dot-2-released/">GitLab Security Release: 11.1.2, 11.0.5, and 10.8.7
+</a></li>
+<li>
+<time>
+Jul 17, 2018
+</time>
+<a href="/releases/2018/07/17/critical-security-release-gitlab-11-dot-0-dot-4-released/">GitLab Critical Security Release: 11.0.4, 10.8.6, and 10.7.7
+</a></li>
+<li>
+<time>
+Jun 25, 2018
+</time>
+<a href="/releases/2018/06/25/security-release-gitlab-11-dot-0-dot-1-released/">GitLab Security Release: 11.0.1, 10.8.5, and 10.7.6
+</a></li>
+<li>
+<time>
+May 29, 2018
+</time>
+<a href="/releases/2018/05/29/security-release-gitlab-10-dot-8-dot-2-released/">GitLab Security Release: 10.8.2, 10.7.5, and 10.6.6
+</a></li>
+<li>
+<time>
+Apr 30, 2018
+</time>
+<a href="/releases/2018/04/30/security-release-gitlab-10-dot-7-dot-2-released/">GitLab Security Release: 10.7.2, 10.6.5, and 10.5.8
+</a></li>
+<li>
+<time>
+Apr 4, 2018
+</time>
+<a href="/releases/2018/04/04/security-release-gitlab-10-dot-6-dot-3-released/">GitLab Security Release: 10.6.3, 10.5.7, and 10.4.7
+</a></li>
+<li>
+<time>
+Mar 20, 2018
+</time>
+<a href="/releases/2018/03/20/critical-security-release-gitlab-10-dot-5-dot-6-released/">GitLab Critical Security Release: 10.5.6, 10.4.6, and 10.3.9
+</a></li>
+<li>
+<time>
+Mar 6, 2018
+</time>
+<a href="/releases/2018/03/06/security-10-5-3-plus-10-4-5-plus-10-3-8-1st-blog-post/">GitLab Security Release: 10.5.3, 10.4.5, 10.3.8
+</a></li>
+</ul>
+<h3 id=untagged>Posts tagged ‘untagged’</h3>
+<ul class='article-list list-unstyled'>
+<li>
+<time>
+Jun 9, 2013
+</time>
+<a href="/releases/2013/06/09/gitlab-cloud-upgraded-to-5-2/">GitLab Cloud upgraded to 5.2
+</a></li>
+<li>
+<time>
+May 7, 2013
+</time>
+<a href="/releases/2013/05/07/gitlab-cloud-is-now-running-on-5-1/">GitLab Cloud is now running on 5.1
+</a></li>
+<li>
+<time>
+Mar 22, 2013
+</time>
+<a href="/releases/2013/03/22/gitlab-5-0-was-released/">GitLab 5.0 was released
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/tags.html.haml" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/tags.html.haml" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab 8.16 released with auto deploy on Google Kubernetes Engine and Prometheus monitoring as part of GitLab
+|
+GitLab
+</title>
+<meta content='GitLab 8.16 Released with Time Tracking coming to Community Edition and new API, Deploy Keys with write-access, and monitoring with Prometheus' name=description />
+<meta content='GitLab 8.16 Released with Time Tracking coming to Community Edition and new API, Deploy Keys with write-access, and monitoring with Prometheus' name='twitter:description'/>
+<meta content='GitLab 8.16 Released with Time Tracking coming to Community Edition and new API, Deploy Keys with write-access, and monitoring with Prometheus' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab 8.16 released with auto deploy on Google Kubernetes Engine and Prometheus monitoring as part of GitLab' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='releases/posts/2017-01-22-gitlab-8-16-released.html.md' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/releases/2017/01/22/gitlab-8-16-released/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/8_16/pic.jpg" property="og:image">
+<meta content="https://about.gitlab.com/images/8_16/pic.jpg" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab 8.16 released with auto deploy on Google Kubernetes Engine and Prometheus monitoring as part of GitLab' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','5geYbhTxNzL5dsekC-B-','2.0.0');
+</script>
+<link href='https://about.gitlab.com/releases/2017/01/22/gitlab-8-16-released/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<script>
+dataLayer.push({'category': 'releases'});
+</script>
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class='blog article'>
+<div class='wrapper body'>
+<div class=category-back-link>
+<a href="/releases/categories/releases/"><span>&#8592;</span>
+<span>Back to</span>
+<span>releases</span>
+</a></div>
+<span class=date>
+Jan 22, 2017
+</span>
+<span>-</span>
+<span class=author>
+<a href="/company/team/#Jobvo">Job van der Voort</a>
+<a href="https://gitlab.com/JobV"><span>&nbsp;</span>
+<span class=author-gitlab>
+<i class='fab fa-gitlab'></i>
+</span>
+</a><a href="https://twitter.com/Jobvo"><span>&nbsp;</span>
+<span class=author-twitter>
+<i class='fab fa-twitter'></i>
+</span>
+</a></span>
+<h1>
+GitLab 8.16 released with auto deploy on Google Kubernetes Engine and Prometheus monitoring as part of GitLab
+</h1>
+<p class=description>
+GitLab 8.16 Released with Time Tracking coming to Community Edition and new API, Deploy Keys with write-access, and monitoring with Prometheus
+</p>
+<p></p>
+<div class=cover style='background-image: url(/images/8_16/pic.jpg);'></div>
+<div class=content>
+<p>We’re on a mission to <a href="/company/mission/#mission">make sure everyone can contribute</a>. That means making <a href="/direction/#scope">the tools in GitLab</a>
+easy to use, easy to set up and easy to maintain. Along the way some of the major steps were the introduction of zero-setup continuous integration (CI), and auto deploy on Kubernetes in <a href="/releases/2016/12/22/gitlab-8-15-released/">GitLab 8.15</a> last month. This month, we’re leaping into the new year with the
+introduction of the next step.</p>
+<p>With GitLab 8.16 we’re not only making idea to production on Kubernetes <em>much</em>
+more accessible by making it work on Google Cloud, we’re also leaping to the
+next step in idea to production: monitoring. From this release onwards, we’ll
+be shipping the powerful monitoring tool <a href="https://prometheus.io/">Prometheus</a>.</p>
+<p>We found that if you deploy an application, you can't do so in a black hole.
+You need to get feedback about the effects of the deployment. You can use this
+feedback to revert deployments that cause problems and to get ideas about
+future improvements. Adding Prometheus is the first step to make sure you get feedback about system, application, and business metrics as an integrated part of deployments done with GitLab.</p>
+<p>This month's Most Valuable Person (<a href="/community/mvp/">MVP</a>) is
+<a href="https://gitlab.com/toupeira">Markus Koller</a> for his contribution of
+<a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/7754">more storage statistics</a>.
+Thanks Markus!</p>
+<h2 id=from-cancun-to-production-on-google-kubernetes-engine-gke>From Cancun to Production on Google Kubernetes Engine (GKE)</h2>
+<p>Every nine months all GitLab team-members and their significant others are invited to <a href="https://gitlab.com/summits/Summit-2017/">our summit</a>.
+This gives us the opportunity to bond in person and to share our ideas
+and ambitions in an informal way. We've just returned from our summit in Cancún, Mexico,
+where GitLab CEO Sid gave a keynote on the past, current and future of GitLab:</p>
+<figure class=video_container>
+<iframe src="https://www.youtube.com/embed/xGxLi3PtxHM" frameborder=0 allowfullscreen=true> </iframe>
+</figure>
+<p>This was an internal presentation meant for our team members. We share it because transparency is <a href="/handbook/values/">one of our values</a>. It is not a formal announcement, for example we're still evaluating the subscription plans for GitLab.com.</p>
+<p>If you don't have the time to watch the full video, have a look at
+<a href="https://www.youtube.com/watch?v=xGxLi3PtxHM&amp;feature=youtu.be&amp;t=2688">44:48</a>, where Sid gives a challenge to the present team:</p>
+<blockquote>
+<p>If you are the first one to present the idea to production demo working on Google Kubernetes Engine (GKE) on stage during the Summit, I will dance the Sid Shuffle from <em>Ice Age 4</em> on stage out of pure happiness.</p>
+</blockquote>
+<p>If you're not familiar with the Sid shuffle, hold your breath. But first, the
+context of the challenge:</p>
+<p><a href="/releases/2016/12/22/gitlab-8-15-released/">Last month</a> we showed you a glimpse of the future of development:
+in a few minutes from a container scheduler without GitLab to deploying an app to a Kubernetes cluster from a
+GitLab instance with auto-scaling CI. This powerful flow was only available
+for people using Kubernetes in combination with Openshift, and <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/25292">people asked</a> how they could replicate it.</p>
+<p>Google Kubernetes Engine is a part of Google Cloud and can be used by anyone –
+getting it to work there is a big win for everyone. Motivated by both the
+potential for developers around the world and that of seeing Sid dancing,
+GitLab's engineers worked hard to make it happen.</p>
+<p>You can deploy GitLab 8.16 straight to Google Kubernetes Engine, it will have
+auto-scaling CI, auto deploy to your own Kubernetes cluster, Mattermost,
+use your private Docker registry and set up certificates using Let's Encrypt:</p>
+<figure class=video_container>
+<iframe src="https://www.youtube.com/embed/3A8mdJl_icM" frameborder=0 allowfullscreen=true> </iframe>
+</figure>
+<p>Below is a less polished video of this same demo being given during the summit and Sid being happy and dancing out of excitement. If you want to skip the demo please go to <a href="https://www.youtube.com/watch?v=39chczWRKws#t=28m29s">28:29</a>.</p>
+<figure class=video_container>
+<iframe src="https://www.youtube.com/embed/39chczWRKws" frameborder=0 allowfullscreen=true> </iframe>
+</figure>
+<h3 id=details-on-deploying-to-gke>Details on deploying to GKE</h3>
+<p>You can do everything shown in the <em>second</em> video
+right now <a href="https://cloud.google.com/">by signing up at Google Cloud</a> and simply following our
+<a href="https://gitlab.com/gitlab-org/kubernetes-gitlab-demo/blob/master/README.md">documentation on idea to production on Google Kubernetes Engine</a>.</p>
+<p>For deploying to Kubernetes, <a href="https://docs.gitlab.com/ee/topics/autodevops/stages.html">see our documentation on auto deploy</a>.</p>
+<p>We're working to make it even easier for <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/25986">everyone to replicate idea to production</a>.</p>
+<h2 id=monitoring-gitlab-with-prometheus>Monitoring GitLab with Prometheus</h2>
+<p>We have outlined an <a href="/2017/01/05/prometheus-and-gitlab/">extensive vision</a> for making world-class monitoring
+easier for everyone, and with GitLab 8.16 we have taken our first step towards that goal. In this release we have included <a href="https://prometheus.io">Prometheus</a> and its
+<a href="https://github.com/prometheus/node_exporter">Node Exporter</a> as part of our Omnibus package. This will provide
+high-quality, time-series monitoring of your GitLab server's resources.</p>
+<p>Both Prometheus and Node exporter are off by default for this release, but we
+plan on having them on by default, starting with GitLab version 9.0 that is scheduled for March 22.
+To enable monitoring now, simply <a href="https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html">enable the features</a> and
+reconfigure GitLab.</p>
+<p>After you have enabled Prometheus you can visit <code>&lt;your_domain_name&gt;:9090</code> to access the Prometheus console, or connect a compatible dashboard tool such as Grafana.</p>
+<p>In the coming months we'll be adding <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/26905">more charts to the environments pages</a>, for example to see how <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/26944">a deployment affected memory usage</a>.</p>
+<h2 id=time-tracking-in-ce-and-api>Time Tracking in CE and API</h2>
+<p>We <a href="/releases/2016/11/22/gitlab-8-14-released/">introduced</a> time tracking in GitLab 8.14 Enterprise Edition.
+Since its introduction, we've seen massive usage on GitLab.com; and many people
+argued that time tracking can also be essential for smaller teams and not just
+for enterprises. We heard you and have therefore decided to move time tracking
+to GitLab Community Edition with this release.</p>
+<p>On top of that, time tracking has now a proper API, which lets you achieve the
+same actions you can do with the user interface. This means you can set
+estimates and record time spent on issues and merge requests.</p>
+<blockquote>
+<p><a href="https://docs.gitlab.com/ee/user/project/time_tracking.html">Time tracking feature documentation</a></p>
+</blockquote>
+<blockquote>
+<p>Time tracking API documentation for <a href="https://docs.gitlab.com/ee/api/merge_requests.html#set-a-time-estimate-for-a-merge-request">merge requests</a>
+and <a href="https://docs.gitlab.com/ee/api/issues.html#set-a-time-estimate-for-an-issue">issues</a></p>
+</blockquote>
+<h2 id=gitlab-pages-in-817>GitLab Pages in 8.17</h2>
+<p>We <a href="/releases/2016/12/24/were-bringing-gitlab-pages-to-community-edition/">promised to bring GitLab Pages to CE</a> and <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8463">started to work on this</a>. We expect to ship this next month in GitLab 8.17.</p>
+<h2 id=new-issues-search-and-filter-interface>New issues search and filter interface</h2>
+<p>If you use issues, you probably have a lot of them.
+So we've had the ability to search and filter issues based on different
+attributes in GitLab. With 8.16, we've redesigned that interface to be more
+natural and intuitive, and modernized the look along the way.
+This will also allow us to expand search and filtering with more powerful
+features in the future.</p>
+<p><img src="/images/8_16/issues_search_1.png" alt="Improved issue search and filters in GitLab 8.16" class=shadow /></p>
+<p>We've started out with issues, but we're planning to bring the new design to
+other parts of GitLab soon as well.</p>
+<p><img src="/images/8_16/issues_search_2.png" alt="Improved issue search and filters in GitLab 8.16" class=shadow /></p>
+<h2 id=removing-your-approval-in-ee-merge-requests>Removing your approval in EE merge requests</h2>
+<p>In GitLab Enterprise Edition Starter, you have been able to approve merge
+requests. As an approver, clicking approve means that you've committed to that
+action. But there are many scenarios where you may want to undo your approval.</p>
+<p><img src="/images/8_16/approve_merge_request.png" alt="Unapprove merge requests in GitLab 8.16" class=shadow /></p>
+<p>Perhaps you saw something in the diff that you missed earlier.
+Or maybe another approver brings up another point of discussion,
+and so the approver wants to remove their approval in the meantime,
+and reapply it later.</p>
+<p><img src="/images/8_16/unapprove_merge_request.png" alt="Unapprove merge requests in GitLab 8.16" class=shadow /></p>
+<p>With GitLab 8.16 EE, you can now do that. You simply click in the merge request
+widget to remove a previously made approval. As expected, system notes in the
+merge request thread are recorded and notification emails are sent for both
+approving and removing approvals.</p>
+<p><img src="/images/8_16/email_unapprove_merge_request.png" alt="Unapprove merge requests in GitLab 8.16" class=shadow /></p>
+<p>Updated approvals are available in GitLab Enterprise Edition Starter, Premium
+and on GitLab.com.</p>
+<h2 id=deploy-keys-with-write-access>Deploy keys with write access</h2>
+<p><a href="https://docs.gitlab.com/ee/ssh/">Deploy keys</a> are ideal for giving limited read access to your repository from external sources, for instance for deploys.</p>
+<p>We've added the ability to give deploy keys write access. This will allow the
+holder of the key to push to your repository, which can be useful for all sorts
+of things, such as setting a Git tag on deploys, pushing artifacts to the
+repository and more.</p>
+<p>By default, deploy keys are read-only and your existing keys are not changed.</p>
+<p>Deploy keys with write access was contributed by <a href="https://gitlab.com/aliibrahim">Ali Ibrahim</a>. Thanks Ali!</p>
+<h2 id=limit-shared-runner-usage-ee-starterpremium>Limit Shared Runner Usage (EE Starter/Premium)</h2>
+<p>Not only does GitLab CI scale up automatically based on demand,
+shared Runners make it incredibly easy to offer CI to your entire organisation.
+In fact, it's so easy to offer CI services that we saw a need arise to be able
+to limit the usage of those shared resources.</p>
+<p><img src="/images/8_16/bm1.png" alt="Limit build minutes usage in GitLab 8.16 EE" class=shadow /></p>
+<p>With GitLab 8.16 Enterprise Edition you can limit build minutes of shared
+Runners per group. Once surpassed, pipelines will no longer execute on shared
+Runners. This will allow you to prevent over-usage of shared resources when
+using GitLab CI.</p>
+<p><img src="/images/8_16/bm2.png" alt="Limit build minutes usage in GitLab 8.16 EE" class=shadow /></p>
+<blockquote>
+<p><a href="https://docs.gitlab.com/ee/administration/settings/continuous_integration.html#shared-runners-build-minutes-quota">Read more about the Shared Runners build minutes quota</a></p>
+</blockquote>
+<h2 id=introduce-a-new-merge-slash-command-for-merge-requests>Introduce a new <code>/merge</code> slash command for merge requests</h2>
+<p><a href="https://docs.gitlab.com/ee/user/project/quick_actions.html">Slash commands</a> are a very quick way of executing a number of operations on
+issues and merge requests in GitLab. Simply type one of the commands in
+the description or comment of an issue or merge request and the commands will
+be executed on submission.</p>
+<p>You can now even merge using a slash command. Type <code>/merge</code> and the merge
+request will be merged when it's ready, given you have permission to do so.</p>
+<p>GitLab has a large number of slash commands, <a href="https://docs.gitlab.com/ee/user/project/quick_actions.html">view them all here</a>.</p>
+<h2 id=streamlining-project-settings-and-navigation>Streamlining project settings and navigation</h2>
+<p>Here at GitLab we iterate quickly. So every now and then we revisit and
+streamline our settings and navigation to accommodate.</p>
+<p>In GitLab 8.15, the project settings dropdown menu had
+many items. Furthermore, it's confusing that the menu itself is
+located far away from the rest of the tabbed navigation toward the center of
+the page. In the next few releases, we will be streamlining that navigation,
+and combining settings pages appropriately.</p>
+<p><img src="/images/8_16/settings_new.png" alt="Improved settings navigation in GitLab 8.16"/></p>
+<p>With 8.16 we are just starting, by combining the <code>Members</code> and <code>Groups</code> menu
+items into just one, called <code>Members</code>. Navigating to that page will show the
+two previous pages combined into one. Similarly, we combined <code>Webhooks</code> and
+<code>Services</code> together into <code>Integrations</code>.</p>
+<h2 id=record-and-show-last-used-date-of-ssh-keys>Record and show last used date of SSH Keys</h2>
+<p>If you have uploaded several SSH keys, it can be hard to tell which
+you've been using most recently.</p>
+<p>GitLab will now report when a SSH has been used last. Find this information
+in your profile, under keys: <code>/profile/keys</code>.</p>
+<p>Thanks <a href="https://gitlab.com/wingyu">Vincent Wong</a> for contributing this useful feature!</p>
+<h2 id=storage-statistics>Storage statistics</h2>
+<p>Okay, we admit it, we do our best to make it easy to use a lot of disk space:
+You can use GitLab to store your build artifacts, your docker images,
+LFS objects, Git objects, and more.</p>
+<p>To make it a bit easier to see <em>where</em> you are using all this disk space,
+GitLab will now report per project and group how much space is being used
+and by what (repository, artifacts (includes Docker images) or LFS).</p>
+<p><img src="/images/8_16/storage_usage.png" alt="See how storage is being used in GitLab 8.16" class=shadow /></p>
+<p>Thanks to this month's MVP <a href="https://gitlab.com/toupeira">Markus Koller</a> for contributing this feature!</p>
+<h2 id=gitlab-runner>GitLab Runner</h2>
+<p>We are also releasing GitLab Runner 1.10 today. The most interesting changes:</p>
+<ul>
+<li>Add termination grace period for Kubernetes executor <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/383">!383</a></li>
+<li>Add configuration options for Kubernetes resource requests <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/391">!391</a></li>
+<li>Add poll interval and timeout parameters for Kubernetes executor <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/384">!384</a></li>
+<li>Pass ImagePullSecrets for Kubernetes executor <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/449">!449</a></li>
+<li>Add Namespace overwrite possibility for Kubernetes executor <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/444">!444</a></li>
+<li>Add support for GIT_SUBMODULE_STRATEGY <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/443">!443</a></li>
+<li>Add Prometheus metric that counts number of catched errors <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/439">!439</a></li>
+<li>Update Docker Machine in official Runner images to v0.9.0 <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/454">!454</a></li>
+<li>Add '–run-tagged-only' cli option for runners <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/438">!438</a></li>
+<li>Add armv6l to the ARM replacements list for docker executor helper image <a href="https://gitlab.com/gitlab-org/gitlab-runner/merge_requests/446">!446</a></li>
+</ul>
+<p>To see the full list of all changes please read <a href="https://gitlab.com/gitlab-org/gitlab-runner/blob/v1.10.0/CHANGELOG.md">the Runner's CHANGELOG file</a>.</p>
+<h2 id=gitlab-mattermost-36>GitLab Mattermost 3.6</h2>
+<p>GitLab 8.16 includes <a href="https://about.mattermost.com/mattermost-3-6">Mattermost 3.6</a>, <a href="https://about.mattermost.com/">an open source Slack-alternative</a> whose newest release offers improved multi-team deployment, an early version of emoji reactions, an improved command line interface and much more.</p>
+<p>This version includes <a href="http://about.mattermost.com/security-updates/">security updates</a> and upgrade is recommended.</p>
+<h2 id=amazing-community-contributions>Amazing community contributions</h2>
+<p>For 8.16, we merged 50 merge requests from the community, including new
+features, bug fixes, or even backstage improvements!</p>
+<p>The most noticeable contributed changes are as follows (some were highlighted above):</p>
+<ul>
+<li>Allow to add deploy keys with write-access. <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/5807">!5807</a></li>
+<li>Allow to use <code>+</code> symbol in snippet filenames. <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/6644">!6644</a></li>
+<li>Order projects by latest activity in the "Go to a project" quick switcher. <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/7737">!7737</a></li>
+<li>Introduce a new <code>/merge</code> slash command for merge requests. <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/7746">!7746</a></li>
+<li>Add storage statistics for build artifacts, and LFS objects. <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/7754">!7754</a></li>
+<li>Log LDAP blocking/unblocking events to application log. <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8042">!8042</a></li>
+<li>Allow to use ENV variables in the Redis config. <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8073">!8073</a></li>
+<li>Record and show last used date of SSH Keys. <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8113">!8113</a></li>
+<li>Add support for PlantUML diagrams in Asciidoc. <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8537">!8537</a></li>
+<li>Expire related caches after changing HEAD. <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8584">!8584</a></li>
+<li>Autoresize markdown preview. <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8607">!8607</a></li>
+</ul>
+<h2 id=omnibus-gitlab-package-changes>Omnibus GitLab package changes</h2>
+<h3 id=postgresql-version-upgrade>PostgreSQL version upgrade</h3>
+<p>As mentioned <a href="/releases/2016/12/22/gitlab-8-15-released/#postgresql-version-upgrade">in the 8.15 release post</a>,
+omnibus-gitlab packages are equipped with <code>gitlab-ctl pg-upgrade</code> tool.
+This tool will upgrade the bundled PostgreSQL database version.</p>
+<p>Please plan the upgrade ahead of GitLab 9.0 release (scheduled for Mar. 22, 2017).</p>
+<p>The omnibus-gitlab packages for GitLab 9.0 will prevent upgrades until the database
+is upgraded.</p>
+<blockquote>
+<p><a href="https://docs.gitlab.com/omnibus/settings/database.html#upgrade-packaged-postgresql-server">Read more about database upgrade in our docs</a></p>
+</blockquote>
+<blockquote>
+<p>Ran into issues? Create an issue at the <a href="https://gitlab.com/gitlab-org/omnibus-gitlab/issues">omnibus-gitlab issue tracker</a>,
+and reference it in the <a href="https://gitlab.com/gitlab-org/omnibus-gitlab/issues/1783">upgrade problems meta issue.</a></p>
+</blockquote>
+<h3 id=reduced-package-size>Reduced package size</h3>
+<p>When you download the omnibus-gitlab 8.16 package you might notice the reduced
+package size. Do not be alarmed, this is intentional.
+Even with the new addition of monitoring in the package, the size was reduced
+by almost 50MB!
+<a href="https://gitlab.com/gitlab-org/omnibus-gitlab/issues/1778">We've been working</a>
+and will continue working on further size optimizations of the package.</p>
+<h2 id=other-changes>Other changes</h2>
+<p>This release has more improvements, including security fixes. Please check out
+<a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CHANGELOG.md">the changelog</a> to see all the named changes.</p>
+<h2 id=performance-changes>Performance Changes</h2>
+<ul>
+<li>Refactored note edit form to improve frontend performance on MR and Issues pages, especially pages with has a lot of discussions in it <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8356">8356</a></li>
+<li>Reduce DB-load for build-queues by storing last_update in Redis <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/8084">8084</a></li>
+</ul>
+<h2 id=upgrade-barometer>Upgrade barometer</h2>
+<p>This release requires downtime.</p>
+<p>This release migrates project related statistics to a separate table, removing
+existing columns in the process. This migration process requires downtime,
+and can take 10-15 minutes for large installations.</p>
+<h3 id=note>Note</h3>
+<p>We assume you are upgrading from the latest version. If not, then also consult the upgrade barometers of any intermediate versions you are skipping.
+If you are upgrading from a GitLab version prior to 8.0 <em>and</em> you have CI enabled, you have to upgrade to GitLab 8.0 <a href="/releases/2015/09/22/gitlab-8-0-released/">first</a>.</p>
+<p>Please be aware that by default the Omnibus packages will stop, run migrations,
+and start again, no matter how “big” or “small” the upgrade is. This behavior
+can be changed by adding a <a href="http://doc.gitlab.com/omnibus/update/README.html"><code>/etc/gitlab/skip-auto-migrations</code>
+file</a>.</p>
+<hr/>
+<h2 id=installation>Installation</h2>
+<p>If you are setting up a new GitLab installation please see the
+<a href="/install/">download GitLab page</a>.</p>
+<h2 id=updating>Updating</h2>
+<p>Check out our <a href="/update/">update page</a>.</p>
+<h2 id=enterprise-edition>Enterprise Edition</h2>
+<p>The mentioned EE-only features and things like LDAP group support can be found in GitLab Enterprise Edition Starter and Premium.
+For a complete overview please have a look at <a href="/stages-devops-lifecycle/">all GitLabs products</a>.</p>
+<p>Access to GitLab Enterprise Edition is included with a
+<a href="/stages-devops-lifecycle/">subscription</a>.
+No time to upgrade GitLab yourself?
+A subscription also entitles you to our upgrade and installation services.</p>
+<hr/>
+<div class='panel panel-default twitter-block'>
+<a class='twitter-block-link panel-body' href='http://twitter.com/share?text=GitLab+8.16+released+with+auto+deploy+on+Google+Kubernetes+Engine+and+Prometheus+monitoring+as+part+of+GitLab+via+%40Jobvo&amp;url=https://about.gitlab.com/releases/2017/01/22/gitlab-8-16-released/&amp;hashtags=' rel=nofollow target=_blank title='Tweet!'>
+<span class='twitter-text pull-left'>
+GitLab 8.16 released with auto deploy on Google Kubernetes Engine and Prometheus monitoring as part of GitLab
+via @Jobvo
+</span>
+<span class=click-to-tweet>
+Click to tweet!
+<i class='fab fa-twitter'></i>
+</span>
+</a>
+</div>
+</div>
+<div class=social>
+<div class='share-butons clearfix'>
+<a class='share-btn share-btn-facebook' href='http://www.facebook.com/sharer.php?u=https://about.gitlab.com/releases/2017/01/22/gitlab-8-16-released/' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-facebook'></i>
+<span class=sr-only>
+Share on Facebook
+</span>
+</a>
+<a class='share-btn share-btn-twitter' href='http://twitter.com/share?url=https://about.gitlab.com/releases/2017/01/22/gitlab-8-16-released/&amp;text=GitLab 8.16 released with auto deploy on Google Kubernetes Engine and Prometheus monitoring as part of GitLab' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-twitter'></i>
+<span class=sr-only>
+Share on Twitter
+</span>
+</a>
+<a class='share-btn share-btn-linkedin' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.gitlab.com/releases/2017/01/22/gitlab-8-16-released/&amp;title=GitLab 8.16 released with auto deploy on Google Kubernetes Engine and Prometheus monitoring as part of GitLab&amp;summary=&amp;source=' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-linkedin'></i>
+<span class=sr-only>
+Share on LinkedIn
+</span>
+</a>
+<a class='share-btn share-btn-hackernews' href='https://news.ycombinator.com/submitlink?u=https://about.gitlab.com/releases/2017/01/22/gitlab-8-16-released/&amp;t=GitLab 8.16 released with auto deploy on Google Kubernetes Engine and Prometheus monitoring as part of GitLab' onclick='openSocialLink(this, 500, 400); return false;' target=_blank>
+<i class='fab fa-hacker-news'></i>
+<span class=sr-only>
+Share on Hacker News
+</span>
+</a>
+</div>
+</div>
+<nav aria-label='Blog post pager'>
+<ul class=pager>
+<li class=pull-left>
+<a href="/releases/2017/01/10/gitlab-8-dot-15-dot-4-released/" title="GitLab 8.15.4, 8.14.6, and 8.13.11 Released"><i class='fa fa-chevron-left'></i>
+<span class=screen-reader-text>Previous Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.15.4, 8.14.6, and 8.13.11 Released
+</span>
+</a></li>
+<li class=pull-right>
+<a href="/releases/2017/01/23/gitlab-8-dot-16-dot-1-security-release/" title="GitLab 8.16.1, 8.15.5, 8.14.7, and 8.13.12 Security Release"><span class=screen-reader-text>Next Post:</span>
+<span class=adjacent_post_title>
+GitLab 8.16.1, 8.15.5, 8.14.7, and 8.13.12 Security Release
+</span>
+<i class='fa fa-chevron-right'></i>
+</a></li>
+</ul>
+</nav>
+</div>
+<div class='wrapper signup'>
+<div class="panel panel-default nl panel-newsletter-signup">
+<div class=row>
+<div class="col-12 newsletter">
+<div class=newsletter-form style="margin: 32px 0">
+<span class=newsletter-preamble>
+Sign up for GitLab's monthly newsletter
+</span>
+<script src="//page.gitlab.com/js/forms2/js/forms2.min.js"></script>
+<form id=mktoForm_1077 style="display: initial"></form>
+<script>
+
+          MktoForms2.setOptions(
+          {
+            formXDPath : "/rs/194-VVC-221/images/marketo-xdframe-relative.html"
+          });
+          MktoForms2.loadForm("//page.gitlab.com", "194-VVC-221", 1077, function(form) {
+            form.onSuccess(function(values, followUpUrl) {
+
+              dataLayer.push(
+              {
+                'event' : 'mktoLead', 
+                'mktoFormId' : form.getId(),
+                'eventCallback' : function()
+                {
+                  form.getFormElem().hide();
+                  document.getElementById('confirmform').style.display = 'block';
+                }, 'eventTimeout' : 3000
+              });
+              return false;
+            });
+            function getgacid() {
+              try {
+                var tracker = ga.getAll()[0];
+                return tracker.get('clientId');
+              } catch (e) {
+                return 'n/a';
+              }
+            }
+            form.vals({
+              'gacid': getgacid()
+            });
+          });
+        </script>
+<div id=confirmform class=confirm-message style="display:none;"><p>Thanks for subscribing!</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=gitlab-trial>
+<div class=gitlab-trial__wrapper>
+<div class=gitlab-trial__left-side>
+<h2>
+Take GitLab for a spin
+</h2>
+<p>
+See what your team could do with The DevSecOps Platform.
+</p>
+<a href="https://gitlab.com/-/trials/new?glm_content=default-saas-trial&amp;glm_source=about.gitlab.com" class="btn cta-btn" data-ga-name="free trial" data-ga-location="try partial">Get free trial</a>
+</div>
+<div class=gitlab-trial__right-side>
+<img src="/images/cta/gitlab-enterprise-team-member-photos.png" alt=""/>
+<p>
+Have a question? We're here to help.
+</p>
+<a class=sales-cta href='https://about.gitlab.com/sales/'>
+Talk to an expert
+</a>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/releases/posts/2017-01-22-gitlab-8-16-released.html.md" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/releases/posts/2017-01-22-gitlab-8-16-released.html.md" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</div>
+</body>
+</html>

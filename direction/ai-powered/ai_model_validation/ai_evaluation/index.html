@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Category Direction - AI Evaluation
+|
+GitLab
+</title>
+<meta content='An automated and scalable AI/ML model evaluation tool' name=description />
+<meta content='An automated and scalable AI/ML model evaluation tool' name='twitter:description'/>
+<meta content='An automated and scalable AI/ML model evaluation tool' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Category Direction - AI Evaluation' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/ai-powered/ai_model_validation/ai_evaluation/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/ai-powered/ai_model_validation/ai_evaluation/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Category Direction - AI Evaluation' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/ai-powered/ai_model_validation/ai_evaluation/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Category Direction - AI Evaluation
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/tmccaslin'>
+<img
+src='/images/team/taylormccaslin.png'
+class=codeowner-avatar-img
+alt='Taylor McCaslin'
+title='Taylor McCaslin'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/ai-powered/ai_model_validation/ai_evaluation/index.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/ai-powered/">Stage Direction - AI-powered</a></li><li><a href="/direction/ai-powered/ai_model_validation/">Group Direction - AI Model Validation</a></li><li>Category Direction - AI Evaluation</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 class=no_toc id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#ai-evaluation" id=markdown-toc-ai-evaluation>AI Evaluation</a></li>
+<li><a href="#overview" id=markdown-toc-overview>Overview</a></li>
+<li><a href="#quick-links" id=markdown-toc-quick-links>Quick Links</a></li>
+<li><a href="#goal" id=markdown-toc-goal>Goal</a></li>
+<li><a href="#whats-next--why" id=markdown-toc-whats-next--why>What's Next &amp; Why</a></li>
+</ul>
+<h2 id=ai-evaluation>AI Evaluation</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage</td>
+<td><a href="/direction/ai-powered/">AI-powered</a></td>
+</tr>
+<tr>
+<td>Group</td>
+<td><a href="/direction/ai-powered/ai_model_validation">AI Model Validation</a></td>
+</tr>
+<tr>
+<td>Content Last Reviewed</td>
+<td><code>2024-02-15</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id=overview>Overview</h2>
+<p>AI Validation is a critical cornerstone for successfully implementing Generative AI solutions. AI Validation provides a mechanism by which to empirically measure the output of Generative AI solutions at scale, enabling data-driven decisions. It empowers methodical iteration on AI features, creating greater efficiency in the creation and implementation of AI-enabled workflows across the platform. AI Validation also ensures the reliability and the quality of AI outputs, mitigating the risks associated with Generative AI.</p>
+<p>The AI Validation Team’s Centralized Evaluation Framework supports the entire end-to-end process of AI feature creation, from selecting the appropriate model for a use case to evaluating the AI features’ output. AI Validation works in concert with other types of evaluation, such as SET Quality testing and diagnostic testing, but is specifically focused on the interaction with Generative AI.</p>
+<p>The foundation of the Centralized Evaluation Framework is based upon three main elements: a prompt library, <a href="https://about.gitlab.com/direction/ai-powered/ai_model_validation/ai_evaluation/metrics/">validation metrics</a>, and comparative <a href="https://about.gitlab.com/direction/ai-powered/ai_model_validation/ai_evaluation/foundation_models/">foundational models</a>. The prompt library is composed of diverse benchmark datasets tailored to serve as a proxy to various use cases, including code completion, code generation, and natural language questions. Validation metrics provide a basis upon which to assess the accuracy and usefulness of Generative AI outputs against industry benchmarks. The Centralized Evaluation Framework incorporates various validation metrics, to include but not limited to LLM consensus filtering, LLM judges, and cosine similarities. Foundational models provide a baseline for understanding the performance of GitLab AI features against industry standards. Additional information on our validation process can be found <a href="https://about.gitlab.com/direction/ai-powered/ai_model_validation/ai_evaluation/procedures/">here</a>.</p>
+<p>The Evaluation Framework enables large-scale tests that are designed to be composable via CLI and API, enabling feature teams to assess the impact of code changes on specific AI-generated content. (For example, if a team is focused on improving output for a specific use case, they can choose to test only on that use case rather than the entire corpus of tests.) Test results may be accessed locally, on BigQuery, or via a feature-specific dashboard. The AI Validation team began with providing support to Code Suggestions, and is now actively supporting Duo Chat. </p>
+<h2 id=quick-links>Quick Links</h2>
+<p><a href="https://about.gitlab.com/direction/ai-powered/ai_model_validation/ai_evaluation/metrics/">validation metrics</a></p>
+<p><a href="https://about.gitlab.com/direction/ai-powered/ai_model_validation/ai_evaluation/foundation_models/">foundational models</a></p>
+<p><a href="https://about.gitlab.com/direction/ai-powered/ai_model_validation/ai_evaluation/procedures/">validation process</a></p>
+<h2 id=goal>Goal</h2>
+<p>The AI Validation team continues to iterate on and build the Centralized Evaluation Framework with the goal of expanding support to future AI-powered features, enhancing developer productivity, and instilling confidence in the reliability and value of AI-powered processes for tasks across the software development lifecycle.</p>
+<p>The AI Validation category focuses on assessing the performance, tuning parameters, prompt engineering techniques, and quality of algorithms for various AI models. The Centralized Evaluation Framework incorporates numerous open source, as well as industry models from Google, Anthropic, and others.</p>
+<p>Current work supports the Duo Chat team’s assessment of chat responses based on correctness, readability, and comprehensiveness. The AI Validation team has leveraged industry models as a benchmark, and both open source and custom datasets have been curated for specific use cases identified by the Duo Chat team. Validation methods appropriate to the chat use case have been employed, including LLM consensus filtering, LLM judges, and cosine similarity scores. The AI Validation team is working hand in glove with the Duo Chat team to enable efficient, data-driven iteration on Chat tool engineering and the production of high-quality responses.</p>
+<h2 id=whats-next--why>What's Next &amp; Why</h2>
+<p><a href="https://gitlab.com/groups/gitlab-org/-/epics/11290" title="AI Model Validation Group Direction">AI Validation Group Direction</a></p>
+<p><a href="https://gitlab.com/gitlab-com/gitlab-OKRs/-/issues/?sort=title_asc&amp;state=opened&amp;label_name%5B%5D=group%3A%3Aai%20model%20validation&amp;first_page_size=20">Our OKRs</a></p>
+<p>FY25 R&amp;D Investment Themes: <a href="https://about.gitlab.com/direction/#enable-aiml-efficiencies-across-devsecops">Enable AI/ML Efficiencies Across DevSecOps</a></p>
+<p> Our goal for AI Validation is to enable data-driven decisions in the creation and implementation of GenAI features across the GitLab platform. We have provided support to Code Suggestions and Duo Chat, and will continue to enable efficient iteration on GenAI features. As a long-term initiative, we want to expand our Centralized Evaluation Framework to evaluate various models based on Quality, Cost, and Latency. </p>
+<p>As we move towards that long-term goal, our short-term goals support the scaling of the Centralized Evaluation Framework and include:</p>
+<ul>
+<li>Publishing the centralized blueprint for the end-to-end architecture of the Centralized Evaluation Framework and algorithmic basis for AI evaluation methods.</li>
+<li>Providing ongoing support to Duo Chat, by augmenting Centralized Evaluation Framework datasets with prompt libraries supporting Code Generation, Code Explanation, and Search. We will further add two additional metrics for evaluation.</li>
+<li>Solution validating an API access point for the Centralized Evaluation Framework, providing more uniform access to the prompt library and versioning of inputs (to include models, prompt engineering, and other inputs).</li>
+<li>Solution validating a dynamic dashboard that would provide metrics, updated on a weekly basis, that track model drift and other potential issues. This dashboard would include all production models and previously tested industry benchmark models.</li>
+</ul>
+<p>Primary Decision Factors, inspired by this <a href="https://arxiv.org/pdf/2203.02155.pdf">paper</a>:</p>
+<ol>
+<li>Will the code be honest? (consistent with the facts)?</li>
+<li>Will the code be harmless (not including completions that might offend)?</li>
+<li>Will the code be helpful (accomplishing the goal of the coder)? </li>
+</ol>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/ai-powered/ai_model_validation/ai_evaluation/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/ai-powered/ai_model_validation/ai_evaluation/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

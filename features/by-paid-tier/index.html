@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Features by Tier
+|
+GitLab
+</title>
+<meta content='This page is meant to showcase the features by Paid Tier across GitLab&#39;s Product Hierarchy.' name=description />
+<meta content='This page is meant to showcase the features by Paid Tier across GitLab&#39;s Product Hierarchy.' name='twitter:description'/>
+<meta content='This page is meant to showcase the features by Paid Tier across GitLab&#39;s Product Hierarchy.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Features by Tier' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='features/by-paid-tier/index.html.md.erb' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/features/by-paid-tier/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Features by Tier' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/features/by-paid-tier/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Features by Tier
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/features/by-paid-tier/index.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li>Features by Tier</li>
+</ol>
+<h2 id=features-by-stage-and-tier>Features by Stage and Tier</h2>
+<p>This page is meant to showcase the features by Paid Tier across GitLab's Product Hierarchy.</p>
+<h3 id=Plan> Plan </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Category</th>
+<th style="text-align: left">Features in Premium</th>
+<th style="text-align: left">Features in Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/topics/plan_and_track.html#team-planning">Team Planning</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/project/labels.html#scoped-labels">Scoped Labels</a><br/><a href="https://docs.gitlab.com/ee/user/project/issues/issue_weight.html">Issue Weights</a><br/><a href="https://docs.gitlab.com/ee/user/group/iterations/#iteration-cadences">Iteration Cadences</a><br/><a href="https://docs.gitlab.com/ee/user/project/issues/multiple_assignees_for_issues.html">Multiple Issue Assignees</a><br/><a href="https://docs.gitlab.com/ee/user/project/issues/related_issues.html#blocking-issues">Issue Dependencies</a><br/><a href="https://docs.gitlab.com/ee/user/project/milestones/burndown_and_burnup_charts.html#burnup-charts">Burnup Charts</a><br/><a href="https://docs.gitlab.com/ee/user/project/milestones/burndown_and_burnup_charts.html">Burndown Charts</a><br/><a href="https://docs.gitlab.com/ee/administration/settings/email.html#custom-additional-text">Custom Text in Emails</a><br/><a href="https://docs.gitlab.com/ee/user/discussions/index.html#view-description-change-history">Track Description Changes</a><br/><a href="https://docs.gitlab.com/ee/user/group/issues_analytics">Issue Analytics</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="/solutions/portfolio-management/">Portfolio Management</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/group/epics/epic_boards.html">Epic Boards</a><br/><a href="https://docs.gitlab.com/ee/user/group/epics/manage_epics.html#bulk-edit-epics">Bulk Edit Epics</a><br/><a href="https://docs.gitlab.com/ee/user/project/issue_board.html#multiple-issue-boards">Multiple Group Issue Boards</a><br/><a href="https://docs.gitlab.com/ee/user/project/issue_board.html#sum-of-issue-weights">Total Issue Weight per Issue Board List</a><br/><a href="https://docs.gitlab.com/ee/user/project/issue_board.html">Issue Board Assignee Lists</a><br/><a href="https://docs.gitlab.com/ee/user/project/issue_board.html#milestone-lists">Issue Board Milestone Lists</a><br/><a href="https://docs.gitlab.com/ee/user/project/issue_board.html#configurable-issue-boards">Issue Board Configuration</a><br/><a href="https://docs.gitlab.com/ee/user/group/epics/">Single level Epics</a><br/><a href="https://docs.gitlab.com/ee/user/group/epics/manage_epics.html#make-an-epic-confidential">Confidential Epics</a><br/><a href="https://docs.gitlab.com/ee/user/group/epics/manage_epics.html#reorder-issues-assigned-to-an-epic">Reorder Issues in Epic Tree</a><br/><a href="https://docs.gitlab.com/ee/user/group/epics/manage_epics.html#start-and-due-date-inheritance">Epic Fixed Dates</a><br/><a href="https://docs.gitlab.com/ee/user/group/epics/manage_epics.html#start-and-due-date-inheritance">Epic Dynamic Dates</a><br/><a href="https://docs.gitlab.com/ee/user/group/epics/manage_epics.html#promote-an-issue-to-an-epic">Promote Issue to Epic</a><br/><a href="https://docs.gitlab.com/ee/user/group/roadmap/">Roadmaps</a><br/><a href="https://docs.gitlab.com/ee/user/group/planning_hierarchy/">Planning hierarchy</a></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/group/epics/manage_epics.html#multi-level-child-epics">Multi-level Epics</a><br/><a href="https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#health-status">Issue and Epic Health Reporting</a><br/><a href="https://docs.gitlab.com/ee/user/group/epics/linked_epics.html">Linked Epics</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="/solutions/value-stream-management/dora/">DORA Metrics</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/analytics/#devops-research-and-assessment-dora-key-metrics">DORA Metrics dashboard in Value Stream Dashboard</a><br/><a href="https://docs.gitlab.com/ee/user/analytics/value_streams_dashboard.htm">DORA Metrics - Value Stream Dashboard DevOps performance panel with DORA scores industry benchmarks</a><br/><a href="https://docs.gitlab.com/ee/user/analytics/ci_cd_analytics.html#lead-time-charts">DORA - Lead time for changes</a><br/><a href="https://docs.gitlab.com/ee/user/analytics/ci_cd_analytics.html#deployment-frequency-charts">DORA - Deployment frequency</a><br/><a href="https://docs.gitlab.com/ee/api/dora/metrics.html">DORA - Time To restore Service</a><br/><a href="https://docs.gitlab.com/ee/user/analytics/#devops-research-and-assessment-dora-key-metrics">DORA - Change Failure Rate</a><br/><a href="https://docs.gitlab.com/ee/user/project/insights/">Insights: Custom DORA reporting</a><br/><a href="https://docs.gitlab.com/ee/user/analytics/ci_cd_analytics.html">DORA Trends Over Time Charts</a><br/><a href="https://docs.gitlab.com/ee/user/analytics/value_streams_dashboard#dashboard-metrics-and-drill-down-reports">Value Streams Dashboard with Life cycle, DORA, merge request, and vulnerability metrics</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="/solutions/value-stream-management/">Value Stream Management</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/group/issues_analytics">Issue Analytics</a><br/><a href="/stages-devops-lifecycle/value-stream-analytics/">Group Level Value Stream Analytics</a><br/><a href="https://docs.gitlab.com/ee/user/group/contribution_analytics/index.html">Contribution Analytics</a><br/><a href="https://docs.gitlab.com/ee/user/analytics/productivity_analytics.html">Productivity Analytics</a><br/><a href="https://docs.gitlab.com/ee/user/analytics/code_review_analytics.html">Code Review Analytics</a></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/analytics/value_streams_dashboard#dashboard-metrics-and-drill-down-reports">Value Streams Dashboard with Life cycle, DORA, merge request, and vulnerability metrics</a><br/><a href="https://docs.gitlab.com/ee/user/analytics/value_streams_dashboard/">AI Impact Analytics with GitLab Duo metrics</a><br/><a href="https://docs.gitlab.com/ee/user/project/insights/">Insights</a><br/><a href="https://docs.gitlab.com/ee/user/group/contribution_analytics/">ClickHouse-based Contribution Analytics </a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/administration/analytics/dev_ops_reports">DevOps Reports</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/group/devops_adoption">DevOps Adoption</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/project/wiki/">Wiki</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/project/wiki/">Group-level Wiki</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/project/pages/">Pages</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/project/service_desk/">Service Desk</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+</tbody>
+</table>
+<h3 id=Create> Create </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Category</th>
+<th style="text-align: left">Features in Premium</th>
+<th style="text-align: left">Features in Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong><a href="/solutions/source-code-management/">Source Code Management</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/project/merge_requests/approvals/">Required Merge Request Approvals</a><br/><a href="https://docs.gitlab.com/ee/user/project/merge_requests/approvals/rules.html">Multiple approvers in code review</a><br/><a href="https://docs.gitlab.com/ee/user/project/merge_requests/approvals/rules.html">Approval rules for code review</a><br/><a href="https://docs.gitlab.com/ee/user/project/repository/repository_mirroring.html">Repository pull and bidirectional mirroring</a><br/><a href="https://docs.gitlab.com/ee/push_rules/push_rules.html">Push rules</a><br/><a href="https://docs.gitlab.com/ee/push_rules/push_rules.html#prevent-pushing-secrets-to-the-repository">Block secret file push</a><br/><a href="https://docs.gitlab.com/ee/push_rules/push_rules.html#enabling-push-rules">Reject unsigned commits</a><br/><a href="https://docs.gitlab.com/ee/push_rules/push_rules.html#enabling-push-rules">Verified Committer</a><br/><a href="https://docs.gitlab.com/ee/user/project/protected_branches.html#restricting-push-and-merge-access-to-certain-users">Restrict push and merge access</a><br/><a href="https://docs.gitlab.com/ee/administration/settings/instance_template_repository.html">Instance file templates</a><br/><a href="https://docs.gitlab.com/ee/user/group/#group-file-templates">Group file templates</a><br/><a href="https://docs.gitlab.com/ee/user/project/codeowners/">Code Owners</a><br/><a href="https://docs.gitlab.com/ee/user/gitlab_duo_chat/examples.html#explain-code-in-the-ide">Code explanation in GitLab Duo Chat, available on the repository file page</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/project/merge_requests/">Code Review Workflow</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/discussions/index.html#view-description-change-history">Track Description Changes</a><br/><a href="https://docs.gitlab.com/ee/user/project/merge_requests/approvals/rules.html">Multiple approvers in code review</a><br/><a href="https://docs.gitlab.com/ee/user/project/merge_requests/approvals/rules.html">Approval rules for code review</a><br/><a href="https://docs.gitlab.com/ee/user/project/codeowners/">Code Owners</a><br/><a href="https://docs.gitlab.com/ee/user/project/merge_requests/dependencies.html">Merge Request Dependencies</a></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/project/merge_requests/reviews/#suggested-reviewers">Suggested Reviewers</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/project/web_ide/index.html">Web IDE</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/project/repository/code_suggestions/">Code Suggestions in GitLab Web IDE</a><br/><a href="https://docs.gitlab.com/ee/user/gitlab_duo_chat/examples.html#explain-code-in-the-ide">Code explanation in GitLab Duo Chat, available in the Web IDE</a><br/><a href="https://docs.gitlab.com/ee/user/gitlab_duo_chat/examples.html#refactor-code-in-the-ide">Code refactoring in GitLab Duo Chat, available in the Web IDE</a><br/><a href="https://docs.gitlab.com/ee/user/gitlab_duo_chat/examples.html#write-tests-in-the-ide">Test generation in GitLab Duo Chat, available in the Web IDE</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/integration/glab">GitLab CLI</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/project/remote_development/">Workspaces</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/workspace/gitlab_agent_configuration.html">New agent authorization strategy for workspaces</a><br/><a href="https://docs.gitlab.com/ee/user/project/remote_development/">Create preconfigured remote development workspaces on-demand</a><br/><a href="https://docs.gitlab.com/ee/user/gitlab_duo/">GitLab Duo Chat and Code Suggestions available in workspaces</a><br/><a href="https://docs.gitlab.com/ee/user/project/remote_development/">Enable Workspaces in GitLab Agent for Kubernetes</a><br/><a href="https://docs.gitlab.com/ee/user/project/remote_development/">Automatically clone public projects into a workspace</a><br/><a href="https://docs.gitlab.com/ee/user/workspace/#devfile">Define a reproducible development environment in a devfile</a></td>
+<td style="text-align: left"> </td>
+</tr>
+</tbody>
+</table>
+<h3 id=Verify> Verify </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Category</th>
+<th style="text-align: left">Features in Premium</th>
+<th style="text-align: left">Features in Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong><a href="/solutions/continuous-integration/">Continuous Integration (CI)</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/ci/multi_project_pipelines.html">Multi-project pipeline graphs</a><br/><a href="https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/">CI/CD for external repo</a><br/><a href="/solutions/github/">CI/CD for GitHub</a><br/><a href="https://docs.gitlab.com/ee/ci/yaml/#needsproject">Cross-project jobs with artifact dependencies</a></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/gitlab_duo/#root-cause-analysis">Troubleshoot failed jobs with root cause analysis</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/ci/variables/">Variables</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/ci/testing">Code Testing and Coverage</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/project/merge_requests/browser_performance_testing.html">Browser Performance Testing</a><br/><a href="https://docs.gitlab.com/ee/user/project/merge_requests/load_performance_testing.html">Load Performance Testing</a><br/><a href="https://docs.gitlab.com/ee/user/group/#repositories-analytics">Group Code Coverage Data</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/ci/pipelines/merge_trains.html">Merge Trains</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/ci/pipelines/merged_results_pipelines.html">Merged results pipelines</a><br/><a href="https://docs.gitlab.com/ee/ci/pipelines/merge_trains.html">Merge Trains</a><br/><a href="https://docs.gitlab.com/ee/ci/pipelines/merge_request_pipelines.html#use-with-forked-projects">Run pipelines in the parent project for MRs from forks</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/ci/review_apps/">Review Apps</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/ci/review_apps/index.html#visual-reviews">Comments in Review Apps</a></td>
+<td style="text-align: left"> </td>
+</tr>
+</tbody>
+</table>
+<h3 id=Package> Package </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Category</th>
+<th style="text-align: left">Features in Premium</th>
+<th style="text-align: left">Features in Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/packages/package_registry/">Package Registry</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/packages/container_registry/">Container Registry</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/administration/geo/index.html">Container Registry geographic replication</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/packages/helm_repository/#helm-charts-in-the-package-registry">Helm Chart Registry</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/packages/dependency_proxy/">Virtual Registry</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="/direction/package/#dependency-firewall">Dependency Firewall</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+</tbody>
+</table>
+<h3 id=Secure> Secure </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Category</th>
+<th style="text-align: left">Features in Premium</th>
+<th style="text-align: left">Features in Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/application_security/sast/">SAST</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/application_security/configuration/">Configuration UI</a><br/><a href="https://docs.gitlab.com/ee/editor_extensions/visual_studio_code/#download-the-extension">Security Scanning IDE integration</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/sast/#custom-rulesets">Custom Rulesets for SAST</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/application_security/secret_detection/">Secret Detection</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/editor_extensions/visual_studio_code/#download-the-extension">Security Scanning IDE integration</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/secret_detection/pipeline/index.html#customize-analyzer-rulesets">Custom Rulesets for Secret Detection</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/secret_detection/automatic_response/">Automatic Response to Leaked Secrets</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/secret_detection/pre_receive/">Secret Push Protection (Beta)</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/ci/testing/code_quality">Code Quality</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#code-quality-reports">Code Quality Reports</a></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html#code-quality-in-diff-view">Code Quality violation notices in MR diffs</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/application_security/dast/">DAST</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/editor_extensions/visual_studio_code/#download-the-extension">Security Scanning IDE integration</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/dast/">Dynamic Application Security Testing</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/dast/#on-demand-scans">On-demand DAST</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/dast/#site-profile">Site and Scanner profiles for On-demand DAST scans</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/dast/#configure-dast-using-the-ui">DAST Configuration UI</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/dast/#schedule-an-on-demand-scan">Scheduling On-demand DAST scans</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/dast/">DAST</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/application_security/dast_api/">API Security</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/editor_extensions/visual_studio_code/#download-the-extension">Security Scanning IDE integration</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/api_security/">API Security Testing</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/api_fuzzing/index.html">API Fuzz Testing</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/dast/#on-demand-scans">On-demand API Security Testing scans</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/application_security/coverage_fuzzing/">Fuzz Testing</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/editor_extensions/visual_studio_code/#download-the-extension">Security Scanning IDE integration</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/coverage_fuzzing/">Coverage-guided Fuzz Testing</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/application_security/dependency_scanning/">Software Composition Analysis</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/editor_extensions/visual_studio_code/#download-the-extension">Security Scanning IDE integration</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/dependency_scanning/">Dependency Scanning</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/index.html#solutions-for-vulnerabilities-auto-remediation">Automated solutions for Dependency Scanning vulnerabilities</a><br/><a href="https://docs.gitlab.com/ee/user/compliance/license_compliance/index.html">License Compliance</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/application_security/container_scanning/">Container Scanning</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/editor_extensions/visual_studio_code/#download-the-extension">Security Scanning IDE integration</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/index.html#solutions-for-vulnerabilities-auto-remediation">Automated solutions for Container Scanning vulnerabilities</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id=Deploy> Deploy </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Category</th>
+<th style="text-align: left">Features in Premium</th>
+<th style="text-align: left">Features in Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong><a href="/solutions/continuous-integration/">Continuous Delivery</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/operations_dashboard/">Operations Dashboard</a></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/ci/environments/#auto-rollback">Auto Rollback in case of failure</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/operations/feature_flags.html">Feature Flags</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/api/features.html">Associate Feature Flags with the issue(s) that is related to them</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/project/releases/">Release Orchestration</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/api/protected_environments.html">Manage access to protected environments from the API</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/ci/environments/">Environment Management</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/ci/environments/protected_environments.html">Protected Environments</a><br/><a href="https://docs.gitlab.com/ee/ci/environments/#deployment-tier-of-environments">Environment type</a><br/><a href="https://docs.gitlab.com/ee/ci/environments/environments_dashboard.html">Environments Dashboard</a><br/><a href="https://docs.gitlab.com/ee/api/protected_environments.html">Manage access to protected environments from the API</a></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/ci/environments/#working-with-environments">View alerts on the Environments page</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/topics/autodevops/">Auto DevOps</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="/solutions/kubernetes/">Deployment Management</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/clusters/agent/ci_cd_workflow.html#restrict-project-and-group-access-by-using-impersonation">Fine-grained access controls for CI/CD based Kubernetes deployments</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/infrastructure/iac/index.html">Infrastructure as Code</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+</tbody>
+</table>
+<h3 id=Govern> Govern </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Category</th>
+<th style="text-align: left">Features in Premium</th>
+<th style="text-align: left">Features in Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/administration/audit_events.html">Audit Events</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/administration/audit_event_reports.html">Audit events report</a><br/><a href="https://docs.gitlab.com/ee/administration/audit_event_reports.html#exporting-audit-events">Audit events CSV export</a><br/><a href="https://docs.gitlab.com/ee/administration/auditor_users">Auditor access</a></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/compliance/compliance_center/compliance_violations_report.html#chain-of-custody-report">Chain of custody report</a><br/><a href="https://docs.gitlab.com/ee/administration/audit_event_streaming/">Streaming Audit Events</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/administration/compliance.html">Compliance Management</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/group/compliance_frameworks.html">Custom compliance frameworks</a><br/><a href="https://docs.gitlab.com/ee/user/project/merge_requests/approvals/settings">Enforce merge request approval settings</a></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/group/compliance_pipelines.html">Compliance pipeline configuration</a><br/><a href="https://docs.gitlab.com/ee/user/compliance/compliance_center/compliance_violations_report.html">Violations report</a><br/><a href="https://docs.gitlab.com/ee/integration/jira/issues.html#require-associated-jira-issue-for-merge-requests-to-be-merged">Require a Jira issue before merging code</a><br/><a href="https://docs.gitlab.com/ee/user/compliance/compliance_center/compliance_frameworks_report.html">Compliance frameworks report</a><br/><a href="https://docs.gitlab.com/ee/user/compliance/compliance_center/#standards-adherence-dashboard">Compliance standards adherence report</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/application_security/policies/">Security Policy Management</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/application_security/policies">Security Policies</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/index.html#security-approvals-in-merge-requests">Security Approvals</a><br/><a href="https://docs.gitlab.com/ee/user/compliance/license_approval_policies.html">License Approvals</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/policies/scan-result-policies.html">Merge Request Approval Policies</a><br/><a href="https://docs.gitlab.com/ee/user/project/merge_requests/status_checks.html">External status checks</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/policies/scan-execution-policies.html#security-policy-scopes">Security Policy Scopes</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/policies/pipeline_execution_policies.html">Pipeline Execution Policies</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/application_security/security_dashboard/">Vulnerability Management</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/editor_extensions/visual_studio_code/#download-the-extension">Security Scanning IDE integration</a><br/><a href="https://about.gitlab.com/direction/govern/threat_insights/vulnerability_management/">Vulnerability Management</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/#interacting-with-the-vulnerabilities">Standalone Vulnerability Objects</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/vulnerability_report/">Vulnerability Reports</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/security_dashboard/index.html">Security Dashboards</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/vulnerabilities/#create-a-gitlab-issue-for-a-vulnerability">Create Jira issues from vulnerabilities</a><br/><a href="https://docs.gitlab.com/ee/user/application_security/vulnerabilities/#enable-security-training-for-vulnerabilities">Integrated security training</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/application_security/dependency_list/">Dependency Management</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/application_security/dependency_list/">Project Dependency List</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="/solutions/supply-chain/">Software Bill of Materials</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/ci/pipelines/pipeline_security.html">Secrets Management</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/ci/examples/authenticating-with-hashicorp-vault/index.html">HashiCorp Vault Integration</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/project/releases/release_evidence">Release Evidence</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+</tbody>
+</table>
+<h3 id=Monitor> Monitor </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Category</th>
+<th style="text-align: left">Features in Premium</th>
+<th style="text-align: left">Features in Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/operations/incident_management/">Incident Management</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/operations/incident_management/incidents.html">Escalate manually created Incidents</a><br/><a href="https://docs.gitlab.com/ee/operations/incident_management/incidents.html#service-level-agreement-countdown-timer">Service Level Agreement countdown timer</a><br/><a href="https://docs.gitlab.com/ee/operations/incident_management/oncall_schedules.html">On-call Schedule Management</a><br/><a href="https://docs.gitlab.com/ee/operations/incident_management/escalation_policies.html">Escalation Policies</a></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/operations/incident_management/status_page.html">Status Page</a></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/operations/incident_management/oncall_schedules.html">On-call Schedule Management</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/operations/incident_management/incidents.html">Escalate manually created Incidents</a><br/><a href="https://docs.gitlab.com/ee/operations/incident_management/oncall_schedules.html">On-call Schedule Management</a><br/><a href="https://docs.gitlab.com/ee/operations/incident_management/escalation_policies.html">Escalation Policies</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/product_analytics/">Product Analytics Visualization</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="/direction/monitor/observability/">Metrics</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="/direction/monitor/observability/">Logging</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/operations/error_tracking.html">Error Tracking</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/operations/tracing.html">Tracing</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+</tbody>
+</table>
+<h3 id=Systems> Systems </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Category</th>
+<th style="text-align: left">Features in Premium</th>
+<th style="text-align: left">Features in Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/omnibus/">Omnibus Package</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/administration/postgresql/replication_and_failover.html">Fault-tolerant PostgreSQL</a><br/><a href="https://docs.gitlab.com/omnibus/settings/logs.html#udp-log-forwarding">Log forwarding</a><br/><a href="https://about.gitlab.com/support/#definition-of-scaled-architecture">Support for Scaled Architectures</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/charts/">Cloud Native Installation</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="/solutions/geo/">Geo-replication</a></strong></td>
+<td style="text-align: left"><a href="/solutions/geo/">Distributed cloning with GitLab Geo</a><br/><a href="https://docs.gitlab.com/ee/administration/geo/secondary_proxy/index.html#configure-location-aware-dns">Geolocation-aware DNS</a><br/><a href="https://docs.gitlab.com/ee/administration/geo/secondary_proxy/">Secondary site proxying</a><br/><a href="/solutions/geo/">“Offload CI traffic to Geo secondaries”</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/administration/geo/disaster_recovery/">Disaster Recovery</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/administration/geo/disaster_recovery/index.html">Disaster Recovery</a><br/><a href="https://docs.gitlab.com/ee/administration/maintenance_mode/index.html">Maintenance mode</a></td>
+<td style="text-align: left"> </td>
+</tr>
+</tbody>
+</table>
+<h3 id="Data Stores"> Data Stores </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Category</th>
+<th style="text-align: left">Features in Premium</th>
+<th style="text-align: left">Features in Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/organization/">Organization</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/group/subgroups/">Groups &amp; Projects</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/group/access_and_permissions.html#prevent-members-from-being-added-to-projects-in-a-group">Lock project membership to group</a><br/><a href="https://docs.gitlab.com/ee/user/group/manage.html#remove-a-group-immediately">Remove a group immediately</a><br/><a href="https://docs.gitlab.com/ee/user/group/manage.html#restore-a-group">Restore a group</a><br/><a href="https://docs.gitlab.com/ee/user/group/manage.html#enable-delayed-project-deletion">Enable delayed project deletion</a><br/><a href="https://docs.gitlab.com/ee/user/group/manage.html#export-members-as-csv">Export members as CSV</a><br/><a href="https://docs.gitlab.com/ee/user/gitlab_com/index.html#delayed-project-deletion">Delayed project deletion</a><br/><a href="https://docs.gitlab.com/ee/user/project/working_with_projects.html#view-projects-pending-deletion">View projects pending deletion</a><br/><a href="https://docs.gitlab.com/ee/user/project/settings/#restore-a-project">Restore a project</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/search/advanced_search.html">Global Search</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/search/advanced_search.html">Advanced Search</a></td>
+<td style="text-align: left"> </td>
+</tr>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/search/advanced_search.html">Code Search</a></strong></td>
+<td style="text-align: left"><a href="https://docs.gitlab.com/ee/user/search/advanced_search.html">Code Search</a></td>
+<td style="text-align: left"> </td>
+</tr>
+</tbody>
+</table>
+<h3 id=ModelOps> ModelOps </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Category</th>
+<th style="text-align: left">Features in Premium</th>
+<th style="text-align: left">Features in Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/user/project/ml/model_registry/">MLOps</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+</tbody>
+</table>
+<h3 id=AI-powered> AI-powered </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center">Category</th>
+<th style="text-align: left">Features in Premium</th>
+<th style="text-align: left">Features in Ultimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong><a href="https://docs.gitlab.com/ee/administration/self_hosted_models/">Self-Hosted Models</a></strong></td>
+<td style="text-align: left"> </td>
+<td style="text-align: left"> </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/features/by-paid-tier/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/features/by-paid-tier/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

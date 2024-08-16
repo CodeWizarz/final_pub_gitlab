@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab Meetups
+|
+GitLab
+</title>
+<meta content='Organize an event your community will love.' name=description />
+<meta content='Organize an event your community will love.' name='twitter:description'/>
+<meta content='Organize an event your community will love.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab Meetups' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='community/meetups/index.html.haml' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/community/meetups/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab Meetups' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/community/meetups/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/meetups.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body class='community community_meetups community_meetups_index ' data-offset=90 data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>GitLab Meetups</h1>
+<p>Connect with the GitLab community through our global network of GitLab meetups.</p>
+<div class='row text-center'>
+<div class='btn-group u-padding-right-sm'></div>
+<a href="https://www.meetup.com/pro/gitlab" class="btn cta-btn orange margin-top20">See our upcoming events</a>
+<a href="/community/virtual-meetups/" class="btn cta-btn orange margin-top20">Learn about virtual meetups</a>
+</div>
+</div>
+</div>
+<div class='wrapper wrapper--large-fonts'>
+<div class='devops-content u-margin-top-lg' id=content>
+<div class='wrapper container js-in-page-nav-group' role=main>
+<div class='row u-margin-top-lg'>
+<div class='col-md-10 col-md-offset-1'>
+<h2 class=u-text-brand>GitLab Meetups</h2>
+<p>GitLab supports community leaders who want to organize meetups and tech events in their cities and hometowns. We also work to our meetup organizers with interested speakers and venues. If you are interest in organizing, speaking at, or hosting a GitLab Meetup, let us know by creating an issue.</p>
+<p>Our goals in supporting these events are to grow our community, better engage with and increase connections within the GitLab community, increase awareness of GitLab, and better educate the technology community about the power of our platform.</p>
+</div>
+</div>
+<div class='row u-margin-top-xl js-in-page-nav-section' id=who-can-contribute>
+<div class='col-md-10 col-md-offset-1'>
+<h2 class=u-text-brand>Who can contribute?</h2>
+<p>At GitLab, we believe everyone can contribute. We support people who are interested in organizing events or growing existing communities. If you have experience organizing tech events or meetup groups, that is great - but it is not required. We're happy to work with first-time organizers, too.</p>
+<blockquote class=blockquote-alt>
+<b>Everyone can contribute.</b>
+</blockquote>
+<p>
+The only requirements for organizers are a passion for GitLab and a belief in our
+<a href='https://about.gitlab.com/company/mission/#mission'>mission.</a>
+</p>
+</div>
+</div>
+<div class='row u-margin-top-xl js-in-page-nav-section' id=benefits-of-organizing>
+<div class='col-md-10 col-md-offset-1'>
+<h2 class=u-text-brand>Benefits to organizing</h2>
+<div class='media u-margin-top-sm u-margin-bottom-md has-shadowed-svg'>
+<div class='media-left media-middle u-padding-right-sm'>
+<div class='media-object svg-shadow' style='width: 162px; height: 186px'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><path d="m26 22.03c-.553 0-1 .447-1 1v5.747c0 .674-.614 1.222-1.369 1.222h-15.262c-.755 0-1.369-.548-1.369-1.222v-3.778-6.919l3.375 2.701c.185.147.405.218.624.218.294 0 .584-.129.782-.375.345-.432.274-1.061-.156-1.406l-5-4c-.365-.291-.885-.291-1.25 0l-5 4c-.431.346-.501.975-.156 1.406.346.432.974.502 1.406.156l3.375-2.7v6.919 3.778c0 1.777 1.512 3.222 3.369 3.222h15.262c1.857 0 3.369-1.445 3.369-3.222v-5.747c0-.552-.447-1-1-1"/><path d="m31.781 11.875c-.346-.431-.974-.502-1.406-.156l-3.375 2.7v-6.919-4.278c0-1.777-1.512-3.222-3.369-3.222h-15.262c-1.857 0-3.369 1.445-3.369 3.222v6.81c0 .553.447 1 1 1s1-.447 1-1v-6.81c0-.674.614-1.222 1.369-1.222h15.262c.755 0 1.369.548 1.369 1.222v4.278 6.919l-3.375-2.701c-.433-.346-1.06-.272-1.406.156-.345.432-.274 1.061.156 1.406l5 4c.183.147.404.22.625.22s.442-.073.625-.219l5-4c.431-.345.501-.974.156-1.406"/></svg>
+</div>
+</div>
+<div class='media-body media-middle'>
+<h3 class=u-margin-top-0>Follow your passion</h3>
+<p class=u-margin-bottom-0>As a meetup organizer, you are able to gain a deeper understanding of topics you care about. By building community around that topic, you can share your passion with others. Meetup organizers play an important role in driving awareness, adoption, and education in their communities.</p>
+</div>
+</div>
+<div class='media u-margin-top-sm u-margin-bottom-md has-shadowed-svg'>
+<div class='media-left media-middle u-padding-right-sm'>
+<div class='media-object svg-shadow' style='width: 162px; height: 162px;'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528 380" enable-background="new 0 0 528 380"><path d="m200.17 155.16c14.78 29.332 36.866 44.836 63.87 44.836 17.08 0 32.27-6.542 45.14-19.445 26.16-26.22 34.883-70.64 34.846-86.88-.063-27.467-4.917-48.22-14.84-63.43-13.09-20.07-35-30.25-65.15-30.25-24.365 0-43.62 7.07-57.23 21-15.656 16.03-23.538 41.21-22.792 72.809.252 10.632 3.95 37.14 16.15 61.35m13.795-127.18c11.657-11.934 28.505-17.986 50.08-17.986 47.617 0 69.856 26.597 69.988 83.7.038 16.626-9.286 57.1-31.925 79.79-10.928 10.954-23.735 16.508-38.06 16.508-55.692 0-69.57-77.3-70.02-96.43-.476-20.12 2.599-47.823 19.947-65.59"/><path d="m389.01 152.95c9.242 17.697 23.1 27.05 40.07 27.05 11.06 0 20.841-4.186 29.08-12.442 15.704-15.743 20.939-41.768 20.916-51.22-.09-37.38-16.91-56.33-49.993-56.33-15.456 0-27.643 4.457-36.22 13.247-9.477 9.711-14.246 24.658-13.791 43.22.154 6.332 2.43 22.1 9.936 36.479m11.01-72.72c6.624-6.788 16.403-10.23 29.06-10.23 27.582 0 39.916 14.298 39.993 46.36.017 6.951-4.217 30.32-17.996 44.14-6.291 6.307-13.692 9.505-21.997 9.505-31.813 0-39.754-43.1-40.01-53.775-.269-11.02 1.412-26.22 10.952-35.995"/><path d="m527.86 223.05c-4.737-19.888-16.539-22.16-29.03-24.563-9.575-1.842-20.428-3.93-32.992-13.543-1.492-1.142-3.498-1.351-5.194-.54-1.658.793-2.745 2.429-2.837 4.258-.863 1.84-9.307 6.283-24.878 6.283-15.576 0-24.02-4.443-24.884-6.283-.092-1.829-1.179-3.465-2.837-4.258-1.696-.811-3.702-.602-5.194.54-12.562 9.611-23.415 11.699-32.99 13.541-11.155 2.146-21.753 4.197-27.27 18.758-7-3.236-14.339-7.516-21.95-13.339-1.492-1.141-3.498-1.351-5.194-.54-1.696.811-2.794 2.503-2.842 4.382-.058 2.233-3.771 5.838-11.938 8.856-9.14 3.377-21.365 5.238-34.425 5.238-13.06 0-25.295-1.86-34.435-5.238-8.166-3.02-11.88-6.623-11.938-8.857-.048-1.878-1.146-3.571-2.842-4.382-1.696-.81-3.702-.601-5.194.54-7.242 5.541-14.235 9.679-20.93 12.856-5.544-14.12-16.03-16.15-27.09-18.275-9.575-1.842-20.429-3.93-32.99-13.541-1.492-1.142-3.498-1.351-5.194-.54-1.658.793-2.745 2.43-2.837 4.258-.862 1.84-9.308 6.283-24.884 6.283-15.571 0-24.02-4.443-24.878-6.283-.092-1.829-1.179-3.465-2.837-4.258-1.695-.811-3.702-.602-5.194.54-12.564 9.613-23.417 11.701-32.992 13.543-12.495 2.404-24.297 4.675-29.03 24.563-.323 1.361-.063 2.795.719 3.954 8.179 12.13 18.495 22.438 30.662 30.642.165.111.338.202.51.291-.014.355-.026.71-.026 1.068 0 13.785 11.215 25 25 25s25-11.215 25-25-11.215-25-25-25c-9.707 0-18.13 5.564-22.273 13.667-9.452-6.761-17.624-14.944-24.31-24.414 3.357-11.624 9.338-12.775 20.643-14.95 9.02-1.735 19.993-3.848 32.474-12.07 6 5.942 19.16 8.71 31.538 8.71 12.382 0 25.54-2.769 31.544-8.711 12.479 8.224 23.456 10.335 32.472 12.07 10.55 2.03 16.287 3.14 19.77 12.331-10.28 3.796-19.72 5.616-28.09 7.226-21.2 4.078-39.502 7.599-47.1 39.541-.64 2.686 1.02 5.382 3.706 6.02 2.692.639 5.384-1.021 6.02-3.707 6.107-25.657 18.589-28.06 39.27-32.04 15.794-3.039 35.16-6.765 57.12-21.979 7.784 10.625 30.891 16.14 53.624 16.14 22.73 0 45.833-5.513 53.615-16.14 8.01 5.552 15.679 9.569 22.954 12.587.505.356 1.08.631 1.719.783.109.026.217.025.326.044 11.857 4.665 22.639 6.743 32.13 8.569 20.09 3.866 32.445 6.242 38.733 29.925-16.385 24.18-34.803 49.01-58.19 68.1-27.17 22.18-57.07 33.379-91.42 34.24-27.52.697-55.17-5.907-82.19-19.619-.463-.234-.946-.365-1.431-.447.224-1.598.348-3.227.348-4.885 0-19.299-15.701-35-35-35s-35 15.701-35 35 15.701 35 35 35c14.163 0 26.379-8.461 31.883-20.59 27.05 13.67 54.763 20.591 82.46 20.591 1.394 0 2.792-.018 4.186-.053 80.41-2.026 124.18-57.12 158.89-108.6.782-1.159 1.042-2.593.719-3.954-7.606-31.936-25.909-35.458-47.1-39.535-8.08-1.555-17.17-3.305-27.04-6.844 3.473-9.548 9.382-10.69 19.917-12.717 9.02-1.735 19.993-3.847 32.472-12.07 6 5.942 19.16 8.711 31.544 8.711 12.38 0 25.536-2.769 31.538-8.71 12.48 8.225 23.458 10.337 32.474 12.07 11.305 2.175 17.285 3.326 20.643 14.95-6.686 9.47-14.858 17.653-24.311 24.414-4.142-8.104-12.568-13.668-22.275-13.668-13.785 0-25 11.215-25 25s11.215 25 25 25 25-11.215 25-25c0-.358-.012-.713-.027-1.067.172-.089.345-.179.51-.291 12.167-8.205 22.483-18.514 30.662-30.642.783-1.159 1.043-2.593.719-3.954m-470.86 20.954c8.271 0 15 6.729 15 15s-6.729 15-15 15-15-6.729-15-15 6.729-15 15-15m88 126c-13.785 0-25-11.215-25-25s11.215-25 25-25 25 11.215 25 25-11.215 25-25 25m326-96c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15"/><path d="m93.91 180c16.976 0 30.833-9.354 40.07-27.05 7.506-14.374 9.781-30.15 9.936-36.479.455-18.565-4.314-33.511-13.791-43.22-8.577-8.79-20.764-13.247-36.22-13.247-33.08 0-49.903 18.954-49.993 56.34-.023 9.455 5.212 35.48 20.916 51.22 8.236 8.256 18.02 12.442 29.08 12.442m0-110c12.66 0 22.438 3.442 29.06 10.23 9.54 9.777 11.222 24.97 10.952 35.995-.26 10.67-8.2 53.775-40.01 53.775-8.305 0-15.706-3.198-21.997-9.505-13.779-13.813-18.01-37.19-17.996-44.14.077-32.06 12.411-46.36 39.993-46.36"/></svg>
+</div>
+</div>
+<div class='media-body media-middle'>
+<h3 class=u-margin-top-0>Increase connections</h3>
+<p class=u-margin-bottom-0>Meetup organizers tend to build large networks. The events they organize allow them to offer speaking opportunities to leaders in their fields, further increasing the value of their networks. These impacts can help organizers with recruiting for their teams or new opportunities for themselves.</p>
+</div>
+</div>
+<div class='media u-margin-top-sm u-margin-bottom-md has-shadowed-svg'>
+<div class='media-left media-middle u-padding-right-sm'>
+<div class='media-object svg-shadow' style='width: 162px; height: 162px;'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 76" enable-background="new 0 0 76 76"><path d="m14.267 7.32l-4.896 5.277-1.702-1.533c-.409-.369-1.043-.338-1.412.074-.369.41-.337 1.042.074 1.412l2.434 2.192c.064.058.139.091.212.13.035.018.065.048.101.062.114.044.235.066.356.066.135 0 .27-.028.396-.082.044-.019.077-.058.118-.084.076-.047.155-.086.219-.154l5.566-6c.375-.404.352-1.037-.054-1.413-.405-.377-1.036-.353-1.412.053"/><path d="m31 9h44c.553 0 1-.447 1-1s-.447-1-1-1h-44c-.553 0-1 .447-1 1s.447 1 1 1"/><path d="m31 15h24c.553 0 1-.447 1-1s-.447-1-1-1h-24c-.553 0-1 .447-1 1s.447 1 1 1"/><path d="m11 0c-6.07 0-11 4.935-11 11s4.935 11 11 11 11-4.935 11-11-4.935-11-11-11m0 20c-4.963 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9"/><path d="m14.267 34.32l-4.896 5.277-1.702-1.533c-.409-.368-1.043-.338-1.412.074-.369.41-.337 1.042.074 1.412l2.434 2.192c.064.058.139.091.212.13.035.018.065.048.101.062.114.044.235.066.356.066.135 0 .27-.028.396-.082.044-.019.077-.058.118-.084.076-.047.155-.086.219-.154l5.566-6c.375-.404.352-1.037-.054-1.413-.405-.377-1.036-.353-1.412.053"/><path d="m75 34h-44c-.553 0-1 .447-1 1s.447 1 1 1h44c.553 0 1-.447 1-1s-.447-1-1-1"/><path d="m31 42h24c.553 0 1-.447 1-1s-.447-1-1-1h-24c-.553 0-1 .447-1 1s.447 1 1 1"/><path d="m11 27c-6.07 0-11 4.935-11 11s4.935 11 11 11 11-4.935 11-11-4.935-11-11-11m0 20c-4.963 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9"/><path d="m14.267 61.32l-4.896 5.277-1.702-1.533c-.409-.368-1.043-.338-1.412.074-.369.41-.337 1.042.074 1.412l2.434 2.192c.064.058.139.091.212.13.035.018.065.048.101.062.114.044.235.066.356.066.135 0 .27-.028.396-.082.044-.019.077-.058.118-.084.076-.047.155-.086.219-.154l5.566-6c.375-.404.352-1.037-.054-1.413-.405-.377-1.036-.353-1.412.053"/><path d="m11 54c-6.07 0-11 4.935-11 11s4.935 11 11 11 11-4.935 11-11-4.935-11-11-11m0 20c-4.963 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9"/><path d="m75 61h-44c-.553 0-1 .447-1 1s.447 1 1 1h44c.553 0 1-.447 1-1s-.447-1-1-1"/><path d="m55 67h-24c-.553 0-1 .447-1 1s.447 1 1 1h24c.553 0 1-.447 1-1s-.447-1-1-1"/></svg>
+</div>
+</div>
+<div class='media-body media-middle'>
+<h3 class=u-margin-top-0>Get support</h3>
+<p class=u-margin-bottom-0>As a meetup organizer in the GitLab community, you'll receive support from our growing community team. In addition to the resources on this page, GitLab offers access to speakers, free swag for giveaways, and financial support for organizers.</p>
+</div>
+</div>
+<div class='u-image-bg u-release u-text-light u-margin-top-xl u-margin-bottom-md' style='background-image:url(&#39;/images/scaling-devops-bg.jpg&#39;);'>
+<div class='container js-in-page-nav-section' id=get-involved>
+<div class='row u-margin-top-lg u-margin-bottom-lg'>
+<div class='col-md-10 col-md-offset-1'>
+<h2>Get involved with GitLab Meetups</h2>
+<div class='row text-center'>
+<div class='btn-group u-padding-right-sm'>
+<a href="mailto:evangelists@gitlab.com" class="btn cta-btn purple-reverse">Become an organizer</a>
+</div>
+<div class='btn-group u-padding-right-sm'>
+<a href="mailto:evangelists@gitlab.com" class="btn cta-btn purple-reverse">Become a speaker</a>
+</div>
+<div class=btn-group>
+<a href="mailto:evangelists@gitlab.com" class="btn cta-btn purple-reverse">Become a host venue</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row u-margin-top-md'>
+<div class='col-md-10 col-md-offset-1'>
+<h2 class=u-text-brand>Plan an event</h2>
+<p>So what goes into an awesome event?</p>
+<ul>
+<li>Topics: The most important step in creating a meetup is to choose a topic you are passionate about. Organizing meetups can take a good amount of effort, so you want to make sure you're excited about the subject matter you're sharing. You don't need to be an expert on the topic, but that certainly doesn't hurt. If the topic you choose has an existing group in your area, consider joining the existing group as an organizer rather than starting a competing group.</li>
+<li>Build a team: Once you have settled on a topic, start recruiting co-organizers. Message people in your network, post about the new group on social media, and invite folks from other meetups in your area to join the team. Having a group of organizers in place will reduce your workload, and it will increase the visibility of the group as each organizer can leverage their network for speakers and guests.</li>
+<li>Speakers: GitLab has a "Find a Speaker" page which can be a good place to start. You can reach out to past speakers from other meetup groups or conferences in your area. Include a link to a Google Form in your group's description to create a pipeline for interested speakers to submit ideas for talks.</li>
+<li>Venues: Your group will need a place to meet (although remote meetups are gaining popularity), and you want to ensure you pick a place that can accommodate your guests comfortably. Cafés, community centers, and coworking spaces are popular venues for meetups. In some cities, as groups grow, they may need to find bigger spaces - such as auditoriums.</li>
+</ul>
+<p>
+Ready to begin planning a meetup with support from GitLab? Contact our [team](mailto:evangelists@gitlab.com).
+</p>
+<p>
+If you would like to review this guide and your plans, please
+<a href='https://calendly.com/jcoghlan'>schedule a Zoom call.</a>
+</p>
+</div>
+</div>
+<div class='row u-margin-top-xl js-in-page-nav-section' id=resources>
+<div class='col-md-10 col-md-offset-1'>
+<h2 class=u-text-brand>Resources</h2>
+<p>Here’s a list of resources on Meetups that we curated to help you get started.</p>
+<div class='resource-block resource-block--resources u-margin-top-md'>
+<ul class='resource-list list-unstyled'>
+<li class=resource-list-item>
+<h4 class=resource-title>
+<a href="/community/meetups/checklist/">Meetup Planning Checklist</a>
+</h4>
+<span class=resource-author>Start here.</span>
+</li>
+<li class=resource-list-item>
+<h4 class=resource-title>
+<a href='https://drive.google.com/open?id=1jO-MbZI21sXbzZYQ0u4ClghmNJFzsT7X'>Meetup Signs</a>
+</h4>
+<span class=resource-author>Help your members find what they need.</span>
+</li>
+<li class=resource-list-item>
+<h4 class=resource-title>
+<a href='https://about.gitlab.com/press/press-kit/#logos'>GitLab Logos</a>
+</h4>
+<span class=resource-author>All the tanukis.</span>
+</li>
+<li class=resource-list-item>
+<h4 class=resource-title>
+<a href='https://drive.google.com/open?id=1xglxuxFcxATpQ0ZajYvYu5aIyEK7TvTK'>Communication Templates</a>
+</h4>
+<span class=resource-author>Get a head start on your communications.</span>
+</li>
+<li class=resource-list-item>
+<h4 class=resource-title>
+<a href='https://docs.google.com/forms/d/167QK2Oudqrdu_hpRCK45G7WDW65IDV63XWgjKa6Srrw/edit'>Feedback Form</a>
+</h4>
+<span class=resource-author>A three-question survey to help you and your community.</span>
+</li>
+</ul>
+</div>
+<hr class='u-margin-top-md u-margin-bottom-md'/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/sites/uncategorized/source/community/meetups/index.html.haml" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/sites/uncategorized/source/community/meetups/index.html.haml" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/on-scroll.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/in-page-nav.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/all-clickable.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+</body>
+</html>

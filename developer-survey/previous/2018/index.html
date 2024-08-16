@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+GitLab 2018 Global Developer Report
+|
+GitLab
+</title>
+<meta content='Here you can view GitLab&#39;s 2018 Global Developer Report including key findings from &amp; state of the union. Read more here!' name=description />
+<meta content='Here you can view GitLab&#39;s 2018 Global Developer Report including key findings from &amp; state of the union. Read more here!' name='twitter:description'/>
+<meta content='Here you can view GitLab&#39;s 2018 Global Developer Report including key findings from &amp; state of the union. Read more here!' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='GitLab 2018 Global Developer Report' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='developer-survey/previous/2018/index.html.haml' property='og:relative_path'/>
+<meta content='sites/uncategorized/' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/developer-survey/previous/2018/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/tweets/2018-global-developer-report.png" property="og:image">
+<meta content="https://about.gitlab.com/images/tweets/2018-global-developer-report.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='GitLab 2018 Global Developer Report' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/developer-survey/previous/2018/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/dev-survey-report-2018.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+</head>
+<body class=blank-body>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<div class='wrapper main-wrapper'>
+<div class=section-navigation>
+<ul>
+<li>
+<a class=key-findings href='#section-key-findings'>
+&nbsp;
+<span>key findings</span>
+</a>
+</li>
+<li>
+<a class=state-of-the-union href='#section-state-of-the-union'>
+&nbsp;
+<span>state of the union</span>
+</a>
+</li>
+<li>
+<a class=culture href='#section-culture'>
+&nbsp;
+<span>culture</span>
+</a>
+</li>
+<li>
+<a class=workflow href='#section-workflow'>
+&nbsp;
+<span>workflow</span>
+</a>
+</li>
+<li>
+<a class=tools href='#section-tools'>
+&nbsp;
+<span>tools</span>
+</a>
+</li>
+<li>
+<a class=demographics href='#section-demographics'>
+&nbsp;
+<span>demographics</span>
+</a>
+</li>
+</ul>
+</div>
+<div class=report-section-dark>
+<section class='report-section dark-bg-block report-section-intro' id=section-intro>
+<div class=container>
+<div class=row>
+<div class=col-md-8>
+<div class=c-brand>
+<a href="/" class=c-brand-logo-wordmark><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 262 80" enable-background="new 0 0 262 80"><g fill="#fff"><path d="m184.15 19.02h-5.624l.026 41.922h22.78v-5.185h-17.16l-.026-36.737"/><path d="m-754.32-89.69c-1.419 1.47-3.767 2.941-6.965 2.941-4.282 0-6.01-2.115-6.01-4.876 0-4.153 2.889-6.14 9.03-6.14 1.161 0 3.02.129 3.973.31v7.765h-.026m-5.831-25.411c-4.54 0-8.72 1.599-11.97 4.308l1.986 3.457c2.296-1.341 5.108-2.683 9.158-2.683 4.618 0 6.656 2.373 6.656 6.346v2.038c-.903-.181-2.76-.31-3.896-.31-9.855 0-14.86 3.457-14.86 10.68 0 6.475 3.973 9.726 9.984 9.726 4.05 0 7.946-1.857 9.287-4.876l1.032 4.102h3.973v-21.464c-.024-6.783-2.965-11.324-11.35-11.324" transform="translate(977.33 143.28)"/><path d="m-853.09-86.41c-2.115 0-3.973-.258-5.366-.903v-17.362-2.01c1.909-1.599 4.282-2.76 7.301-2.76 5.443 0 7.533 3.844 7.533 10.06 0 8.822-3.38 12.976-9.468 12.976m2.374-28.533c-5.03 0-7.739 3.431-7.739 3.431v-5.418l-.026-7.172h-2.528-2.967l.026 40.89c2.76 1.161 6.527 1.78 10.629 1.78 10.5 0 15.556-6.707 15.556-18.291-.027-9.157-4.696-15.22-12.951-15.22" transform="translate(1099.77 143.13)"/><path d="m-461.12-120.06c4.979 0 8.204 1.651 10.293 3.328l2.425-4.205c-3.276-2.889-7.714-4.437-12.46-4.437-11.97 0-20.355 7.301-20.355 22.03 0 15.427 9.06 21.438 19.4 21.438 5.185 0 9.597-1.213 12.486-2.425l-.129-16.485v-1.935-3.251h-15.35v5.185h9.803l.129 12.512c-1.29.645-3.509 1.161-6.527 1.161-8.307 0-13.879-5.237-13.879-16.253-.025-11.221 5.728-16.664 14.164-16.664" transform="translate(584.04 143.63)"/><path d="m-631.04-123.56h-5.495l.026 7.04v2.889 1.677 2.941 16.769.052c0 6.785 2.941 11.325 11.325 11.325 1.161 0 2.296-.103 3.38-.31v-4.927c-.8.129-1.651.181-2.554.181-4.618 0-6.656-2.373-6.656-6.346v-16.769h9.21v-4.592h-9.21l-.026-9.933" transform="translate(793.57 142.58)"/><path d="m143.05 60.946h5.495v-31.989h-5.495v31.989"/><path d="m143.05 24.545h5.495v-5.495h-5.495v5.495"/></g><path d="m86.15 44.968l-4.866-14.951-9.627-29.655c-.494-1.516-2.645-1.516-3.156 0l-9.626 29.638h-31.983l-9.626-29.638c-.494-1.516-2.645-1.516-3.156 0l-9.609 29.638-4.866 14.969c-.441 1.358.035 2.856 1.199 3.702l42.05 30.554 42.05-30.554c1.163-.846 1.656-2.345 1.216-3.703" fill="#fc6d26" transform="translate(.532.775)"/><path d="m-111.77 78.82l15.991-49.21h-31.982l15.991 49.21" fill="#e24329" transform="translate(155.2 1.16)"/><path d="m14.887 78.82l-15.991-49.21h-22.391l38.38 49.21" fill="#fc6d26" transform="translate(28.531 1.161)"/><path d="m4.94 30.533l-4.866 14.951c-.441 1.358.035 2.856 1.199 3.702l42.05 30.554-38.38-49.21" fill="#fca326" transform="translate(.089.256)"/><path d="m-24.388-249.47h22.409l-9.644-29.637c-.494-1.516-2.645-1.516-3.156 0l-9.609 29.637" fill="#e24329" transform="translate(29.422 280.26)"/><path d="m-203.77 78.82l15.991-49.21h22.409l-38.4 49.21" fill="#fc6d26" transform="translate(247.2 1.161)"/><path d="m-164.49 30.533l4.866 14.951c.441 1.358-.035 2.856-1.199 3.702l-42.05 30.537 38.38-49.19" fill="#fca326" transform="translate(246.31.256)"/><path d="m-255.15-249.47h-22.409l9.626-29.637c.494-1.516 2.645-1.516 3.156 0l9.627 29.637" fill="#e24329" transform="translate(336.97 280.26)"/></svg>
+</a></div>
+<h1>
+2018 Global
+<br/>
+Developer Report
+</h1>
+<p class=intro>Software professionals collectively recognize the value of working in highly collaborative environments, and have experienced the benefits of doing so. While developers and managers are culturally aligned, workflow and tooling roadblocks delay delivery, preventing teams from reaching their maximum potential.</p>
+<p>As we look at 2018 and beyond, IT organizations that successfully adopt continuous improvement practices and seamless automation across their software development lifecycle will have happier, more collaborative, and well-functioning teams who are better positioned to meet their goals and objectives.</p>
+</div>
+</div>
+<div class=row>
+<div class=col-md-10>
+<hr/>
+</div>
+</div>
+</div>
+</section>
+<section class='report-section dark-bg-block report-section-key-findings' id=section-key-findings>
+<div class=container>
+<div class=row>
+<div class=col-md-10>
+<h2>Key Findings</h2>
+<div class=row>
+<div class=col-md-6>
+<ul class=c-checked-list>
+<li>Managers tend to have more of an optimistic perspective on the status of their team’s overall satisfaction, productivity, and the benefits of open source tools.</li>
+<li>While nearly all agree it’s important to work in a collaborative environment and a strong majority (81%) say it’s easy to collaborate with their team and others within their organization, visibility and transparency continues to lag with 67% of developers reporting unclear direction as a top challenge to getting work done.</li>
+<li>Organizations that have adopted DevOps are more likely to deploy on demand and prioritize automation than those practicing Agile.</li>
+</ul>
+</div>
+<div class=col-md-6>
+<ul class=c-checked-list>
+<li>High-performing teams have access to better tools, spend less time context-switching, and are more likely to work remotely than their lower-performing counterparts.</li>
+<li>Overall, remote teams report higher levels of satisfaction than those working in-office, including higher levels of visibility, better insight into the deployment process, and a strong DevOps culture.</li>
+<li>IT leaders plan to invest the most in continuous integration, delivery, and deployment in 2018, and cite selecting the right technology as their greatest challenge.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<section class='report-section report-section-state-of-the-union' id=section-state-of-the-union>
+<div class=container>
+<header class='c-banner u-margin-bottom-lg'>
+<h2>State of the Union</h2>
+<h3>Current challenges and opportunities</h3>
+<p>From the junior developer with just a handful of years’ experience to the software professional who’s been in the game for decades, we set out to see how the people behind the software are dealing with a rapidly changing technology landscape.</p>
+<p>We examined overall attitudes and perceptions on the state of culture, workflow, and tooling within IT organizations with the goal to uncover any disparities between developers and IT management. We also looked at how remote versus in-office cultures are faring, compared the attitudes of agile and DevOps teams, and exposed the trends propelling high-performing teams.</p>
+<p>
+This year, we confirmed that
+<a href="#methodology" class=js-smoothscroll>high-performing</a>
+teams are more likely to report having a strong DevOps culture, resulting in better visibility and collaboration than their lower-functioning counterparts. High-performing teams also report having better access to the best development tools, spend less time context switching, and are more likely to be using cloud-based tools. For leaders of high-performing teams, automating the software development lifecycle is a top priority.
+</p>
+</header>
+<div class=row>
+<div class='col-md-7 col-md-offset-1'>
+<div class='c-stat alpha'>
+<span class=number>
+<span>82</span>
+<span class=percent>%</span>
+</span>
+<span class=label>Have access to the best development tools</span>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-7 col-md-offset-1'>
+<div class='c-stat beta'>
+<span class=number>
+<span>60</span>
+<span class=percent>%</span>
+</span>
+<span class=label>Report automating more of the software development lifecycle as a top priority</span>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-7 col-md-offset-1'>
+<div class='c-stat gamma'>
+<span class=number>
+<span>61</span>
+<span class=percent>%</span>
+</span>
+<span class=label>Agree that developers in their organization understand how their changes affect the performance of their application(s)</span>
+</div>
+</div>
+</div>
+<div class='row u-margin-bottom-lg'>
+<div class='col-md-8 col-md-offset-1'>
+<p>We found that culturally, developers and upper management are aligned, placing high value on collaboration and communication. Managers are more optimistic about the time savings of practicing DevOps, with 81% agreeing that DevOps saves time in the development process, while only 65% of developers agree. There also appears to be a perception gap regarding how often organizations deploy code, with 47% of managers reporting that they deploy code on demand or multiple times a day, compared to only 39% of developers.</p>
+</div>
+</div>
+<div class='row u-margin-bottom-sm'>
+<div class='col-md-10 col-md-offset-1'>
+<div class='row flex-row u-close-columns'>
+<div class=col-md-4>
+<div class='c-card alpha'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" enable-background="new 0 0 128 128"><path d="m117.18 79.38c-2.647-1.979-5.542-3.396-8.542-4.277 2.22-6.114 3.359-12.534 3.359-19.11 0-30.878-25.12-56-56-56s-56 25.12-56 56 25.12 56 56 56c6.571 0 12.99-1.138 19.1-3.358 1.63 5.563 4.994 10.431 9.719 13.964 4.719 3.538 10.333 5.398 16.13 5.398 1.291 0 2.591-.092 3.892-.279 7.139-1.024 13.451-4.767 17.773-10.539 8.917-11.923 6.48-28.881-5.433-37.802m-115.18-23.384c0-29.776 24.22-54 54-54s54 24.22 54 54c0 6.408-1.121 12.665-3.308 18.618-7.406-1.584-15.253.003-21.471 4.474-3.075-1.221-6.672-2.152-9.766-2.797-.614-.34-1.272-.598-1.96-.739l-4.279-.877c.11-1.507.221-2.907.33-3.838 2.381-1.653 3.996-3.944 4.151-5.902.214-1.793.425-3.585.632-5.381.103.022.207.039.311.05 1.642.167 3.107-1.033 3.271-2.664l1.088-10.512c.084-.79-.145-1.565-.646-2.183-.503-.621-1.219-1.01-2.01-1.087-.036-.004-.071-.007-.107-.01.182-1.553.362-3.104.538-4.692.019-.272.05-.59.084-.948.313-3.266.966-10.06-4.119-14.601-7.98-7.834-25.501-7.834-33.443-.033-5.111 4.564-4.465 11.354-4.155 14.617.035.363.066.687.089 1.012l.108.926c.145 1.24.289 2.477.431 3.718-.583.042-1.156.259-1.639.646-.809.648-1.223 1.701-1.107 2.815l1.069 10.326c.077.79.458 1.502 1.073 2.01.618.507 1.396.742 2.2.662.102-.011.204-.027.304-.048.189 1.628.38 3.253.572 4.878l.056.471c.175 1.998 1.794 4.288 4.165 5.933.106.914.214 2.278.321 3.753l-4.696.963c-1.108.228-2.155.729-3.03 1.452l-4.246 3.518c-.061.05-.109.112-.164.168-2.371.702-4.621 1.417-6.497 2.07-6.84 2.385-7.406 3.418-7.406 4.349v5.908c-9.133-9.675-14.747-22.701-14.747-37.02m79.6 26.23l-.001-.024c-.024-.653-.327-1.267-.83-1.684l-1.552-1.286c1.405.376 2.825.806 4.18 1.296-.621.534-1.22 1.101-1.797 1.698m-22.986-8.898h-4.854c-1.197 0-2.395-.283-3.464-.818l-6.46-3.23c-.047-.023-.097-.024-.146-.04-1.891-1.289-3.28-3.113-3.406-4.545l-.059-.5c-.248-2.107-.496-4.215-.739-6.329-.044-.386-.309-.711-.678-.834-.368-.123-.775-.021-1.042.261-.121.128-.325.287-.605.316-.263.028-.524-.051-.729-.219-.201-.165-.325-.397-.351-.661l-1.07-10.332c-.044-.429.097-.83.368-1.047.372-.297.796-.238 1.046-.096.129.073.271.105.413.117-.009.108-.022.223-.024.322-.021.521-.042 1.037-.054 1.54-.086 1.797.562 3.529 1.826 4.877 1.333 1.421 3.239 2.256 5.26 2.29l2.657-.033c3.542-.17 6.402-2.624 6.945-5.708h5.45c.224 1.279.822 2.477 1.753 3.465 1.331 1.413 3.232 2.243 5.244 2.276l2.66-.033c2.04-.092 3.973-.983 5.303-2.446 1.191-1.31 1.801-2.952 1.72-4.596-.01-.502-.024-1.01-.044-1.494-.006-.184-.025-.363-.049-.541.026-.012.054-.017.08-.03.18-.099.37-.14.571-.117.263.026.499.153.664.358.164.201.238.453.21.713l-1.089 10.518c-.054.538-.539.938-1.079.877-.287-.03-.494-.19-.617-.319-.268-.281-.673-.382-1.042-.258-.368.124-.631.449-.675.834-.26 2.28-.526 4.553-.802 6.866-.116 1.456-1.61 3.38-3.635 4.679-.245.157-.41.414-.45.702-.177 1.257-.348 3.667-.529 6.22-.154 2.17-.312 4.407-.466 5.706l-10.647 7.994c-.515.388-1.239.358-1.722-.069l-8.884-7.877c-.15-1.283-.307-3.521-.459-5.692-.116-1.653-.228-3.244-.34-4.509l4.827 2.414c1.346.673 2.853 1.029 4.359 1.029h4.854c.552 0 1-.448 1-1s-.448-1-1-1m16.252-36.02c-.036.377-.068.713-.084.959-.201 1.813-.413 3.617-.626 5.433-.239-.079-.478-.155-.719-.227v-11.394c0-2.631-2.141-4.771-4.771-4.771h-25.769c-2.631 0-4.771 2.14-4.771 4.771v11.484c-.095.03-.193.053-.288.084-.169-1.49-.341-2.975-.515-4.46l-.104-.876c-.02-.292-.052-.634-.088-1.019-.301-3.161-.86-9.05 3.531-12.968 7.309-7.179 23.363-7.178 30.709.033 4.364 3.897 3.799 9.787 3.495 12.951m-15.193 6.403c-.34.116-.591.405-.659.758-.087.452-.138.847-.156 1.234-.008.316-.023.634-.036.951h-5.31l-.029-.827c-.011-.391-.08-.759-.159-1.184-.065-.349-.309-.637-.642-.758-4.04-1.468-8.415-1.741-12.557-.849v-10.957c0-1.528 1.243-2.771 2.771-2.771h25.769c1.528 0 2.771 1.243 2.771 2.771v10.896c-3.918-.785-7.992-.551-11.763.736m-20.861 2.038c.002-.103.009-.211.023-.329 4.081-1.262 8.52-1.207 12.621.156.015.109.025.212.028.31l.052 1.499c.117 2.604-2.185 4.838-5.093 4.979l-2.595.032c-1.453-.024-2.84-.628-3.804-1.657-.891-.95-1.348-2.163-1.287-3.438.013-.516.034-1.021.055-1.552m22.04.03c.006-.113.016-.232.031-.359 4.08-1.259 8.517-1.205 12.62.155.014.111.024.219.027.323.02.484.034.974.044 1.491.056 1.139-.37 2.268-1.201 3.181-.975 1.072-2.402 1.726-3.879 1.793l-2.601.032c-1.468-.024-2.814-.609-3.792-1.647-.896-.952-1.36-2.169-1.307-3.425.025-.528.046-1.045.058-1.544m-42.11 49.24v-7.709c.845-.847 5.332-2.552 11.208-4.337l-.54 14.713c-.015.411.223.789.6.954l5.383 2.345-1.427 4.284c-5.656-2.54-10.796-6.02-15.224-10.25m18.289 4.497l-5.596-2.438.54-14.708c1.314-.382 2.68-.763 4.076-1.137l12.494 28.23c-4.439-.616-8.705-1.773-12.733-3.403l1.768-5.309c.164-.49-.075-1.025-.549-1.232m-.518-20.476c-.387.102-.776.206-1.167.311l.985-.816c.62-.514 1.365-.871 2.153-1.033l.32-.065-2.291 1.603m14.341 30.696l-12.94-29.23 5.03-3.524c.167 2.368.325 4.561.488 5.74.033.236.149.453.327.611l9.165 8.126c.632.56 1.431.843 2.232.843.709 0 1.42-.222 2.02-.67l10.984-8.248c.212-.16.353-.397.39-.66.16-1.132.315-3.199.477-5.463l4.633 3.244-12.96 29.28c-1.556.135-3.124.207-4.702.207-1.736 0-3.451-.09-5.146-.251m12.147-.205l12.824-28.973c.193-.437.05-.95-.341-1.224l-2-1.4c.412.077.841.161 1.282.251.167.106.327.223.479.35l4.246 3.518c.065.054.104.133.107.218l.08 2.167c-.096.124-.196.242-.291.368-4.322 5.775-6.138 12.887-5.111 20.02.09.625.208 1.24.339 1.852-3.762 1.382-7.646 2.337-11.614 2.85m58.01 6.443c-4 5.344-9.847 8.81-16.457 9.758-6.61.948-13.194-.735-18.537-4.74-5.347-3.998-8.815-9.839-9.766-16.448-.95-6.608.73-13.192 4.733-18.541 4.903-6.549 12.428-10 20.04-10 5.211 0 10.467 1.619 14.951 4.973 11.03 8.261 13.288 23.962 5.03 35"/><path d="m109.47 92.58l-1.839-1.84c-.522-.523-1.266-.788-2.04-.731-.729.055-1.429.383-1.971.925l-14.218 14.218c-.155.155-.255.357-.284.575l-.651 4.893c-.041.309.064.619.284.839.01.01.023.013.034.022l-.001.009.013-.001c.184.165.417.263.662.263.043 0 .087-.003.131-.009l4.891-.648c.218-.029.42-.129.576-.284l14.219-14.221c1.158-1.16 1.245-2.958.194-4.01m-15.587 16.577l-1.861.247c-.193-.601-.615-1.046-1.208-1.251l.243-1.826 10.608-10.608 2.827 2.827-10.609 10.611m13.979-13.982l-1.956 1.957-2.827-2.827 1.957-1.957c.2-.201.458-.326.706-.345.135-.016.333.007.476.15l1.839 1.84c.266.268.177.809-.195 1.182"/><path d="m113.01 110h-12c-.552 0-1 .448-1 1s.448 1 1 1h12c.552 0 1-.448 1-1s-.447-1-1-1"/></svg>
+<h4>Top 3 2018 technology investments</h4>
+<ol>
+<li>Continuous integration, deployment, and delivery</li>
+<li>Automation and Containers</li>
+<li>DevOps</li>
+</ol>
+</div>
+</div>
+<div class=col-md-4>
+<div class='c-card beta'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" enable-background="new 0 0 128 128"><path d="m64.01 23c-.003 0-.005 0-.008 0-.001 0-.001 0-.002 0-.001 0-.002 0-.003 0-22.607 0-41 18.393-41 41s18.393 41 41 41c.001 0 .002 0 .003 0 .001 0 .001 0 .002 0 .002 0 .005 0 .008 0 22.602-.008 40.987-18.397 40.987-41s-18.385-40.993-40.987-41m35.983 26h-13.666c-2.392-10.358-7.18-18.665-13.195-22.91 12.158 2.931 22.12 11.565 26.861 22.91m-13.996 15c0 4.558-.447 8.932-1.261 13h-19.739v-26h19.739c.814 4.069 1.261 8.442 1.261 13m-44 0c0-4.557.448-8.931 1.262-13h19.738v26h-19.738c-.814-4.069-1.262-8.443-1.262-13m1.695-15c3.2-13.561 10.602-23.258 19.305-23.955v23.955h-19.305m19.305 30v23.954c-8.703-.697-16.1-10.394-19.305-23.954h19.305m2 0h19.306c-3.2 13.565-10.602 23.264-19.306 23.955v-23.955m0-30v-23.956c8.704.69 16.11 10.39 19.306 23.956h-19.306m-10.125-22.912c-6.02 4.245-10.81 12.552-13.204 22.912h-13.667c4.746-11.348 14.708-19.984 26.871-22.912m-27.639 24.912h14.01c-.803 4.088-1.244 8.456-1.244 13 0 4.544.442 8.912 1.244 13h-14.01c-1.443-4.069-2.236-8.443-2.236-13 0-4.558.793-8.931 2.236-13m.768 28h13.667c2.394 10.359 7.185 18.667 13.204 22.911-12.163-2.928-22.12-11.564-26.871-22.911m45.13 22.909c6.02-4.245 10.803-12.552 13.196-22.909h13.666c-4.745 11.344-14.703 19.979-26.862 22.909m27.63-24.909h-14.01c.803-4.088 1.244-8.457 1.244-13 0-4.543-.441-8.912-1.243-13h14.01c1.443 4.069 2.236 8.442 2.236 13-.001 4.557-.794 8.931-2.237 13"/><path d="m127.88 59.802c-.066-1.178-.175-2.354-.283-3.529l-.118-1.298c-.089-1.05-.75-1.351-1.288-1.418-2.735-.345-5.468-.704-8.202-1.064l-2.705-.355c-1.994-.261-3.274-1.271-3.913-3.089-1.014-2.89-2.095-5.499-3.304-7.975-.841-1.732-.671-3.342.523-4.923.797-1.059 1.607-2.108 2.418-3.158l4.557-5.926c.278-.363.275-.868-.007-1.227-3.953-5.03-8.468-9.542-13.419-13.425-.355-.278-.853-.284-1.215-.015l-2.702 2.068c-2.128 1.639-4.257 3.278-6.392 4.908-1.51 1.153-3.066 1.372-4.62.647-2.738-1.272-5.618-2.465-8.559-3.546-1.57-.578-2.495-1.745-2.75-3.468-.294-1.974-.549-3.954-.803-5.934-.111-.867-.223-1.733-.337-2.598l-.401-3.04c-.063-.474-.453-.837-.931-.866l-9.434-.571c-3.47.005-7.818.148-9.605.617-.314.083-.583.353-.697.658-.026.071-.069.234-.079.309l-.389 2.938c-.353 2.661-.706 5.321-1.039 7.984-.267 2.126-1.316 3.477-3.208 4.127-2.603.894-5.257 1.993-7.889 3.267-1.74.841-3.349.673-4.92-.516-1.419-1.075-2.828-2.162-4.238-3.25l-1.993-1.536c-.872-.673-1.747-1.344-2.641-2.029l-.212-.163c-.363-.278-.869-.274-1.227.008-5.03 3.962-9.545 8.48-13.418 13.429-.277.354-.284.85-.016 1.211.132.179.231.312.33.44l1.988 2.583c1.557 2.02 3.113 4.04 4.659 6.072 1.171 1.537 1.367 3.148.583 4.79-1.286 2.692-2.434 5.461-3.412 8.229-.596 1.687-1.816 2.675-3.627 2.937-3.561.515-7.197.966-10.712 1.403l-.272.034c-.889.108-1.407.655-1.46 1.539-.053.889-.113 1.777-.172 2.666-.119 1.767-.243 3.594-.303 5.402-.096 2.947.055 6.05.485 9.838.103 1.064.771 1.369 1.311 1.436 1.328.167 2.654.342 3.98.518 2.171.286 4.343.573 6.517.826 2.34.274 3.75 1.39 4.439 3.512.753 2.318 1.75 4.718 3.137 7.556.875 1.782.704 3.429-.522 5.04-1.274 1.67-2.555 3.333-3.835 4.995l-3.111 4.047c-.278.363-.275.868.008 1.227 3.949 5.01 8.463 9.528 13.417 13.419.354.278.85.286 1.212.018l2.862-2.188c2.08-1.603 4.161-3.206 6.25-4.797 1.518-1.155 3.103-1.357 4.708-.603 2.784 1.311 5.594 2.476 8.351 3.462 1.63.583 2.593 1.772 2.862 3.536.258 1.688.474 3.385.689 5.08l.843 6.458c.048.365.369.702.713.833.085.032.227.086.386.098l.871.096c.699.078 1.397.156 2.1.21 2.149.157 4.275.236 6.371.236 3.078 0 6.089-.17 9-.508.991-.118 1.279-.777 1.347-1.31.239-1.889.487-3.776.735-5.664.222-1.687.443-3.375.659-5.062.273-2.151 1.312-3.463 3.269-4.129 2.714-.925 5.297-1.998 7.677-3.188 1.827-.91 3.512-.74 5.154.521l8.97 6.892c.304.232.778.238 1.12.068.061-.03.181-.102.234-.144 4.843-3.8 9.252-8.194 13.1-13.06.326-.408.585-1.06-.054-1.878l-1.974-2.561c-1.602-2.076-3.204-4.152-4.783-6.242-1.108-1.47-1.294-3.02-.554-4.595 1.274-2.715 2.45-5.554 3.495-8.437.59-1.631 1.818-2.586 3.651-2.839 2.451-.339 4.906-.656 7.359-.973l2.929-.379c1.564-.206 1.924-.565 2.14-2.133.021-.144.038-.286.05-.423.408-4.063.503-8.153.282-12.157m-72.28-58.01c-.002.027-.005.052-.009.075l.009-.075m70 69.981c-.01.112-.023.22-.04.335-.018.128-.037.265-.054.376-.109.017-.242.034-.365.05l-2.925.379c-2.46.317-4.92.635-7.377.975-2.552.353-4.419 1.823-5.257 4.139-1.024 2.826-2.177 5.608-3.425 8.269-1.05 2.238-.778 4.6.768 6.65 1.583 2.095 3.189 4.177 4.795 6.258l1.779 2.308c-3.563 4.447-7.603 8.482-12 11.995l-8.372-6.434c-2.243-1.723-4.755-1.973-7.265-.724-2.301 1.15-4.801 2.188-7.429 3.084-2.688.914-4.238 2.855-4.609 5.77-.214 1.685-.436 3.37-.657 5.06-.231 1.76-.463 3.521-.688 5.288-4.664.519-9.586.594-14.634.224-.676-.052-1.352-.128-2.026-.204l-.307-.033-.746-5.715c-.217-1.712-.435-3.425-.695-5.13-.377-2.474-1.857-4.292-4.166-5.117-2.696-.965-5.445-2.105-8.172-3.389-2.303-1.083-4.644-.799-6.771.821-2.092 1.593-4.176 3.199-6.259 4.804l-2.216 1.707c-4.396-3.523-8.427-7.555-11.999-12l2.633-3.424c1.282-1.665 2.564-3.33 3.84-5 1.684-2.205 1.936-4.671.729-7.129-1.345-2.75-2.308-5.067-3.03-7.294-.933-2.873-2.988-4.515-6.109-4.88-2.166-.252-4.327-.537-6.488-.822-1.199-.159-2.397-.317-3.597-.469-.394-3.526-.534-6.479-.443-9.274.059-1.774.182-3.584.299-5.334.053-.788.106-1.575.157-2.388 3.525-.438 7.171-.891 10.752-1.408 2.532-.367 4.388-1.876 5.227-4.25.955-2.702 2.076-5.405 3.331-8.03 1.117-2.34.841-4.713-.797-6.864-1.548-2.031-3.107-4.055-4.665-6.08l-1.835-2.385c3.508-4.388 7.538-8.421 11.997-12 .751.576 1.491 1.144 2.229 1.714l1.991 1.535c1.415 1.092 2.828 2.183 4.253 3.262 2.167 1.641 4.587 1.889 6.999.721 2.561-1.239 5.14-2.308 7.668-3.175 2.611-.898 4.182-2.893 4.542-5.77.333-2.658.685-5.314 1.038-7.97l.311-2.361c1.63-.271 4.795-.417 8.413-.426l8.554.52.293 2.22c.114.864.225 1.728.336 2.592.256 1.994.512 3.986.808 5.973.36 2.431 1.793 4.225 4.04 5.05 2.891 1.062 5.719 2.233 8.406 3.482 2.251 1.049 4.56.748 6.678-.87 2.137-1.632 4.267-3.273 6.398-4.914l2.063-1.588c4.392 3.517 8.423 7.549 11.998 12l-4.078 5.302c-.815 1.056-1.631 2.112-2.432 3.176-1.643 2.176-1.893 4.597-.724 7 1.174 2.407 2.226 4.946 3.215 7.762.888 2.527 2.804 4.052 5.541 4.41l2.704.355c2.596.341 5.191.682 7.789 1.01l.088.97c.106 1.151.213 2.303.278 3.456.213 3.901.119 7.886-.281 11.857"/></svg>
+<h4>
+Greatest
+<br/>
+challenges
+</h4>
+<ol>
+<li>Selecting the right technology</li>
+<li>Unclear direction</li>
+<li>Replacing ingrained practices</li>
+</ol>
+</div>
+</div>
+<div class=col-md-4>
+<div class='c-card gamma'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" enable-background="new 0 0 128 128"><path d="m67.991 34.915l1.798-4.337c1.265.29 2.211 1.425 2.211 2.776v17.14c0 .552.448 1 1 1s1-.448 1-1v-17.14c0-2.674-2.175-4.849-4.849-4.849-.404 0-.769.244-.924.617l-1.771 4.273-12.456-2.411c-.331-.064-.675.044-.91.288s-.331.589-.255.919l.723 3.133-10.162-6.655c-.163-.107-.353-.164-.548-.164-2.674 0-4.849 2.175-4.849 4.849v17.14c0 .552.448 1 1 1s1-.448 1-1v-17.14c0-1.478 1.13-2.696 2.571-2.835l11.974 7.842c.341.224.786.217 1.12-.016.335-.233.495-.647.403-1.045l-.937-4.06 11.747 2.274c.465.089.932-.16 1.114-.599"/><path d="m117.18 79.38c-2.647-1.979-5.542-3.396-8.542-4.277 2.22-6.115 3.359-12.534 3.359-19.11 0-30.878-25.12-56-56-56s-56 25.12-56 56 25.12 56 56 56c6.571 0 12.99-1.138 19.1-3.358 1.63 5.563 4.994 10.431 9.719 13.964 4.719 3.538 10.333 5.398 16.13 5.398 1.291 0 2.591-.092 3.892-.279 7.139-1.024 13.451-4.767 17.773-10.539 8.917-11.923 6.48-28.881-5.433-37.802m-115.18-23.384c0-29.776 24.22-54 54-54s54 24.22 54 54c0 6.408-1.121 12.665-3.308 18.618-7.406-1.583-15.253.003-21.471 4.475-5.799-2.303-13.472-3.58-16.05-3.833.124-1.724.25-3.37.372-4.419 2.381-1.653 3.996-3.944 4.151-5.902.214-1.793.425-3.585.632-5.381.103.022.206.039.311.05 1.645.167 3.107-1.033 3.271-2.664l1.088-10.512c.084-.79-.145-1.565-.646-2.183-.503-.621-1.219-1.01-2.01-1.087-.036-.004-.071-.007-.107-.01.182-1.553.362-3.104.538-4.692.019-.272.05-.59.084-.948.313-3.266.966-10.06-4.119-14.601-7.979-7.834-25.501-7.834-33.443-.033-5.111 4.564-4.465 11.354-4.155 14.617.035.363.066.687.089 1.012l.108.926c.145 1.24.289 2.478.432 3.719-.035.002-.07.005-.105.009-.792.081-1.505.466-2.01 1.084-.502.617-.734 1.392-.652 2.182l1.088 10.51c.077.79.458 1.502 1.073 2.01.618.507 1.396.742 2.2.662.102-.011.204-.027.304-.048.189 1.628.38 3.253.572 4.878l.056.471c.175 1.998 1.794 4.288 4.165 5.933.129 1.118.262 2.909.393 4.757-2.349.349-8.479 1.963-13.33 3.432-12.778 3.869-12.778 5.202-12.778 6.085v7.908c-9.132-9.675-14.746-22.701-14.746-37.02m56.61 17.336h-4.854c-1.197 0-2.395-.283-3.464-.818l-6.46-3.23c-.047-.023-.097-.024-.146-.04-1.891-1.289-3.28-3.113-3.406-4.545l-.059-.5c-.248-2.107-.496-4.215-.739-6.329-.044-.386-.309-.711-.678-.834-.367-.123-.774-.021-1.042.261-.121.128-.325.287-.605.316-.262.028-.523-.051-.729-.219-.201-.165-.325-.397-.351-.661l-1.088-10.516c-.027-.258.049-.512.214-.714.166-.204.4-.331.666-.358.191-.02.388.019.553.112.328.186.73.17 1.043-.038.313-.207.483-.572.441-.945-.191-1.7-.388-3.386-.586-5.078l-.104-.876c-.02-.292-.052-.634-.088-1.019-.301-3.161-.86-9.05 3.531-12.968 7.309-7.179 23.363-7.179 30.709.033 4.364 3.896 3.798 9.787 3.494 12.951-.036.377-.068.713-.084.959-.206 1.851-.421 3.692-.639 5.546l-.052.447c-.043.372.124.736.434.945.311.21.713.227 1.04.048.18-.099.371-.14.571-.117.263.026.499.153.664.358.164.201.238.453.21.713l-1.089 10.52c-.054.538-.541.938-1.079.877-.287-.03-.494-.19-.617-.319-.268-.281-.673-.382-1.042-.258-.368.124-.631.449-.675.834-.26 2.28-.526 4.553-.802 6.866-.116 1.456-1.61 3.38-3.635 4.679-.245.157-.41.414-.45.702-.177 1.257-.348 3.667-.529 6.22-.168 2.366-.341 4.811-.507 6.03-.254.779-3.02 8.626-11.549 8.626-6.888 0-9.378-7.772-9.627-8.613-.161-1.212-.331-3.637-.496-5.984-.116-1.653-.228-3.244-.34-4.509l4.827 2.414c1.346.673 2.853 1.029 4.359 1.029h4.854c.552 0 1-.448 1-1s-.447-1-.999-1m-2.613 36.664c-14.438 0-27.559-5.706-37.26-14.968v-9.71c1.831-1.838 20.14-7.161 24.25-7.742.151 2.138.297 4.07.446 5.151.006.044.015.088.027.131.028.101 2.917 10.138 11.572 10.138 10.406 0 13.458-10.02 13.487-10.125.013-.046.023-.093.03-.141.161-1.135.316-3.208.478-5.477 2.056.22 8.771 1.257 14.365 3.279-1.459 1.255-2.808 2.68-4.01 4.282-4.322 5.775-6.138 12.887-5.111 20.02.09.625.208 1.24.339 1.852-5.952 2.187-12.208 3.307-18.615 3.307m65.02 5.987c-4 5.344-9.847 8.81-16.457 9.758-6.609.948-13.194-.735-18.537-4.74-5.347-3.998-8.815-9.839-9.766-16.448-.95-6.608.73-13.192 4.733-18.541 4.903-6.549 12.428-10 20.04-10 5.211 0 10.467 1.619 14.951 4.973 11.03 8.261 13.288 23.962 5.03 35"/><path d="m93.12 95.84c-.276-.478-.888-.641-1.366-.364l-8.04 4.655c-.309.179-.499.508-.499.865s.19.687.499.865l8.04 4.655c.158.091.33.135.5.135.345 0 .681-.179.866-.499.277-.478.114-1.09-.364-1.366l-6.547-3.79 6.546-3.79c.478-.276.641-.888.365-1.366"/><path d="m118.28 100.14l-8.04-4.655c-.478-.277-1.09-.114-1.366.364-.277.478-.114 1.09.364 1.366l6.546 3.79-6.546 3.79c-.478.276-.641.888-.364 1.366.185.32.521.499.866.499.17 0 .342-.043.5-.135l8.04-4.655c.309-.179.499-.508.499-.865s-.19-.687-.499-.865"/><path d="m104.92 89.5c-.525-.177-1.091.101-1.269.625l-7.188 21.12c-.178.523.102 1.091.625 1.269.107.036.215.054.322.054.417 0 .805-.262.947-.678l7.188-21.12c.177-.524-.103-1.092-.625-1.27"/></svg>
+<h4>
+Top 5 most
+<br/>
+important tools
+</h4>
+<ol>
+<li>Version control system</li>
+<li>Text editor/IDE</li>
+<li>Chat/collaboration tools</li>
+<li>Bug/issue tracker</li>
+<li>Continuous integration and delivery</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-4 col-md-offset-1'>
+<blockquote class=c-blockquote>The majority of managers say they will spend under $10,000 on technology to support their 2018 initiatives</blockquote>
+</div>
+</div>
+<div class=row>
+<div class='col-md-7 col-md-offset-4'>
+<div class='c-stat alpha'>
+<span class=number>
+<span>22</span>
+<span class=percent>%</span>
+</span>
+<span class=label>of upper management don’t know how much they will spend</span>
+</div>
+</div>
+</div>
+<div class=u-release>
+<hr class=angled />
+</div>
+<div class='row u-margin-bottom-xs'>
+<div class=col-md-10>
+<h3>Incentives and pressures</h3>
+</div>
+</div>
+<div class='row u-margin-bottom-lg'>
+<div class='col-md-8 col-md-offset-1'>
+<p>Continuous integration emerged as the theme for 2018, with managers expecting to invest the most in CI/CD technology, and nearly half of all respondents (47%) strongly agreeing that practicing continuous integration alleviates blockers in the development process. Meanwhile selecting the right technology for the job and integration with other tools in their tech stack prove to be their biggest challenge.</p>
+</div>
+</div>
+<div class=row>
+<div class='col-md-9 col-md-offset-1'>
+<div class=c-chart>
+<h3 class=title>Top 3 challenges you face using technology to support your investments for 2018</h3>
+<canvas height=180 id=chart-top-3-challenges width=868></canvas>
+<div class=stats-notes>n=684</div>
+</div>
+</div>
+</div>
+<div class='row u-margin-bottom-md'>
+<div class='col-md-8 col-md-offset-1'>
+<p>There’s an enormous incentive to implement continuous integration, delivery, and deployment. In addition to deploying on-demand, high performers experience a host of other benefits, reporting that they are more likely to feel set up to succeed, are given realistic deadlines, and are less likely to feel the need to sacrifice quality to meet a deadline. Likewise, respondents who reported using a DevOps workflow believe they are the leaders in deploying on demand and are more likely to automate more of their software development lifecycle.</p>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class=c-chart>
+<h3 class=title>How often do you deploy on demand?</h3>
+<canvas height=120 id=chart-deploy-on-demand width=730></canvas>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-9 col-md-offset-1'>
+<div class=c-chart>
+<h3 class=title>Automating more of the software development lifecycle is a high priority</h3>
+<canvas height=120 id=chart-sdl-high-priority width=720></canvas>
+</div>
+</div>
+</div>
+<div class='row u-margin-bottom-sm'>
+<div class='col-md-8 col-md-offset-1'>
+<p>Remote teams tend to trend higher in overall satisfaction and productivity compared to in-office teams, suggesting there is an incentive to adopt a remote workplace culture.</p>
+</div>
+</div>
+<div class='row u-margin-bottom-xs'>
+<div class='col-md-4 col-md-offset-1'>
+<div class='c-stat-circle alpha'>
+<div class='remote-teams-visibility svg-container'></div>
+<span class=number>
+<span>67</span>
+<span class=percent>%</span>
+</span>
+<p class=label>
+<strong>of remote teams</strong>
+say they have visibility into what others are working on compared to 57% of in-office teams
+</p>
+</div>
+</div>
+<div class='col-md-4 col-md-offset-1'>
+<div class='c-stat-circle beta'>
+<div class='in-office-ingrained-practices svg-container'></div>
+<span class=number>
+<span>60</span>
+<span class=percent>%</span>
+</span>
+<p class=label>
+<strong>of in-office teams</strong>
+cite replacing ingrained practices as their number one challenge compared to 49% of remote teams
+</p>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-4 col-md-offset-1'>
+<div class='c-stat-circle gamma'>
+<div class='remote-teams-devops-culture svg-container'></div>
+<span class=number>
+<span>41</span>
+<span class=percent>%</span>
+</span>
+<p class=label>
+<strong>of remote teams</strong>
+agree they have a well-established DevOps culture compared to 34% of in-office teams
+</p>
+</div>
+</div>
+<div class='col-md-4 col-md-offset-1'>
+<div class='c-stat-circle delta'>
+<div class='in-office-devops-culture svg-container'></div>
+<span class=number>
+<span>40</span>
+<span class=percent>%</span>
+</span>
+<p class=label>
+<strong>of in-office teams</strong>
+disagree that their organization has a strong DevOps culture, compared to 27% of remote teams
+</p>
+</div>
+</div>
+</div>
+<div class=u-release>
+<hr class=angled />
+</div>
+<div class='row u-margin-bottom-xs'>
+<div class=col-md-10>
+<h3>All in on open source</h3>
+</div>
+</div>
+<div class='row u-margin-bottom-lg'>
+<div class='col-md-8 col-md-offset-1'>
+<p>An emphasis on and preference for open source tools is a unifying factor across all segments. Regardless of level, culture, or workflow, open source proves to be critical for software development teams with 92% of all respondents agreeing that open source tools are important to software innovation.</p>
+</div>
+</div>
+<div class=row>
+<div class='col-md-7 col-md-offset-1'>
+<div class='c-stat alpha'>
+<span class=number>
+<span>92</span>
+<span class=percent>%</span>
+</span>
+<span class=label>of respondents agree that open source tools are critical to software innovation</span>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-8 col-md-offset-1'>
+<p>Respondents are passionate users of open source, with 75% reporting that using open source tools is important to them and 84% saying they prefer to use open source over closed or proprietary tools.</p>
+</div>
+</div>
+<div class=row>
+<div class='col-md-7 col-md-offset-4'>
+<div class='c-stat beta'>
+<span class=number>
+<span>15</span>
+<span class=percent>%</span>
+</span>
+<span class=label>of respondents say all of their team’s development tools are open source</span>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-7 col-md-offset-1'>
+<div class='c-stat gamma'>
+<span class=number>
+<span>45</span>
+<span class=percent>%</span>
+</span>
+<span class=label>of respondents say most of their team’s development tools are open source</span>
+</div>
+</div>
+</div>
+<div class='row u-margin-bottom-md'>
+<div class='col-md-8 col-md-offset-1'>
+<p>Software professionals believe that open source tools can offer multiple benefits compared to closed source software. The majority of respondents maintain that open source tools are more secure, can improve overall software quality, and streamline the development process.</p>
+</div>
+</div>
+<div class=row>
+<div class='col-md-8 col-md-offset-1'>
+<div class='c-stat alpha large'>
+<span class=number>
+<span>60</span>
+<span class=percent>%</span>
+</span>
+<div class=label>
+<h4>agree using an open source tool</h4>
+<ul>
+<li>improves software quality</li>
+<li>streamlines the development process</li>
+<li>is more secure</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class='report-section report-section-culture' id=section-culture>
+<div class=container>
+<header class='c-banner u-margin-bottom-lg'>
+<h2>Culture</h2>
+<h3>Habits and behaviors that drive success</h3>
+<p>
+<em>The collective attitudes and behaviors of developers toward their workplace culture can offer crucial insight into effective habits and reveal crippling dysfunctions. This section serves as a benchmark for overall developer satisfaction, covering everything from physical workspaces to perceptions of success.</em>
+</p>
+<p>Respondents place a strong value on working in a collaborative environment, where they feel their voices are heard and they have the ability to make decisions about their work. A strong majority suggest that they find it easy to collaborate with their team members and others in their organization. Flexible workplace and time-tracking policies are common, with productivity measured by results rather than time spent.</p>
+</header>
+<div class=row>
+<div class='col-md-7 col-md-offset-1'>
+<div class=c-stat>
+<span class=number>
+<span>94</span>
+<span class=percent>%</span>
+</span>
+<span class=label>of respondents said it’s important to them to work in a collaborative environment.</span>
+</div>
+</div>
+</div>
+<div class='row u-margin-bottom-md'>
+<div class='col-md-8 col-md-offset-4'>
+<div class=c-stat>
+<span class=number>
+<span>81</span>
+<span class=percent>%</span>
+</span>
+<span class=label>said they feel it is easy to collaborate with their team and others in their organization.</span>
+</div>
+</div>
+</div>
+<div class='row u-margin-bottom-sm'>
+<div class='col-md-10 col-md-offset-1'>
+<div class=c-chart>
+<h3 class=title>Where does your development team work</h3>
+<canvas class=chart-horiz height=240 id=chart-dev-team-work width=684></canvas>
+</div>
+</div>
+</div>
+<div class='c-banner-small u-margin-bottom-lg'>
+<h4>Analysis</h4>
+<p>Remote teams, unable to rely on “facetime” around the office, have a range of ways they ensure work gets done. Twenty percent (20%) of respondents say most or all of their development team works remotely and more than half of remote development teams say they do not track time at all.</p>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class='c-chart c-chart-track-time-remote'>
+<h3 class=title>How do you track time for remote developers?</h3>
+<canvas height=530 id=chart-track-time-remote width=320></canvas>
+<div class=chart-notes>
+Other 4%
+<br/>
+Don’t know 2%
+</div>
+<blockquote class='c-blockquote alpha'>The majority of those who work remotely do not track time.</blockquote>
+<blockquote class='c-blockquote beta'>Respondents told us they use a variety of apps, like GitLab, Pivotal Tracker, WakaTime, Toggl, Velocity by fibonacci, Bullet Journal, Time Doctor, Timular zei</blockquote>
+</div>
+</div>
+</div>
+<div class='u-release u-margin-top-sm'>
+<div class='c-image-banner dark-bg-block parallax' style='background-image: url(&#39;/images/dev-survey-2018/pull-quote-bg-1.jpg&#39;)'>
+<div class=row>
+<div class='col-md-8 col-md-offset-1'>
+<q class=c-quote>We are goal driven so our focus is on delivery, not hours spent</q>
+</div>
+</div>
+<div class=row>
+<div class='col-md-8 col-md-offset-3'>
+<q class=c-quote>Productivity is measured by features shipped to our customers on time with high quality and reliability</q>
+</div>
+</div>
+</div>
+</div>
+<div class='row u-margin-bottom-lg'>
+<div class='col-md-8 col-md-offset-1'>
+<p>Managers and developers are well aligned in a number of areas, although managers tend to be more optimistic than developers when they differ. Similar percentages (roughly 75%) of each group feel set up to succeed in their jobs, and about two-thirds agree that they are given realistic deadlines. Twenty percent of developers, and nearly the same proportion of managers, feel they are not given realistic deadlines. Only half of developers agree that project expectations and requirements are set up front, and a third say they are not.</p>
+</div>
+</div>
+<div class=row>
+<div class='col-md-7 col-md-offset-1'>
+<div class=c-callout>
+<strong>31%</strong>
+of developers, and
+<strong>23%</strong>
+of managers, say project expectations and requirements are not set up front.
+</div>
+</div>
+</div>
+<div class='row u-margin-bottom-lg'>
+<div class='col-md-8 col-md-offset-1'>
+<p>Transparency lags behind for some teams, with a quarter of developers indicating they do not have visibility into what others, such as their colleagues in operations, product, and security, are working on. Remote or mostly remote teams lead their in-office counterparts in visibility into what others are working on, likely due to the fact that remote teammates need to be more deliberate about communication and planning in order to succeed.</p>
+<p>Although a strong majority feel comfortable proposing new ways of working, they face difficulty overcoming the status quo. Replacing ingrained practices, along with a resistance to change, are the top two challenges identified by all respondents.</p>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class='c-chart c-chart-biggest-challenges'>
+<h3 class=title>What are the biggest challenges your team or organization faces when it comes to adopting new practices or tools?</h3>
+<canvas height=360 id=chart-biggest-challenges width=868></canvas>
+<div class=chart-notes>
+Other 7%
+<br/>
+We don’t face any challenges 7%
+<br/>
+Don’t know 4%
+</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-4 col-md-offset-1'>
+<blockquote class=c-blockquote>Lower performers are more likely to identify a lack of leadership support (36%), inadequate workforce training (35%), and a risk averse culture (30%).</blockquote>
+</div>
+<div class='col-md-5 col-md-offset-1'>
+<blockquote class=c-blockquote>High performers are less likely to name these same challenges: 22%, 22%, and 19%, respectively.</blockquote>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<ul class=compare-tabs role=tablist>
+<li class=active role=presentation>
+<a aria-controls=in-office-culture data-target='#in-office-culture' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><defs><path id=K d="m-153 186h223v4h-223z"/><path id=L d="m-417 186h223v4h-223z"/><path id=M d="m-174 133h1v15h-1z"/><path id=N d="m-174 175h1v15h-1z"/><path id=O d="m-173.5 174c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=P d="m-153 311h223v4h-223z"/><path id=Q d="m-417 311h223v4h-223z"/><path id=R d="m-174 258h1v15h-1z"/><path id=S d="m-174 300h1v15h-1z"/><path id=T d="m-173.5 299c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=U d="m-153 423h223v4h-223z"/><path id=V d="m-417 423h223v4h-223z"/><path id=W d="m-174 370h1v15h-1z"/><path id=X d="m-174 412h1v15h-1z"/><path id=Y d="m-173.5 411c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=Z d="m-153 543h223v4h-223z"/><path id=a d="m-417 543h223v4h-223z"/><path id=b d="m-174 490h1v15h-1z"/><path id=c d="m-174 532h1v15h-1z"/><path id=d d="m-173.5 531c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><use id=e xlink:href="#y"/><use id=f xlink:href="#y"/><use id=g xlink:href="#y"/><use id=h xlink:href="#y"/><use id=i xlink:href="#y"/><path id=j d=m-974-4585h1600v5980h-1600z /><use id=k xlink:href="#z"/><use id=l xlink:href="#z"/><use id=m xlink:href="#z"/><use id=n xlink:href="#z"/><path id=o d=m-974-4473h1600v5980h-1600z /><use id=p xlink:href="#10"/><use id=q xlink:href="#10"/><use id=r xlink:href="#10"/><use id=s xlink:href="#10"/><path id=t d=m-974-4353h1600v5980h-1600z /><use id=u xlink:href="#11"/><use id=v xlink:href="#11"/><use id=w xlink:href="#11"/><use id=x xlink:href="#11"/><path id=y d=m-974-4710h1600v5980h-1600z /><path id=z d=m-974-4585h1600v5980h-1600z /><path id=10 d=m-974-4473h1600v5980h-1600z /><path id=11 d=m-974-4353h1600v5980h-1600z /><clipPath><use xlink:href="#x"/></clipPath><clipPath><use xlink:href="#k"/></clipPath><clipPath><use xlink:href="#m"/></clipPath><clipPath><use xlink:href="#l"/></clipPath><clipPath><use xlink:href="#j"/></clipPath><clipPath><use xlink:href="#i"/></clipPath><clipPath><use xlink:href="#f"/></clipPath><clipPath><use xlink:href="#h"/></clipPath><clipPath><use xlink:href="#g"/></clipPath><clipPath><use xlink:href="#n"/></clipPath><clipPath><use xlink:href="#o"/></clipPath><clipPath><use xlink:href="#u"/></clipPath><clipPath><use xlink:href="#w"/></clipPath><clipPath><use xlink:href="#v"/></clipPath><clipPath><use xlink:href="#t"/></clipPath><clipPath><use xlink:href="#s"/></clipPath><clipPath><use xlink:href="#p"/></clipPath><clipPath><use xlink:href="#r"/></clipPath><clipPath><use xlink:href="#q"/></clipPath><clipPath><use xlink:href="#e"/></clipPath><clipPath id=J><use xlink:href="#d"/></clipPath><clipPath id=5><use xlink:href="#P"/></clipPath><clipPath id=7><use xlink:href="#R"/></clipPath><clipPath id=6><use xlink:href="#Q"/></clipPath><clipPath id=4><use xlink:href="#O"/></clipPath><clipPath id=3><use xlink:href="#N"/></clipPath><clipPath id=0><use xlink:href="#K"/></clipPath><clipPath id=2><use xlink:href="#M"/></clipPath><clipPath id=1><use xlink:href="#L"/></clipPath><clipPath id=8><use xlink:href="#S"/></clipPath><clipPath id=9><use xlink:href="#T"/></clipPath><clipPath id=G><use xlink:href="#a"/></clipPath><clipPath id=I><use xlink:href="#c"/></clipPath><clipPath id=H><use xlink:href="#b"/></clipPath><clipPath id=F><use xlink:href="#Z"/></clipPath><clipPath id=A><use xlink:href="#U"/></clipPath><clipPath id=E><use xlink:href="#Y"/></clipPath><clipPath id=B><use xlink:href="#V"/></clipPath><clipPath id=D><use xlink:href="#X"/></clipPath><clipPath id=C><use xlink:href="#W"/></clipPath></defs><g clip-path="url(#0)"/><g clip-path="url(#1)"/><g clip-path="url(#2)"/><g clip-path="url(#3)"/><g clip-path="url(#4)"/><g clip-path="url(#5)"/><g clip-path="url(#6)"/><g clip-path="url(#7)"/><g clip-path="url(#8)"/><g clip-path="url(#9)"/><g clip-path="url(#A)"/><g clip-path="url(#B)"/><g clip-path="url(#C)"/><g clip-path="url(#D)"/><g clip-path="url(#E)"/><g clip-path="url(#F)"/><g clip-path="url(#G)"/><g clip-path="url(#H)"/><g clip-path="url(#I)"/><g clip-path="url(#J)"/><path d="m31 10h-4v-9c0-.553-.447-1-1-1h-20c-.553 0-1 .447-1 1v9h-4c-.553 0-1 .447-1 1v20c0 .553.447 1 1 1h5 20 5c.553 0 1-.447 1-1v-20c0-.553-.447-1-1-1m-29 2h3v18h-3v-18m5-1v-9h18v9 19h-18v-19m23 19h-3v-18h3v18"/><path d="m22 13h-4c-.553 0-1 .447-1 1v4c0 .553.447 1 1 1h4c.553 0 1-.447 1-1v-4c0-.553-.447-1-1-1m-1 4h-2v-2h2v2"/><path d="m22 22h-4c-.553 0-1 .447-1 1v4c0 .553.447 1 1 1h4c.553 0 1-.447 1-1v-4c0-.553-.447-1-1-1m-1 4h-2v-2h2v2"/><path d="m22 4h-4c-.553 0-1 .447-1 1v4c0 .553.447 1 1 1h4c.553 0 1-.447 1-1v-4c0-.553-.447-1-1-1m-1 4h-2v-2h2v2"/><path d="m14 4h-4c-.553 0-1 .447-1 1v4c0 .553.447 1 1 1h4c.553 0 1-.447 1-1v-4c0-.553-.447-1-1-1m-1 4h-2v-2h2v2"/><path d="m14 13h-4c-.553 0-1 .447-1 1v4c0 .553.447 1 1 1h4c.553 0 1-.447 1-1v-4c0-.553-.447-1-1-1m-1 4h-2v-2h2v2"/><path d="m14 22h-4c-.553 0-1 .447-1 1v4c0 .553.447 1 1 1h4c.553 0 1-.447 1-1v-4c0-.553-.447-1-1-1m-1 4h-2v-2h2v2"/></svg>
+in-office
+</a>
+</li>
+<li role=presentation>
+<a aria-controls=remote-culture data-target='#remote-culture' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><defs><path id=K d="m-290 849h223v4h-223z"/><path id=L d="m-554 849h223v4h-223z"/><path id=M d="m-311 796h1v15h-1z"/><path id=N d="m-311 838h1v15h-1z"/><path id=O d="m-310.5 837c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=P d="m-290 974h223v4h-223z"/><path id=Q d="m-554 974h223v4h-223z"/><path id=R d="m-311 921h1v15h-1z"/><path id=S d="m-311 963h1v15h-1z"/><path id=T d="m-310.5 962c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=U d="m-290 1086h223v4h-223z"/><path id=V d="m-554 1086h223v4h-223z"/><path id=W d="m-311 1033h1v15h-1z"/><path id=X d="m-311 1075h1v15h-1z"/><path id=Y d="m-310.5 1074c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=Z d="m-290 1206h223v4h-223z"/><path id=a d="m-554 1206h223v4h-223z"/><path id=b d="m-311 1153h1v15h-1z"/><path id=c d="m-311 1195h1v15h-1z"/><path id=d d="m-310.5 1194c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><use id=e xlink:href="#y"/><use id=f xlink:href="#y"/><use id=g xlink:href="#y"/><use id=h xlink:href="#y"/><use id=i xlink:href="#y"/><path id=j d=m-1111-3922h1600v5980h-1600z /><use id=k xlink:href="#z"/><use id=l xlink:href="#z"/><use id=m xlink:href="#z"/><use id=n xlink:href="#z"/><path id=o d=m-1111-3810h1600v5980h-1600z /><use id=p xlink:href="#10"/><use id=q xlink:href="#10"/><use id=r xlink:href="#10"/><use id=s xlink:href="#10"/><path id=t d=m-1111-3690h1600v5980h-1600z /><use id=u xlink:href="#11"/><use id=v xlink:href="#11"/><use id=w xlink:href="#11"/><use id=x xlink:href="#11"/><path id=y d=m-1111-4047h1600v5980h-1600z /><path id=z d=m-1111-3922h1600v5980h-1600z /><path id=10 d=m-1111-3810h1600v5980h-1600z /><path id=11 d=m-1111-3690h1600v5980h-1600z /><clipPath><use xlink:href="#x"/></clipPath><clipPath><use xlink:href="#k"/></clipPath><clipPath><use xlink:href="#m"/></clipPath><clipPath><use xlink:href="#l"/></clipPath><clipPath><use xlink:href="#j"/></clipPath><clipPath><use xlink:href="#i"/></clipPath><clipPath><use xlink:href="#f"/></clipPath><clipPath><use xlink:href="#h"/></clipPath><clipPath><use xlink:href="#g"/></clipPath><clipPath><use xlink:href="#n"/></clipPath><clipPath><use xlink:href="#o"/></clipPath><clipPath><use xlink:href="#u"/></clipPath><clipPath><use xlink:href="#w"/></clipPath><clipPath><use xlink:href="#v"/></clipPath><clipPath><use xlink:href="#t"/></clipPath><clipPath><use xlink:href="#s"/></clipPath><clipPath><use xlink:href="#p"/></clipPath><clipPath><use xlink:href="#r"/></clipPath><clipPath><use xlink:href="#q"/></clipPath><clipPath><use xlink:href="#e"/></clipPath><clipPath id=J><use xlink:href="#d"/></clipPath><clipPath id=5><use xlink:href="#P"/></clipPath><clipPath id=7><use xlink:href="#R"/></clipPath><clipPath id=6><use xlink:href="#Q"/></clipPath><clipPath id=4><use xlink:href="#O"/></clipPath><clipPath id=3><use xlink:href="#N"/></clipPath><clipPath id=0><use xlink:href="#K"/></clipPath><clipPath id=2><use xlink:href="#M"/></clipPath><clipPath id=1><use xlink:href="#L"/></clipPath><clipPath id=8><use xlink:href="#S"/></clipPath><clipPath id=9><use xlink:href="#T"/></clipPath><clipPath id=G><use xlink:href="#a"/></clipPath><clipPath id=I><use xlink:href="#c"/></clipPath><clipPath id=H><use xlink:href="#b"/></clipPath><clipPath id=F><use xlink:href="#Z"/></clipPath><clipPath id=A><use xlink:href="#U"/></clipPath><clipPath id=E><use xlink:href="#Y"/></clipPath><clipPath id=B><use xlink:href="#V"/></clipPath><clipPath id=D><use xlink:href="#X"/></clipPath><clipPath id=C><use xlink:href="#W"/></clipPath></defs><path d="m30.572 9.402c-3.638-8.04-13.14-11.611-21.17-7.974-8.04 3.637-11.612 13.13-7.974 21.17 2.672 5.901 8.504 9.398 14.596 9.398 2.203 0 4.44-.458 6.574-1.424 8.04-3.637 11.612-13.13 7.974-21.17m-1.293 2.18l-.024-.003c-.189 1.739-1.938 3.905-4.6 5.934-.428-1.637-1.01-3.298-1.743-4.925-.138-.306-.284-.597-.428-.893 1.946-1.54 3.401-3.157 4.211-4.718.819.974 1.517 2.059 2.056 3.249.201.446.375.898.528 1.356m-5.796 12.04c-.027 2.717-.771 4.669-1.989 5.22-1.619.735-4.34-.725-7.02-4.186 1.634-.427 3.3-1 4.933-1.741 1.384-.627 2.679-1.318 3.876-2.047.132.955.205 1.883.195 2.754m-4.895-2.53c-1.829.828-3.632 1.419-5.335 1.815-.812-1.256-1.605-2.689-2.341-4.316-.133-.294-.255-.593-.378-.89 1.574-.441 3.212-1.032 4.879-1.786 2.01-.908 3.833-1.932 5.431-3.02.082.173.166.34.246.518.79 1.744 1.401 3.563 1.81 5.331-1.308.844-2.76 1.642-4.312 2.345m-15.338.684c-.497-1.097-.83-2.237-1.031-3.393.745.146 1.548.226 2.412.226 1.216 0 2.54-.148 3.934-.429.167.413.339.825.524 1.234.637 1.406 1.326 2.705 2.05 3.891-3.475.496-6.287.095-7.581-.929-.102-.199-.214-.393-.308-.6m5.251-13.347c.021-2.688.759-4.621 1.974-5.171.282-.128.597-.191.937-.191 2.249 0 5.648 2.763 8.518 8.02-1.562 1.085-3.375 2.116-5.341 3.01-1.617.733-3.224 1.293-4.769 1.709-.865-2.574-1.336-5.156-1.319-7.372m7.493-6.43c1.665 0 3.334.302 4.939.906 1.587.598 3.02 1.471 4.257 2.553-.514 1.374-1.812 2.916-3.65 4.418-2.067-3.709-4.494-6.433-6.846-7.807.433-.041.866-.07 1.3-.07m-9.144 3.411c-.214.889-.341 1.885-.349 3-.019 2.413.459 5.115 1.358 7.837-2.295.426-4.326.442-5.852.01-.032-1.749.26-3.505.896-5.191.837-2.223 2.196-4.151 3.947-5.659m4.216 23.691c-2.173-.819-4.066-2.134-5.559-3.828.853.165 1.792.249 2.797.249 1.263 0 2.628-.131 4.04-.387 1.558 2.172 3.224 3.811 4.855 4.804-2.058.178-4.145-.089-6.136-.838m18.03-8.164c-.838 2.227-2.2 4.156-3.955 5.665.206-.879.329-1.859.34-2.959.013-1.267-.107-2.609-.35-3.988 2.102-1.499 3.755-3.112 4.815-4.692.151 2-.12 4.04-.85 5.974"/><g clip-path="url(#0)"/><g clip-path="url(#1)"/><g clip-path="url(#2)"/><g clip-path="url(#3)"/><g clip-path="url(#4)"/><g clip-path="url(#5)"/><g clip-path="url(#6)"/><g clip-path="url(#7)"/><g clip-path="url(#8)"/><g clip-path="url(#9)"/><g clip-path="url(#A)"/><g clip-path="url(#B)"/><g clip-path="url(#C)"/><g clip-path="url(#D)"/><g clip-path="url(#E)"/><g clip-path="url(#F)"/><g clip-path="url(#G)"/><g clip-path="url(#H)"/><g clip-path="url(#I)"/><g clip-path="url(#J)"/></svg>
+remote
+</a>
+</li>
+</ul>
+<div class=tab-content>
+<div class='tab-pane active' id=in-office-culture role=tabpanel>
+<div class=c-chart>
+<h3 class=title>I have visibility into what other teams are working on</h3>
+<canvas height=56 id=chart-visibility-other-teams width=968></canvas>
+<div class=c-legend id=legend-visibility-other-teams></div>
+<div class=stats-notes>n=3,417</div>
+</div>
+<div class=c-chart>
+<h3 class=title>It’s important to me to work in a collaborative environment</h3>
+<canvas height=81 id=chart-collaborative-environment width=968></canvas>
+<div class=c-legend id=legend-collaborative-environment></div>
+<div class=stats-notes>n=3,417</div>
+</div>
+<div class=c-chart>
+<h3 class=title>I feel comfortable proposing new practices and tools in my team or organization</h3>
+<canvas height=56 id=chart-new-practices width=968></canvas>
+<div class=c-legend id=legend-new-practices></div>
+<div class=stats-notes>n=3,417</div>
+</div>
+<div class=c-chart>
+<h3 class=title>It’s easy to collaborate with my team and others at my organization</h3>
+<canvas height=56 id=chart-collaborate width=968></canvas>
+<div class=c-legend id=legend-collaborate></div>
+<div class=stats-notes>n=3,417</div>
+</div>
+</div>
+<div class=tab-pane id=remote-culture role=tabpanel>
+<div class=c-chart>
+<h3 class=title>I have visibility into what other teams are working on</h3>
+<canvas height=56 id=chart-visibility-other-teams-remote width=968></canvas>
+<div class=c-legend id=legend-visibility-other-teams-remote></div>
+<div class=stats-notes>n=832</div>
+</div>
+<div class=row>
+<div class=col-md-5>
+<blockquote class=c-blockquote>69% of managers, compared to 57% of developers, said they have visibility into what others are working on.</blockquote>
+</div>
+<div class='col-md-6 col-md-offset-1'>
+<blockquote class=c-blockquote>Lower-performing teams were less likely to report being up on what their colleagues are working on; half agreed that they have visibility into others’ work, compared to 63% of high performing teams who said the same.</blockquote>
+</div>
+</div>
+<div class=c-chart>
+<h3 class=title>It’s important to me to work in a collaborative environment</h3>
+<canvas height=81 id=chart-collaborative-environment-remote width=968></canvas>
+<div class=c-legend id=legend-collaborative-environment-remote></div>
+<div class=stats-notes>n=832</div>
+</div>
+<div class=c-chart>
+<h3 class=title>I feel comfortable proposing new practices and tools in my team or organization</h3>
+<canvas height=56 id=chart-new-practices-remote width=968></canvas>
+<div class=c-legend id=legend-new-practices-remote></div>
+<div class=stats-notes>n=832</div>
+</div>
+<div class=c-chart>
+<h3 class=title>It’s easy to collaborate with my team and others at my organization</h3>
+<canvas height=56 id=chart-collaborate-remote width=968></canvas>
+<div class=c-legend id=legend-collaborate-remote></div>
+<div class=stats-notes>n=832</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<ul class=compare-tabs role=tablist>
+<li class=active role=presentation>
+<a aria-controls=lower-performing-culture data-target='#lower-performing-culture' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><defs><path id=K d="m183 186h223v4h-223z"/><path id=L d="m-81 186h223v4h-223z"/><path id=M d="m162 133h1v15h-1z"/><path id=N d="m162 175h1v15h-1z"/><path id=O d="m162.5 174c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=P d="m183 311h223v4h-223z"/><path id=Q d="m-81 311h223v4h-223z"/><path id=R d="m162 258h1v15h-1z"/><path id=S d="m162 300h1v15h-1z"/><path id=T d="m162.5 299c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=U d="m183 423h223v4h-223z"/><path id=V d="m-81 423h223v4h-223z"/><path id=W d="m162 370h1v15h-1z"/><path id=X d="m162 412h1v15h-1z"/><path id=Y d="m162.5 411c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=Z d="m183 543h223v4h-223z"/><path id=a d="m-81 543h223v4h-223z"/><path id=b d="m162 490h1v15h-1z"/><path id=c d="m162 532h1v15h-1z"/><path id=d d="m162.5 531c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><use id=e xlink:href="#y"/><use id=f xlink:href="#y"/><use id=g xlink:href="#y"/><use id=h xlink:href="#y"/><use id=i xlink:href="#y"/><path id=j d=m-638-4585h1600v5980h-1600z /><use id=k xlink:href="#z"/><use id=l xlink:href="#z"/><use id=m xlink:href="#z"/><use id=n xlink:href="#z"/><path id=o d=m-638-4473h1600v5980h-1600z /><use id=p xlink:href="#10"/><use id=q xlink:href="#10"/><use id=r xlink:href="#10"/><use id=s xlink:href="#10"/><path id=t d=m-638-4353h1600v5980h-1600z /><use id=u xlink:href="#11"/><use id=v xlink:href="#11"/><use id=w xlink:href="#11"/><use id=x xlink:href="#11"/><path id=y d=m-638-4710h1600v5980h-1600z /><path id=z d=m-638-4585h1600v5980h-1600z /><path id=10 d=m-638-4473h1600v5980h-1600z /><path id=11 d=m-638-4353h1600v5980h-1600z /><clipPath><use xlink:href="#x"/></clipPath><clipPath><use xlink:href="#k"/></clipPath><clipPath><use xlink:href="#m"/></clipPath><clipPath><use xlink:href="#l"/></clipPath><clipPath><use xlink:href="#j"/></clipPath><clipPath><use xlink:href="#i"/></clipPath><clipPath><use xlink:href="#f"/></clipPath><clipPath><use xlink:href="#h"/></clipPath><clipPath><use xlink:href="#g"/></clipPath><clipPath><use xlink:href="#n"/></clipPath><clipPath><use xlink:href="#o"/></clipPath><clipPath><use xlink:href="#u"/></clipPath><clipPath><use xlink:href="#w"/></clipPath><clipPath><use xlink:href="#v"/></clipPath><clipPath><use xlink:href="#t"/></clipPath><clipPath><use xlink:href="#s"/></clipPath><clipPath><use xlink:href="#p"/></clipPath><clipPath><use xlink:href="#r"/></clipPath><clipPath><use xlink:href="#q"/></clipPath><clipPath><use xlink:href="#e"/></clipPath><clipPath id=J><use xlink:href="#d"/></clipPath><clipPath id=5><use xlink:href="#P"/></clipPath><clipPath id=7><use xlink:href="#R"/></clipPath><clipPath id=6><use xlink:href="#Q"/></clipPath><clipPath id=4><use xlink:href="#O"/></clipPath><clipPath id=3><use xlink:href="#N"/></clipPath><clipPath id=0><use xlink:href="#K"/></clipPath><clipPath id=2><use xlink:href="#M"/></clipPath><clipPath id=1><use xlink:href="#L"/></clipPath><clipPath id=8><use xlink:href="#S"/></clipPath><clipPath id=9><use xlink:href="#T"/></clipPath><clipPath id=G><use xlink:href="#a"/></clipPath><clipPath id=I><use xlink:href="#c"/></clipPath><clipPath id=H><use xlink:href="#b"/></clipPath><clipPath id=F><use xlink:href="#Z"/></clipPath><clipPath id=A><use xlink:href="#U"/></clipPath><clipPath id=E><use xlink:href="#Y"/></clipPath><clipPath id=B><use xlink:href="#V"/></clipPath><clipPath id=D><use xlink:href="#X"/></clipPath><clipPath id=C><use xlink:href="#W"/></clipPath></defs><g clip-path="url(#0)"/><g clip-path="url(#1)"/><g clip-path="url(#2)"/><g clip-path="url(#3)"/><g clip-path="url(#4)"/><g clip-path="url(#5)"/><g clip-path="url(#6)"/><g clip-path="url(#7)"/><g clip-path="url(#8)"/><g clip-path="url(#9)"/><g clip-path="url(#A)"/><g clip-path="url(#B)"/><g clip-path="url(#C)"/><g clip-path="url(#D)"/><g clip-path="url(#E)"/><g clip-path="url(#F)"/><g clip-path="url(#G)"/><g clip-path="url(#H)"/><g clip-path="url(#I)"/><g clip-path="url(#J)"/><path d="m21.924 11.383c.155-.374.069-.804-.217-1.09l-10-10c-.391-.391-1.023-.391-1.414 0l-10 10c-.286.286-.372.716-.217 1.09.154.374.52.617.924.617h20c.404 0 .77-.243.924-.617m-18.51-1.383l7.586-7.586 7.586 7.586h-15.172"/><path d="m31.924 20.617c-.154-.374-.52-.617-.924-.617h-20c-.404 0-.77.243-.924.617-.155.374-.069.804.217 1.09l10 10c.195.195.451.293.707.293s.512-.098.707-.293l10-10c.286-.286.372-.716.217-1.09"/></svg>
+lower-performing
+</a>
+</li>
+<li role=presentation>
+<a aria-controls=higher-performing-culture data-target='#higher-performing-culture' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><defs><path id=K d="m115 186h223v4h-223z"/><path id=L d="m-149 186h223v4h-223z"/><path id=M d="m94 133h1v15h-1z"/><path id=N d="m94 175h1v15h-1z"/><path id=O d="m94.5 174c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=P d="m115 311h223v4h-223z"/><path id=Q d="m-149 311h223v4h-223z"/><path id=R d="m94 258h1v15h-1z"/><path id=S d="m94 300h1v15h-1z"/><path id=T d="m94.5 299c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=U d="m115 423h223v4h-223z"/><path id=V d="m-149 423h223v4h-223z"/><path id=W d="m94 370h1v15h-1z"/><path id=X d="m94 412h1v15h-1z"/><path id=Y d="m94.5 411c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=Z d="m115 543h223v4h-223z"/><path id=a d="m-149 543h223v4h-223z"/><path id=b d="m94 490h1v15h-1z"/><path id=c d="m94 532h1v15h-1z"/><path id=d d="m94.5 531c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><use id=e xlink:href="#y"/><use id=f xlink:href="#y"/><use id=g xlink:href="#y"/><use id=h xlink:href="#y"/><use id=i xlink:href="#y"/><path id=j d=m-706-4585h1600v5980h-1600z /><use id=k xlink:href="#z"/><use id=l xlink:href="#z"/><use id=m xlink:href="#z"/><use id=n xlink:href="#z"/><path id=o d=m-706-4473h1600v5980h-1600z /><use id=p xlink:href="#10"/><use id=q xlink:href="#10"/><use id=r xlink:href="#10"/><use id=s xlink:href="#10"/><path id=t d=m-706-4353h1600v5980h-1600z /><use id=u xlink:href="#11"/><use id=v xlink:href="#11"/><use id=w xlink:href="#11"/><use id=x xlink:href="#11"/><path id=y d=m-706-4710h1600v5980h-1600z /><path id=z d=m-706-4585h1600v5980h-1600z /><path id=10 d=m-706-4473h1600v5980h-1600z /><path id=11 d=m-706-4353h1600v5980h-1600z /><clipPath><use xlink:href="#x"/></clipPath><clipPath><use xlink:href="#k"/></clipPath><clipPath><use xlink:href="#m"/></clipPath><clipPath><use xlink:href="#l"/></clipPath><clipPath><use xlink:href="#j"/></clipPath><clipPath><use xlink:href="#i"/></clipPath><clipPath><use xlink:href="#f"/></clipPath><clipPath><use xlink:href="#h"/></clipPath><clipPath><use xlink:href="#g"/></clipPath><clipPath><use xlink:href="#n"/></clipPath><clipPath><use xlink:href="#o"/></clipPath><clipPath><use xlink:href="#u"/></clipPath><clipPath><use xlink:href="#w"/></clipPath><clipPath><use xlink:href="#v"/></clipPath><clipPath><use xlink:href="#t"/></clipPath><clipPath><use xlink:href="#s"/></clipPath><clipPath><use xlink:href="#p"/></clipPath><clipPath><use xlink:href="#r"/></clipPath><clipPath><use xlink:href="#q"/></clipPath><clipPath><use xlink:href="#e"/></clipPath><clipPath id=J><use xlink:href="#d"/></clipPath><clipPath id=5><use xlink:href="#P"/></clipPath><clipPath id=7><use xlink:href="#R"/></clipPath><clipPath id=6><use xlink:href="#Q"/></clipPath><clipPath id=4><use xlink:href="#O"/></clipPath><clipPath id=3><use xlink:href="#N"/></clipPath><clipPath id=0><use xlink:href="#K"/></clipPath><clipPath id=2><use xlink:href="#M"/></clipPath><clipPath id=1><use xlink:href="#L"/></clipPath><clipPath id=8><use xlink:href="#S"/></clipPath><clipPath id=9><use xlink:href="#T"/></clipPath><clipPath id=G><use xlink:href="#a"/></clipPath><clipPath id=I><use xlink:href="#c"/></clipPath><clipPath id=H><use xlink:href="#b"/></clipPath><clipPath id=F><use xlink:href="#Z"/></clipPath><clipPath id=A><use xlink:href="#U"/></clipPath><clipPath id=E><use xlink:href="#Y"/></clipPath><clipPath id=B><use xlink:href="#V"/></clipPath><clipPath id=D><use xlink:href="#X"/></clipPath><clipPath id=C><use xlink:href="#W"/></clipPath></defs><g clip-path="url(#0)"/><g clip-path="url(#1)"/><g clip-path="url(#2)"/><g clip-path="url(#3)"/><g clip-path="url(#4)"/><g clip-path="url(#5)"/><g clip-path="url(#6)"/><g clip-path="url(#7)"/><g clip-path="url(#8)"/><g clip-path="url(#9)"/><g clip-path="url(#A)"/><g clip-path="url(#B)"/><g clip-path="url(#C)"/><g clip-path="url(#D)"/><g clip-path="url(#E)"/><g clip-path="url(#F)"/><g clip-path="url(#G)"/><g clip-path="url(#H)"/><g clip-path="url(#I)"/><g clip-path="url(#J)"/><path d="m10.08 20.617c-.155.374-.069.804.217 1.09l10 10c.391.391 1.023.391 1.414 0l10-10c.286-.286.372-.716.217-1.09-.154-.374-.52-.617-.924-.617h-20c-.404 0-.77.243-.924.617m18.51 1.383l-7.586 7.586-7.586-7.586h15.172"/><path d="m.076 11.383c.154.374.52.617.924.617h20c.404 0 .77-.243.924-.617.155-.374.069-.804-.217-1.09l-10-10c-.195-.195-.451-.293-.707-.293s-.512.098-.707.293l-10 10c-.286.286-.372.716-.217 1.09"/></svg>
+higher-performing
+</a>
+</li>
+</ul>
+<div class=tab-content>
+<div class='tab-pane active' id=lower-performing-culture role=tabpanel>
+<div class=c-chart>
+<h3 class=title>Project expectations and requirements are set up front.</h3>
+<canvas height=56 id=chart-expectations-requirements width=968></canvas>
+<div class=c-legend id=legend-expectations-requirements></div>
+<div class=stats-notes>n=3,179</div>
+</div>
+<div class=c-chart>
+<h3 class=title>My ideas and opinions are valued.</h3>
+<canvas height=56 id=chart-ideas-valued width=968></canvas>
+<div class=c-legend id=legend-ideas-valued></div>
+<div class=stats-notes>n=3,179</div>
+</div>
+<div class=c-chart>
+<h3 class=title>I feel set up to succeed.</h3>
+<canvas height=56 id=chart-setup-to-succeed width=968></canvas>
+<div class=c-legend id=legend-setup-to-succeed></div>
+<div class=stats-notes>n=601</div>
+</div>
+<div class=c-chart>
+<h3 class=title>I’m given realistic deadlines.</h3>
+<canvas height=56 id=chart-realistic-deadlines width=968></canvas>
+<div class=c-legend id=legend-realistic-deadlines></div>
+<div class=stats-notes>n=601</div>
+</div>
+<div class=c-chart>
+<h3 class=title>I rarely need to sacrifice quality to meet a deadline.</h3>
+<canvas height=56 id=chart-sacrifice-quality width=968></canvas>
+<div class=c-legend id=legend-sacrifice-quality></div>
+<div class=stats-notes>n=601</div>
+</div>
+</div>
+<div class=tab-pane id=higher-performing-culture role=tabpanel>
+<div class=c-chart>
+<h3 class=title>Project expectations and requirements are set up front.</h3>
+<canvas height=56 id=chart-expectations-requirements-remote width=968></canvas>
+<div class=c-legend id=legend-expectations-requirements-remote></div>
+<div class=stats-notes>n=737</div>
+</div>
+<div class=c-chart>
+<h3 class=title>My ideas and opinions are valued.</h3>
+<canvas height=56 id=chart-ideas-valued-remote width=968></canvas>
+<div class=c-legend id=legend-ideas-valued-remote></div>
+<div class=stats-notes>n=737</div>
+</div>
+<div class=c-chart>
+<h3 class=title>I feel set up to succeed.</h3>
+<canvas height=56 id=chart-setup-to-succeed-hp width=968></canvas>
+<div class=c-legend id=legend-setup-to-succeed-hp></div>
+<div class=stats-notes>n=913</div>
+</div>
+<div class=c-chart>
+<h3 class=title>I’m given realistic deadlines.</h3>
+<canvas height=56 id=chart-realistic-deadlines-hp width=968></canvas>
+<div class=c-legend id=legend-realistic-deadlines-hp></div>
+<div class=stats-notes>n=913</div>
+</div>
+<div class=c-chart>
+<h3 class=title>I rarely need to sacrifice quality to meet a deadline.</h3>
+<canvas height=56 id=chart-sacrifice-quality-hp width=968></canvas>
+<div class=c-legend id=legend-sacrifice-quality-hp></div>
+<div class=stats-notes>n=913</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class='report-section report-section-workflow' id=section-workflow>
+<div class=container>
+<header class=c-banner>
+<h2>Workflow</h2>
+<h3>How teams collaborate</h3>
+<p>
+<em>Process and procedure is often a hotly contested topic. Too much can hinder a team’s ability to adapt and innovate, too little can result in confusion and duplicate work. In this section, we examine the current state of balance between the two.</em>
+</p>
+<p>Manual testing and a change of plans mid-process (often by non-technical stakeholders) cause headaches for developers. As one respondent summarized, “We need to plan better and automate more,” a sentiment that was echoed across multiple responses.</p>
+</header>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class='c-chart c-chart-testing-methodology'>
+<h3 class=title>How would you describe your team’s development methodology?</h3>
+<canvas height=300 id=chart-testing-methodology width=868></canvas>
+<div class=chart-notes>
+None of the above 9%
+<br/>
+Don’t know 9%
+<br/>
+Other 4%
+</div>
+<blockquote class='c-blockquote alpha'>A majority (67%) of all respondents agreed that using a DevOps workflow saves time during the development process; a sentiment also expressed at an even higher rate among managers, with 81% agreement.</blockquote>
+</div>
+</div>
+</div>
+<div class='row u-margin-bottom-sm'>
+<div class='col-md-4 col-md-offset-1'>
+<blockquote class='c-blockquote beta'>High-performing teams report having a clear DevOps culture at rate more than double (45%) that of lower-performing teams (21%).</blockquote>
+</div>
+<div class='col-md-5 col-md-offset-1'>
+<blockquote class='c-blockquote gamma'>“Chaos” was the top adjective used by respondents who chose “Other” to describe their dev process.</blockquote>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class='c-chart c-chart-challenges-to-work'>
+<h3 class=title>In your opinion, what are the top challenges to getting work done?</h3>
+<canvas height=180 id=chart-challenges-to-work width=868></canvas>
+<div class=stats-notes>n=3,664</div>
+</div>
+</div>
+</div>
+<div class=c-banner-small>
+<h4>Analysis</h4>
+<p>Respondents who told us they follow an “ad hoc” or “freeform” methodology seem content; usually these respondents elaborated to say that they work on a small team and do not find they need for a strict process. The responses from people who seem dissatisfied with an ad hoc methodology suggest that perhaps their team or company has grown large enough that they need a formalized process, but have lagged behind on implementing one.</p>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class='c-chart c-chart-most-delays'>
+<h3 class=title>Where in the development process do you encounter the most delays?</h3>
+<canvas height=420 id=chart-most-delays width=868></canvas>
+<div class=chart-notes>
+Other 5%
+<br/>
+We don’t encounter delays 4%
+<br/>
+Don’t know 1%
+</div>
+<div class=stats-notes>n=3,281</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-4 col-md-offset-1'>
+<blockquote class='c-blockquote beta'>
+Developers said that they encountered the most delays in the
+<strong>testing</strong>
+phase, whereas among management,
+<strong>planning</strong>
+topped the list as the number one cause of delay.
+</blockquote>
+</div>
+<div class='col-md-5 col-md-offset-1'>
+<blockquote class='c-blockquote gamma'>90% of managers, compared to 84% of developers, agree that practicing CI alleviates blockers in the development process.</blockquote>
+</div>
+</div>
+<div class='u-release u-margin-top-sm'>
+<div class='c-image-banner dark-bg-block parallax' style='background-image: url(&#39;/images/dev-survey-2018/pull-quote-bg-2.jpg&#39;)'>
+<div class=row>
+<div class='col-md-8 col-md-offset-1'>
+<q class=c-quote>Because we are not putting the investment up front into gathering business requirements and building strong product backlogs, we are running into ‘gotcha’ moments that delay the product.</q>
+</div>
+</div>
+<div class=row>
+<div class='col-md-8 col-md-offset-3'>
+<q class=c-quote>Development needs get pushed to the back burner and we have to fight to be heard. We only exist when there’s a problem, basically, and then we have to patiently explain why if you had let us resolve this six months ago when we first brought up that it was an issue, things wouldn’t be on fire right now.</q>
+</div>
+</div>
+</div>
+</div>
+<div class='row u-margin-bottom-lg'>
+<div class='col-md-8 col-md-offset-1'>
+<p>Respondents show an evenly distributed range in opinions about their organizations’ use of CI. Nearly half of respondents said their organization’s use of CI is good or very good, while over one-third of respondents gave their organization’s use of CI an unfavorable rating. When we asked them to elaborate, respondents who indicated that CI is not done extensively at their organization attributed this to a lack of knowledge, skill, and habit. In a few cases, respondents indicated they had been hired expressly to set up CI and help their new team make the transition.</p>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class='c-chart c-chart-ci-usage'>
+<h3 class=title>How would you grade your organization’s use of CI?</h3>
+<canvas height=530 id=chart-ci-usage width=450></canvas>
+<div class=stats-notes>n=4,217</div>
+<blockquote class='c-blockquote alpha'>78% of managers, compared to 55% of developers, say that automating more of the SDLC is a top priority in their organization. 71% of respondents who practice DevOps also agreed automation is a high priority, compared to 60% of respondents who practice Agile.</blockquote>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-7 col-md-offset-1'>
+<div class='c-stat alpha'>
+<span class=number>
+<span>59</span>
+<span class=percent>%</span>
+</span>
+<span class=label>agree that developers in their organization have good insight into the deployment process</span>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-7 col-md-offset-4'>
+<div class='c-stat beta'>
+<span class=number>
+<span>55</span>
+<span class=percent>%</span>
+</span>
+<span class=label>agree that developers at their organization understand how their changes affect performance</span>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<ul class=compare-tabs role=tablist>
+<li class=active role=presentation>
+<a aria-controls=lower-performing-workflow data-target='#lower-performing-workflow' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><defs><path id=K d="m183 186h223v4h-223z"/><path id=L d="m-81 186h223v4h-223z"/><path id=M d="m162 133h1v15h-1z"/><path id=N d="m162 175h1v15h-1z"/><path id=O d="m162.5 174c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=P d="m183 311h223v4h-223z"/><path id=Q d="m-81 311h223v4h-223z"/><path id=R d="m162 258h1v15h-1z"/><path id=S d="m162 300h1v15h-1z"/><path id=T d="m162.5 299c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=U d="m183 423h223v4h-223z"/><path id=V d="m-81 423h223v4h-223z"/><path id=W d="m162 370h1v15h-1z"/><path id=X d="m162 412h1v15h-1z"/><path id=Y d="m162.5 411c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=Z d="m183 543h223v4h-223z"/><path id=a d="m-81 543h223v4h-223z"/><path id=b d="m162 490h1v15h-1z"/><path id=c d="m162 532h1v15h-1z"/><path id=d d="m162.5 531c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><use id=e xlink:href="#y"/><use id=f xlink:href="#y"/><use id=g xlink:href="#y"/><use id=h xlink:href="#y"/><use id=i xlink:href="#y"/><path id=j d=m-638-4585h1600v5980h-1600z /><use id=k xlink:href="#z"/><use id=l xlink:href="#z"/><use id=m xlink:href="#z"/><use id=n xlink:href="#z"/><path id=o d=m-638-4473h1600v5980h-1600z /><use id=p xlink:href="#10"/><use id=q xlink:href="#10"/><use id=r xlink:href="#10"/><use id=s xlink:href="#10"/><path id=t d=m-638-4353h1600v5980h-1600z /><use id=u xlink:href="#11"/><use id=v xlink:href="#11"/><use id=w xlink:href="#11"/><use id=x xlink:href="#11"/><path id=y d=m-638-4710h1600v5980h-1600z /><path id=z d=m-638-4585h1600v5980h-1600z /><path id=10 d=m-638-4473h1600v5980h-1600z /><path id=11 d=m-638-4353h1600v5980h-1600z /><clipPath><use xlink:href="#x"/></clipPath><clipPath><use xlink:href="#k"/></clipPath><clipPath><use xlink:href="#m"/></clipPath><clipPath><use xlink:href="#l"/></clipPath><clipPath><use xlink:href="#j"/></clipPath><clipPath><use xlink:href="#i"/></clipPath><clipPath><use xlink:href="#f"/></clipPath><clipPath><use xlink:href="#h"/></clipPath><clipPath><use xlink:href="#g"/></clipPath><clipPath><use xlink:href="#n"/></clipPath><clipPath><use xlink:href="#o"/></clipPath><clipPath><use xlink:href="#u"/></clipPath><clipPath><use xlink:href="#w"/></clipPath><clipPath><use xlink:href="#v"/></clipPath><clipPath><use xlink:href="#t"/></clipPath><clipPath><use xlink:href="#s"/></clipPath><clipPath><use xlink:href="#p"/></clipPath><clipPath><use xlink:href="#r"/></clipPath><clipPath><use xlink:href="#q"/></clipPath><clipPath><use xlink:href="#e"/></clipPath><clipPath id=J><use xlink:href="#d"/></clipPath><clipPath id=5><use xlink:href="#P"/></clipPath><clipPath id=7><use xlink:href="#R"/></clipPath><clipPath id=6><use xlink:href="#Q"/></clipPath><clipPath id=4><use xlink:href="#O"/></clipPath><clipPath id=3><use xlink:href="#N"/></clipPath><clipPath id=0><use xlink:href="#K"/></clipPath><clipPath id=2><use xlink:href="#M"/></clipPath><clipPath id=1><use xlink:href="#L"/></clipPath><clipPath id=8><use xlink:href="#S"/></clipPath><clipPath id=9><use xlink:href="#T"/></clipPath><clipPath id=G><use xlink:href="#a"/></clipPath><clipPath id=I><use xlink:href="#c"/></clipPath><clipPath id=H><use xlink:href="#b"/></clipPath><clipPath id=F><use xlink:href="#Z"/></clipPath><clipPath id=A><use xlink:href="#U"/></clipPath><clipPath id=E><use xlink:href="#Y"/></clipPath><clipPath id=B><use xlink:href="#V"/></clipPath><clipPath id=D><use xlink:href="#X"/></clipPath><clipPath id=C><use xlink:href="#W"/></clipPath></defs><g clip-path="url(#0)"/><g clip-path="url(#1)"/><g clip-path="url(#2)"/><g clip-path="url(#3)"/><g clip-path="url(#4)"/><g clip-path="url(#5)"/><g clip-path="url(#6)"/><g clip-path="url(#7)"/><g clip-path="url(#8)"/><g clip-path="url(#9)"/><g clip-path="url(#A)"/><g clip-path="url(#B)"/><g clip-path="url(#C)"/><g clip-path="url(#D)"/><g clip-path="url(#E)"/><g clip-path="url(#F)"/><g clip-path="url(#G)"/><g clip-path="url(#H)"/><g clip-path="url(#I)"/><g clip-path="url(#J)"/><path d="m21.924 11.383c.155-.374.069-.804-.217-1.09l-10-10c-.391-.391-1.023-.391-1.414 0l-10 10c-.286.286-.372.716-.217 1.09.154.374.52.617.924.617h20c.404 0 .77-.243.924-.617m-18.51-1.383l7.586-7.586 7.586 7.586h-15.172"/><path d="m31.924 20.617c-.154-.374-.52-.617-.924-.617h-20c-.404 0-.77.243-.924.617-.155.374-.069.804.217 1.09l10 10c.195.195.451.293.707.293s.512-.098.707-.293l10-10c.286-.286.372-.716.217-1.09"/></svg>
+lower-performing
+</a>
+</li>
+<li role=presentation>
+<a aria-controls=higher-performing-workflow data-target='#higher-performing-workflow' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><defs><path id=K d="m115 186h223v4h-223z"/><path id=L d="m-149 186h223v4h-223z"/><path id=M d="m94 133h1v15h-1z"/><path id=N d="m94 175h1v15h-1z"/><path id=O d="m94.5 174c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=P d="m115 311h223v4h-223z"/><path id=Q d="m-149 311h223v4h-223z"/><path id=R d="m94 258h1v15h-1z"/><path id=S d="m94 300h1v15h-1z"/><path id=T d="m94.5 299c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=U d="m115 423h223v4h-223z"/><path id=V d="m-149 423h223v4h-223z"/><path id=W d="m94 370h1v15h-1z"/><path id=X d="m94 412h1v15h-1z"/><path id=Y d="m94.5 411c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=Z d="m115 543h223v4h-223z"/><path id=a d="m-149 543h223v4h-223z"/><path id=b d="m94 490h1v15h-1z"/><path id=c d="m94 532h1v15h-1z"/><path id=d d="m94.5 531c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><use id=e xlink:href="#y"/><use id=f xlink:href="#y"/><use id=g xlink:href="#y"/><use id=h xlink:href="#y"/><use id=i xlink:href="#y"/><path id=j d=m-706-4585h1600v5980h-1600z /><use id=k xlink:href="#z"/><use id=l xlink:href="#z"/><use id=m xlink:href="#z"/><use id=n xlink:href="#z"/><path id=o d=m-706-4473h1600v5980h-1600z /><use id=p xlink:href="#10"/><use id=q xlink:href="#10"/><use id=r xlink:href="#10"/><use id=s xlink:href="#10"/><path id=t d=m-706-4353h1600v5980h-1600z /><use id=u xlink:href="#11"/><use id=v xlink:href="#11"/><use id=w xlink:href="#11"/><use id=x xlink:href="#11"/><path id=y d=m-706-4710h1600v5980h-1600z /><path id=z d=m-706-4585h1600v5980h-1600z /><path id=10 d=m-706-4473h1600v5980h-1600z /><path id=11 d=m-706-4353h1600v5980h-1600z /><clipPath><use xlink:href="#x"/></clipPath><clipPath><use xlink:href="#k"/></clipPath><clipPath><use xlink:href="#m"/></clipPath><clipPath><use xlink:href="#l"/></clipPath><clipPath><use xlink:href="#j"/></clipPath><clipPath><use xlink:href="#i"/></clipPath><clipPath><use xlink:href="#f"/></clipPath><clipPath><use xlink:href="#h"/></clipPath><clipPath><use xlink:href="#g"/></clipPath><clipPath><use xlink:href="#n"/></clipPath><clipPath><use xlink:href="#o"/></clipPath><clipPath><use xlink:href="#u"/></clipPath><clipPath><use xlink:href="#w"/></clipPath><clipPath><use xlink:href="#v"/></clipPath><clipPath><use xlink:href="#t"/></clipPath><clipPath><use xlink:href="#s"/></clipPath><clipPath><use xlink:href="#p"/></clipPath><clipPath><use xlink:href="#r"/></clipPath><clipPath><use xlink:href="#q"/></clipPath><clipPath><use xlink:href="#e"/></clipPath><clipPath id=J><use xlink:href="#d"/></clipPath><clipPath id=5><use xlink:href="#P"/></clipPath><clipPath id=7><use xlink:href="#R"/></clipPath><clipPath id=6><use xlink:href="#Q"/></clipPath><clipPath id=4><use xlink:href="#O"/></clipPath><clipPath id=3><use xlink:href="#N"/></clipPath><clipPath id=0><use xlink:href="#K"/></clipPath><clipPath id=2><use xlink:href="#M"/></clipPath><clipPath id=1><use xlink:href="#L"/></clipPath><clipPath id=8><use xlink:href="#S"/></clipPath><clipPath id=9><use xlink:href="#T"/></clipPath><clipPath id=G><use xlink:href="#a"/></clipPath><clipPath id=I><use xlink:href="#c"/></clipPath><clipPath id=H><use xlink:href="#b"/></clipPath><clipPath id=F><use xlink:href="#Z"/></clipPath><clipPath id=A><use xlink:href="#U"/></clipPath><clipPath id=E><use xlink:href="#Y"/></clipPath><clipPath id=B><use xlink:href="#V"/></clipPath><clipPath id=D><use xlink:href="#X"/></clipPath><clipPath id=C><use xlink:href="#W"/></clipPath></defs><g clip-path="url(#0)"/><g clip-path="url(#1)"/><g clip-path="url(#2)"/><g clip-path="url(#3)"/><g clip-path="url(#4)"/><g clip-path="url(#5)"/><g clip-path="url(#6)"/><g clip-path="url(#7)"/><g clip-path="url(#8)"/><g clip-path="url(#9)"/><g clip-path="url(#A)"/><g clip-path="url(#B)"/><g clip-path="url(#C)"/><g clip-path="url(#D)"/><g clip-path="url(#E)"/><g clip-path="url(#F)"/><g clip-path="url(#G)"/><g clip-path="url(#H)"/><g clip-path="url(#I)"/><g clip-path="url(#J)"/><path d="m10.08 20.617c-.155.374-.069.804.217 1.09l10 10c.391.391 1.023.391 1.414 0l10-10c.286-.286.372-.716.217-1.09-.154-.374-.52-.617-.924-.617h-20c-.404 0-.77.243-.924.617m18.51 1.383l-7.586 7.586-7.586-7.586h15.172"/><path d="m.076 11.383c.154.374.52.617.924.617h20c.404 0 .77-.243.924-.617.155-.374.069-.804-.217-1.09l-10-10c-.195-.195-.451-.293-.707-.293s-.512.098-.707.293l-10 10c-.286.286-.372.716-.217 1.09"/></svg>
+higher-performing
+</a>
+</li>
+</ul>
+<div class=tab-content>
+<div class='tab-pane active' id=lower-performing-workflow role=tabpanel>
+<div class=c-chart>
+<h3 class=title>Practicing continuous integration alleviates blockers in the development process</h3>
+<canvas height=81 id=chart-ci-alleviates-blockers width=968></canvas>
+<div class=c-legend id=legend-ci-alleviates-blockers></div>
+<div class=stats-notes>n=581</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Automating more of the software development lifecycle tasks is a top priority at my organization</h3>
+<canvas height=56 id=chart-automate-lifecycle-tasks width=968></canvas>
+<div class=c-legend id=legend-automate-lifecycle-tasks></div>
+<div class=stats-notes>n=581</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Developers in my organization have good insight into the deployment process</h3>
+<canvas height=56 id=chart-deployment-process-insight width=968></canvas>
+<div class=c-legend id=legend-deployment-process-insight></div>
+<div class=stats-notes>n=581</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Developers in my team or organization understand how their changes affect the performance of their application(s)</h3>
+<canvas height=56 id=chart-change-affects-performance width=968></canvas>
+<div class=c-legend id=legend-change-affects-performance></div>
+<div class=stats-notes>n=581</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Developers in my team or organization use monitoring tools</h3>
+<canvas height=56 id=chart-monitoring-tools width=968></canvas>
+<div class=c-legend id=legend-monitoring-tools></div>
+<div class=stats-notes>n=581</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Developers in my organization can automatically test their work in a live production-like environment</h3>
+<canvas height=56 id=chart-production-like-env width=968></canvas>
+<div class=c-legend id=legend-production-like-env></div>
+<div class=stats-notes>n=581</div>
+</div>
+</div>
+<div class=tab-pane id=higher-performing-workflow role=tabpanel>
+<div class=c-chart>
+<h3 class=title>Practicing continuous integration alleviates blockers in the development process</h3>
+<canvas height=81 id=chart-ci-alleviates-blockers-hp width=968></canvas>
+<div class=c-legend id=legend-ci-alleviates-blockers-hp></div>
+<div class=stats-notes>n=887</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Automating more of the software development lifecycle tasks is a top priority at my organization</h3>
+<canvas height=56 id=chart-automate-lifecycle-tasks-hp width=968></canvas>
+<div class=c-legend id=legend-automate-lifecycle-tasks-hp></div>
+<div class=stats-notes>n=887</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Developers in my organization have good insight into the deployment process</h3>
+<canvas height=56 id=chart-deployment-process-insight-hp width=968></canvas>
+<div class=c-legend id=legend-deployment-process-insight-hp></div>
+<div class=stats-notes>n=887</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Developers in my team or organization understand how their changes affect the performance of their application(s)</h3>
+<canvas height=56 id=chart-change-affects-performance-hp width=968></canvas>
+<div class=c-legend id=legend-change-affects-performance-hp></div>
+<div class=stats-notes>n=887</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Developers in my team or organization use monitoring tools</h3>
+<canvas height=56 id=chart-monitoring-tools-hp width=968></canvas>
+<div class=c-legend id=legend-monitoring-tools-hp></div>
+<div class=stats-notes>n=887</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Developers in my organization can automatically test their work in a live production-like environment</h3>
+<canvas height=56 id=chart-production-like-env-hp width=968></canvas>
+<div class=c-legend id=legend-production-like-env-hp></div>
+<div class=stats-notes>n=887</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<ul class=compare-tabs role=tablist>
+<li class=active role=presentation>
+<a aria-controls=deploy-code-devops data-target='#deploy-code-devops' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><defs><path id=K d="m-85 186h223v4h-223z"/><path id=L d="m-349 186h223v4h-223z"/><path id=M d="m-106 133h1v15h-1z"/><path id=N d="m-106 175h1v15h-1z"/><path id=O d="m-105.5 174c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=P d="m-85 311h223v4h-223z"/><path id=Q d="m-349 311h223v4h-223z"/><path id=R d="m-106 258h1v15h-1z"/><path id=S d="m-106 300h1v15h-1z"/><path id=T d="m-105.5 299c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=U d="m-85 423h223v4h-223z"/><path id=V d="m-349 423h223v4h-223z"/><path id=W d="m-106 370h1v15h-1z"/><path id=X d="m-106 412h1v15h-1z"/><path id=Y d="m-105.5 411c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=Z d="m-85 543h223v4h-223z"/><path id=a d="m-349 543h223v4h-223z"/><path id=b d="m-106 490h1v15h-1z"/><path id=c d="m-106 532h1v15h-1z"/><path id=d d="m-105.5 531c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><use id=e xlink:href="#y"/><use id=f xlink:href="#y"/><use id=g xlink:href="#y"/><use id=h xlink:href="#y"/><use id=i xlink:href="#y"/><path id=j d=m-906-4585h1600v5980h-1600z /><use id=k xlink:href="#z"/><use id=l xlink:href="#z"/><use id=m xlink:href="#z"/><use id=n xlink:href="#z"/><path id=o d=m-906-4473h1600v5980h-1600z /><use id=p xlink:href="#10"/><use id=q xlink:href="#10"/><use id=r xlink:href="#10"/><use id=s xlink:href="#10"/><path id=t d=m-906-4353h1600v5980h-1600z /><use id=u xlink:href="#11"/><use id=v xlink:href="#11"/><use id=w xlink:href="#11"/><use id=x xlink:href="#11"/><path id=y d=m-906-4710h1600v5980h-1600z /><path id=z d=m-906-4585h1600v5980h-1600z /><path id=10 d=m-906-4473h1600v5980h-1600z /><path id=11 d=m-906-4353h1600v5980h-1600z /><clipPath><use xlink:href="#x"/></clipPath><clipPath><use xlink:href="#k"/></clipPath><clipPath><use xlink:href="#m"/></clipPath><clipPath><use xlink:href="#l"/></clipPath><clipPath><use xlink:href="#j"/></clipPath><clipPath><use xlink:href="#i"/></clipPath><clipPath><use xlink:href="#f"/></clipPath><clipPath><use xlink:href="#h"/></clipPath><clipPath><use xlink:href="#g"/></clipPath><clipPath><use xlink:href="#n"/></clipPath><clipPath><use xlink:href="#o"/></clipPath><clipPath><use xlink:href="#u"/></clipPath><clipPath><use xlink:href="#w"/></clipPath><clipPath><use xlink:href="#v"/></clipPath><clipPath><use xlink:href="#t"/></clipPath><clipPath><use xlink:href="#s"/></clipPath><clipPath><use xlink:href="#p"/></clipPath><clipPath><use xlink:href="#r"/></clipPath><clipPath><use xlink:href="#q"/></clipPath><clipPath><use xlink:href="#e"/></clipPath><clipPath id=J><use xlink:href="#d"/></clipPath><clipPath id=5><use xlink:href="#P"/></clipPath><clipPath id=7><use xlink:href="#R"/></clipPath><clipPath id=6><use xlink:href="#Q"/></clipPath><clipPath id=4><use xlink:href="#O"/></clipPath><clipPath id=3><use xlink:href="#N"/></clipPath><clipPath id=0><use xlink:href="#K"/></clipPath><clipPath id=2><use xlink:href="#M"/></clipPath><clipPath id=1><use xlink:href="#L"/></clipPath><clipPath id=8><use xlink:href="#S"/></clipPath><clipPath id=9><use xlink:href="#T"/></clipPath><clipPath id=G><use xlink:href="#a"/></clipPath><clipPath id=I><use xlink:href="#c"/></clipPath><clipPath id=H><use xlink:href="#b"/></clipPath><clipPath id=F><use xlink:href="#Z"/></clipPath><clipPath id=A><use xlink:href="#U"/></clipPath><clipPath id=E><use xlink:href="#Y"/></clipPath><clipPath id=B><use xlink:href="#V"/></clipPath><clipPath id=D><use xlink:href="#X"/></clipPath><clipPath id=C><use xlink:href="#W"/></clipPath></defs><g clip-path="url(#0)"/><g clip-path="url(#1)"/><g clip-path="url(#2)"/><g clip-path="url(#3)"/><g clip-path="url(#4)"/><g clip-path="url(#5)"/><g clip-path="url(#6)"/><g clip-path="url(#7)"/><g clip-path="url(#8)"/><g clip-path="url(#9)"/><g clip-path="url(#A)"/><g clip-path="url(#B)"/><g clip-path="url(#C)"/><g clip-path="url(#D)"/><g clip-path="url(#E)"/><g clip-path="url(#F)"/><g clip-path="url(#G)"/><g clip-path="url(#H)"/><g clip-path="url(#I)"/><g clip-path="url(#J)"/><path d="m25 27c-2.32-.018-4.484-1.319-5.703-3.396l-1.896-3.23c-.279-.477-.12-1.089.356-1.368.477-.281 1.09-.12 1.368.356l1.896 3.23c.865 1.473 2.374 2.396 3.939 2.408 2.797 0 5.04-2.243 5.04-5v-8c0-2.757-2.243-5-5-5-1.377.008-2.688.808-3.451 2.086l-8.642 14.458c-.941 1.575-2.334 2.701-3.922 3.17-.644.189-1.311.286-1.985.286-3.859 0-7-3.141-7-7v-8c0-3.859 3.141-7 7-7 2.313.018 4.472 1.314 5.686 3.385l1.862 3.173c.279.476.12 1.089-.356 1.368-.474.28-1.088.12-1.368-.356l-1.862-3.173c-.861-1.466-2.364-2.384-3.923-2.397-2.796 0-5.04 2.243-5.04 5v8c0 2.757 2.243 5 5 5 .481 0 .959-.068 1.419-.204 1.104-.326 2.089-1.135 2.771-2.277l8.642-14.459c1.121-1.875 3.084-3.047 5.124-3.06 3.903 0 7.04 3.141 7.04 7v8c0 3.859-3.141 7-7 7"/></svg>
+devops
+</a>
+</li>
+<li role=presentation>
+<a aria-controls=deploy-code-agile data-target='#deploy-code-agile' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><path d="m26 22.03c-.553 0-1 .447-1 1v5.747c0 .674-.614 1.222-1.369 1.222h-15.262c-.755 0-1.369-.548-1.369-1.222v-3.778-6.919l3.375 2.701c.185.147.405.218.624.218.294 0 .584-.129.782-.375.345-.432.274-1.061-.156-1.406l-5-4c-.365-.291-.885-.291-1.25 0l-5 4c-.431.346-.501.975-.156 1.406.346.432.974.502 1.406.156l3.375-2.7v6.919 3.778c0 1.777 1.512 3.222 3.369 3.222h15.262c1.857 0 3.369-1.445 3.369-3.222v-5.747c0-.552-.447-1-1-1"/><path d="m31.781 11.875c-.346-.431-.974-.502-1.406-.156l-3.375 2.7v-6.919-4.278c0-1.777-1.512-3.222-3.369-3.222h-15.262c-1.857 0-3.369 1.445-3.369 3.222v6.81c0 .553.447 1 1 1s1-.447 1-1v-6.81c0-.674.614-1.222 1.369-1.222h15.262c.755 0 1.369.548 1.369 1.222v4.278 6.919l-3.375-2.701c-.433-.346-1.06-.272-1.406.156-.345.432-.274 1.061.156 1.406l5 4c.183.147.404.22.625.22s.442-.073.625-.219l5-4c.431-.345.501-.974.156-1.406"/></svg>
+agile
+</a>
+</li>
+</ul>
+<div class=tab-content>
+<div class='tab-pane active' id=deploy-code-devops role=tabpanel>
+<div class=c-chart>
+<h3 class=title>How often does your organization deploy code?</h3>
+<canvas height=180 id=chart-deploy-code-frequency-devops width=968></canvas>
+<div class=chart-notes>
+Don’t know 4%
+<br/>
+Other 1%
+</div>
+<div class=stats-notes>n=820</div>
+</div>
+</div>
+<div class=tab-pane id=deploy-code-agile role=tabpanel>
+<div class=c-chart>
+<h3 class=title>How often does your organization deploy code?</h3>
+<canvas height=180 id=chart-deploy-code-frequency-agile width=968></canvas>
+<div class=chart-notes>
+Dont’t know 3%
+<br/>
+Other 4%
+</div>
+<div class=stats-notes>n=2,385</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<ul class=compare-tabs role=tablist>
+<li class=active role=presentation>
+<a aria-controls=deploy-code-developers data-target='#deploy-code-developers' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>Asset 56</title><g id=Layer_2 data-name="Layer 2"><g id=Layer_1-2 data-name="Layer 1"><path d="M11.29,12.9a1,1,0,0,0-1.37-.36l-4.49,2.6a1,1,0,0,0,0,1.73l4.49,2.6a1,1,0,0,0,.5.13,1,1,0,0,0,.5-1.87L7.93,16l3-1.73A1,1,0,0,0,11.29,12.9Z"/><path d="M26.56,15.13l-4.49-2.6a1,1,0,1,0-1,1.73l3,1.73-3,1.73a1,1,0,0,0,.5,1.87,1,1,0,0,0,.5-.13l4.49-2.6a1,1,0,0,0,0-1.73Z"/><path d="M18.33,9.16a1,1,0,0,0-1.27.62L13,21.57a1,1,0,0,0,.62,1.27,1,1,0,0,0,.32.05,1,1,0,0,0,.95-.68l4-11.79A1,1,0,0,0,18.33,9.16Z"/><path d="M28.63,0H3.37A3.3,3.3,0,0,0,0,3.22V28.78A3.3,3.3,0,0,0,3.37,32H28.63A3.3,3.3,0,0,0,32,28.78V3.22A3.3,3.3,0,0,0,28.63,0ZM30,28.78A1.3,1.3,0,0,1,28.63,30H3.37A1.3,1.3,0,0,1,2,28.78V3.22A1.3,1.3,0,0,1,3.37,2H28.63A1.3,1.3,0,0,1,30,3.22Z"/></g></g></svg>
+developers
+</a>
+</li>
+<li role=presentation>
+<a aria-controls=deploy-code-management data-target='#deploy-code-management' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><defs><path id=K d="m45 186h223v4h-223z"/><path id=L d="m-219 186h223v4h-223z"/><path id=M d="m24 133h1v15h-1z"/><path id=N d="m24 175h1v15h-1z"/><path id=O d="M24.5,174c6.904,0,12.5-5.596,12.5-12.5S31.404,149,24.5,149S12,154.596,12,161.5S17.596,174,24.5,174z
+M1,138h47v47H1V138z"/><path id=P d="m45 311h223v4h-223z"/><path id=Q d="m-219 311h223v4h-223z"/><path id=R d="m24 258h1v15h-1z"/><path id=S d="m24 300h1v15h-1z"/><path id=T d="M24.5,299c6.904,0,12.5-5.596,12.5-12.5S31.404,274,24.5,274S12,279.596,12,286.5S17.596,299,24.5,299z
+M1,263h47v47H1V263z"/><path id=U d="m45 423h223v4h-223z"/><path id=V d="m-219 423h223v4h-223z"/><path id=W d="m24 370h1v15h-1z"/><path id=X d="m24 412h1v15h-1z"/><path id=Y d="M24.5,411c6.904,0,12.5-5.596,12.5-12.5S31.404,386,24.5,386S12,391.596,12,398.5S17.596,411,24.5,411z
+M1,375h47v47H1V375z"/><path id=Z d="m45 543h223v4h-223z"/><path id=a d="m-219 543h223v4h-223z"/><path id=b d="m24 490h1v15h-1z"/><path id=c d="m24 532h1v15h-1z"/><path id=d d="M24.5,531c6.904,0,12.5-5.596,12.5-12.5S31.404,506,24.5,506S12,511.596,12,518.5S17.596,531,24.5,531z
+M1,495h47v47H1V495z"/><use id=e xlink:href="#y"/><use id=f xlink:href="#y"/><use id=g xlink:href="#y"/><use id=h xlink:href="#y"/><use id=i xlink:href="#y"/><path id=j d=m-776-4585h1600v5980h-1600z /><use id=k xlink:href="#z"/><use id=l xlink:href="#z"/><use id=m xlink:href="#z"/><use id=n xlink:href="#z"/><path id=o d=m-776-4473h1600v5980h-1600z /><use id=p xlink:href="#10"/><use id=q xlink:href="#10"/><use id=r xlink:href="#10"/><use id=s xlink:href="#10"/><path id=t d=m-776-4353h1600v5980h-1600z /><use id=u xlink:href="#11"/><use id=v xlink:href="#11"/><use id=w xlink:href="#11"/><use id=x xlink:href="#11"/><path id=y d=m-776-4710h1600v5980h-1600z /><path id=z d=m-776-4585h1600v5980h-1600z /><path id=10 d=m-776-4473h1600v5980h-1600z /><path id=11 d=m-776-4353h1600v5980h-1600z /><clipPath><use xlink:href="#x"/></clipPath><clipPath><use xlink:href="#k"/></clipPath><clipPath><use xlink:href="#m"/></clipPath><clipPath><use xlink:href="#l"/></clipPath><clipPath><use xlink:href="#j"/></clipPath><clipPath><use xlink:href="#i"/></clipPath><clipPath><use xlink:href="#f"/></clipPath><clipPath><use xlink:href="#h"/></clipPath><clipPath><use xlink:href="#g"/></clipPath><clipPath><use xlink:href="#n"/></clipPath><clipPath><use xlink:href="#o"/></clipPath><clipPath><use xlink:href="#u"/></clipPath><clipPath><use xlink:href="#w"/></clipPath><clipPath><use xlink:href="#v"/></clipPath><clipPath><use xlink:href="#t"/></clipPath><clipPath><use xlink:href="#s"/></clipPath><clipPath><use xlink:href="#p"/></clipPath><clipPath><use xlink:href="#r"/></clipPath><clipPath><use xlink:href="#q"/></clipPath><clipPath><use xlink:href="#e"/></clipPath><clipPath id=J><use xlink:href="#d"/></clipPath><clipPath id=5><use xlink:href="#P"/></clipPath><clipPath id=7><use xlink:href="#R"/></clipPath><clipPath id=6><use xlink:href="#Q"/></clipPath><clipPath id=4><use xlink:href="#O"/></clipPath><clipPath id=3><use xlink:href="#N"/></clipPath><clipPath id=0><use xlink:href="#K"/></clipPath><clipPath id=2><use xlink:href="#M"/></clipPath><clipPath id=1><use xlink:href="#L"/></clipPath><clipPath id=8><use xlink:href="#S"/></clipPath><clipPath id=9><use xlink:href="#T"/></clipPath><clipPath id=G><use xlink:href="#a"/></clipPath><clipPath id=I><use xlink:href="#c"/></clipPath><clipPath id=H><use xlink:href="#b"/></clipPath><clipPath id=F><use xlink:href="#Z"/></clipPath><clipPath id=A><use xlink:href="#U"/></clipPath><clipPath id=E><use xlink:href="#Y"/></clipPath><clipPath id=B><use xlink:href="#V"/></clipPath><clipPath id=D><use xlink:href="#X"/></clipPath><clipPath id=C><use xlink:href="#W"/></clipPath></defs><g clip-path="url(#0)"/><g clip-path="url(#1)"/><g clip-path="url(#2)"/><g clip-path="url(#3)"/><g clip-path="url(#4)"/><g clip-path="url(#5)"/><g clip-path="url(#6)"/><g clip-path="url(#7)"/><g clip-path="url(#8)"/><g clip-path="url(#9)"/><g clip-path="url(#A)"/><g clip-path="url(#B)"/><g clip-path="url(#C)"/><g clip-path="url(#D)"/><g clip-path="url(#E)"/><g clip-path="url(#F)"/><g clip-path="url(#G)"/><g clip-path="url(#H)"/><g clip-path="url(#I)"/><g clip-path="url(#J)"/><path d="m16 12c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4m0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2"/><path d="m29 18.14v-4.284c1.721-.447 3-1.999 3-3.858 0-2.206-1.794-4-4-4-1.095 0-2.087.443-2.81 1.159l-5.234-2.725c.016-.145.044-.286.044-.434 0-2.206-1.794-4-4-4s-4 1.794-4 4c0 .148.028.289.044.433l-5.233 2.726c-.723-.715-1.716-1.159-2.811-1.159-2.206 0-4 1.794-4 4 0 1.859 1.279 3.411 3 3.858v4.284c-1.721.447-3 1.999-3 3.858 0 2.206 1.794 4 4 4 1.095 0 2.088-.444 2.811-1.159l5.233 2.726c-.016.144-.044.285-.044.433 0 2.206 1.794 4 4 4s4-1.794 4-4c0-.148-.028-.289-.044-.433l5.233-2.726c.723.715 1.716 1.159 2.811 1.159 2.206 0 4-1.794 4-4 0-1.859-1.279-3.411-3-3.858m-1-10.142c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2m-12-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2m-14 8c0-1.103.897-2 2-2s2 .897 2 2-.897 2-2 2-2-.897-2-2m2 14c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2m12 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2m0-6c-1.34 0-2.521.667-3.247 1.681l-4.93-2.568c.104-.355.177-.724.177-1.113 0-1.859-1.279-3.411-3-3.858v-4.284c1.721-.447 3-1.999 3-3.858 0-.389-.073-.758-.177-1.113l4.93-2.568c.726 1.014 1.907 1.681 3.247 1.681s2.521-.667 3.247-1.682l4.93 2.567c-.104.357-.177.726-.177 1.115 0 1.859 1.279 3.411 3 3.858v4.284c-1.721.447-3 1.999-3 3.858 0 .389.073.758.177 1.113l-4.93 2.568c-.726-1.014-1.907-1.681-3.247-1.681m12 0c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2"/></svg>
+management
+</a>
+</li>
+</ul>
+<div class=tab-content>
+<div class='tab-pane active' id=deploy-code-developers role=tabpanel>
+<div class=c-chart>
+<h3 class=title>How often does your organization deploy code?</h3>
+<canvas height=180 id=chart-deploy-code-frequency-developers width=968></canvas>
+<div class=chart-notes>
+Don’t know 4%
+<br/>
+Other 4%
+</div>
+<div class=stats-notes>n=3,123</div>
+</div>
+</div>
+<div class=tab-pane id=deploy-code-management role=tabpanel>
+<div class=c-chart>
+<h3 class=title>How often does your organization deploy code?</h3>
+<canvas height=180 id=chart-deploy-code-frequency-management width=968></canvas>
+<div class=chart-notes>
+Don’t know 1%
+<br/>
+Other 2%
+</div>
+<div class=stats-notes>n=640</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class='report-section report-section-tools' id=section-tools>
+<div class=container>
+<header class='c-banner u-margin-bottom-lg'>
+<h2>Tools</h2>
+<h3>The tech behind the team</h3>
+<p>
+<em>In a perfect world, tools help software teams work faster and automate more so they can focus on innovating and creating. However, when there’s a proliferation of options and an ever-changing technology landscape, choosing, implementing, and integrating the right tools becomes a significant challenge.</em>
+</p>
+<p>Open source wins across the board, with respondents agreeing that open source tools are preferred by developers, while also better for innovation, security, and a smooth development process.</p>
+</header>
+<div class='row u-margin-bottom-xl'>
+<div class='col-md-10 col-md-offset-1'>
+<div class='row u-margin-bottom-sm'>
+<div class=col-md-12>
+<h3>Quick facts</h3>
+</div>
+</div>
+<div class='row flex-row u-close-columns'>
+<div class=col-md-3>
+<div class='c-card prose alpha-alt'>
+<p>Most say they use 3 to 6 tools to complete the development process</p>
+</div>
+</div>
+<div class=col-md-3>
+<div class='c-card prose beta-alt'>
+<p>One-third say they use cloud-based tools less than 19% of the time; but nearly as many (27%) say they use cloud-based tools 80-100% of the time, versus on-premise.</p>
+</div>
+</div>
+<div class=col-md-3>
+<div class='c-card prose gamma-alt'>
+<p>A majority spend less than 40% of their time integrating their tools, and a plurality spend less than 19%.</p>
+</div>
+</div>
+<div class=col-md-3>
+<div class='c-card prose delta-alt'>
+<p>55% lose time context-switching between tools on a regular work day</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='c-banner-small u-margin-bottom-lg'>
+<h4>Analysis</h4>
+<p>There’s nearly universal agreement: developers and managers nearly all say it’s important to them to use the best available tools, and a strong majority in each group agrees that they have access to those tools. And yet, tools comprise three out of the top four concerns named by managers when asked the challenges they face supporting their investments in 2018, indicating that maintaining a sophisticated toolchain is an important challenge for software teams. Developers appear content with their tools overall; with concern over being forced to use the wrong tool for the job ranked last on their list of challenges.</p>
+</div>
+<div class='row u-margin-bottom-md'>
+<div class='col-md-8 col-md-offset-1'>
+<p>Managers prefer open source to closed source tools, say that using an open source tool improves software quality. Additionally, the majority of managers agree that open source tools streamline the development process and improve security at a higher rate than developers. Managers were nearly 20% more likely to say that using an open source tool is important to their development organization, suggesting perhaps that vendor lock-in is more salient for managers weighing available options.</p>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class=c-chart>
+<h3 class=title>Top 3 challenges you face using technology to support your investments for 2018</h3>
+<canvas height=480 id=chart-technology-support-investments width=684></canvas>
+<div class=chart-notes>
+None 6%
+<br/>
+Other 6%
+</div>
+<div class=stats-notes>n=684</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-4 col-md-offset-1'>
+<blockquote class=c-blockquote>Engineering managers are highly concerned about the tools their teams are using.</blockquote>
+</div>
+<div class='col-md-5 col-md-offset-1'>
+<blockquote class=c-blockquote>Respondents who chose “Other” cited time, bandwidth, budget, scaling, and talent constraints, as well as difficulty in relationships with the business side of their organization.</blockquote>
+</div>
+</div>
+<div class=row>
+<div class='col-md-7 col-md-offset-1'>
+<div class=c-stat>
+<span class=number>
+<span>74</span>
+<span class=percent>%</span>
+</span>
+<span class=label>of developers agree they have access to the best development tools, and 81% of managers say the same about their team.</span>
+</div>
+</div>
+</div>
+<div class='u-release u-margin-top-sm'>
+<div class='c-image-banner dark-bg-block parallax' style='background-image: url(&#39;/images/dev-survey-2018/pull-quote-bg-3.jpg&#39;)'>
+<div class=row>
+<div class='col-md-8 col-md-offset-2'>
+<q class=c-quote>As a developer I find using open source to be critical to the overall quality of software for everyone. To rely on a paid/closed software is a risk that I don’t think it’s [sic] worth paying. Otherwise, my company still thinks that big and strong enterprise softwares are worth its costs, mainly in the infrastructure areas (operational systems and databases). We are now more open to open source because of budget limitations.</q>
+</div>
+</div>
+</div>
+</div>
+<div class='row u-margin-bottom-sm'>
+<div class='col-md-10 col-md-offset-1'>
+<ul class=compare-tabs role=tablist>
+<li class=active role=presentation>
+<a aria-controls=essential-tools-agile data-target='#essential-tools-agile' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><path d="m26 22.03c-.553 0-1 .447-1 1v5.747c0 .674-.614 1.222-1.369 1.222h-15.262c-.755 0-1.369-.548-1.369-1.222v-3.778-6.919l3.375 2.701c.185.147.405.218.624.218.294 0 .584-.129.782-.375.345-.432.274-1.061-.156-1.406l-5-4c-.365-.291-.885-.291-1.25 0l-5 4c-.431.346-.501.975-.156 1.406.346.432.974.502 1.406.156l3.375-2.7v6.919 3.778c0 1.777 1.512 3.222 3.369 3.222h15.262c1.857 0 3.369-1.445 3.369-3.222v-5.747c0-.552-.447-1-1-1"/><path d="m31.781 11.875c-.346-.431-.974-.502-1.406-.156l-3.375 2.7v-6.919-4.278c0-1.777-1.512-3.222-3.369-3.222h-15.262c-1.857 0-3.369 1.445-3.369 3.222v6.81c0 .553.447 1 1 1s1-.447 1-1v-6.81c0-.674.614-1.222 1.369-1.222h15.262c.755 0 1.369.548 1.369 1.222v4.278 6.919l-3.375-2.701c-.433-.346-1.06-.272-1.406.156-.345.432-.274 1.061.156 1.406l5 4c.183.147.404.22.625.22s.442-.073.625-.219l5-4c.431-.345.501-.974.156-1.406"/></svg>
+agile
+</a>
+</li>
+<li role=presentation>
+<a aria-controls=essential-tools-devops data-target='#essential-tools-devops' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><defs><path id=K d="m-85 186h223v4h-223z"/><path id=L d="m-349 186h223v4h-223z"/><path id=M d="m-106 133h1v15h-1z"/><path id=N d="m-106 175h1v15h-1z"/><path id=O d="m-105.5 174c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=P d="m-85 311h223v4h-223z"/><path id=Q d="m-349 311h223v4h-223z"/><path id=R d="m-106 258h1v15h-1z"/><path id=S d="m-106 300h1v15h-1z"/><path id=T d="m-105.5 299c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=U d="m-85 423h223v4h-223z"/><path id=V d="m-349 423h223v4h-223z"/><path id=W d="m-106 370h1v15h-1z"/><path id=X d="m-106 412h1v15h-1z"/><path id=Y d="m-105.5 411c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=Z d="m-85 543h223v4h-223z"/><path id=a d="m-349 543h223v4h-223z"/><path id=b d="m-106 490h1v15h-1z"/><path id=c d="m-106 532h1v15h-1z"/><path id=d d="m-105.5 531c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><use id=e xlink:href="#y"/><use id=f xlink:href="#y"/><use id=g xlink:href="#y"/><use id=h xlink:href="#y"/><use id=i xlink:href="#y"/><path id=j d=m-906-4585h1600v5980h-1600z /><use id=k xlink:href="#z"/><use id=l xlink:href="#z"/><use id=m xlink:href="#z"/><use id=n xlink:href="#z"/><path id=o d=m-906-4473h1600v5980h-1600z /><use id=p xlink:href="#10"/><use id=q xlink:href="#10"/><use id=r xlink:href="#10"/><use id=s xlink:href="#10"/><path id=t d=m-906-4353h1600v5980h-1600z /><use id=u xlink:href="#11"/><use id=v xlink:href="#11"/><use id=w xlink:href="#11"/><use id=x xlink:href="#11"/><path id=y d=m-906-4710h1600v5980h-1600z /><path id=z d=m-906-4585h1600v5980h-1600z /><path id=10 d=m-906-4473h1600v5980h-1600z /><path id=11 d=m-906-4353h1600v5980h-1600z /><clipPath><use xlink:href="#x"/></clipPath><clipPath><use xlink:href="#k"/></clipPath><clipPath><use xlink:href="#m"/></clipPath><clipPath><use xlink:href="#l"/></clipPath><clipPath><use xlink:href="#j"/></clipPath><clipPath><use xlink:href="#i"/></clipPath><clipPath><use xlink:href="#f"/></clipPath><clipPath><use xlink:href="#h"/></clipPath><clipPath><use xlink:href="#g"/></clipPath><clipPath><use xlink:href="#n"/></clipPath><clipPath><use xlink:href="#o"/></clipPath><clipPath><use xlink:href="#u"/></clipPath><clipPath><use xlink:href="#w"/></clipPath><clipPath><use xlink:href="#v"/></clipPath><clipPath><use xlink:href="#t"/></clipPath><clipPath><use xlink:href="#s"/></clipPath><clipPath><use xlink:href="#p"/></clipPath><clipPath><use xlink:href="#r"/></clipPath><clipPath><use xlink:href="#q"/></clipPath><clipPath><use xlink:href="#e"/></clipPath><clipPath id=J><use xlink:href="#d"/></clipPath><clipPath id=5><use xlink:href="#P"/></clipPath><clipPath id=7><use xlink:href="#R"/></clipPath><clipPath id=6><use xlink:href="#Q"/></clipPath><clipPath id=4><use xlink:href="#O"/></clipPath><clipPath id=3><use xlink:href="#N"/></clipPath><clipPath id=0><use xlink:href="#K"/></clipPath><clipPath id=2><use xlink:href="#M"/></clipPath><clipPath id=1><use xlink:href="#L"/></clipPath><clipPath id=8><use xlink:href="#S"/></clipPath><clipPath id=9><use xlink:href="#T"/></clipPath><clipPath id=G><use xlink:href="#a"/></clipPath><clipPath id=I><use xlink:href="#c"/></clipPath><clipPath id=H><use xlink:href="#b"/></clipPath><clipPath id=F><use xlink:href="#Z"/></clipPath><clipPath id=A><use xlink:href="#U"/></clipPath><clipPath id=E><use xlink:href="#Y"/></clipPath><clipPath id=B><use xlink:href="#V"/></clipPath><clipPath id=D><use xlink:href="#X"/></clipPath><clipPath id=C><use xlink:href="#W"/></clipPath></defs><g clip-path="url(#0)"/><g clip-path="url(#1)"/><g clip-path="url(#2)"/><g clip-path="url(#3)"/><g clip-path="url(#4)"/><g clip-path="url(#5)"/><g clip-path="url(#6)"/><g clip-path="url(#7)"/><g clip-path="url(#8)"/><g clip-path="url(#9)"/><g clip-path="url(#A)"/><g clip-path="url(#B)"/><g clip-path="url(#C)"/><g clip-path="url(#D)"/><g clip-path="url(#E)"/><g clip-path="url(#F)"/><g clip-path="url(#G)"/><g clip-path="url(#H)"/><g clip-path="url(#I)"/><g clip-path="url(#J)"/><path d="m25 27c-2.32-.018-4.484-1.319-5.703-3.396l-1.896-3.23c-.279-.477-.12-1.089.356-1.368.477-.281 1.09-.12 1.368.356l1.896 3.23c.865 1.473 2.374 2.396 3.939 2.408 2.797 0 5.04-2.243 5.04-5v-8c0-2.757-2.243-5-5-5-1.377.008-2.688.808-3.451 2.086l-8.642 14.458c-.941 1.575-2.334 2.701-3.922 3.17-.644.189-1.311.286-1.985.286-3.859 0-7-3.141-7-7v-8c0-3.859 3.141-7 7-7 2.313.018 4.472 1.314 5.686 3.385l1.862 3.173c.279.476.12 1.089-.356 1.368-.474.28-1.088.12-1.368-.356l-1.862-3.173c-.861-1.466-2.364-2.384-3.923-2.397-2.796 0-5.04 2.243-5.04 5v8c0 2.757 2.243 5 5 5 .481 0 .959-.068 1.419-.204 1.104-.326 2.089-1.135 2.771-2.277l8.642-14.459c1.121-1.875 3.084-3.047 5.124-3.06 3.903 0 7.04 3.141 7.04 7v8c0 3.859-3.141 7-7 7"/></svg>
+devops
+</a>
+</li>
+</ul>
+<div class=tab-content>
+<div class='tab-pane active' id=essential-tools-agile role=tabpanel>
+<h4 class=tab-desc>Top 3 essential tools</h4>
+<div class='row flex-row'>
+<div class=col-md-4>
+<div class='c-card alpha small-icon'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 72" enable-background="new 0 0 76 72"><path d="m60 8h-37.14c-.447-1.72-2-3-3.858-3-2.206 0-4 1.794-4 4s1.794 4 4 4c1.858 0 3.411-1.28 3.858-3h37.14c.552 0 1-.448 1-1s-.448-1-1-1m-41 3c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2"/><path d="M70,58.08V42c0-1.654-1.346-3-3-3H39V18h24.261C66.426,18,69,15.426,69,12.261V5.739C69,2.574,66.426,0,63.261,0H12.739
+C9.574,0,7,2.574,7,5.739v6.522C7,15.426,9.574,18,12.739,18H37v21H9c-1.654,0-3,1.346-3,3v16.08c-3.387,0.487-6,3.4-6,6.92
+c0,3.86,3.14,7,7,7s7-3.14,7-7c0-3.52-2.613-6.433-6-6.92V42c0-0.551,0.449-1,1-1h28v17.08c-3.387,0.487-6,3.4-6,6.92
+c0,3.86,3.14,7,7,7s7-3.14,7-7c0-3.52-2.613-6.433-6-6.92V41h28c0.551,0,1,0.449,1,1v16.08c-3.387,0.487-6,3.4-6,6.92
+c0,3.86,3.14,7,7,7s7-3.14,7-7C76,61.48,73.387,58.567,70,58.08z M9,12.261V5.739C9,3.677,10.677,2,12.739,2h50.522
+C65.323,2,67,3.677,67,5.739v6.522C67,14.323,65.323,16,63.261,16H12.739C10.677,16,9,14.323,9,12.261z M12,65c0,2.757-2.243,5-5,5
+s-5-2.243-5-5s2.243-5,5-5S12,62.243,12,65z M43,65c0,2.757-2.243,5-5,5s-5-2.243-5-5s2.243-5,5-5S43,62.243,43,65z M69,70
+c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S71.757,70,69,70z"/></svg>
+<h4>Version Control System</h4>
+</div>
+</div>
+<div class=col-md-4>
+<div class='c-card beta small-icon'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 72" enable-background="new 0 0 76 72"><path d="m71 0h-66c-2.757 0-5 2.243-5 5v62c0 2.757 2.243 5 5 5h66c2.757 0 5-2.243 5-5v-62c0-2.757-2.243-5-5-5m-49 8h52v50h-52v-50m52-3v1h-52v-4h49c1.654 0 3 1.346 3 3m-72 62v-62c0-1.654 1.346-3 3-3h15v68h-15c-1.654 0-3-1.346-3-3m69 3h-49v-10h52v7c0 1.654-1.346 3-3 3"/><path d="m7 8h8c.553 0 1-.448 1-1s-.447-1-1-1h-8c-.553 0-1 .448-1 1s.447 1 1 1"/><path d="m15 12h-8c-.553 0-1 .448-1 1s.447 1 1 1h8c.553 0 1-.448 1-1s-.447-1-1-1"/><path d="m15 24h-8c-.553 0-1 .448-1 1s.447 1 1 1h8c.553 0 1-.448 1-1s-.447-1-1-1"/><path d="m15 30h-8c-.553 0-1 .448-1 1s.447 1 1 1h8c.553 0 1-.448 1-1s-.447-1-1-1"/><path d="m15 18h-4c-.553 0-1 .448-1 1s.447 1 1 1h4c.553 0 1-.448 1-1s-.447-1-1-1"/><path d="m39.532 27.09c-.276-.478-.887-.645-1.366-.368l-7.665 4.409c-.31.179-.501.509-.501.867s.191.688.501.867l7.665 4.409c.157.09.329.133.498.133.347 0 .683-.18.868-.501.275-.479.11-1.09-.368-1.365l-6.158-3.543 6.158-3.542c.479-.276.644-.887.368-1.366"/><path d="m63.5 31.13l-7.665-4.409c-.48-.277-1.09-.111-1.366.368-.275.479-.11 1.09.368 1.365l6.158 3.543-6.158 3.542c-.479.275-.644.887-.368 1.365.186.322.521.501.868.501.169 0 .341-.043.498-.133l7.665-4.409c.31-.178.501-.508.501-.866s-.191-.688-.501-.867"/><path d="m50.751 21.05c-.524-.181-1.091.1-1.271.622l-6.854 20c-.179.522.1 1.091.622 1.27.108.037.218.054.325.054.416 0 .804-.261.946-.676l6.854-20c.179-.522-.1-1.091-.622-1.27"/></svg>
+<h4>
+Integrated Development Environment
+</h4>
+</div>
+</div>
+<div class=col-md-4>
+<div class='c-card gamma small-icon'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 72" enable-background="new 0 0 76 72"><path d="m71 0h-46c-2.757 0-5 2.243-5 5v23h-15c-2.757 0-5 2.243-5 5v38c0 .384.221.735.566.901.139.066.287.099.434.099.223 0 .444-.075.625-.219l9.726-7.781h39.649c2.757 0 5-2.243 5-5v-23h8.649l9.726 7.781c.181.144.402.219.625.219.147 0 .296-.033.434-.099.345-.166.566-.517.566-.901v-38c0-2.757-2.243-5-5-5m-17 59c0 1.654-1.346 3-3 3h-40c-.228 0-.447.077-.625.219l-8.375 6.7v-35.919c0-1.654 1.346-3 3-3h46c1.654 0 3 1.346 3 3v26m20-18.08l-8.375-6.7c-.178-.142-.397-.219-.625-.219h-9v-1c0-2.757-2.243-5-5-5h-29v-23c0-1.654 1.346-3 3-3h46c1.654 0 3 1.346 3 3v35.919"/><path d="m35.5 13.917c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4m0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2"/><path d="m47.5 13.917c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4m0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2"/><path d="m59.5 13.917c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4m0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2"/><path d="m20.12 40.759c-.275-.479-.886-.644-1.366-.368l-7.666 4.409c-.31.178-.501.509-.501.867s.191.688.501.867l7.666 4.409c.157.09.329.133.498.133.347 0 .683-.18.868-.501.275-.479.11-1.09-.368-1.365l-6.159-3.542 6.159-3.542c.479-.277.644-.889.368-1.367"/><path d="m44.08 44.8l-7.665-4.409c-.48-.276-1.09-.11-1.366.368-.275.479-.11 1.09.368 1.365l6.158 3.542-6.158 3.542c-.479.275-.644.887-.368 1.365.186.322.521.501.868.501.169 0 .341-.043.498-.133l7.665-4.409c.31-.178.501-.509.501-.867s-.191-.687-.501-.865"/><path d="m31.33 34.721c-.524-.181-1.092.1-1.271.622l-6.853 20c-.179.522.1 1.091.622 1.27.107.037.217.055.324.055.416 0 .804-.261.946-.676l6.853-20c.18-.524-.099-1.093-.621-1.271"/></svg>
+<h4>
+Chat/collaboration tool
+</h4>
+</div>
+</div>
+</div>
+<div class='row u-margin-top-sm'>
+<div class=col-md-5>
+<blockquote class=c-blockquote>
+CI/CD ranked the 5th most essential tool by Agile practitioners, with half identifying it as necessary for their everyday work
+</blockquote>
+</div>
+</div>
+</div>
+<div class=tab-pane id=essential-tools-devops role=tabpanel>
+<h4 class=tab-desc>Top 3 essential tools</h4>
+<div class='row flex-row'>
+<div class=col-md-4>
+<div class='c-card alpha small-icon'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 72" enable-background="new 0 0 76 72"><path d="m60 8h-37.14c-.447-1.72-2-3-3.858-3-2.206 0-4 1.794-4 4s1.794 4 4 4c1.858 0 3.411-1.28 3.858-3h37.14c.552 0 1-.448 1-1s-.448-1-1-1m-41 3c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2"/><path d="M70,58.08V42c0-1.654-1.346-3-3-3H39V18h24.261C66.426,18,69,15.426,69,12.261V5.739C69,2.574,66.426,0,63.261,0H12.739
+C9.574,0,7,2.574,7,5.739v6.522C7,15.426,9.574,18,12.739,18H37v21H9c-1.654,0-3,1.346-3,3v16.08c-3.387,0.487-6,3.4-6,6.92
+c0,3.86,3.14,7,7,7s7-3.14,7-7c0-3.52-2.613-6.433-6-6.92V42c0-0.551,0.449-1,1-1h28v17.08c-3.387,0.487-6,3.4-6,6.92
+c0,3.86,3.14,7,7,7s7-3.14,7-7c0-3.52-2.613-6.433-6-6.92V41h28c0.551,0,1,0.449,1,1v16.08c-3.387,0.487-6,3.4-6,6.92
+c0,3.86,3.14,7,7,7s7-3.14,7-7C76,61.48,73.387,58.567,70,58.08z M9,12.261V5.739C9,3.677,10.677,2,12.739,2h50.522
+C65.323,2,67,3.677,67,5.739v6.522C67,14.323,65.323,16,63.261,16H12.739C10.677,16,9,14.323,9,12.261z M12,65c0,2.757-2.243,5-5,5
+s-5-2.243-5-5s2.243-5,5-5S12,62.243,12,65z M43,65c0,2.757-2.243,5-5,5s-5-2.243-5-5s2.243-5,5-5S43,62.243,43,65z M69,70
+c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S71.757,70,69,70z"/></svg>
+<h4>Version Control System</h4>
+</div>
+</div>
+<div class=col-md-4>
+<div class='c-card beta small-icon'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 72" enable-background="new 0 0 76 72"><path d="m71 0h-66c-2.757 0-5 2.243-5 5v62c0 2.757 2.243 5 5 5h66c2.757 0 5-2.243 5-5v-62c0-2.757-2.243-5-5-5m-49 8h52v50h-52v-50m52-3v1h-52v-4h49c1.654 0 3 1.346 3 3m-72 62v-62c0-1.654 1.346-3 3-3h15v68h-15c-1.654 0-3-1.346-3-3m69 3h-49v-10h52v7c0 1.654-1.346 3-3 3"/><path d="m7 8h8c.553 0 1-.448 1-1s-.447-1-1-1h-8c-.553 0-1 .448-1 1s.447 1 1 1"/><path d="m15 12h-8c-.553 0-1 .448-1 1s.447 1 1 1h8c.553 0 1-.448 1-1s-.447-1-1-1"/><path d="m15 24h-8c-.553 0-1 .448-1 1s.447 1 1 1h8c.553 0 1-.448 1-1s-.447-1-1-1"/><path d="m15 30h-8c-.553 0-1 .448-1 1s.447 1 1 1h8c.553 0 1-.448 1-1s-.447-1-1-1"/><path d="m15 18h-4c-.553 0-1 .448-1 1s.447 1 1 1h4c.553 0 1-.448 1-1s-.447-1-1-1"/><path d="m39.532 27.09c-.276-.478-.887-.645-1.366-.368l-7.665 4.409c-.31.179-.501.509-.501.867s.191.688.501.867l7.665 4.409c.157.09.329.133.498.133.347 0 .683-.18.868-.501.275-.479.11-1.09-.368-1.365l-6.158-3.543 6.158-3.542c.479-.276.644-.887.368-1.366"/><path d="m63.5 31.13l-7.665-4.409c-.48-.277-1.09-.111-1.366.368-.275.479-.11 1.09.368 1.365l6.158 3.543-6.158 3.542c-.479.275-.644.887-.368 1.365.186.322.521.501.868.501.169 0 .341-.043.498-.133l7.665-4.409c.31-.178.501-.508.501-.866s-.191-.688-.501-.867"/><path d="m50.751 21.05c-.524-.181-1.091.1-1.271.622l-6.854 20c-.179.522.1 1.091.622 1.27.108.037.218.054.325.054.416 0 .804-.261.946-.676l6.854-20c.179-.522-.1-1.091-.622-1.27"/></svg>
+<h4>
+Integrated Development Environment
+</h4>
+</div>
+</div>
+<div class=col-md-4>
+<div class='c-card gamma small-icon'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 72" enable-background="new 0 0 76 72"><path d="m71.22 44.02c-.538-.124-1.074.216-1.196.754-1.438 6.352-4.647 11.88-9.04 16.13-.22-.95-.647-1.801-1.315-2.488-.979-1.01-2.376-1.586-3.833-1.586-.963 0-1.883.261-2.683.751-1.483-2.296-4.047-3.724-6.831-3.724-1.458 0-2.865.387-4.1 1.111l-1.372-14.353.266-.004 2.276 4.159c.288.497.786.789 1.402.803l1.667-.023c.034 0 .067-.003.102-.007.401-.046.753-.214 1.015-.483.201-.206.337-.446.407-.72l1.99-8.03c.074-.48-.048-.95-.392-1.377l-4.454-4.812c.111-1.673.163-3.179.153-4.489-.055-3.214-.588-6.02-1.586-8.352-.999-2.33-2.659-4.632-4.935-6.845-.308-.299-.696-.453-1.164-.439-.426.017-.81.188-1.11.497-2.316 2.382-3.935 4.714-4.81 6.932-.873 2.215-1.297 5.05-1.259 8.426.026 1.308.12 2.811.277 4.473l-4.363 4.992c-.29.385-.396.845-.287 1.418l2.19 7.875c.188.707.75 1.147 1.56 1.179l1.665-.023c.425-.005.812-.175 1.119-.492.124-.127.216-.252.276-.373l2.146-4.198.243-.003-1.461 14.281c-1.237-.729-2.649-1.118-4.111-1.118-2.784 0-5.348 1.428-6.831 3.724-.799-.49-1.72-.751-2.683-.751-2.257 0-4.16 1.466-4.859 3.488-3.244-3.268-5.804-7.235-7.425-11.697l7.299 3.812c.487.256 1.094.067 1.35-.423.255-.49.065-1.094-.424-1.349l-9.612-5.02c-.487-.255-1.092-.066-1.349.422l-5.03 9.598c-.257.489-.067 1.093.422 1.35.148.078.307.114.463.114.36 0 .708-.195.887-.536l3.984-7.605c4.796 13.634 17.899 23.01 32.507 23.01 16.211 0 30.03-11.01 33.599-26.779.122-.539-.216-1.075-.755-1.196m-33.851-32.15c.001 0 .001.001.001.001m-2.995 26.838c-.371.005-.708.215-.877.545l-2.307 4.514-1.105.017-2.055-7.374 4.458-5.096c.182-.208.27-.482.242-.757-.178-1.782-.282-3.379-.31-4.738-.035-3.11.341-5.687 1.12-7.66.745-1.889 2.131-3.907 4.121-6 1.935 1.937 3.346 3.923 4.198 5.91.895 2.088 1.374 4.645 1.424 7.589.011 1.36-.05 2.959-.178 4.754-.021.276.075.547.263.75l4.597 4.963-1.846 7.432-1.104.016-2.434-4.447c-.176-.321-.512-.52-.877-.52-.005 0-.01 0-.014 0l-7.316.102m-17.369 23.22c.036-1.712 1.435-3.096 3.156-3.096.864 0 1.671.344 2.273.968.231.24.567.347.894.291.328-.058.605-.275.74-.579.984-2.219 3.186-3.652 5.606-3.652 1.581 0 3.085.605 4.234 1.704.276.264.681.348 1.037.216.358-.132.61-.457.649-.836l1.666-16.275 1.585-.022 1.556 16.29c.036.381.287.708.646.842.357.134.763.051 1.04-.214 1.149-1.099 2.653-1.704 4.234-1.704 2.421 0 4.622 1.434 5.606 3.652.135.304.412.521.739.579.332.056.663-.051.894-.29.604-.625 1.411-.968 2.274-.968.92 0 1.794.357 2.399.979.636.654.955 1.561.925 2.622-.001.033.014.061.016.093-5.658 4.704-12.926 7.466-20.799 7.466-8.03 0-15.578-3.01-21.37-8.07"/><path d="m75.46 14.982c-.491-.257-1.093-.067-1.35.422l-3.984 7.605c-4.796-13.636-17.899-23.01-32.507-23.01-16.211 0-30.03 11.01-33.599 26.779-.122.539.216 1.074.755 1.196.075.017.149.025.222.025.457 0 .869-.315.975-.779 3.362-14.85 16.377-25.22 31.647-25.22 13.651 0 25.894 8.694 30.5 21.371l-7.299-3.812c-.488-.256-1.094-.066-1.35.423-.255.49-.065 1.094.424 1.349l9.612 5.02c.147.077.306.114.462.114.36 0 .708-.195.887-.536l5.03-9.598c.257-.489.067-1.093-.422-1.349"/><path d="m37.972 18c-.549.008-1.016.211-1.403.608-.387.397-.576.871-.569 1.419.008.549.211 1.017.608 1.403.397.386.871.576 1.419.568.549-.007 1.017-.21 1.404-.608.386-.397.576-.871.568-1.42-.008-.548-.21-1.017-.608-1.403-.396-.385-.87-.574-1.419-.567"/></svg>
+<h4>
+Continuous Integration/Continuous Delivery
+</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<ul class=compare-tabs role=tablist>
+<li class=active role=presentation>
+<a aria-controls=developers-tools data-target='#developers-tools' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>Asset 56</title><g id=Layer_2 data-name="Layer 2"><g id=Layer_1-2 data-name="Layer 1"><path d="M11.29,12.9a1,1,0,0,0-1.37-.36l-4.49,2.6a1,1,0,0,0,0,1.73l4.49,2.6a1,1,0,0,0,.5.13,1,1,0,0,0,.5-1.87L7.93,16l3-1.73A1,1,0,0,0,11.29,12.9Z"/><path d="M26.56,15.13l-4.49-2.6a1,1,0,1,0-1,1.73l3,1.73-3,1.73a1,1,0,0,0,.5,1.87,1,1,0,0,0,.5-.13l4.49-2.6a1,1,0,0,0,0-1.73Z"/><path d="M18.33,9.16a1,1,0,0,0-1.27.62L13,21.57a1,1,0,0,0,.62,1.27,1,1,0,0,0,.32.05,1,1,0,0,0,.95-.68l4-11.79A1,1,0,0,0,18.33,9.16Z"/><path d="M28.63,0H3.37A3.3,3.3,0,0,0,0,3.22V28.78A3.3,3.3,0,0,0,3.37,32H28.63A3.3,3.3,0,0,0,32,28.78V3.22A3.3,3.3,0,0,0,28.63,0ZM30,28.78A1.3,1.3,0,0,1,28.63,30H3.37A1.3,1.3,0,0,1,2,28.78V3.22A1.3,1.3,0,0,1,3.37,2H28.63A1.3,1.3,0,0,1,30,3.22Z"/></g></g></svg>
+developers
+</a>
+</li>
+<li role=presentation>
+<a aria-controls=managers-tools data-target='#managers-tools' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><defs><path id=K d="m45 186h223v4h-223z"/><path id=L d="m-219 186h223v4h-223z"/><path id=M d="m24 133h1v15h-1z"/><path id=N d="m24 175h1v15h-1z"/><path id=O d="M24.5,174c6.904,0,12.5-5.596,12.5-12.5S31.404,149,24.5,149S12,154.596,12,161.5S17.596,174,24.5,174z
+M1,138h47v47H1V138z"/><path id=P d="m45 311h223v4h-223z"/><path id=Q d="m-219 311h223v4h-223z"/><path id=R d="m24 258h1v15h-1z"/><path id=S d="m24 300h1v15h-1z"/><path id=T d="M24.5,299c6.904,0,12.5-5.596,12.5-12.5S31.404,274,24.5,274S12,279.596,12,286.5S17.596,299,24.5,299z
+M1,263h47v47H1V263z"/><path id=U d="m45 423h223v4h-223z"/><path id=V d="m-219 423h223v4h-223z"/><path id=W d="m24 370h1v15h-1z"/><path id=X d="m24 412h1v15h-1z"/><path id=Y d="M24.5,411c6.904,0,12.5-5.596,12.5-12.5S31.404,386,24.5,386S12,391.596,12,398.5S17.596,411,24.5,411z
+M1,375h47v47H1V375z"/><path id=Z d="m45 543h223v4h-223z"/><path id=a d="m-219 543h223v4h-223z"/><path id=b d="m24 490h1v15h-1z"/><path id=c d="m24 532h1v15h-1z"/><path id=d d="M24.5,531c6.904,0,12.5-5.596,12.5-12.5S31.404,506,24.5,506S12,511.596,12,518.5S17.596,531,24.5,531z
+M1,495h47v47H1V495z"/><use id=e xlink:href="#y"/><use id=f xlink:href="#y"/><use id=g xlink:href="#y"/><use id=h xlink:href="#y"/><use id=i xlink:href="#y"/><path id=j d=m-776-4585h1600v5980h-1600z /><use id=k xlink:href="#z"/><use id=l xlink:href="#z"/><use id=m xlink:href="#z"/><use id=n xlink:href="#z"/><path id=o d=m-776-4473h1600v5980h-1600z /><use id=p xlink:href="#10"/><use id=q xlink:href="#10"/><use id=r xlink:href="#10"/><use id=s xlink:href="#10"/><path id=t d=m-776-4353h1600v5980h-1600z /><use id=u xlink:href="#11"/><use id=v xlink:href="#11"/><use id=w xlink:href="#11"/><use id=x xlink:href="#11"/><path id=y d=m-776-4710h1600v5980h-1600z /><path id=z d=m-776-4585h1600v5980h-1600z /><path id=10 d=m-776-4473h1600v5980h-1600z /><path id=11 d=m-776-4353h1600v5980h-1600z /><clipPath><use xlink:href="#x"/></clipPath><clipPath><use xlink:href="#k"/></clipPath><clipPath><use xlink:href="#m"/></clipPath><clipPath><use xlink:href="#l"/></clipPath><clipPath><use xlink:href="#j"/></clipPath><clipPath><use xlink:href="#i"/></clipPath><clipPath><use xlink:href="#f"/></clipPath><clipPath><use xlink:href="#h"/></clipPath><clipPath><use xlink:href="#g"/></clipPath><clipPath><use xlink:href="#n"/></clipPath><clipPath><use xlink:href="#o"/></clipPath><clipPath><use xlink:href="#u"/></clipPath><clipPath><use xlink:href="#w"/></clipPath><clipPath><use xlink:href="#v"/></clipPath><clipPath><use xlink:href="#t"/></clipPath><clipPath><use xlink:href="#s"/></clipPath><clipPath><use xlink:href="#p"/></clipPath><clipPath><use xlink:href="#r"/></clipPath><clipPath><use xlink:href="#q"/></clipPath><clipPath><use xlink:href="#e"/></clipPath><clipPath id=J><use xlink:href="#d"/></clipPath><clipPath id=5><use xlink:href="#P"/></clipPath><clipPath id=7><use xlink:href="#R"/></clipPath><clipPath id=6><use xlink:href="#Q"/></clipPath><clipPath id=4><use xlink:href="#O"/></clipPath><clipPath id=3><use xlink:href="#N"/></clipPath><clipPath id=0><use xlink:href="#K"/></clipPath><clipPath id=2><use xlink:href="#M"/></clipPath><clipPath id=1><use xlink:href="#L"/></clipPath><clipPath id=8><use xlink:href="#S"/></clipPath><clipPath id=9><use xlink:href="#T"/></clipPath><clipPath id=G><use xlink:href="#a"/></clipPath><clipPath id=I><use xlink:href="#c"/></clipPath><clipPath id=H><use xlink:href="#b"/></clipPath><clipPath id=F><use xlink:href="#Z"/></clipPath><clipPath id=A><use xlink:href="#U"/></clipPath><clipPath id=E><use xlink:href="#Y"/></clipPath><clipPath id=B><use xlink:href="#V"/></clipPath><clipPath id=D><use xlink:href="#X"/></clipPath><clipPath id=C><use xlink:href="#W"/></clipPath></defs><g clip-path="url(#0)"/><g clip-path="url(#1)"/><g clip-path="url(#2)"/><g clip-path="url(#3)"/><g clip-path="url(#4)"/><g clip-path="url(#5)"/><g clip-path="url(#6)"/><g clip-path="url(#7)"/><g clip-path="url(#8)"/><g clip-path="url(#9)"/><g clip-path="url(#A)"/><g clip-path="url(#B)"/><g clip-path="url(#C)"/><g clip-path="url(#D)"/><g clip-path="url(#E)"/><g clip-path="url(#F)"/><g clip-path="url(#G)"/><g clip-path="url(#H)"/><g clip-path="url(#I)"/><g clip-path="url(#J)"/><path d="m16 12c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4m0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2"/><path d="m29 18.14v-4.284c1.721-.447 3-1.999 3-3.858 0-2.206-1.794-4-4-4-1.095 0-2.087.443-2.81 1.159l-5.234-2.725c.016-.145.044-.286.044-.434 0-2.206-1.794-4-4-4s-4 1.794-4 4c0 .148.028.289.044.433l-5.233 2.726c-.723-.715-1.716-1.159-2.811-1.159-2.206 0-4 1.794-4 4 0 1.859 1.279 3.411 3 3.858v4.284c-1.721.447-3 1.999-3 3.858 0 2.206 1.794 4 4 4 1.095 0 2.088-.444 2.811-1.159l5.233 2.726c-.016.144-.044.285-.044.433 0 2.206 1.794 4 4 4s4-1.794 4-4c0-.148-.028-.289-.044-.433l5.233-2.726c.723.715 1.716 1.159 2.811 1.159 2.206 0 4-1.794 4-4 0-1.859-1.279-3.411-3-3.858m-1-10.142c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2m-12-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2m-14 8c0-1.103.897-2 2-2s2 .897 2 2-.897 2-2 2-2-.897-2-2m2 14c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2m12 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2m0-6c-1.34 0-2.521.667-3.247 1.681l-4.93-2.568c.104-.355.177-.724.177-1.113 0-1.859-1.279-3.411-3-3.858v-4.284c1.721-.447 3-1.999 3-3.858 0-.389-.073-.758-.177-1.113l4.93-2.568c.726 1.014 1.907 1.681 3.247 1.681s2.521-.667 3.247-1.682l4.93 2.567c-.104.357-.177.726-.177 1.115 0 1.859 1.279 3.411 3 3.858v4.284c-1.721.447-3 1.999-3 3.858 0 .389.073.758.177 1.113l-4.93 2.568c-.726-1.014-1.907-1.681-3.247-1.681m12 0c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2"/></svg>
+managers
+</a>
+</li>
+</ul>
+<div class=tab-content>
+<div class='tab-pane active' id=developers-tools role=tabpanel>
+<div class=c-chart>
+<h3 class=title>Using open source tools is important to my engineering organization.</h3>
+<canvas height=56 id=chart-open-source-important width=968></canvas>
+<div class=c-legend id=legend-open-source-important></div>
+<div class=stats-notes>n=3,214</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Open source tools are more secure.</h3>
+<canvas height=56 id=chart-open-source-secure width=968></canvas>
+<div class=c-legend id=legend-open-source-secure></div>
+<div class=stats-notes>n=3,214</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Using an open source tool streamlines the development process.</h3>
+<canvas height=56 id=chart-open-source-streamlines width=968></canvas>
+<div class=c-legend id=legend-open-source-streamlines></div>
+<div class=stats-notes>n=3,214</div>
+</div>
+</div>
+<div class=tab-pane id=managers-tools role=tabpanel>
+<div class=c-chart>
+<h3 class=title>Using open source tools is important to my engineering organization.</h3>
+<canvas height=56 id=chart-open-source-important-managers width=968></canvas>
+<div class=c-legend id=legend-open-source-important-managers></div>
+<div class=stats-notes>n=665</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Open source tools are more secure.</h3>
+<canvas height=56 id=chart-open-source-secure-managers width=968></canvas>
+<div class=c-legend id=legend-open-source-secure-managers></div>
+<div class=stats-notes>n=665</div>
+</div>
+<div class=c-chart>
+<h3 class=title>Using an open source tool streamlines the development process.</h3>
+<canvas height=56 id=chart-open-source-streamlines-managers width=968></canvas>
+<div class=c-legend id=legend-open-source-streamlines-managers></div>
+<div class=stats-notes>n=665</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<ul class=compare-tabs role=tablist>
+<li class=active role=presentation>
+<a aria-controls=lower-performing-tools data-target='#lower-performing-tools' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><defs><path id=K d="m183 186h223v4h-223z"/><path id=L d="m-81 186h223v4h-223z"/><path id=M d="m162 133h1v15h-1z"/><path id=N d="m162 175h1v15h-1z"/><path id=O d="m162.5 174c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=P d="m183 311h223v4h-223z"/><path id=Q d="m-81 311h223v4h-223z"/><path id=R d="m162 258h1v15h-1z"/><path id=S d="m162 300h1v15h-1z"/><path id=T d="m162.5 299c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=U d="m183 423h223v4h-223z"/><path id=V d="m-81 423h223v4h-223z"/><path id=W d="m162 370h1v15h-1z"/><path id=X d="m162 412h1v15h-1z"/><path id=Y d="m162.5 411c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=Z d="m183 543h223v4h-223z"/><path id=a d="m-81 543h223v4h-223z"/><path id=b d="m162 490h1v15h-1z"/><path id=c d="m162 532h1v15h-1z"/><path id=d d="m162.5 531c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><use id=e xlink:href="#y"/><use id=f xlink:href="#y"/><use id=g xlink:href="#y"/><use id=h xlink:href="#y"/><use id=i xlink:href="#y"/><path id=j d=m-638-4585h1600v5980h-1600z /><use id=k xlink:href="#z"/><use id=l xlink:href="#z"/><use id=m xlink:href="#z"/><use id=n xlink:href="#z"/><path id=o d=m-638-4473h1600v5980h-1600z /><use id=p xlink:href="#10"/><use id=q xlink:href="#10"/><use id=r xlink:href="#10"/><use id=s xlink:href="#10"/><path id=t d=m-638-4353h1600v5980h-1600z /><use id=u xlink:href="#11"/><use id=v xlink:href="#11"/><use id=w xlink:href="#11"/><use id=x xlink:href="#11"/><path id=y d=m-638-4710h1600v5980h-1600z /><path id=z d=m-638-4585h1600v5980h-1600z /><path id=10 d=m-638-4473h1600v5980h-1600z /><path id=11 d=m-638-4353h1600v5980h-1600z /><clipPath><use xlink:href="#x"/></clipPath><clipPath><use xlink:href="#k"/></clipPath><clipPath><use xlink:href="#m"/></clipPath><clipPath><use xlink:href="#l"/></clipPath><clipPath><use xlink:href="#j"/></clipPath><clipPath><use xlink:href="#i"/></clipPath><clipPath><use xlink:href="#f"/></clipPath><clipPath><use xlink:href="#h"/></clipPath><clipPath><use xlink:href="#g"/></clipPath><clipPath><use xlink:href="#n"/></clipPath><clipPath><use xlink:href="#o"/></clipPath><clipPath><use xlink:href="#u"/></clipPath><clipPath><use xlink:href="#w"/></clipPath><clipPath><use xlink:href="#v"/></clipPath><clipPath><use xlink:href="#t"/></clipPath><clipPath><use xlink:href="#s"/></clipPath><clipPath><use xlink:href="#p"/></clipPath><clipPath><use xlink:href="#r"/></clipPath><clipPath><use xlink:href="#q"/></clipPath><clipPath><use xlink:href="#e"/></clipPath><clipPath id=J><use xlink:href="#d"/></clipPath><clipPath id=5><use xlink:href="#P"/></clipPath><clipPath id=7><use xlink:href="#R"/></clipPath><clipPath id=6><use xlink:href="#Q"/></clipPath><clipPath id=4><use xlink:href="#O"/></clipPath><clipPath id=3><use xlink:href="#N"/></clipPath><clipPath id=0><use xlink:href="#K"/></clipPath><clipPath id=2><use xlink:href="#M"/></clipPath><clipPath id=1><use xlink:href="#L"/></clipPath><clipPath id=8><use xlink:href="#S"/></clipPath><clipPath id=9><use xlink:href="#T"/></clipPath><clipPath id=G><use xlink:href="#a"/></clipPath><clipPath id=I><use xlink:href="#c"/></clipPath><clipPath id=H><use xlink:href="#b"/></clipPath><clipPath id=F><use xlink:href="#Z"/></clipPath><clipPath id=A><use xlink:href="#U"/></clipPath><clipPath id=E><use xlink:href="#Y"/></clipPath><clipPath id=B><use xlink:href="#V"/></clipPath><clipPath id=D><use xlink:href="#X"/></clipPath><clipPath id=C><use xlink:href="#W"/></clipPath></defs><g clip-path="url(#0)"/><g clip-path="url(#1)"/><g clip-path="url(#2)"/><g clip-path="url(#3)"/><g clip-path="url(#4)"/><g clip-path="url(#5)"/><g clip-path="url(#6)"/><g clip-path="url(#7)"/><g clip-path="url(#8)"/><g clip-path="url(#9)"/><g clip-path="url(#A)"/><g clip-path="url(#B)"/><g clip-path="url(#C)"/><g clip-path="url(#D)"/><g clip-path="url(#E)"/><g clip-path="url(#F)"/><g clip-path="url(#G)"/><g clip-path="url(#H)"/><g clip-path="url(#I)"/><g clip-path="url(#J)"/><path d="m21.924 11.383c.155-.374.069-.804-.217-1.09l-10-10c-.391-.391-1.023-.391-1.414 0l-10 10c-.286.286-.372.716-.217 1.09.154.374.52.617.924.617h20c.404 0 .77-.243.924-.617m-18.51-1.383l7.586-7.586 7.586 7.586h-15.172"/><path d="m31.924 20.617c-.154-.374-.52-.617-.924-.617h-20c-.404 0-.77.243-.924.617-.155.374-.069.804.217 1.09l10 10c.195.195.451.293.707.293s.512-.098.707-.293l10-10c.286-.286.372-.716.217-1.09"/></svg>
+lower-performing
+</a>
+</li>
+<li role=presentation>
+<a aria-controls=higher-performing-tools data-target='#higher-performing-tools' data-toggle=tab role=tab>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32"><defs><path id=K d="m115 186h223v4h-223z"/><path id=L d="m-149 186h223v4h-223z"/><path id=M d="m94 133h1v15h-1z"/><path id=N d="m94 175h1v15h-1z"/><path id=O d="m94.5 174c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=P d="m115 311h223v4h-223z"/><path id=Q d="m-149 311h223v4h-223z"/><path id=R d="m94 258h1v15h-1z"/><path id=S d="m94 300h1v15h-1z"/><path id=T d="m94.5 299c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=U d="m115 423h223v4h-223z"/><path id=V d="m-149 423h223v4h-223z"/><path id=W d="m94 370h1v15h-1z"/><path id=X d="m94 412h1v15h-1z"/><path id=Y d="m94.5 411c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><path id=Z d="m115 543h223v4h-223z"/><path id=a d="m-149 543h223v4h-223z"/><path id=b d="m94 490h1v15h-1z"/><path id=c d="m94 532h1v15h-1z"/><path id=d d="m94.5 531c6.904 0 12.5-5.596 12.5-12.5s-5.596-12.5-12.5-12.5-12.5 5.596-12.5 12.5 5.596 12.5 12.5 12.5m-23.5-36h47v47h-47v-47"/><use id=e xlink:href="#y"/><use id=f xlink:href="#y"/><use id=g xlink:href="#y"/><use id=h xlink:href="#y"/><use id=i xlink:href="#y"/><path id=j d=m-706-4585h1600v5980h-1600z /><use id=k xlink:href="#z"/><use id=l xlink:href="#z"/><use id=m xlink:href="#z"/><use id=n xlink:href="#z"/><path id=o d=m-706-4473h1600v5980h-1600z /><use id=p xlink:href="#10"/><use id=q xlink:href="#10"/><use id=r xlink:href="#10"/><use id=s xlink:href="#10"/><path id=t d=m-706-4353h1600v5980h-1600z /><use id=u xlink:href="#11"/><use id=v xlink:href="#11"/><use id=w xlink:href="#11"/><use id=x xlink:href="#11"/><path id=y d=m-706-4710h1600v5980h-1600z /><path id=z d=m-706-4585h1600v5980h-1600z /><path id=10 d=m-706-4473h1600v5980h-1600z /><path id=11 d=m-706-4353h1600v5980h-1600z /><clipPath><use xlink:href="#x"/></clipPath><clipPath><use xlink:href="#k"/></clipPath><clipPath><use xlink:href="#m"/></clipPath><clipPath><use xlink:href="#l"/></clipPath><clipPath><use xlink:href="#j"/></clipPath><clipPath><use xlink:href="#i"/></clipPath><clipPath><use xlink:href="#f"/></clipPath><clipPath><use xlink:href="#h"/></clipPath><clipPath><use xlink:href="#g"/></clipPath><clipPath><use xlink:href="#n"/></clipPath><clipPath><use xlink:href="#o"/></clipPath><clipPath><use xlink:href="#u"/></clipPath><clipPath><use xlink:href="#w"/></clipPath><clipPath><use xlink:href="#v"/></clipPath><clipPath><use xlink:href="#t"/></clipPath><clipPath><use xlink:href="#s"/></clipPath><clipPath><use xlink:href="#p"/></clipPath><clipPath><use xlink:href="#r"/></clipPath><clipPath><use xlink:href="#q"/></clipPath><clipPath><use xlink:href="#e"/></clipPath><clipPath id=J><use xlink:href="#d"/></clipPath><clipPath id=5><use xlink:href="#P"/></clipPath><clipPath id=7><use xlink:href="#R"/></clipPath><clipPath id=6><use xlink:href="#Q"/></clipPath><clipPath id=4><use xlink:href="#O"/></clipPath><clipPath id=3><use xlink:href="#N"/></clipPath><clipPath id=0><use xlink:href="#K"/></clipPath><clipPath id=2><use xlink:href="#M"/></clipPath><clipPath id=1><use xlink:href="#L"/></clipPath><clipPath id=8><use xlink:href="#S"/></clipPath><clipPath id=9><use xlink:href="#T"/></clipPath><clipPath id=G><use xlink:href="#a"/></clipPath><clipPath id=I><use xlink:href="#c"/></clipPath><clipPath id=H><use xlink:href="#b"/></clipPath><clipPath id=F><use xlink:href="#Z"/></clipPath><clipPath id=A><use xlink:href="#U"/></clipPath><clipPath id=E><use xlink:href="#Y"/></clipPath><clipPath id=B><use xlink:href="#V"/></clipPath><clipPath id=D><use xlink:href="#X"/></clipPath><clipPath id=C><use xlink:href="#W"/></clipPath></defs><g clip-path="url(#0)"/><g clip-path="url(#1)"/><g clip-path="url(#2)"/><g clip-path="url(#3)"/><g clip-path="url(#4)"/><g clip-path="url(#5)"/><g clip-path="url(#6)"/><g clip-path="url(#7)"/><g clip-path="url(#8)"/><g clip-path="url(#9)"/><g clip-path="url(#A)"/><g clip-path="url(#B)"/><g clip-path="url(#C)"/><g clip-path="url(#D)"/><g clip-path="url(#E)"/><g clip-path="url(#F)"/><g clip-path="url(#G)"/><g clip-path="url(#H)"/><g clip-path="url(#I)"/><g clip-path="url(#J)"/><path d="m10.08 20.617c-.155.374-.069.804.217 1.09l10 10c.391.391 1.023.391 1.414 0l10-10c.286-.286.372-.716.217-1.09-.154-.374-.52-.617-.924-.617h-20c-.404 0-.77.243-.924.617m18.51 1.383l-7.586 7.586-7.586-7.586h15.172"/><path d="m.076 11.383c.154.374.52.617.924.617h20c.404 0 .77-.243.924-.617.155-.374.069-.804-.217-1.09l-10-10c-.195-.195-.451-.293-.707-.293s-.512.098-.707.293l-10 10c-.286.286-.372.716-.217 1.09"/></svg>
+higher-performing
+</a>
+</li>
+</ul>
+<div class=tab-content>
+<div class='tab-pane active' id=lower-performing-tools role=tabpanel>
+<div class=c-chart>
+<h3 class=title>I have access to the best tools.</h3>
+<canvas height=56 id=chart-access-to-best-tools width=968></canvas>
+<div class=c-legend id=legend-access-to-best-tools></div>
+<div class=stats-notes>n=601</div>
+</div>
+<div class=c-chart>
+<h3 class=title>I lose time by context-switching between tools on a typical work day.</h3>
+<canvas height=56 id=chart-lose-time-context-switch width=968></canvas>
+<div class=c-legend id=legend-lose-time-context-switch></div>
+<div class=stats-notes>n=601</div>
+</div>
+</div>
+<div class=tab-pane id=higher-performing-tools role=tabpanel>
+<div class=c-chart>
+<h3 class=title>I have access to the best tools.</h3>
+<canvas height=56 id=chart-access-to-best-tools-managers width=968></canvas>
+<div class=c-legend id=legend-access-to-best-tools-managers></div>
+<div class=stats-notes>n=913</div>
+</div>
+<div class=c-chart>
+<h3 class=title>I lose time by context-switching between tools on a typical work day.</h3>
+<canvas height=56 id=chart-lose-time-context-switch-managers width=968></canvas>
+<div class=c-legend id=legend-lose-time-context-switch-managers></div>
+<div class=stats-notes>n=913</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class='report-section report-section-demographics' id=section-demographics>
+<div class=container>
+<header class='c-banner u-margin-bottom-lg'>
+<h2>Demographics</h2>
+<h3>Who, what, where</h3>
+<p>We surveyed 5,296 software professionals from around the world. The majority of respondents identify as a software developer or engineer and work for small- to medium-sized businesses (SMB) in the hardware, services, and SaaS industries.</p>
+</header>
+<div class='row u-margin-bottom-xl'>
+<div class='col-md-9 col-md-offset-1'>
+<h3 class='title u-margin-bottom-sm'>Where are you based?</h3>
+<div class=world-map>
+<img src="/images/dev-survey-2018/world-map-3.jpg" alt="Gitlab world map jpg"/>
+<ul class=list-unstyled>
+<li class=europe>
+<div class=label>Europe</div>
+<div class=stat>46.41%</div>
+</li>
+<li class=north-america>
+<div class=label>North America</div>
+<div class=stat>36.67%</div>
+</li>
+<li class=south-america>
+<div class=label>South America</div>
+<div class=stat>3.8%</div>
+</li>
+<li class=middle-east>
+<div class=label>Middle East</div>
+<div class=stat>1.64%</div>
+</li>
+<li class=asia>
+<div class=label>Asia</div>
+<div class=stat>6.17%</div>
+</li>
+<li class=africa>
+<div class=label>Africa</div>
+<div class=stat>1.57%</div>
+</li>
+<li class=australia-and-new-zealand>
+<div class=label>Australia & New Zealand</div>
+<div class=stat>3.38%</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class=c-chart>
+<h3 class=title>Nearly half of respondents (43.52%) are in the computer hardware/services/SaaS industry, followed by:</h3>
+<canvas height=420 id=chart-industry width=868></canvas>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-4 col-md-offset-1'>
+<blockquote class=c-blockquote>Other industries represented by &lt;8%: government, aerospace and defense, automotive, consumer products manufacturing, energy and utilities, industrial manufacturing, biotech/pharma, insurance, food and bev</blockquote>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class=c-chart>
+<h3 class=title>Majority of respondents work for SMB (how many software devs work at your org?)</h3>
+<canvas height=300 id=chart-work-for-smb width=868></canvas>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class=c-chart>
+<h3 class=title>Majority of respondents (61.35%) identify as a software developer or engineer, followed by:</h3>
+<canvas height=420 id=chart-identify-software-developer width=868></canvas>
+<div class=chart-notes>
+Product management 1.75%
+<br/>
+IT management 1.69%
+<br/>
+QA 1.19%
+<br/>
+Security engineer 0.64%
+<br/>
+Release management 0.37%
+</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class=c-chart>
+<h3 class=title>Majority of software developers/engineers (61.64%) identify as a web developer, followed by:</h3>
+<canvas height=420 id=chart-identify-web-developer width=868></canvas>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-4 col-md-offset-1'>
+<blockquote class=c-blockquote>&lt;1% identify as a machine learning specialist, graphics programming, database administrator, quality assurance engineer, graphic designer</blockquote>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class=c-chart>
+<h3 class=title>Age</h3>
+<canvas height=360 id=chart-age width=868></canvas>
+<div class=chart-notes>
+51-60 1.74%
+<br/>
+60+ 0.45%
+<br/>
+prefer not to say 0.34%
+</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-10 col-md-offset-1'>
+<div class=c-chart>
+<h3 class=title>Gender</h3>
+<canvas height=120 id=chart-gender width=868></canvas>
+<div class=chart-notes>
+non-binary/other 1.70%
+<br/>
+prefer not to say 1.49%
+</div>
+</div>
+</div>
+</div>
+<div class=u-release>
+<hr class=angled />
+</div>
+<div class='row u-margin-top-sm'>
+<div class=col-md-10>
+<h2 id=methodology>Methodology</h2>
+</div>
+</div>
+<div class='row u-margin-bottom-lg'>
+<div class='col-md-8 col-md-offset-1'>
+<p>We launched this Global Developer Survey on November 17, 2017, collecting responses until December 18, 2017. During that time, we promoted the survey primarily on GitLab’s social media channels and newsletter. In order to correct for the gender imbalance developing in our survey sample, we made an extra push via Twitter on December 5 to encourage women involved in the software development lifecycle to take the survey. By the end of the open period, we achieved approximately 25% female respondents, the same percentage of women who currently hold computing roles, according to NCWIT.</p>
+</div>
+</div>
+<div class=row>
+<div class='col-md-8 col-md-offset-1'>
+<h3>Segmentation</h3>
+<p>To create and compare the filtered views of developers and management, we used the following criteria, collected from question 8 in the survey:</p>
+</div>
+</div>
+<div class=row>
+<div class='col-md-8 col-md-offset-1'>
+<div class='c-callout c-callout--simple'>
+<div class=row>
+<div class=col-md-6>
+<h4>“Developer” in our survey refers to people who chose:</h4>
+<ul>
+<li>Software dev/Software engineer</li>
+<li>Software architect</li>
+<li>Systems Engineer/Network engineer</li>
+<li>Security engineer</li>
+<li>Quality assurance</li>
+</ul>
+</div>
+<div class=col-md-6>
+<h4>“Management” in the survey will refer to:</h4>
+<ul>
+<li>IT Management</li>
+<li>Software Dev Management</li>
+<li>DevOps Management</li>
+<li>Technology executive</li>
+</ul>
+<p class=note>
+<em>We excluded Product and Release management.</em>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class='col-md-8 col-md-offset-1'>
+<p>To create and compare the views of high-performing and lower-performing teams, we used the following criteria:</p>
+<div class='c-callout c-callout--simple'>
+<p>Higher-performing teams are defined by developers who told us that they deploy their code on demand, multiple times per day, and who estimated that they spend 50% or more of their time on new work (n=913). Lower-performing teams are defined by developers who told us that they deploy their code “between once per day and once per month” and “between once per month and once every six months.” (n=601) We took inspiration from the State of DevOps report, which identifies deployment frequency and time spent on new work versus rework as two of several indicators of high- and low-performing organizations. To ensure we had a big enough segment to compare, we lumped together everyone who does not deploy on -demand into the lower-performing category.</p>
+</div>
+</div>
+</div>
+<div class='row u-margin-bottom-md'>
+<div class='col-md-8 col-md-offset-1'>
+<p>To create and compare the views of remote and non-remote teams, we used the following criteria:</p>
+<div class='c-callout c-callout--simple'>
+<div class=row>
+<div class=col-md-6>
+<h4>“Remote” teams:</h4>
+<ul>
+<li>All of our developers work remotely</li>
+<li>Most of our developers work remotely</li>
+</ul>
+</div>
+<div class=col-md-6>
+<h4>“In-office” teams:</h4>
+<ul>
+<li>All of our developers work in an office</li>
+<li>Most of our developer work in an office</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=social-sharing>
+<div class=social-sharing-item>
+<a class=twitter-share-button data-show-count=false data-text='See the results from @gitlab&#39;s 2018 Global Developer Survey' data-url='/developer-survey/' href='https://twitter.com/share?ref_src=twsrc%5Etfw'>Tweet</a>
+<script async=async charset=utf-8 src='https://platform.twitter.com/widgets.js'></script>
+</div>
+<div class=social-sharing-item>
+<script src='//platform.linkedin.com/in.js'>lang: en_US</script>
+<script data-url='/developer-survey/' type='IN/Share'></script>
+</div>
+</div>
+<div class='row u-margin-bottom-md u-margin-bottom-xl'>
+<div class='col-md-8 col-md-offset-2'>
+<div class=c-card>
+<a href="/free-trial/" class="btn cta-btn purple">Try GitLab for Free</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class=footer>
+<a href='/'>
+<svg width=65 height=60 viewBox="0 0 210 194" class=footer-logo>
+<path d="M105.0614,193.655 L105.0614,193.655 L143.7014,74.734 L66.4214,74.734 L105.0614,193.655 L105.0614,193.655 Z" fill="#E24329" class="logo-svg-shape logo-dark-orange-shape"/>
+<path d="M105.0614,193.6548 L66.4214,74.7338 L12.2684,74.7338 L105.0614,193.6548 Z" fill="#FC6D26" class="logo-svg-shape logo-orange-shape"/>
+<path d="M12.2685,74.7341 L12.2685,74.7341 L0.5265,110.8731 C-0.5445,114.1691 0.6285,117.7801 3.4325,119.8171 L105.0615,193.6551 L12.2685,74.7341 Z" fill="#FCA326" class="logo-svg-shape logo-light-orange-shape"/>
+<path d="M12.2685,74.7342 L66.4215,74.7342 L43.1485,3.1092 C41.9515,-0.5768 36.7375,-0.5758 35.5405,3.1092 L12.2685,74.7342 Z" fill="#E24329" class="logo-svg-shape logo-dark-orange-shape"/>
+<path d="M105.0614,193.6548 L143.7014,74.7338 L197.8544,74.7338 L105.0614,193.6548 Z" fill="#FC6D26" class="logo-svg-shape logo-orange-shape"/>
+<path d="M197.8544,74.7341 L197.8544,74.7341 L209.5964,110.8731 C210.6674,114.1691 209.4944,117.7801 206.6904,119.8171 L105.0614,193.6551 L197.8544,74.7341 Z" fill="#FCA326" class="logo-svg-shape logo-light-orange-shape"/>
+<path d="M197.8544,74.7342 L143.7014,74.7342 L166.9744,3.1092 C168.1714,-0.5768 173.3854,-0.5758 174.5824,3.1092 L197.8544,74.7342 Z" fill="#E24329" class="logo-svg-shape logo-dark-orange-shape"/>
+</svg>
+</a>
+<div class='animated container'>
+<ul class='text-center footer-social'>
+<li>
+<a href="https://twitter.com/gitlab"><i class='fab fa-twitter'></i>
+<span class=sr-only>Twitter</span>
+</a></li>
+<li>
+<a href="https://www.facebook.com/gitlab"><i class='fab fa-facebook'></i>
+<span class=sr-only>Facebook</span>
+</a></li>
+<li>
+<a href="https://www.youtube.com/channel/UCnMGQ8QHMAnVIsI3xJrihhg"><i class='fab fa-youtube'></i>
+<span class=sr-only>YouTube</span>
+</a></li>
+<li>
+<a href="https://www.linkedin.com/company/gitlab-com"><i class='fab fa-linkedin'></i>
+<span class=sr-only>LinkedIn</span>
+</a></li>
+</ul>
+</div>
+</footer>
+<span class=footer-after-outer-wrapper>
+<span class=footer-after-inner-wrapper>
+<span class=footer-after-0></span>
+<span class=footer-after-1></span>
+<span class=footer-after-2></span>
+<span class=footer-after-3></span>
+<span class=footer-after-4></span>
+<span class=footer-after-5></span>
+<span class=footer-after-6></span>
+<span class=footer-after-7></span>
+<span class=footer-after-8></span>
+<span class=footer-after-9></span>
+</span>
+</span>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/dev-survey-2018-bundle.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/dev-survey-2018.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+</body>
+</html>
+<script defer=true src='/javascripts/cbextras.js'></script>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Group Direction - Project Management
+|
+GitLab
+</title>
+<meta content='This is the group strategy for the Project Management group; which is part of the Plan stage within the Dev section.' name=description />
+<meta content='This is the group strategy for the Project Management group; which is part of the Plan stage within the Dev section.' name='twitter:description'/>
+<meta content='This is the group strategy for the Project Management group; which is part of the Plan stage within the Dev section.' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Group Direction - Project Management' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/plan/project_management/index.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/plan/project_management/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Group Direction - Project Management' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=4cf1fb774d1'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/plan/project_management/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target='.qnav'>
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Group Direction - Project Management
+</h1>
+</div>
+</div>
+<div class='wrapper sidebar-layout-wrapper clearfix'>
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/mushakov'>
+<img
+src='/images/team/melissaushakov.jpg'
+class=codeowner-avatar-img
+alt='Melissa Ushakov'
+title='Melissa Ushakov'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/david'>
+<img
+src='/images/team/ddesanto.jpg'
+class=codeowner-avatar-img
+alt='David DeSanto'
+title='David DeSanto'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gweaver'>
+<img
+src='/images/team/gabeweaver.jpg'
+class=codeowner-avatar-img
+alt='Gabe Weaver'
+title='Gabe Weaver'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+<h5>
+Contribute to this page
+</h5>
+<div>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/plan/project_management/index.html.md.erb" class=external-source-link>Edit this page</a>
+<div class='d-flex align-items-center mt-2'></div>
+</div>
+</aside>
+<div class='container md-page'>
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li><a href="/direction/plan/">Product Stage Direction - Plan</a></li><li>Group Direction - Project Management</li>
+</ol>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<p>This direction page was last reviewed on:
+<code>2024-07-02</code></p>
+<ul id=markdown-toc>
+<li><a href="#introduction-and-how-you-can-help" id=markdown-toc-introduction-and-how-you-can-help>Introduction and how you can help</a></li>
+<li><a href="#group-overview" id=markdown-toc-group-overview>Group Overview</a> <ul>
+<li><a href="#team-planning" id=markdown-toc-team-planning>Team Planning</a></li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target audience</a></li>
+<li><a href="#today" id=markdown-toc-today>Today</a></li>
+<li><a href="#medium-term-1-2-years" id=markdown-toc-medium-term-1-2-years>Medium Term (1-2 years)</a></li>
+</ul>
+</li>
+<li><a href="#current-investment-mix" id=markdown-toc-current-investment-mix>Current Investment Mix</a></li>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What we recently completed</a></li>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What we are currently working on</a> <ul>
+<li><a href="#team-planning-1" id=markdown-toc-team-planning-1>Team Planning</a></li>
+</ul>
+</li>
+<li><a href="#whats-next-for-us" id=markdown-toc-whats-next-for-us>What's next for us</a> <ul>
+<li><a href="#team-planning-2" id=markdown-toc-team-planning-2>Team Planning</a></li>
+</ul>
+</li>
+<li><a href="#what-were-not-doing" id=markdown-toc-what-were-not-doing>What we're not doing</a></li>
+<li><a href="#performance-indicators" id=markdown-toc-performance-indicators>Performance indicators</a></li>
+<li><a href="#competitive-landscape" id=markdown-toc-competitive-landscape>Competitive landscape</a></li>
+<li><a href="#analyst-landscape" id=markdown-toc-analyst-landscape>Analyst landscape</a></li>
+<li><a href="#most-requested-issues" id=markdown-toc-most-requested-issues>Most requested issues</a></li>
+<li><a href="#top-strategy-items" id=markdown-toc-top-strategy-items>Top strategy items</a> <ul>
+<li><a href="#enterprise-planning-frameworks-support" id=markdown-toc-enterprise-planning-frameworks-support>Enterprise planning frameworks support</a></li>
+<li><a href="#use-devops-data-to-guide-planning" id=markdown-toc-use-devops-data-to-guide-planning>Use DevOps data to guide planning</a></li>
+<li><a href="#automation-and-machine-learning-to-improve-quality-of-life" id=markdown-toc-automation-and-machine-learning-to-improve-quality-of-life>Automation and machine learning to improve quality of life</a></li>
+</ul>
+</li>
+<li><a href="#jobs-to-be-done" id=markdown-toc-jobs-to-be-done>Jobs To Be Done</a></li>
+</ul>
+<h2 id=introduction-and-how-you-can-help>Introduction and how you can help</h2>
+<p>👋 This is the group strategy for Project Management, which is part of the Plan stage. Please reach out to the group's Product Manager, <a href="https://gitlab.com/gweaver">Gabe Weaver</a> (<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#103;&#119;&#101;&#097;&#118;&#101;&#114;&#064;&#103;&#105;&#116;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">E-mail</a>), if you'd like to provide feedback or ask any questions related to this product category.</p>
+<p>This strategy is a work in progress and everyone can contribute:</p>
+<ul>
+<li>Please comment and contribute to the related <a href="https://gitlab.com/groups/gitlab-org/-/issues?sort=created_date&amp;state=opened&amp;label_name[]=group::project+management">issues</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics?state=opened&amp;page=1&amp;sort=start_date_desc&amp;label_name[]=group::project+management">epics</a>. Sharing your feedback directly on GitLab.com is the best way to contribute to our strategy and vision.</li>
+<li>Please share feedback directly via email, Twitter, or <a href="https://calendly.com/gweaver/45-minute-meeting">schedule a quick Zoom for us to connect</a>.</li>
+</ul>
+<h2 id=group-overview>Group Overview</h2>
+<p><a href="https://about.gitlab.com/company/mission/#mission">GitLab's mission</a> is to build software so that <strong>everyone can contribute</strong> and we aim to be the most popular collaboration platform for knowledge workers in any industry. The Project Management Group is a cross-departmental team focused on two primary categories – <a href="/direction/plan/project_management/team_planning">Team Planning</a>.</p>
+<h3 id=team-planning>Team Planning</h3>
+<p>Team Planning's goal is to provide collaboration and planning capabilities to empower small, autonomous teams to continuously deliver customer and business value with the shortest possible cycle times. Features owned by the Team Planning category include <a href="https://docs.gitlab.com/ee/user/project/issues/">work items (issues)</a>, <a href="https://docs.gitlab.com/ee/user/tasks.html">tasks</a>, <a href="https://docs.gitlab.com/ee/user/project/milestones/">milestones</a>, <a href="https://docs.gitlab.com/ee/user/group/iterations/">iterations</a>, <a href="https://docs.gitlab.com/ee/user/project/issue_board.html">boards</a>, <a href="https://docs.gitlab.com/ee/user/discussions/">discussions</a>, <a href="https://docs.gitlab.com/ee/user/project/labels.html">labels</a>, <a href="https://docs.gitlab.com/ee/user/todos.html">todos</a>, <a href="https://docs.gitlab.com/ee/user/project/quick_actions.html">quick actions</a>, and <a href="https://docs.gitlab.com/ee/user/profile/notifications.html">notifications</a>.</p>
+<h3 id=target-audience>Target audience</h3>
+<p>GitLab identifies who our DevSecOps application is built for utilizing the following categorization. We list our view of who we will support when in priority order.</p>
+<ul>
+<li>🟩 - Targeted with strong support</li>
+<li>🟨 - Targeted but incomplete support</li>
+<li>⬜️ - Not targeted but might find value</li>
+</ul>
+<h3 id=today>Today</h3>
+<ol>
+<li>🟩 <a href="https://about.gitlab.com/handbook/product/personas/#sasha-software-developer">Software Developers</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#delaney-development-team-lead">Development Team Leads</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#dakota-application-development-director">Application Development Director</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#parker-product-manager">Product Managers</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#simone-software-engineer-in-test">Software Engineer in Test</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#presley-product-designer">Product Designers</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#devon-devops-engineer">DevOps Engineers</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#alex-security-operations-engineer">Security Operations Engineers</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#rachel-release-manager">Release Manager</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#sam-security-analyst">Security Analysts</a></li>
+<li>⬜️ <a href="https://about.gitlab.com/handbook/product/personas/#allison-application-ops">Application Ops</a></li>
+<li>⬜️ <a href="https://about.gitlab.com/handbook/product/personas/#priyanka-platform-engineer">Platform Engineer</a></li>
+<li>⬜️ <a href="https://about.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Compliance Managers</a></li>
+<li>⬜️ <a href="https://about.gitlab.com/handbook/product/personas/#sidney-systems-administrator">Systems Administrator</a></li>
+</ol>
+<h3 id=medium-term-1-2-years>Medium Term (1-2 years)</h3>
+<ol>
+<li>🟩 <a href="https://about.gitlab.com/handbook/product/personas/#sasha-software-developer">Software Developers</a></li>
+<li>🟩 <a href="https://about.gitlab.com/handbook/product/personas/#delaney-development-team-lead">Development Team Leads</a></li>
+<li>🟩 <a href="https://about.gitlab.com/handbook/product/personas/#dakota-application-development-director">Application Development Director</a></li>
+<li>🟩 <a href="https://about.gitlab.com/handbook/product/personas/#parker-product-manager">Product Managers</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#simone-software-engineer-in-test">Software Engineer in Test</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#presley-product-designer">Product Designers</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#devon-devops-engineer">DevOps Engineers</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#alex-security-operations-engineer">Security Operations Engineers</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#rachel-release-manager">Release Manager</a></li>
+<li>🟩 <a href="https://about.gitlab.com/handbook/product/personas/#sam-security-analyst">Security Analysts</a></li>
+<li>⬜️ <a href="https://about.gitlab.com/handbook/product/personas/#allison-application-ops">Application Ops</a></li>
+<li>⬜️ <a href="https://about.gitlab.com/handbook/product/personas/#priyanka-platform-engineer">Platform Engineer</a></li>
+<li>🟨 <a href="https://about.gitlab.com/handbook/product/personas/#cameron-compliance-manager">Compliance Managers</a></li>
+<li>⬜️ <a href="https://about.gitlab.com/handbook/product/personas/#sidney-systems-administrator">Systems Administrator</a></li>
+</ol>
+<h2 id=current-investment-mix>Current Investment Mix</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Allocation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Team Planning</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h2 id=what-we-recently-completed>What we recently completed</h2>
+<ul>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/12396">Track time on tasks (17.0)</a></strong> - Use quick actions or the sidebar actions on a task to set time estimates and record time spent.</li>
+<li><strong><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/25758">Milestones and iterations visible on issue boards (17.0)</a></strong> - With milestone and iteration details directly visible on issue cards, you can easily track progress and adjust your team's workload on the fly.</li>
+<li><strong><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/467415">Adds type attribute to issues webhook payloads (17.1)</a></strong> - Issues, tasks, incidents, requirements, objectives, and key results all trigger payloads under the Issues Events webhook category. Until now, there has been no way to quickly determine the type of object that triggered the webhook within the event payload. This release introduces an object_attributes.type attribute available on payloads within the Issues events, Comments, Confidential issues events, and Emoji events triggers.</li>
+</ul>
+<h2 id=what-we-are-currently-working-on>What we are currently working on</h2>
+<p>Our group level <a href="https://gitlab.com/groups/gitlab-org/-/boards/1235826?&amp;label_name[]=devops%3A%3Aplan&amp;label_name[]=group%3A%3Aproject%20management">issue board</a> provides detailed insight into everything currently in flight.</p>
+<h3 id=team-planning-1>Team Planning</h3>
+<ul>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/6033">Work Item Enhancements</a></strong> – <a href="https://gitlab.com/groups/gitlab-org/-/epics/11012">Standardize the workflow for creating planning objects</a> and <a href="https://gitlab.com/groups/gitlab-org/-/epics/7105">associate DevSecOps artifacts to supported work item types</a>.</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/435">Report on iteration velocity and volatility</a></strong> – Helps teams have meaningful discussions about trade-offs and estimations when planning upcoming iterations. Issues and tasks can be assigned to iterations, so our first step is to <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/381879">prevent double counting weight from parents and their children within timebox reports</a> and <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/457538">showing parent/child relationships in the iteration report</a>, followed by <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/457094">displaying velocity and volatility</a>.</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/8308">Work items are natively supported within Groups</a></strong> – Eliminate the need to maintain projects under groups solely for agile planning purposes, allow teams to consolidate their planning activities at the group level, and enable issues and epics to be migrated to work items. We're currently working on <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/458986">the remaining blockers</a> to feature parity between legacy issues and work item issues. Once issues are migrated to work items, we will be able to turn on native Group Issues.</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/10760">Summarize Issue and Epic discussions Beta/GA</a></strong> – View an AI generated summary of all threads and comments within an issue or epic to quickly get up to spead on the discussion.</li>
+</ul>
+<h2 id=whats-next-for-us>What's next for us</h2>
+<h3 id=team-planning-2>Team Planning</h3>
+<ul>
+<li><strong><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/368816">Enable work items (Tasks) to be visible on Boards</a></strong>. Teams can manage their tasks (and other work items) from within Boards.</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/9584">Complete the migration of issues to work items</a></strong>. Replace the legacy issue detail view with the new and improved real-time work item detail view.</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/12320">Group issues</a></strong>. Issues can be created within groups without depending on a project within the group. This will optionally allow teams to consolidate their planning workflows within a single location instead of spreading them across a group and a project.</li>
+<li><strong><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/387224">Work items open in a drawer within boards and lists</a></strong>. Reduce the context switching and tab fatique when drilling down into a work item detail view.</li>
+<li><strong><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/368290">Customizable work item statuses</a></strong>. Provide a foundation for building a more robust work item lifecycle management solution, and enable teams to mark work items as done or cancelled.</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/235">Add support for custom fields to work items</a></strong>. Provide teams with a more robust solution for associating business-specific meta-data to work items.</li>
+</ul>
+<h2 id=what-were-not-doing>What we're not doing</h2>
+<p>While we believe the following items are critically important to the long-term use cases we want to support within Plan, we currently are not focusing on solving them:</p>
+<ul>
+<li>Implementing a comprehensive resource management system within GitLab.</li>
+<li>Integrating a complex dependency management system across multiple projects.</li>
+<li>Building a native risk assessment and mitigation framework.</li>
+<li>Developing a comprehensive budgeting and cost management module.</li>
+<li>Creating an advanced project forecasting and scenario planning tool.</li>
+<li>Developing a complex change management tracking and approval workflow.</li>
+<li>Adding support for a native automation framework within GitLab.</li>
+<li>Advanced team analytics.</li>
+</ul>
+<h2 id=performance-indicators>Performance indicators</h2>
+<p>Check out our cross-functional <a href="https://about.gitlab.com/handbook/product/groups/project-management/#performance-indicators">Project Management team handbook page</a> to view our current customer value, product quality, and process performance indicators (internal link).</p>
+<h2 id=competitive-landscape>Competitive landscape</h2>
+<p>The <a href="https://www.datanyze.com/market-share/project-management">project management tools market</a> is dominated by Jira (31%), Microsoft (18%), Smartsheet (6%), and Trello (5%). To be competitive, GitLab needs to solve for the following customer comments in the immediate future:</p>
+<blockquote>
+<p>We’ve been told to use gitlab’s milestones to capture agile sprints, as they’re the only thing that can have burn down, they work well with boards and have concepts of time. The default way epics get their start/end dates is based on the milestones of the issues attached though – doesn’t make sense as an issue shouldn’t be assigned to an agile sprint until the sprint is eminent. (root of problem is that gitlab milestone must either be equated to agile milestone or agile sprint, not both – you’re missing a concept)</p>
+<p>Needs to be a way to have a team velocity, as a scrum master be able to go through and say “This feature requires ~100 points of work, we can do 25 points per sprint, will take 4 sprints (8 weeks) – you want it done in 6 weeks, will either require to be simplified or increased resourcing.”</p>
+<p>Need burn-down chart/progress status of sprints, features, initiatives, and milestones.</p>
+<p>During sprint planning, need a way to see what my team’s velocity has been last several sprints to have a good idea of how much we should be planning for upcoming sprint.</p>
+<p>Need an easy way to see how much I’m assigning to each team member during sprint planning (team members aren’t interchangeable – sprint can have user stories less than velocity, but if user stories are only doable by one team member then the work can’t get done).</p>
+<p>Need to be able to answer questions around “which teams/members are working on this feature?”, “are we still on track to meet this milestone?”, “we want to add this new feature, how will that slow down other development?”, “This team is needed for another project, how will that effect timelines on this project?”, etc…</p>
+</blockquote>
+<p>A comprehensive analysis comparing GitLab to best-in-class team planning solutions is available to internal team members <a href="https://internal.gitlab.com/handbook/product/best-in-class/plan/">here</a></p>
+<h2 id=analyst-landscape>Analyst landscape</h2>
+<p>What they are saying:</p>
+<ul>
+<li>Within the next few years, over 2/3 of organisations will adopt a product-centric delivery model and move away from project management practices.</li>
+<li>"Agile" adoption remains strong and shows no signs of slowing down.</li>
+<li>Successful project/product management solutions must function as part of the overall Value Stream Delivery Platform and serve as a hub for planning and measuring value delivery.</li>
+<li>Competitive products should also provide feedback in the form of qualitative and quantitative metrics such as customer value and satisfaction, delivery velocity and volatility, business outcomes, cycle times, and organizational effectiveness around adopting modern DevOps and "Agile" practices.</li>
+</ul>
+<h2 id=most-requested-issues>Most requested issues</h2>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues?sort=popularity&amp;state=opened&amp;label_name[]=group::project+management">All users</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues?sort=popularity&amp;state=opened&amp;label_name[]=group::project+management&amp;label_name[]=customer">Customer / Customer Success</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues?sort=popularity&amp;state=opened&amp;label_name[]=group::project+management&amp;label_name[]=Dogfooding">Dogfooding</a></li>
+</ul>
+<h2 id=top-strategy-items>Top strategy items</h2>
+<p>While we are not currently working on the items listed within this section, we believe that solving for them will significantly contribute to <a href="https://about.gitlab.com/direction/plan/#3-year-strategy">Plan's 3-year strategy</a>. Once validated and team capacity is available, we will move these strategic items into our queue for prioritization and implementation.</p>
+<h3 id=enterprise-planning-frameworks-support>Enterprise planning frameworks support</h3>
+<ul>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/235">Custom Fields &amp; Data Tables</a></strong>
+<ul>
+<li><em>Outcome:</em> Teams can extend the core issue experience with custom data to better integrate planning in GitLab to the team's business domain.</li>
+</ul>
+</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/3354">Extensible work items</a></strong>
+<ul>
+<li><em>Outcome:</em> Teams can extend and customize default work item types to align to their specific business context and activities that the team needs to collaborate on.</li>
+</ul>
+</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/328">Swimlanes on Issue Boards</a></strong>
+<ul>
+<li><em>Outcome:</em> Provide teams with more flexibility to visualize their workflows by organizing issues in horizontal lanes across lists that group issues according to different contexts such as epics, assignees, milestones, and label.</li>
+<li><em>Progress:</em> The MVC for <a href="https://docs.gitlab.com/ee/user/project/issue_board.html#group-issues-in-swimlanes">Epic Swimlanes</a> shipped in 13.6.</li>
+</ul>
+</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/382">Real-time Boards</a></strong>
+<ul>
+<li><em>Outcome:</em> To allow teams to collaborate in real time on Issue Boards to improve the efficiency and effectiveness of planning and staying in sync on who is working on what.</li>
+</ul>
+</li>
+</ul>
+<h3 id=use-devops-data-to-guide-planning>Use DevOps data to guide planning</h3>
+<ul>
+<li><strong><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/7629">Cumulative flow diagrams</a></strong>
+<ul>
+<li><em>Outcome:</em> Teams have an additional sensing mechanism to diagnose overloaded queues so they can better diagnose and improve process stability. This is currently blocked by the implementation of <a href="https://gitlab.com/groups/gitlab-org/-/epics/5099">configurable work item statuses</a></li>
+</ul>
+</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/1686">Capacity planning and management</a></strong>
+<ul>
+<li><em>Outcome:</em> When planning work within timeboxes, the team can take the variable of team capacity into account when decided how much scope to take on for a given period.</li>
+</ul>
+</li>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/1956">Integrating analytics on Issue Boards</a></strong>
+<ul>
+<li><em>Outcome:</em> Teams can access burndown charts and cumulative flow diagrams specific to their team and directly within the context where they are planning and visualizing the flow of their work items.</li>
+</ul>
+</li>
+</ul>
+<h3 id=automation-and-machine-learning-to-improve-quality-of-life>Automation and machine learning to improve quality of life</h3>
+<ul>
+<li><strong><a href="https://gitlab.com/groups/gitlab-org/-/epics/218">Automation Framework</a></strong>
+<ul>
+<li><em>Outcome:</em> Teams can create automation sequences for transitioning issues to different statuses, updating meta data based on given events, and self-serve creating solutions to help improve efficiencies around Issue management.</li>
+</ul>
+</li>
+<li><strong><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/2059">Configurable Workflows</a></strong>
+<ul>
+<li><em>Outcome:</em> Teams can sequence types of issues through different workflows / statuses. For those compliance minded organizations, workflows will optionally support <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/273760#note_439052044">tollgates</a>.</li>
+</ul>
+</li>
+</ul>
+<h2 id=jobs-to-be-done>Jobs To Be Done</h2>
+<p>We are currently focused on providing industry-leading solutions for the following <a href="https://about.gitlab.com/handbook/product/ux/jobs-to-be-done/">Jobs To Be Done (JTBD)</a>:</p>
+<div>
+<h3 id=project_management_team_planning_1>Plan and Collaborate On Value Delivery</h3>
+<p></p>
+<table style="width: 100%">
+<colgroup>
+<col span=1 style="width: 60%;"/>
+<col span=1 style="width: 20%;"/>
+<col span=1 style="width: 13%;"/>
+<col span=1 style="width: 9%;"/>
+</colgroup>
+<tr>
+<th>Job statements</th>
+<th>Maturity</th>
+<th>Confidence</th>
+<th>Source</th>
+</tr>
+<tr>
+<td>
+When splitting prioritized initiatives or features into requirements, I want to group related slices of value and surface dependencies, so I can maximize alignment on the scope of a business goal and efficiently plan its incremental delivery.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_c.svg" alt="Badge level c"/></a>
+</td>
+<td>
+Researched
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/900">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When estimating work during refinement, I want to validate that requirements are valuable and discrete, so I can increase the amount of value delivered with the least effort.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_d.svg" alt="Badge level d"/></a>
+</td>
+<td>
+Researched
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/900">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When planning a release, I want to prioritize and sequence estimated work based on feasibly, capacity, and ROI, so I can incrementally deliver toward business objectives.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Researched
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/1462">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When organizing priority work, I want to visualize our intended workflow, so I can increase team efficiency, collaboration, and predictability.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Researched
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/1370">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When collaborating with a team or stakeholders, I want to radiate the current status of work continuously, so I can increase alignment on progress and any impediments that need to be addressed.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_c.svg" alt="Badge level c"/></a>
+</td>
+<td>
+Researched
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/900">Issue</a>
+</td>
+</tr>
+</table>
+<h3 id=project_management_team_planning_2>Align plans with customer needs and business objectives</h3>
+<p></p>
+<table style="width: 100%">
+<colgroup>
+<col span=1 style="width: 60%;"/>
+<col span=1 style="width: 20%;"/>
+<col span=1 style="width: 13%;"/>
+<col span=1 style="width: 9%;"/>
+</colgroup>
+<tr>
+<th>Job statements</th>
+<th>Maturity</th>
+<th>Confidence</th>
+<th>Source</th>
+</tr>
+<tr>
+<td>
+When reviewing my product strategy with leadership, I want to demonstrate how my plans will drive overall vision and objectives toward reality, so I can increase buy-in, trust, and allocation of resources toward my efforts.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Researched
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/1463">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When synthesizing inputs, I want to categorize opportunities based on how efficiently they drive the success of business objectives, so I can increase confidence in items I have prioritized, and feel empowered to say no to less impactful ideas.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_c.svg" alt="Badge level c"/></a>
+</td>
+<td>
+Researched
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/900">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When visualizing the plan of how my strategy will be implemented, I want to display how prioritized items cascade up toward larger vision and business objectives, so I can increase alignment on the overall impact and importance of even the most granular items within my plan.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Researched
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/1463">Issue</a>
+</td>
+</tr>
+<tr>
+<td>
+When soliciting feedback and collaboration on the implementation of my strategy, I want to craft a view of my plan with the intended audience in mind, so I can increase team and stakeholder alignment through effective storytelling at the correct level of abstraction.
+</td>
+<td>
+<a href="/handbook/product/ux/ux-scorecards/index.html#grading-rubric"><img src="/images/grade/grade_-.svg" alt="Badge level -"/></a>
+</td>
+<td>
+Researched
+</td>
+<td>
+<a href="https://gitlab.com/gitlab-org/ux-research/-/issues/1463">Issue</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/plan/project_management/index.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/plan/project_management/index.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>

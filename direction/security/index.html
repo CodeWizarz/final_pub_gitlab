@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta content='width=device-width, initial-scale=1.0' name=viewport />
+<meta content='default-src &#39;self&#39; https: http:; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https: http:; style-src &#39;self&#39; &#39;unsafe-inline&#39; https: http:; object-src https: http:; base-uri &#39;self&#39;; connect-src &#39;self&#39; https: http: wss: ws:; frame-src &#39;self&#39; https: http:; img-src &#39;self&#39; https: http: data:; manifest-src &#39;self&#39;; media-src &#39;self&#39; https: http:; worker-src &#39;self&#39; https: http:;' http-equiv=Content-Security-Policy />
+<meta content='index, follow' name=robots />
+<title>
+Product Section Direction - Security
+|
+GitLab
+</title>
+<meta content='Security visibility from development to operations to minimize risk' name=description />
+<meta content='Security visibility from development to operations to minimize risk' name='twitter:description'/>
+<meta content='Security visibility from development to operations to minimize risk' property='og:description'/>
+<meta content=GitLab property='og:site_name'/>
+<meta content='Product Section Direction - Security' property='og:title'/>
+<meta content='https://gitlab.com/gitlab-com/www-gitlab-com/' property='og:repo'/>
+<meta content='https://gitlab.com/' property='og:instance'/>
+<meta content='gitlab-com/www-gitlab-com/' property='og:path'/>
+<meta content='direction/security/template.html.md.erb' property='og:relative_path'/>
+<meta content='' property='og:monorepo_site_path_fragment'/>
+<meta content=article property='og:type'/>
+<meta content='https://about.gitlab.com/direction/security/' property='og:url'/>
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" property="og:image">
+<meta content="https://about.gitlab.com/images/opengraph/gitlab-blog-cover.png" name="twitter:image">
+<meta content=summary_large_image name='twitter:card'/>
+<meta content='@GitLab' name='twitter:site'/>
+<meta content='Product Section Direction - Security' name='twitter:title'/>
+<meta content='@GitLab' name='twitter:creator'/>
+<link href='/atom.xml' rel=alternate title=Blog type='application/atom+xml'/>
+<link href='/all-releases.xml' rel=alternate title='All Releases' type='application/atom+xml'/>
+<link href='/security-releases.xml' rel=alternate title='Security Releases' type='application/atom+xml'/>
+<link href='/releases.xml' rel=alternate title='Major Releases' type='application/atom+xml'/>
+<link href='/ico/favicon.ico?cache=2022041' rel='shortcut icon'/>
+<link href='/ico/favicon-192x192.png?cache=2022041' rel=icon sizes=192x192 type='image/png'/>
+<link href='/ico/favicon-160x160.png?cache=2022041' rel=icon sizes=160x160 type='image/png'/>
+<link href='/ico/favicon-96x96.png?cache=2022041' rel=icon sizes=96x96 type='image/png'/>
+<link href='/ico/favicon-16x16.png?cache=2022041' rel=icon sizes=16x16 type='image/png'/>
+<link href='/ico/favicon-32x32.png?cache=2022041' rel=icon sizes=32x32 type='image/png'/>
+<link href='/ico/apple-touch-icon-57x57.png?cache=2022041' rel=apple-touch-icon sizes=57x57 />
+<link href='/ico/apple-touch-icon-114x114.png?cache=2022041' rel=apple-touch-icon sizes=114x114 />
+<link href='/ico/apple-touch-icon-72x72.png?cache=2022041' rel=apple-touch-icon sizes=72x72 />
+<link href='/ico/apple-touch-icon-144x144.png?cache=2022041' rel=apple-touch-icon sizes=144x144 />
+<link href='/ico/apple-touch-icon-60x60.png?cache=2022041' rel=apple-touch-icon sizes=60x60 />
+<link href='/ico/apple-touch-icon-120x120.png?cache=2022041' rel=apple-touch-icon sizes=120x120 />
+<link href='/ico/apple-touch-icon-76x76.png?cache=2022041' rel=apple-touch-icon sizes=76x76 />
+<link href='/ico/apple-touch-icon-152x152.png?cache=2022041' rel=apple-touch-icon sizes=152x152 />
+<link href='/ico/apple-touch-icon-180x180.png?cache=2022041' rel=apple-touch-icon sizes=180x180 />
+<meta content='#554488' name=msapplication-TileColor />
+<meta content='/ico/mstile-144x144.png?cache=2022041' name=msapplication-TileImage />
+<meta content='/ico/browserconfig.xml' name=msapplication-config />
+<script src='https://cdn.cookielaw.org/consent/7f944245-c5cd-4eed-a90e-dd955adfdd08/OtAutoBlock.js'></script>
+<script charset=UTF-8 data-domain-script=7f944245-c5cd-4eed-a90e-dd955adfdd08 src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js'></script>
+<script>
+  //<![CDATA[
+    function OptanonWrapper() { }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || []
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'region': [ 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'PE', 'RU'],
+      'wait_for_update': 500
+    });
+    gtag('consent', 'default', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'functionality_storage': 'granted',
+      'wait_for_update': 500
+    });
+    
+    window.geofeed = (options) => {
+      dataLayer.push({
+        'event' : 'OneTrustCountryLoad',
+        'oneTrustCountryId': options.country.toString()
+      })
+    }
+    
+    const json = document.createElement('script');
+    json.setAttribute('src', 'https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed');
+    document.head.appendChild(json);
+  //]]>
+</script>
+<script>document.documentElement.className = 'html--js'</script>
+<script async='' src='//cdn.bizible.com/scripts/bizible.js'></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-37019925-1', 'auto', {allowLinker: true});
+ga('require', 'GTM-WC3ZR2P');
+</script>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJXWQL');
+</script>
+<script>
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+_st('install','Z4n7msKyctXXfJs66EKx','2.0.0');
+</script>
+<link href='https://about.gitlab.com/direction/security/' rel=canonical />
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700' rel=stylesheet />
+<link crossorigin=anonymous href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt' rel=stylesheet />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
+<link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
+
+<link href="/stylesheets/slippers.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/be-navigation.css?cacheBust=4cf1fb774d1" rel=stylesheet />
+<link href="/stylesheets/handbook.css" rel=stylesheet />
+<link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
+</head>
+<body data-spy=scroll data-target=".qnav">
+<noscript>
+<iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
+</noscript>
+<template id=be-nav>
+<div id=be-nav-target>
+<slp-navigation></slp-navigation>
+</div>
+</template>
+<nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
+<be-navigation></be-navigation>
+</nav>
+<div class='search-box js-search-box'>
+<i class='fa fa-search search-box-icon'></i>
+<input class='search-input js-search st-header' placeholder='Search...'/>
+<button aria-label='Close search' class='search-close js-search-toggle' type=button>
+<i class='fa fa-times'></i>
+</button>
+</div>
+<script src='/javascripts/be-navigation.js?cacheBust=4cf1fb774d1'></script>
+<div class=blank-header>
+<img src="/images/home/icons-pattern-left.svg" class="image-border image-border-left" alt="Gitlab hero border pattern left svg"/>
+<img src="/images/home/icons-pattern-right.svg" class="image-border image-border-right" alt="Gitlab hero border pattern right svg"/>
+<div class=header-content>
+<h1>
+Product Section Direction - Security
+</h1>
+</div>
+</div>
+<div class="wrapper sidebar-layout-wrapper clearfix">
+<aside class=tocs-sidebar>
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+</aside>
+<div class=" container md-page">
+<ol class=breadcrumb>
+<li>You are here:</li>
+<li><a href="/direction/">GitLab Direction</a></li><li>Product Section Direction - Security</li>
+</ol>
+<div class="hidden-md hidden-lg">
+<div class=codeowners>
+<div>
+<h4 class=codeowners-header>
+Maintained by<span class='hidden-md hidden-lg'>:</span></h4>
+</div>
+<div class=codeowners-list>
+<a class=codeowner href='https://gitlab.com/hbenson'>
+<img
+src='/images/team/hillarybenson.jpg'
+class=codeowner-avatar-img
+alt='Hillary Benson'
+title='Hillary Benson'
+>
+</a>
+<a class=codeowner href='https://gitlab.com/gl-product-leadership'>
+<div class=codeowner-avatar-group title='@gl-product-leadership'>
+<span>G</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class=legal-disclaimer>
+<p id=legal-disclaimer>
+The following page may contain information related to upcoming products, features and functionality. It is important to note that the information presented is for informational purposes only, so please do not rely on the information for purchasing or planning purposes. Just like with all projects, the items mentioned on the page are subject to change or delay, and the development, release, and timing of any products, features or functionality remain at the sole discretion of GitLab Inc.
+</p>
+</div>
+<h2 class=no_toc id=on-this-page>On this page</h2>
+<ul id=markdown-toc>
+<li><a href="#section-overview" id=markdown-toc-section-overview>Section Overview</a> <ul>
+<li><a href="#gitlab-and-the-devsecops-lifecycle" id=markdown-toc-gitlab-and-the-devsecops-lifecycle>GitLab and the DevSecOps Lifecycle</a></li>
+<li><a href="#lowering-the-cost-of-remediation" id=markdown-toc-lowering-the-cost-of-remediation>Lowering the Cost of Remediation</a></li>
+<li><a href="#closing-the-loop" id=markdown-toc-closing-the-loop>Closing the Loop</a></li>
+<li><a href="#groups" id=markdown-toc-groups>Groups</a></li>
+<li><a href="#teams-and-investments" id=markdown-toc-teams-and-investments>Teams and Investments</a> <ul>
+<li><a href="#team-members" id=markdown-toc-team-members>Team members</a></li>
+<li><a href="#investments" id=markdown-toc-investments>Investments</a></li>
+</ul>
+</li>
+<li><a href="#accomplishments-news-and-updates" id=markdown-toc-accomplishments-news-and-updates>Accomplishments, News, and Updates</a> <ul>
+<li><a href="#section--team-member-updates" id=markdown-toc-section--team-member-updates>Section &amp; team member updates</a></li>
+<li><a href="#important-pi-milestones" id=markdown-toc-important-pi-milestones>Important PI milestones</a></li>
+<li><a href="#recent-accomplishments" id=markdown-toc-recent-accomplishments>Recent accomplishments</a></li>
+<li><a href="#whats-ahead" id=markdown-toc-whats-ahead>What’s ahead</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3-year-section-themes" id=markdown-toc-3-year-section-themes>3 Year Section Themes</a> <ul>
+<li><a href="#security-is-a-team-effort" id=markdown-toc-security-is-a-team-effort>Security Is A Team Effort</a></li>
+<li><a href="#shift-left-no-more-left-than-that" id=markdown-toc-shift-left-no-more-left-than-that>Shift Left. No, More Left Than That.</a></li>
+<li><a href="#shift-right-yes-right-right-into-operations" id=markdown-toc-shift-right-yes-right-right-into-operations>Shift Right. Yes, Right. Right Into Operations.</a></li>
+<li><a href="#provide-active-intelligence-to-enable-data-driven-decisions" id=markdown-toc-provide-active-intelligence-to-enable-data-driven-decisions>Provide Active Intelligence to Enable Data-Driven Decisions</a></li>
+<li><a href="#byot---bring-your-own-security-tools" id=markdown-toc-byot---bring-your-own-security-tools>BYOT - Bring Your Own (Security) Tools</a></li>
+<li><a href="#ai-will-scale-security-teams" id=markdown-toc-ai-will-scale-security-teams>AI will scale Security teams</a></li>
+<li><a href="#top-down-security-controls" id=markdown-toc-top-down-security-controls>Top-down security controls</a></li>
+<li><a href="#no-compromises-with-compliance" id=markdown-toc-no-compromises-with-compliance>No compromises with compliance</a></li>
+<li><a href="#coordinate-governance-across-gitlab" id=markdown-toc-coordinate-governance-across-gitlab>Coordinate governance across GitLab</a></li>
+<li><a href="#emphasize-usability-and-convention-over-configuration" id=markdown-toc-emphasize-usability-and-convention-over-configuration>Emphasize usability and convention over configuration</a></li>
+<li><a href="#secure-the-software-supply-chain" id=markdown-toc-secure-the-software-supply-chain>Secure the software supply chain</a></li>
+</ul>
+</li>
+<li><a href="#1-year-plan" id=markdown-toc-1-year-plan>1 Year Plan</a> <ul>
+<li><a href="#what-we-recently-completed" id=markdown-toc-what-we-recently-completed>What We Recently Completed</a></li>
+<li><a href="#what-we-are-currently-working-on" id=markdown-toc-what-we-are-currently-working-on>What We Are Currently Working On</a></li>
+<li><a href="#whats-next-for-us" id=markdown-toc-whats-next-for-us>What's Next For Us</a></li>
+<li><a href="#what-were-not-doing" id=markdown-toc-what-were-not-doing>What We're Not Doing</a></li>
+</ul>
+</li>
+<li><a href="#target-audience" id=markdown-toc-target-audience>Target audience</a> <ul>
+<li><a href="#today" id=markdown-toc-today>Today</a></li>
+<li><a href="#medium-term-1-2-years" id=markdown-toc-medium-term-1-2-years>Medium Term (1-2 years)</a></li>
+</ul>
+</li>
+<li><a href="#stages-and-categories" id=markdown-toc-stages-and-categories>Stages and Categories</a> <ul>
+<li><a href="#secure" id=markdown-toc-secure>Secure</a> <ul>
+<li><a href="#categories" id=markdown-toc-categories>Categories</a> <ul>
+<li><a href="#sast" id=markdown-toc-sast>SAST</a></li>
+<li><a href="#secret-detection" id=markdown-toc-secret-detection>Secret Detection</a></li>
+<li><a href="#code-quality" id=markdown-toc-code-quality>Code Quality</a></li>
+<li><a href="#dast" id=markdown-toc-dast>DAST</a></li>
+<li><a href="#api-security" id=markdown-toc-api-security>API Security</a></li>
+<li><a href="#fuzz-testing" id=markdown-toc-fuzz-testing>Fuzz Testing</a></li>
+<li><a href="#software-composition-analysis" id=markdown-toc-software-composition-analysis>Software Composition Analysis</a></li>
+<li><a href="#container-scanning" id=markdown-toc-container-scanning>Container Scanning</a></li>
+<li><a href="#gitlab-advisory-database" id=markdown-toc-gitlab-advisory-database>GitLab Advisory Database</a></li>
+<li><a href="#attack-emulation" id=markdown-toc-attack-emulation>Attack Emulation</a></li>
+</ul>
+</li>
+<li><a href="#pricing" id=markdown-toc-pricing>Pricing</a> <ul>
+<li><a href="#corefree" id=markdown-toc-corefree>Core/Free</a></li>
+<li><a href="#premiumsilver" id=markdown-toc-premiumsilver>Premium/Silver</a></li>
+<li><a href="#ultimategold" id=markdown-toc-ultimategold>Ultimate/Gold</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#govern" id=markdown-toc-govern>Govern</a> <ul>
+<li><a href="#categories-1" id=markdown-toc-categories-1>Categories</a> <ul>
+<li><a href="#user-management" id=markdown-toc-user-management>User Management</a></li>
+<li><a href="#system-access" id=markdown-toc-system-access>System Access</a></li>
+<li><a href="#permissions" id=markdown-toc-permissions>Permissions</a></li>
+<li><a href="#audit-events" id=markdown-toc-audit-events>Audit Events</a></li>
+<li><a href="#compliance-management" id=markdown-toc-compliance-management>Compliance Management</a></li>
+<li><a href="#security-policy-management" id=markdown-toc-security-policy-management>Security Policy Management</a></li>
+<li><a href="#vulnerability-management" id=markdown-toc-vulnerability-management>Vulnerability Management</a></li>
+<li><a href="#dependency-management" id=markdown-toc-dependency-management>Dependency Management</a></li>
+<li><a href="#software-bill-of-materials" id=markdown-toc-software-bill-of-materials>Software Bill of Materials</a></li>
+<li><a href="#insider-threat" id=markdown-toc-insider-threat>Insider Threat</a></li>
+<li><a href="#instance-resiliency" id=markdown-toc-instance-resiliency>Instance Resiliency</a></li>
+<li><a href="#secrets-management" id=markdown-toc-secrets-management>Secrets Management</a></li>
+<li><a href="#release-evidence" id=markdown-toc-release-evidence>Release Evidence</a></li>
+</ul>
+</li>
+<li><a href="#pricing-1" id=markdown-toc-pricing-1>Pricing</a> <ul>
+<li><a href="#free" id=markdown-toc-free>Free</a></li>
+<li><a href="#premium" id=markdown-toc-premium>Premium</a></li>
+<li><a href="#ultimate" id=markdown-toc-ultimate>Ultimate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#upcoming-releases" id=markdown-toc-upcoming-releases>Upcoming Releases</a> <ul>
+<li><a href="#174-2024-09-19" id=markdown-toc-174-2024-09-19>17.4 (2024-09-19)</a> <ul>
+<li><a href="#secure-1" id=markdown-toc-secure-1>Secure</a></li>
+<li><a href="#govern-1" id=markdown-toc-govern-1>Govern</a></li>
+</ul>
+</li>
+<li><a href="#git-247" id=markdown-toc-git-247>Git 2.47</a> <ul>
+<li><a href="#secure-2" id=markdown-toc-secure-2>Secure</a></li>
+<li><a href="#govern-2" id=markdown-toc-govern-2>Govern</a></li>
+</ul>
+</li>
+<li><a href="#175-2024-10-17" id=markdown-toc-175-2024-10-17>17.5 (2024-10-17)</a> <ul>
+<li><a href="#secure-3" id=markdown-toc-secure-3>Secure</a></li>
+<li><a href="#govern-3" id=markdown-toc-govern-3>Govern</a></li>
+</ul>
+</li>
+<li><a href="#176-2024-11-14" id=markdown-toc-176-2024-11-14>17.6 (2024-11-14)</a> <ul>
+<li><a href="#secure-4" id=markdown-toc-secure-4>Secure</a></li>
+<li><a href="#govern-4" id=markdown-toc-govern-4>Govern</a></li>
+</ul>
+</li>
+<li><a href="#177-2024-12-19" id=markdown-toc-177-2024-12-19>17.7 (2024-12-19)</a> <ul>
+<li><a href="#secure-5" id=markdown-toc-secure-5>Secure</a></li>
+<li><a href="#govern-5" id=markdown-toc-govern-5>Govern</a></li>
+</ul>
+</li>
+<li><a href="#1710-2025-03-20" id=markdown-toc-1710-2025-03-20>17.10 (2025-03-20)</a> <ul>
+<li><a href="#secure-6" id=markdown-toc-secure-6>Secure</a></li>
+<li><a href="#govern-6" id=markdown-toc-govern-6>Govern</a></li>
+</ul>
+</li>
+<li><a href="#180-2025-05-15" id=markdown-toc-180-2025-05-15>18.0 (2025-05-15)</a> <ul>
+<li><a href="#secure-7" id=markdown-toc-secure-7>Secure</a></li>
+<li><a href="#govern-7" id=markdown-toc-govern-7>Govern</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p align=center>
+<font size="+2">
+<b>Security visibility from development to operations to minimize risk</b>
+</font>
+</p>
+<p>GitLab provides the single application organizations need to find, triage, and fix vulnerabilities, from development to production. This empowers organizations to apply repeatable, defensible processes that automate security and compliance policies that proactively reduce overall security risk.</p>
+<p>
+<style>.diagramwrapper *{box-sizing:border-box}.diagramwrapper{width:100%;display:flex}.diagramwrapper .box{width:calc(100% - 240px);padding:10px;display:flex;background-color:#fff}.diagramwrapper .box svg{width:100%}.diagramwrapper .circle{width:80px;height:80px;margin-right:20px;border:#999 1px solid;border-radius:50%;display:inline-block;background-color:#fff;padding:0}.diagramwrapper .circle svg{fill:#524684;width:50px;margin:15px}.diagramwrapper .stages{display:flex;width:210px;margin-left:30px;flex-wrap:wrap}.diagramwrapper .stage{width:210px;display:flex;margin:auto 0}.diagramwrapper .stagename{display:inline-block;font-family:Source Sans Pro,sans-serif;font-weight:bold;font-size:24px;line-height:80px}</style><div class=diagramwrapper><div class=box><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1025 500" role=img aria-label="GitLab DevSecOps Lifecycle">
+<style>
+      .text {
+        font-family: Inter,Source Sans Pro,sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        fill: #2b2838;
+        letter-spacing: .02em;
+        dominant-baseline: middle;
+        text-anchor: middle;
+      }
+      .text2 {
+        font-size: 26px;
+        fill: #2b2838;
+      }
+      .devsecops {
+        font-size: 56px;
+        fill: black;
+      }
+      .mix {
+        mix-blend-mode: color-burn;
+      }
+      .line {
+        fill: none;
+        stroke: #2b2838;
+        stroke-width: 2px;
+      }
+      .highlighted {
+        font-size: 22px;
+      }
+      .highlightedline {
+        stroke-width: 3px;
+      }
+      .white_fill {
+        fill: #fff;
+      }
+      .faded {
+        fill: #a09fa4;
+      }
+      .fadestroke {
+        stroke: #a09fa4;
+      }
+      .lightline{
+        stroke: #d3d0d4;
+        stroke-width: 3px;
+      }</style>
+<linearGradient id=linear-gradient x1=18 y1=250 x2=1007 y2=250 gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#e6dcf4"/>
+<stop offset=1 stop-color="#ffd0be"/>
+</linearGradient>
+<linearGradient id=linear-gradient-2 x1="720.88" y1="337.91" x2="370.24" y2="74.18" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#2b2838" stop-opacity=".24"/>
+<stop offset=1 stop-color="#45424d" stop-opacity=0 />
+</linearGradient>
+<linearGradient id=linear-gradient-3 x1="304.12" y1="162.09" x2="654.76" y2="425.82" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits=userSpaceOnUse>
+<stop offset=0 stop-color="#2b2838" stop-opacity=".24"/>
+<stop offset=1 stop-color="#45424d" stop-opacity=0 />
+</linearGradient>
+<path id=background fill="#fff" d="M 0,0 L 1025,0 L 1025,500 L 0,500"/><path id=upper_arc class="line highlightedline" d="M 0,250 a238,238 0 0,1 238,-238 L 787,12 a238,238 0 0,1 238,238"/><path id=lower_arc class="line highlightedline" d="M 0,250 a238,238 0 0,0 238,238 L 787,488 a238,238 0 0,0 238,-238"/><path id=clear_1 fill="#fff" d="M -3,190 L -3,310 L 1028,310 L 1028,190"/>
+<path id=clear_2 fill="#fff" d="M 422,0 L 603,0 L 603,500 L 422,500"/>
+<path id=loop fill="url(#linear-gradient)" d="M 512.5,181.18 L 370.24,74.18 a220,220 0 1,0 0,351.64 L 512.5,318.8 L 654.76,425.82 a220,220 0 1,0 0,-351.64"/>
+<path id=cutout_1 fill="#fff" d="M 421,250 L 304.12,162.09 a110,110 0 1,0 0,175.82"/>
+<path id=cutout_2 fill="#fff" d="M 604,250 L 720.88,162.09 a110,110 0 1,1 0,175.82"/>
+<path id=shadow_1 fill="url(#linear-gradient-2)" class=mix d="M 512.5,181.18 L 421,250 L 304.12,162.09 L 370.24,74.18"/>
+<path id=shadow_2 fill="url(#linear-gradient-3)" class=mix d="M 512.5,318.8 L 604,250 L 720.88,337.91 L 654.76,425.82"/><path class=lightline fill=none d="M 421,256 L 304.12,168.09 a104,104 0 1,0 -64.12,185.91 L 225,341"/>
+<path class=lightline fill=none d="M 604,256 L 720.88,168.09 a104,104 0 1,1 64.12,185.91 L 800,341"/>
+<path fill="#fff" class=lightline d="M 357,205 L 668,205 a45,45 0 0,1 0,90 L 357,295 a45,45 0 0,1 0,-90"/>
+<path d="M536.514 419L536.448 418.82L529.663 401.124C529.526 400.778 529.281 400.483 528.965 400.283C528.73 400.131 528.461 400.039 528.184 400.01C527.905 399.981 527.624 400.018 527.363 400.118C527.1 400.216 526.866 400.376 526.676 400.583C526.488 400.789 526.35 401.037 526.274 401.306L521.695 415.326H503.151L498.571 401.306C498.495 401.037 498.357 400.79 498.169 400.584C497.979 400.378 497.745 400.219 497.484 400.119C497.221 400.02 496.941 399.982 496.662 400.011C496.384 400.04 496.116 400.133 495.88 400.283C495.565 400.483 495.32 400.778 495.183 401.124L488.403 418.824L488.331 419C487.355 421.551 487.235 424.35 487.989 426.976C488.743 429.601 490.33 431.911 492.511 433.556L492.536 433.575L492.594 433.62L502.914 441.355L508.034 445.224L511.145 447.575C511.51 447.851 511.955 448 512.411 448C512.869 448 513.314 447.851 513.679 447.575L516.789 445.224L521.909 441.355L532.303 433.575L532.331 433.553C534.513 431.909 536.1 429.6 536.854 426.975C537.609 424.35 537.489 421.551 536.514 419Z" fill="#E24329"/>
+<path d="M536.514 419L536.448 418.82C533.141 419.499 530.028 420.899 527.328 422.923L512.431 434.186L521.916 441.355L532.309 433.575L532.339 433.553C534.517 431.908 536.104 429.599 536.858 426.974C537.61 424.349 537.49 421.55 536.514 419Z" fill="#FC6D26"/>
+<path d="M502.914 441.355L508.034 445.224L511.145 447.575C511.51 447.851 511.954 448 512.411 448C512.869 448 513.314 447.851 513.679 447.575L516.789 445.224L521.909 441.355L512.425 434.186L502.914 441.355Z" fill="#FCA326"/>
+<path d="M497.519 422.923C494.82 420.9 491.706 419.5 488.403 418.824L488.331 419C487.355 421.551 487.235 424.35 487.989 426.976C488.743 429.601 490.33 431.911 492.511 433.556L492.536 433.575L492.594 433.62L502.914 441.355L512.405 434.186L497.519 422.923Z" fill="#FC6D26"/>
+<text x="50%" y=255 class="text devsecops">DevSecOps</text><text x=353 y=131 class="text faded">Plan</text><text x=127 y=131 class="text faded">Code</text><text x=127 y=371 class="text faded">Build</text><text x=353 y=371 class="text faded">Test</text><text x=672 y=131 class="text faded">Release</text><text x=898 y=131 class="text faded">Deploy</text><text x=898 y=371 class="text faded">Operate</text><text x=672 y=371 class="text faded">Monitor</text><text x="50%" y=13 class="text text2 highlighted">Security</text><text x="50%" y=488 class="text text2 highlighted">Compliance</text></svg></div><div class=stages><div class=stage><div class=circle><svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M45,31.6H26.34a3.48,3.48,0,0,0-6.68,0H6.42V21.2H39.58v6.4a1,1,0,1,0,2,0V20.2a1,1,0,0,0-1-1H37V14A14,14,0,0,0,9,14v5.2H5.42a1,1,0,0,0-1,1V31.6H1a1,1,0,0,0,0,2H19.66a3.48,3.48,0,0,0,6.68,0H39.58V44H6.42V37.6a1,1,0,0,0-2,0V45a1,1,0,0,0,1,1H40.58a1,1,0,0,0,1-1V33.6H45a1,1,0,0,0,0-2ZM11,14a12,12,0,0,1,24,0v5.2H11ZM23,34.1a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,23,34.1Z"/></svg></div><div class=stagename>Secure</div></div><div class=stage><div class=circle><svg id=Layer_1 data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46"><path d="M21,27.52a1,1,0,0,0,.7-.29l7.05-7a1,1,0,0,0-1.41-1.41L21,25.11,18.7,22.86a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.41l3,3A1,1,0,0,0,21,27.52Z"/><path d="M39.9,29.58a1,1,0,0,0-1.3.55A24.84,24.84,0,0,1,23,44C14.4,41.22,7.84,34.33,6.26,26.33a1,1,0,0,0,0-.1,3.52,3.52,0,1,0-1.92.21.88.88,0,0,0,0,.28C6,35.52,13.26,43.07,22.71,46a1.07,1.07,0,0,0,.58,0c7.88-2.41,14.29-8,17.16-15.08A1,1,0,0,0,39.9,29.58ZM3.37,23a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,3.37,23Z"/><path d="M42.13,19.66v-13a1,1,0,0,0-1.34-.93,14.54,14.54,0,0,1-17-5.26,1,1,0,0,0-1.62,0,14.54,14.54,0,0,1-17,5.26,1,1,0,0,0-1.34.93v8.64a1,1,0,0,0,2,0V8A16.46,16.46,0,0,0,23,2.63,16.46,16.46,0,0,0,40.13,8V19.66a3.5,3.5,0,1,0,2,0Zm-1,4.84a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,41.13,24.5Z"/></svg></div><div class=stagename>Govern</div></div></div></div>
+</p>
+<h2 id=section-overview>Section Overview</h2>
+<p>The Sec Section focuses on providing security and compliance visibility across the entire software development lifecycle and is
+comprised of the <a href="https://about.gitlab.com/direction/secure/">Secure</a> and <a href="https://about.gitlab.com/direction/govern/">Govern</a>
+stages of the DevOps lifecycle. This is accomplished by <a href="https://about.gitlab.com/direction/security/#shift-left-no-more-left-than-that">shifting security testing left</a> with the Secure stage, enabling developers to begin security scanning with their first written line of code, and by providing organizations with visibility and control over the security risk present across their environment with the Govern stage.</p>
+<h3 id=gitlab-and-the-devsecops-lifecycle>GitLab and the DevSecOps Lifecycle</h3>
+<p>GitLab is uniquely positioned to fully support DevSecOps by providing a single application for the entire software development lifecycle. This includes both shifting Application Security Testing (AST) left as well as providing visibility and control over security and compliance findings, from first line of code to production.</p>
+<p><img src="/images/direction/sec/DevSecOps_Lifecycle.png" alt="DevSecOps Lifecycle"/></p>
+<p>GitLab’s single application maps directly to the DevSecOps lifecycle. GitLab's Secure Stage focuses on pinpointing vulnerabilities and weaknesses, from development to production, while the Govern Stage provides visibility and control over the security &amp; compliance findings Secure detects. Together, GitLab supports all teams involved in delivering secure applications:</p>
+<ul>
+<li>Develop: Developers create new source code, including new features and bug fixes, and commit this code to a branch within the project. This step is supported by the <a href="https://about.gitlab.com/stages-devops-lifecycle/create/">Create</a> stage of the DevOps lifecycle, providing developers with <a href="https://about.gitlab.com/stages-devops-lifecycle/source-code-management/">source code management</a>, <a href="https://about.gitlab.com/direction/create/ide/web_ide/">code editors</a>, and <a href="https://about.gitlab.com/stages-devops-lifecycle/create/">code review</a> workflows.</li>
+<li>Analyze: Upon code commit, Secure scanners kick off automatically and identify any new security findings with the delta code change. This enables developers to stay within context, enabling them to understand the cause and effect of their code change. Secure scanners leverage the <a href="https://about.gitlab.com/stages-devops-lifecycle/verify/">Verify</a> stage of the DevOps lifecycle to provide scanning within the <a href="https://about.gitlab.com/features/continuous-integration/">CI pipeline</a>.</li>
+<li>Mitigate: Developers are provided with the <a href="https://docs.gitlab.com/ee/user/application_security/index.html#interacting-with-the-vulnerabilities">details needed</a> to understand how to remediate the newly introduced security findings. Developers are also offered <a href="https://docs.gitlab.com/ee/user/application_security/vulnerabilities/index.html#resolve-a-vulnerability">automatic remediation</a>, where applicable.</li>
+<li>Protect: Secure scanners provide continuous scanning coverage for applications deployed to production and Govern dashboards, policies, and compliance frameworks help users security findings and compliance requirements across their organization.</li>
+</ul>
+<h3 id=lowering-the-cost-of-remediation>Lowering the Cost of Remediation</h3>
+<p>The earlier a security vulnerability can be remediated has both risk reduction and cost reduction benefits.</p>
+<p><img src="/images/direction/sec/Cost_Of_Remediation.png" alt="Cost of Remediation"/></p>
+<p>When security vulnerabilities are identified at the time of code commit, developers can understand how their newly
+introduced code has led to this new issue. This gives the developer a cause-and-effect enabling quicker resolution
+while not having the time hit of context switching. This is not true as security scanning is performed later in the
+software development lifecycle. New vulnerabilities may not be identified until weeks or months after they were added
+to the application while under development.</p>
+<p>Time is not the only savings when shifting security left.</p>
+<p><img src="/images/direction/sec/Stage_of_Remediation.png" alt="Stage of Remediation"/></p>
+<p>In <a href="https://www.nist.gov/system/files/documents/director/planning/report02-3.pdf">“The Economic Impacts of Inadequate Infrastructure for Software Testing”</a>, NIST estimated the cost of remediating software bugs at $59.5 billion/year. This is compounded when taking in the average time to remediate software bugs. In <a href="https://www.fullstacklabs.co/blog/software-development-price-guide-hourly-rate-comparison">“Software Development Price Guide &amp; Hourly Rate Comparison”</a>, FullStack Labs estimates the average cost of a software developer at $300/hour. The following table outlines the cost to remediate software bugs at different stages of the software development lifecycle:</p>
+<p><img src="/images/direction/sec/costs_table.png" alt="Completed Loop"/></p>
+<p>These costs are just the start of the financial impact when the software bug is also a software vulnerability. IBM, in partnership with the Ponemon Institute, put the <a href="https://www.ibm.com/security/digital-assets/cost-data-breach-report/#/">average cost to remediate a data breach in 2020</a> at $3.86 million (USD). This does not take into consideration the reputation impact to the organization.</p>
+<h3 id=closing-the-loop>Closing the Loop</h3>
+<p>Having visibility into security risk in just development only provides you with half of the picture. Development and
+SecOps teams need to have a closed feedback loop enabling both teams to be successful. Development teams can gain
+insight into attacks targeting the applications they develop. This allows them to prioritize vulnerabilities correctly,
+enabling proactive resolutions to reduce risk. Likewise, SecOps teams can gain insight from their development
+counterparts, providing them with visibility into how the application works. This allows them to best apply proactive
+measures to mitigate attacks targeting the application until development can fix the vulnerability.</p>
+<p><img src="/images/direction/sec/Completed_Loop.png" alt="Completed Loop"/></p>
+<p>Closing the loop requires close collaboration, transparency, and efficiencies that only a single platform for the entire DevOps lifecycle can provide. Shifting security left while also providing protection for applications in production within a single application empowers teams to work closer together. <a href="https://ddesanto-update-sec-direction-fy21q4.about.gitlab-review.app/direction/security/#security-is-a-team-effort">Security is a team sport</a> and teams working together can best reduce their organization’s overall security risk.</p>
+<h3 id=groups>Groups</h3>
+<p>The Security Section is made up of two DevOps stages, Secure and Govern, and seven groups supporting the major categories of DevSecOps including:</p>
+<ul>
+<li><strong>Composition Analysis</strong> - Assess your applications and services by analyzing dependencies for vulnerabilities and weaknesses, confirming only approved licenses are in use, and scanning your containers for vulnerabilities and weaknesses.</li>
+<li><strong>Static Analysis</strong> - Assess your applications and services by scanning your source code for vulnerabilities and weaknesses.</li>
+<li><strong>Dynamic Analysis</strong> - Assess your applications and services while they are running by leveraging the <a href="https://docs.gitlab.com/ee/ci/review_apps/">Review App</a> available as part of GitLab’s CI/CD functionality.</li>
+<li><strong>Threat Insights</strong> - Holistically view, manage, and reduce potential risks across the entire DevSecOps lifecycle, including Security Merge Request Views, Pipeline Security Reports, and Security Dashboards at the Project, Group, and Instance level.</li>
+<li><strong>Security Policies</strong> - Apply policies to enforce scans and to require security approvals when vulnerabilities are found.</li>
+<li><strong>Compliance</strong> - Provide users with the tools and features necessary to manage their compliance programs.</li>
+<li><strong>Vulnerability Research</strong> - Leverage GitLab research to empower your Secure results by connecting security findings to industry references like <a href="https://cve.mitre.org">CVE IDs</a>.</li>
+</ul>
+<h3 id=teams-and-investments>Teams and Investments</h3>
+<h4 id=team-members>Team members</h4>
+<p>The existing team members for the Sec Section can be found in the links below:</p>
+<ul>
+<li><a href="https://about.gitlab.com/company/team/?department=sec-section">Development</a></li>
+<li><a href="https://about.gitlab.com/company/team/?department=secure-ux-team">User Experience</a></li>
+<li><a href="https://about.gitlab.com/company/team/?department=sec-pm-team">Product Management</a></li>
+<li><a href="https://about.gitlab.com/company/team/?department=sec-datascience-qe-team">Quality Engineering</a></li>
+</ul>
+<h4 id=investments>Investments</h4>
+<p>Learn more about GitLab's investment into the Sec section by visiting our
+<a href="https://internal.gitlab.com/handbook/product/investment/">Product Investment</a> page within the
+<a href="https://internal.gitlab.com">Internal Product Handbook</a>.</p>
+<h3 id=accomplishments-news-and-updates>Accomplishments, News, and Updates</h3>
+<p>A complete list of released features can be found on the <a href="https://gitlab-com.gitlab.io/cs-tools/gitlab-cs-tools/what-is-new-since/?tab=features&amp;selectedStages=secure&amp;selectedStages=govern">Release Feature Overview</a> page and a complete list of upcoming features can be found on the <a href="https://about.gitlab.com/upcoming-releases/">Upcoming Releases</a> page.</p>
+<h4 id=section--team-member-updates>Section &amp; team member updates</h4>
+<ul>
+<li>No new updates at this time</li>
+</ul>
+<h4 id=important-pi-milestones>Important PI milestones</h4>
+<ul>
+<li>Composition Analysis fully expects an uptick in usage toward the end of the calendar year, as the team completes a major re-architecture project and begins to deliver feature improvements again</li>
+<li>Secret Detection and IaC scanning are both showing double-digit percentage growth over the last couple months; the team has advocated for additional investment in these areas next fiscal year</li>
+<li>The Static Analysis Group has started to <a href="https://internal.gitlab.com/handbook/company/performance-indicators/product/sec-section/#securestatic-analysis---gmau---users-running-static-analysis-jobs">track usage trends across tiers</a>, leading to some interesting insights about where to apply resources to improve user experience in Premium, for instance, to encourage upsell</li>
+<li>Derek Ferguson, Sec PI metrics DRI, has been hard at work with Dave Peterson on investigating both how to better reflect self-managed uplift and distinctions between Ultimate paid accounts vs. OSS/EDU accounts and are making steady progress</li>
+</ul>
+<h4 id=recent-accomplishments>Recent accomplishments</h4>
+<ul>
+<li><a href="https://about.gitlab.com/releases/2022/09/22/gitlab-15-4-released/#streamlined-sast-analyzer-coverage">Streamlined SAST analyzer coverage</a> - a big step in the move to semgrep-based scanning</li>
+<li><a href="https://about.gitlab.com/releases/2022/09/22/gitlab-15-4-released/#graphql-schema-support-for-dast-api-and-api-fuzzing">GraphQL Schema support for DAST API and API Fuzzing</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5779">Browser-based DAST passive attack parity</a></li>
+<li><a href="https://about.gitlab.com/releases/2022/07/22/gitlab-15-2-released/#faster-secret-detection">Faster secret detection</a></li>
+</ul>
+<h4 id=whats-ahead>What’s ahead</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5780">Browser-based DAST Active Attack Parity</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/7539">API Discovery</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5629">Deprecate and remove Vulnerabilities::Feedback Model</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/7886">Continuous Vulnerability Scans for Container Scanning &amp; Dependency Scanning</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/371658">Automatically revoke GitLab.com tokens found in public repositories</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/3410">GA Container Scanning category support for scans against running containers</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/5144">Improve tracking accuracy of SAST, Secret Detection findings</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/4942">Vulnerability Dismissal Types / Reasons</a></li>
+</ul>
+<h2 id=3-year-section-themes>3 Year Section Themes</h2>
+<h3 id=security-is-a-team-effort>Security Is A Team Effort</h3>
+<p>Everyone benefits when security is a team effort as testing happens regularly, issues are found earlier, and code shipped is more secure. To make this possible, security must be approachable, not overburden teams, and results must be easy to interpret. Security testing tools and processes must be <a href="https://www.gartner.com/document/code/450792?ref=ddisp&amp;refval=450792">adapted to your developers</a> (and not the other way around). This means bringing security into the workflow of your developers such that they can stay within their context without having unnecessary steps added to their daily work. Furthermore, results provided as security findings must be presented in a way that they can be interpreted without needing a PhD in cybersecurity. This includes providing enough detail to begin identifying the root cause (including identifying the section of code causing the security finding) and suggesting remediation steps (including <a href="https://about.gitlab.com/direction/secure/#automatic-remediation">automatic remediation</a>) as well as pointing to industry standards related to the security finding. By implementing an integrated DevSecOps lifecycle with actionable results, security becomes everyone’s responsibility.</p>
+<p>As examples, GitLab will provide:</p>
+<ul>
+<li>Security findings within the merge request view allowing developers to stay within their context.</li>
+<li>Security gates enabling the ability to require approval to merge when security findings are above a pre-set severity.</li>
+<li>Industry references with security findings to aid in root cause analysis and remediation.</li>
+<li><a href="https://about.gitlab.com/direction/secure/#automatic-remediation">Automatic remediation</a>, where applicable, enabling faster resolution of security findings.</li>
+<li>Summary views, or dashboards, showing the overall health of the project, group, and instance enabling security teams to contribute and interact with development teams.</li>
+<li>Historical reporting for security findings such that root cause can be identified and addressed, preventing recurring issues.</li>
+</ul>
+<h3 id=shift-left-no-more-left-than-that>Shift Left. No, More Left Than That.</h3>
+<p>The “shift left” approach is not a new concept within software testing and DevOps best practices. It is commonly thought of when discussing the <a href="https://www.devsecops.org/blog/2016/5/20/-security">DevSecOps lifecycle</a>. This usually includes security testing earlier in the software development lifecycle with the goal of identifying security vulnerabilities and weaknesses prior to shipping code to operations. Today’s techniques include static application security testing (SAST), dynamic application security testing (DAST), interactive application security testing (IAST), dependency scanning, and license compliance. The continuation of the “shift left” approach requires a harder shift left, bringing security testing as close as possible to the developer. This enables earlier detection of security vulnerabilities and weaknesses, thus lowering the cost of remediation (as well as reducing work for the entire team as security findings are addressed prior to reaching the QA and security teams).</p>
+<p>As examples, GitLab will provide:</p>
+<ul>
+<li>Static analysis beyond traditional SAST functionality, enabling more ways to <a href="https://en.wikipedia.org/wiki/White-box_testing">white-box test</a> source code.</li>
+<li>Expanded identification functionality, enabling secret detection beyond API tokens, passwords, and cryptographic keys with improved secrets management leveraging cloud-native technologies.</li>
+<li>Real-time feedback to developers via integrated development environments (IDEs), enabling developers to write secure code prior to code commit.</li>
+</ul>
+<h3 id=shift-right-yes-right-right-into-operations>Shift Right. Yes, Right. Right Into Operations.</h3>
+<p>Security testing doesn’t stop once code is shipped. New vulnerabilities, security weaknesses and, attacker techniques are constantly discovered, leaving operations and their associated applications and services open to being compromised. Also, as organizations continue to shift to the cloud and employ cloud-native strategies, new attack surfaces are exposed that did not exist within the traditional data center. These include items like cloud storage permissions and unwanted network services. Applications, services, and their associated cloud-native infrastructure need to be assessed just as a user (or an attacker) would interact with them. This means performing the same tasks that an attacker would perform including reconnaissance, vulnerability assessment, and penetration testing. Implementing a continuous assessment strategy of operations is needed to provide full visibility into all potential risk.</p>
+<p>As examples, GitLab will provide:</p>
+<ul>
+<li>Dynamic analysis categories, including DAST and DAST API, providing the ability to assess the operations side of the DevOps lifecycle.</li>
+<li>New categories purposefully designed to assess the operations network including automatic penetration testing and vulnerability assessment functionality.</li>
+<li>Cloud-native assessment capabilities allowing users to truly understand their attack surface.</li>
+<li>Active monitoring of public key infrastructure (PKI), providing full visibility into the cryptographic health of your cloud-native environment (and associated containers).</li>
+</ul>
+<h3 id=provide-active-intelligence-to-enable-data-driven-decisions>Provide Active Intelligence to Enable Data-Driven Decisions</h3>
+<p>Security findings, without context, can lead to making incorrect decisions on remediation, leaving applications and services vulnerable. With more data made available, better decisions can be made while prioritizing security findings, enabling users to best manage their security risk. Furthermore, this enables developers to write secure code, build operations to package dependencies free of vulnerabilities, and security team members to test deeper than previously achievable. Leveraging machine learning provides active intelligence, enabling users to make smart, data-driven decisions at the right time, lowering overall security risk. Machine learning, to be successful, relies on big data to build accurate models. The GitLab community includes developers, build operators, and security teams all working together within their organizations to code, build, deliver and secure application and services going into operations. As a global community, developers can learn from each other to identify and better secure code. Dependency vulnerabilities and weaknesses can be avoided, and security teams can test smarter, faster, and deeper. Machine learning, powered by anonymized data, provides active intelligence enabling data-driven decisions.</p>
+<p>As examples, GitLab will provide:</p>
+<ul>
+<li>Machine learning that will be opt-in when it relates to using anonymized user data from the GitLab community.</li>
+<li>Actionable intelligence to identify insecure coding practices to help developers write more secure code in real-time.</li>
+<li>Dynamic application security testing (DAST) tailored to the application or service being tested, identifying security findings which may have been missed with traditional testing techniques.</li>
+<li>Real-time data about software vulnerabilities and weaknesses related to technologies used within users’ projects, groups, and instances.</li>
+<li><a href="https://about.gitlab.com/direction/secure/#automatic-remediation">Automatic remediation</a> of discovered software vulnerabilities and weaknesses within project source code, dependencies (e.g., libraries and packages), and containers.</li>
+<li>Autogeneration of signatures and policies to address security findings within Secure Stage categories that can be automatically applied to Govern Stage categories.</li>
+</ul>
+<h3 id=byot---bring-your-own-security-tools>BYOT - Bring Your Own (Security) Tools</h3>
+<p>At GitLab, we believe everyone can contribute and security is everyone’s responsibility. We empower GitLab users by providing security tools which include Static Analysis, Dynamic Analysis, Container Scanning, Dependency Scanning, and License Scanning. However, we recognize our users may have existing security tools and may want to continue to use them. As such, we strive to play well with others. Security tool vendors will be provided standardized components (e.g., APIs) within the GitLab complete DevOps platform enabling easy integration into our Security Dashboard and Merge Request controls including security approvals. This allows our users to have alternate security tools that either replace, or augment, our Secure tools.</p>
+<p>As examples, GitLab will provide:</p>
+<ul>
+<li>A walkthrough (e.g., wizard) enabling users the ability to configure and enable integrations they wish to use as part of their DevSecOps processes.</li>
+<li>Standardize REST APIs, following CRUD principles, for integrating third-party security scanners the ability to start scanning via GitLab CI/CD as well as submit their security findings into the GitLab complete DevOps platform.</li>
+<li>Security vulnerability reporting framework, following JSON notation, allowing third-party security scanners to submit their security findings in such a way that their results can be integrated into Secure’s Security Dashboard and Merge Request controls including security approvals.</li>
+</ul>
+<p>If you are interested in <a href="https://docs.gitlab.com/ee/development/contributing/">contributing</a> such an integration, please <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/new?nav_source=navbar">create an issue</a> so we can collaborate on questions and adding any enabling functionality.</p>
+<h3 id=ai-will-scale-security-teams>AI will scale Security teams</h3>
+<p>Generative AI will empower small, centralized security teams to scale and effectively support their companies' development organizations, even when those teams are outnumbered 250:1. AI can enhance security teams' effectiveness, efficiency, and overall cost-effectiveness by being integrated into their daily operations. Additionally, AI will play a crucial role in helping companies shift security left, allowing developers to participate in vulnerability management and overall risk reduction.</p>
+<p>When it comes to vulnerability and dependency management two problems are hard to solve that could be solved with AI:</p>
+<ol>
+<li><strong>Triage.</strong> Triage takes a lot of time, context, and domain knowledge. Can this vulnerability be exploited? Is my company at risk? Does this vulnerability need to be mitigated? Where does this dependency exist in my organization? What do I need to fix first? <em>GitLab will use AI to provide suggestions on focus areas within your project and group to jumpstart the triage process.</em></li>
+<li><strong>Mitigation.</strong> GitLab surfaces vulnerabilities that contain relevant information, however, more often users aren't sure where to start. It takes time to research and synthesize information that is surfaced within the vulnerability record. Moreover it can be difficult to figure out how to fix a given vulnerability. <em>GitLab will provide AI-assisted explanations and suggested remediations for vulnerabilities from SAST and DAST outputs.</em></li>
+</ol>
+<h3 id=top-down-security-controls>Top-down security controls</h3>
+<p>Security teams need centralized management for their security and compliance workflows. Features such as user management, compliance labels, security policies, and the vulnerability and dependency lists need to allow for centralized management that applies across all of an organization's projects.</p>
+<h3 id=no-compromises-with-compliance>No compromises with compliance</h3>
+<p>Govern capabilities will ensure that compliance regulations are strictly followed in a way that they cannot be bypassed without the proper approvals. This includes providing the necessary tools to audit, monitor, and manage the compliance controls that are enforced.</p>
+<h3 id=coordinate-governance-across-gitlab>Coordinate governance across GitLab</h3>
+<p>Govern capabilities will serve as a connection point for a seamless workflow spanning across the DevSecOps lifecycle. By enabling collaboration between types of users, Govern can help solidify the advantages GitLab has to offer as a single application. For example, these areas might include the following:</p>
+<ul>
+<li>Facilitating a continuous experience for scanning across repositories, registries, and production environments.</li>
+<li>Centralizing security and compliance controls across GitLab, including merge request approvals, anomalous user activity, and anomalous pipeline/job activity.</li>
+<li>Leveraging data about production environment configuration to reduce false positives in scanners.</li>
+<li>Leveraging data about vulnerabilities in development to inform and drive threat mitigation in production.</li>
+</ul>
+<h3 id=emphasize-usability-and-convention-over-configuration>Emphasize usability and convention over configuration</h3>
+<p>Govern capabilities will be <a href="/handbook/product/product-principles/#convention-over-configuration">pre-configured with reasonable defaults</a> out-of-the-box whenever possible. When not possible, they will be easy to configure either through code or through a guided UI workflow that is friendly to users without coding knowledge. Regardless of how the capabilities are configured, they will be stored as code for ease of management.</p>
+<p>For example, GitLab's <a href="https://docs.gitlab.com/ee/user/application_security/policies/#policy-editor">security policy editor</a> supports editing policies in both a <code>rule mode</code> and in <code>yaml mode</code>.</p>
+<h3 id=secure-the-software-supply-chain>Secure the software supply chain</h3>
+<p>Govern capabilities allow organizations to lock down every aspect of their supply chain. This includes securely authenticating users into GitLab, hardening the GitLab platform itself, and verifying every step along the DevSecOps lifecycle as code is created, built, and deployed.</p>
+<h2 id=1-year-plan>1 Year Plan</h2>
+<h3 id=what-we-recently-completed>What We Recently Completed</h3>
+<p>The Sec team has been actively delivering updates to help you reduce risk. The following are some highlights from recent GitLab releases:</p>
+<ul>
+<li><strong>Semgrep-based Scanning by Default.</strong> We recently hit a major milestone in our Semgrep consolidation. In GitLab 15.4, we swapped over to semgrep-based scanning by default for analyzing JavaScript, TypeScript, React, Go, Python, and Java code.</li>
+<li><strong>DAST Moved to Complete Maturity.</strong> We recently achieved complete maturity with our DAST category.</li>
+<li><strong>Browser-based DAST Passive Attack Parity.</strong> GitLab's browser-based DAST scanner is now at parity with respect to the OWASP ZAP passive attack library. The scanner itself provides substantial gains in terms of speed and coverage for single-page applications. This version of the scanner will be released in GA in the coming months, as the team continues to work on meeting active attack parity next.</li>
+<li><strong>Inline Security Training.</strong> In early 2022, we released an inline security training capability that allows developers to connect to context-based training content directly from the MR experience. This provides a tight loop between practical tasks that developers need to complete (i.e., fixing vulnerable code) and security knowledge.</li>
+<li><strong>Dependency Paths.</strong> We recently added information about the shortest dependency path for findings identified in your projects. This improvement makes it easier for you to triage findings and to determine the steps to resolve vulnerabilities in your open source dependencies.</li>
+</ul>
+<h3 id=what-we-are-currently-working-on>What We Are Currently Working On</h3>
+<p>The Sec team is actively working to bring world class security to DevSecOps and the following outlines where we are currently investing our efforts:</p>
+<ul>
+<li><strong>Application Security Testing (AST) Leadership</strong> - We will take a leadership position within the Application Security Testing (AST) market. This will be accomplished by focusing on moving the <a href="https://about.gitlab.com/direction/secure/composition-analysis/software-composition-analysis/">Software Composition Analysis</a> and <a href="https://about.gitlab.com/direction/govern/threat_insights/vulnerability_management/">Vulnerability Management</a> categories to <a href="https://about.gitlab.com/direction/maturity/">Complete</a> maturity.</li>
+<li><strong>Dogfooding</strong> - We will <a href="https://www.dictionary.com/browse/practice-what-you-preach">“practice what we preach”</a>, including leveraging Secure Categories in all things GitLab does. This tight circle will provide immediate feedback and increase our rate of learning.</li>
+<li><strong>Security for everyone</strong> - In order to make security accessible to everyone across the DevOps lifecycle, we will bring all Secure OSS scanners to Core (self-managed) / Free (GitLab.com).</li>
+<li><strong>Security and Compliance Visibility</strong> - Provide a unified user experience for viewing, triaging, and resolving security findings across the development lifecycle, while also enabling security policy and compliance requirement management across development, staging, and production.</li>
+</ul>
+<h3 id=whats-next-for-us>What's Next For Us</h3>
+<p>To meet our <a href="https://about.gitlab.com/company/mission/#big-hairy-audacious-goal">audacious goals</a>, the Sec Section will focus on the following over the next 12 months:</p>
+<ul>
+<li><strong>Differentiate on value</strong> - Running a security test is just the beginning. GitLab's unique visibility into the full picture of application code, configuration, and behavior puts us in a unique position to do many things: connect findings across scanning disciplines for higher-fidelity results, better evaluate the true risk of a finding, tie findings and behaviors back to the original code and code owners, and so on. We will start to leverage this advantaged position to develop value-add capabilities that only a platform like GitLab can offer.</li>
+<li><strong>Integrated Software Supply Chain Security (SSCS)</strong> - SSCS has become a top priority for most organizations in the wake of multiple software supply chain attacks in the last 2 years. GitLab is uniquely positioned to bring unique visibility, comprehensive coverage, and a world-class user experience to bear on this very difficult problem. We will be dedicating resources across various of the product to execute on our <a href="https://about.gitlab.com/direction/supply-chain/">SSCS vision</a>.</li>
+<li><strong>Holistic developer-first experience</strong> - We will capitalize on a unique opportunity to present results and activate workflows for developers and security professionals that standalone security products cannot replicate. We want to provide a first-class experience and enable users to make data-driven decisions to secure their applications and services as well as their enterprise. Our <a href="https://docs.gitlab.com/ee/user/application_security/security_dashboard/#gitlab-security-dashboard">Security Dashboards</a> and <a href="https://docs.gitlab.com/ee/user/application_security/index.html#security-approvals-in-merge-requests">Merge Request Approvals</a> is just the beginning.</li>
+<li><strong>Cross-stage Security Policy Management</strong> - Allowing users to configure and manage security policies in a unified manner across their GitLab Workspace. This includes managing policies for applications running in production (such as managing network policies) as well as managing policies that specify when scans should be required to run.</li>
+<li><strong>First-class Container Security</strong> - We will continue to build out our container scanning capabilities to provide GA support for production container scanning and reduce noise overall.</li>
+<li><strong>Machine Learning</strong> - We will begin to leverage aspects of machine learning to make "intelligent" recommendations to users about how to reduce their security risk.</li>
+</ul>
+<h3 id=what-were-not-doing>What We're Not Doing</h3>
+<p>The following will NOT be a focus over the next 12 months:</p>
+<ul>
+<li><strong>Security services</strong> - The cybersecurity staffing shortage <a href="https://www.forbes.com/sites/martenmickos/2019/06/19/the-cybersecurity-skills-gap-wont-be-solved-in-a-classroom/#79a380dd1c30">continues to grow</a> with no solvable solution yet defined. To solve this issue, organizations have been relying on security services to fill this gap in their security processes. As part of Secure’s 3 Year Strategy, we want to address this for the GitLab community by offering cybersecurity augmentation powered by GitLab Secure categories.</li>
+<li><strong>SIEM functionality</strong> - Security Information and Event Management (SIEM) solutions are a common tool leveraged by IT Ops and SecOps organizations to monitor for events within their production environments.</li>
+<li><strong>Non-cloud native environments</strong> - Enterprises are undergoing cloud-native transformations shifting from traditional data centers to public cloud environments leveraging technologies like Kubernetes.</li>
+</ul>
+<h2 id=target-audience>Target audience</h2>
+<p>GitLab identifies who our DevSecOps application is built for utilizing the following categorization. We list our view of who we will support when in priority order.</p>
+<ul>
+<li>🟩- Targeted with strong support</li>
+<li>🟨- Targeted but incomplete support</li>
+<li>⬜️- Not targeted but might find value</li>
+</ul>
+<h3 id=today>Today</h3>
+<p>To capitalize on the <a href="#opportunities">opportunities</a> listed above, the Sec Section has features that make it useful to the following personas today.</p>
+<ol>
+<li>🟩 Developers / Development Teams</li>
+<li>🟩 Security Teams</li>
+<li>🟨 SecOps Teams</li>
+<li>🟨 QA engineers / QA Teams</li>
+<li>⬜️ Security Consultants</li>
+</ol>
+<h3 id=medium-term-1-2-years>Medium Term (1-2 years)</h3>
+<p>As we execute our <a href="#3-year-strategy">3 year strategy</a>, our medium term (1-2 year) goal is to provide a single DevSecOps application that enables collaboration between developers, security teams, SecOps teams, and QA Teams.</p>
+<ol>
+<li>🟩 Developers / Development Teams</li>
+<li>🟩 Security Teams</li>
+<li>🟩 SecOps Teams</li>
+<li>🟩 QA engineers / QA Teams</li>
+<li>🟨️ Security Consultants</li>
+</ol>
+<h2 id=stages-and-categories>Stages and Categories</h2>
+<p>The Sec section is composed of two stages, <a href="/direction/secure/">Secure</a> and <a href="/direction/govern/">Govern</a>, each of which contains several categories. Each stage has an overall
+strategy statement below, aligned to the themes for Sec. Each category within each stage has a dedicated direction page
+plus optional documentation, marketing pages, and other materials linked below.</p>
+<h3 id=secure>Secure</h3>
+<p>The <a href="/direction/secure/">Secure stage</a> enables accurate, automated, and continuous assessment of your applications and services enabling you to proactively identify vulnerabilities and weaknesses to minimize your security risk. Secure is not an additional step in your process nor an additional tool to introduce to your process. it is woven into your DevOps cycle thus allowing you to adapt your security testing and processes to your developers (and not the other way around).</p>
+<h4 id=categories>Categories</h4>
+<h5 id=sast>SAST</h5>
+<p>Scans your application source code and binaries to spot potential vulnerabilities before deployment. SAST supports scanning a variety of different programming languages and automatically chooses the right analyzer even if your project uses more than one language. Vulnerabilities, additional data, and solutions are shown in-line with every merge request. Scanner results are collected and presented as a single report. This category is at the "viable" level of maturity.</p>
+<p>Priority: high • <a href="https://docs.gitlab.com/ee/user/application_security/sast/">Documentation</a> • <a href="/direction/secure/static-analysis/sast/">Direction</a></p>
+<h5 id=secret-detection>Secret Detection</h5>
+<p>Scans your repository to help prevent your secrets from being exposed. Secret Detection scanning works on all text files, regardless of the language or framework used. Code pushed to a remote Git branch can be rejected if a secret is detected. This category is at the "viable" level of maturity.</p>
+<p>Priority: medium • <a href="https://docs.gitlab.com/ee/user/application_security/secret_detection/">Documentation</a> • <a href="/direction/secure/secret-detection/secret-detection/">Direction</a></p>
+<h5 id=code-quality>Code Quality</h5>
+<p>Analyzes your source code quality and complexity. This helps keep your project’s code simple, readable, and easier to maintain. This category is at the "minimal" level of maturity.</p>
+<p><a href="https://docs.gitlab.com/ee/ci/testing/code_quality">Documentation</a> • <a href="/direction/secure/static-analysis/code-quality/">Direction</a></p>
+<h5 id=dast>DAST</h5>
+<p>Runs automated penetration tests to find vulnerabilities in web applications and APIs as they are running. DAST can run live attacks against a Review App, an externally deployed application, or an active API. Scans can be run for every merge request, on a schedule, or even on-demand. DAST supports user inputted HTTP credentials to test private areas of your application. Vulnerabilities, additional data, and solutions are shown in-line with every merge request. Scanner results are presented as a single report. This category is at the "viable" level of maturity.</p>
+<p>Priority: high • <a href="https://docs.gitlab.com/ee/user/application_security/dast/">Documentation</a> • <a href="/direction/secure/dynamic-analysis/dast/">Direction</a></p>
+<h5 id=api-security>API Security</h5>
+<p>Secures and protects web Application Programming Interfaces from unauthorized access, misuse, and attacks. Tests for known vulnerabilities by performing penetration testing of APIs with DAST. Finds unknown vulnerabilities by performing Fuzz Testing of web API operation parameters.Users can provide credentials to test authenticated APIs. Vulnerabilities, additional data, and solutions are shown in-line with every merge request.. Scanner results are collected and presented as a single report. This category is at the "viable" level of maturity.</p>
+<p>Priority: high • <a href="https://docs.gitlab.com/ee/user/application_security/dast_api/">Documentation</a> • <a href="/direction/secure/dynamic-analysis/api-security/">Direction</a></p>
+<h5 id=fuzz-testing>Fuzz Testing</h5>
+<p>Sends random inputs to an instrumented version of your application in an effort to cause unexpected behavior in order to identify a bug that needs to be addressed. Helps you discover bugs and potential security issues that other QA processes may miss. This category is at the "viable" level of maturity.</p>
+<p>Priority: high • <a href="https://docs.gitlab.com/ee/user/application_security/coverage_fuzzing/">Documentation</a> • <a href="/direction/secure/dynamic-analysis/fuzz-testing/">Direction</a></p>
+<h5 id=software-composition-analysis>Software Composition Analysis</h5>
+<p>Analyzes external dependencies within your application for known vulnerabilities on each CI/CD code commit. Vulnerabilities, additional data, and solutions are shown in-line with every merge request. Scanner results are collected and presented as a single report. Upon code commit, project dependencies are searched for approved and denied licenses defined by per project custom policies. Software licenses are identified if they are not within policy and are shown in-line for every merge request for immediate resolution. This category is at the "viable" level of maturity.</p>
+<p>Priority: high • <a href="https://docs.gitlab.com/ee/user/application_security/dependency_scanning/">Documentation</a> • <a href="/direction/secure/composition-analysis/software-composition-analysis">Direction</a></p>
+<h5 id=container-scanning>Container Scanning</h5>
+<p>Scans your container images for known vulnerabilities within the application environment. Image contents are analyzed against public vulnerability databases.Security findings, additional data, and solutions reported in-line with every merge request along with additional data including solutions. Results are presented as a single report. Container Scanning is considered part of Software Composition Analysis. This category is at the "viable" level of maturity.</p>
+<p>Priority: medium • <a href="https://docs.gitlab.com/ee/user/application_security/container_scanning/">Documentation</a> • <a href="/direction/secure/composition-analysis/container-scanning/">Direction</a></p>
+<h5 id=gitlab-advisory-database>GitLab Advisory Database</h5>
+<p>The GitLab Advisory Database serves as a repository for security advisories related to software dependencies. GitLab integrates the advisory database with its proprietary and open-source application security scanning tools. In order to maintain the efficacy of those scanners, we strive to keep their underlying vulnerability databases up-to-date.</p>
+<p>Priority: high • <a href="/direction/secure/vulnerability-research/advisory-database/">Direction</a></p>
+<h5 id=attack-emulation>Attack Emulation</h5>
+<p>Continuously assess your applications and services are not vulnerable to security threats through automated, real-world emulated scenarios to identify weaknesses in your attack surface</p>
+<p>Priority: low</p>
+<h4 id=pricing>Pricing</h4>
+<p>Secure is focused on providing enterprise-grade application security testing (AST) capabilities to minimize overall risk. The intent is to provide enough value in paid features so as to allow Secure to contribute in a significant way over the next 3 years toward GitLab's <a href="https://about.gitlab.com/company/okrs/">company-level financial goals</a>.</p>
+<p>Although paid features are the primary focus, there are several reasons why features for unpaid tiers might be prioritized above paid features:</p>
+<ol>
+<li>The Secure stage has a powerful potential to help improve the security of projects everywhere. Features with the potential to significantly improve the security posture of all projects will be highly prioritized and made available in an unpaid tier.</li>
+<li>To continue to be <a href="https://about.gitlab.com/company/stewardship/">good stewards in the open source community</a>, any basic integration with open source projects will be available in an unpaid tier by default, along with the "table stakes" set of functionality required to allow that feature to be usable with GitLab. Any open source project integrations that currently exist in paid tiers will have a discussion opened about moving the integration to an unpaid tier.</li>
+</ol>
+<h5 id=corefree>Core/Free</h5>
+<p>This tier is the primary way to increase broad adoption of the Secure stage, as well as encouraging community contributions and improving security across the entire GitLab user base.</p>
+<p>As a general rule of thumb, features will fall in the Core/Free tier when they meet one or more of the following criteria:</p>
+<ul>
+<li>The feature is primarily for an individual with a few small projects rather than meeting the needs of an organization or enterprise that is operating at scale</li>
+<li>The feature is provided by an integration with an open source project rather than being natively developed by GitLab</li>
+<li>The feature has the potential to increase the security posture of all GitLab projects in a significant way, or there is a reasonable ethical/moral obligation to make the feature available to all users</li>
+<li>The ongoing cost for GitLab to maintain and update the feature is relatively minimal</li>
+</ul>
+<p>Some examples include:</p>
+<ul>
+<li>Basic installation and use of scanners, especially when the underlying scanner is taken from an open source project</li>
+<li>The basic ability to retrieve scan results in some way</li>
+<li>Documentation and directions on how to install and configure a scanner</li>
+</ul>
+<h5 id=premiumsilver>Premium/Silver</h5>
+<p>This tier is not a significant part of Secure's pricing strategy.</p>
+<h5 id=ultimategold>Ultimate/Gold</h5>
+<p>This tier is the primary focus for the Secure stage as the security posture of an organization is typically a primary concern of the executive team and even the board of directors. Just as a major security incident has far reaching consequences that impact the entirety of an organization, the features and capabilities that enable organizations to assess their overall security risk tend to be valued with equal weight. The types of capabilities that fall in the Ultimate/Gold tier vs an unpaid tier should be those that are necessary for an organization, rather than an individual, to properly secure their code before pushing it into a production environment.</p>
+<p>As a general rule of thumb, features will fall in the Ultimate/Gold tier when they meet one or more of the following criteria:</p>
+<ul>
+<li>The feature is focused on enabling an organization or enterprise to operate at scale rather than an individual with a few smaller personal projects</li>
+<li>The feature is natively developed or <a href="https://about.gitlab.com/handbook/acquisitions/">acquired</a> by GitLab rather than being provided by an open source project</li>
+<li>The feature has a significant ongoing cost for GitLab to maintain and update the feature</li>
+</ul>
+<p>Some examples include:</p>
+<ul>
+<li>Vulnerability management functionality, including <a href="https://docs.gitlab.com/ee/user/application_security/security_dashboard/">Security Dashboards</a> to aggregate, prioritize, and remediate findings as well as <a href="https://docs.gitlab.com/ee/user/application_security/vulnerabilities/">vulnerability workflows</a>, including inline workflows, such as merge request and pipeline security reports, that help streamline and expedite the vulnerability remediation process</li>
+<li>Scanning capabilities that are not open source and provide value above what typical open source tools provide</li>
+<li>Enterprise features including summary reports, UI tools to simplify and streamline scanner configurations, and creation or enforcement of scanning policies</li>
+<li>Vulnerability research including a dedicated vulnerability database enabling better security scanner true positive detection rates</li>
+</ul>
+<h3 id=govern>Govern</h3>
+<p>The <a href="/direction/govern/">Govern stage</a> helps organizations to reduce their overall risk by applying appropriate management and governance oversight across the entire DevSecOps lifecycle. Govern provides management tools to secure the GitLab platform itself by restricting access to authenticated users and ensuring they are provisioned with the least amount of required privileges. To help manage and monitor risk levels, the Govern stage provides visibility into user permissions and activity; project dependencies; security findings; and aderence to compliance standards. This visibility is then coupled with enforcement capabilities to proactively prevent risks by automating compliance and securing the software supply chain.</p>
+<h4 id=categories-1>Categories</h4>
+<h5 id=user-management>User Management</h5>
+<p>User Management provides tools to administer users and their attributes. From GitLab you can provision users, configure access control, manage user settings, and review user attributes.</p>
+<p>Priority: high • <a href="https://docs.gitlab.com/ee/user/profile/account/create_accounts.html">Documentation</a> • <a href="/direction/govern/authentication/user-management">Direction</a></p>
+<h5 id=system-access>System Access</h5>
+<p>System Access provides tools to authenticate through all points of GitLab (UI, CLI, API). These tools allow you to configure what an individual/process has access to once they authenticate, determined by their role. GitLab integrates with several OmniAuth providers, LDAP, SAML, and more.</p>
+<p><a href="https://docs.gitlab.com/ee/administration/auth/">Documentation</a> • <a href="/direction/govern/authentication/system-access">Direction</a></p>
+<h5 id=permissions>Permissions</h5>
+<p>GitLab provides various permissions and roles in order to evaluate what access or rights an identity should have in an environment. Custom roles can also be created to allow an organization to create user roles with the precise privileges and permissions desired.</p>
+<p><a href="https://docs.gitlab.com/ee/user/permissions.html">Documentation</a> • <a href="/direction/govern/authorization">Direction</a></p>
+<h5 id=audit-events>Audit Events</h5>
+<p>Audit Events track important actions within GitLab along with who performed the actions and the time in which they occurred. These events can be used in a security audit to assess risk, strengthen security measures, respond to incidents, and adhere to compliance. This category is at the "viable" level of maturity.</p>
+<p>Priority: high • <a href="https://docs.gitlab.com/ee/administration/audit_events.html">Documentation</a> • <a href="/direction/govern/compliance/audit-events/">Direction</a></p>
+<h5 id=compliance-management>Compliance Management</h5>
+<p>Compliance Management provides customers with the tools necessary to ensure and manage their compliance programs. Compliance Workflow Automation is provided to enforce custom pipelines to run on projects which have specific compliance needs. For compliance oversight, the Compliance Center provides a central location for compliance teams to manage their compliance standards adherence reporting, violations reporting, and compliance frameworks for their group. This category is at the "viable" level of maturity.</p>
+<p>Priority: high • <a href="https://docs.gitlab.com/ee/administration/compliance.html">Documentation</a> • <a href="/direction/govern/compliance/compliance-management/">Direction</a></p>
+<h5 id=security-policy-management>Security Policy Management</h5>
+<p>Unified security policy management provides security and compliance teams with a way to enforce controls across their organization for all of GitLab's scanners and security technologies. Policies can be used to ensure security scanners are enforced in development team pipelines with proper configuration, all scan jobs execute without any changes or alterations, and proper approvals are provided on merge requests based on results from those findings. This category is at the "viable" level of maturity.</p>
+<p>Priority: medium • <a href="https://docs.gitlab.com/ee/user/application_security/policies/">Documentation</a> • <a href="/direction/govern/security_policies/security_policy_management/">Direction</a></p>
+<h5 id=vulnerability-management>Vulnerability Management</h5>
+<p>Vulnerability Management enables collaboration between security teams by providing a uniform interface to assess the security posture of their applications. Security teams can view, triage, trend, track, and resolve vulnerabilities detected by the various GitLab scanners. This category is at the "complete" level of maturity.</p>
+<p>Priority: high • <a href="https://docs.gitlab.com/ee/user/application_security/security_dashboard/">Documentation</a> • <a href="/direction/govern/threat_insights/vulnerability_management/">Direction</a></p>
+<h5 id=dependency-management>Dependency Management</h5>
+<p>Dependency Management allows users to review project/group dependencies and key details about those dependencies, including their vulnerabilities, licenses, and packager. This category is at the "viable" level of maturity.</p>
+<p>Priority: high • <a href="https://docs.gitlab.com/ee/user/application_security/dependency_list/">Documentation</a> • <a href="/direction/govern/threat_insights/dependency_management/">Direction</a></p>
+<h5 id=software-bill-of-materials>Software Bill of Materials</h5>
+<p>GitLab allows you to secure your software supply chain including push rules, code scanning, SBOM management, and enforcement of compliance policies. This category is at the "viable" level of maturity.</p>
+<p>Priority: high • <a href="/solutions/supply-chain/">Learn more</a> • <a href="https://about.gitlab.com/solutions/supply-chain/">Documentation</a> • <a href="/direction/supply-chain/">Direction</a></p>
+<h5 id=insider-threat>Insider Threat</h5>
+<p>Insider Threat identifies attacks and high risk behaviors by correlating different data sources and observing user behavioral patterns</p>
+<p><a href="/direction/govern/anti-abuse/insider_threat/">Direction</a></p>
+<h5 id=instance-resiliency>Instance Resiliency</h5>
+<p>Instance Resiliency provides tools to prevent malicious activity from occurring within GitLab Instances. These tools include external pipeline validation allowing you to use an external service to validate a pipeline before it is created.</p>
+<p><a href="https://docs.gitlab.com/ee/administration/external_pipeline_validation.html">Documentation</a> • <a href="/direction/govern/anti-abuse/instance_resiliency/">Direction</a></p>
+<h5 id=secrets-management>Secrets Management</h5>
+<p>Secure and protect access to secrets, such as API keys and passwords, to ensure that sensitive data is protected throughout your development process. This category is at the "minimal" level of maturity.</p>
+<p><a href="https://docs.gitlab.com/ee/ci/pipelines/pipeline_security.html">Documentation</a> • <a href="/direction/verify/secrets_management/">Direction</a></p>
+<h5 id=release-evidence>Release Evidence</h5>
+<p>Release Evidence provides assurances and evidence collection that are necessary for you to trust the changes you're delivering. When a release is created, GitLab takes a snapshot of relevant release data as evidence that it occurred. This category is at the "viable" level of maturity.</p>
+<p><a href="https://docs.gitlab.com/ee/user/project/releases/release_evidence">Documentation</a> • <a href="/direction/release/release_evidence/">Direction</a></p>
+<h4 id=pricing-1>Pricing</h4>
+<p>Govern is focused on providing governance and compliance features that span across the DevSecOps lifecycle. Govern’s tiering strategy aligns with the GitLab approach of selecting the tier based on <a href="https://about.gitlab.com/company/pricing/#three-tiers">who cares most about the feature</a>. Because Executives generally care most about governance features, it is expected that most Govern features will land in the Ultimate tier.</p>
+<h5 id=free>Free</h5>
+<p>This tier is the primary way to increase broad adoption of the Govern stage, as well as encouraging community contributions and improving security across the entire GitLab user base.</p>
+<p>As a general rule of thumb, features will fall in the Free tier when they meet one or more of the following criteria:</p>
+<ul>
+<li>The feature is highly useful for an individual with a few small projects rather than meeting the needs of an organization or enterprise that is operating at scale.</li>
+<li>The feature is provided by an integration with an open source project rather than being natively developed by GitLab.</li>
+</ul>
+<h5 id=premium>Premium</h5>
+<p>This tier is not a significant part of Govern's pricing strategy; however, a few features features that primarily appeal to Directors rather than Executives may fall into the Premium tier. One example of this is our audit event functionality that is available in this tier.</p>
+<h5 id=ultimate>Ultimate</h5>
+<p>This tier is the primary focus for the Govern stage as most Govern features enable executives to ensure that their organization meets compliance requirements and maintains an acceptable security posture.</p>
+<p>As a general rule of thumb, features will fall in the Ultimate tier when they meet one or more of the following criteria:</p>
+<ul>
+<li>The feature is focused on enabling an organization or enterprise to operate at scale rather than an individual with a few small projects.</li>
+<li>The feature is natively developed by GitLab rather than being provided by an open source project.</li>
+</ul>
+<h2 id=upcoming-releases>Upcoming Releases</h2>
+<h3 id=174-2024-09-19>17.4 (2024-09-19)</h3>
+<h4 id=secure-1>Secure</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8841">Composition Analysis Vision</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2340">GitLab Container Registry: Continuous Vulnerability Scanning</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/464279">Set "gradlew –debug" when SECURE_LOG_LEVEL is set</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/229817">Report vulnerable dependency paths for Gradle</a> <kbd>Ultimate</kbd></li>
+</ul>
+<h4 id=govern-1>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/14171">Compliance UX improvement/bugs track</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13997">Manage scheduled scan execution pipeline concurrency</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13909">Give compliance users a 'single pane of glass' to view aggregate information with respect to their checks and violations</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13617">Merge request approval policy accuracy</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13559">Make Compliance Center available to project/sub-groups</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13294">Multiple compliance frameworks labels</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13225">Govern: Security Policies - 17.x - Technical Debt and Planned Quality Improvements</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13071">(Size: XXL) Cells 1.0 - Compliance database tables work</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12661">Add compliance adherence requirement for each security scanner</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12264">Permissions: Viable to Competitive Maturity Plan</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12191">Policy Violations Bot Comment</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11930">Compliance Center Improvements</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11274">Compliance frameworks improvements</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11185">Display security policy violation details to users</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10048">Add support for the Vulnerability Report and Dependency List at the Organization Level</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9971">Use database read model for merge request approval policies</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/461901">Adjust the max expiration date of access tokens</a> <kbd>Premium</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/451480">Require a comment when changing the status of vulnerabilities on the Vulnerability Page</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/439655">Improve error messaging for CI_JOB_TOKEN</a></li>
+</ul>
+<h3 id=git-247>Git 2.47</h3>
+<h4 id=secure-2>Secure</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8841">Composition Analysis Vision</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/2340">GitLab Container Registry: Continuous Vulnerability Scanning</a> <kbd>Ultimate</kbd></li>
+</ul>
+<h4 id=govern-2>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/14171">Compliance UX improvement/bugs track</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13997">Manage scheduled scan execution pipeline concurrency</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13909">Give compliance users a 'single pane of glass' to view aggregate information with respect to their checks and violations</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13617">Merge request approval policy accuracy</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13559">Make Compliance Center available to project/sub-groups</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13294">Multiple compliance frameworks labels</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13266">Pipeline Execution Policy Type</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13225">Govern: Security Policies - 17.x - Technical Debt and Planned Quality Improvements</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13071">(Size: XXL) Cells 1.0 - Compliance database tables work</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12661">Add compliance adherence requirement for each security scanner</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12264">Permissions: Viable to Competitive Maturity Plan</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12191">Policy Violations Bot Comment</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11930">Compliance Center Improvements</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11274">Compliance frameworks improvements</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11185">Display security policy violation details to users</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10756">Use bot users to trigger scan execution policies pipelines</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10048">Add support for the Vulnerability Report and Dependency List at the Organization Level</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9971">Use database read model for merge request approval policies</a></li>
+</ul>
+<h3 id=175-2024-10-17>17.5 (2024-10-17)</h3>
+<h4 id=secure-3>Secure</h4>
+<h4 id=govern-3>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13295">Custom Adherence configuration</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/13004">Third party connector to Snowflake</a></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12602">Test Streaming Audit Events configuration and surface connection issues</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/9705">Prevent branch modification when a policy disables the setting for the given branches</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/6980">Allow filtering of streamed audit events</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/3869">Introduce capability to check external APIs for status in Merge Requests</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/736">Comprehensive audit log</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/440697">Add instance setting to toggle enforcement of CI_JOB_TOKEN scope for all projects</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/360592">Allow users to customize their JWT sub claim (MVC)</a> <kbd>Premium</kbd></li>
+</ul>
+<h3 id=176-2024-11-14>17.6 (2024-11-14)</h3>
+<h4 id=secure-4>Secure</h4>
+<h4 id=govern-4>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12339">Consolidation of tables for streaming audit events to various external destinations</a></li>
+</ul>
+<h3 id=177-2024-12-19>17.7 (2024-12-19)</h3>
+<h4 id=secure-5>Secure</h4>
+<h4 id=govern-5>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/391928">Allow the Issuer claim to be customizable for our Cloud Service Provider OIDC JWT tokens</a> <kbd>Ultimate</kbd></li>
+</ul>
+<h3 id=1710-2025-03-20>17.10 (2025-03-20)</h3>
+<h4 id=secure-6>Secure</h4>
+<h4 id=govern-6>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/12264">Permissions: Viable to Competitive Maturity Plan</a></li>
+</ul>
+<h3 id=180-2025-05-15>18.0 (2025-05-15)</h3>
+<h4 id=secure-7>Secure</h4>
+<h4 id=govern-7>Govern</h4>
+<ul>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/11275">Compliance Pipeline to Security Policy Migration</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/10391">Improved Admin and Group-level branch protection settings</a> <kbd>Premium</kbd></li>
+<li><a href="https://gitlab.com/groups/gitlab-org/-/epics/8084">Refine Policy Application Limits</a> <kbd>Ultimate</kbd></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/383084">Remove limit CI_JOB_TOKEN access scope</a></li>
+</ul>
+<p align=center>
+<i><br/>
+Last Reviewed: 2022-10-11<br/>
+Last Updated: 2022-10-11
+</i>
+</p>
+</div>
+</div>
+<div style='display: none'>
+<a href="https://gitlab.com/-/ide/project/gitlab-com/www-gitlab-com/edit/master/-/source/direction/security/template.html.md.erb" id=hidden-web-ide>Edit this page</a>
+<a href="https://gitlab.com/gitlab-com/www-gitlab-com/blob/master/source/direction/security/template.html.md.erb" id=hidden-page-source>View source</a>
+</div>
+<footer id=global-footer>
+<slp-footer></slp-footer>
+</footer>
+<script src='/javascripts/be-footer.js?cacheBust=4cf1fb774d1'></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=4cf1fb774d1"></script>
+<script src="/javascripts/scripts.js?cacheBust=4cf1fb774d1"></script>
+<script>
+  //<![CDATA[
+    $.ajax({
+      url: '//munchkin.marketo.net/munchkin.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        Munchkin.init('194-VVC-221');
+      }
+    });
+  //]]>
+</script>
+<script defer=true src='/javascripts/cbextras.js'></script>
+<script src="/javascripts/generate-navigation-helpers.js"></script>
+</body>
+</html>
